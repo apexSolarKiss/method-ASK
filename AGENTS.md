@@ -45,7 +45,7 @@ Before any meaningful repo work, read:
 
 - `README.md`
 - `AGENTS.md` (this file)
-- `docs/method.md` (once it lands in the migration sequence)
+- `docs/method.md`
 
 Then read whatever doctrine docs, worked examples, or article-line references are relevant to the task.
 
