@@ -16,12 +16,15 @@ The methodology layer articulates the cross-project method; the execution-protoc
 
 ## Status
 
-Initial seed. The substantive method articulation, doctrine docs, lineage, and worked-example explanations land in subsequent PRs. Until then, the method's working articulation continues to live in [`control-surface/docs/method.md`](https://github.com/apexSolarKiss/control-surface/blob/main/docs/method.md), which will become a compact bridge once the upstream method is in place.
+Method seed in progress. `docs/method.md` now carries the primary method articulation. Standalone doctrine docs, lineage, article index, diagrams if earned, and worked-example explanations land in subsequent PRs.
+
+`control-surface/docs/method.md` remains in place until a separate PR rewrites it as a compact bridge + pointer to this repo.
 
 ## Repo contents
 
 - `AGENTS.md` — repo-local workflow rules
-- `docs/` — method doctrine, topology, lineage, source-of-truth structure (lands in subsequent PRs)
+- `docs/method.md` — primary method articulation
+- `docs/` — standalone method doctrine, topology, lineage, and source-of-truth structure as they land in subsequent PRs
 - `examples/` — worked-example explanations at method altitude (lands in subsequent PRs)
 
 ## Anchor reading
