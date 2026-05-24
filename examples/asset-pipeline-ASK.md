@@ -38,7 +38,7 @@ The following method elements emerged through asset-pipeline-ASK work and were a
 - The recursive observation that the project is more than a pipeline — it is a system-building system for governed visual asset production pipelines, parallel to `control-surface` as a system-building system for AI-native execution workflows
 - The asset-pipeline-ASK Worked Example section describing the swing motion (pure ontology → v1 prototype → IA layered-content redirection) as visible method-history
 
-When standalone doctrine docs split out from `docs/method.md`, asset-pipeline-ASK pressure will continue to be the historical evidence for the aging-rate, voice-discipline, and architecture-uncertain principles.
+With standalone doctrine docs now split out from `docs/method.md` — `docs/source-of-truth-and-aging-rate.md` for aging-rate and `docs/voice-surface-boundary.md` for voice / surface-boundary discipline — asset-pipeline-ASK pressure remains the historical evidence those docs reference. Architecture-uncertain principles continue to live in `docs/method.md` and the `control-surface` architecture-uncertain-rules overlay.
 
 ## Boundary notes
 

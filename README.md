@@ -18,16 +18,14 @@ The methodology layer articulates the cross-project method; the execution-protoc
 
 ## Status
 
-Method seed in progress. `docs/method.md` now carries the primary method articulation. Standalone doctrine docs, lineage, article index, diagrams if earned, and worked-example explanations land in subsequent PRs.
-
-`control-surface/docs/method.md` remains in place until a separate PR rewrites it as a compact bridge + pointer to this repo.
+`docs/method.md` carries the primary method articulation. Standalone doctrine docs and method-altitude worked-example explanations have landed in `docs/` and `examples/`; the article-line index lives at `docs/articles.md`. Lineage and diagrams remain candidates for later PRs as substrate earns them.
 
 ## Repo contents
 
 - `AGENTS.md` — repo-local workflow rules
 - `docs/method.md` — primary method articulation
-- `docs/` — standalone method doctrine, topology, lineage, and source-of-truth structure as they land in subsequent PRs
-- `examples/` — worked-example explanations at method altitude (lands in subsequent PRs)
+- `docs/` — standalone method doctrine and the article-line index
+- `examples/` — worked-example explanations at method altitude
 
 ## Anchor reading
 
