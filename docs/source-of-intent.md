@@ -40,7 +40,7 @@ The guard is what prevents the system from manufacturing source-of-intent decisi
 
 ## Category distinctions
 
-Before naming operator-required source-of-intent input, distinguish what kind of question is actually live. Six categories recur:
+Before naming operator-required source-of-intent input, distinguish what kind of question is actually live. Eight categories recur:
 
 | Category | What it is | Who decides |
 |---|---|---|
@@ -50,16 +50,37 @@ Before naming operator-required source-of-intent input, distinguish what kind of
 | **Advisor scratch** | exploratory framing surfaced during synthesis | not promoted to repo work until validated against purpose |
 | **Future roadmap** | direction that may matter later but is not current-stage source-of-intent | preserved as roadmap context; does not reshape current repo work |
 | **Premature implementation architecture** | structural commitment that gets ahead of the method's current stage | held, not adopted; the method's architecture-attempt-before-prototype discipline applies |
+| **State / event record** | review chronology, who said what, what a specific review validated or did not validate, current event outcome | scratch / operator-side event record |
+| **Repo-local public-safe project truth** | stable generalized project truth that belongs in public repo docs rather than the grounding note | repo |
 
 The category distinctions are load-bearing. Conflating *architectural means* with *source of intent* burns operator attention on questions the method should answer. Conflating *advisor scratch* or *future roadmap* with *source of intent* lets exploratory or out-of-stage material reshape current work as if it were validated direction.
 
-Only the *source of intent* category requires the operator to supply new purpose-level input. The other five categories are method-side or sequencing-side; the system should classify before asking.
+Only the *source of intent* category requires the operator to supply new purpose-level input. The other categories route elsewhere: method-side attempt, sequencing decision, scratch, roadmap context, held implementation architecture, or repo-local truth.
+
+## Grounding-note refresh preflight
+
+Before refreshing a grounding note, classify the candidate content layer explicitly.
+
+A grounding note should absorb slow-aging source-of-intent: purpose, audience, durable constraints, durable role boundaries, and source-of-intent implications. It should not absorb state chronology merely because the event was important.
+
+Use the category distinctions above before drafting a grounding-note refresh:
+
+- slow source-of-intent → grounding note
+- state / event record → scratch
+- repo-local public-safe project truth → repo
+- future roadmap → roadmap context
+- advisor scratch → scratch until validated
+- premature implementation architecture → hold
+
+The failure mode is state-oriented reviewer chronology dressed up as durable posture. If placed in the grounding note, it forces the grounding note to age at the rate of the event record.
+
+The gate should happen before Plan-Before-Execute for a grounding-note refresh, not after the refresh has already been drafted.
 
 ## Source-of-intent nudge
 
 At local plateaus, after meaningful absorptions, or when the next move is unclear but the durable purpose may already be sufficient, the system asks the advisor surface what additional operator source of intent or direction is needed to continue developing the project toward its stated purpose.
 
-The nudge is not "what next?" — it is a boundary-classification pass. The advisor classifies the next move against the six categories above and returns one of:
+The nudge is not "what next?" — it is a boundary-classification pass. The advisor classifies the next move against the category distinctions above and returns one of:
 
 - *No new source-of-intent needed.* The durable sources already contain the premise; derive the next move from the current architecture.
 - *Sequencing choice; operator may decide.* Load-bearing-enough to ask, but not new purpose.
@@ -86,7 +107,7 @@ The project-specific guardrail itself stays in `urban-observatory`'s grounding n
 
 This observation has not yet earned promotion to rule-level method doctrine. The absorption discipline applies: n=1 stays observation-level until a second project surfaces the same pressure, or a strong structural argument justifies generalization before repetition. A future `docs/external-handoff-classification.md` may earn its own home if the pattern recurs.
 
-The category mapping for handoff classification reuses the doctrine's own six-category distinction above. *Valid source-of-intent* maps to the first row; *current-stage refinement* maps to architectural-means; *future roadmap*, *advisor scratch*, and *premature implementation architecture* map directly. The classification is not a separate taxonomy — it is the doctrine's existing categories applied at the moment external content enters the system.
+The category mapping for handoff classification reuses the doctrine's category distinctions above. *Valid source-of-intent* maps to the first row; *current-stage refinement* maps to architectural-means; *future roadmap*, *advisor scratch*, and *premature implementation architecture* map directly. The classification is not a separate taxonomy — it is the doctrine's existing categories applied at the moment external content enters the system.
 
 ## Operator grounding-note extension (adjacent pressure)
 
@@ -110,7 +131,8 @@ This doctrine should be superseded by:
 - a future `docs/external-handoff-classification.md` if the external/domain-authority handoff pattern earns its own first-class home (typically when a second project surfaces the same pressure)
 - splitting-out of the validation-loop discipline into its own doc if validation-pattern substrate accumulates beyond what this doctrine can carry
 - broader refactoring if the category distinctions earn their own home (e.g., `docs/category-distinctions.md`) and source-of-intent contracts to a thinner doctrine that references it
+- a future `docs/layer-classification.md` or `docs/absorption-discipline.md` if the grounding-note refresh preflight subsection grows into a broader treatment that absorbs it
 
-The doctrine is not finished. The six-category distinction may refine as more pressure surfaces. The operator-grounding-note extension may earn fuller treatment if the operator-side architecture becomes method-relevant in its own right (rather than as adjacent pressure). The external-handoff classification observation is the most likely candidate for near-term promotion if a second project shows the pattern.
+The doctrine is not finished. The eight-category distinction may refine as more pressure surfaces. The operator-grounding-note extension may earn fuller treatment if the operator-side architecture becomes method-relevant in its own right (rather than as adjacent pressure). The external-handoff classification observation is the most likely candidate for near-term promotion if a second project shows the pattern.
 
 Anchor reading lives in [`docs/articles.md`](articles.md). The articles most directly substrating this doctrine are *From Conversation to Control Surface* (recovered intent → validated constraint → repo), *The Handoff Is Not the Instruction* (the five-category classification), and *Context // The Operator Needs a Grounding Note Too* (the operator-side persistence pressure).
