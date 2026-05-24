@@ -1,5 +1,7 @@
 # method-ASK
 
+![method-ASK banner](method-ASK-banner.jpg)
+
 Methodology layer for the ASK family of projects.
 
 This repo carries the cross-project method for designing systems that build systems: doctrine, topology, lineage, source-of-truth structure, and worked-example explanations at method altitude.
