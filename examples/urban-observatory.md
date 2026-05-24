@@ -30,7 +30,7 @@ Per the absorption discipline, `control-surface` explicitly declined to absorb t
 
 ## What method-ASK preserves
 
-`docs/method.md` references urban-observatory contextually in source-of-intent and adversarial-iteration sections. When `docs/source-of-intent.md` lands as a first-class doctrine doc, it will carry the recovered-intent / validation-loop pattern as method doctrine and the external-handoff classification as an observation-level subsection — explicitly labeled, with the candidate generalization stated but not promoted to rule.
+`docs/method.md` references urban-observatory contextually in source-of-intent and adversarial-iteration sections. `docs/source-of-intent.md` carries the recovered-intent / validation-loop pattern as method doctrine and the external-handoff classification as an observation-level subsection — explicitly labeled, with the candidate generalization stated but not promoted to rule.
 
 ## Boundary notes
 
