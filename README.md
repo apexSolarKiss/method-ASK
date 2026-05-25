@@ -18,13 +18,14 @@ The methodology layer articulates the cross-project method; the execution-protoc
 
 ## Status
 
-`docs/method.md` carries the primary method articulation. Standalone doctrine docs and method-altitude worked-example explanations have landed in `docs/` and `examples/`; the article-line index lives at `docs/articles.md`. Lineage and diagrams remain candidates for later PRs as substrate earns them.
+`docs/method.md` carries the primary method articulation. Standalone doctrine docs and method-altitude worked-example explanations have landed in `docs/` and `examples/`; the article-line index lives at `docs/articles.md`. An illustrative topology / relative-externality diagram has landed in [`docs/diagrams/`](docs/diagrams/); the diagram is illustrative, and repo prose remains source truth. Lineage remains a candidate for later PRs as substrate earns it.
 
 ## Repo contents
 
 - `AGENTS.md` — repo-local workflow rules
 - `docs/method.md` — primary method articulation
 - `docs/` — standalone method doctrine and the article-line index
+- `docs/diagrams/` — illustrative diagrams (`method-ASK_topology.html`); not source truth
 - `examples/` — worked-example explanations at method altitude
 
 ## Anchor reading

@@ -1,0 +1,58 @@
+# Diagrams // illustrative
+
+These diagrams are illustrative. They are not source truth.
+
+Repo prose remains authoritative. If a diagram and the repo prose disagree, trust the prose and refresh the diagram; do not modify the repo prose to match the diagram.
+
+Each diagram is a structural snapshot of the repo at a point in time. Diagrams age. Repo prose ages too, but more slowly. The diagram should track the repo, not the other way around.
+
+## Authority cadence
+
+- repo prose: source truth — [`docs/method.md`](../method.md) is the primary method articulation, and the doctrine docs (`docs/relative-externality.md`, `docs/voice-surface-boundary.md`, `docs/source-of-truth-and-aging-rate.md`, `docs/source-of-intent.md`, `docs/absorption-discipline.md`) own their respective doctrine
+- diagram: illustrative snapshot, refreshed at topology / milestone changes
+- repo [`README.md`](../../README.md): canonical front-door articulation
+
+## Inheritance
+
+The diagram conforms to [`apexSolarKiss/design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) Tier 1 + Tier 2 by reference at generation time. The compiled `diagrams.css` in this folder is render support, not identity source truth. `design-system-ASK` remains the visual authority; this folder does not own visual identity.
+
+## Update cadence
+
+- topology or method-altitude structural change: refresh the source data file
+- new doctrine doc landing: refresh the source data file (the doctrine-docs group needs to track what has landed)
+- per-PR repo edits: do not refresh
+- per-article work: do not refresh
+- ecology-level structural shift: open a new `source-vN`
+
+## Contents
+
+```text
+README.md                              this file
+method-ASK_topology.html               renders TREE_D02
+method-ASK_topology.source.js          TREE_D02 data
+diagrams-engine.js                     layout + pan/zoom engine
+diagrams.css                           compiled Tier 1 + Tier 2 style
+export-png.js                          3840×2880 PNG export
+```
+
+## How to use
+
+- Open `method-ASK_topology.html` directly in a browser, or via GitHub Pages if configured.
+- Drag to pan; scroll to zoom; HUD controls in the bottom-left; `⤢` to fit.
+- Theme follows the OS preference (`prefers-color-scheme`); the CSS supports explicit `data-theme="light"` or `data-theme="dark"` on `<html>` if a specific theme is needed.
+- The PNG export outputs a 3840×2880 image in the resolved theme.
+
+## Lineage
+
+This diagram was rendered as part of the v9 operator-side `ecology-ASK` diagram package and absorbed here at `source-v2 // render-v9`. Future refreshes will bump the render version and may bump the source version if the tree data changes.
+
+The operator-side package and historical render iterations remain in `method-ASK-EXTERNAL/scratch/` and are not repo truth.
+
+## What this folder does not carry
+
+- `TREE_D01` (control-surface architecture tree) — lives in [`apexSolarKiss/control-surface/docs/diagrams/`](https://github.com/apexSolarKiss/control-surface/tree/main/docs/diagrams)
+- `TREE_D03` (ecology-ASK overall) — operator-side only; not authorized for any repo absorption (the ecology view includes operator-side context substrate)
+- Operator-side context architecture payload (private; conform by reference, do not absorb)
+- `design-system-ASK` Tier 3 instance identity (logo, wordmark, ASK chrome) — excluded by Tier model
+- Runtime dynamic import from `design-system-ASK` CSS (no; conform at generation time)
+- Fast-aging state (PR numbers, commit hashes, current grounding-note version stamps, branch names, recent activity chronology)
