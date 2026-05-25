@@ -95,6 +95,26 @@ A nudge that returns "no new source-of-intent is needed" or "stop" is a successf
 
 The nudge is a lighter-weight control loop than the fresh-context critique cycle. Use it before invoking fresh external critique when the question is local sequencing, absorption, routing, or next-pressure choice. Escalate to fresh-context critique when the nudge surfaces drift, stale durable context, unresolved purpose, or a need for independent reconstruction from repo plus grounding note.
 
+## Cross-surface handoff routing
+
+When one ASK project surface prepares a handoff for another, the routing follows a specific pattern. The originating surface preserves the handoff in its own scratch space; a copy lands in the recipient surface's `sources of intent/`.
+
+The two copies serve different purposes at different aging rates. The origin scratch copy records the sending — authorship, local pressure, event context, what the origin thought it was sending — at the rate of the originating session (fast). The recipient `sources of intent/` copy records the receiving: the material is now durably available to the recipient as candidate normative input, aging at the recipient project's source-of-intent rate (slow). The two copies are necessary; neither replaces the other.
+
+The recipient project owns the absorption decision. It reads the handoff from inside its own active project surface — against its own repo truth, its own grounding note, and the broader stage of its own work — then classifies (per §Category distinctions) whether the material belongs as repo-local truth, grounding-note source-of-intent, roadmap pressure, advisor scratch, or premature implementation architecture. The origin surface may prepare and route context. It does not mutate the recipient's repo, grounding note, or project truth from outside. This implements the downstream absorption boundary at the file-routing level.
+
+The protocol applies generally — between any two ASK project surfaces, regardless of altitude. Downstream → downstream, methodology → downstream, downstream → methodology: the same discipline.
+
+```text
+origin scratch records the sending
+recipient sources-of-intent records the receiving
+recipient active surface decides absorption
+```
+
+The protocol is **distinct from relay**. Relay (per [*The Relay Is the Instruction*](https://atomicspacekitten.substack.com/p/the-relay-is-the-instruction)) confers operative intent on a specific forwarded artifact — the forwarding act IS the authorization. Cross-surface handoff routing confers candidate normative availability only — the copy into recipient `sources of intent/` does not authorize anything; it makes the material durably available for classification. Conflating the two reintroduces the failure mode [*The Handoff Is Not the Instruction*](https://atomicspacekitten.substack.com/p/the-handoff-is-not-the-instruction) names.
+
+Copy into recipient `sources of intent/` ≠ automatic absorption. Recipient ownership of absorption is non-negotiable.
+
 ## External / domain-authority handoff classification (observation-level)
 
 Some projects have an external source-of-intent loop where domain authority sits in a different role than architect/operator, and handoff content (memos, sketches, expert recaps) enters the system from outside the operator's direct authoring.
