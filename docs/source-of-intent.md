@@ -115,6 +115,31 @@ The protocol is **distinct from relay**. Relay (per [*The Relay Is the Instructi
 
 Copy into recipient `sources of intent/` ≠ automatic absorption. Recipient ownership of absorption is non-negotiable.
 
+## Handoff memo completeness
+
+A routed handoff memo should be self-contained at the moment it lands in the recipient surface's `sources of intent/`. §Cross-surface handoff routing governs delivery mechanics; this rule governs the integrity of the artifact being delivered.
+
+The memo itself should carry:
+
+- **Recipient-facing classification** — what the material is from the recipient's perspective, per §Category distinctions (valid source-of-intent, current-stage refinement, roadmap pressure, advisor scratch, premature implementation architecture, or another category named by the receiving surface)
+- **Boundary statement** — what the memo is and is not; what it authorizes and does not authorize
+- **Intended use** — why the memo was prepared; what the recipient is meant to do with it
+- **Non-actions / out-of-scope** — what the memo explicitly does not authorize
+- **Absorption caveats** — handling guidance specific to the recipient
+- **Routing target** — where the memo is going, if known
+
+The routing act may identify the file and the destination. It does not supply substantive wrapper logic that the recipient needs to interpret the memo. If wrapper logic is needed, it belongs inside the memo before routing.
+
+```text
+handoff memo carries meaning
+routing relay carries delivery
+recipient surface decides absorption
+```
+
+The completeness rule is the operational mechanism that makes cross-surface handoff routing work as designed. Without it, the routing protocol's promise — that the memo is durably available for recipient classification — is partially defeated: the file lands in `sources of intent/` (slow-aging) but its handling instructions live in chat relay (event-rate), and the durable copy ages out of sync with the meaning it depends on. The completeness rule restores the alignment.
+
+All meaning the recipient needs must age at the recipient's aging rate.
+
 ## External / domain-authority handoff classification (observation-level)
 
 Some projects have an external source-of-intent loop where domain authority sits in a different role than architect/operator, and handoff content (memos, sketches, expert recaps) enters the system from outside the operator's direct authoring.
