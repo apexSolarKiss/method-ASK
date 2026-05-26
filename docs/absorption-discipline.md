@@ -68,6 +68,38 @@ Observation-level material does not have to be small. A subsection-length treatm
 
 `docs/source-of-intent.md` carries one such observation-level subsection (external / domain-authority handoff classification) per this discipline. The pattern earns its own first-class doc only when a second project surfaces the same external-source-of-intent-loop pressure or when a structural argument earns the promotion before that.
 
+## Self-diagnostic nomination
+
+When the active control surface notices a routing or operational behavior recurring across surfaces, it should nominate the behavior as a candidate protocol rather than silently keep using it. Nomination is not promotion. The system does not promote the behavior on its own; ASK decides whether the noticing matters and what surface it belongs to.
+
+A repeated local habit is not enough. The nomination threshold is recurrence across surfaces, recurrence at a structural boundary, or a clear failure mode created by leaving the behavior implicit. Without this guard, every reused local convenience becomes a candidate protocol and the methodology bloats.
+
+A nomination identifies:
+
+- **Where** the behavior repeated — which surfaces, which artifacts
+- **What problem** it solved — what failure mode the implicit pattern was preventing
+- **What failure** it prevents — the explicit failure-mode framing
+- **What surface** might own the protocol — method-ASK doctrine candidate, control-surface workflow rule, project-local rule, or operator-side memo only
+- **What would happen** if it remained implicit — silent continued use vs unbearable absence
+
+The discipline sits alongside three adjacent disciplines and confers different authority from each:
+
+- **Relay** confers operative intent on a specific forwarded artifact
+- **Cross-surface routing** (per `docs/source-of-intent.md` §Cross-surface handoff routing) confers candidate normative availability of material
+- **Handoff memo completeness** (per `docs/source-of-intent.md` §Handoff memo completeness) governs the integrity of a routed artifact
+- **Self-diagnostic nomination** confers no authority on the noticed pattern; it only asks ASK whether a protocol is emerging
+
+The nomination protects against two opposite failures. **Under-noticing** keeps an emergent protocol implicit — the methodology cannot articulate its own emergence patterns, and future operators, advisors, and sessions inherit the protocol without knowing it is a protocol. **Over-promoting** turns every repeated behavior into doctrine on first sighting — the §Evidence thresholds rule is violated and the methodology bloats with material that has not been pressure-tested. Nomination is the middle: it preserves source-of-intent authority (ASK decides) while making the pattern legible (the system surfaces it for review).
+
+```text
+system notices recurrence
+system nominates candidate protocol
+ASK decides whether the noticing matters
+method / recipient surface absorbs only after scoped approval
+```
+
+The nomination itself confers no authority. Authority belongs to ASK and the receiving surface.
+
 ## Grounding-note layer-classification gate
 
 Before refreshing a grounding note, classify the candidate content layer explicitly.
