@@ -29,6 +29,7 @@ The index lives in `method-ASK` because the article line is reflection on the me
 | 19 | [*The Relay Is the Instruction*](https://atomicspacekitten.substack.com/p/the-relay-is-the-instruction) | relay / operative-intent substrate | Anchor article for the operator-two-hats topology. Advisor output is not operative by itself; ASK operative relay is the adoption event that turns it into direction; durable source intent vs operative intent. |
 | 20 | [*Design Systems Don't Fork // They Inherit*](https://atomicspacekitten.substack.com/p/design-systems-dont-fork-they-inherit) | relay / operative-intent substrate | Inheritance by reference, not duplication. Presence is not structure — a downstream artifact can cite the upstream and still inherit nothing. Visual-inheritance and relay-by-adoption as parallel authority-preserving mechanisms. |
 | 21 | [*The Method Ate Its Own Dogfood*](https://atomicspacekitten.substack.com/p/the-method-ate-its-own-dogfood) | relay / operative-intent substrate | Capstone applying the framework to its own production history. The system noticed the recursion; the human operator named what the noticing meant. Composition lets the stack catch its own loops; only the human layer decides what the loops mean. |
+| 22 | [*The Interface Is Temporary // The System Is Not*](https://atomicspacekitten.substack.com/p/the-interface-is-temporary-the-system) | generated-interface substrate | The interface becomes temporary; the system underneath does not. AI-native work moves the center of gravity from tool-centric workflows to intent-centric systems; the repo becomes an interface-generating substrate, the chat thread becomes an operating surface over it, and durability is earned only when the temporary interface produces something a project-owned surface saves, hands off, instantiates, or absorbs. |
 
 ## Layer map
 
@@ -42,6 +43,7 @@ The series builds in clusters. Each cluster contributes substrate to a different
 - **Handoff / classification substrate** (#15) — the guardrail for expertise entering an AI-native workflow.
 - **Operator-context / grounding-note substrate** (#16) — extends the grounding-note pattern to operator-side context, preserving continuity without collapsing personal memory into repo truth.
 - **Relay / operative-intent substrate** (#17–#21) — source topology that names what the surfaces are for; absorption routing for classified material; operative relay as the adoption event that turns advisor output into direction; visual-inheritance as a parallel authority-preserving mechanism; recursive method self-application.
+- **Generated-interface substrate** (#22) — repo + grounding note + source-of-intent files + protocols as the durable substrate from which temporary task interfaces can be generated; UX begins at the seam where intent invokes the system.
 
 Not every article is equally repo-load-bearing. Method docs in this repo absorb structural patterns earned across the series; the article line carries reflection at its own pace. The mapping above is a navigational aid, not a hierarchy.
 
