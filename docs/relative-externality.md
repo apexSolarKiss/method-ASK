@@ -4,6 +4,8 @@ This doctrine governs how the method treats the relation between surfaces. Exter
 
 `method-ASK_grounding-note.md` v2 names relative externality as a foundational premise. `docs/source-of-truth-and-aging-rate.md` carries the surface authority and aging-rate substrate. `docs/absorption-discipline.md` carries the movement-between-surfaces routing. This doc carries the relation itself: which surface is external to which, in which direction, with what consequence.
 
+`Recursive method ecology` is the portable category this doctrine supports: a topology of surfaces governed by relative externality. `ecology-ASK` is the ASK-specific, operator-side instance / altitude of that category. This document owns the portable relation doctrine; `recursive method ecology` is its category name and `ecology-ASK` is one application of it inside the ASK system — neither is a separate doctrine.
+
 ## Definition
 
 Externality is **relative to a surface.**
