@@ -54,6 +54,16 @@ The current ASK topology, textual:
 
 The map is many-to-many. A single artifact (e.g., a grounding note) has externality postures vis-à-vis every other surface, not just one. Reading the map requires naming both surfaces in the relation.
 
+## Recursive discipline, non-recursive authority
+
+A surface can be governed by a discipline it helps execute, but it does not govern itself. The recursion is in discipline, not in authority.
+
+`control-surface` encodes execution protocol that an execution surface consumes and applies during repo work. The protocol can itself be revised through the same scoped-review discipline it imposes on work, but authority for that revision does not come from the execution-protocol surface itself. Method-level doctrine governs how protocol patterns are interpreted, held, promoted, or rejected.
+
+This refines the same principle as internal location does not confer authority: executing a rule does not confer authority to revise that rule.
+
+The practical rule: when a rule changes, identify the surface that has authority to change it. A surface executing a rule is not automatically the surface authorized to revise that rule.
+
 ## Boundary with source of truth and aging rate
 
 `docs/source-of-truth-and-aging-rate.md` carries the doctrine on surface authority and aging cadence. This doc references it as the upstream concept for authority assignment.
