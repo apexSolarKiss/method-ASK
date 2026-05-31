@@ -36,4 +36,6 @@ The methodology layer articulates the cross-project method; the execution-protoc
 
 ## License
 
-Apache 2.0.
+Copyright 2026 Andrew S Klug // ASK
+
+Licensed under the Apache License 2.0 // see [`LICENSE`](LICENSE)
