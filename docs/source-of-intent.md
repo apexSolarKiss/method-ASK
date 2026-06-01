@@ -151,9 +151,9 @@ The lifecycle:
 1. Origin prepares a self-contained handoff memo per §Handoff memo completeness. The origin scratch trail copy uses a clean filename (no `-TBI`).
 2. The recipient copy lands in the recipient surface's `sources of intent/` with the `-TBI.md` suffix.
 3. ASK feeds the memo into the recipient active project surface (typically by attaching it to a new Claude session, or equivalent invocation).
-4. The recipient active surface's first action is to rename the file in place to remove `-TBI`. Rename only — the body of the memo remains the received record.
+4. The recipient active surface's first action is to rename the file in place to remove `-TBI`. Rename only — the body of the memo remains the received record. The rename is the *ingested* signal; it records nothing about what was absorbed.
 5. The recipient surface classifies the memo per §Category distinctions and `docs/absorption-discipline.md`, then decides absorption, hold, or rejection.
-6. If absorption produces durable change, a separate scratch report records classification, actions, non-actions, and remaining held items. The inbound memo body is not mutated; the absorption report is a separate derivative artifact.
+6. If absorption produces durable change, a separate scratch report is **required** — it records classification, actions, non-actions, and remaining held items. The inbound memo body is not mutated; the absorption report is a separate derivative artifact. **A rename is not a closure record:** an absorption that changes durable state but leaves only a renamed memo (plus an ephemeral chat summary) is not closed until the separate report exists.
 
 ```text
 handoff memo carries meaning
