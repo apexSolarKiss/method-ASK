@@ -69,13 +69,13 @@ window.TREE_D02 = {
       tag: 'operator-side · inherited by reference · not absorbed',
       children: [
         { label: 'ASK as source-of-intent principal', note: 'upstream normative authority' },
-        { label: 'personal-ASK / context-ASK', note: 'operator-side context architecture · private substrate', children: [
+        { label: 'personal-ASK/inheritable/', note: 'granted subtree · the only layer a capability-bearing tool can reach', children: [
           { label: 'context architecture ADR', note: 'cross-tool inheritance boundary' },
           { label: 'brand architecture', note: 'tier model authority' },
           { label: 'visual identity system', note: 'visual decisions authority' },
           { label: 'voice / style / typography' },
         ]},
-        { label: 'private context remains walled off', note: 'only category names surface here' },
+        { label: 'private layer structurally unreachable', note: 'lives outside the grant · only category names surface here' },
       ],
     },
     {
