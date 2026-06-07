@@ -69,7 +69,7 @@ These are **ASK-system worked examples and antecedent studies, not dependencies*
 ## Anchors
 
 - Public articulation (source of truth): [*Creative Discretion Is Not Creative Intent*](https://atomicspacekitten.substack.com/p/creative-discretion-is-not-creative) — intent → discretion → variance → selection → governance.
-- Method-reflection companion: *The Method Learns by Leaving* (method-series; draft, pending publication) — the leave-and-return that surfaced the intent ↔ discretion relation this primitive formalizes.
+- Method-reflection companion: [*The Method Learns from Exteriority*](https://atomicspacekitten.substack.com/p/the-method-learns-from-exteriority) (method-series) — the leave-and-return that surfaced the intent ↔ discretion relation this primitive formalizes.
 - Discretion grounding: Dworkin, *Taking Rights Seriously* (weak vs strong discretion); the Montesquieu separation-of-powers spine.
 - Lineage studies: `isometric-cubes-ASK`, `mazeASK`.
 - Inbound routing record: `method-ASK-EXTERNAL/sources of intent/2026-06-06_asset-pipeline-ASK_to_method-ASK_bounded-generativity-primitive.md` (ingested 2026-06-06).
