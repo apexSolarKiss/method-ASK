@@ -49,9 +49,9 @@ Variance is technical; discretion is normative; authorship is the selection.
 
 These are **ASK-system worked examples and antecedent studies, not dependencies** — cite them as worked examples, never as imports (this protects each project's aesthetic-agnostic posture).
 
-- **`isometric-cubes-ASK`** — geometric constrained randomness: grid + weighted palette + size range as grammar; fully-random or mouse-radius-bounded variance; save-on-click as selection. The earliest, smallest form.
-- **`mazeASK`** — algorithmic bias under shared topology: same grid, same constraints, different rules; the rule that chooses the next connection introduces bias; even one algorithm never repeats a run. Topology = possible structure; carved links = chosen connectivity; rendering = derived output.
-- **`asset-pipeline-ASK`** — commercial asset production: intent + constraints + references (grammar) → AI candidate variance → curation (selection) → governed asset (record). The full chain, with governance first-class.
+- **[`isometric-cubes-ASK`](https://github.com/apexSolarKiss/isometric-cubes-ASK)** — geometric constrained randomness: grid + weighted palette + size range as grammar; fully-random or mouse-radius-bounded variance; save-on-click as selection. The earliest, smallest form.
+- **[`mazeASK`](https://github.com/apexSolarKiss/mazeASK)** — algorithmic bias under shared topology: same grid, same constraints, different rules; the rule that chooses the next connection introduces bias; even one algorithm never repeats a run. Topology = possible structure; carved links = chosen connectivity; rendering = derived output.
+- **[`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK)** — commercial asset production: intent + constraints + references (grammar) → AI candidate variance → curation (selection) → governed asset (record). The full chain, with governance first-class.
 - **Generative-AI workflows generally** — seed, sampler, guidance, temperature, top-p and related controls modulate the candidate spread. The normative brief sets the aperture; the model fills it. The variance is technical; the discretion is normative; the authorship is the selection.
 
 ## Tiering (where the primitive and its relations live)
@@ -71,5 +71,5 @@ These are **ASK-system worked examples and antecedent studies, not dependencies*
 - Public articulation (source of truth): [*Creative Discretion Is Not Creative Intent*](https://atomicspacekitten.substack.com/p/creative-discretion-is-not-creative) — intent → discretion → variance → selection → governance.
 - Method-reflection companion: [*The Method Learns from Exteriority*](https://atomicspacekitten.substack.com/p/the-method-learns-from-exteriority) (method-series) — the leave-and-return that surfaced the intent ↔ discretion relation this primitive formalizes.
 - Discretion grounding: Dworkin, *Taking Rights Seriously* (weak vs strong discretion); the Montesquieu separation-of-powers spine.
-- Lineage studies: `isometric-cubes-ASK`, `mazeASK`.
+- Lineage studies: [`isometric-cubes-ASK`](https://github.com/apexSolarKiss/isometric-cubes-ASK), [`mazeASK`](https://github.com/apexSolarKiss/mazeASK).
 - Inbound routing record: `method-ASK-EXTERNAL/sources of intent/2026-06-06_asset-pipeline-ASK_to_method-ASK_bounded-generativity-primitive.md` (ingested 2026-06-06).
