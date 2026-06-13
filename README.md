@@ -16,6 +16,8 @@ It does not carry execution-protocol assets. Those live in [`apexSolarKiss/contr
 
 The methodology layer articulates the cross-project method; the execution-protocol layer encodes calibrated rules that operationalize the method per session; project repos apply both to concrete domains.
 
+Linked ASK project repos are citations to worked examples, lineage surfaces, or layer relationships unless explicitly stated otherwise. They do not imply code dependency, schema import, aesthetic inheritance, or project-specific doctrine import.
+
 ## Status
 
 `docs/method.md` carries the primary method articulation. Standalone doctrine docs and method-altitude worked-example explanations have landed in `docs/` and `examples/`; the article-line index lives at `docs/articles.md`. An illustrative topology / relative-externality diagram has landed in [`docs/diagrams/`](docs/diagrams/); the diagram is illustrative, and repo prose remains source truth. Lineage remains a candidate for later PRs as substrate earns it.
