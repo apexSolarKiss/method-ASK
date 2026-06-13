@@ -11,8 +11,8 @@ It does not carry execution-protocol assets. Those live in [`apexSolarKiss/contr
 ## Layer relationship
 
 - **`method-ASK`** (this repo) — methodology layer, upstream
-- **`control-surface`** — execution-protocol layer
-- **project repos** — downstream applications (`asset-pipeline-ASK`, `urban-observatory`, `mazeASK`)
+- **[`control-surface`](https://github.com/apexSolarKiss/control-surface)** — execution-protocol layer
+- **project repos** — downstream applications ([`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK), [`urban-observatory`](https://github.com/apexSolarKiss/urban-observatory), [`mazeASK`](https://github.com/apexSolarKiss/mazeASK))
 
 The methodology layer articulates the cross-project method; the execution-protocol layer encodes calibrated rules that operationalize the method per session; project repos apply both to concrete domains.
 

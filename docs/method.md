@@ -293,5 +293,5 @@ The articulation is not finished. Each method element above could earn its own d
 - [`docs/bounded-generativity.md`](bounded-generativity.md) — the **bounded generativity** method primitive (grammar → bounded variance → selection → governed artifact); the mechanized form of *order from chaos*; three functions on the Montesquieu spine; discretion brackets generation
 - [`apexSolarKiss/control-surface`](https://github.com/apexSolarKiss/control-surface) — the execution-protocol meta repo that operationalizes the method; carries `AGENTS.md` rules, templates, prompts, project-instantiation workflow, and the legacy Model A artifacts
 - [`apexSolarKiss/control-surface/docs/architecture.md`](https://github.com/apexSolarKiss/control-surface/blob/main/docs/architecture.md) — the execution-protocol meta repo's role-model architecture
-- `apexSolarKiss/asset-pipeline-ASK` — the mature worked example the method has been pressure-tested against
-- `apexSolarKiss/mazeASK` — separate worked example; still on legacy Model A operating model
+- [`apexSolarKiss/asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) — the mature worked example the method has been pressure-tested against
+- [`apexSolarKiss/mazeASK`](https://github.com/apexSolarKiss/mazeASK) — separate worked example; still on legacy Model A operating model
