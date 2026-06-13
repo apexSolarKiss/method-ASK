@@ -16,7 +16,7 @@ It does not carry execution-protocol assets. Those live in [`apexSolarKiss/contr
 
 The methodology layer articulates the cross-project method; the execution-protocol layer encodes calibrated rules that operationalize the method per session; project repos apply both to concrete domains.
 
-Linked ASK project repos are citations to worked examples, lineage surfaces, or layer relationships unless explicitly stated otherwise. They do not imply code dependency, schema import, aesthetic inheritance, or project-specific doctrine import.
+Linked ASK repos are citations to worked examples, lineage surfaces, or layer relationships unless explicitly stated otherwise. They do not imply code dependency, schema import, aesthetic inheritance, or project-specific doctrine import.
 
 ## Status
 
