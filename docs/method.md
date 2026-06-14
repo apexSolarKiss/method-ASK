@@ -291,6 +291,7 @@ The articulation is not finished. Each method element above could earn its own d
 
 - [`AGENTS.md`](../AGENTS.md) — workflow rules for this methodology repo
 - [`docs/bounded-generativity.md`](bounded-generativity.md) — the **bounded generativity** method primitive (grammar → bounded variance → selection → governed artifact); the mechanized form of *order from chaos*; three functions on the Montesquieu spine; discretion brackets generation
+- [`docs/portable-definition-layer.md`](portable-definition-layer.md) — the **portable definition layer** method primitive (intent / constraints / discretion / references / governance as the durable object preserved across substrates); the **durability axis**, orthogonal complementary peer to bounded generativity; AP implemented + UO conceptual interpretive instance — lands the primitive, not an implementation protocol
 - [`apexSolarKiss/control-surface`](https://github.com/apexSolarKiss/control-surface) — the execution-protocol meta repo that operationalizes the method; carries `AGENTS.md` rules, templates, prompts, project-instantiation workflow, and the legacy Model A artifacts
 - [`apexSolarKiss/control-surface/docs/architecture.md`](https://github.com/apexSolarKiss/control-surface/blob/main/docs/architecture.md) — the execution-protocol meta repo's role-model architecture
 - [`apexSolarKiss/asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) — the mature worked example the method has been pressure-tested against
