@@ -1,6 +1,6 @@
 # The Portable Definition Layer // the durable object, separable from the tool that holds it
 
-A method primitive: **the durable normative object a system must preserve across a substrate move** — the structured statement of *intent, constraints, discretion, references, and governance* that makes outputs (or interpretations) **recoverable, auditable, and accountable** independent of whatever generator, tool of record, or workflow happened to hold them.
+A method primitive: **the durable normative object a system must preserve across a substrate change** — the structured statement of *intent, constraints, discretion, references, and governance* that makes outputs (or interpretations) **recoverable, auditable, and accountable** independent of whatever generator, tool of record, or workflow happened to hold them.
 
 ```text
 intent · constraints · discretion · references · governance
@@ -45,7 +45,7 @@ They are complementary peers. The portable definition layer is **not a facet** o
 
 The durable object is the structured statement of:
 
-- **Intent** — what the work is for (the source of intent a substrate move must not lose).
+- **Intent** — what the work is for (the source of intent a substrate change must not lose).
 - **Constraints** — the anti-goals and boundaries the work is held within.
 - **Discretion** — judgment exercised *within* standards. *Generative* discretion (which realized candidate is truest) and *evidentiary* discretion (how strong the evidence must be before a claim is licensed) are both instances; the facet is the governed exercise of judgment, not its specific kind.
 - **References** — the sources the work is accountable to — first-class accountability anchors (source + provenance + basis), not decoration.
