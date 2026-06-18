@@ -30,7 +30,8 @@ The diagram conforms to [`apexSolarKiss/design-system-ASK`](https://github.com/a
 README.md                              this file
 method-ASK_topology.html               renders TREE_D02
 method-ASK_topology.source.js          TREE_D02 data
-diagrams-engine.js                     layout + pan/zoom engine
+diagrams-static-H-engine.js            layout + pan/zoom engine
+_dsa-tokens/                           vendored Tier 1 + Tier 2 token mirror
 diagrams.css                           compiled Tier 1 + Tier 2 style
 export-png.js                          3840×2880 PNG export
 ```
