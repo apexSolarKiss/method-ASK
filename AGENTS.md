@@ -198,7 +198,9 @@ This rule applies whether the second session is the same agent, a different agen
 
 ### Repo-as-Arbiter for Current-State Questions
 
-For any load-bearing question about what a file currently contains, route to the agent on the filesystem, not to chat-side advisor retrieval claims. Confident retrieval claims from chat-side advisors do not graduate to ground truth without an artifact-side check.
+For any load-bearing question about what a file, branch, PR, or repo currently contains, verify against exact artifact state: the working tree, `git` state, an exact file path / ref, an exact PR diff, or a repo-qualified API / URL read. Generated summaries, search results, cached retrieval, memory, and unqualified chat claims do not graduate to ground truth without an artifact-side check.
+
+The discriminator is **exact artifact state, not which agent class performed the read**. A chat-side advisor resolving an exact repo-qualified PR patch is reading an artifact; a filesystem agent relying on a stale subagent digest is not. Tool class does not determine authority.
 
 This is method-layer doctrine, articulated in the 2026-05-20 advisor-read adjudication lesson and the article *Three Agents Got Into an Argument. The Repo Won.* It applies here because the methodology repo embodies the rule it articulates.
 
@@ -245,7 +247,7 @@ The single-node model collapses several functions that the earlier split-executi
 - A split model has a natural prompt-compilation step. A single-node model collapses it into the executor. **Plan-Before-Execute** is the rule that restores the reasoning surface.
 - A split model has natural model separation, which surfaces disagreements as visible artifacts. A single-node model runs in one head, so disagreements become invisible. **Structured Change Summary** and **exact-scoped-diff approval** are the rules that compensate.
 - A single-node model has stronger session-topology pressure (Claude Code easily spawns parallel threads). **Single-Writer Discipline** is the compensation.
-- Chat-side advisors confidently confabulate file contents. **Repo-as-Arbiter** routes current-state questions to the filesystem agent.
+- Generated summaries confidently confabulate file contents — chat-side retrieval, cached reads, and even a filesystem subagent's digest. **Repo-as-Arbiter** routes current-state questions to exact artifact state, not to any agent class's summary.
 
 When proposing rule changes, ask which failure mode the rule is compensating for and whether the compensation is still load-bearing.
 
@@ -296,7 +298,7 @@ When a project-specific pattern surfaces that might become method doctrine, do n
 
 - Verify repo state before meaningful work.
 - Read repo-local truth and grounding note before responding.
-- Route current-state questions to the filesystem; do not trust chat-side retrieval claims.
+- Route current-state questions to exact artifact state (working tree, `git`, exact ref / PR, repo-qualified API); do not trust generated summaries, regardless of agent class.
 - Stop at exact scoped diff before commit; carry through to merged + cleanup once approved.
 - State the plan before executing.
 - Single-writer per branch. Treat repo as audit trail.
