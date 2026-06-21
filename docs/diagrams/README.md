@@ -42,6 +42,7 @@ export-png.js                          3840×2880 PNG export
 - Drag to pan; scroll to zoom; HUD controls in the bottom-left; `⤢` to fit.
 - Theme follows the OS preference (`prefers-color-scheme`); the CSS supports explicit `data-theme="light"` or `data-theme="dark"` on `<html>` if a specific theme is needed.
 - The PNG export outputs a 3840×2880 image in the resolved theme.
+- **Theme by embedding surface** — adopting the [`design-system-ASK` convention](https://github.com/apexSolarKiss/design-system-ASK/blob/main/README.md#theme-by-embedding-surface) (pinned `7921b79`): this folder is repository documentation, so its embedded diagram **defaults to dark**. Both `-light` / `-dark` exports are retained; the dark render is the committed canonical here.
 
 ## Lineage
 
