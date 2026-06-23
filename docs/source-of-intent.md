@@ -4,6 +4,8 @@ This doctrine governs how the method handles purpose: where it originates, how i
 
 Source-of-intent is the axiom the recursion cannot supply. The system can elaborate purpose endlessly, but it cannot originate it. The operator's intent — held in the grounding note, validated through the loop, recovered when inception was messy — is what the method's recursion stands on. This doc names the disciplines that keep that intent intact.
 
+This doctrine governs the **operational** face of source of intent — how purpose is recovered, validated, preserved, and routed across surfaces. The **structural** face — what a source of intent *is* (the locatable governing role; intent · authority · recourse) — is governed by [`docs/normative-apex.md`](normative-apex.md); the governance architecture that operationalizes or constitutes a source lives in [`docs/governance.md`](governance.md).
+
 ## Source-of-intent recovery
 
 Projects do not always begin with clean source-of-intent. Inception often happens in AI-mediated exploration: chat threads, sketches, overlapping conversation captures, partial framings that accumulate without consolidation. Repo prose comes later. Method discipline at this stage is recovery, not authorship.
@@ -196,6 +198,10 @@ Two implications for the doctrine:
 
 - The operator's source-of-intent has the same load-bearing-ness as the project's. The axiom-outside-the-recursion (per [*Machine Builds Machine*](https://atomicspacekitten.substack.com/p/machine-builds-machine)) lives in the operator; the operator's context can no more be left to ephemeral threads than the project's can.
 - The dual-axis role-typing matters. Architect/operator and domain authority are different roles, and the source-of-intent pattern works differently depending on which role is supplying intent. The external/domain-authority handoff classification observation above is one specific instance of this dual-axis structure.
+
+## Canonicality is not normative force
+
+A canonical context note can carry, describe, or preserve source-of-intent material without becoming the authority behind it. Canonicalization — the absorption of settled reasoning into durable context — is distinct from **normative adoption**, the separate act by which the operator establishes intent, direction, or constraint. A file can hold the settled account of a decision without being the source of that decision; folder membership confers no canonicality, and the authorized source of intent remains the source; the note records or carries the settled account. Canonicality does not itself confer normative force. The mechanics of the authorized transition — when reasoning earns a durable home, and how — live in [`docs/absorption-discipline.md`](absorption-discipline.md).
 
 ## Self-superseding clause
 
