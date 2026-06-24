@@ -35,7 +35,7 @@ The **Montesquieu separation** runs through all of it: rulemaking, execution, an
 
 ## Constitutive governance
 
-Governance does not only operationalize an existing source; it can **constitute** one. A constituency, office, or collective becomes a legitimate source of intent through a governance architecture that supplies it: a defined constituency, a procedure, a scope, a binding decision, a closure, and recourse. Arithmetic supplies none of these — **a poll aggregates; a constituted collective decides.** In collective cases the relation is recursive: governance helps constitute the body capable of expressing binding intent, while that governance remains grounded in prior constitutional or normative commitments.
+Governance does not only operationalize an existing source; it can **constitute** one — it is how a **moral person** (a collective constituted so it can hold and bind intent) comes to exist. A democratic polity becomes a legitimate source through a defined electorate, constitutional offices, procedure, scope, a binding decision, closure, and recourse; a corporation through its charter, ownership or membership, board authority, delegated officers, fiduciary duties, and review. Arithmetic supplies none of these — **a poll aggregates; a constituted collective decides.** In collective cases the relation is recursive: governance helps constitute the body capable of expressing binding intent, while that governance remains grounded in prior constitutional or normative commitments.
 
 ## The non-identities
 
@@ -43,7 +43,7 @@ Governance does not only operationalize an existing source; it can **constitute*
 - **determinism ≠ a standard** — a perfectly reliable trigger is not the standard it fires on.
 - **a reflex ≠ a conscience** — firing when someone else has decided is not deciding what is wrong.
 
-A fourth is argued in full in the essay line and carried here by reference: **incorruptibility ≠ legitimacy** — an incorruptible mechanism can faithfully execute an illegitimate command (see *Determinism Is Not a Standard*).
+A fourth is argued in full in the essay line and carried here by reference: **incorruptibility ≠ legitimacy** — an incorruptible mechanism can faithfully execute an illegitimate command (see [*Determinism Is Not a Standard*](https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard)).
 
 ## Artifact governance
 
@@ -65,4 +65,4 @@ This doctrine should be superseded by a refactor if a common parent with [`docs/
 
 ## Anchors
 
-Anchor reading lives in [`docs/articles.md`](articles.md). *Determinism Is Not a Standard* (the silicon / limit case, argued in full) and *The Floor Is Not the Standard* (the synthesis) carry the arguments this doctrine states in compact form; Dworkin (*Taking Rights Seriously*) and the Montesquieu separation are the jurisprudential grounding.
+Anchor reading lives in [`docs/articles.md`](articles.md). [*Determinism Is Not a Standard*](https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard) (the silicon / limit case, argued in full) and *You Cannot Build Your Way to the Apex* (the synthesis) carry the arguments this doctrine states in compact form; Dworkin (*Taking Rights Seriously*) and the Montesquieu separation are the jurisprudential grounding.
