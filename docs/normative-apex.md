@@ -35,13 +35,13 @@ The subject is one primitive stated in distinctions the discourse keeps eliding:
 - **intention alone ≠ legitimate authority** — private will does not self-authorize; it acts through attributable authority, closure, and recourse.
 - **the interactional dyad ≠ the governance stack that contains it** — the field mistakes the two-minds-across-a-gap picture for the whole structure.
 
-Two further distinctions are argued in full in the essay line and carried here by reference: the **residue of judgment ≠ the act of judgment**, and **outputs ≠ intent** (see *Judgment Doesn't Transfer*).
+Two further distinctions are argued in full in the essay line and carried here by reference: the **residue of judgment ≠ the act of judgment**, and **outputs ≠ intent** (see [*Judgment Doesn't Transfer*](https://atomicspacekitten.substack.com/p/judgment-doesnt-transfer)).
 
 ## The operational floor is downstream of the standard
 
 The normative apex supplies or authorizes the governing standard. Governance constitutes or recognizes authority and translates the standard into rules, thresholds, bounded decision rights, verification, adjudication + recourse. The **operational floor** is the boundary those rules establish. A substrate or execution mechanism may carry, expose, clear, or enforce that floor; it cannot legitimate the standard that authorized it.
 
-Every substrate verb — clear, see, enforce, run, audit, arrest, de-energize — operates on a floor whose location has already been supplied to that substrate. ***Define* is never on the substrate's list.** The standard is presupposed, supplied upstream, external. Four structurally different worked cases make the point and are argued in full in the essay line: the **architecture** layer, the **state / enforcement** layer (*Authority Without a Standard*), the **operational** layer (detection supplies what is true, never what the truth is allowed to mean), and the **physical / limit** layer ([*Determinism Is Not a Standard*](https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard) — perfecting enforcement only throws the standard's absence into sharper relief). *You Cannot Build Your Way to the Apex* synthesizes the essay arc; *Judgment Doesn't Transfer* argues the corpus frame.
+Every substrate verb — clear, see, enforce, run, audit, arrest, de-energize — operates on a floor whose location has already been supplied to that substrate. ***Define* is never on the substrate's list.** The standard is presupposed, supplied upstream, external. Four structurally different worked cases make the point and are argued in full in the essay line: the **architecture** layer, the **state / enforcement** layer (*Authority Without a Standard*), the **operational** layer (detection supplies what is true, never what the truth is allowed to mean), and the **physical / limit** layer ([*Determinism Is Not a Standard*](https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard) — perfecting enforcement only throws the standard's absence into sharper relief). *You Cannot Build Your Way to the Apex* synthesizes the essay arc; [*Judgment Doesn't Transfer*](https://atomicspacekitten.substack.com/p/judgment-doesnt-transfer) argues the corpus frame.
 
 ## Relation to governance
 
@@ -70,4 +70,4 @@ The doctrine is not finished; it states the apex modestly and refers the full ar
 
 ## Anchors
 
-Anchor reading lives in [`docs/articles.md`](articles.md). The source-of-intent arc and the trilogy — [*Determinism Is Not a Standard*](https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard), *Judgment Doesn't Transfer*, *You Cannot Build Your Way to the Apex* — carry the full arguments this doctrine states in compact form.
+Anchor reading lives in [`docs/articles.md`](articles.md). The source-of-intent arc and the trilogy — [*Determinism Is Not a Standard*](https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard), [*Judgment Doesn't Transfer*](https://atomicspacekitten.substack.com/p/judgment-doesnt-transfer), *You Cannot Build Your Way to the Apex* — carry the full arguments this doctrine states in compact form.
