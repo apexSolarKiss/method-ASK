@@ -14,7 +14,7 @@ Source of intent is a **locatable governing role, not exhaustive specification o
 
 Accountability decomposes into three things distribution can never produce:
 
-- **Intent** — *before* the act: what the system is for, where the floor sits.
+- **Intent** — *before* the act: what the system is for and which governing standard applies.
 - **Authority** — the *right* to act, not merely the power.
 - **Recourse** — *after* the act: who answers when an authorized move is later judged wrong.
 
@@ -37,9 +37,11 @@ The subject is one primitive stated in distinctions the discourse keeps eliding:
 
 Two further distinctions are argued in full in the essay line and carried here by reference: the **residue of judgment ≠ the act of judgment**, and **outputs ≠ intent** (see *Judgment Doesn't Transfer*).
 
-## The floor that is cleared but not drawn
+## The operational floor is downstream of the standard
 
-An architecture **clears a floor it does not draw.** Every verb a system offers — clear, see, enforce, run, audit, arrest, de-energize — operates on a floor whose location is already given. ***Define* is never on the list.** The standard is presupposed, supplied upstream, external. Four structurally different worked cases make the point and are argued in full in the essay line: the **architecture** layer, the **state / enforcement** layer (*Authority Without a Standard*), the **operational** layer (detection supplies what is true, never what the truth is allowed to mean), and the **physical / limit** layer (*Determinism Is Not a Standard* — perfecting the floor only throws the standard's absence into sharper relief). *The Floor Is Not the Standard* synthesizes all seven essay-arc frames; *Judgment Doesn't Transfer* argues the corpus frame.
+The normative apex supplies or authorizes the governing standard. Governance constitutes or recognizes authority and translates the standard into rules, thresholds, bounded decision rights, verification, adjudication + recourse. The **operational floor** is the boundary those rules establish. A substrate or execution mechanism may carry, expose, clear, or enforce that floor; it cannot legitimate the standard that authorized it.
+
+Every substrate verb — clear, see, enforce, run, audit, arrest, de-energize — operates on a floor whose location has already been supplied to that substrate. ***Define* is never on the substrate's list.** The standard is presupposed, supplied upstream, external. Four structurally different worked cases make the point and are argued in full in the essay line: the **architecture** layer, the **state / enforcement** layer (*Authority Without a Standard*), the **operational** layer (detection supplies what is true, never what the truth is allowed to mean), and the **physical / limit** layer (*Determinism Is Not a Standard* — perfecting the floor only throws the standard's absence into sharper relief). *The Floor Is Not the Standard* synthesizes all seven essay-arc frames; *Judgment Doesn't Transfer* argues the corpus frame.
 
 ## Relation to governance
 

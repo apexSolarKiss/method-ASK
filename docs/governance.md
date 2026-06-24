@@ -10,6 +10,8 @@ Governance is articulated separately from the [normative apex](normative-apex.md
 normative apex            purpose · governing standard · ultimate answerability
 governance architecture   constitution / recognition of authority · rulemaking · delegated discretion ·
                           execution · verification · adjudication · revision · recourse
+operational floor         rules / thresholds / limits / exceptions established through governance
+execution substrate       mechanisms that carry, expose, apply, or enforce the floor
 ```
 
 **Authority and recourse appear in both.** The apex states them as normative *requirements* — authority must be legitimate, recourse must remain locatable. Governance provides their institutional *mechanisms* — how authority is constituted or recognized, how recourse is operated. The two docs are complementary, not duplicative.
@@ -37,7 +39,7 @@ Governance does not only operationalize an existing source; it can **constitute*
 
 ## The non-identities
 
-- **enforcement ≠ governance** — clearing or holding a floor is not drawing it.
+- **enforcement ≠ governance** — applying or holding an operational floor is not authorizing the standard, governing its application, or judging the disputed case.
 - **determinism ≠ a standard** — a perfectly reliable trigger is not the standard it fires on.
 - **a reflex ≠ a conscience** — firing when someone else has decided is not deciding what is wrong.
 
