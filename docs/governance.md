@@ -10,6 +10,8 @@ Governance is articulated separately from the [normative apex](normative-apex.md
 normative apex            purpose · governing standard · ultimate answerability
 governance architecture   constitution / recognition of authority · rulemaking · delegated discretion ·
                           execution · verification · adjudication · revision · recourse
+operational floor         boundary established through governed rules · thresholds · limits · exceptions
+execution substrate       mechanisms that carry, expose, apply, or enforce the floor
 ```
 
 **Authority and recourse appear in both.** The apex states them as normative *requirements* — authority must be legitimate, recourse must remain locatable. Governance provides their institutional *mechanisms* — how authority is constituted or recognized, how recourse is operated. The two docs are complementary, not duplicative.
@@ -33,15 +35,15 @@ The **Montesquieu separation** runs through all of it: rulemaking, execution, an
 
 ## Constitutive governance
 
-Governance does not only operationalize an existing source; it can **constitute** one. A constituency, office, or collective becomes a legitimate source of intent through a governance architecture that supplies it: a defined constituency, a procedure, a scope, a binding decision, a closure, and recourse. Arithmetic supplies none of these — **a poll aggregates; a constituted collective decides.** In collective cases the relation is recursive: governance helps constitute the body capable of expressing binding intent, while that governance remains grounded in prior constitutional or normative commitments.
+Governance does not only operationalize an existing source; it can help constitute a collective one. A democratic polity becomes capable of binding intent through a defined electorate, constitutional offices, procedure, scope, decision, closure + recourse; a corporation through its charter, ownership or membership, board authority, delegated officers, fiduciary duties + review. These arrangements do not make every decision legitimate merely by existing; they make authority, scope, closure + recourse attributable. Arithmetic supplies none of these — **a poll aggregates; a constituted collective decides.** In collective cases the relation is recursive: governance helps constitute the body capable of expressing binding intent, while that governance remains grounded in prior constitutional or normative commitments.
 
 ## The non-identities
 
-- **enforcement ≠ governance** — clearing or holding a floor is not drawing it.
+- **enforcement ≠ governance** — applying or holding an operational floor is not authorizing the standard, governing its application, or judging the disputed case.
 - **determinism ≠ a standard** — a perfectly reliable trigger is not the standard it fires on.
 - **a reflex ≠ a conscience** — firing when someone else has decided is not deciding what is wrong.
 
-A fourth is argued in full in the essay line and carried here by reference: **incorruptibility ≠ legitimacy** — an incorruptible mechanism can faithfully execute an illegitimate command (see *Determinism Is Not a Standard*).
+A fourth is argued in full in the essay line and carried here by reference: **incorruptibility ≠ legitimacy** — an incorruptible mechanism can faithfully execute an illegitimate command (see [*Determinism Is Not a Standard*](https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard)).
 
 ## Artifact governance
 
@@ -63,4 +65,4 @@ This doctrine should be superseded by a refactor if a common parent with [`docs/
 
 ## Anchors
 
-Anchor reading lives in [`docs/articles.md`](articles.md). *Determinism Is Not a Standard* (the silicon / limit case, argued in full) and *The Floor Is Not the Standard* (the synthesis) carry the arguments this doctrine states in compact form; Dworkin (*Taking Rights Seriously*) and the Montesquieu separation are the jurisprudential grounding.
+Anchor reading lives in [`docs/articles.md`](articles.md). [*Determinism Is Not a Standard*](https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard) (the silicon / limit case, argued in full) and *You Cannot Build Your Way to the Apex* (the synthesis) carry the arguments this doctrine states in compact form; Dworkin (*Taking Rights Seriously*) and the Montesquieu separation are the jurisprudential grounding.
