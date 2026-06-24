@@ -10,7 +10,7 @@ Governance is articulated separately from the [normative apex](normative-apex.md
 normative apex            purpose · governing standard · ultimate answerability
 governance architecture   constitution / recognition of authority · rulemaking · delegated discretion ·
                           execution · verification · adjudication · revision · recourse
-operational floor         rules / thresholds / limits / exceptions established through governance
+operational floor         boundary established through governed rules · thresholds · limits · exceptions
 execution substrate       mechanisms that carry, expose, apply, or enforce the floor
 ```
 
@@ -35,7 +35,7 @@ The **Montesquieu separation** runs through all of it: rulemaking, execution, an
 
 ## Constitutive governance
 
-Governance does not only operationalize an existing source; it can **constitute** one — it is how a **moral person** (a collective constituted so it can hold and bind intent) comes to exist. A democratic polity becomes a legitimate source through a defined electorate, constitutional offices, procedure, scope, a binding decision, closure, and recourse; a corporation through its charter, ownership or membership, board authority, delegated officers, fiduciary duties, and review. Arithmetic supplies none of these — **a poll aggregates; a constituted collective decides.** In collective cases the relation is recursive: governance helps constitute the body capable of expressing binding intent, while that governance remains grounded in prior constitutional or normative commitments.
+Governance does not only operationalize an existing source; it can help constitute a collective one. A democratic polity becomes capable of binding intent through a defined electorate, constitutional offices, procedure, scope, decision, closure + recourse; a corporation through its charter, ownership or membership, board authority, delegated officers, fiduciary duties + review. These arrangements do not make every decision legitimate merely by existing; they make authority, scope, closure + recourse attributable. Arithmetic supplies none of these — **a poll aggregates; a constituted collective decides.** In collective cases the relation is recursive: governance helps constitute the body capable of expressing binding intent, while that governance remains grounded in prior constitutional or normative commitments.
 
 ## The non-identities
 
