@@ -2,11 +2,17 @@
    Source data for the method-ASK topology / relative-externality map diagram.
    Renderable by diagrams-engine.js.
 
-   D02 // method-ASK topology / relative-externality map // source-v2 // 2026-05-25
+   D02 // method-ASK topology / relative-externality map // source-v3 // 2026-06-23
    Single-tree extraction of TREE_D02 from the v9 operator-side ecology-ASK
    package. This repo carries TREE_D02 only; it does not carry TREE_D01
    (control-surface architecture tree) or TREE_D03 (ecology-ASK overall),
    which remain in their respective owners' surfaces.
+
+   source-v3 (2026-06-23): the doctrine-docs group now reflects the graduated
+   source-of-intent doctrine cluster (normative-apex · source-of-intent handling ·
+   governance · bounded-generativity) plus portable-definition-layer, and the
+   image-making worked example is added under examples/. Roles are distinguished
+   in the notes; no co-primitive taxonomy is asserted (held per method-GN v18).
 
    Pre-emptive fixes from PR A's Stage 2 lesson (transposing v9 from
    operator-side scratch to repo-local context):
@@ -32,17 +38,22 @@ window.TREE_D02 = {
         { label: 'AGENTS.md' },
         { label: 'docs/method.md', note: 'primary method articulation' },
         { label: 'docs/articles.md', note: 'canonical article-line index' },
-        { kind: 'group', label: 'doctrine docs', children: [
-          { label: 'source-of-intent.md' },
-          { label: 'source-of-truth-and-aging-rate.md' },
-          { label: 'relative-externality.md' },
+        { kind: 'group', label: 'doctrine docs', note: 'source-of-intent doctrine cluster + method spine', children: [
+          { label: 'normative-apex.md', note: 'structural source-of-intent · the apex role' },
+          { label: 'source-of-intent.md', note: 'operational / handling face' },
+          { label: 'governance.md', note: 'governance architecture · rulemaking → verification → recourse' },
+          { label: 'bounded-generativity.md', note: 'bounded discretion + functional judgment topology' },
           { label: 'absorption-discipline.md' },
+          { label: 'portable-definition-layer.md' },
+          { label: 'relative-externality.md' },
+          { label: 'source-of-truth-and-aging-rate.md' },
           { label: 'voice-surface-boundary.md' },
         ]},
         { label: 'examples/', children: [
           { label: 'asset-pipeline-ASK.md' },
           { label: 'urban-observatory.md' },
           { label: 'design-system-ASK.md' },
+          { label: 'image-making-source-of-intent.md', note: 'compact image-making worked example' },
         ]},
         { label: 'docs/diagrams/', note: 'illustrative diagrams · not source truth', children: [
           { label: 'method-ASK_topology.html', note: 'this diagram' },
