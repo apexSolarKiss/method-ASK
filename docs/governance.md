@@ -65,4 +65,4 @@ This doctrine should be superseded by a refactor if a common parent with [`docs/
 
 ## Anchors
 
-Anchor reading lives in [`docs/articles.md`](articles.md). [*Determinism Is Not a Standard*](https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard) (the silicon / limit case, argued in full) and *You Cannot Build Your Way to the Apex* (the synthesis) carry the arguments this doctrine states in compact form; Dworkin (*Taking Rights Seriously*) and the Montesquieu separation are the jurisprudential grounding.
+Anchor reading lives in [`docs/articles.md`](articles.md). [*Determinism Is Not a Standard*](https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard) (the silicon / limit case, argued in full) and [*You Cannot Build Your Way to the Apex*](https://atomicspacekitten.substack.com/p/you-cannot-build-your-way-to-the) (the synthesis) carry the arguments this doctrine states in compact form; Dworkin (*Taking Rights Seriously*) and the Montesquieu separation are the jurisprudential grounding.
