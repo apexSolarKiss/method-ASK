@@ -3,12 +3,13 @@
 A method primitive: **define a grammar, permit bounded variance inside it, select from the realized candidates, and govern what becomes durable.**
 
 ```text
-grammar / brief (belt of restriction)
-  → bounded variance (a permitted aperture, filled by execution)
-    → judgment-bearing intervention (where an authorized decision-maker acts within the span)
-      → selection + closure (judgment: this one; the aperture closes)
-        → artifact governance (binds the accepted result's claim, use, circulation, answerability)
-          → governed artifact + governance record (the accepted work; the durable trace + stated basis)
+grammar / brief (aperture set)
+  >> bounded realization process
+       variance-producing spans (nonjudgmental)
+       judgment-bearing spans where present (authorized evaluation + scoped binding)
+    >> selection + closure
+      >> artifact governance
+        >> governed artifact + governance record
 ```
 
 This is the mechanized form of the standing ASK ecology tagline — *order from chaos // beauty in systems*. Order is not the elimination of randomness. It is randomness **bounded, made legible, and selected from.**
@@ -28,13 +29,15 @@ So it earns generalization beyond a single project, which is the definition of `
 
 ## The structure — three functions on the Montesquieu spine
 
-A durable generative system separates three functions and keeps them independent:
+A durable generative system keeps three functions distinguishable, even when one actor occupies several:
 
 - **Legislative — the grammar / the brief.** The normative layer, where source of intent is expressed or carried. Sets the aim, the constraints, the references, the output obligation, and *how wide to open the aperture*. Intent and the permitted variance are authored here.
 - **Executive — generation.** Fills the aperture with variance. The variance-producing operation itself is **nonjudgmental** — it does not evaluate against the governing standard and bind. A broader execution process may nonetheless *contain* judgment-bearing spans: judgment exists wherever an authorized decision-maker — human or computational — evaluates admissible alternatives against the governing standard and binds within scope. Authorization or human presence alone is insufficient, and current model sampling does not qualify.
-- **Judicial — selection + closure.** Chooses one realized candidate and closes the aperture — ratifying it as the selected candidate under the governing intent / standard. Artifact governance then binds the accepted result and a governance record carries the trace, making the work durable and accountable.
+- **Judicial — selection + closure.** Chooses one realized candidate and closes the aperture, ratifying it under the governing intent / standard.
 
-Compact: **the brief carries the grammar; execution fills the aperture; authorized decision-makers may intervene; selection closes; artifact governance binds the accepted result; the governance record carries the trace + stated basis.** (The legislative/executive/judicial spine here is the **generative-artifact instance** of the general governance architecture in [`docs/governance.md`](governance.md); artifact governance and its governance record are distinct functions downstream of the selection / closure gate, not the whole governance function.)
+Downstream of the three-role spine, artifact governance binds the accepted result; the governance record carries the trace + stated basis, supporting durability, audit + recourse.
+
+Compact: **the brief carries the grammar; execution fills the aperture; authorized decision-makers may intervene; selection closes; artifact governance binds the accepted result; the governance record carries the trace + stated basis.** (The legislative/executive/judicial spine here is the **generative-artifact instance** of the general governance architecture in [`docs/governance.md`](governance.md); artifact governance is a downstream function; the governance record is its durable carrier, not another governance function.)
 
 ## Where discretion enters
 
@@ -59,7 +62,7 @@ These are **ASK-system worked examples and antecedent studies, not dependencies*
 ## Tiering (where the primitive and its relations live)
 
 - **`method-ASK`** owns the primitive definition — this doc.
-- **`control-surface`** records the cross-repo *relationship* — `order from chaos → bounded generativity → selection → governed artifact` as an ASK ecology pattern spanning cubes / maze / asset-pipeline-ASK / generative-AI workflows. A relation among repos, not an implementation detail. (Recorded after this doc lands.)
+- **`control-surface`** records the cross-repo *relationship* — `order from chaos >> bounded generativity >> selection + closure >> artifact governance >> governed artifact + governance record` as an ASK ecology pattern spanning cubes / maze / asset-pipeline-ASK / generative-AI workflows. A relation among repos, not an implementation detail. (Recorded after this doc lands.)
 - **Project repos** (asset-pipeline-ASK first) reference the primitive at high-level doctrine altitude — **not** as schema, proof-test, or diagram.
 
 ## Boundaries
@@ -70,7 +73,7 @@ These are **ASK-system worked examples and antecedent studies, not dependencies*
 
 ## Anchors
 
-- Public articulation (source of truth): [*Creative Discretion Is Not Creative Intent*](https://atomicspacekitten.substack.com/p/creative-discretion-is-not-creative) — intent → discretion → variance → selection → governance.
+- Public reflective articulation: [*Creative Discretion Is Not Creative Intent*](https://atomicspacekitten.substack.com/p/creative-discretion-is-not-creative) — intent >> discretion >> variance >> selection + closure >> artifact governance.
 - Method-reflection companion: [*The Method Learns from Exteriority*](https://atomicspacekitten.substack.com/p/the-method-learns-from-exteriority) (method-series) — the leave-and-return that surfaced the intent ↔ discretion relation this primitive formalizes.
 - Discretion grounding: Dworkin, *Taking Rights Seriously* (weak vs strong discretion); the Montesquieu separation-of-powers spine.
 - Lineage studies: [`isometric-cubes-ASK`](https://github.com/apexSolarKiss/isometric-cubes-ASK), [`mazeASK`](https://github.com/apexSolarKiss/mazeASK).
