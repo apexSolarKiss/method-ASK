@@ -22,7 +22,7 @@ The method assigns authority across these surfaces:
 - **Scratch** — event records, state chronology, working memory, in-flight per-conversation tracking, post-event recaps. Authoritative for *what happened, when, in what sequence*. Fast-aging. Lives operator-side.
 - **`method-ASK` docs** — cross-project method doctrine that has earned generalization. Authoritative for *the method itself*. Slow-aging. Refreshes only when the underlying method articulation has materially evolved.
 - **`control-surface`** — execution protocol, workflow templates, prompts, project-instantiation workflow, the per-PR cadence. Authoritative for *how sessions operate against repos*. Slow-aging.
-- **Articles** — reflection at its own pace; conceptual source of truth for the externally-written essay line. Authoritative for *the conceptual articulation of method elements as they appear in public reflection*. Own pace, distinct from doctrine cadence.
+- **Articles** — reflection at its own pace. Authoritative for *the public reflective articulation of method elements*, not for current repo state or method doctrine. Own pace, distinct from doctrine cadence.
 - **Operator memory** — per-conversation reminders, project-session ephemera (Claude Code's `MEMORY.md`, ChatGPT thread history, in-flight task lists). Authoritative for *what the operator needs to remember session-to-session*. Ephemeral. Not repo truth.
 
 Each surface has a single dominant aging rate. The split is not separation-of-concerns alone; it is separation-by-aging-rate.

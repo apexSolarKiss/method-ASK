@@ -1,6 +1,6 @@
 # Normative Apex
 
-This doctrine governs the **structural** face of source of intent: what a source of intent *is* — the locatable governing role that supplies or authorizes purpose and the governing standard, and from which legitimate authority, closure, and recourse take their bearings. The **operational** face — how purpose is recovered, validated, preserved, and routed across surfaces — lives in [`docs/source-of-intent.md`](source-of-intent.md). This doc is the apex the recursion stands on; that doc is how the apex is handled in practice.
+This doctrine governs the **structural** face of source of intent: what a source of intent *is* — the locatable governing role that supplies or authorizes purpose and the governing standard, and from which legitimate authority, closure, and recourse take their bearings. The **operational** face — how purpose is recovered, validated, preserved, and routed across surfaces — lives in [`docs/source-of-intent.md`](source-of-intent.md). This doc articulates the apex the recursion presupposes; the operational doctrine governs how source of intent is handled in practice.
 
 ## The apex
 
@@ -57,7 +57,7 @@ The apex states the normative **requirements** — purpose, governing standard, 
 
 ## Classification
 
-The structural face of source of intent, generalized beyond any single project. It clears the promotion bar by recurrence: the same apex absence recurs across distribution, data, enforcement, supply, operations, silicon, and corpus framings (the essay arc), and across image-making, asset production, and civic domains. It is the apex the operational handling doctrine ([`docs/source-of-intent.md`](source-of-intent.md)) presupposes.
+The structural face of source of intent, generalized beyond any single project. It clears the promotion bar by recurrence: the same apex absence recurs across distribution, data, enforcement, supply, operations, silicon, and corpus framings (the essay arc), and across image-making, asset production, and civic domains. It articulates the apex the operational handling doctrine ([`docs/source-of-intent.md`](source-of-intent.md)) presupposes.
 
 ## Self-superseding clause
 
