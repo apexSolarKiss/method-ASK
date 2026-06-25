@@ -3,10 +3,12 @@
 A method primitive: **define a grammar, permit bounded variance inside it, select from the realized candidates, and govern what becomes durable.**
 
 ```text
-grammar (belt of restriction)
+grammar / brief (belt of restriction)
   → bounded variance (a permitted aperture, filled by execution)
-    → selection (judgment: this one)
-      → governed artifact (record: reason, provenance, authority)
+    → judgment-bearing intervention (where an authorized decision-maker acts within the span)
+      → selection + closure (judgment: this one; the aperture closes)
+        → artifact governance (binds the accepted result's claim, use, circulation, answerability)
+          → governed artifact + governance record (the accepted work; the durable trace + stated basis)
 ```
 
 This is the mechanized form of the standing ASK ecology tagline — *order from chaos // beauty in systems*. Order is not the elimination of randomness. It is randomness **bounded, made legible, and selected from.**
@@ -28,11 +30,11 @@ So it earns generalization beyond a single project, which is the definition of `
 
 A durable generative system separates three functions and keeps them independent:
 
-- **Legislative — the grammar / the brief.** The normative layer, where source of intent lives. Sets the aim, the constraints, the references, the output obligation, and *how wide to open the aperture*. Intent and the permitted variance are authored here.
+- **Legislative — the grammar / the brief.** The normative layer, where source of intent is expressed or carried. Sets the aim, the constraints, the references, the output obligation, and *how wide to open the aperture*. Intent and the permitted variance are authored here.
 - **Executive — generation.** Fills the aperture with variance. The variance-producing operation itself is **nonjudgmental** — it does not evaluate against the governing standard and bind. A broader execution process may nonetheless *contain* judgment-bearing spans: judgment exists wherever an authorized decision-maker — human or computational — evaluates admissible alternatives against the governing standard and binds within scope. Authorization or human presence alone is insufficient, and current model sampling does not qualify.
-- **Judicial — selection + governance.** Chooses one realized candidate — closes the aperture, makes it *true* to the intent — and records the choice, making it durable and accountable.
+- **Judicial — selection + closure.** Chooses one realized candidate and closes the aperture — ratifying it as the selected candidate under the governing intent / standard. Artifact governance then binds the accepted result and a governance record carries the trace, making the work durable and accountable.
 
-Compact: **the brief legislates, the executor fills, the curator adjudicates, governance records.** (The legislative/executive/judicial spine here is the **generative-artifact instance** of the general governance architecture in [`docs/governance.md`](governance.md); "governance records" names **artifact governance** and its **governance record**, not the whole governance function.)
+Compact: **the brief carries the grammar; execution fills the aperture; authorized decision-makers may intervene; selection closes; artifact governance binds the accepted result; the governance record carries the trace + stated basis.** (The legislative/executive/judicial spine here is the **generative-artifact instance** of the general governance architecture in [`docs/governance.md`](governance.md); artifact governance and its governance record are distinct functions downstream of the selection / closure gate, not the whole governance function.)
 
 ## Where discretion enters
 
@@ -41,7 +43,7 @@ Creative discretion — judgment exercised *within* standards (Dworkin's **weak*
 The distinction that keeps this honest:
 
 - The **aperture** is a *quantity* — the permitted variance.
-- **Discretion** is an *act* — the judgment that opens the aperture and later closes it.
+- **Discretion** is an *act* — judgment that opens the aperture, adjusts or intervenes within it, or closes it.
 
 Variance is technical; discretion is normative; **selection is the curatorial closure gate — not the whole of authorship.** Authorship may be attributable through source of intent, bounded discretion, judgment-bearing intervention, selection, and closure. Artifact governance constrains and records the accepted work's claim, use, circulation, and answerability; it preserves attribution and recourse but does not itself create authorship.
 
@@ -51,7 +53,7 @@ These are **ASK-system worked examples and antecedent studies, not dependencies*
 
 - **[`isometric-cubes-ASK`](https://github.com/apexSolarKiss/isometric-cubes-ASK)** — geometric constrained randomness: grid + weighted palette + size range as grammar; fully-random or mouse-radius-bounded variance; save-on-click as selection. The earliest, smallest form.
 - **[`mazeASK`](https://github.com/apexSolarKiss/mazeASK)** — algorithmic bias under shared topology: same grid, same constraints, different rules; the rule that chooses the next connection introduces bias; even one algorithm never repeats a run. Topology = possible structure; carved links = chosen connectivity; rendering = derived output.
-- **[`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK)** — commercial asset production: intent + constraints + references (grammar) → AI candidate variance → curation (selection) → governed asset (record). The full chain, with governance first-class.
+- **[`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK)** — commercial asset production: intent + constraints + references (grammar) → AI candidate variance → curation (selection + closure) → artifact governance → governed asset + governance record. The full chain, with governance first-class.
 - **Generative-AI workflows generally** — seed, sampler, guidance, temperature, top-p and related controls modulate the candidate spread. The normative brief sets the aperture; the model fills it. The variance is technical; the discretion is normative; selection is the closure gate, not the whole of authorship.
 
 ## Tiering (where the primitive and its relations live)

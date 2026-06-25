@@ -2,7 +2,7 @@
 
 This doctrine governs how the method handles purpose: where it originates, how it enters the system, how it is preserved across surfaces, how it is distinguished from look-alikes, and what discipline keeps the operator from being asked to reauthorize what is already settled.
 
-Source-of-intent is the axiom the recursion cannot supply. The system can elaborate purpose endlessly, but it cannot originate it. The operator's intent — held in the grounding note, validated through the loop, recovered when inception was messy — is what the method's recursion stands on. This doc names the disciplines that keep that intent intact.
+Source-of-intent is the axiom the recursion cannot supply. The system can elaborate purpose endlessly, but it cannot originate it. The operator's intent — recorded or carried in the grounding note, validated through the loop, recovered when inception was messy — is what the method's recursion stands on. This doc names the disciplines that keep that intent intact.
 
 This doctrine governs the **operational** face of source of intent — how purpose is recovered, validated, preserved, and routed across surfaces. The **structural** face — what a source of intent *is* (the locatable governing role; intent · authority · recourse) — is governed by [`docs/normative-apex.md`](normative-apex.md); the governance architecture that operationalizes or constitutes a source lives in [`docs/governance.md`](governance.md).
 
@@ -186,11 +186,11 @@ The category mapping for handoff classification reuses the doctrine's category d
 
 ## Operator grounding-note extension (adjacent pressure)
 
-Source-of-intent has a persistence problem at every layer below it — projects forget across threads, tools forget across sessions. The method's response is the grounding note: externalized, durable, single-sourced intent that the system reads on entry.
+Source-of-intent has a persistence problem at every layer below it — projects forget across threads, tools forget across sessions. The method's response is the grounding note: durable context that carries externalized, single-sourced intent the system reads on entry.
 
 The same persistence problem applies to the operator. The operator works across tools, across threads, across weeks. The durable facts about the operator — how they want to be engaged, what context shapes their judgment, what's load-bearing for them this week — do not survive a thread boundary either. Every new conversation starts cold; tools disagree about state; the operator re-explains constantly.
 
-This is the project-memory problem with the subject changed. If the grounding note is the answer for a project, the operator needs a grounding note too. Same architecture: externalized files, organized by aging rate, single-sourced, read on entry, surviving any thread. Pointer discipline at the boundaries, aging-rate discipline within.
+This is the project-memory problem with the subject changed. If the grounding note is the durable carrier for a project, the operator needs a grounding note too. Same architecture: externalized files, organized by aging rate, single-sourced, read on entry, surviving any thread. Pointer discipline at the boundaries, aging-rate discipline within.
 
 This is adjacent method pressure, not method doctrine to absorb wholesale. The operator-grounding-note pattern lives operator-side; its specifics (file names, content layout, tool-specific behaviors) are not method-ASK's to articulate. What method-ASK preserves is the structural observation that *source-of-intent persistence applies recursively to the operator who supplies the intent*.
 
