@@ -25,7 +25,7 @@ Enforcement makes a rule effective. Governance asks whether the standard is legi
 A durable governance architecture keeps these functions distinct, auditable, and answerable, even when one organization or one person occupies several:
 
 - **rulemaking** — translate the governing standard into predicates, limits, and exceptions.
-- **delegated discretion** — bounded (Dworkin *weak*) judgment exercised within the standard, assigned to a decision owner.
+- **delegated discretion** — bounded (Dworkin *weak*) judgment exercised by an authorized decision-maker within the governing standard and delegated scope.
 - **execution** — apply the rule.
 - **verification** — test whether the rule was applied correctly.
 - **adjudication** — hear the disputed case.
