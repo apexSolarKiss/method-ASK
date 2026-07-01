@@ -39,6 +39,12 @@ Downstream of the three-role spine, artifact governance binds the accepted resul
 
 Compact: **the brief carries the grammar; execution fills the aperture; authorized decision-makers may intervene; selection closes; artifact governance binds the accepted result; the governance record carries the trace + stated basis.** (The legislative/executive/judicial spine here is the **generative-artifact instance** of the general governance architecture in [`docs/governance.md`](governance.md); artifact governance is a downstream function; the governance record is its durable carrier, not another governance function.)
 
+## Delivery through an external AI runtime
+
+When a bounded realization process is delivered through a user's own AI runtime rather than a controlled app surface, the brief / source-of-intent package must also carry its **loading path**. The model is unchanged — the brief / grammar grants the aperture, execution fills it, authorized decision-makers bind locally, selection closes, governance binds the accepted artifact. What changes is the **failure surface**: a grammar cannot govern a realization it fails to arrive as, so the seed must carry not only the aperture for the work but the setup instructions that let the user instantiate the interaction in their own AI tool. That delivery-side case is [`docs/repo-mediated-generated-interface.md`](repo-mediated-generated-interface.md).
+
+Compact relation: **bounded generativity governs the candidate space; repo-mediated generated interface governs the instantiation path.**
+
 ## Where discretion enters
 
 Creative discretion — judgment exercised *within* standards (Dworkin's **weak** discretion, not freedom from standards) — may enter **before, during, or after** realization: in authoring the grammar / aperture, in judgment-bearing intervention during execution, and in selecting from what comes back. What is uniformly non-judgmental is the **variance-producing operation** itself — it fills the aperture; it does not evaluate against the standard and bind.

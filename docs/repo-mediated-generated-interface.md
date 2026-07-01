@@ -8,7 +8,21 @@ repo / prompt / package  +  delivery wrapper  +  user loading path
     >> the interface is the guided interaction the package causes to happen
 ```
 
-The static artifact — a prompt file, a sealed HTML, a review packet — is the **seed**, not the interface. The interface is the guided, AI-mediated interaction the seed produces. This is the bounded-generativity spine ([`docs/bounded-generativity.md`](bounded-generativity.md)) seen from the delivery side: the brief carries the grammar, and here it must also carry **its own loading instructions into a runtime the author cannot see**.
+The static artifact — a prompt file, a sealed HTML, a review packet — is the **seed**, not the interface. The interface is the guided, AI-mediated interaction the seed produces.
+
+## Relation to bounded generativity
+
+Repo-mediated generated interface is **bounded generativity under runtime opacity** — the bounded-generativity spine ([`docs/bounded-generativity.md`](bounded-generativity.md)) seen from the delivery side. There, the brief / grammar grants the aperture, execution fills it, selection closes, and governance binds. Here, the same seed has **one more job**: it must arrive as an executable interaction inside a runtime the author cannot see or control — the user's own AI chat tool is the renderer.
+
+So the seed governs **two behaviors at once**:
+
+```text
+the model's behavior   inside the generated interaction   >> the aperture (permitted variance)
+the user's setup       before the interaction can begin   >> the loading path (what to paste / open / upload;
+                                                              the failure mode · the fallback · the return shape)
+```
+
+A grammar cannot govern a realization it never arrives as. **Bounded generativity governs the candidate space; repo-mediated generated interface governs the instantiation path.** *(Operator distance is the delivery-side analogue of the aperture — not the same axis: the aperture controls permitted variance in the output; operator distance controls how much setup + protocol the seed must carry.)*
 
 ## The interface begins before the AI answers
 
