@@ -288,7 +288,7 @@ When a project-specific pattern surfaces that might become method doctrine, do n
 - Prefer compilation of earned material over speculative articulation.
 - Prefer explicit structure over clever indirection.
 - Prefer smallest coherent scaffold that clarifies the method-layer boundary.
-- Tailor docs to this repo's job as a methodology repo. Do not write as if this were an execution-protocol meta repo or a downstream project repo.
+- Tailor docs to this repo's job as a methodology repo. Do not write as if this were an execution-protocol repo or a downstream project repo.
 - Use clean technical language. Avoid manifesto phrasing, speculative systems, or generic process bloat.
 - The methodology repo embodies the rules it articulates. When in doubt, follow the rule the repo is articulating.
 
