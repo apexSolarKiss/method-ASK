@@ -10,6 +10,19 @@ The same person or institution may occupy both the source role and the execution
 
 Source of intent is a **locatable governing role, not exhaustive specification or execution control.** Execution may be delegated, stochastic, collective, or exploratory; the apex remains attributable as long as purpose, authorization, closure, and answerability remain attributable rather than dissolving into aggregation. The inverse error is to let private intention float free of those gates.
 
+## Membership and derivability are different axes
+
+A distributed- or extended-cognition account puts the human *inside* the cognitive system — operator, models, repositories, critics, and durable context are one coupled system, and the human is in the loop, not beside it. Read naively, this seems to collide with apex non-derivability: if the human is *part* of the system, how can the apex fail to be *produced by* the system? The two claims answer different questions and do not compete.
+
+- **Membership** — is the human part of the cognitive system? *Yes.* Under any distributed-cognition account the human is a coupled component.
+- **Derivability** — can the apex's function (what the system is *for*, what counts as correct) be produced by the layers below it? *No.* Origin does not aggregate upward.
+
+A member with a non-derivable role is not a paradox but an **axiom** — like a premise the system runs on but cannot itself generate: inside the system, not derivable from the rest of it.
+
+**The apex is defined by directionality, not location.** Intent originates at the apex and flows down; it is not synthesized upward from the components. The boundary may be drawn to *include* the apex (the whole apparatus) or to *exclude* it (the stack the apex governs) — both scopes are valid, and the invariant across both is the direction intent travels.
+
+**Corollary:** membership never answers an origin question. "The human is part of the system" (true) does not license "the system can supply its own source of intent" (false). Capability gains in the lower layers are not the apex being filled.
+
 ## The decomposition: intent · authority · recourse
 
 Accountability decomposes into three things distribution can never produce:
@@ -34,6 +47,9 @@ The subject is one primitive stated in distinctions the discourse keeps eliding:
 - **aggregation ≠ origination of intent** — a blend of participants, or a statistical composite of preferences, does not originate a governing intent. A poll aggregates; a constituted collective decides.
 - **intention alone ≠ legitimate authority** — private will does not self-authorize; it acts through attributable authority, closure, and recourse.
 - **the interactional dyad ≠ the governance stack that contains it** — the field mistakes the two-minds-across-a-gap picture for the whole structure.
+- **membership ≠ derivability** — being part of the system is not being producible by the system; a coupled component can still hold a role the rest of the system cannot generate.
+- **location ≠ origin** — the apex is directional, not positional: "on top" is a picture, "intent originates here and flows down" is the definition.
+- **system capability ≠ apex integrity** — a capability gain in the lower layers cannot offset erosion of the apex faculty (judgment / selection); "the *system* got more intelligent" never answers an origin question.
 
 Two further distinctions are argued in full in the essay line and carried here by reference: the **residue of judgment ≠ the act of judgment**, and **outputs ≠ intent** (see [*Judgment Doesn't Transfer*](https://atomicspacekitten.substack.com/p/judgment-doesnt-transfer)).
 
