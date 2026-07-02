@@ -12,7 +12,9 @@ The static artifact — a prompt file, a sealed HTML, a review packet — is the
 
 ## Relation to bounded generativity
 
-Repo-mediated generated interface is **bounded generativity under runtime opacity** — the bounded-generativity spine ([`docs/bounded-generativity.md`](bounded-generativity.md)) seen from the delivery side. There, the brief / grammar grants the aperture, execution fills it, selection closes, and governance binds. Here, the same seed has **one more job**: it must arrive as an executable interaction inside a runtime the author cannot see or control — the user's own AI chat tool is the renderer.
+Repo-mediated generated interface is **bounded generativity under runtime opacity** — the bounded-generativity spine ([`docs/bounded-generativity.md`](bounded-generativity.md)) delivered into a runtime the author cannot see or control. There, the brief / grammar grants the aperture, execution fills it, selection closes, and governance binds — and the author can, in principle, observe that the judicial (selection / closure) and governance functions ran as authored. Under runtime opacity that **back half of the spine is partially exiled from the author's observability**: the user's own AI chat tool is the renderer, and the author cannot directly confirm the generated thread selected, closed, or recorded as specified.
+
+The author compensates two ways: **behavior travels with the seed** (the process is carried, not left to a standing prompt to infer), and the **generated thread is stripped of authorizing force** — authorization stays in the repo / package / governance record, never in the runtime conversation. This is why *a generated thread cannot self-authorize* is an invariant rather than a caution: the record is produced inside a runtime the author does not control. So the distinction from bounded generativity is not "one more shipping step" — it is the same spine with its judicial + governance tail moved out of the author's line of sight, compensated by seed-carried behavior and a de-authorized thread.
 
 So the seed governs **two behaviors at once**:
 
@@ -22,7 +24,7 @@ the user's setup       before the interaction can begin   >> the loading path (w
                                                               the failure mode · the fallback · the return shape)
 ```
 
-A grammar cannot govern a realization it never arrives as. **Bounded generativity governs the candidate space; repo-mediated generated interface governs the instantiation path.** *(Operator distance is the delivery-side analogue of the aperture — not the same axis: the aperture controls permitted variance in the output; operator distance controls how much setup + protocol the seed must carry.)*
+A grammar cannot govern a realization it never arrives as. **Bounded generativity governs the candidate space; repo-mediated generated interface governs the instantiation path.** Aperture and operator distance are **orthogonal control variables**: the aperture meters permitted output variance; operator distance meters the setup-encoding burden the seed must carry. They interact, but neither is the delivery-side version of the other.
 
 ## The interface begins before the AI answers
 
