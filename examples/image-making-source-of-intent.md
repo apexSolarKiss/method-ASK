@@ -14,6 +14,8 @@ The thesis the domain proves: **authorship lives in source of intent, bounded di
 
 - **Aggregation is not an apex (Komar & Melamid, *America's Most Wanted*).** A statistical composite of polled preferences can constrain a painting without becoming its source of intent: the respondents judged, the arithmetic did not. **Judgment in the inputs does not propagate through synthesis.** The work is deeply authored by the artists who framed the procedure and closed the result; the average is material, not author. The constituting move — a poll aggregates, a constituted collective decides — is the image-domain instance of [constitutive governance](../docs/governance.md).
 
+- **Expressive execution inside an authored aperture ([studioLeoV](https://a-s-k.studio/studioleov/)).** A collaborative body of works on paper in which ASK authors the project-level source of intent — substrate sourcing, the conditions for making, the body-making frame, selection, and closure — and LeoV's drawing supplies live, judgment-bearing expressive execution inside that aperture. A live instance of the LeWitt separation: expression fills the realization span; it does not author the intent that opened it. [Bounded generativity](../docs/bounded-generativity.md) with a human executor.
+
 ## Boundary notes
 
 Domain depth lives in the source layer, not here:
