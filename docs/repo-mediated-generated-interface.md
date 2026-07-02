@@ -2,6 +2,8 @@
 
 A system pattern: a **repo, prompt, or package supplies enough structured material and behavioral instruction for a user's own AI chat tool to render the operative interface in conversation.** The interface is *generated* — caused to happen inside a runtime the author does not control — not *built* as application chrome.
 
+The name foregrounds the **carrier** (repo / prompt / package) and the **output** (a generated interface in the user's runtime). Its **hard case is runtime opacity**: the author ships behavior and the loading path, but the generated thread is **not itself an authority surface**. A repo-mediated generated interface inside a runtime the author *does* control has none of this failure surface — opacity is the condition that gives the doctrine its bite, not the category name.
+
 ```text
 repo / prompt / package  +  delivery wrapper  +  user loading path
   >> the user's AI chat tool becomes the runtime
