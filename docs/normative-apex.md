@@ -8,6 +8,8 @@ The governing standard a system runs on must be **supplied to the execution func
 
 The same person or institution may occupy both the source role and the execution role. **The dependency is logical, not necessarily a separation of actors:** what cannot happen is the execution function authorizing the basic norm it presupposes, regardless of who runs it.
 
+A standard can be reshaped across time without being derived from the execution layers beneath it. Generated candidates, critique, evidence, or convergence inside a workflow may inform revision; they do not themselves authorize the revision. The regress halts only when a locatable source of intent adopts a standard under authority and recourse. Non-derivable does not mean immutable; it means the standard's authority is not produced by the machinery that later executes under it.
+
 Source of intent is a **locatable governing role, not exhaustive specification or execution control.** Execution may be delegated, stochastic, collective, or exploratory; the apex remains attributable as long as purpose, authorization, closure, and answerability remain attributable rather than dissolving into aggregation. The inverse error is to let private intention float free of those gates.
 
 ## Membership and derivability are different axes
@@ -50,6 +52,9 @@ The subject is one primitive stated in distinctions the discourse keeps eliding:
 - **membership ≠ derivability** — being part of the system is not being producible by the system; a coupled component can still hold a role the rest of the system cannot generate.
 - **location ≠ origin** — the apex is directional, not positional: "on top" is a picture, "intent originates here and flows down" is the definition.
 - **system capability ≠ apex integrity** — a capability gain in the lower layers cannot offset erosion of the apex faculty (judgment / selection); "the *system* got more intelligent" never answers an origin question.
+- **candidate-generation ≠ standard-authorship** — generating candidates, including candidate *standards*, is not authoring or adopting the standard by which they are judged; the apex faculty is the adoption, not the proposal.
+- **non-derivable ≠ immutable** — the standard is non-derivable at any instant yet plastic across time; the apex may revise it through cycles without it becoming derivable from below.
+- **convergence ≠ authority** — a loop may converge to its own fixed point; convergence can stabilize a candidate standard, but it does not authorize that standard. Authority requires adoption by a locatable source of intent and remains answerable through governance and recourse.
 
 Two further distinctions are argued in full in the essay line and carried here by reference: the **residue of judgment ≠ the act of judgment**, and **outputs ≠ intent** (see [*Judgment Doesn't Transfer*](https://atomicspacekitten.substack.com/p/judgment-doesnt-transfer)).
 
