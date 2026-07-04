@@ -56,6 +56,10 @@ The distinction that keeps this honest:
 
 Variance is technical; discretion is normative; **selection is the curatorial closure gate — not the whole of authorship.** Authorship may be attributable through source of intent, bounded discretion, judgment-bearing intervention, selection, and closure. Artifact governance constrains and records the accepted work's claim, use, circulation, and answerability; it preserves attribution and recourse but does not itself create authorship.
 
+## Variance, signal, and selection
+
+Bounded generativity does not eliminate variance; it makes variance usable. A generative process produces a **candidate field** — noise in the broad sense of surplus, accident, unstable pattern, and unclosed possibility. **Source of intent defines what can count as signal** inside that field; intent is not itself the signal, it is the standard by which signal is distinguished. **Bounded judgment** separates signal from noise under the governing standard; **selection** closes the candidate spread; **governance** records what becomes durable. Disorder is not the enemy of the work — it is the material the aperture is opened onto and the judgment closes over.
+
 ## Worked instances (identical structure, increasing sophistication)
 
 These are **ASK-system worked examples and antecedent studies, not dependencies** — cite them as worked examples, never as imports (this protects each project's aesthetic-agnostic posture).
