@@ -55,6 +55,8 @@ The subject is one primitive stated in distinctions the discourse keeps eliding:
 - **candidate-generation ≠ standard-authorship** — generating candidates, including candidate *standards*, is not authoring or adopting the standard by which they are judged; the apex faculty is the adoption, not the proposal.
 - **non-derivable ≠ immutable** — the standard is non-derivable at any instant yet plastic across time; the apex may revise it through cycles without it becoming derivable from below.
 - **convergence ≠ authority** — a loop may converge to its own fixed point; convergence can stabilize a candidate standard, but it does not authorize that standard. Authority requires adoption by a locatable source of intent and remains answerable through governance and recourse.
+- **convergence ≠ convergence-to-truth** — a converging process settles to the fixed point its dynamics define, not necessarily to a true one. Truth-tracking requires contact with a signal outside the loop; otherwise convergence may only stabilize the system's own attractor.
+- **adversarialness ≠ independent error** — adversarial checking tracks truth only to the degree the critic's errors are independent of the error class being tested. Adversarialness is a posture; independence is a property, and it is graded per error class.
 
 Two further distinctions are argued in full in the essay line and carried here by reference: the **residue of judgment ≠ the act of judgment**, and **outputs ≠ intent** (see [*Judgment Doesn't Transfer*](https://atomicspacekitten.substack.com/p/judgment-doesnt-transfer)).
 
