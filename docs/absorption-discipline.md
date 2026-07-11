@@ -22,6 +22,7 @@ Absorption is not:
 - turning event chronology into grounding-note posture because the event was important
 - promoting a first sighting into rule-level doctrine because the pattern feels structural
 - treating a polished handoff as current instruction because the handoff format is convincing
+- **ingesting a routed handoff — removing its `-TBI` suffix — is not absorbing it.** Ingestion ≠ absorption: the rename is only the ingestion signal and records nothing about disposition. Absorption is the separate recipient-owned classification that follows (absorb / hold / reject / route / withdraw / no-route), recorded by a `scratch/*_absorption.md` closure memo plus a minimal status line on the received memo (see `docs/source-of-intent.md` §Inbound handoff TBI marker). Leaving `-TBI` on a memo until its payload is absorbed conflates the two and makes the ingestion queue unreliable.
 - treating future roadmap as current-stage work because the roadmap looks actionable
 - turning implementation architecture into method before the method stage has earned it
 - absorbing material on first sighting that has not yet been pressure-tested across more than one surface
