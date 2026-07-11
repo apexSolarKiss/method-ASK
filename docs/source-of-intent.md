@@ -148,20 +148,33 @@ Routed handoff memos copied into a recipient project's `sources of intent/` shou
 
 TBI means "to be ingested." It does not mean "to be absorbed." The marker tracks operator ingestion state only; the receiving project owns absorption.
 
+The disequality is hard and load-bearing:
+
+```text
+ingestion ≠ absorption
+removing `-TBI` = the ingestion signal (first recipient-side action)
+absorption = the later recipient-owned classification + durable action / hold / rejection + closure record
+```
+
+Leaving `-TBI` on a memo until its payload is absorbed is the failure this section corrects: it conflates the two and makes the ingestion queue lie — a memo already fed to the active surface still reads as un-ingested. Remove the suffix on ingestion; track absorption by the closure record, never by the filename suffix.
+
 The lifecycle:
 
 1. Origin prepares a self-contained handoff memo per §Handoff memo completeness. The origin scratch trail copy uses a clean filename (no `-TBI`).
 2. The recipient copy lands in the recipient surface's `sources of intent/` with the `-TBI.md` suffix.
 3. ASK feeds the memo into the recipient active project surface (typically by attaching it to a new Claude session, or equivalent invocation).
-4. The recipient active surface's first action is to rename the file in place to remove `-TBI`. Rename only — the body of the memo remains the received record. The rename is the *ingested* signal; it records nothing about what was absorbed.
-5. The recipient surface classifies the memo per §Category distinctions and `docs/absorption-discipline.md`, then decides absorption, hold, or rejection.
-6. If absorption produces durable change, a separate scratch report is **required** — it records classification, actions, non-actions, and remaining held items. The inbound memo body is not mutated; the absorption report is a separate derivative artifact. **A rename is not a closure record:** an absorption that changes durable state but leaves only a renamed memo (plus an ephemeral chat summary) is not closed until the separate report exists.
+4. The recipient active surface's **first action, before any classification or absorption work begins, is to rename the file in place to remove `-TBI`.** Rename only. The rename is the *ingested* signal; it records nothing about what was absorbed, held, rejected, routed, or superseded.
+5. The recipient surface **then** classifies the memo per §Category distinctions and `docs/absorption-discipline.md` — **absorb / hold / reject / route-elsewhere / withdraw / no-route.** Classification is a separate, recipient-owned decision that follows the rename; it is never a precondition of it.
+6. If the memo produces any durable action, a held disposition, or a rejection, a separate dated closure memo in `scratch/` (`scratch/*_absorption.md`) is **required** — it is the closure record: classification, actions, non-actions, remaining held items. **A rename is not a closure record:** a memo that changes durable state but leaves only a renamed file (plus an ephemeral chat summary) is not closed until the separate closure memo exists.
+7. The recipient adds a **minimal status/receipt line** to the top of the received handoff pointing to the closure memo — e.g. `status: INGESTED // absorbed by <closure memo path> on <date>` or `status: INGESTED // HELD, see <closure memo path>`. This is a receipt annotation, not the closure body.
+8. The **body** of the received handoff remains the received record — not rewritten, re-argued, or replaced. The status line makes the file self-describing; the closure memo carries the actual disposition; the received memo preserves what was received.
 
 ```text
-handoff memo carries meaning
--TBI carries ASK ingestion state
-recipient surface decides absorption
-scratch absorption report records what happened
+handoff memo body carries meaning (the received record — preserved)
+-TBI carries ASK ingestion state (removed on ingestion — first action, before classification)
+recipient surface decides absorption (absorb / hold / reject / route / withdraw / no-route)
+scratch closure memo records what happened (the durable disposition)
+received memo carries a minimal status line pointing to that closure memo
 ```
 
 The marker confers no authority on the memo content. Without it, the recipient surface cannot distinguish a routed memo awaiting ingestion from one that has been seen but held, and the ingestion queue becomes invisible to the operator across multiple recipient surfaces.
