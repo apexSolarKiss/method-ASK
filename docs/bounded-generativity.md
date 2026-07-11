@@ -45,6 +45,16 @@ When a bounded realization process is delivered through a user's own AI runtime 
 
 Compact relation: **bounded generativity governs the candidate space; seed-mediated generated interface governs the instantiation path.**
 
+## Relation to the frontier substrate
+
+Bounded generativity does not compete with the frontier model or the provider's generic reliability harness. Those layers are **substrate**: they supply generative capacity, the runtime affordance, and whatever generic scaffolding the provider exposes. In the three-function terms above, the substrate is a supplier to the **executive** (variance-producing) span — it fills apertures; it authors neither the grammar that opens one nor the selection that closes it.
+
+The bounded-generativity layer is the **domain-specific architecture that bounds it**: the legislative grammar that opens the aperture, the judicial selection that closes it, and the artifact governance that binds. ASK's architecture does not merely *sit on* the substrate — it **brackets** the substrate's executive span (grammar before, selection + governance after), the same bracket the deterministic layer applies to generative execution internally, now one level out at the vendor boundary. There is a real build-dependency — the architecture is built *using* the substrate — but that dependency is generic; the differentiating relationship is the **bound**, not the *built-on*. The substrate supplies **generative capacity**; the bounded layer supplies **domain-specific answerability**. As generative capacity commoditizes across providers, the domain-specific grammar, selection, and governance do not — they are authored per domain, not supplied by the substrate; a better substrate only makes the bounded layer *more* purely the domain architecture that brackets it.
+
+This is also why, when the governing architecture is described as **deterministic**, the term belongs to that architecture, not to the output. The output may remain bounded-generative — variance is the payload the aperture exists to admit. The deterministic claim is only that the grammar, aperture, selection, and record are specified and legible enough to **audit and govern**; it is not a claim that the realization is predetermined.
+
+Compact: **the frontier substrate supplies the generative capacity; the bounded-generativity architecture bounds it — supplying the domain-specific answerability the substrate does not.** (Orthogonal to the instantiation-path concern of [`docs/seed-mediated-generated-interface.md`](seed-mediated-generated-interface.md): that governs how a seed *arrives*; this governs what makes the bounded layer answerable on whatever substrate it runs.)
+
 ## Where discretion enters
 
 Creative discretion — judgment exercised *within* standards (Dworkin's **weak** discretion, not freedom from standards) — may enter **before, during, or after** realization: in authoring the grammar / aperture, in judgment-bearing intervention during execution, and in selecting from what comes back. What is uniformly non-judgmental is the **variance-producing operation** itself — it fills the aperture; it does not evaluate against the standard and bind.
