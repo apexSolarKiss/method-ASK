@@ -14,6 +14,15 @@ grammar / brief (aperture set)
 
 This is the mechanized form of the standing ASK ecology tagline — *order from chaos // beauty in systems*. Order is not the elimination of randomness. It is randomness **bounded, made legible, and selected from.**
 
+## The primitive, illustrated
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/method-ASK_bounded-generativity-dark.png">
+  <img alt="Bounded generativity as a system-model topology. A source of intent / normative apex sits outside the frame and supplies purpose plus the governing standard. Inside the bounded-generativity bracket, the grammar / brief grants the aperture — the permitted variance — of a bounded realization field (the execution span, 'the middle') where candidate variance is produced and authorized judgment may enter. Selection + closure ratifies one candidate and closes the aperture; artifact governance binds it downstream as a distinct operation; the output, outside the frame, is a governed artifact plus governance record." src="diagrams/method-ASK_bounded-generativity-light.png">
+</picture>
+
+*Illustrative — this doctrine is source truth, not the diagram.* Bounded generativity is a **topology**, not a linear chain: the grammar / brief **grants** the aperture, realization fills it with candidate variance, authorized judgment may enter within the field and at closure, selection closes, and artifact governance binds the accepted result downstream. `asset-pipeline-ASK`'s ordered *creative-intent → creative-discretion → variance → selection → governance* sequence is the **function-order projection** of this model (its discretion-chain diagram); this figure is the **system-model topology** that projection is true of. Source: [`docs/diagrams/method-ASK_bounded-generativity.html`](diagrams/method-ASK_bounded-generativity.html).
+
 ---
 
 ## Classification
@@ -57,12 +66,12 @@ Compact: **the frontier substrate supplies the generative capacity; the bounded-
 
 ## Where discretion enters
 
-Creative discretion — judgment exercised *within* standards (Dworkin's **weak** discretion, not freedom from standards) — may enter **before, during, or after** realization: in authoring the grammar / aperture, in judgment-bearing intervention during execution, and in selecting from what comes back. What is uniformly non-judgmental is the **variance-producing operation** itself — it fills the aperture; it does not evaluate against the standard and bind.
+Creative discretion — judgment exercised *within* standards (Dworkin's **weak** discretion, not freedom from standards) — may enter **before, during, or after** realization: in authoring or authorizing the grammar that grants the aperture, in judgment-bearing intervention within the granted realization field, and in selecting from what comes back. What is uniformly non-judgmental is the **variance-producing operation** itself — it fills the aperture; it does not evaluate against the standard and bind.
 
 The distinction that keeps this honest:
 
-- The **aperture** is a *quantity* — the permitted variance.
-- **Discretion** is an *act* — judgment that opens the aperture, adjusts or intervenes within it, or closes it.
+- The **aperture** is a *quantity* — the permitted variance, **granted by the grammar / brief**.
+- **Discretion** is an *act* — authorized judgment that **shapes or authorizes the grammar which grants the aperture**, intervenes within the granted realization field, or closes it through selection. Discretion is **not itself the aperture**: authoring or authorizing the aperture (how wide the grammar opens it) is distinct from discretion exercised *within* an already-granted aperture.
 
 Variance is technical; discretion is normative; **selection is the curatorial closure gate — not the whole of authorship.** Authorship may be attributable through source of intent, bounded discretion, judgment-bearing intervention, selection, and closure. Artifact governance constrains and records the accepted work's claim, use, circulation, and answerability; it preserves attribution and recourse but does not itself create authorship.
 
@@ -85,12 +94,12 @@ These are **ASK-system worked examples and antecedent studies, not dependencies*
 
 - **`method-ASK`** owns the primitive definition — this doc.
 - **`control-surface`** records the cross-repo *relationship* — `order from chaos >> bounded generativity >> selection + closure >> artifact governance >> governed artifact + governance record` as an ASK ecology pattern spanning cubes / maze / asset-pipeline-ASK / generative-AI workflows. A relation among repos, not an implementation detail. (Recorded after this doc lands.)
-- **Project repos** (asset-pipeline-ASK first) reference the primitive at high-level doctrine altitude — **not** as schema, proof-test, or diagram.
+- **Project repos** (`asset-pipeline-ASK` first) may reference or instantiate the primitive at doctrine altitude — not as schema or proof-test. A project-owned diagram may illustrate its domain instance while remaining doctrine-subordinate; it does not become the primitive's source truth.
 
 ## Boundaries
 
 - **Method-level, not project-specific.** Bounded generativity is the general pattern; `asset-pipeline-ASK` is one instance with governance fully built out.
-- **This defines the primitive; it authorizes nothing operational.** No project schema migration, no client doctrine, no diagram, no implementation.
+- **This defines the primitive; it authorizes nothing operational.** The canonical diagram ([`docs/diagrams/method-ASK_bounded-generativity.html`](diagrams/method-ASK_bounded-generativity.html) + PNG mirror) is an **illustrative rendering of this doctrine** — doctrine-subordinate, and it authorizes no project schema migration, no client doctrine, no proof-test, and no implementation. Project repos may reference or instantiate the primitive at doctrine altitude.
 - **Source of intent, in these implementations, is human/institutional.** In the worked implementations documented here, source of intent, decision ownership, and ultimate recourse remain human/institutional. A computational agent may exercise bounded delegated judgment without thereby becoming the source of intent or owning ultimate recourse. The model fills the aperture; it does not author the intent that opened it.
 
 ## Anchors
