@@ -37,10 +37,10 @@
   const tag = (x, y, t, a='middle') => el('text', { x, y, class:'flow-tag', 'text-anchor':a }, [t]);
 
   /* ===== source of intent / normative apex — OUTSIDE the frame, left ===== */
-  nodes.append(lbl(34, 250, M.apex.label));
-  nodes.append(note(34, 268, M.apex.sub));
-  nodes.append(note(34, 286, M.apex.note1));
-  nodes.append(note(34, 304, M.apex.note2));
+  nodes.append(lbl(140, 250, M.apex.label));
+  nodes.append(note(140, 268, M.apex.sub));
+  nodes.append(note(140, 286, M.apex.note1));
+  nodes.append(note(140, 304, M.apex.note2));
 
   /* ===== bounded generativity frame ===== */
   const FX = 340, FY = 168, FW = 1016, FH = 310;   // x 340-1356, y 168-478
@@ -48,7 +48,7 @@
   nodes.append(tag(FX + FW/2, FY - 14, M.bracket));
 
   /* ===== source beam enters the frame → grammar/brief (the inside-frame carrier) ===== */
-  edges.append(line(`M 40 ${YM} L 356 ${YM}`));
+  edges.append(line(`M 146 ${YM} L 356 ${YM}`));
   edges.append(headR(356, YM));
   nodes.append(box(360, YM-26, 182, 52));
   nodes.append(lbl(376, YM-4, M.grammar.label));
