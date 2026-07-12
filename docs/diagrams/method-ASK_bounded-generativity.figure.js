@@ -6,8 +6,10 @@
    shared SVG classes (node-box, node-label, node-note, edge, edge-arrowhead,
    flow-group, flow-tag, section tags) — but lays out custom geometry the H / V /
    SEQ / FLOW engines do not own. It does not claim to be one of those grammars,
-   and it introduces no new class and no new hue. A reusable Class A scaffold is
-   only considered later, if this geometry earns graduation across >1 consumer.
+   and it introduces no new shared design-system class and no new hue (the HTML
+   adds only a local `.legend .foot` style for its own caption row). A reusable
+   Class A scaffold is only considered later, if this geometry earns graduation
+   across >1 consumer.
 
    Semantic contract (method altitude — faithful to docs/bounded-generativity.md):
      · SOURCE OF INTENT / normative apex sits OUTSIDE the frame — it supplies or
@@ -40,10 +42,10 @@
 (function () {
   /* ---- semantic model (edit labels here; geometry is below) ---- */
   const M = {
-    apex:   { label: 'source of intent', sub: 'normative apex', note: 'supplies purpose + governing standard' },
+    apex:   { label: 'source of intent', sub: 'normative apex', note1: 'supplies purpose +', note2: 'governing standard' },
     grammar:{ label: 'grammar / brief', note: 'grants the aperture' },
     field:  { tag: 'bounded realization  ·  execution span  ·  «the middle»', aperture: 'aperture · permitted variance', variance: 'variance', judgment: '· · ·  authorized judgment where present  · · ·' },
-    select: { tag: 'selection + closure', note: 'ratifies one candidate · aperture closes' },
+    select: { tag: 'selection + closure', note1: 'ratifies one candidate', note2: 'aperture closes' },
     govern: { label: 'artifact governance' },
     output: { label: 'governed artifact', note: '+ governance record' },
     bracket:'bounded generativity',
@@ -77,9 +79,10 @@
   const tag = (x, y, t, a='middle') => el('text', { x, y, class:'flow-tag', 'text-anchor':a }, [t]);
 
   /* ===== source of intent / normative apex — OUTSIDE the frame ===== */
-  nodes.append(lbl(34, 150, M.apex.label));
-  nodes.append(note(34, 169, M.apex.sub));
-  nodes.append(note(34, 188, M.apex.note));
+  nodes.append(lbl(34, 144, M.apex.label));
+  nodes.append(note(34, 162, M.apex.sub));
+  nodes.append(note(34, 180, M.apex.note1));   // wrapped so the note stays wholly OUTSIDE the frame (maxX <= FX-12)
+  nodes.append(note(34, 198, M.apex.note2));
   edges.append(line('M 40 210 L 285 210'));
   edges.append(headR(285, 210));
 
@@ -124,8 +127,11 @@
   edges.append(headR(SC.x-44, 350));
   edges.append(el('circle', { class:'edge', cx:SC.x, cy:SC.y, r:42, fill:'none' }));
   nodes.append(box(SC.x-26, SC.y-26, 52, 52));
-  nodes.append(tag(SC.x+56, SC.y-6, M.select.tag, 'start'));
-  nodes.append(note(SC.x+56, SC.y+12, M.select.note));
+  // annotation ABOVE the ring, centred — keeps both lines wholly INSIDE the frame
+  // (ring sits far right; a right-side label would straddle FX+FW). maxX <= FX+FW-12.
+  nodes.append(tag(SC.x, 250, M.select.tag, 'middle'));
+  nodes.append(note(SC.x, 268, M.select.note1, 'middle'));
+  nodes.append(note(SC.x, 285, M.select.note2, 'middle'));
 
   /* ---- artifact governance — a DISTINCT downstream operation, wholly clear of the
          realization field (x >= 700 > field right edge 680; below the selection ring) ---- */
