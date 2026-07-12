@@ -18,8 +18,9 @@
        never a sequential node.
      · BOUNDED REALIZATION / execution span ("the middle") fills the aperture
        with candidate variance (executive · nonjudgmental). AUTHORIZED JUDGMENT
-       may enter within the field and at closure (dotted path) — it is not the
-       aperture and not the container.
+       may enter within realization — the dotted path marks judgment-bearing spans
+       in the field — and at closure, where the ringed selection gate is itself a
+       judgment act. Judgment is not the aperture and not the container.
      · SELECTION + CLOSURE ratifies one candidate and closes the aperture. It is
        DISTINCT from
      · ARTIFACT GOVERNANCE, a downstream binding operation (not a fourth branch
@@ -112,6 +113,8 @@
   nodes.append(el('circle', { cx:460, cy:372, r:13, class:'node-box' }));
   nodes.append(el('rect', { x:540, y:360, width:24, height:24, rx:2, transform:'rotate(45 552 372)', class:'node-box' }));
   nodes.append(tag(618, 306, M.field.variance, 'start'));
+  // authorized judgment — the dotted path (distinct dash) marks judgment-bearing spans
+  // WITHIN the realization field; judgment AT closure is the ringed selection gate (below).
   edges.append(line('M 330 436 L 662 436', 'edge', '1 5'));
   nodes.append(note(RX + RW/2, 430, M.field.judgment, 'middle'));
 
@@ -124,12 +127,13 @@
   nodes.append(tag(SC.x+56, SC.y-6, M.select.tag, 'start'));
   nodes.append(note(SC.x+56, SC.y+12, M.select.note));
 
-  /* ---- artifact governance — a DISTINCT downstream operation ---- */
-  edges.append(line(`M ${SC.x} ${SC.y+42} L ${SC.x} 456`));
-  edges.append(headD(SC.x, 460));
-  nodes.append(box(668, 462, 200, 40));
-  nodes.append(lbl(684, 486, M.govern.label));
-  edges.append(line('M 868 482 L 1000 482'));
+  /* ---- artifact governance — a DISTINCT downstream operation, wholly clear of the
+         realization field (x >= 700 > field right edge 680; below the selection ring) ---- */
+  edges.append(line(`M ${SC.x} ${SC.y+42} L ${SC.x} 458`));
+  edges.append(headD(SC.x, 462));
+  nodes.append(box(700, 462, 195, 40));
+  nodes.append(lbl(716, 486, M.govern.label));
+  edges.append(line('M 895 482 L 1000 482'));
   edges.append(headR(1000, 482));
 
   /* ===== governed artifact + governance record — OUTSIDE the frame ===== */

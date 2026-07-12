@@ -94,7 +94,7 @@ These are **ASK-system worked examples and antecedent studies, not dependencies*
 
 - **`method-ASK`** owns the primitive definition — this doc.
 - **`control-surface`** records the cross-repo *relationship* — `order from chaos >> bounded generativity >> selection + closure >> artifact governance >> governed artifact + governance record` as an ASK ecology pattern spanning cubes / maze / asset-pipeline-ASK / generative-AI workflows. A relation among repos, not an implementation detail. (Recorded after this doc lands.)
-- **Project repos** (asset-pipeline-ASK first) reference the primitive at high-level doctrine altitude — **not** as schema, proof-test, or diagram.
+- **Project repos** (`asset-pipeline-ASK` first) may reference or instantiate the primitive at doctrine altitude — not as schema or proof-test. A project-owned diagram may illustrate its domain instance while remaining doctrine-subordinate; it does not become the primitive's source truth.
 
 ## Boundaries
 
