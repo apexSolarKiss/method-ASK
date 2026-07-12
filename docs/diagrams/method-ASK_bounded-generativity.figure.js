@@ -72,12 +72,12 @@
     transform:`rotate(-90 ${CX-28} ${YM})` }, [M.field.aperture]));
 
   /* ---- candidate variance — varied glyphs filling the chamber ---- */
-  nodes.append(box(648, 236, 30, 30));
+  nodes.append(box(650, 238, 26, 26));   // small cube on top (center 663,251)
   nodes.append(el('rect', { x:730, y:232, width:30, height:30, rx:2, transform:'rotate(45 745 247)', class:'node-box' }));
   nodes.append(el('circle', { cx:812, cy:252, r:15, class:'node-box' }));
   nodes.append(el('path', { class:'node-box', d:'M 892 236 L 910 266 L 874 266 Z' }));
   nodes.append(box(970, 240, 28, 28));
-  nodes.append(box(676, 330, 26, 26));
+  nodes.append(box(674, 328, 30, 30));   // big cube on bottom (center 689,343)
   nodes.append(el('circle', { cx:772, cy:344, r:14, class:'node-box' }));
   nodes.append(el('rect', { x:858, y:332, width:26, height:26, rx:2, transform:'rotate(45 871 345)', class:'node-box' }));
   nodes.append(el('circle', { cx:965, cy:344, r:13, class:'node-box' }));
