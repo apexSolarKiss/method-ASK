@@ -147,7 +147,10 @@
   nodes.append(lbl(1021, 477, M.output.label));
   nodes.append(note(1021, 495, M.output.note));
 
-  /* ---- pan / zoom / fit (mirrors the DS engines) ---- */
+  /* ---- pan / zoom / fit — local behavior (mirrors the DS static engines;
+         does not edit or fork the shared engine). fit + zoom buttons, plus
+         pointer-drag panning and cursor-centred wheel zoom, so the inherited
+         grab cursor / .dragging state are actually functional. ---- */
   const wrap = document.getElementById('canvasWrap'), stage = document.getElementById('stage'), pct = document.getElementById('zoomPct');
   if (wrap && stage) {
     let tx=0, ty=0, sc=1;
@@ -159,5 +162,26 @@
     if (zi) zi.onclick=()=>{sc=Math.min(sc*1.2,4);apply();};
     if (zo) zo.onclick=()=>{sc=Math.max(sc/1.2,0.2);apply();};
     if (zf) zf.onclick=fit;
+
+    // drag to pan (ignore clicks on the glass panels), with pointer capture
+    let dragging=false, px0=0, py0=0, tx0=0, ty0=0;
+    wrap.addEventListener('pointerdown', (ev) => {
+      if (ev.target.closest('.hud, .legend, .caption')) return;
+      dragging=true; wrap.classList.add('dragging'); wrap.setPointerCapture(ev.pointerId);
+      px0=ev.clientX; py0=ev.clientY; tx0=tx; ty0=ty;
+    });
+    wrap.addEventListener('pointermove', (ev) => {
+      if (!dragging) return; tx=tx0+(ev.clientX-px0); ty=ty0+(ev.clientY-py0); apply();
+    });
+    const endDrag=() => { dragging=false; wrap.classList.remove('dragging'); };
+    wrap.addEventListener('pointerup', endDrag);
+    wrap.addEventListener('pointercancel', endDrag);
+    // cursor-centred wheel zoom, bounded
+    wrap.addEventListener('wheel', (ev) => {
+      ev.preventDefault();
+      const r=wrap.getBoundingClientRect(), mx=ev.clientX-r.left, my=ev.clientY-r.top;
+      const ns=Math.max(0.2, Math.min(4, sc*(ev.deltaY>0 ? 1/1.1 : 1.1))), k=ns/sc;
+      tx=mx-(mx-tx)*k; ty=my-(my-ty)*k; sc=ns; apply();
+    }, { passive:false });
   }
 })();
