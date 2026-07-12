@@ -97,7 +97,7 @@ The corollary: do not let "smallest unit" become a rule that prevents zooming ou
 
 ### Ceremony budget
 
-Do not overspend on process where structure suffices. Workflow rules in `AGENTS.md` are calibrated compensations for what single-node operation collapses relative to split-execution; once the rules carry the discipline, the process ceremony that previously did the work becomes redundant. Removing redundant ceremony is part of the method.
+Do not overspend on process where structure suffices. Workflow rules in `AGENTS.md` are calibrated compensations for what single-node operation collapses relative to split-execution; once the rules carry the discipline, the process ceremony that previously did the work becomes redundant. Removing redundant ceremony is part of the method. One concrete instance: do not require a reviewer-generated handoff memo after an authorized operator has already relayed an explicit decision with its qualifications and scope. When the relay already carries the complete decision, repackaging it into a return artifact adds no judgment, condition, or authorization — it is ceremony, not governance (see [`docs/source-of-intent.md`](source-of-intent.md) §Handoff necessity).
 
 ### Evidence-trail integrity
 
