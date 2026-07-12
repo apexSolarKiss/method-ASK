@@ -62,7 +62,7 @@
   nodes.append(el('text', { x: CX + CW/2, y: CY + CH + 20, class:'section-tag', 'text-anchor':'middle' }, [M.field.tag]));
 
   /* ---- aperture: the opening in the chamber's LEFT edge, centred on YM, opening on either side ---- */
-  const AP = 44;   // aperture half-height (opens AP above and below the entry)
+  const AP = 74;   // aperture half-height (opens AP above and below the entry)
   edges.append(line(`M ${CX-14} ${YM-AP} L ${CX-14} ${YM+AP}`));   // ↕ permitted-variance dimension
   edges.append(headU(CX-14, YM-AP));
   edges.append(headD(CX-14, YM+AP));
