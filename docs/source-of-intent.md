@@ -183,17 +183,19 @@ The marker confers no authority on the memo content. Without it, the recipient s
 
 Copy + suffix do not authorize anything. The marker tracks operator ingestion state; absorption belongs to the recipient.
 
-## External / domain-authority handoff classification (observation-level)
+## External / domain-authority handoff classification
 
 Some projects have an external source-of-intent loop where domain authority sits in a different role than architect/operator, and handoff content (memos, sketches, expert recaps) enters the system from outside the operator's direct authoring.
 
 `urban-observatory` is the project where this pattern first surfaced. ASK is the project's architect/operator; the domain authority is a separate role. Domain-authority input arrives as handoffs that may carry valid source-of-intent, current-stage refinement, future roadmap, advisor scratch, or premature implementation architecture in the same artifact. The project's grounding note v12 added a project-specific guardrail: classify the handoff against those categories before treating any of it as current repo direction.
 
-The project-specific guardrail itself stays in `urban-observatory`'s grounding note. The generalized observation lives here at observation-level only:
+The project-specific guardrail itself stays in `urban-observatory`'s grounding note. The generalized rule lives here as method doctrine:
 
-> When a project has an external source-of-intent loop where domain authority sits in a role distinct from architect/operator, handoffs from the domain-authority role may benefit from stage-aware classification before reshaping current repo work.
+> When a project separates domain authority from architect/operator authority, domain-authority input is classified against the project's current stage before it reshapes current repo work. The role split creates an unavoidable authority boundary: expertise may be authoritative within its named domain without authorizing project-stage advancement, implementation architecture, execution, publication, or closure. Domain facts, constraints, and judgments may therefore bind within an explicitly delegated scope, while future-facing or implementation-shaped material remains future roadmap, advisor scratch, or premature implementation architecture until the architect/operator promotes it.
 
-This observation has not yet earned promotion to rule-level method doctrine. The absorption discipline applies: n=1 stays observation-level until a second project surfaces the same pressure, or a strong structural argument justifies generalization before repetition. A future `docs/external-handoff-classification.md` may earn its own home if the pattern recurs.
+This rule is promoted under the absorption discipline's structural-argument exception. The pressure follows from the role structure itself rather than from Urban Observatory's local review mechanics. `urban-observatory` remains the first worked instance. A forthcoming second project may test and refine the rule, but is not counted as demonstrated evidence before implementation.
+
+The classification is claim-level, not whole-artifact: one handoff may carry a binding domain judgment and a premature implementation proposal at once, and each claim is classified on its own. A review does not advance project stage by implication — out-of-stage material is preserved as future roadmap, advisor scratch, or premature implementation architecture until the architect/operator promotes it, neither adopted as current direction nor silently discarded.
 
 The category mapping for handoff classification reuses the doctrine's category distinctions above. *Valid source-of-intent* maps to the first row; *current-stage refinement* maps to architectural-means; *future roadmap*, *advisor scratch*, and *premature implementation architecture* map directly. The classification is not a separate taxonomy — it is the doctrine's existing categories applied at the moment external content enters the system.
 
@@ -233,7 +235,7 @@ This is adjacent method pressure, not method doctrine to absorb wholesale. The o
 Two implications for the doctrine:
 
 - The operator's source-of-intent has the same load-bearing-ness as the project's. The axiom-outside-the-recursion (per [*Machine Builds Machine*](https://atomicspacekitten.substack.com/p/machine-builds-machine)) lives in the operator; the operator's context can no more be left to ephemeral threads than the project's can.
-- The dual-axis role-typing matters. Architect/operator and domain authority are different roles, and the source-of-intent pattern works differently depending on which role is supplying intent. The external/domain-authority handoff classification observation above is one specific instance of this dual-axis structure.
+- The dual-axis role-typing matters. Architect/operator and domain authority are different roles, and the source-of-intent pattern works differently depending on which role is supplying intent. The external/domain-authority handoff classification rule above is one specific instance of this dual-axis structure.
 
 ## Canonicality is not normative force
 
@@ -243,11 +245,11 @@ A canonical context note can carry, describe, or preserve source-of-intent mater
 
 This doctrine should be superseded by:
 
-- a future `docs/external-handoff-classification.md` if the external/domain-authority handoff pattern earns its own first-class home (typically when a second project surfaces the same pressure)
+- a future `docs/external-handoff-classification.md` if the now-promoted external/domain-authority handoff rule outgrows this doctrine's category distinctions and earns its own first-class home on separability grounds — a heavier threshold than the rule-level promotion already made
 - splitting-out of the validation-loop discipline into its own doc if validation-pattern substrate accumulates beyond what this doctrine can carry
 - broader refactoring if the category distinctions earn their own home (e.g., `docs/category-distinctions.md`) and source-of-intent contracts to a thinner doctrine that references it
 - a future `docs/layer-classification.md` or `docs/absorption-discipline.md` if the grounding-note refresh preflight subsection grows into a broader treatment that absorbs it
 
-The doctrine is not finished. The eight-category distinction may refine as more pressure surfaces. The operator-grounding-note extension may earn fuller treatment if the operator-side architecture becomes method-relevant in its own right (rather than as adjacent pressure). The external-handoff classification observation is the most likely candidate for near-term promotion if a second project shows the pattern.
+The doctrine is not finished. The eight-category distinction may refine as more pressure surfaces. The operator-grounding-note extension may earn fuller treatment if the operator-side architecture becomes method-relevant in its own right (rather than as adjacent pressure). The external/domain-authority handoff classification has been promoted to rule-level doctrine on the structural-argument exception; its remaining open move is the separability-driven split into its own doc, not a further promotion.
 
 Anchor reading lives in [`docs/articles.md`](articles.md). The articles most directly substrating this doctrine are *From Conversation to Control Surface* (recovered intent → validated constraint → repo), *The Handoff Is Not the Instruction* (the five-category classification), and *Context // The Operator Needs a Grounding Note Too* (the operator-side persistence pressure).
