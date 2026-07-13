@@ -1,12 +1,13 @@
-/* method-ASK_bounded-generativity.figure.js — horizontal flow + Three Functions color (source-v3, ASK 2026-07-12)
+/* method-ASK_bounded-generativity.figure.js — horizontal flow + Three Functions color (source-v4, ASK 2026-07-12)
+   source-v4: even 36px spacing, taller frame (+72 split), aperture split labels, tightened grammar/governed boxes, compact chamber, 2-line source-of-intent copy.
    Consumes design-system-ASK Three Functions by reference (_dsa-tokens/three-functions.css):
    legislative = grammar/brief box · executive = the bounded-realization chamber (variance = negative cutouts)
    · judicial = selection ring + ratified node. Everything else neutral. */
 (function () {
   const M = {
-    apex:   { label: 'source of intent', sub: 'normative apex', note1: 'supplies purpose +', note2: 'governing standard' },
+    apex:   { label: 'source of intent', sub: 'normative apex supplies', note1: 'purpose + governing standard' },
     grammar:{ label: 'grammar / brief', note: 'grants the aperture' },
-    field:  { tag: 'bounded realization  ·  execution span  ·  «the middle»', aperture: 'aperture · permitted variance', variance: 'variance', judgment: '· · ·  authorized judgment where present  · · ·' },
+    field:  { tag: 'bounded realization  ·  execution span  ·  «the middle»', apertureLo: 'aperture', apertureHi: 'permitted variance', variance: 'variance', judgment: '· · ·  authorized judgment where present  · · ·' },
     select: { tag: 'selection + closure', note1: 'ratifies one candidate', note2: 'aperture closes' },
     govern: { label: 'artifact governance', note: 'binds the accepted result' },
     output: { label: 'governed artifact', note: '+ governance record' },
@@ -43,34 +44,33 @@
   nodes.append(lbl(140, 250, M.apex.label));
   nodes.append(note(140, 268, M.apex.sub));
   nodes.append(note(140, 286, M.apex.note1));
-  nodes.append(note(140, 304, M.apex.note2));
 
   /* ===== bounded generativity frame · NEUTRAL ===== */
-  const FX = 340, FY = 168, FW = 916, FH = 310;   // x 340-1256, y 168-478 (right edge pulled in with the downstream compression)
+  const FX = 340, FY = 112, FW = 916, FH = 402;   // x 340-1256, y 112-514; height +72 split equally (+36 top, +36 bottom) for extra vertical breathing room; contents held constant
   nodes.append(el('rect', { x:FX, y:FY, width:FW, height:FH, rx:14, ry:14, class:'flow-group' }));
   nodes.append(tag(FX + FW/2, FY - 14, M.bracket));
 
   /* ===== source beam · NEUTRAL → grammar/brief = LEGISLATIVE ===== */
-  edges.append(line(`M 146 ${YM} L 356 ${YM}`));
-  edges.append(headR(356, YM));
-  nodes.append(box(360, YM-29, 182, 58, 'node-box fn-leg'));   // two-line node, 58px, centred on YM
-  nodes.append(lbl(376, YM-6, M.grammar.label));
-  nodes.append(note(376, YM+12, M.grammar.note));
+  edges.append(line(`M 146 ${YM} L 372 ${YM}`));
+  edges.append(headR(372, YM));
+  nodes.append(box(376, YM-29, 150, 58, 'node-box fn-leg'));   // two-line node, 58px, centred on YM; 36px inset from the frame-left edge; width 150 (tight to the label)
+  nodes.append(lbl(392, YM-6, M.grammar.label));
+  nodes.append(note(392, YM+12, M.grammar.note));
 
   /* ===== grammar/brief grants the aperture → beam · NEUTRAL → chamber = EXECUTIVE apparatus ===== */
-  const CX = 590, CY = 190, CW = 440, CH = 250;    // chamber; top aligned to artifact-governance box (y=190). Compressed horizontally (was 540) with the variance set reduced 9→7.
-  edges.append(line(`M 542 ${YM} L 584 ${YM}`));
-  edges.append(headR(588, YM));
+  const CX = 576, CY = 184, CW = 428, CH = 250;    // chamber; top aligned to artifact-governance (y=184). Right edge 1004 = 36px left of the governance box; the aperture ↕ arrow (CX-14 = 562) sits 36px right of the grammar box.
+  edges.append(line(`M 526 ${YM} L 570 ${YM}`));
+  edges.append(headR(574, YM));
 
   /* variance glyph geometry — used twice: as black holes in the executive mask, and as neutral outlines on top */
   const glyphs = [   // 7 marks — plurality/heterogeneity/non-finality without a tidy matrix (top-left cube + one bottom circle removed per ASK)
-    { t:'rect',   x:653, y:232, w:30, h:30, rx:2, rot:'rotate(45 668 247)' },   // diamond, top
-    { t:'circle', cx:760, cy:250, r:15 },                                       // circle, top
-    { t:'path',   d:'M 852 236 L 870 266 L 834 266 Z' },                        // triangle, top
-    { t:'rect',   x:934, y:239, w:28, h:28, rx:4 },                             // square, top
-    { t:'rect',   x:685, y:328, w:30, h:30, rx:4 },                             // cube, bottom
-    { t:'rect',   x:797, y:332, w:26, h:26, rx:2, rot:'rotate(45 810 345)' },   // diamond, bottom
-    { t:'circle', cx:920, cy:343, r:13 },                                       // circle, bottom
+    { t:'rect',   x:639, y:226, w:30, h:30, rx:2, rot:'rotate(45 654 241)' },   // diamond, top
+    { t:'circle', cx:746, cy:244, r:15 },                                       // circle, top
+    { t:'path',   d:'M 838 230 L 856 260 L 820 260 Z' },                        // triangle, top
+    { t:'rect',   x:920, y:233, w:28, h:28, rx:4 },                             // square, top
+    { t:'rect',   x:671, y:322, w:30, h:30, rx:4 },                             // cube, bottom
+    { t:'rect',   x:783, y:326, w:26, h:26, rx:2, rot:'rotate(45 796 339)' },   // diamond, bottom
+    { t:'circle', cx:906, cy:337, r:13 },                                       // circle, bottom
   ];
   const glyphEl = (g, attrs) =>
     g.t === 'rect'   ? el('rect',   Object.assign({ x:g.x, y:g.y, width:g.w, height:g.h, rx:g.rx, ry:g.rx, transform:g.rot }, attrs)) :
@@ -97,15 +97,19 @@
   edges.append(headD(CX-14, YM+AP));
   edges.append(line(`M ${CX} ${YM-AP} L ${CX+18} ${YM-10}`));       // iris blade (upper)
   edges.append(line(`M ${CX} ${YM+AP} L ${CX+18} ${YM+10}`));       // iris blade (lower)
-  nodes.append(el('text', { x: CX-28, y: YM, class:'flow-tag', 'text-anchor':'middle',
-    transform:`rotate(-90 ${CX-28} ${YM})` }, [M.field.aperture]));
+  // aperture / permitted variance — two labels flanking the arrow's centre (YM); the ↕ passes through the empty gap between them (no "·"), words held in place
+  const apLoY = YM + 38, apHiY = YM - 74;
+  nodes.append(el('text', { x: CX-28, y: apLoY, class:'flow-tag', 'text-anchor':'middle',
+    transform:`rotate(-90 ${CX-28} ${apLoY})` }, [M.field.apertureLo]));   // "aperture" (lower)
+  nodes.append(el('text', { x: CX-28, y: apHiY, class:'flow-tag', 'text-anchor':'middle',
+    transform:`rotate(-90 ${CX-28} ${apHiY})` }, [M.field.apertureHi]));   // "permitted variance" (upper)
 
   /* ---- variance candidates — NEGATIVE cutouts through the executive wash, neutral outlines
          (executive produces variance; the glyphs are content, NOT executive-function objects) ---- */
   glyphs.forEach(g => nodes.append(glyphEl(g, { class:'node-box fn-cut' })));
-  nodes.append(tag(928, 214, M.field.variance, 'start'));
-  edges.append(line(`M 620 402 L 1000 402`, 'edge', '1 5'));       // dotted authorized-judgment path · NEUTRAL
-  nodes.append(note(CX + CW/2, 396, M.field.judgment, 'middle'));
+  nodes.append(tag(896, 208, M.field.variance, 'start'));
+  edges.append(line(`M 606 396 L 974 396`, 'edge', '1 5'));       // dotted authorized-judgment path · NEUTRAL
+  nodes.append(note(CX + CW/2, 390, M.field.judgment, 'middle'));
 
   /* ===== selection + closure = JUDICIAL — ring + ratified candidate ===== */
   const SC = { x: 1130, y: YM };   // pulled left with the chamber compression (tightens chamber → selection); centred under the governance box
@@ -119,19 +123,31 @@
 
   /* ===== artifact governance — DOWNSTREAM, NEUTRAL (not a fourth color); two-line 58px node,
          top aligned to the chamber top (y=190) ===== */
-  edges.append(line(`M ${SC.x} ${SC.y-42} L ${SC.x} 252`));
-  edges.append(headU(SC.x, 248));
-  nodes.append(box(1040, 190, 180, 58));   // width 180 (centre 1130 = selection axis) so the two-line subtext fits
-  nodes.append(lbl(1056, 213, M.govern.label));
-  nodes.append(note(1056, 231, M.govern.note));
+  edges.append(line(`M ${SC.x} ${SC.y-42} L ${SC.x} 246`));
+  edges.append(headU(SC.x, 242));
+  nodes.append(box(1040, 184, 180, 58));   // width 180 (centre 1130 = selection axis) so the two-line subtext fits; up 6 for the 36px selection→governance gap
+  nodes.append(lbl(1056, 207, M.govern.label));
+  nodes.append(note(1056, 225, M.govern.note));
 
   /* ===== governed artifact + record — OUTSIDE the frame · NEUTRAL; two-line 58px node,
          top-aligned to the artifact-governance box (y=190) ===== */
-  edges.append(line(`M 1220 219 L 1268 219`));
-  edges.append(headR(1268, 219));
-  nodes.append(box(1274, 190, 178, 58));
-  nodes.append(lbl(1290, 213, M.output.label));
-  nodes.append(note(1290, 231, M.output.note));
+  edges.append(line(`M 1220 213 L 1284 213`));
+  edges.append(headR(1284, 213));   // arrowhead to the governed box; the frame edge (1256) sits symmetric between governance (36px inside) and governed (36px outside)
+  nodes.append(box(1292, 184, 150, 58));   // width 150 (tight to the label, was 178); up 6 with governance
+  nodes.append(lbl(1308, 207, M.output.label));
+  nodes.append(note(1308, 225, M.output.note));
+
+  /* ===== tighten the viewBox to the drawn content (+ uniform margin) so the figure
+     FILLS the export frame instead of the fixed 1600×620 canvas with dead padding —
+     the content is width-limited, so a tighter box scales it up (bigger diagram,
+     page margins held constant) ===== */
+  const VB_PAD = 28;
+  const bb = svg.getBBox();
+  const vbX = Math.floor(bb.x - VB_PAD), vbY = Math.floor(bb.y - VB_PAD);
+  const vbW = Math.ceil(bb.width + 2*VB_PAD), vbH = Math.ceil(bb.height + 2*VB_PAD);
+  svg.setAttribute('viewBox', `${vbX} ${vbY} ${vbW} ${vbH}`);
+  svg.setAttribute('width', vbW);
+  svg.setAttribute('height', vbH);
 
   /* ---- pan / zoom / fit + drag + wheel (local; mirrors the DS engines) ---- */
   const wrap = document.getElementById('canvasWrap'), stage = document.getElementById('stage'), pct = document.getElementById('zoomPct');
@@ -139,7 +155,7 @@
     let tx=0, ty=0, sc=1;
     const apply = () => { stage.style.transform = `translate(${tx}px,${ty}px) scale(${sc})`; if (pct) pct.textContent = Math.round(sc*100)+'%'; };
     const fit = () => { const r=wrap.getBoundingClientRect(); const pad=90;
-      sc=Math.min((r.width-pad)/W,(r.height-pad)/H,1.3); tx=(r.width-W*sc)/2; ty=(r.height-H*sc)/2; apply(); };
+      sc=Math.min((r.width-pad)/vbW,(r.height-pad)/vbH,1.3); tx=(r.width-vbW*sc)/2; ty=(r.height-vbH*sc)/2; apply(); };
     fit(); window.addEventListener('resize', fit);
     const zi=document.getElementById('zoomIn'), zo=document.getElementById('zoomOut'), zf=document.getElementById('zoomFit');
     if (zi) zi.onclick=()=>{sc=Math.min(sc*1.2,4);apply();};
