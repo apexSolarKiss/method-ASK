@@ -25,7 +25,7 @@ The nudge layer adds something different from a metaphor. It is an operational s
 
 ## What This Doc Captures
 
-The method is the practice of designing systems whose structure is itself worth articulating before, during, and after implementation. The mature worked example this document currently centers is `apexSolarKiss/asset-pipeline-ASK` — an information architecture for commercial visual asset production pipelines. The project is the worked example; the method is the durable element.
+The method is the practice of designing systems whose structure is itself worth articulating before, during, and after implementation. The mature worked example this document currently centers is [`apexSolarKiss/asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) — an information architecture for commercial visual asset production pipelines. The project is the worked example; the method is the durable element.
 
 The method is not a single principle. It is a coherent collection of pre-architecture moves, execution disciplines, synthesis disciplines, cross-phase workflow shape, surface-and-voice discipline, and a recursive observation about methodology itself.
 
@@ -256,7 +256,7 @@ The method is not separate from this history; it is what makes the history coher
 
 ## Self-Superseding Clause
 
-This document is the method's primary articulation in `apexSolarKiss/method-ASK`. It should be superseded by:
+This document is the method's primary articulation in [`apexSolarKiss/method-ASK`](../README.md). It should be superseded by:
 
 - the splitting-out of any method element above into its own first-class doc as the substrate accumulates — `docs/relative-externality.md`, `docs/voice-surface-boundary.md`, `docs/source-of-truth-and-aging-rate.md`, `docs/source-of-intent.md`, and others as they land
 - subsequent articulations of the method that earn deeper coverage of any single element above

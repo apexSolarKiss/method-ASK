@@ -19,14 +19,14 @@ It is not a renderer, a substrate, or an execution. It is the durable object tho
 
 It clears the §Evidence thresholds as a **two-instance bracket across structurally different kinds of system**:
 
-- **`asset-pipeline-ASK` (generative, implemented)** — the proven worked instance (milestone-14 portability frontier: recovery / auditability / consumability).
-- **`urban-observatory` (interpretive, non-generative — conceptual)** — independent-domain confirmation on the durability axis; the five facets map while it explicitly does *not* carry generative mechanics.
+- **[`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) (generative, implemented)** — the proven worked instance (milestone-14 portability frontier: recovery / auditability / consumability).
+- **[`urban-observatory`](https://github.com/apexSolarKiss/urban-observatory) (interpretive, non-generative — conceptual)** — independent-domain confirmation on the durability axis; the five facets map while it explicitly does *not* carry generative mechanics.
 
 The second instance is what disambiguates: a non-generative domain confirming the same durable-structure pattern is direct evidence the primitive concerns **durable normative structure across substrates, separable from generation** — not a feature of any one generator or domain.
 
 ## Distinct from bounded generativity — a different axis
 
-`method-ASK` already holds the **bounded generativity** primitive (`docs/bounded-generativity.md`). The portable definition layer is **orthogonal**, not nested:
+[`method-ASK`](../README.md) already holds the **bounded generativity** primitive (`docs/bounded-generativity.md`). The portable definition layer is **orthogonal**, not nested:
 
 ```text
 bounded generativity     — PROCESS axis
@@ -72,9 +72,9 @@ This doc lands the **method primitive, not an implementation protocol.** It name
 
 ## Tiering (where the primitive and its relations live)
 
-- **`method-ASK`** owns the primitive definition — this doc.
+- **[`method-ASK`](../README.md)** owns the primitive definition — this doc.
 - **Project repos** reference the primitive at high-level doctrine altitude — **not** as schema, proof-test, or implementation requirement. AP is the antecedent worked instance; UO holds a scratch analog it has not adopted.
-- A cross-repo *relationship* record, if/when warranted, belongs in `control-surface`, not here.
+- A cross-repo *relationship* record, if/when warranted, belongs in [`control-surface`](https://github.com/apexSolarKiss/control-surface), not here.
 
 ## Boundaries
 

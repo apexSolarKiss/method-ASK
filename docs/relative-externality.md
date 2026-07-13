@@ -16,7 +16,7 @@ Three formulations the method uses:
 
 - **Ex-repo is not ex-system.** A grounding note lives outside the repo by surface boundary, but inside the system the repo participates in. The repo can read it; the method depends on it; the system reaches it.
 - **Outside the repo can still be inside the method system.** Articles, operator memory, scratch, and grounding notes are all outside repos and all inside the method system. They are not stray context — they are layered context the method routes through.
-- **Inside one layer can be outside another.** `control-surface` is internal to the ASK family meta-architecture but external to each downstream project repo. The same artifact has different externality postures depending on which surface you stand on.
+- **Inside one layer can be outside another.** [`control-surface`](https://github.com/apexSolarKiss/control-surface) is internal to the ASK family meta-architecture but external to each downstream project repo. The same artifact has different externality postures depending on which surface you stand on.
 
 There is no absolute externality. Every claim about externality has to name both surfaces.
 
@@ -32,11 +32,11 @@ The two axes do not align by default. A surface can be outside the repo *and* up
 Examples illustrating both axes:
 
 - A grounding note is outside the repo by surface boundary, but upstream to the repo by normative direction.
-- `control-surface` is outside downstream project repos by surface boundary, but upstream to them by normative direction (templates, prompts, instantiation workflow flow down).
-- `method-ASK` is outside `control-surface` by surface boundary, but upstream to it by normative direction (methodology articulates the rules execution-protocol operationalizes).
+- [`control-surface`](https://github.com/apexSolarKiss/control-surface) is outside downstream project repos by surface boundary, but upstream to them by normative direction (templates, prompts, instantiation workflow flow down).
+- [`method-ASK`](../README.md) is outside `control-surface` by surface boundary, but upstream to it by normative direction (methodology articulates the rules execution-protocol operationalizes).
 - Articles are outside repos by surface boundary; reflective by normative direction (they comment on the method without being authoritative for current repo state, but can become substrate for later doctrine).
 - Operator memory is outside repos and outside grounding notes by surface boundary, and not upstream or downstream of either by normative direction; it is ephemeral session-local — neither repo truth nor source-of-intent.
-- `design-system-ASK` is outside `urban-observatory` by surface boundary, and upstream to it by normative direction for visual inheritance (Tier 1 + Tier 2 flow down; ASK's own Tier 3 does not — UO resolves its own Tier 3 locally by brand-distance).
+- [`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) is outside [`urban-observatory`](https://github.com/apexSolarKiss/urban-observatory) by surface boundary, and upstream to it by normative direction for visual inheritance (Tier 1 + Tier 2 flow down; ASK's own Tier 3 does not — UO resolves its own Tier 3 locally by brand-distance).
 
 ## Relative-externality map
 
@@ -44,10 +44,10 @@ The current ASK topology, textual:
 
 - **Operator source-of-intent** — axiom outside the recursion. Upstream-external to every surface; not a surface itself, but a substrate the method depends on. Per `docs/source-of-intent.md`, recovery and validation precede repo encoding because source-of-intent is not authored by the method.
 - **Grounding notes** — external to repos by surface boundary; upstream to repos by normative direction. Carry slow-aging source-of-intent, durable role boundaries, and external context. Each repo (downstream project, method, design-system) has its own grounding note; each is upstream-external to its respective repo.
-- **`method-ASK`** — upstream-external to `control-surface`. Methodology articulates the rules; execution-protocol operationalizes them. Doctrine moves from method to execution-protocol, not the other way.
-- **`control-surface`** — downstream-internal to `method-ASK`; upstream-external to downstream project repos. Templates, prompts, project-instantiation workflow flow down. Each downstream repo inherits from control-surface; control-surface does not inherit from individual downstream repos (though it absorbs cross-project patterns when they earn promotion per absorption discipline).
-- **Downstream project repos** — downstream-internal to `control-surface`; each is external to the others. `asset-pipeline-ASK`, `urban-observatory`, `mazeASK`, and similar — peers by surface boundary; not normatively related to each other in either direction.
-- **`design-system-ASK`** — peer to other repos by surface boundary; upstream-external to downstream surfaces that inherit visual language. Tier 1 (foundation) and Tier 2 (ASK design language) flow downstream by reference; ASK's own Tier 3 (instance identity) does not flow wholesale — each consuming surface resolves its own Tier 3 locally by source-of-intent + brand-distance.
+- **[`method-ASK`](../README.md)** — upstream-external to `control-surface`. Methodology articulates the rules; execution-protocol operationalizes them. Doctrine moves from method to execution-protocol, not the other way.
+- **[`control-surface`](https://github.com/apexSolarKiss/control-surface)** — downstream-internal to `method-ASK`; upstream-external to downstream project repos. Templates, prompts, project-instantiation workflow flow down. Each downstream repo inherits from control-surface; control-surface does not inherit from individual downstream repos (though it absorbs cross-project patterns when they earn promotion per absorption discipline).
+- **Downstream project repos** — downstream-internal to `control-surface`; each is external to the others. [`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK), [`urban-observatory`](https://github.com/apexSolarKiss/urban-observatory), [`mazeASK`](https://github.com/apexSolarKiss/mazeASK), and similar — peers by surface boundary; not normatively related to each other in either direction.
+- **[`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK)** — peer to other repos by surface boundary; upstream-external to downstream surfaces that inherit visual language. Tier 1 (foundation) and Tier 2 (ASK design language) flow downstream by reference; ASK's own Tier 3 (instance identity) does not flow wholesale — each consuming surface resolves its own Tier 3 locally by source-of-intent + brand-distance.
 - **Canonical inheritable identity layer** — external to repos by surface boundary; upstream to ASK-family surfaces for brand architecture, visual identity, voice/style, the tier model, and naming/structure conventions. Consumed by reference through `personal-ASK/inheritable/`; private context outside that grant remains structurally unreachable.
 - **Articles** — external to all repos by surface boundary; reflective by normative direction. Move at their own pace. Can be substrate for later doctrine when pressure earns promotion; not authoritative for current repo state.
 - **Scratch / event records** — operator-side; external to all repos by surface boundary; not upstream or downstream of any repo. Fast-aging by design. Carries event chronology and working memory; never the absorption target for slow surfaces.
@@ -59,7 +59,7 @@ The map is many-to-many. A single artifact (e.g., a grounding note) has external
 
 A surface can be governed by a discipline it helps execute, but it does not govern itself. The recursion is in discipline, not in authority.
 
-`control-surface` encodes execution protocol that an execution surface consumes and applies during repo work. The protocol can itself be revised through the same scoped-review discipline it imposes on work, but authority for that revision does not come from the execution-protocol surface itself. Method-level doctrine governs how protocol patterns are interpreted, held, promoted, or rejected.
+[`control-surface`](https://github.com/apexSolarKiss/control-surface) encodes execution protocol that an execution surface consumes and applies during repo work. The protocol can itself be revised through the same scoped-review discipline it imposes on work, but authority for that revision does not come from the execution-protocol surface itself. Method-level doctrine governs how protocol patterns are interpreted, held, promoted, or rejected.
 
 This refines the same principle as internal location does not confer authority: executing a rule does not confer authority to revise that rule.
 
@@ -150,7 +150,7 @@ This doctrine should be superseded by:
 - a formal topology diagram if textual map proves insufficient for navigating the relations (currently the map is textual by design; a diagram earns a home only if it improves operational clarity over prose)
 - compression into `docs/source-of-truth-and-aging-rate.md` if the surface-authority material there absorbs most of the topology substrate this doc carries
 - a future `docs/voice-surface-boundary.md` if the rule/payload subtype (the most specific failure-mode pattern here, around payload not crossing surface boundaries) earns its own focused treatment
-- a more formal cross-repo externality taxonomy if multiple ASK-family child projects produce enough inheritance cases to justify a structured surface-relationship matrix (currently n=1 cross-repo inheritance proof from `design-system-ASK` → UO; promotion to formal taxonomy waits for n=2)
+- a more formal cross-repo externality taxonomy if multiple ASK-family child projects produce enough inheritance cases to justify a structured surface-relationship matrix (currently n=1 cross-repo inheritance proof from [`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) → UO; promotion to formal taxonomy waits for n=2)
 - a future `docs/layer-classification.md` if the routing/topology pieces from this doc, `docs/source-of-intent.md` (grounding-note refresh preflight), and `docs/source-of-truth-and-aging-rate.md` (surface split) consolidate into a central routing doc
 
 The doctrine is not finished. The two-axis model is the current best articulation of the relation; the textual map is the current best snapshot of the topology. As the family grows (new child repos, new article-line surfaces, new operator-side patterns), the map will refine. The two-axis discipline itself is more stable than the specific surface list; the surfaces are substrate, the relational frame is doctrine.
