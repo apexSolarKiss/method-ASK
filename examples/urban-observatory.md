@@ -2,7 +2,7 @@
 
 ## Role in the method
 
-[`apexSolarKiss/urban-observatory`](https://github.com/apexSolarKiss/urban-observatory) is the newer single-node pressure surface that exposed method-layer material `asset-pipeline-ASK` had not pressured. The project is in early bootstrap / prototype-planning phase, and its pressure has been concentrated at inception and instantiation: source-of-intent recovery, validation loops, bootstrap grounding-note lifecycle, and the external-handoff classification observation.
+[`apexSolarKiss/urban-observatory`](https://github.com/apexSolarKiss/urban-observatory) is the newer single-node pressure surface that exposed method-layer material [`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) had not pressured. The project is in early bootstrap / prototype-planning phase, and its pressure has been concentrated at inception and instantiation: source-of-intent recovery, validation loops, bootstrap grounding-note lifecycle, and the external-handoff classification observation.
 
 The role is structural, not biographical. The project is the worked example; the method is the durable element.
 
@@ -19,7 +19,7 @@ The following method elements emerged through urban-observatory work:
 
 ## What the meta repo absorbed
 
-`control-surface` absorbed the patterns that generalize beyond the urban-observatory domain:
+[`control-surface`](https://github.com/apexSolarKiss/control-surface) absorbed the patterns that generalize beyond the urban-observatory domain:
 
 - Post-Bootstrap Trim Pass in `templates/grounding-note.template.md` — the lifecycle gate that forces a pre-repo grounding note to shed fast-aging setup material once the repo begins owning project truth
 - Pointers from the project-instantiation prompt, advisor template, and workflow doc to the new gate

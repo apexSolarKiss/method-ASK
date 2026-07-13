@@ -18,7 +18,7 @@ These were design-system-ASK-side surfacings. The actual inheritance pattern rem
 
 ## What the downstream proof showed
 
-The first child to attempt Tier 1 + Tier 2 inheritance from design-system-ASK was `urban-observatory`, building an Example 2 summary-surface prototype as scratch-only HTML. The attempt produced two passes:
+The first child to attempt Tier 1 + Tier 2 inheritance from design-system-ASK was [`urban-observatory`](https://github.com/apexSolarKiss/urban-observatory), building an Example 2 summary-surface prototype as scratch-only HTML. The attempt produced two passes:
 
 **v1 — presence without structure.** The upstream existed and was reachable. The inheritance posture was named in the artifact's narration. But the rendered HTML did not meaningfully inherit Tier 1 + Tier 2 — invented hex palette, generic system sans, conventional weight contrast, light-mode-only, no ASK gradient. The artifact had upstream access and used inheritance vocabulary in commentary, but inherited no actual visual structure.
 

@@ -2,7 +2,7 @@
 
 ## Role in the method
 
-`system-ASK` — the ASK practice taken as a whole, apex and ecology together — is itself a concrete instance of the bounded-generativity topology defined in `docs/bounded-generativity.md`. The primitive's worked instances (§Worked instances) run from `isometric-cubes-ASK` through `mazeASK`, `asset-pipeline-ASK`, studioLeoV, generative-AI workflows, and the ASK advisory / extended-cognition loop. This example takes the last of those one altitude up: the same structure that governs a single advisory loop also governs the standing architecture of the whole practice.
+`system-ASK` — the ASK practice taken as a whole, apex and ecology together — is itself a concrete instance of the bounded-generativity topology defined in `docs/bounded-generativity.md`. The primitive's worked instances (§Worked instances) run from [`isometric-cubes-ASK`](https://github.com/apexSolarKiss/isometric-cubes-ASK) through [`mazeASK`](https://github.com/apexSolarKiss/mazeASK), [`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK), studioLeoV, generative-AI workflows, and the ASK advisory / extended-cognition loop. This example takes the last of those one altitude up: the same structure that governs a single advisory loop also governs the standing architecture of the whole practice.
 
 This is a worked-example explanation at method altitude — not a second primitive definition and not an operational authorization. The primitive is defined in `docs/bounded-generativity.md`; this maps how `system-ASK` realizes it.
 
@@ -34,6 +34,6 @@ The direction of authority is invariant: intent originates at the apex and is no
 
 Ownership follows the layer model:
 
-- **`method-ASK`** owns the primitive and this cross-surface structural relation.
-- **`control-surface`** owns the execution protocols that move work across the relation — routing, handoffs, critique, review, instantiation, relay, and closure.
+- **[`method-ASK`](../README.md)** owns the primitive and this cross-surface structural relation.
+- **[`control-surface`](https://github.com/apexSolarKiss/control-surface)** owns the execution protocols that move work across the relation — routing, handoffs, critique, review, instantiation, relay, and closure.
 - **project repos** own their domain instances.

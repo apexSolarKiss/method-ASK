@@ -8,7 +8,7 @@ The methodology repo embodies the discipline it articulates. `AGENTS.md` carries
 
 Absorption is the promotion of material from one surface to another because it has earned a more durable or more general home.
 
-Surfaces in this method have different aging rates and different audiences. State ages fast and lives in the repo. Rules age slowly and live in `AGENTS.md`. Context ages slowly and lives in the grounding note. Per-conversation tracking is ephemeral and lives in operator-side memory. Reflection moves at its own pace and lives in external writing. Method articulation lives in `method-ASK`; execution protocol lives in `control-surface`.
+Surfaces in this method have different aging rates and different audiences. State ages fast and lives in the repo. Rules age slowly and live in `AGENTS.md`. Context ages slowly and lives in the grounding note. Per-conversation tracking is ephemeral and lives in operator-side memory. Reflection moves at its own pace and lives in external writing. Method articulation lives in [`method-ASK`](../README.md); execution protocol lives in [`control-surface`](https://github.com/apexSolarKiss/control-surface).
 
 Absorption moves material from its current surface to the appropriate one when the material has earned that move. The doctrine governs both the move and the refusal to make it.
 
@@ -36,8 +36,8 @@ Likely destinations for material being considered for absorption:
 - **Repo-local public-safe truth** — stable, generalized project truth that belongs in a public repo's prose. Slow-aging.
 - **Grounding note** — slow-aging source-of-intent, audience, durable constraints, durable role boundaries.
 - **Scratch / operator-side event record** — state chronology, event records, in-flight per-conversation tracking. Fast-aging; never the absorption target for slow surfaces.
-- **`method-ASK` doctrine** — cross-project method articulation that has earned generalization beyond a single project.
-- **`control-surface` execution protocol** — workflow rules, templates, prompts that operationalize the method per session.
+- **[`method-ASK`](../README.md) doctrine** — cross-project method articulation that has earned generalization beyond a single project.
+- **[`control-surface`](https://github.com/apexSolarKiss/control-surface) execution protocol** — workflow rules, templates, prompts that operationalize the method per session.
 - **Project-local observation** — project-specific patterns that have not earned generalization beyond their project. The project's own grounding note or repo carries the project-local form.
 - **Future roadmap context** — direction that may matter later but is not current-stage source-of-intent. Held without reshaping current work.
 - **Hold / no action** — material the discipline declines to absorb anywhere yet. Held material is not lost; it is preserved at the surface where it currently sits, pending evidence that would warrant a move.
