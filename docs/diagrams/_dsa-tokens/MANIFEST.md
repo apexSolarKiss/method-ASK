@@ -6,9 +6,12 @@ design-system-ASK repo and **no Google Fonts CDN dependency** — the diagram
 renders entirely from these local files.
 
 **Synced from:** `apexSolarKiss/design-system-ASK`
-**Pinned commit:** `1231d03040c74eb4eedf7be2e3214da9766e63f7`
-**Synced:** 2026-06-26
+**Pinned commit:** `8fb82b72d877814d0e1504719aac511eed3b0bd8`
+**Synced:** 2026-07-12
 **`colors_and_type.css` sha256:** `bcd11e0efeae2851c8653a425f94a76cb6423c770e23cb18b3a0315519a7375f`
+**`three-functions.css` sha256:** `502a8fd883933436958fe48d51f847c67cb23e6b6fdbacedd89ac8f5651239d1`
+
+**Vendor 2026-07-12 — add the Three Functions primitive (design-system PR #67 `8fb82b7`); diagram gains function color (`source-v3 // render-v3`).** Adds `three-functions.css` to this mirror — the landed **ASK Three Functions** opt-in semantic-role primitive (Tier-1 `--function-legislative` / `--function-executive` / `--function-judicial`, bound in Tier-2 to magenta / theme-neutral / cyan). The bounded-generativity diagram now **consumes it by reference** to color the three functions: legislative grammar/brief box, the executive bounded-realization chamber (with variance rendered as **negative cutouts** through the chamber fill), and the judicial selection ring + ratified node — everything else neutral. `colors_and_type.css` / fonts / `export-png.js` are **byte-identical** (the pin bump only ADDS `three-functions.css`; `colors_and_type.css` sha256 above is unchanged). **NOT render-neutral for this diagram** — the diagram source gains color plus the chamber-top alignment, so its stamp bumps to **`source-v3 // render-v3`** and both rasters are regenerated. First public consumer of Three Functions; tracked in the operator consumer-ledger.
 
 **Re-vendor 2026-07-10 — native `file://` export via embedded-font carrier (design-system PR #62 `44c6074`), render-neutral for http, stamp held.** Supersedes #61's *goal* while keeping #61's fail-closed behavior as the floor: a double-clicked (`file://`) diagram now exports a correct PNG with **no server**. **Not exporter-only** — this re-vendor **adds** `fonts-embedded.js` to this mirror (the DS-generated embedded-font carrier + integrity manifest, md5 `ffb61b1e`), and the diagram HTML now loads `<script src="./_dsa-tokens/fonts-embedded.js">` **before** `export-png.js`. `export-png.js` re-vendored **byte-identical** from DS @ `44c6074` (md5 `9cb7a354`): it prefers the carrier (no fetch → works under `file://`), falls back to the http woff2 fetch, and still fails CLOSED — now **manifest-backed**, so an incomplete carrier is caught even under `file://` — if neither fully embeds. `colors_and_type.css` / fonts / the pin above are unchanged (the carrier is generated FROM them). **Render-neutral for http** — the successful http export output is byte-identical (carrier `@font-face` bytes == fetch bytes), so the diagram `render-vN` stamp is **held**. Exporter + carrier pins tracked in the operator consumer-ledger (item 10; item 9 remains the fail-closed floor).
 
@@ -23,6 +26,7 @@ renders entirely from these local files.
 | File | Upstream source | Role |
 |---|---|---|
 | `colors_and_type.css` | `/colors_and_type.css` | Tier 1 + Tier 2 tokens + `@font-face` (light default · `[data-theme="dark"]` · `prefers-color-scheme` auto-bridge) |
+| `three-functions.css` | `/three-functions.css` | ASK Three Functions — opt-in semantic function-color primitive (three `--function-*` roles); consumed by the bounded-generativity diagram. Layers on `colors_and_type.css` |
 | `fonts-embedded.js` | generated from `/colors_and_type.css` + `/fonts/` by `/tools/gen-embedded-fonts.js` | embedded-font carrier (`window.DSA_EMBEDDED_FONTS` + integrity manifest) — enables offline `file://` PNG export; load before `export-png.js` |
 | `fonts/InterVariable.woff2` | `/fonts/` | display family |
 | `fonts/InterVariable-Italic.woff2` | `/fonts/` | display italic |

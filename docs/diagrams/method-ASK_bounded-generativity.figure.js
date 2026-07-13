@@ -1,11 +1,14 @@
-/* method-ASK_bounded-generativity.figure.js — horizontal-flow revision (ASK visual review 2026-07-12) */
+/* method-ASK_bounded-generativity.figure.js — horizontal flow + Three Functions color (source-v3, ASK 2026-07-12)
+   Consumes design-system-ASK Three Functions by reference (_dsa-tokens/three-functions.css):
+   legislative = grammar/brief box · executive = the bounded-realization chamber (variance = negative cutouts)
+   · judicial = selection ring + ratified node. Everything else neutral. */
 (function () {
   const M = {
     apex:   { label: 'source of intent', sub: 'normative apex', note1: 'supplies purpose +', note2: 'governing standard' },
     grammar:{ label: 'grammar / brief', note: 'grants the aperture' },
     field:  { tag: 'bounded realization  ·  execution span  ·  «the middle»', aperture: 'aperture · permitted variance', variance: 'variance', judgment: '· · ·  authorized judgment where present  · · ·' },
     select: { tag: 'selection + closure', note1: 'ratifies one candidate', note2: 'aperture closes' },
-    govern: { label: 'artifact governance' },
+    govern: { label: 'artifact governance', note: 'binds the accepted result' },
     output: { label: 'governed artifact', note: '+ governance record' },
     bracket:'bounded generativity',
   };
@@ -36,79 +39,99 @@
   const note = (x, y, t, a='start') => el('text', { x, y, class:'node-note', 'text-anchor':a }, [t]);
   const tag = (x, y, t, a='middle') => el('text', { x, y, class:'flow-tag', 'text-anchor':a }, [t]);
 
-  /* ===== source of intent / normative apex — OUTSIDE the frame, left ===== */
+  /* ===== source of intent / normative apex — OUTSIDE the frame, left · NEUTRAL ===== */
   nodes.append(lbl(140, 250, M.apex.label));
   nodes.append(note(140, 268, M.apex.sub));
   nodes.append(note(140, 286, M.apex.note1));
   nodes.append(note(140, 304, M.apex.note2));
 
-  /* ===== bounded generativity frame ===== */
-  const FX = 340, FY = 168, FW = 1016, FH = 310;   // x 340-1356, y 168-478
+  /* ===== bounded generativity frame · NEUTRAL ===== */
+  const FX = 340, FY = 168, FW = 916, FH = 310;   // x 340-1256, y 168-478 (right edge pulled in with the downstream compression)
   nodes.append(el('rect', { x:FX, y:FY, width:FW, height:FH, rx:14, ry:14, class:'flow-group' }));
   nodes.append(tag(FX + FW/2, FY - 14, M.bracket));
 
-  /* ===== source beam enters the frame → grammar/brief (the inside-frame carrier) ===== */
+  /* ===== source beam · NEUTRAL → grammar/brief = LEGISLATIVE ===== */
   edges.append(line(`M 146 ${YM} L 356 ${YM}`));
   edges.append(headR(356, YM));
-  nodes.append(box(360, YM-26, 182, 52));
-  nodes.append(lbl(376, YM-4, M.grammar.label));
-  nodes.append(note(376, YM+14, M.grammar.note));
+  nodes.append(box(360, YM-29, 182, 58, 'node-box fn-leg'));   // two-line node, 58px, centred on YM
+  nodes.append(lbl(376, YM-6, M.grammar.label));
+  nodes.append(note(376, YM+12, M.grammar.note));
 
-  /* ===== grammar/brief grants the aperture → beam continues into the chamber's left-edge opening ===== */
-  const CX = 590, CY = 200, CW = 540, CH = 240;    // chamber, centre_y = 320
+  /* ===== grammar/brief grants the aperture → beam · NEUTRAL → chamber = EXECUTIVE apparatus ===== */
+  const CX = 590, CY = 190, CW = 440, CH = 250;    // chamber; top aligned to artifact-governance box (y=190). Compressed horizontally (was 540) with the variance set reduced 9→7.
   edges.append(line(`M 542 ${YM} L 584 ${YM}`));
   edges.append(headR(588, YM));
-  nodes.append(el('rect', { x:CX, y:CY, width:CW, height:CH, rx:8, ry:8, class:'flow-group' }));
+
+  /* variance glyph geometry — used twice: as black holes in the executive mask, and as neutral outlines on top */
+  const glyphs = [   // 7 marks — plurality/heterogeneity/non-finality without a tidy matrix (top-left cube + one bottom circle removed per ASK)
+    { t:'rect',   x:653, y:232, w:30, h:30, rx:2, rot:'rotate(45 668 247)' },   // diamond, top
+    { t:'circle', cx:760, cy:250, r:15 },                                       // circle, top
+    { t:'path',   d:'M 852 236 L 870 266 L 834 266 Z' },                        // triangle, top
+    { t:'rect',   x:934, y:239, w:28, h:28, rx:4 },                             // square, top
+    { t:'rect',   x:685, y:328, w:30, h:30, rx:4 },                             // cube, bottom
+    { t:'rect',   x:797, y:332, w:26, h:26, rx:2, rot:'rotate(45 810 345)' },   // diamond, bottom
+    { t:'circle', cx:920, cy:343, r:13 },                                       // circle, bottom
+  ];
+  const glyphEl = (g, attrs) =>
+    g.t === 'rect'   ? el('rect',   Object.assign({ x:g.x, y:g.y, width:g.w, height:g.h, rx:g.rx, ry:g.rx, transform:g.rot }, attrs)) :
+    g.t === 'circle' ? el('circle', Object.assign({ cx:g.cx, cy:g.cy, r:g.r }, attrs)) :
+                       el('path',   Object.assign({ d:g.d }, attrs));
+
+  /* executive mask: chamber white (wash shows), glyphs black (punched out as holes) */
+  const defs = el('defs');
+  const mask = el('mask', { id:'exe-holes', maskUnits:'userSpaceOnUse', x:CX-4, y:CY-4, width:CW+8, height:CH+8 });
+  mask.append(el('rect', { x:CX, y:CY, width:CW, height:CH, rx:8, ry:8, fill:'#fff' }));
+  glyphs.forEach(g => mask.append(glyphEl(g, { fill:'#000' })));
+  defs.append(mask);
+  svg.insertBefore(defs, edges);
+
+  /* chamber = the EXECUTIVE apparatus: executive fill (30%, from the consuming CSS) with the glyphs punched OUT as holes, + executive stroke */
+  nodes.append(el('rect', { x:CX, y:CY, width:CW, height:CH, rx:8, ry:8, class:'fn-exe-wash', mask:'url(#exe-holes)' }));
+  nodes.append(el('rect', { x:CX, y:CY, width:CW, height:CH, rx:8, ry:8, class:'flow-group fn-exe-chamber' }));
   nodes.append(el('text', { x: CX + CW/2, y: CY + CH + 20, class:'section-tag', 'text-anchor':'middle' }, [M.field.tag]));
 
-  /* ---- aperture: the opening in the chamber's LEFT edge, centred on YM, opening on either side ---- */
+  /* ---- aperture: opening in the chamber's LEFT edge · NEUTRAL geometry (a quantity, not an actor) ---- */
   const AP = 74;   // aperture half-height (opens AP above and below the entry)
   edges.append(line(`M ${CX-14} ${YM-AP} L ${CX-14} ${YM+AP}`));   // ↕ permitted-variance dimension
   edges.append(headU(CX-14, YM-AP));
   edges.append(headD(CX-14, YM+AP));
-  edges.append(line(`M ${CX} ${YM-AP} L ${CX+18} ${YM-10}`));       // iris blade (upper) — opens toward the entry
+  edges.append(line(`M ${CX} ${YM-AP} L ${CX+18} ${YM-10}`));       // iris blade (upper)
   edges.append(line(`M ${CX} ${YM+AP} L ${CX+18} ${YM+10}`));       // iris blade (lower)
   nodes.append(el('text', { x: CX-28, y: YM, class:'flow-tag', 'text-anchor':'middle',
     transform:`rotate(-90 ${CX-28} ${YM})` }, [M.field.aperture]));
 
-  /* ---- candidate variance — varied glyphs filling the chamber ---- */
-  nodes.append(box(650, 238, 26, 26));   // small cube on top (center 663,251)
-  nodes.append(el('rect', { x:730, y:232, width:30, height:30, rx:2, transform:'rotate(45 745 247)', class:'node-box' }));
-  nodes.append(el('circle', { cx:812, cy:252, r:15, class:'node-box' }));
-  nodes.append(el('path', { class:'node-box', d:'M 892 236 L 910 266 L 874 266 Z' }));
-  nodes.append(box(970, 240, 28, 28));
-  nodes.append(box(674, 328, 30, 30));   // big cube on bottom (center 689,343)
-  nodes.append(el('circle', { cx:772, cy:344, r:14, class:'node-box' }));
-  nodes.append(el('rect', { x:858, y:332, width:26, height:26, rx:2, transform:'rotate(45 871 345)', class:'node-box' }));
-  nodes.append(el('circle', { cx:965, cy:344, r:13, class:'node-box' }));
-  nodes.append(tag(1046, 236, M.field.variance, 'start'));
-  edges.append(line(`M 632 402 L 1088 402`, 'edge', '1 5'));
+  /* ---- variance candidates — NEGATIVE cutouts through the executive wash, neutral outlines
+         (executive produces variance; the glyphs are content, NOT executive-function objects) ---- */
+  glyphs.forEach(g => nodes.append(glyphEl(g, { class:'node-box fn-cut' })));
+  nodes.append(tag(928, 214, M.field.variance, 'start'));
+  edges.append(line(`M 620 402 L 1000 402`, 'edge', '1 5'));       // dotted authorized-judgment path · NEUTRAL
   nodes.append(note(CX + CW/2, 396, M.field.judgment, 'middle'));
 
-  /* ===== selection + closure — STRAIGHT out of the chamber (horizontal), ring on the YM axis.
-         Annotation sits BELOW the ring — the flow ELEVATES above it into governance. ===== */
-  const SC = { x: 1240, y: YM };
+  /* ===== selection + closure = JUDICIAL — ring + ratified candidate ===== */
+  const SC = { x: 1130, y: YM };   // pulled left with the chamber compression (tightens chamber → selection); centred under the governance box
   edges.append(line(`M ${CX+CW} ${YM} L ${SC.x-46} ${YM}`));
   edges.append(headR(SC.x-46, YM));
-  edges.append(el('circle', { class:'edge', cx:SC.x, cy:SC.y, r:42, fill:'none' }));
-  nodes.append(box(SC.x-26, SC.y-26, 52, 52));
+  edges.append(el('circle', { class:'edge fn-jud-ring', cx:SC.x, cy:SC.y, r:42, fill:'none' }));
+  nodes.append(box(SC.x-26, SC.y-26, 52, 52, 'node-box fn-jud'));
   nodes.append(tag(SC.x, 394, M.select.tag));
   nodes.append(note(SC.x, 412, M.select.note1, 'middle'));
   nodes.append(note(SC.x, 429, M.select.note2, 'middle'));
 
-  /* ===== artifact governance — the flow ELEVATES through selection → governance: vertical RISE,
-         box ABOVE the ring (elevating matters more than reader eye-direction). ===== */
-  edges.append(line(`M ${SC.x} ${SC.y-42} L ${SC.x} 238`));
-  edges.append(headU(SC.x, 234));
-  nodes.append(box(1160, 190, 160, 44));
-  nodes.append(lbl(1176, 216, M.govern.label));
+  /* ===== artifact governance — DOWNSTREAM, NEUTRAL (not a fourth color); two-line 58px node,
+         top aligned to the chamber top (y=190) ===== */
+  edges.append(line(`M ${SC.x} ${SC.y-42} L ${SC.x} 252`));
+  edges.append(headU(SC.x, 248));
+  nodes.append(box(1040, 190, 180, 58));   // width 180 (centre 1130 = selection axis) so the two-line subtext fits
+  nodes.append(lbl(1056, 213, M.govern.label));
+  nodes.append(note(1056, 231, M.govern.note));
 
-  /* ===== governed artifact + record — OUTSIDE the frame, at the (elevated) governance level ===== */
-  edges.append(line(`M 1320 212 L 1388 212`));
-  edges.append(headR(1388, 212));
-  nodes.append(box(1394, 183, 178, 58));
-  nodes.append(lbl(1410, 206, M.output.label));
-  nodes.append(note(1410, 224, M.output.note));
+  /* ===== governed artifact + record — OUTSIDE the frame · NEUTRAL; two-line 58px node,
+         top-aligned to the artifact-governance box (y=190) ===== */
+  edges.append(line(`M 1220 219 L 1268 219`));
+  edges.append(headR(1268, 219));
+  nodes.append(box(1274, 190, 178, 58));
+  nodes.append(lbl(1290, 213, M.output.label));
+  nodes.append(note(1290, 231, M.output.note));
 
   /* ---- pan / zoom / fit + drag + wheel (local; mirrors the DS engines) ---- */
   const wrap = document.getElementById('canvasWrap'), stage = document.getElementById('stage'), pct = document.getElementById('zoomPct');

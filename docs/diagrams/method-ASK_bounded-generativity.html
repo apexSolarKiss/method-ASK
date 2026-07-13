@@ -9,7 +9,22 @@
 <!-- design-system-ASK foundations — local mirror (Tier 1 + Tier 2), no CDN. See _dsa-tokens/MANIFEST.md -->
 <link rel="stylesheet" href="./_dsa-tokens/colors_and_type.css">
 <link rel="stylesheet" href="diagrams.css">
-<style>.legend .foot{margin-top:9px;font-family:var(--font-mono);font-size:10px;line-height:1.35;color:var(--diagram-muted);font-weight:300;}</style>
+<!-- ASK Three Functions — opt-in semantic function-color primitive, vendored from design-system-ASK. See _dsa-tokens/MANIFEST.md -->
+<link rel="stylesheet" href="./_dsa-tokens/three-functions.css">
+<style>
+  /* ===== Three Functions consumption (source-v3): role stroke + 30% fill; executive = the chamber, variance = negative cutouts ===== */
+  .node-box.fn-leg  { stroke: var(--function-legislative); fill: color-mix(in srgb, var(--function-legislative) 30%, transparent); }
+  .node-box.fn-jud  { stroke: var(--function-judicial);    fill: color-mix(in srgb, var(--function-judicial) 30%, transparent); }
+  .edge.fn-jud-ring { stroke: var(--function-judicial); }
+  .fn-exe-wash               { fill: color-mix(in srgb, var(--function-executive) 30%, transparent); }
+  .flow-group.fn-exe-chamber { stroke: var(--function-executive); fill: none; }
+  .node-box.fn-cut           { fill: none; }
+  .legend .box-solid.fn-leg { background: color-mix(in srgb, var(--function-legislative) 30%, transparent); border-color: var(--function-legislative); }
+  .legend .box-solid.fn-exe { background: color-mix(in srgb, var(--function-executive) 30%, transparent); border-color: var(--function-executive); }
+  .legend .box-solid.fn-jud { background: color-mix(in srgb, var(--function-judicial) 30%, transparent); border-color: var(--function-judicial); }
+  .legend .fn-divider { border: none; border-top: 1px dotted var(--diagram-line); margin: 12px 0 9px; }
+  .legend .fn-down { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--diagram-muted); margin-bottom: 9px; }
+</style>
 </head>
 <body>
 
@@ -22,7 +37,7 @@
     </div>
     <div class="spacer"></div>
     <div class="stamp">
-      <div><span class="k">source-v2</span> // <span class="k">render-v2</span></div>
+      <div><span class="k">source-v3</span> // <span class="k">render-v3</span></div>
       <div>2026-07-12</div>
     </div>
   </div>
@@ -40,18 +55,23 @@
     <div class="legend glass">
       <div class="h"><span>Three functions</span><span class="fig">one spine</span></div>
       <div class="row">
-        <div class="sw"><div class="box-solid"></div></div>
+        <div class="sw"><div class="box-solid fn-leg"></div></div>
         <div><span class="lbl">legislative</span><span class="sub">grammar / brief · grants the aperture</span></div>
       </div>
       <div class="row">
-        <div class="sw"><div class="box-solid"></div></div>
+        <div class="sw"><div class="box-solid fn-exe"></div></div>
         <div><span class="lbl">executive</span><span class="sub">realization · fills the aperture · nonjudgmental</span></div>
       </div>
       <div class="row">
-        <div class="sw"><div class="box-solid"></div></div>
+        <div class="sw"><div class="box-solid fn-jud"></div></div>
         <div><span class="lbl">judicial</span><span class="sub">selection + closure · ratifies one candidate</span></div>
       </div>
-      <div class="foot">downstream — artifact governance binds the accepted result (not a fourth branch)</div>
+      <hr class="fn-divider">
+      <div class="fn-down">downstream — not a fourth function</div>
+      <div class="row">
+        <div class="sw"><div class="box-solid"></div></div>
+        <div><span class="lbl">artifact governance</span><span class="sub">binds the accepted result</span></div>
+      </div>
     </div>
 
     <div class="hud glass">
