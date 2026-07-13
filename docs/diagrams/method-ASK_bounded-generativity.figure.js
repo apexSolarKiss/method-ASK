@@ -1,4 +1,5 @@
-/* method-ASK_bounded-generativity.figure.js — horizontal flow + Three Functions color (source-v3, ASK 2026-07-12)
+/* method-ASK_bounded-generativity.figure.js — horizontal flow + Three Functions color (source-v4, ASK 2026-07-12)
+   source-v4: even 36px spacing, taller frame (+72 split), aperture split labels, tightened grammar/governed boxes, compact chamber, 2-line source-of-intent copy.
    Consumes design-system-ASK Three Functions by reference (_dsa-tokens/three-functions.css):
    legislative = grammar/brief box · executive = the bounded-realization chamber (variance = negative cutouts)
    · judicial = selection ring + ratified node. Everything else neutral. */
