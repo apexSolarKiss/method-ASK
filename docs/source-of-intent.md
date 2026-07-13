@@ -197,6 +197,29 @@ This observation has not yet earned promotion to rule-level method doctrine. The
 
 The category mapping for handoff classification reuses the doctrine's category distinctions above. *Valid source-of-intent* maps to the first row; *current-stage refinement* maps to architectural-means; *future roadmap*, *advisor scratch*, and *premature implementation architecture* map directly. The classification is not a separate taxonomy — it is the doctrine's existing categories applied at the moment external content enters the system.
 
+## Handoff necessity // domain-authority review
+
+§Cross-surface handoff routing separates two acts: the **relay** confers operative intent on a forwarded artifact (the forwarding act IS the authorization), while routing a handoff into a recipient's `sources of intent/` confers only candidate normative availability. A corollary the method must state explicitly, because omitting it produces ceremony: **before creating a handoff, determine whether one is needed at all.**
+
+A domain authority supplies or validates judgment within a named domain. The role does not by itself confer project-level source-of-intent, architecture, execution, publication, or closure authority; those rights are named explicitly or they are absent. A domain authority's judgment may be advisory, delegated-binding within a named scope, or apex-level when the same person also owns the project intent — which one it is must be stated, not inferred from expertise (see [`docs/governance.md`](governance.md) §Operational governance, delegated discretion).
+
+When a decision is already settled and reaches the acting surface through an authorized relay, a new handoff adds nothing. A handoff is **unnecessary** when all of the following hold:
+
+- the human decision is explicit;
+- the proposal or target being decided is fixed and identifiable;
+- the authorized operator forwards the decision with its qualifications and scope;
+- no material meaning is lost between the human response and the executor.
+
+Then the route is direct:
+
+```text
+human judgment >> authorized relay >> execution
+```
+
+The relay is the instruction. **Do not send a settled, already-relayed decision back to its source thread to be repackaged into a memo.** Re-eliciting it to produce a transport artifact the relay already carried adds no judgment, condition, authorization, or scope; it spends the operator's ceremony budget and the reviewer's attention for redundant provenance. The executor's closure already preserves that provenance — proposal reviewed, decision as stated, qualifications applied, files changed, verification.
+
+A handoff **is** warranted when meaning genuinely needs asynchronous transport or durable structured capture: the review was asynchronous and the operator was not present; the answer spans many decisions or qualifications; ambiguity remains; the recipient lacks context the relay cannot safely compress; or an audit, legal, contractual, or confidentiality requirement demands a standalone record. A handoff preserves and transports meaning; it does not add authority, and neither does re-issuing one.
+
 ## Operator grounding-note extension (adjacent pressure)
 
 Source-of-intent has a persistence problem at every layer below it — projects forget across threads, tools forget across sessions. The method's response is the grounding note: durable context that carries externalized, single-sourced intent the system reads on entry.
