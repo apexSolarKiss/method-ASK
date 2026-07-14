@@ -30,6 +30,11 @@ The diagram conforms to [`apexSolarKiss/design-system-ASK`](https://github.com/a
 README.md                              this file
 method-ASK_topology.html               renders TREE_D02
 method-ASK_topology.source.js          TREE_D02 data
+method-ASK_bounded-generativity.html         renders the bounded-generativity system-model figure
+method-ASK_bounded-generativity.figure.js    figure builder (source-v4)
+method-ASK_bounded-generativity-dark.png     sole committed doctrine mirror (dark full-page); the
+                                             light-page + chrome-free diagram variants are on-demand
+                                             exporter outputs, not committed
 diagrams-static-H-engine.js            layout + pan/zoom engine
 _dsa-tokens/                           vendored Tier 1 + Tier 2 token mirror
 diagrams.css                           compiled Tier 1 + Tier 2 style
@@ -42,7 +47,7 @@ export-png.js                          3840×2880 PNG export
 - Drag to pan; scroll to zoom; HUD controls in the bottom-left; `⤢` to fit.
 - Theme follows the OS preference (`prefers-color-scheme`); the CSS supports explicit `data-theme="light"` or `data-theme="dark"` on `<html>` if a specific theme is needed.
 - The PNG export outputs a 3840×2880 image in the resolved theme.
-- **Theme by embedding surface** — adopting the [`design-system-ASK` convention](https://github.com/apexSolarKiss/design-system-ASK/blob/main/README.md#theme-by-embedding-surface) (pinned `7921b79`): this folder is repository documentation, so its embedded diagram **defaults to dark**. Both `-light` / `-dark` exports are retained; the dark render is the committed canonical here.
+- **Theme by embedding surface** — adopting the [`design-system-ASK` convention](https://github.com/apexSolarKiss/design-system-ASK/blob/main/README.md#theme-by-embedding-surface) (pinned `7921b79`): this folder is repository documentation, so its embedded diagram **defaults to dark**. Both `-light` / `-dark` remain exportable from the HTML; only the **dark full-page** render is committed (the bounded-generativity doctrine mirror `method-ASK_bounded-generativity-dark.png`) — the light-page and chrome-free diagram variants are on-demand exporter outputs, not committed. Most diagrams here are HTML-only; a doctrine diagram gets exactly one supplemental raster when the Markdown needs it.
 
 ## Lineage
 
