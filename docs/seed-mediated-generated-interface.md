@@ -12,7 +12,7 @@ seed (repo / packet / prompt)  +  delivery wrapper  +  user loading path
 
 ## Two orthogonal axes: carrier and runtime context
 
-The family is classified on two independent axes. Conflating them inverts the classification.
+The family is classified on two independent axes. Conflating them creates a category error: it mistakes what the runtime can access for what the user loaded.
 
 **Carrier — what the seed *is* (the primary loading object):**
 
