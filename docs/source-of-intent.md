@@ -105,7 +105,7 @@ The two copies serve different purposes at different aging rates. The origin scr
 
 The recipient project owns the absorption decision. It reads the handoff from inside its own active project surface — against its own repo truth, its own grounding note, and the broader stage of its own work — then classifies (per §Category distinctions) whether the material belongs as repo-local truth, grounding-note source-of-intent, roadmap pressure, advisor scratch, or premature implementation architecture. The origin surface may prepare and route context. It does not mutate the recipient's repo, grounding note, or project truth from outside. This implements the downstream absorption boundary at the file-routing level.
 
-The protocol applies generally — between any two ASK project surfaces, regardless of altitude. Downstream → downstream, methodology → downstream, downstream → methodology: the same discipline.
+When material crosses as candidate input requiring recipient classification, this protocol applies between ASK project surfaces regardless of their relative altitude. Downstream → downstream, methodology → downstream, downstream → methodology: the same discipline.
 
 ```text
 origin scratch records the sending
@@ -116,6 +116,14 @@ recipient active surface decides absorption
 The protocol is **distinct from relay**. Relay (per [*The Relay Is the Instruction*](https://atomicspacekitten.substack.com/p/the-relay-is-the-instruction)) confers operative intent on a specific forwarded artifact — the forwarding act IS the authorization. Cross-surface handoff routing confers candidate normative availability only — the copy into recipient `sources of intent/` does not authorize anything; it makes the material durably available for classification. Conflating the two reintroduces the failure mode [*The Handoff Is Not the Instruction*](https://atomicspacekitten.substack.com/p/the-handoff-is-not-the-instruction) names.
 
 Copy into recipient `sources of intent/` ≠ automatic absorption. Recipient ownership of absorption is non-negotiable.
+
+### Scope guard: handoff routing vs protocol conformance
+
+This section governs candidate material whose status must be classified by the recipient, and any change that must cross a recipient-owned absorption boundary. It does not make every cross-surface update a handoff.
+
+An ASK-authorized conformance change to a shared protocol owned upstream may propagate directly where the acting surface has write jurisdiction, through the consumer's normal workflow gates. Where that jurisdiction does not exist, the change routes to the owning surface.
+
+Protocol authority and write permission are separate axes: upstream ownership does not pierce a wall, while the existence of a surface boundary does not turn an already-authoritative protocol update into candidate source-of-intent.
 
 ## Handoff memo completeness
 
