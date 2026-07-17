@@ -35,6 +35,16 @@ The **Montesquieu separation** runs through all of it: rulemaking, execution, an
 
 **Domain authority** is a bounded instance of delegated discretion: a domain authority exercises weak-discretion judgment within a named subject area. Domain expertise alone confers no project-level rulemaking, execution, publication, or closure authority; the binding scope of a domain authority's judgment — advisory, delegated-binding within a named scope, or apex-level when the same person also owns the project intent — follows the governance arrangement that recognizes or delegates it, and is named rather than assumed.
 
+## Authorization recognition is downstream and defeasible
+
+Governance may encode recognized authority in identities, roles, credentials, signatures, delegated scopes, permissions, and approval paths. The execution layer may verify those carriers against the current governing policy. Absent a policy-defined conflict, revocation, scope breach, constraint, or escalation condition, an authorization result that passes the current governing policy is operative within its recognized scope: the executor does not acquire a free-standing normative veto over a decision the current policy recognizes as authorized.
+
+Operational recognition is evidence of a grant, not the source or final proof of the authority behind it. The apex or an authorized governance process may later determine that the identity, delegation, scope, policy, approval, or its application was invalid, stale, forged, revoked, mistaken, or misapplied. That adjudication governs the disputed case and activates correction and recourse.
+
+Technical access, authenticated identity, system-recognized authorization, and legitimately conferred authority are distinct layers. Governance may connect them through evidence and policy; no layer collapses into the next. Verification recognizes and applies an upstream grant; it neither originates nor legitimates it.
+
+A later policy revision changes the rule going forward and does not, by itself, retroactively invalidate acts that satisfied the policy then in force. Adjudication asks the different question: whether an earlier act actually satisfied the rule that governed it.
+
 ## Constitutive governance
 
 Governance does not only operationalize an existing source; it can help constitute a collective one. A democratic polity becomes capable of binding intent through a defined electorate, constitutional offices, procedure, scope, decision, closure + recourse; a corporation through its charter, ownership or membership, board authority, delegated officers, fiduciary duties + review. These arrangements do not make every decision legitimate merely by existing; they make authority, scope, closure + recourse attributable. Arithmetic supplies none of these — **a poll aggregates; a constituted collective decides.** In collective cases the relation is recursive: governance helps constitute the body capable of expressing binding intent, while that governance remains grounded in prior constitutional or normative commitments.

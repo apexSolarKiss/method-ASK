@@ -46,6 +46,7 @@ The requirement holds **independent of the consciousness question.** Whether or 
 The subject is one primitive stated in distinctions the discourse keeps eliding:
 
 - **power ≠ authority** — the capacity to act is not the right to act.
+- **authorization evidence ≠ conferred authority** — credentials, identity proofs, role grants, signatures, permissions, and approval records are operational carriers by which governance recognizes an upstream grant; they are not the source of that grant. Verification may recognize an authorization within scope under the current policy, but it cannot originate or legitimate the authority behind it.
 - **aggregation ≠ origination of intent** — a blend of participants, or a statistical composite of preferences, does not originate a governing intent. A poll aggregates; a constituted collective decides.
 - **intention alone ≠ legitimate authority** — private will does not self-authorize; it acts through attributable authority, closure, and recourse.
 - **the interactional dyad ≠ the governance stack that contains it** — the field mistakes the two-minds-across-a-gap picture for the whole structure.
