@@ -37,7 +37,7 @@ The **Montesquieu separation** runs through all of it: rulemaking, execution, an
 
 ## Authorization recognition is downstream and defeasible
 
-Governance may encode recognized authority in identities, roles, credentials, signatures, delegated scopes, permissions, and approval paths. The execution layer may verify those carriers against the current governing policy. Absent a policy-defined conflict, revocation, scope breach, constraint, or escalation condition, an authorization result that passes the current governing policy is operative within its recognized scope: the executor does not acquire a free-standing normative veto over the authorized decision.
+Governance may encode recognized authority in identities, roles, credentials, signatures, delegated scopes, permissions, and approval paths. The execution layer may verify those carriers against the current governing policy. Absent a policy-defined conflict, revocation, scope breach, constraint, or escalation condition, an authorization result that passes the current governing policy is operative within its recognized scope: the executor does not acquire a free-standing normative veto over a decision the current policy recognizes as authorized.
 
 Operational recognition is evidence of a grant, not the source or final proof of the authority behind it. The apex or an authorized governance process may later determine that the identity, delegation, scope, policy, approval, or its application was invalid, stale, forged, revoked, mistaken, or misapplied. That adjudication governs the disputed case and activates correction and recourse.
 
