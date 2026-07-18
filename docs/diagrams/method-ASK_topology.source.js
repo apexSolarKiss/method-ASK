@@ -2,7 +2,7 @@
    Source data for the method-ASK topology / relative-externality map diagram.
    Renderable by diagrams-engine.js.
 
-   D02 // method-ASK topology / relative-externality map // source-v3 // 2026-06-23
+   D02 // method-ASK topology / relative-externality map // source-v4 // 2026-07-18
    Single-tree extraction of TREE_D02 from the v9 operator-side ecology-ASK
    package. This repo carries TREE_D02 only; it does not carry TREE_D01
    (control-surface architecture tree) or TREE_D03 (ecology-ASK overall),
@@ -61,18 +61,19 @@ window.TREE_D02 = {
       ],
     },
     {
-      kind: 'section', label: 'operator-side method context',
-      tag: 'method-ASK-EXTERNAL/',
+      kind: 'section', label: 'operator-side method context · shared ecology external surface',
+      tag: 'ecology-ASK-EXTERNAL/ · method-ASK slice',
       children: [
-        { label: 'sources of intent/', children: [
-          { label: 'method-ASK_grounding-note.md', note: 'canonical external context mirror' },
+        { label: 'method-ASK_grounding-note.md', note: 'root canonical' },
+        { label: 'sources of intent/', note: 'shared ecology intake', children: [
+          { label: 'routed handoffs · -TBI = received, awaiting ingestion' },
         ]},
-        { label: 'scratch/', children: [
+        { label: 'scratch/', note: 'shared ecology operator scratch', children: [
           { label: 'topology drafts' },
           { label: 'article planning' },
           { label: 'critique / handoff memos' },
         ]},
-        { label: 'no articles surface here', note: 'article line lives in control-surface-EXTERNAL/articles/' },
+        { label: 'articles/', note: 'shared ecology publication corpus' },
       ],
     },
     {
@@ -133,7 +134,7 @@ window.TREE_D02 = {
     {
       kind: 'section', label: 'reflective layer',
       children: [
-        { label: 'article drafts', note: 'live in control-surface-EXTERNAL/articles/' },
+        { label: 'article drafts', note: 'live in the shared ecology articles/ corpus' },
         { label: 'published Substack', note: 'canonical source for published essays' },
         { label: 'article line points to method', note: 'does not override repo truth' },
       ],
