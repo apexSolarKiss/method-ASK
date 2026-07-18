@@ -105,4 +105,4 @@ These are **ASK-system worked examples and antecedent studies, not dependencies*
 - Method-reflection companion: [*The Method Learns from Exteriority*](https://atomicspacekitten.substack.com/p/the-method-learns-from-exteriority) (method-series) — the leave-and-return that surfaced the intent ↔ discretion relation this primitive formalizes.
 - Discretion grounding: Dworkin, *Taking Rights Seriously* (weak vs strong discretion); the Montesquieu separation-of-powers spine.
 - Lineage studies: [`isometric-cubes-ASK`](https://github.com/apexSolarKiss/isometric-cubes-ASK), [`mazeASK`](https://github.com/apexSolarKiss/mazeASK).
-- Inbound routing record: `method-ASK-EXTERNAL/sources of intent/2026-06-06_asset-pipeline-ASK_to_method-ASK_bounded-generativity-primitive.md` (ingested 2026-06-06).
+- Inbound routing record: `ecology-ASK-EXTERNAL/sources of intent/2026-06-06_asset-pipeline-ASK_to_method-ASK_bounded-generativity-primitive.md` (ingested 2026-06-06).

@@ -87,5 +87,5 @@ This doc lands the **method primitive, not an implementation protocol.** It name
 
 - Public articulation: [*The Missing Layer Is Not Generation*](https://atomicspacekitten.substack.com/p/the-missing-layer-is-not-generation) (asset-pipeline-ASK domain, 2026-06-13) — the outward translation; companion to [*Creative Discretion Is Not Creative Intent*](https://atomicspacekitten.substack.com/p/creative-discretion-is-not-creative). The article translates the finding outward; the repo/finding chain (AP milestone-14) is the source truth.
 - Sibling primitive: [`docs/bounded-generativity.md`](bounded-generativity.md) — the **process** axis this is positioned against.
-- Inbound routing record: `method-ASK-EXTERNAL/sources of intent/2026-06-13_asset-pipeline-ASK_to_method-ASK_portable-definition-layer-candidate-primitive.md` (ingested 2026-06-13).
-- Interpretive second-instance confirmation: `method-ASK-EXTERNAL/sources of intent/2026-06-13_urban-observatory_to_method-ASK_portable-definition-layer-interpretive-instance-feedback.md` (ingested 2026-06-13).
+- Inbound routing record: `ecology-ASK-EXTERNAL/sources of intent/2026-06-13_asset-pipeline-ASK_to_method-ASK_portable-definition-layer-candidate-primitive.md` (ingested 2026-06-13).
+- Interpretive second-instance confirmation: `ecology-ASK-EXTERNAL/sources of intent/2026-06-13_urban-observatory_to_method-ASK_portable-definition-layer-interpretive-instance-feedback.md` (ingested 2026-06-13).

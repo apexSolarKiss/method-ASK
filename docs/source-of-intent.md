@@ -117,6 +117,14 @@ The protocol is **distinct from relay**. Relay (per [*The Relay Is the Instructi
 
 Copy into recipient `sources of intent/` ≠ automatic absorption. Recipient ownership of absorption is non-negotiable.
 
+### Multi-repo operating surface: shared intake
+
+A single operating surface may govern more than one repo. When it does, its recipient `sources of intent/` may be **one shared intake** for all the repos it operates, rather than one folder per repo. Receipt into that shared intake makes the material durably available for classification by the operating surface; it does **not** merge the artifact authority of the repos behind the surface.
+
+The routed memo names its candidate owner surface or surfaces where known. The operating surface classifies the eventual owner or owners after ingestion. Each resulting owner acts through its own governing source of truth and workflow: repo actions follow the owning repo's workflow; operator-canonical actions follow that canonical's write, version, and snapshot discipline. Physical co-location in one intake grants no cross-repo authority, and a filename addressee (`_to_<surface>_`) records intent, not storage or ownership.
+
+This refines the carrier only. Recipient-owned absorption (§Inbound handoff TBI marker), the ingestion ≠ absorption disequality, and the closure-record requirement are unchanged. The default remains one `sources of intent/` per project surface; the shared intake is the declared multi-repo-operating-surface case, not a new general default.
+
 ### Scope guard: handoff routing vs protocol conformance
 
 This section governs candidate material whose status must be classified by the recipient, and any change that must cross a recipient-owned absorption boundary. It does not make every cross-surface update a handoff.
