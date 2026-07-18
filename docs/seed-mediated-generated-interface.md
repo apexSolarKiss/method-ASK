@@ -77,7 +77,7 @@ The seed must reach the runtime as the **governing entry contract**, not merely 
 
 A **fork-at-load** is the derivative grammar produced by that substitution and then run as though it were the authored interface. It may inherit names, read order, visible shape, and causal provenance while losing the aperture, authority boundaries, version discipline, selection, closure, audit, recourse, or the substrate mechanism that made those forms operative. **Seed provenance is not seed conformance.**
 
-Prevention has a low ceiling in an opaque runtime: a seed can make an accidental mixed load visible, but it cannot compel a user or runtime to preserve it. **Detection is therefore behavioral, not morphological** — test whether the seed's declared governance properties operate in the delivered artifacts; never infer conformance from resemblance, provenance, or a marker the artifact carries about itself. This is the loading-boundary case of *a generated thread cannot self-authorize*: a runtime that rewrites its own grammar has authorized the rewrite from inside.
+Prevention has a low ceiling in an opaque runtime: a seed can make an accidental mixed load visible, but it cannot compel a user or runtime to preserve it. **Detection is therefore behavioral, not morphological** — test whether the seed's declared governance properties operate in the delivered artifacts; never infer conformance from resemblance, provenance, or a marker the artifact carries about itself. This is the loading-boundary case of *a generated thread cannot self-authorize*: a runtime-produced rewrite does not authorize the derivative as the authored interface.
 
 ## Operator distance — the encoding-budget dial
 
@@ -156,7 +156,7 @@ This doc lands the **broad genus pattern**. The following are surface-local real
 - **whether stakes / blast-radius is a third control dial** (beyond aperture × operator distance) — a **held analytical thread** (the external-review corner co-maxes operator distance + stakes while running a *tight* aperture); connected here, **not resolved in this pass**;
 - consumer-owned renderer / sealing tooling;
 - a **settled cross-carrier behavioral conformance test** — the principle (test whether the governance properties operate) is doctrine; the reusable checklist or score is held pending a second case;
-- **independently verified seed attestation**, and whether it can support a larger evidence stack — a self-carried marker proves nothing on its own and is not added here;
+- **independently verified seed attestation**, and whether it can support a larger evidence stack — a self-carried marker does not independently establish conformance and is not added here;
 - a generalized **derivative-label taxonomy**, and whether repeated cases warrant a standalone seed-integrity doctrine rather than this section;
 - **delivered launch form** (e.g. "the user clones the repo and uses it") — a plausible **B2B** form for AP + UO, but **stated intent, not a landed instance**; it is **not** the universal launch form. Consumer-facing delivery, hosted-runtime, and monetization reasoning are **out of scope for this doctrine** and stay live on their originating surface, not method doctrine.
 
