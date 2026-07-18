@@ -71,6 +71,14 @@ The first move of a generated interface is not the model's first reply. It is th
 
 **Setup UX is method-bearing, not packaging trivia.** File names, open-first instructions, message wrappers, folder shape, the named failure mode, the fallback path, and the expected user actions are part of the interface. They are designed, not decorated.
 
+## Governing-role integrity at load
+
+The seed must reach the runtime as the **governing entry contract**, not merely as material the runtime can see. The grammar grants the aperture only if the grammar is still governing when the interaction begins. Wrapping, transport, or a later import performed under the seed's own rules does not break that condition; the failure is the runtime reconciling, retargeting, summarizing, or rewriting the seed **before its contract runs**. Source material governed by the authored grammar is ordinary; source material participating in the authorship of a *replacement* grammar, before the seed governs, is the failure.
+
+A **fork-at-load** is the derivative grammar produced by that substitution and then run as though it were the authored interface. It may inherit names, read order, visible shape, and causal provenance while losing the aperture, authority boundaries, version discipline, selection, closure, audit, recourse, or the substrate mechanism that made those forms operative. **Seed provenance is not seed conformance.**
+
+Prevention has a low ceiling in an opaque runtime: a seed can make an accidental mixed load visible, but it cannot compel a user or runtime to preserve it. **Detection is therefore behavioral, not morphological** — test whether the seed's declared governance properties operate in the delivered artifacts; never infer conformance from resemblance, provenance, or a marker the artifact carries about itself. This is the loading-boundary case of *a generated thread cannot self-authorize*: a runtime that rewrites its own grammar has authorized the rewrite from inside.
+
 ## Operator distance — the encoding-budget dial
 
 How much the seed must encode is a function of **operator distance**: how far the consumer sits from an operator who already holds the protocol.
@@ -113,9 +121,11 @@ repo-mediated // delivered    observed 0x   (AP + UO launch form — intended, f
 
 The earlier repo-mediated label named one carrier species, while the observed evidence establishes the broader seed-mediated genus.
 
+**Negative pressure case — fork-at-load (PCS setup prompt, 2026-07-09).** The authored seed was loaded into a session already holding another project's exports and the runtime was asked to reconcile them; it produced a retargeted scaffold that was then run as the system. The derivative inherited the bootstrap/index morphology, read order, and causal provenance, and lost version discipline, grant boundaries, the no-self-authorization rule, and the substrate mechanism the copied filenames depended on. **Not a conforming instance** — it is recorded here as the first observed loading-boundary failure and deliberately kept outside the positive counts above, which are unchanged.
+
 ## Invariants
 
-- **Behavior travels with the seed.** The seed carries the process; do not rely on a standing reviewer/advisor prompt to infer it.
+- **Behavior travels with the governing seed.** The seed carries the process only if it survives the loading boundary in its governing role — visible shape or causal provenance alone does not establish conformance. Do not rely on a standing reviewer/advisor prompt to infer the process.
 - **The interface begins at the loading path.** Setup UX is method-bearing.
 - **Operator distance sets the encoding budget.** The farther the consumer from the operator, the more the seed must carry on its own.
 - **The first action must be obvious** — and the human setup actions **minimized** and **named in the artifact itself**.
@@ -145,6 +155,9 @@ This doc lands the **broad genus pattern**. The following are surface-local real
 - the **external-review packet protocol as settled doctrine** — held pending an actual outside-reviewer run;
 - **whether stakes / blast-radius is a third control dial** (beyond aperture × operator distance) — a **held analytical thread** (the external-review corner co-maxes operator distance + stakes while running a *tight* aperture); connected here, **not resolved in this pass**;
 - consumer-owned renderer / sealing tooling;
+- a **settled cross-carrier behavioral conformance test** — the principle (test whether the governance properties operate) is doctrine; the reusable checklist or score is held pending a second case;
+- **independently verified seed attestation**, and whether it can support a larger evidence stack — a self-carried marker proves nothing on its own and is not added here;
+- a generalized **derivative-label taxonomy**, and whether repeated cases warrant a standalone seed-integrity doctrine rather than this section;
 - **delivered launch form** (e.g. "the user clones the repo and uses it") — a plausible **B2B** form for AP + UO, but **stated intent, not a landed instance**; it is **not** the universal launch form. Consumer-facing delivery, hosted-runtime, and monetization reasoning are **out of scope for this doctrine** and stay live on their originating surface, not method doctrine.
 
 The broad genus thesis is doctrine; the review-packet subtype, the stakes dial, and the delivered launch form stay held or out until their own gates land.
