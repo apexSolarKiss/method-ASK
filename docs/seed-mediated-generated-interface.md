@@ -57,7 +57,7 @@ A grammar cannot govern a realization it never arrives as. **Bounded generativit
 
 A prominent application of seed-mediated generated interface is **governed elicitation**: a domain expert engages a guided conversation rather than operating the repository, schema, taxonomy, or workflow that will receive the result.
 
-Elicitation names the interaction's **purpose**, not a carrier species or runtime-context class. A governed elicitation may be prompt-mediated, packet-mediated, or repo-mediated, and may run in a self-contained opaque, connected-authorized, or author-controlled runtime.
+Elicitation names the interaction's **purpose**, not a carrier species or runtime-context class. A governed elicitation may be prompt-mediated, packet-mediated, or repo-mediated, and may run in any defined runtime context: **self-contained opaque**, **connected authorized**, or **author-controlled null**.
 
 The seed carries the review grammar, source material, behavioral instructions, loading path, and return contract. The grammar grants the aperture. The generated interaction realizes questions, reformulations, corrections, interpretations, and judgment inside it.
 
