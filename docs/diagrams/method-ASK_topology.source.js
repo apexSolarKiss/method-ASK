@@ -2,7 +2,7 @@
    Source data for the method-ASK topology / relative-externality map diagram.
    Renderable by diagrams-engine.js.
 
-   D02 // method-ASK topology / relative-externality map // source-v4 // 2026-07-18
+   D02 // method-ASK topology / relative-externality map // source-v5 // 2026-07-19
    Single-tree extraction of TREE_D02 from the v9 operator-side ecology-ASK
    package. This repo carries TREE_D02 only; it does not carry TREE_D01
    (control-surface architecture tree) or TREE_D03 (ecology-ASK overall),
@@ -103,7 +103,7 @@ window.TREE_D02 = {
     {
       kind: 'section', label: 'downstream execution-protocol layer',
       children: [
-        { label: 'control-surface', note: 'execution-protocol meta repo · downstream of method-ASK', children: [
+        { label: 'control-surface', note: 'execution-protocol repo · downstream of method-ASK', children: [
           { label: 'AGENTS rules' },
           { label: 'templates' },
           { label: 'prompts', note: 'nudge ladder · critique cycle · instantiation' },

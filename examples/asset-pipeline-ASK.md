@@ -18,7 +18,7 @@ The following method elements emerged through asset-pipeline-ASK work and were a
 - **Two review windows** — the per-PR cadence with pre-commit and pre-merge advisor reviews, applied to projects with hardened backbone and active architectural uncertainty.
 - **Plateau detection** — the self-diagnostic signal that surfaces when correct moves chained too quickly become their own drift vector. Stop, preserve what landed, re-enter through a fresh-context pass only when new intent or new pressure is available.
 
-## What the meta repo absorbed
+## What the protocol repo absorbed
 
 `control-surface` absorbed the patterns that generalize beyond the asset-pipeline domain:
 
