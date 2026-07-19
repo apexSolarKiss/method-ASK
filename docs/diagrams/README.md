@@ -35,13 +35,31 @@ method-ASK_bounded-generativity.figure.js    figure builder (source-v4)
 method-ASK_bounded-generativity-dark.png     sole committed doctrine mirror (dark full-page); the
                                              light-page + chrome-free diagram variants are on-demand
                                              exporter outputs, not committed
+method-ASK_seed-mediated-generated-interface.html         renders the SMGI DOCTRINE figure
+method-ASK_seed-mediated-generated-interface.figure.js    figure builder (source-v1)
+method-ASK_seed-mediated-generated-interface-dark.png     committed doctrine mirror (dark full-page)
+method-ASK_seed-mediated-generated-interface-ontology.html        renders the SMGI ONTOLOGY figure
+method-ASK_seed-mediated-generated-interface-ontology.figure.js   figure builder (source-v1)
+method-ASK_seed-mediated-generated-interface-ontology-dark.png    committed doctrine mirror (dark full-page)
 diagrams-fit.js                        DS-owned fit support; loads BEFORE the engine
-                                       (and before the figure builder, which also uses it)
+                                       AND before every figure builder — each builder
+                                       throws a named error if it is missing
 diagrams-static-H-engine.js            layout + pan/zoom engine
 _dsa-tokens/                           vendored Tier 1 + Tier 2 token mirror
 diagrams.css                           compiled Tier 1 + Tier 2 style
 export-png.js                          3840×2880 PNG export
 ```
+
+### The two SMGI figures
+
+They are a pair with different jobs, and neither substitutes for the other:
+
+- **doctrine figure** (`…_seed-mediated-generated-interface`) — the **instantiation path** and the loading-boundary seam. Authored seed >> loading boundary >> grammar grants the aperture >> runtime >> generated interaction >> return, or, at the boundary, fork-at-load. Consumes the Three Functions primitive for one licensed node: the grammar box, where the grammar is a concrete actor in the runtime path.
+- **ontology figure** (`…_seed-mediated-generated-interface-ontology`) — the **category boundaries**. Four orthogonal layers (mechanism · application · authored control · conformance) around one membership node, joined by typed relations. **Fully neutral — no function colour**, because it classifies concepts rather than diagramming the functions; it does not load `three-functions.css`.
+
+Both are `source-v1 // render-v1`.
+
+**Responsive behaviour.** `1440×900` is the reference read-all composition (doctrine `0.750`, ontology `0.724` default fit). Shorter and narrower windows fit-all to a navigable **overview** — macrostructure and the membership gate stay legible, and zoom/pan expose the authored text. That is the interaction model these shells ship, not a defect: fit-all at every aspect ratio would require deleting doctrine content.
 
 ## How to use
 

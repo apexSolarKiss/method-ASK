@@ -102,8 +102,12 @@
   edges.append(line(`M ${BX} ${SPINE} C ${BX+52} ${SPINE}, ${BX+52} ${YF}, ${COL[0]-16} ${YF}`, 'edge held'));
   edges.append(headR(COL[0] - 12, YF));
 
-  nodes.append(tag(BX + 74, YM - 26, M.conformTag, 'start'));
-  nodes.append(el('text', { x: BX + 74, y: YF + 34, class:'flow-tag node-label-held', 'text-anchor':'start' }, [M.forkTag]));
+  /* Branch tags are RIGHT-anchored to end before the first node box of their branch.
+     Left-anchored at BX+74 they ran 90px (conforming) and 38px (fork) into those boxes —
+     visible in the exported raster, invisible to bbox checks, since a text node
+     overlapping a rect is not an overflow. */
+  nodes.append(tag(COL[0] - 16, YM - 26, M.conformTag, 'end'));
+  nodes.append(el('text', { x: COL[0] - 16, y: YF + 34, class:'flow-tag node-label-held', 'text-anchor':'end' }, [M.forkTag]));
 
   /* ===== conforming branch — NEUTRAL, except the licensed legislative grammar box ===== */
   // 1 · grammar (LEGISLATIVE — doctrine: the grammar grants the aperture)
@@ -134,8 +138,12 @@
   /* authority + governance sit OUTSIDE the generated thread — dashed bracket above */
   const BRK_Y = YM - 74;
   edges.append(line(`M ${COL[1]} ${BRK_Y+14} L ${COL[1]} ${BRK_Y} L ${COL[3]+NW} ${BRK_Y} L ${COL[3]+NW} ${BRK_Y+14}`, 'edge held'));
-  nodes.append(tag((COL[1] + COL[3] + NW) / 2, BRK_Y - 20, M.outside.tag));
-  nodes.append(note((COL[1] + COL[3] + NW) / 2, BRK_Y - 4, M.outside.claim, 'middle'));
+  /* Both labels sit CLEAR ABOVE the bracket rule. .node-note is dominant-baseline:middle,
+     so a note at BRK_Y-4 centres 4px above the rule and its body crosses it — which
+     rendered as a strikethrough through "a generated thread cannot self-authorize".
+     Caught in the exported raster, not by any bbox check. */
+  nodes.append(tag((COL[1] + COL[3] + NW) / 2, BRK_Y - 36, M.outside.tag));
+  nodes.append(note((COL[1] + COL[3] + NW) / 2, BRK_Y - 17, M.outside.claim, 'middle'));
 
   /* governed-elicitation overlay — ONE application, not the universal return shape */
   const EY = YM + 74;
