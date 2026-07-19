@@ -97,6 +97,9 @@
   /* only DOWN arrowheads are used: the preserved/violated branch is the one place in this
      figure where sequence is the content. */
   const headD = (x, y) => el('path', { class:'edge-arrowhead', d:`M ${x-AH/1.6} ${y-10} L ${x+AH/1.6} ${y-10} L ${x} ${y} Z` });
+  /* one RIGHT head, used only for the fork's exit — without a terminal it reads as an
+     unfinished connector rather than as leaving the population. */
+  const headR = (x, y) => el('path', { class:'edge-arrowhead', d:`M ${x-9} ${y-AH/1.6} L ${x-9} ${y+AH/1.6} L ${x} ${y} Z` });
   const box  = (x, y, w, h, cls='node-box') => el('rect', { x, y, width:w, height:h, rx:4, ry:4, class:cls });
   const line = (d, cls='edge') => el('path', { class:cls, fill:'none', d });
   const lbl  = (x, y, t, cls='node-label', a='start') => el('text', { x, y, class:cls, 'text-anchor':a }, [t]);
@@ -194,10 +197,11 @@
     nodes.append(note(r.x + 40, r.y + 73, M.conf.gate.n));
 
     const PY = r.y + 104;
-    nodes.append(box(r.x + 22, PY, 390, 70));
+    nodes.append(box(r.x + 22, PY, 390, 84));
     nodes.append(tag(r.x + 40, PY + 16, M.conf.ok.t));
     nodes.append(lbl(r.x + 40, PY + 38, M.conf.ok.l));
     nodes.append(note(r.x + 40, PY + 56, M.conf.ok.n1));
+    nodes.append(note(r.x + 40, PY + 72, M.conf.ok.n2));
     edges.append(line(`M ${r.x + 217} ${r.y + 82} L ${r.x + 217} ${PY - 10}`));
     edges.append(headD(r.x + 217, PY - 2));
 
@@ -209,12 +213,13 @@
     edges.append(line(`M ${r.x + 635} ${r.y + 82} L ${r.x + 635} ${VY - 10}`, 'edge held'));
     edges.append(headD(r.x + 635, VY - 2));
     /* exit — leaves the population rather than rejoining the centre */
-    edges.append(line(`M ${r.x + 800} ${VY + 35} L ${r.x + 826} ${VY + 35}`, 'edge held'));
+    edges.append(line(`M ${r.x + 800} ${VY + 35} L ${r.x + 824} ${VY + 35}`, 'edge held'));
+    edges.append(headR(r.x + 832, VY + 35));
     nodes.append(note(r.x + 470, VY + 88, M.conf.bad.n2 + ' ' + M.conf.bad.n3,
                       'start', 'node-note legacy'));
 
     M.conf.sup.forEach((t, i) =>
-      nodes.append(note(r.x + 22, PY + 92 + i * 15, t, 'start', 'node-note legacy')));
+      nodes.append(note(r.x + 22, PY + 106 + i * 15, t, 'start', 'node-note legacy')));
   }
 
   /* ===== held fringe + category-boundary footer — outside the four settled regions ===== */

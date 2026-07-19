@@ -9,19 +9,16 @@
 <!-- design-system-ASK foundations — local mirror (Tier 1 + Tier 2), no CDN. See _dsa-tokens/MANIFEST.md -->
 <link rel="stylesheet" href="./_dsa-tokens/colors_and_type.css">
 <link rel="stylesheet" href="diagrams.css">
-<!-- ASK Three Functions — opt-in semantic function-color primitive, vendored from design-system-ASK. See _dsa-tokens/MANIFEST.md -->
-<link rel="stylesheet" href="./_dsa-tokens/three-functions.css">
 <style>
-  /* ===== Three Functions consumption (source-v1) — ONE licensed node only.
-     The grammar box carries legislative because the doctrine states the grammar grants
-     the aperture. Nothing else is coloured: fork-at-load is a conformance condition, not
-     a fourth function, and is rendered as broken continuity (.held), never as alarm chrome. ===== */
-  .node-box.fn-leg { stroke: var(--function-legislative); fill: color-mix(in srgb, var(--function-legislative) 30%, transparent); }
-  .legend .box-solid.fn-leg { background: color-mix(in srgb, var(--function-legislative) 30%, transparent); border-color: var(--function-legislative); }
-  /* fork-branch label tone — matches .node-label.held without needing a second class on every text node */
-  .flow-tag.node-label-held { fill: var(--diagram-muted); }
-  .legend .fn-divider { border: none; border-top: 1px dotted var(--diagram-line); margin: 12px 0 9px; }
-  .legend .fn-down { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--diagram-muted); margin-bottom: 9px; }
+  /* ===== FULLY NEUTRAL — no function colour =====
+     This figure classifies concepts; it does not diagram the bounded-generativity
+     functions. The grammar appears here only inside the governed-elicitation
+     application, not as a legislative actor in a runtime path, so nothing carries
+     legislative / executive / judicial colour and the Three Functions primitive is
+     deliberately NOT vendored into this shell. (Figure 1 does consume it, where the
+     grammar IS a concrete actor in the path.) Held material is dashed + muted. ===== */
+  .legend .legend-divider { border: none; border-top: 1px dotted var(--diagram-line); margin: 12px 0 9px; }
+  .legend .legend-foot { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--diagram-muted); margin-bottom: 9px; }
 </style>
 </head>
 <body>
@@ -51,29 +48,17 @@
     <div class="corner-tick br"></div>
 
     <div class="legend glass">
-      <div class="h"><span>Four layers</span><span class="fig">orthogonal</span></div>
+      <div class="h"><span>Reading the map</span><span class="fig">four layers</span></div>
       <div class="row">
         <div class="sw"><div class="box-solid"></div></div>
-        <div><span class="lbl">mechanism</span><span class="sub">classifies · carrier × runtime context</span></div>
-      </div>
-      <div class="row">
-        <div class="sw"><div class="box-solid"></div></div>
-        <div><span class="lbl">application</span><span class="sub">names purpose · governed elicitation</span></div>
-      </div>
-      <div class="row">
-        <div class="sw"><div class="box-solid"></div></div>
-        <div><span class="lbl">authored control</span><span class="sub">meters · aperture × operator distance</span></div>
-      </div>
-      <div class="row">
-        <div class="sw"><div class="box-solid"></div></div>
-        <div><span class="lbl">conformance</span><span class="sub">admits · excludes</span></div>
+        <div><span class="lbl">settled</span><span class="sub">classification · purpose · control · conformance</span></div>
       </div>
       <div class="row">
         <div class="sw"><div class="box-dashed"></div></div>
         <div><span class="lbl">held</span><span class="sub">outside the settled ontology</span></div>
       </div>
-      <hr class="fn-divider">
-      <div class="fn-down">membership is decided before classification — not beside it</div>
+      <hr class="legend-divider">
+      <div class="legend-foot">membership is decided before classification — not beside it</div>
     </div>
 
     <div class="hud glass">
@@ -85,8 +70,7 @@
 
     <div class="caption glass">
       <b>category map >> mechanism, purpose, control, and membership are not peer dimensions</b><br>
-      illustrative · method-ASK/docs/seed-mediated-generated-interface.md is source truth.<br>
-      the axes are inventories, not a populated matrix — no claim is made that every carrier × runtime cell has been observed.
+      illustrative · docs/seed-mediated-generated-interface.md is source truth · the axes are inventories, not a populated matrix.
     </div>
   </div>
 </div>
