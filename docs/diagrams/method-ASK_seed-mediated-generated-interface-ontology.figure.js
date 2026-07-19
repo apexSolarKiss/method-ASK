@@ -74,7 +74,7 @@
                     'control dial ≠ classification axis',
                     'conformance precondition ≠ axis or dial',
                     'fork-at-load ≠ SMGI species',
-                    'self-carried marker ≠ independent proof'] },
+                    'self-carried marker ≠ independent conformance proof'] },
   };
 
   const svgNS = 'http://www.w3.org/2000/svg';
@@ -94,12 +94,12 @@
   svg.append(edges, nodes);
 
   const AH = 8;
-  /* only DOWN arrowheads are used: the preserved/violated branch is the one place in this
-     figure where sequence is the content. */
-  const headD = (x, y) => el('path', { class:'edge-arrowhead', d:`M ${x-AH/1.6} ${y-10} L ${x+AH/1.6} ${y-10} L ${x} ${y} Z` });
-  /* one RIGHT head, used only for the fork's exit — without a terminal it reads as an
-     unfinished connector rather than as leaving the population. */
-  const headR = (x, y) => el('path', { class:'edge-arrowhead', d:`M ${x-9} ${y-AH/1.6} L ${x-9} ${y+AH/1.6} L ${x} ${y} Z` });
+  /* Arrowheads appear only inside CONFORMANCE — the one place in this figure where
+     sequence is the content. Two DOWN heads for the branch, and one RIGHT head for the
+     fork's exit. Heads on held paths carry the held class so the triangle is muted like
+     the line it terminates; the shared CSS fills an unqualified arrowhead strong. */
+  const headD = (x, y, cls='edge-arrowhead') => el('path', { class: cls, d:`M ${x-AH/1.6} ${y-10} L ${x+AH/1.6} ${y-10} L ${x} ${y} Z` });
+  const headR = (x, y, cls='edge-arrowhead') => el('path', { class: cls, d:`M ${x-9} ${y-AH/1.6} L ${x-9} ${y+AH/1.6} L ${x} ${y} Z` });
   const box  = (x, y, w, h, cls='node-box') => el('rect', { x, y, width:w, height:h, rx:4, ry:4, class:cls });
   const line = (d, cls='edge') => el('path', { class:cls, fill:'none', d });
   const lbl  = (x, y, t, cls='node-label', a='start') => el('text', { x, y, class:cls, 'text-anchor':a }, [t]);
@@ -211,10 +211,10 @@
     nodes.append(lbl(r.x + 488, VY + 38, M.conf.bad.l, 'node-label held'));
     nodes.append(note(r.x + 488, VY + 56, M.conf.bad.n1));
     edges.append(line(`M ${r.x + 635} ${r.y + 82} L ${r.x + 635} ${VY - 10}`, 'edge held'));
-    edges.append(headD(r.x + 635, VY - 2));
+    edges.append(headD(r.x + 635, VY - 2, 'edge-arrowhead held'));
     /* exit — leaves the population rather than rejoining the centre */
     edges.append(line(`M ${r.x + 800} ${VY + 35} L ${r.x + 824} ${VY + 35}`, 'edge held'));
-    edges.append(headR(r.x + 832, VY + 35));
+    edges.append(headR(r.x + 832, VY + 35, 'edge-arrowhead held'));
     nodes.append(note(r.x + 470, VY + 88, M.conf.bad.n2 + ' ' + M.conf.bad.n3,
                       'start', 'node-note legacy'));
 

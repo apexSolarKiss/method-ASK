@@ -100,7 +100,7 @@
   edges.append(line(`M ${BX} ${SPINE} C ${BX+52} ${SPINE}, ${BX+52} ${YM}, ${COL[0]-16} ${YM}`));
   edges.append(headR(COL[0] - 12, YM));
   edges.append(line(`M ${BX} ${SPINE} C ${BX+52} ${SPINE}, ${BX+52} ${YF}, ${COL[0]-16} ${YF}`, 'edge held'));
-  edges.append(headR(COL[0] - 12, YF));
+  edges.append(headR(COL[0] - 12, YF, 'edge-arrowhead held'));
 
   /* Branch tags are RIGHT-anchored to end before the first node box of their branch.
      Left-anchored at BX+74 they ran 90px (conforming) and 38px (fork) into those boxes —
@@ -175,7 +175,7 @@
 
   for (let i = 0; i < 3; i++) {
     edges.append(line(`M ${COL[i]+NW} ${YF} L ${COL[i+1]-16} ${YF}`, 'edge held'));
-    edges.append(headR(COL[i+1] - 12, YF));
+    edges.append(headR(COL[i+1] - 12, YF, 'edge-arrowhead held'));
   }
 
   /* the two load-bearing non-identities, on the branch they govern */

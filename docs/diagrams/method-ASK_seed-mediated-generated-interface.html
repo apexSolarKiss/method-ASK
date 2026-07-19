@@ -22,6 +22,11 @@
   .flow-tag.node-label-held { fill: var(--diagram-muted); }
   .legend .fn-divider { border: none; border-top: 1px dotted var(--diagram-line); margin: 12px 0 9px; }
   .legend .fn-down { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--diagram-muted); margin-bottom: 9px; }
+  /* Held arrowheads. The shared diagrams.css fills every .edge-arrowhead with the strong
+     diagram line and carries no held variant, so a head on a held path rendered strong
+     while its line was muted. Local rule keeps the visual grammar internally consistent;
+     changing the DS-owned stylesheet is out of scope for a figures PR. */
+  .edge-arrowhead.held { fill: var(--diagram-line-soft); }
 </style>
 </head>
 <body>
