@@ -202,6 +202,13 @@
   const wrap = document.getElementById('canvasWrap'), stage = document.getElementById('stage'), pct = document.getElementById('zoomPct');
   if (wrap && stage) {
     let tx=0, ty=0, sc=1;
+    /* Interaction floor. Ordinary zoom-out floor is this figure's historical 0.2 base, but
+       the DS panel-aware fit can land BELOW it on a constrained viewport; a fixed floor above
+       the fitted scale would make zoom-out ENLARGE the figure (direction reversal). So the
+       live floor is the lower of the base and the most recent Fit. fit() sets it from the
+       result it applies, so the fonts.ready refit and every resize refresh it too. */
+    const BASE_MIN_SCALE = 0.2;
+    let fittedMinScale = BASE_MIN_SCALE;
     const apply = () => { stage.style.transform = `translate(${tx}px,${ty}px) scale(${sc})`; if (pct) pct.textContent = Math.round(sc*100)+'%'; };
     /* Fit is DS-owned (diagrams-fit.js; presence checked at the top of this file).
 
@@ -225,6 +232,7 @@
         bounds: { minX: 0, minY: 0, maxX: vbW, maxY: vbH },
         clearanceX: 90, clearanceY: 20, maxScale: 1.3, gutter: 26
       });
+      fittedMinScale = Math.min(BASE_MIN_SCALE, f.scale);
       sc = f.scale; tx = f.tx; ty = f.ty; apply();
     };
     /* Refit once the webfonts land — the helper measures the live caption / legend / HUD
@@ -238,7 +246,7 @@
     window.addEventListener('resize', fit);
     const zi=document.getElementById('zoomIn'), zo=document.getElementById('zoomOut'), zf=document.getElementById('zoomFit');
     if (zi) zi.onclick=()=>{sc=Math.min(sc*1.2,4);apply();};
-    if (zo) zo.onclick=()=>{sc=Math.max(sc/1.2,0.2);apply();};
+    if (zo) zo.onclick=()=>{sc=Math.max(sc/1.2,fittedMinScale);apply();};
     if (zf) zf.onclick=fit;
     let dragging=false, px0=0, py0=0, tx0=0, ty0=0;
     wrap.addEventListener('pointerdown', (ev)=>{ if (ev.target.closest('.hud, .legend, .caption')) return;
@@ -247,6 +255,6 @@
     const endDrag=()=>{ dragging=false; wrap.classList.remove('dragging'); };
     wrap.addEventListener('pointerup', endDrag); wrap.addEventListener('pointercancel', endDrag);
     wrap.addEventListener('wheel', (ev)=>{ ev.preventDefault(); const r=wrap.getBoundingClientRect(), mx=ev.clientX-r.left, my=ev.clientY-r.top;
-      const ns=Math.max(0.2, Math.min(4, sc*(ev.deltaY>0 ? 1/1.1 : 1.1))), k=ns/sc; tx=mx-(mx-tx)*k; ty=my-(my-ty)*k; sc=ns; apply(); }, { passive:false });
+      const ns=Math.max(fittedMinScale, Math.min(4, sc*(ev.deltaY>0 ? 1/1.1 : 1.1))), k=ns/sc; tx=mx-(mx-tx)*k; ty=my-(my-ty)*k; sc=ns; apply(); }, { passive:false });
   }
 })();
