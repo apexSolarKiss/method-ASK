@@ -48,8 +48,10 @@ The durable object is the structured statement of:
 - **Intent** — what the work is for (the source of intent a substrate change must not lose).
 - **Constraints** — the anti-goals and boundaries the work is held within.
 - **Discretion** — judgment exercised *within* standards. *Generative* discretion (which realized candidate is truest) and *evidentiary* discretion (how strong the evidence must be before a claim is licensed) are both instances; the facet is the governed exercise of judgment, not its specific kind.
-- **References** — the sources the work is accountable to — first-class accountability anchors (source + provenance + basis), not decoration.
+- **References** — the sources the work is accountable to — first-class accountability anchors (source + provenance + basis + applicability), not decoration.
 - **Governance** — what becomes a durable record, who may say so, and what recourse exists when it is wrong.
+
+**Applicability is relational, not a sixth facet.** It binds a claim or reference to the object, project, scale, or decision context it may describe or govern. Authentic source, correct provenance, and adequate basis do not by themselves establish that the material is attached to the right object. Where one context substrate spans several objects, the portable definition layer must preserve that relation; its carrier and enforcement mechanism are implementation-specific. This primitive is not a multi-object scope protocol.
 
 These are what must survive a tool swap intact. The renderer, the base model, the pipeline, the interpretive surface are all replaceable; the definition layer is the object they are *about*.
 
