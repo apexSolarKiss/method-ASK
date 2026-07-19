@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // seed-mediated generated interface — ontology</title>
+<meta name="description" content="Illustrative ontology figure for seed-mediated generated interface: mechanism, application, authored control, and conformance as four orthogonal layers, for apexSolarKiss/method-ASK. Repo prose (docs/seed-mediated-generated-interface.md) is source truth.">
+<meta name="generator" content="conforms to apexSolarKiss/design-system-ASK Tier 1 + Tier 2 by reference at generation time">
+<!-- design-system-ASK foundations — local mirror (Tier 1 + Tier 2), no CDN. See _dsa-tokens/MANIFEST.md -->
+<link rel="stylesheet" href="./_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="diagrams.css">
+<style>
+  /* ===== FULLY NEUTRAL — no function colour =====
+     This figure classifies concepts; it does not diagram the bounded-generativity
+     functions. The grammar appears here only inside the governed-elicitation
+     application, not as a legislative actor in a runtime path, so nothing carries
+     legislative / executive / judicial colour and the Three Functions primitive is
+     deliberately NOT vendored into this shell. (Figure 1 does consume it, where the
+     grammar IS a concrete actor in the path.) Held material is dashed + muted. ===== */
+  .legend .legend-divider { border: none; border-top: 1px dotted var(--diagram-line); margin: 12px 0 9px; }
+  .legend .legend-foot { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--diagram-muted); margin-bottom: 9px; }
+  /* Held arrowheads. The shared diagrams.css fills every .edge-arrowhead with the strong
+     diagram line and carries no held variant, so a head on a held path rendered strong
+     while its line was muted. Local rule keeps the visual grammar internally consistent;
+     changing the DS-owned stylesheet is out of scope for a figures PR. */
+  .edge-arrowhead.held { fill: var(--diagram-line-soft); }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <div class="bar">
+    <div class="mark">apexSolarKiss<span class="sep">/</span>method-ASK</div>
+    <div class="title-block">
+      <div class="t">Seed-Mediated Generated Interface — Ontology</div>
+      <div class="s">mechanism · application · authored control · conformance</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="stamp">
+      <div><span class="k">source-v1</span> // <span class="k">render-v1</span></div>
+      <div>2026-07-19</div>
+    </div>
+  </div>
+
+  <div class="canvas-wrap" id="canvasWrap">
+    <div class="stage" id="stage">
+      <svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+
+    <div class="corner-tick tl"></div>
+    <div class="corner-tick tr"></div>
+    <div class="corner-tick bl"></div>
+    <div class="corner-tick br"></div>
+
+    <div class="legend glass">
+      <div class="h"><span>Reading the map</span><span class="fig">four layers</span></div>
+      <div class="row">
+        <div class="sw"><div class="box-solid"></div></div>
+        <div><span class="lbl">settled</span><span class="sub">classification · purpose · control · conformance</span></div>
+      </div>
+      <div class="row">
+        <div class="sw"><div class="box-dashed"></div></div>
+        <div><span class="lbl">held</span><span class="sub">outside the settled ontology</span></div>
+      </div>
+      <hr class="legend-divider">
+      <div class="legend-foot">membership is decided before classification — not beside it</div>
+    </div>
+
+    <div class="hud glass">
+      <button id="zoomOut" title="Zoom out">−</button>
+      <div class="pct" id="zoomPct">100%</div>
+      <button id="zoomIn" title="Zoom in">+</button>
+      <button id="zoomFit" title="Fit">⤢</button>
+    </div>
+
+    <div class="caption glass">
+      <b>category map >> mechanism, purpose, control, and membership are not peer dimensions</b><br>
+      illustrative · docs/seed-mediated-generated-interface.md is source truth · the axes are inventories, not a populated matrix.
+    </div>
+  </div>
+</div>
+
+<script src="diagrams-fit.js"></script>
+<script src="method-ASK_seed-mediated-generated-interface-ontology.figure.js"></script>
+<!-- DS embedded-font carrier — lets PNG export embed fonts with no server (file://).
+     Must load BEFORE export-png.js. Vendored from design-system-ASK; do not hand-edit. -->
+<script src="./_dsa-tokens/fonts-embedded.js"></script>
+<script src="export-png.js"></script>
+
+</body>
+</html>

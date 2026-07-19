@@ -10,6 +10,12 @@ seed (repo / packet / prompt)  +  delivery wrapper  +  user loading path
     >> the interface is the guided interaction the seed causes to happen
 ```
 
+## The path // illustrated
+
+<img alt="Seed-mediated generated interface as an instantiation path. An authored seed — carrying grammar, behavior, loading path and return contract — travels to a loading boundary, where the governing question is whether the authored seed remains governing. On the conforming branch the grammar grants the aperture, the runtime renders a generated interaction inside it, and a return is produced, with authority and governance shown by a dashed bracket remaining outside the generated thread. On the fork branch, drawn in broken continuity, the seed is demoted to source material, a derivative grammar is authored in the runtime, and a borrowed shape carries causal provenance without the governing role — yielding a nonconforming derivative that is not an instance of the authored interface. Two claims are labelled: seed provenance is not seed conformance, and morphology is not behavioral conformance." src="diagrams/method-ASK_seed-mediated-generated-interface-dark.png">
+
+*Illustrative — this doctrine is the source of truth, not the diagram.* The figure carries the **instantiation path** and the loading-boundary seam: where the authored seed either remains governing or is demoted before its contract runs. Source: [`docs/diagrams/method-ASK_seed-mediated-generated-interface.html`](diagrams/method-ASK_seed-mediated-generated-interface.html). The embedded raster is the dark full-page mirror; both themes and a chrome-free diagram-only view remain exportable from the HTML, but are not committed.
+
 ## Two orthogonal axes: carrier and runtime context
 
 The family is classified on two independent axes. Conflating them creates a category error: it mistakes what the runtime can access for what the user loaded.
@@ -91,6 +97,12 @@ the more the seed / wrapper must itself encode:
 ```
 
 When an operator performs the load, the seed can lean on that operator's standing context. When the consumer loads it alone, the seed must be idiot-proof — self-explaining, the first action obvious, with a named recovery path when the channel misbehaves.
+
+## The categories // illustrated
+
+<img alt="Seed-mediated generated interface ontology as a category map. Four orthogonal layers surround one neutral membership node reading 'conforming SMGI instance', joined by typed relations. Mechanism classifies, holding two parallel axis inventories — carrier (repo-mediated, packet-mediated, prompt-mediated) and runtime context (self-contained opaque, connected authorized, author-controlled null) — presented as inventories rather than a populated matrix. Application names purpose, carrying governed elicitation. Authored control meters, with the aperture and operator-distance dials, and a dashed held box for the unresolved stakes/blast-radius question. Conformance admits or excludes: governing-role integrity at load branches to a solid preserved outcome that admits the conforming instance, and to a lower, narrower, dashed violated outcome, fork-at-load, whose arrow exits the population rather than returning. A dashed held fringe and a category-boundaries footer sit outside the four settled regions, stating that application is not mechanism, a control dial is not a classification axis, a conformance precondition is neither, and fork-at-load is not an SMGI species." src="diagrams/method-ASK_seed-mediated-generated-interface-ontology-dark.png">
+
+*Illustrative — this doctrine is the source of truth, not the diagram.* Where the figure above carries the path, this one carries the **category boundaries**: mechanism classifies, application names purpose, authored control meters, and conformance decides membership. The distinction it exists to hold is that carrier and runtime context classify *members* of the population, while governing-role integrity decides *membership* in it — so a fork-at-load is failed conformance, not another kind of interface. The two axes are shown as inventories, not a populated matrix: no claim is made that every carrier × runtime cell has been observed. Source: [`docs/diagrams/method-ASK_seed-mediated-generated-interface-ontology.html`](diagrams/method-ASK_seed-mediated-generated-interface-ontology.html). Dark full-page mirror as above.
 
 ## Worked cases — classified by carrier and runtime context
 
