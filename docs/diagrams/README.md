@@ -59,7 +59,7 @@ They are a pair with different jobs, and neither substitutes for the other:
 
 Both are `source-v1 // render-v1`.
 
-**Responsive behaviour.** `1440×900` is the reference read-all composition (doctrine `0.750`, ontology `0.724` default fit). Shorter and narrower windows fit-all to a navigable **overview** — macrostructure and the membership gate stay legible, and zoom/pan expose the authored text. That is the interaction model these shells ship, not a defect. Within the current fixed-chrome contract, shorter and narrower windows use fit-all as an overview: macrostructure stays identifiable in both figures, the ontology's membership gate stays identifiable, and zoom/pan exposes the authored detail. Read-all composition at every aspect ratio would require either content reduction or a separate responsive-chrome contract; neither is part of these figures.
+**Responsive behaviour.** `1440×900` is the reference read-all composition (doctrine `0.750`, ontology `0.724` default fit). Within the current fixed-chrome contract, shorter and narrower windows use fit-all as a navigable **overview**: macrostructure remains identifiable in both figures, the ontology's membership gate remains identifiable, and zoom/pan exposes the authored detail. Read-all composition at every aspect ratio would require either content reduction or a separate responsive-chrome contract; neither is part of these figures.
 
 ## How to use
 
@@ -67,7 +67,7 @@ Both are `source-v1 // render-v1`.
 - Drag to pan; scroll to zoom; HUD controls in the bottom-left; `⤢` to fit.
 - Theme follows the OS preference (`prefers-color-scheme`); the CSS supports explicit `data-theme="light"` or `data-theme="dark"` on `<html>` if a specific theme is needed.
 - The PNG export outputs a 3840×2880 image in the resolved theme.
-- **Theme by embedding surface** — adopting the [`design-system-ASK` convention](https://github.com/apexSolarKiss/design-system-ASK/blob/main/README.md#theme-by-embedding-surface) (pinned `7921b79`): this folder is repository documentation, so its embedded diagrams **default to dark**. Repository doctrine figures commit exactly one semantic, unsuffixed **dark full-page** mirror each. The current mirrors are **bounded generativity**, the **SMGI doctrine figure**, and the **SMGI ontology figure**. Light-page and chrome-free diagram variants remain on-demand exporter outputs, not committed. Most other diagrams here are HTML-only; a doctrine diagram gets exactly one supplemental raster when the Markdown needs it.
+- **Theme by embedding surface** — adopting the [`design-system-ASK` convention](https://github.com/apexSolarKiss/design-system-ASK/blob/main/README.md#theme-by-embedding-surface) (pinned `7921b79`): this folder is repository documentation, so its embedded diagrams **default to dark**. Repository doctrine figures commit exactly one **versionless dark full-page** mirror each, named with the semantic figure stem plus the `-dark.png` theme suffix. The current mirrors are **bounded generativity**, the **SMGI doctrine figure**, and the **SMGI ontology figure**. Light-page and chrome-free diagram variants remain on-demand exporter outputs, not committed. Most other diagrams here are HTML-only; a doctrine diagram gets exactly one supplemental raster when the Markdown needs it.
 
 ## Lineage
 
