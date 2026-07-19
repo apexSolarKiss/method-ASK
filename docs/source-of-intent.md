@@ -174,7 +174,7 @@ Routed handoff memos copied into a recipient project's `sources of intent/` shou
 
 TBI means "to be ingested." It does not mean "to be absorbed." The marker tracks operator ingestion state only; the receiving project owns absorption.
 
-More precisely, `-TBI` is the **operator's unconsumed feed queue**: it marks material the operator has saved — out of an advisor conversation, or from another operating surface — but has not yet fed into the operating surface responsible for ingesting it. That is what the suffix tracks, and it is why the suffix comes off the moment the material is fed in. It is not a record of pending repo work, and it is not a statement about which repo owns the eventual decision.
+More precisely, `-TBI` marks membership in the operator's **unconsumed feed queue**: material the operator has saved — out of an advisor conversation, or from another operating surface — but has not yet fed into the operating surface responsible for ingesting it. That is what the suffix tracks, and it is why the suffix comes off the moment the material is fed in. It is not a record of pending repo work, and it is not a statement about which repo owns the eventual decision.
 
 The disequality is hard and load-bearing:
 
