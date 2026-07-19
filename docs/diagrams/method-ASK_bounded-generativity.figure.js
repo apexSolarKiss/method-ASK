@@ -4,6 +4,15 @@
    legislative = grammar/brief box · executive = the bounded-realization chamber (variance = negative cutouts)
    · judicial = selection ring + ratified node. Everything else neutral. */
 (function () {
+  /* FAIL CLOSED BEFORE ANY LAYOUT. diagrams-fit.js is a DS-owned support file that must be
+     vendored alongside this figure and loaded immediately BEFORE it. Checked here, at the
+     top of the builder, so a missing helper stops this file before the SVG is constructed
+     — rather than leaving a half-built, unpositioned artifact whose failure has to be
+     inferred. The message names the figure builder, not the shared H engine. */
+  if (!window.DIAGRAM_FIT || typeof window.DIAGRAM_FIT.compute !== 'function') {
+    throw new Error('Diagram fit support is missing. Load diagrams-fit.js before the figure builder.');
+  }
+
   const M = {
     apex:   { label: 'source of intent', sub: 'normative apex supplies', note1: 'purpose + governing standard' },
     grammar:{ label: 'grammar / brief', note: 'grants the aperture' },
@@ -152,14 +161,11 @@
   /* ---- pan / zoom / fit + drag + wheel (interaction is local; FIT is DS-owned) ---- */
   const wrap = document.getElementById('canvasWrap'), stage = document.getElementById('stage'), pct = document.getElementById('zoomPct');
   if (wrap && stage) {
-    /* Fit comes from the design-system helper (diagrams-fit.js), which must load before
-       this file. This figure previously carried its own copy of the DS fit arithmetic —
-       "local; mirrors the DS engines" — which is exactly why the panel-band defect had to
-       be fixed per-figure. The duplicated arithmetic is retired; the figure's own geometry
-       inputs are kept and passed as caller-owned values. */
-    if (!window.DIAGRAM_FIT || typeof window.DIAGRAM_FIT.compute !== 'function') {
-      throw new Error('Diagram fit support is missing. Load diagrams-fit.js before the diagram engine.');
-    }
+    /* Fit comes from the design-system helper (diagrams-fit.js; presence is checked at the
+       top of this file). This figure previously carried its own copy of the DS fit
+       arithmetic — "local; mirrors the DS engines" — which is exactly why the panel-band
+       defect had to be fixed per-figure. The duplicated arithmetic is retired; the
+       figure's own geometry inputs are kept and passed as caller-owned values. */
     let tx=0, ty=0, sc=1;
     const apply = () => { stage.style.transform = `translate(${tx}px,${ty}px) scale(${sc})`; if (pct) pct.textContent = Math.round(sc*100)+'%'; };
     /* CALLER-OWNED, not DS defaults: this figure uses a 90px total clearance (DS default
@@ -175,7 +181,23 @@
       });
       sc = f.scale; tx = f.tx; ty = f.ty; apply();
     };
-    fit(); window.addEventListener('resize', fit);
+    /* REFIT ONCE THE WEBFONTS LAND. The vendored faces use `font-display: swap`, so the
+       page can lay out with fallback metrics and re-lay out when Inter / JetBrains Mono
+       arrive. That now matters: the DS helper measures the LIVE caption, legend, and HUD
+       rectangles, and those change size across the swap — so a fit computed against
+       fallback-font chrome can be stale by the time the real fonts render. The H engine
+       avoids this class of bug by gating its first render on the fonts it measures.
+
+       Fit immediately so the figure is never left unpositioned, then refit once. This is
+       deliberately narrower than rebuilding the figure: the source geometry and the
+       tightened viewBox above are computed from SVG text and stay as they are; only the
+       panel-aware stage placement is refreshed. */
+    fit();
+    const fonts = document.fonts;
+    if (fonts && fonts.ready && typeof fonts.ready.then === 'function') {
+      fonts.ready.then(fit).catch(() => {});
+    }
+    window.addEventListener('resize', fit);
     const zi=document.getElementById('zoomIn'), zo=document.getElementById('zoomOut'), zf=document.getElementById('zoomFit');
     if (zi) zi.onclick=()=>{sc=Math.min(sc*1.2,4);apply();};
     if (zo) zo.onclick=()=>{sc=Math.max(sc/1.2,0.2);apply();};
