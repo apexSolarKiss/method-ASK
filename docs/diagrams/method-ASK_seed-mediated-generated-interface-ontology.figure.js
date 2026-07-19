@@ -78,7 +78,7 @@
   };
 
   const svgNS = 'http://www.w3.org/2000/svg';
-  const W = 1900, H = 1200;
+  const W = 1900, H = 700;
   const svg = document.getElementById('svg');
   svg.setAttribute('width', W); svg.setAttribute('height', H);
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
@@ -103,129 +103,137 @@
   const note = (x, y, t, a='start', cls='node-note') => el('text', { x, y, class:cls, 'text-anchor':a }, [t]);
   const tag  = (x, y, t, a='start') => el('text', { x, y, class:'flow-tag', 'text-anchor':a }, [t]);
 
-  /* ===== four regions + one centre ===== */
+  /* ===== four regions + one centre =====
+     Sized so the whole map fits at ~0.75 scale in a normal viewport with the glass
+     panels reserved — the doctrine-figure norm. An earlier draft used a 1900x1200
+     canvas for this content and fit-scaled to 0.42, which passed every geometry check
+     and was still unreadable at real viewing scale. Density is the constraint here,
+     not bbox correctness. */
   const RG = {
-    mech: { x:  60, y:  96, w: 660, h: 392 },
-    app:  { x:1180, y:  96, w: 660, h: 392 },
-    ctrl: { x:  60, y: 644, w: 660, h: 300 },
-    conf: { x:1180, y: 644, w: 660, h: 300 },
+    mech: { x:  40, y:  40, w: 860, h: 200 },
+    app:  { x: 980, y:  40, w: 860, h: 200 },
+    ctrl: { x:  40, y: 352, w: 860, h: 230 },
+    conf: { x: 980, y: 352, w: 860, h: 230 },
   };
-  const CB = { x: 790, y: 534, w: 320, h: 64 };
+  const CB = { x: 810, y: 268, w: 280, h: 56 };
   const CX = CB.x + CB.w/2, CY = CB.y + CB.h/2;
 
   Object.values(RG).forEach(r =>
     nodes.append(el('rect', { x:r.x, y:r.y, width:r.w, height:r.h, rx:12, ry:12, class:'flow-group' })));
 
-  /* centre — neutral membership node */
   nodes.append(box(CB.x, CB.y, CB.w, CB.h));
   nodes.append(lbl(CX, CY + 5, M.centre, 'node-label root', 'middle'));
 
-  /* typed relations — no directional runtime arrows, just labelled ties */
+  /* typed relations — labelled ties, not directional runtime arrows */
   edges.append(line(`M ${RG.mech.x + RG.mech.w} ${RG.mech.y + RG.mech.h} L ${CB.x} ${CB.y}`));
   edges.append(line(`M ${RG.app.x} ${RG.app.y + RG.app.h} L ${CB.x + CB.w} ${CB.y}`));
   edges.append(line(`M ${RG.ctrl.x + RG.ctrl.w} ${RG.ctrl.y} L ${CB.x} ${CB.y + CB.h}`));
   edges.append(line(`M ${RG.conf.x} ${RG.conf.y} L ${CB.x + CB.w} ${CB.y + CB.h}`));
-  nodes.append(tag(CB.x + 4,  CB.y - 22, M.rels.mech, 'start'));
-  nodes.append(tag(CB.x + CB.w - 4, CB.y - 22, M.rels.app, 'end'));
-  nodes.append(tag(CB.x + 4,  CB.y + CB.h + 22, M.rels.ctrl, 'start'));
-  nodes.append(tag(CB.x + CB.w - 4, CB.y + CB.h + 22, M.rels.conf, 'end'));
+  nodes.append(tag(CB.x - 8,  CB.y - 12, M.rels.mech, 'end'));
+  nodes.append(tag(CB.x + CB.w + 8, CB.y - 12, M.rels.app, 'start'));
+  nodes.append(tag(CB.x - 8,  CB.y + CB.h + 14, M.rels.ctrl, 'end'));
+  nodes.append(tag(CB.x + CB.w + 8, CB.y + CB.h + 14, M.rels.conf, 'start'));
 
   /* ===== 1 · MECHANISM — two parallel axis inventories, deliberately not a matrix ===== */
   {
     const r = RG.mech;
-    nodes.append(tag(r.x + 24, r.y + 26, M.mech.tag));
-    const AX = [{ c: M.mech.carrier, x: r.x + 40,  w: 268 },
-                { c: M.mech.runtime, x: r.x + 344, w: 292 }];
+    nodes.append(tag(r.x + 22, r.y + 22, M.mech.tag));
+    const AX = [{ c: M.mech.carrier, x: r.x + 22,  w: 340 },
+                { c: M.mech.runtime, x: r.x + 420, w: 400 }];
     AX.forEach(a => {
-      nodes.append(lbl(a.x, r.y + 74, a.c.h, 'node-label'));
+      nodes.append(lbl(a.x, r.y + 52, a.c.h));
       a.c.items.forEach((t, i) => {
-        const y = r.y + 96 + i * 56;
-        nodes.append(box(a.x, y, a.w, 44));
-        nodes.append(note(a.x + 16, y + 27, t));
+        const y = r.y + 64 + i * 32;
+        nodes.append(box(a.x, y, a.w, 26));
+        nodes.append(note(a.x + 12, y + 17, t));
       });
     });
-    /* orthogonality: a plain tie between the two inventories, no implied cells */
-    const midY = r.y + 96 + 84;
-    edges.append(line(`M ${AX[0].x + AX[0].w + 6} ${midY} L ${AX[1].x - 6} ${midY}`, 'edge held'));
-    nodes.append(note(r.x + 40, r.y + 322, M.mech.rel));
+    const midY = r.y + 64 + 32 + 13;
+    edges.append(line(`M ${AX[0].x + AX[0].w + 8} ${midY} L ${AX[1].x - 8} ${midY}`, 'edge held'));
+    nodes.append(note(r.x + 22, r.y + 178, M.mech.rel));
   }
 
   /* ===== 2 · APPLICATION — purpose, not a class ===== */
   {
     const r = RG.app;
-    nodes.append(tag(r.x + 24, r.y + 26, M.app.tag));
-    nodes.append(box(r.x + 40, r.y + 66, r.w - 80, 148));
-    nodes.append(lbl(r.x + 62, r.y + 96, M.app.label));
-    M.app.notes.forEach((t, i) => nodes.append(note(r.x + 62, r.y + 122 + i * 22, t)));
-    nodes.append(note(r.x + 40, r.y + 248, M.app.rel));
+    nodes.append(tag(r.x + 22, r.y + 22, M.app.tag));
+    nodes.append(box(r.x + 22, r.y + 36, r.w - 44, 88));
+    nodes.append(lbl(r.x + 40, r.y + 56, M.app.label));
+    M.app.notes.forEach((t, i) => nodes.append(note(r.x + 40, r.y + 74 + i * 15, t)));
+    nodes.append(note(r.x + 22, r.y + 146, M.app.rel));
     M.app.neg.forEach((t, i) =>
-      nodes.append(note(r.x + 40, r.y + 292 + i * 22, t, 'start', 'node-note legacy')));
+      nodes.append(note(r.x + 22, r.y + 166 + i * 15, t, 'start', 'node-note legacy')));
   }
 
-  /* ===== 3 · AUTHORED CONTROL — dials, with the third held OUTSIDE the landed pair ===== */
+  /* ===== 3 · AUTHORED CONTROL — two landed dials, the third visibly HELD ===== */
   {
     const r = RG.ctrl;
-    nodes.append(tag(r.x + 24, r.y + 26, M.ctrl.tag));
+    nodes.append(tag(r.x + 22, r.y + 22, M.ctrl.tag));
     M.ctrl.dials.forEach((d, i) => {
-      const x = r.x + 40 + i * 300;
-      nodes.append(box(x, r.y + 62, 268, 62));
-      nodes.append(lbl(x + 18, r.y + 88, d.l));
-      nodes.append(note(x + 18, r.y + 108, d.n));
+      const x = r.x + 22 + i * 420;
+      nodes.append(box(x, r.y + 38, 396, 48));
+      nodes.append(lbl(x + 16, r.y + 58, d.l));
+      nodes.append(note(x + 16, r.y + 76, d.n));
     });
-    nodes.append(note(r.x + 40, r.y + 156, M.ctrl.rel));
-    /* held dial — dashed, muted, visibly not part of the landed pair */
-    nodes.append(box(r.x + 40, r.y + 186, 568, 62, 'node-box held'));
-    nodes.append(lbl(r.x + 58, r.y + 212, M.ctrl.held.l, 'node-label held'));
-    nodes.append(note(r.x + 58, r.y + 232, M.ctrl.held.n));
+    nodes.append(note(r.x + 22, r.y + 110, M.ctrl.rel));
+    /* held dial — dashed AND inset from the landed pair, so it cannot read as a third dial */
+    nodes.append(box(r.x + 100, r.y + 136, 660, 48, 'node-box held'));
+    nodes.append(lbl(r.x + 118, r.y + 156, M.ctrl.held.l, 'node-label held'));
+    nodes.append(note(r.x + 118, r.y + 174, M.ctrl.held.n));
   }
 
-  /* ===== 4 · CONFORMANCE — the membership gate, the one place sequence is the content ===== */
+  /* ===== 4 · CONFORMANCE — the membership gate =====
+     The outcomes are deliberately NOT peers: `preserved` sits high, solid and wider;
+     `violated` is dashed, set LOWER and narrower, and exits the region rather than
+     rejoining the centre. Fork-at-load is a failure state, not an alternate species. */
   {
     const r = RG.conf;
-    nodes.append(tag(r.x + 24, r.y + 26, M.conf.tag));
-    nodes.append(box(r.x + 40, r.y + 56, r.w - 80, 62));
-    nodes.append(lbl(r.x + 62, r.y + 82, M.conf.gate.l));
-    nodes.append(note(r.x + 62, r.y + 102, M.conf.gate.n));
+    nodes.append(tag(r.x + 22, r.y + 22, M.conf.tag));
+    nodes.append(box(r.x + 22, r.y + 36, r.w - 44, 46));
+    nodes.append(lbl(r.x + 40, r.y + 56, M.conf.gate.l));
+    nodes.append(note(r.x + 40, r.y + 73, M.conf.gate.n));
 
-    /* 280-wide, two note lines: the longest string here ('not an instance of the
-       authored interface') needs ~254px of the 262px inner width. */
-    const BY = r.y + 144, BH = 100, BW = 280;
-    /* preserved */
-    nodes.append(box(r.x + 40, BY, BW, BH));
-    nodes.append(tag(r.x + 58, BY + 18, M.conf.ok.t));
-    nodes.append(lbl(r.x + 58, BY + 42, M.conf.ok.l));
-    nodes.append(note(r.x + 58, BY + 60, M.conf.ok.n1));
-    nodes.append(note(r.x + 58, BY + 76, M.conf.ok.n2));
-    /* violated — held styling: broken continuity, not alarm chrome */
-    nodes.append(box(r.x + 340, BY, BW, BH, 'node-box held'));
-    nodes.append(tag(r.x + 358, BY + 18, M.conf.bad.t));
-    nodes.append(lbl(r.x + 358, BY + 42, M.conf.bad.l, 'node-label held'));
-    nodes.append(note(r.x + 358, BY + 60, M.conf.bad.n1));
-    nodes.append(note(r.x + 358, BY + 76, M.conf.bad.n2));
-    nodes.append(note(r.x + 358, BY + 92, M.conf.bad.n3));
+    const PY = r.y + 104;
+    nodes.append(box(r.x + 22, PY, 390, 70));
+    nodes.append(tag(r.x + 40, PY + 16, M.conf.ok.t));
+    nodes.append(lbl(r.x + 40, PY + 38, M.conf.ok.l));
+    nodes.append(note(r.x + 40, PY + 56, M.conf.ok.n1));
+    edges.append(line(`M ${r.x + 217} ${r.y + 82} L ${r.x + 217} ${PY - 10}`));
+    edges.append(headD(r.x + 217, PY - 2));
 
-    edges.append(line(`M ${r.x + 180} ${r.y + 118} L ${r.x + 180} ${BY - 12}`));
-    edges.append(headD(r.x + 180, BY - 4));
-    edges.append(line(`M ${r.x + 480} ${r.y + 118} L ${r.x + 480} ${BY - 12}`, 'edge held'));
-    edges.append(headD(r.x + 480, BY - 4));
+    const VY = r.y + 134;
+    nodes.append(box(r.x + 470, VY, 330, 70, 'node-box held'));
+    nodes.append(tag(r.x + 488, VY + 16, M.conf.bad.t));
+    nodes.append(lbl(r.x + 488, VY + 38, M.conf.bad.l, 'node-label held'));
+    nodes.append(note(r.x + 488, VY + 56, M.conf.bad.n1));
+    edges.append(line(`M ${r.x + 635} ${r.y + 82} L ${r.x + 635} ${VY - 10}`, 'edge held'));
+    edges.append(headD(r.x + 635, VY - 2));
+    /* exit — leaves the population rather than rejoining the centre */
+    edges.append(line(`M ${r.x + 800} ${VY + 35} L ${r.x + 826} ${VY + 35}`, 'edge held'));
+    nodes.append(note(r.x + 470, VY + 88, M.conf.bad.n2 + ' ' + M.conf.bad.n3,
+                      'start', 'node-note legacy'));
 
     M.conf.sup.forEach((t, i) =>
-      nodes.append(note(r.x + 40, BY + BH + 26 + i * 18, t, 'start', 'node-note legacy')));
+      nodes.append(note(r.x + 22, PY + 92 + i * 15, t, 'start', 'node-note legacy')));
   }
 
-  /* ===== held fringe + category-boundary footer — the bottom band ===== */
+  /* ===== held fringe + category-boundary footer — outside the four settled regions ===== */
   {
-    const BY = 1000, BH = 156;
-    nodes.append(el('rect', { x:60, y:BY, width:860, height:BH, rx:12, ry:12,
+    const BY = 612, BH = 78;
+    nodes.append(el('rect', { x:40, y:BY, width:860, height:BH, rx:12, ry:12,
                               class:'flow-group', 'stroke-dasharray':'4 3' }));
-    nodes.append(tag(84, BY + 26, M.held.tag));
-    M.held.items.forEach((t, i) =>
-      nodes.append(note(100, BY + 56 + i * 20, '·  ' + t, 'start', 'node-note legacy')));
+    nodes.append(tag(62, BY + 18, M.held.tag));
+    M.held.items.forEach((t, i) => {
+      const col = i < 3 ? 0 : 1;
+      nodes.append(note(62 + col * 430, BY + 36 + (i % 3) * 15, '·  ' + t, 'start', 'node-note legacy'));
+    });
 
     nodes.append(el('path', { class:'section-rule', d:`M 980 ${BY} L 1840 ${BY}` }));
-    nodes.append(tag(980, BY + 26, M.foot.tag));
-    M.foot.items.forEach((t, i) =>
-      nodes.append(note(980, BY + 56 + i * 20, t)));
+    nodes.append(tag(980, BY + 18, M.foot.tag));
+    M.foot.items.forEach((t, i) => {
+      const col = i < 3 ? 0 : 1;
+      nodes.append(note(980 + col * 430, BY + 36 + (i % 3) * 15, t));
+    });
   }
 
   /* ===== tighten the viewBox to drawn content (+ uniform margin), as the sibling figures ===== */
