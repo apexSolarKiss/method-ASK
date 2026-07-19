@@ -107,6 +107,8 @@ The recipient project owns the absorption decision. It reads the handoff from in
 
 When material crosses as candidate input requiring recipient classification, this protocol applies between ASK project surfaces regardless of their relative altitude. Downstream → downstream, methodology → downstream, downstream → methodology: the same discipline.
 
+The boundary this protocol turns on is the **operating surface**, not the repository. Two repositories operated by the same surface do not sit on opposite sides of that boundary, even though their artifact authority remains separate. Routing moves material *between* operating surfaces; where no such boundary is crossed, no handoff arises.
+
 ```text
 origin scratch records the sending
 recipient sources-of-intent records the receiving
@@ -123,11 +125,19 @@ A single operating surface may operate across more than one repo. In that case, 
 
 The routed memo names its candidate owner surface or surfaces where known. The operating surface classifies the eventual owner or owners after ingestion. Each resulting owner acts through its own governing source of truth and workflow: repo actions follow the owning repo's workflow; operator-canonical actions follow that canonical's write, version, and snapshot discipline. Physical co-location in one intake grants no cross-repo authority, and a filename addressee (`_to_<surface>_`) records intent, not storage or ownership.
 
+**A shared intake is not an internal routing bus.** Separate repo authority does not oblige the operating surface to hand material back to itself. Material originating inside the surface and bound for a repo that same surface operates does not enter the intake: the surface changes repo context, performs that repo's required reset and reads, and works under its own branch, diff, review, and merge gates. A memo addressed from a surface to itself crosses no ingestion boundary because the destination already holds the material. Its `-TBI` marker therefore adds no ingestion-state information, while asking the operator to feed the memo back to its own author.
+
+Separate repository ownership is real and is not weakened by this. It simply is not a second ingestion boundary. Work awaiting a decision inside a surface that already holds the material is repo state, not intake state.
+
+Bypassing the intake does not bypass the audit trail. Where a durable record is required, use the carrier appropriate to the work: repo or PR history, a scratch recommendation or closure, or a captured relay or approval record. Same-surface movement removes the `-TBI` handoff, not any evidence, review, or closure duties the work otherwise requires.
+
 This refines the carrier only. Recipient-owned absorption (§Inbound handoff TBI marker), the ingestion ≠ absorption disequality, and the closure-record requirement are unchanged. The default remains one `sources of intent/` per project surface; the shared intake is the declared multi-repo-operating-surface case, not a new general default.
 
 ### Scope guard: handoff routing vs protocol conformance
 
 This section governs candidate material whose status must be classified by the recipient, and any change that must cross a recipient-owned absorption boundary. It does not make every cross-surface update a handoff.
+
+**Establish the operating-surface relation before classifying authority.** Where the destination is a repository the acting surface already operates, no handoff arises under any authority class — including candidate material the owning repo must still classify. The surface changes repo context and works under that repository's own gates; the classification happens there, as repo work. The authority and write-jurisdiction tests below govern material that genuinely crosses between operating surfaces.
 
 An ASK-authorized conformance change to a shared protocol owned upstream may propagate directly where the acting surface has write jurisdiction, through the consumer's normal workflow gates. Where that jurisdiction does not exist, the change routes to the owning surface.
 
@@ -163,6 +173,8 @@ All meaning the recipient needs must age at the recipient's aging rate.
 Routed handoff memos copied into a recipient project's `sources of intent/` should use the `-TBI.md` suffix until ASK has fed them into the recipient active project surface.
 
 TBI means "to be ingested." It does not mean "to be absorbed." The marker tracks operator ingestion state only; the receiving project owns absorption.
+
+More precisely, `-TBI` is the **operator's unconsumed feed queue**: it marks material the operator has saved — out of an advisor conversation, or from another operating surface — but has not yet fed into the operating surface responsible for ingesting it. That is what the suffix tracks, and it is why the suffix comes off the moment the material is fed in. It is not a record of pending repo work, and it is not a statement about which repo owns the eventual decision.
 
 The disequality is hard and load-bearing:
 
