@@ -149,13 +149,32 @@
   svg.setAttribute('width', vbW);
   svg.setAttribute('height', vbH);
 
-  /* ---- pan / zoom / fit + drag + wheel (local; mirrors the DS engines) ---- */
+  /* ---- pan / zoom / fit + drag + wheel (interaction is local; FIT is DS-owned) ---- */
   const wrap = document.getElementById('canvasWrap'), stage = document.getElementById('stage'), pct = document.getElementById('zoomPct');
   if (wrap && stage) {
+    /* Fit comes from the design-system helper (diagrams-fit.js), which must load before
+       this file. This figure previously carried its own copy of the DS fit arithmetic —
+       "local; mirrors the DS engines" — which is exactly why the panel-band defect had to
+       be fixed per-figure. The duplicated arithmetic is retired; the figure's own geometry
+       inputs are kept and passed as caller-owned values. */
+    if (!window.DIAGRAM_FIT || typeof window.DIAGRAM_FIT.compute !== 'function') {
+      throw new Error('Diagram fit support is missing. Load diagrams-fit.js before the diagram engine.');
+    }
     let tx=0, ty=0, sc=1;
     const apply = () => { stage.style.transform = `translate(${tx}px,${ty}px) scale(${sc})`; if (pct) pct.textContent = Math.round(sc*100)+'%'; };
-    const fit = () => { const r=wrap.getBoundingClientRect(); const pad=90;
-      sc=Math.min((r.width-pad)/vbW,(r.height-pad)/vbH,1.3); tx=(r.width-vbW*sc)/2; ty=(r.height-vbH*sc)/2; apply(); };
+    /* CALLER-OWNED, not DS defaults: this figure uses a 90px total clearance (DS default
+       80) and a 1.3 max scale (DS default 1.2). Bounds start at ZERO even though the
+       tightened viewBox origin above is negative — the transform target is the stage div,
+       whose box starts at 0 in CSS space, so the viewBox origin never enters it. Transform
+       target decides this, not viewBox sign. */
+    const fit = () => {
+      const f = window.DIAGRAM_FIT.compute({
+        wrap,
+        bounds: { minX: 0, minY: 0, maxX: vbW, maxY: vbH },
+        clearanceX: 90, clearanceY: 90, maxScale: 1.3, gutter: 26
+      });
+      sc = f.scale; tx = f.tx; ty = f.ty; apply();
+    };
     fit(); window.addEventListener('resize', fit);
     const zi=document.getElementById('zoomIn'), zo=document.getElementById('zoomOut'), zf=document.getElementById('zoomFit');
     if (zi) zi.onclick=()=>{sc=Math.min(sc*1.2,4);apply();};

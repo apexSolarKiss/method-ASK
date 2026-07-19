@@ -35,6 +35,8 @@ method-ASK_bounded-generativity.figure.js    figure builder (source-v4)
 method-ASK_bounded-generativity-dark.png     sole committed doctrine mirror (dark full-page); the
                                              light-page + chrome-free diagram variants are on-demand
                                              exporter outputs, not committed
+diagrams-fit.js                        DS-owned fit support; loads BEFORE the engine
+                                       (and before the figure builder, which also uses it)
 diagrams-static-H-engine.js            layout + pan/zoom engine
 _dsa-tokens/                           vendored Tier 1 + Tier 2 token mirror
 diagrams.css                           compiled Tier 1 + Tier 2 style
