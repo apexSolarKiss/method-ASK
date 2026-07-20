@@ -97,19 +97,24 @@
      profiles — only coordinates differ. The recomposition itself (Application's two cards,
      Conformance's deepened gate / outcomes / test-strip) is present in BOTH profiles. */
   const LAYOUT = (new URLSearchParams(location.search).get('layout') === 'page') ? 'page' : 'screen';
+  /* box heights carry generous vertical padding around their text (breathing); preserved and
+     violated share a TOP edge (vDy === pDy) — the not-peers asymmetry is carried by solid-vs-dashed,
+     wider-vs-narrower, and rejoin-vs-exit, not by a vertical offset. The page canvas is kept short
+     enough that the static exporter tips the landscape diagram into its below-panel band, so the
+     committed page mirror clears the legend at the top and fills to the bottom margin. */
   const PF = {
-    screen: { topH:214, botH:286, rowGap:96, cbH:56, footGap:30, footH:92,
-      m:{ hdr:56, i0:72, ip:36, bh:26, relB:24 },
-      a:{ cardDy:42, cardH:160, lblDy:68, n0:96, np:22, relDy:74, ruleDy:96, ng0:120 },
-      c:{ dialDy:44, dialH:48, lblDy:68, nDy:88, relDy:128, heldMargin:40, heldH:48 },
-      k:{ gateDy:44, gateH:50, gLbl:66, gNote:88, pDy:120, pH:92, vDy:150, vH:74, supMargin:32, supP:18 },
-      f:{ tagDy:22, i0:46, ip:17 } },
-    page:   { topH:290, botH:360, rowGap:170, cbH:64, footGap:40, footH:115,
-      m:{ hdr:68, i0:86, ip:44, bh:30, relB:24 },
-      a:{ cardDy:48, cardH:214, lblDy:82, n0:116, np:30, relDy:86, ruleDy:110, ng0:144 },
-      c:{ dialDy:56, dialH:58, lblDy:82, nDy:102, relDy:158, heldMargin:58, heldH:58 },
-      k:{ gateDy:52, gateH:58, gLbl:76, gNote:98, pDy:152, pH:100, vDy:190, vH:82, supMargin:44, supP:22 },
-      f:{ tagDy:24, i0:52, ip:20 } },
+    screen: { topH:230, botH:300, rowGap:92, cbH:56, footGap:28, footH:98,
+      m:{ hdr:58, i0:76, ip:42, bh:30, relB:24 },
+      a:{ cardDy:44, cardH:178, lblDy:74, n0:104, np:24, relDy:80, ruleDy:102, ng0:130 },
+      c:{ dialDy:46, dialH:54, lblDy:74, nDy:96, relDy:138, heldMargin:38, heldH:54 },
+      k:{ gateDy:46, gateH:54, gLbl:70, gNote:94, pDy:128, pH:104, vDy:128, vH:86, supMargin:34, supP:18 },
+      f:{ tagDy:22, i0:48, ip:18 } },
+    page:   { topH:285, botH:355, rowGap:130, cbH:64, footGap:36, footH:112,
+      m:{ hdr:66, i0:88, ip:48, bh:34, relB:26 },
+      a:{ cardDy:48, cardH:224, lblDy:82, n0:118, np:30, relDy:88, ruleDy:112, ng0:150 },
+      c:{ dialDy:54, dialH:62, lblDy:82, nDy:104, relDy:160, heldMargin:40, heldH:62 },
+      k:{ gateDy:50, gateH:60, gLbl:76, gNote:100, pDy:150, pH:118, vDy:150, vH:98, supMargin:40, supP:20 },
+      f:{ tagDy:24, i0:54, ip:20 } },
   }[LAYOUT];
   const W = 1900;
   const topY = 40, botY = topY + PF.topH + PF.rowGap;
