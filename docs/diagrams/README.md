@@ -39,7 +39,7 @@ method-ASK_seed-mediated-generated-interface.html         renders the SMGI DOCTR
 method-ASK_seed-mediated-generated-interface.figure.js    figure builder (source-v1)
 method-ASK_seed-mediated-generated-interface-dark.png     committed doctrine mirror (dark full-page)
 method-ASK_seed-mediated-generated-interface-ontology.html        renders the SMGI ONTOLOGY figure
-method-ASK_seed-mediated-generated-interface-ontology.figure.js   figure builder (source-v1)
+method-ASK_seed-mediated-generated-interface-ontology.figure.js   figure builder (source-v2; dual-profile — ?layout=screen default / page)
 method-ASK_seed-mediated-generated-interface-ontology-dark.png    committed doctrine mirror (dark full-page)
 diagrams-fit.js                        DS-owned fit support; loads BEFORE the engine
                                        AND before every figure builder — each builder
@@ -59,7 +59,9 @@ They are a pair with different jobs, and neither substitutes for the other:
 
 Both are `source-v1 // render-v1`.
 
-**Responsive behaviour.** `1440×900` is the reference read-all composition (doctrine `0.750`, ontology `0.724` default fit). Within the current fixed-chrome contract, shorter and narrower windows use fit-all as a navigable **overview**: macrostructure remains identifiable in both figures, the ontology's membership gate remains identifiable, and zoom/pan exposes the authored detail. Read-all composition at every aspect ratio would require either content reduction or a separate responsive-chrome contract; neither is part of these figures.
+**Responsive behaviour.** `1440×900` is the reference read-all composition (doctrine `0.750`, ontology **`0.69` on the default `screen` profile**). Within the current fixed-chrome contract, shorter and narrower windows use fit-all as a navigable **overview**: macrostructure remains identifiable in both figures, the ontology's membership gate remains identifiable, and zoom/pan exposes the authored detail. Read-all composition at every aspect ratio would require either content reduction or a separate responsive-chrome contract; neither is part of these figures.
+
+**Ontology dual-profile (source-v2).** The ontology is height-limited at a normal viewport, so a single fixed canvas cannot both stay read-all at `1440×900` and fill the `3840×2880` page. One semantic model is laid out under two coordinate profiles selected by `?layout=`: **`screen`** (default) is compact-but-recomposed and stays read-all at `1440×900` without zoom; **`page`** (`?layout=page`) is ~`1900×1025` and spends the page height. The committed dark full-page mirror is generated from the page profile (`?layout=page&export=png`). Text, categories, held status, branch asymmetry, and typed relations are identical across profiles — only coordinates differ (the recomposition itself — Application's two cards, Conformance's deepened gate / outcomes / test-strip — is present in both).
 
 ## How to use
 

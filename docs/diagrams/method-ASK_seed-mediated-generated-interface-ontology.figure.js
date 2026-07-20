@@ -1,4 +1,11 @@
-/* method-ASK_seed-mediated-generated-interface-ontology.figure.js — category map (source-v1, ASK 2026-07-19)
+/* method-ASK_seed-mediated-generated-interface-ontology.figure.js — category map (source-v2, ASK 2026-07-20)
+
+   source-v2 (2026-07-20): dual-profile recomposition. ONE semantic model, two coordinate profiles
+   selected by ?layout= — `screen` (default, compact-but-recomposed, 1440×900 read-all) and `page`
+   (~1900×1025, fills the 3840×2880 page; the committed dark mirror is generated from ?layout=page).
+   Application became a two-part composition (elicitation card + boundary block) and Conformance was
+   deepened (taller gate, preserved high/solid vs fork low/dashed/exiting, behavioral test strip).
+   Text, categories, held status, branch asymmetry, and typed relations are identical across profiles.
 
    Subject: the CATEGORY BOUNDARIES of the doctrine — what kind of thing each named
    distinction is. The sibling figure (…_seed-mediated-generated-interface) owns the
@@ -78,7 +85,43 @@
   };
 
   const svgNS = 'http://www.w3.org/2000/svg';
-  const W = 1900, H = 700;
+
+  /* ===== source-v2 dual-profile layout: one semantic model (M), two coordinate profiles =====
+     The figure is height-limited at a normal viewport, so a single fixed canvas cannot both
+     fill the 3840×2880 page AND stay read-all at 1440×900. The SAME semantic model above is
+     laid out under two coordinate profiles selected by ?layout= :
+       screen (default) — compact-but-recomposed; 1440×900 stays read-all without zoom;
+       page            — ~1900×1025; spends the page height; the committed dark full-page mirror
+                          is generated from this profile (?layout=page&export=png).
+     Text, categories, held status, branch asymmetry, and typed relations are IDENTICAL across
+     profiles — only coordinates differ. The recomposition itself (Application's two cards,
+     Conformance's deepened gate / outcomes / test-strip) is present in BOTH profiles. */
+  const LAYOUT = (new URLSearchParams(location.search).get('layout') === 'page') ? 'page' : 'screen';
+  const PF = {
+    screen: { topH:214, botH:286, rowGap:96, cbH:56, footGap:30, footH:92,
+      m:{ hdr:56, i0:72, ip:36, bh:26, relB:24 },
+      a:{ cardDy:42, cardH:160, lblDy:68, n0:96, np:22, relDy:74, ruleDy:96, ng0:120 },
+      c:{ dialDy:44, dialH:48, lblDy:68, nDy:88, relDy:128, heldMargin:40, heldH:48 },
+      k:{ gateDy:44, gateH:50, gLbl:66, gNote:88, pDy:120, pH:92, vDy:150, vH:74, supMargin:32, supP:18 },
+      f:{ tagDy:22, i0:46, ip:17 } },
+    page:   { topH:290, botH:360, rowGap:170, cbH:64, footGap:40, footH:115,
+      m:{ hdr:68, i0:86, ip:44, bh:30, relB:24 },
+      a:{ cardDy:48, cardH:214, lblDy:82, n0:116, np:30, relDy:86, ruleDy:110, ng0:144 },
+      c:{ dialDy:56, dialH:58, lblDy:82, nDy:102, relDy:158, heldMargin:58, heldH:58 },
+      k:{ gateDy:52, gateH:58, gLbl:76, gNote:98, pDy:152, pH:100, vDy:190, vH:82, supMargin:44, supP:22 },
+      f:{ tagDy:24, i0:52, ip:20 } },
+  }[LAYOUT];
+  const W = 1900;
+  const topY = 40, botY = topY + PF.topH + PF.rowGap;
+  const RG = {
+    mech: { x:  40, y: topY, w: 860, h: PF.topH },
+    app:  { x: 980, y: topY, w: 860, h: PF.topH },
+    ctrl: { x:  40, y: botY, w: 860, h: PF.botH },
+    conf: { x: 980, y: botY, w: 860, h: PF.botH },
+  };
+  const CB = { x: 810, y: topY + PF.topH + (PF.rowGap - PF.cbH) / 2, w: 280, h: PF.cbH };
+  const FT = { by: botY + PF.botH + PF.footGap, bh: PF.footH };
+  const H = FT.by + FT.bh + 12;
   const svg = document.getElementById('svg');
   svg.setAttribute('width', W); svg.setAttribute('height', H);
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
@@ -106,19 +149,7 @@
   const note = (x, y, t, a='start', cls='node-note') => el('text', { x, y, class:cls, 'text-anchor':a }, [t]);
   const tag  = (x, y, t, a='start') => el('text', { x, y, class:'flow-tag', 'text-anchor':a }, [t]);
 
-  /* ===== four regions + one centre =====
-     Sized so the whole map fits at ~0.75 scale in a normal viewport with the glass
-     panels reserved — the doctrine-figure norm. An earlier draft used a 1900x1200
-     canvas for this content and fit-scaled to 0.42, which passed every geometry check
-     and was still unreadable at real viewing scale. Density is the constraint here,
-     not bbox correctness. */
-  const RG = {
-    mech: { x:  40, y:  40, w: 860, h: 200 },
-    app:  { x: 980, y:  40, w: 860, h: 200 },
-    ctrl: { x:  40, y: 352, w: 860, h: 230 },
-    conf: { x: 980, y: 352, w: 860, h: 230 },
-  };
-  const CB = { x: 810, y: 268, w: 280, h: 56 };
+  /* ===== four regions + one centre (rects from the active profile PF; see the profile block) ===== */
   const CX = CB.x + CB.w/2, CY = CB.y + CB.h/2;
 
   Object.values(RG).forEach(r =>
@@ -139,50 +170,61 @@
 
   /* ===== 1 · MECHANISM — two parallel axis inventories, deliberately not a matrix ===== */
   {
-    const r = RG.mech;
+    const r = RG.mech, m = PF.m;
     nodes.append(tag(r.x + 22, r.y + 22, M.mech.tag));
-    const AX = [{ c: M.mech.carrier, x: r.x + 22,  w: 340 },
-                { c: M.mech.runtime, x: r.x + 420, w: 400 }];
+    const AX = [{ c: M.mech.carrier, x: r.x + 22,  w: 360 },
+                { c: M.mech.runtime, x: r.x + 440, w: 380 }];
     AX.forEach(a => {
-      nodes.append(lbl(a.x, r.y + 52, a.c.h));
+      nodes.append(lbl(a.x, r.y + m.hdr, a.c.h));
       a.c.items.forEach((t, i) => {
-        const y = r.y + 64 + i * 32;
-        nodes.append(box(a.x, y, a.w, 26));
-        nodes.append(note(a.x + 12, y + 17, t));
+        const y = r.y + m.i0 + i * m.ip;
+        nodes.append(box(a.x, y, a.w, m.bh));
+        nodes.append(note(a.x + 12, y + Math.round(m.bh * 0.68), t));
       });
     });
-    const midY = r.y + 64 + 32 + 13;
+    const midY = r.y + m.i0 + m.ip + m.bh / 2;
     edges.append(line(`M ${AX[0].x + AX[0].w + 8} ${midY} L ${AX[1].x - 8} ${midY}`, 'edge held'));
-    nodes.append(note(r.x + 22, r.y + 178, M.mech.rel));
+    nodes.append(note(r.x + 22, r.y + r.h - m.relB, M.mech.rel));
   }
 
-  /* ===== 2 · APPLICATION — purpose, not a class ===== */
+  /* ===== 2 · APPLICATION — purpose, not a class =====
+     A real two-part composition, so the content spans the region instead of clustering in the
+     left edge of one wide card: a LEFT card carries the governed-elicitation cluster; a RIGHT
+     boundary block carries what application IS (names purpose) and what it is NOT (≠ carrier
+     species, ≠ runtime-context class). Semantic content is exact; only the spatial grammar
+     changes. */
   {
-    const r = RG.app;
+    const r = RG.app, a = PF.a;
     nodes.append(tag(r.x + 22, r.y + 22, M.app.tag));
-    nodes.append(box(r.x + 22, r.y + 36, r.w - 44, 88));
-    nodes.append(lbl(r.x + 40, r.y + 56, M.app.label));
-    M.app.notes.forEach((t, i) => nodes.append(note(r.x + 40, r.y + 74 + i * 15, t)));
-    nodes.append(note(r.x + 22, r.y + 146, M.app.rel));
+    // left card — the elicitation cluster
+    nodes.append(box(r.x + 22, r.y + a.cardDy, 404, a.cardH));
+    nodes.append(lbl(r.x + 44, r.y + a.lblDy, M.app.label));
+    M.app.notes.forEach((t, i) => nodes.append(note(r.x + 44, r.y + a.n0 + i * a.np, t)));
+    // right boundary block — names purpose · not a carrier/runtime class
+    nodes.append(el('rect', { x: r.x + 448, y: r.y + a.cardDy, width: 390, height: a.cardH, rx: 12, ry: 12, class: 'flow-group' }));
+    nodes.append(note(r.x + 470, r.y + a.relDy, M.app.rel));
+    nodes.append(el('path', { class: 'section-rule', d: `M ${r.x + 470} ${r.y + a.ruleDy} L ${r.x + 816} ${r.y + a.ruleDy}` }));
     M.app.neg.forEach((t, i) =>
-      nodes.append(note(r.x + 22, r.y + 166 + i * 15, t, 'start', 'node-note legacy')));
+      nodes.append(note(r.x + 470, r.y + a.ng0 + i * a.np, t, 'start', 'node-note legacy')));
   }
 
   /* ===== 3 · AUTHORED CONTROL — two landed dials, the third visibly HELD ===== */
   {
-    const r = RG.ctrl;
+    const r = RG.ctrl, c = PF.c;
     nodes.append(tag(r.x + 22, r.y + 22, M.ctrl.tag));
     M.ctrl.dials.forEach((d, i) => {
-      const x = r.x + 22 + i * 420;
-      nodes.append(box(x, r.y + 38, 396, 48));
-      nodes.append(lbl(x + 16, r.y + 58, d.l));
-      nodes.append(note(x + 16, r.y + 76, d.n));
+      const x = r.x + 22 + i * 430;
+      nodes.append(box(x, r.y + c.dialDy, 400, c.dialH));
+      nodes.append(lbl(x + 18, r.y + c.lblDy, d.l));
+      nodes.append(note(x + 18, r.y + c.nDy, d.n));
     });
-    nodes.append(note(r.x + 22, r.y + 110, M.ctrl.rel));
-    /* held dial — dashed AND inset from the landed pair, so it cannot read as a third dial */
-    nodes.append(box(r.x + 100, r.y + 136, 660, 48, 'node-box held'));
-    nodes.append(lbl(r.x + 118, r.y + 156, M.ctrl.held.l, 'node-label held'));
-    nodes.append(note(r.x + 118, r.y + 174, M.ctrl.held.n));
+    nodes.append(note(r.x + 22, r.y + c.relDy, M.ctrl.rel));
+    /* held dial — dashed AND inset from the landed pair, anchored near the region bottom so the
+       gap above it reads as separation, not a third landed row */
+    const heldY = r.y + r.h - c.heldMargin - c.heldH;
+    nodes.append(box(r.x + 100, heldY, 660, c.heldH, 'node-box held'));
+    nodes.append(lbl(r.x + 118, heldY + 24, M.ctrl.held.l, 'node-label held'));
+    nodes.append(note(r.x + 118, heldY + 43, M.ctrl.held.n));
   }
 
   /* ===== 4 · CONFORMANCE — the membership gate =====
@@ -190,54 +232,60 @@
      `violated` is dashed, set LOWER and narrower, and exits the region rather than
      rejoining the centre. Fork-at-load is a failure state, not an alternate species. */
   {
-    const r = RG.conf;
+    const r = RG.conf, k = PF.k;
     nodes.append(tag(r.x + 22, r.y + 22, M.conf.tag));
-    nodes.append(box(r.x + 22, r.y + 36, r.w - 44, 46));
-    nodes.append(lbl(r.x + 40, r.y + 56, M.conf.gate.l));
-    nodes.append(note(r.x + 40, r.y + 73, M.conf.gate.n));
+    // gate — a taller card: label on the first line, the governing-entry-contract note below
+    nodes.append(box(r.x + 22, r.y + k.gateDy, r.w - 44, k.gateH));
+    nodes.append(lbl(r.x + 40, r.y + k.gLbl, M.conf.gate.l));
+    nodes.append(note(r.x + 40, r.y + k.gNote, M.conf.gate.n));
+    const gateBottom = r.y + k.gateDy + k.gateH;
 
-    const PY = r.y + 104;
-    nodes.append(box(r.x + 22, PY, 390, 84));
-    nodes.append(tag(r.x + 40, PY + 16, M.conf.ok.t));
-    nodes.append(lbl(r.x + 40, PY + 38, M.conf.ok.l));
-    nodes.append(note(r.x + 40, PY + 56, M.conf.ok.n1));
-    nodes.append(note(r.x + 40, PY + 72, M.conf.ok.n2));
-    edges.append(line(`M ${r.x + 217} ${r.y + 82} L ${r.x + 217} ${PY - 10}`));
-    edges.append(headD(r.x + 217, PY - 2));
+    // preserved — solid, HIGHER, wider
+    const PY = r.y + k.pDy;
+    nodes.append(box(r.x + 22, PY, 404, k.pH));
+    nodes.append(tag(r.x + 40, PY + 20, M.conf.ok.t));
+    nodes.append(lbl(r.x + 40, PY + 44, M.conf.ok.l));
+    nodes.append(note(r.x + 40, PY + 64, M.conf.ok.n1));
+    nodes.append(note(r.x + 40, PY + 82, M.conf.ok.n2));
+    edges.append(line(`M ${r.x + 224} ${gateBottom} L ${r.x + 224} ${PY - 10}`));
+    edges.append(headD(r.x + 224, PY - 2));
 
-    const VY = r.y + 134;
-    nodes.append(box(r.x + 470, VY, 330, 70, 'node-box held'));
-    nodes.append(tag(r.x + 488, VY + 16, M.conf.bad.t));
-    nodes.append(lbl(r.x + 488, VY + 38, M.conf.bad.l, 'node-label held'));
-    nodes.append(note(r.x + 488, VY + 56, M.conf.bad.n1));
-    edges.append(line(`M ${r.x + 635} ${r.y + 82} L ${r.x + 635} ${VY - 10}`, 'edge held'));
-    edges.append(headD(r.x + 635, VY - 2, 'edge-arrowhead held'));
+    // violated / fork-at-load — dashed, LOWER, narrower, and exits the population
+    const VY = r.y + k.vDy, VM = VY + Math.round(k.vH / 2);
+    nodes.append(box(r.x + 476, VY, 330, k.vH, 'node-box held'));
+    nodes.append(tag(r.x + 494, VY + 20, M.conf.bad.t));
+    nodes.append(lbl(r.x + 494, VY + 44, M.conf.bad.l, 'node-label held'));
+    nodes.append(note(r.x + 494, VY + 64, M.conf.bad.n1));
+    edges.append(line(`M ${r.x + 641} ${gateBottom} L ${r.x + 641} ${VY - 10}`, 'edge held'));
+    edges.append(headD(r.x + 641, VY - 2, 'edge-arrowhead held'));
     /* exit — leaves the population rather than rejoining the centre */
-    edges.append(line(`M ${r.x + 800} ${VY + 35} L ${r.x + 824} ${VY + 35}`, 'edge held'));
-    edges.append(headR(r.x + 832, VY + 35, 'edge-arrowhead held'));
-    nodes.append(note(r.x + 470, VY + 88, M.conf.bad.n2 + ' ' + M.conf.bad.n3,
+    edges.append(line(`M ${r.x + 806} ${VM} L ${r.x + 832} ${VM}`, 'edge held'));
+    edges.append(headR(r.x + 840, VM, 'edge-arrowhead held'));
+    nodes.append(note(r.x + 476, VY + k.vH + 20, M.conf.bad.n2 + ' ' + M.conf.bad.n3,
                       'start', 'node-note legacy'));
 
+    // behavioral test strip — anchored near the region bottom
+    const supY = r.y + r.h - k.supMargin;
     M.conf.sup.forEach((t, i) =>
-      nodes.append(note(r.x + 22, PY + 106 + i * 15, t, 'start', 'node-note legacy')));
+      nodes.append(note(r.x + 22, supY + i * k.supP, t, 'start', 'node-note legacy')));
   }
 
   /* ===== held fringe + category-boundary footer — outside the four settled regions ===== */
   {
-    const BY = 612, BH = 78;
+    const BY = FT.by, BH = FT.bh, f = PF.f;
     nodes.append(el('rect', { x:40, y:BY, width:860, height:BH, rx:12, ry:12,
                               class:'flow-group', 'stroke-dasharray':'4 3' }));
-    nodes.append(tag(62, BY + 18, M.held.tag));
+    nodes.append(tag(62, BY + f.tagDy, M.held.tag));
     M.held.items.forEach((t, i) => {
       const col = i < 3 ? 0 : 1;
-      nodes.append(note(62 + col * 430, BY + 36 + (i % 3) * 15, '·  ' + t, 'start', 'node-note legacy'));
+      nodes.append(note(62 + col * 430, BY + f.i0 + (i % 3) * f.ip, '·  ' + t, 'start', 'node-note legacy'));
     });
 
     nodes.append(el('path', { class:'section-rule', d:`M 980 ${BY} L 1840 ${BY}` }));
-    nodes.append(tag(980, BY + 18, M.foot.tag));
+    nodes.append(tag(980, BY + f.tagDy, M.foot.tag));
     M.foot.items.forEach((t, i) => {
       const col = i < 3 ? 0 : 1;
-      nodes.append(note(980 + col * 430, BY + 36 + (i % 3) * 15, t));
+      nodes.append(note(980 + col * 430, BY + f.i0 + (i % 3) * f.ip, t));
     });
   }
 
