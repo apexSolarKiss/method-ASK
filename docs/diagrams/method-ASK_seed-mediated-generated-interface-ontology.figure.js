@@ -161,15 +161,17 @@
     nodes.append(el('rect', { x:r.x, y:r.y, width:r.w, height:r.h, rx:12, ry:12, class:'flow-group' })));
 
   nodes.append(box(CB.x, CB.y, CB.w, CB.h));
-  nodes.append(lbl(CX, CY + 5, M.centre, 'node-label root', 'middle'));
+  // geometric centre: node-label carries dominant-baseline:middle, so y = box centre (CY);
+  // an earlier +5 nudge sat the root label low.
+  nodes.append(lbl(CX, CY, M.centre, 'node-label root', 'middle'));
 
   /* typed relations — labelled ties, not directional runtime arrows. Each tie leaves a CB
      corner and lands on the region edge facing the centre at the box's THIRD division — 1/3
-     of the box width in from the inner corner (the outer 2/3 point). The relation label sits
-     at the tie's MIDPOINT; the tie is drawn as TWO segments that stop short of the label on
-     either side, so the line reads as passing behind the label with no strike-through. The
-     gap is measured from the rendered label and redrawn on fonts.ready, so it stays exact
-     once the embedded font loads. */
+     of the box width in from the inner corner (the outer 2/3 point). Each tie is ONE
+     continuous line; its label sits near the midpoint, nudged OUTWARD toward the landing and
+     off the line into the open centre band, so the line never crosses the text. The vertical
+     nudge is measured from the rendered label so the whole label (wide ones included) clears
+     the sloped tie; redrawn on fonts.ready so it stays exact once the embedded font loads. */
   const third = 1 / 3;
   const RELTIES = [
     { x1: CB.x,        y1: CB.y,        x2: RG.mech.x + RG.mech.w * (1 - third), y2: RG.mech.y + RG.mech.h, rel: M.rels.mech },
@@ -183,16 +185,17 @@
     while (relEdges.firstChild) relEdges.removeChild(relEdges.firstChild);
     while (relLabels.firstChild) relLabels.removeChild(relLabels.firstChild);
     for (const t of RELTIES) {
+      relEdges.append(line(`M ${t.x1} ${t.y1} L ${t.x2} ${t.y2}`));   // one continuous tie
       const midX = (t.x1 + t.x2) / 2, midY = (t.y1 + t.y2) / 2;
-      const lab = tag(midX, midY, t.rel, 'middle');
+      const lab = tag(midX + Math.sign(t.x2 - t.x1) * 24, midY, t.rel, 'middle');
       relLabels.append(lab);
-      const bb = lab.getBBox(), padX = 7;
-      const gL = bb.x - padX, gR = bb.x + bb.width + padX;
+      const bb = lab.getBBox(), m = 6;
       const yAt = (x) => t.y1 + (t.y2 - t.y1) * (x - t.x1) / (t.x2 - t.x1);
-      // each half stops at the gap edge it actually reaches (ties run both L→R and R→L)
-      const s1 = t.x1 < midX ? gL : gR, s2 = t.x2 < midX ? gL : gR;
-      relEdges.append(line(`M ${t.x1} ${t.y1} L ${s1.toFixed(1)} ${yAt(s1).toFixed(1)}`));
-      relEdges.append(line(`M ${s2.toFixed(1)} ${yAt(s2).toFixed(1)} L ${t.x2} ${t.y2}`));
+      const edgeYs = [yAt(bb.x), yAt(bb.x + bb.width)];   // tie height across the label's span
+      const ly = (midY < CY)                              // top tie → clear below the line; bottom → above
+        ? Math.max(...edgeYs) + m + bb.height / 2
+        : Math.min(...edgeYs) - m - bb.height / 2;
+      lab.setAttribute('y', ly.toFixed(1));
     }
   }
   drawRelations();
