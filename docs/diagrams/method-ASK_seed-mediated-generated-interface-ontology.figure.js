@@ -1,4 +1,13 @@
-/* method-ASK_seed-mediated-generated-interface-ontology.figure.js — category map (source-v1, ASK 2026-07-19)
+/* method-ASK_seed-mediated-generated-interface-ontology.figure.js — category map (source-v2, ASK 2026-07-20)
+
+   source-v2 (2026-07-20): dual-profile recomposition. ONE semantic model, two coordinate profiles
+   selected by ?layout= — `screen` (default, compact-but-recomposed, 1440×900 read-all) and `page`
+   (the taller page-optimized composition that fills the 3840×2880 page below the chrome; the committed
+   dark mirror is generated from ?layout=page).
+   Application became a two-part composition (elicitation card + boundary block) and Conformance was
+   deepened (taller gate; preserved + violated share a top edge — preserved solid/wider and inside the
+   population, violated dashed/narrower and exiting — plus a behavioral test strip).
+   Text, categories, held status, branch asymmetry, and typed relations are identical across profiles.
 
    Subject: the CATEGORY BOUNDARIES of the doctrine — what kind of thing each named
    distinction is. The sibling figure (…_seed-mediated-generated-interface) owns the
@@ -78,7 +87,49 @@
   };
 
   const svgNS = 'http://www.w3.org/2000/svg';
-  const W = 1900, H = 700;
+
+  /* ===== source-v2 dual-profile layout: one semantic model (M), two coordinate profiles =====
+     The figure is height-limited at a normal viewport, so a single fixed canvas cannot both
+     fill the 3840×2880 page AND stay read-all at 1440×900. The SAME semantic model above is
+     laid out under two coordinate profiles selected by ?layout= :
+       screen (default) — compact-but-recomposed; 1440×900 stays read-all without zoom;
+       page            — the taller page-optimized composition; spends the 3840×2880 page height
+                          below the chrome; the committed dark full-page mirror is generated from
+                          this profile (?layout=page&export=png).
+     Text, categories, held status, branch asymmetry, and typed relations are IDENTICAL across
+     profiles — only coordinates differ. The recomposition itself (Application's two cards,
+     Conformance's deepened gate / outcomes / test-strip) is present in BOTH profiles. */
+  const LAYOUT = (new URLSearchParams(location.search).get('layout') === 'page') ? 'page' : 'screen';
+  /* box heights carry generous vertical padding around their text (breathing); preserved and
+     violated share a TOP edge (vDy === pDy) — the not-peers asymmetry is carried by solid-vs-dashed,
+     wider-vs-narrower, and rejoin-vs-exit, not by a vertical offset. The page canvas is kept short
+     enough that the static exporter tips the landscape diagram into its below-panel band, so the
+     committed page mirror clears the legend at the top and fills to the bottom margin. */
+  const PF = {
+    screen: { topH:230, botH:300, rowGap:92, cbH:56, footGap:28, footH:98,
+      m:{ hdr:58, i0:76, ip:42, bh:30, relB:24 },
+      a:{ cardDy:44, cardH:154, lblDy:74, n0:104, np:24, relDy:80, ruleDy:102, ng0:130 },
+      c:{ dialDy:46, dialH:62, lblDy:66, nDy:88, relDy:138, heldMargin:38, heldH:54 },
+      k:{ gateDy:46, gateH:62, gLbl:66, gNote:88, pDy:128, pH:104, vDy:128, vH:86, supMargin:34, supP:18 },
+      f:{ tagDy:22, i0:48, ip:18 } },
+    page:   { topH:285, botH:355, rowGap:130, cbH:64, footGap:36, footH:112,
+      m:{ hdr:66, i0:88, ip:48, bh:34, relB:26 },
+      a:{ cardDy:48, cardH:196, lblDy:82, n0:118, np:30, relDy:88, ruleDy:112, ng0:150 },
+      c:{ dialDy:54, dialH:72, lblDy:78, nDy:102, relDy:160, heldMargin:40, heldH:62 },
+      k:{ gateDy:50, gateH:70, gLbl:73, gNote:97, pDy:150, pH:118, vDy:150, vH:98, supMargin:40, supP:20 },
+      f:{ tagDy:24, i0:54, ip:20 } },
+  }[LAYOUT];
+  const W = 1900;
+  const topY = 40, botY = topY + PF.topH + PF.rowGap;
+  const RG = {
+    mech: { x:  40, y: topY, w: 860, h: PF.topH },
+    app:  { x: 980, y: topY, w: 860, h: PF.topH },
+    ctrl: { x:  40, y: botY, w: 860, h: PF.botH },
+    conf: { x: 980, y: botY, w: 860, h: PF.botH },
+  };
+  const CB = { x: 810, y: topY + PF.topH + (PF.rowGap - PF.cbH) / 2, w: 280, h: PF.cbH };
+  const FT = { by: botY + PF.botH + PF.footGap, bh: PF.footH };
+  const H = FT.by + FT.bh + 12;
   const svg = document.getElementById('svg');
   svg.setAttribute('width', W); svg.setAttribute('height', H);
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
@@ -106,138 +157,193 @@
   const note = (x, y, t, a='start', cls='node-note') => el('text', { x, y, class:cls, 'text-anchor':a }, [t]);
   const tag  = (x, y, t, a='start') => el('text', { x, y, class:'flow-tag', 'text-anchor':a }, [t]);
 
-  /* ===== four regions + one centre =====
-     Sized so the whole map fits at ~0.75 scale in a normal viewport with the glass
-     panels reserved — the doctrine-figure norm. An earlier draft used a 1900x1200
-     canvas for this content and fit-scaled to 0.42, which passed every geometry check
-     and was still unreadable at real viewing scale. Density is the constraint here,
-     not bbox correctness. */
-  const RG = {
-    mech: { x:  40, y:  40, w: 860, h: 200 },
-    app:  { x: 980, y:  40, w: 860, h: 200 },
-    ctrl: { x:  40, y: 352, w: 860, h: 230 },
-    conf: { x: 980, y: 352, w: 860, h: 230 },
-  };
-  const CB = { x: 810, y: 268, w: 280, h: 56 };
+  /* ===== four regions + one centre (rects from the active profile PF; see the profile block) ===== */
   const CX = CB.x + CB.w/2, CY = CB.y + CB.h/2;
 
   Object.values(RG).forEach(r =>
     nodes.append(el('rect', { x:r.x, y:r.y, width:r.w, height:r.h, rx:12, ry:12, class:'flow-group' })));
 
   nodes.append(box(CB.x, CB.y, CB.w, CB.h));
-  nodes.append(lbl(CX, CY + 5, M.centre, 'node-label root', 'middle'));
+  // centre the label on the box: node-label is dominant-baseline:middle, but the glyph bbox is
+  // slightly asymmetric (ascenders vs the 'g' descender), so measure it and offset y so the
+  // rendered glyphs — not just the baseline — centre on the box (recomputed on fonts.ready).
+  const rootLbl = lbl(CX, CY, M.centre, 'node-label root', 'middle');
+  nodes.append(rootLbl);
+  function centerRoot() {
+    rootLbl.setAttribute('y', CY);
+    const bb = rootLbl.getBBox();
+    rootLbl.setAttribute('y', (CY + (CY - (bb.y + bb.height / 2))).toFixed(1));
+  }
+  centerRoot();
 
-  /* typed relations — labelled ties, not directional runtime arrows */
-  edges.append(line(`M ${RG.mech.x + RG.mech.w} ${RG.mech.y + RG.mech.h} L ${CB.x} ${CB.y}`));
-  edges.append(line(`M ${RG.app.x} ${RG.app.y + RG.app.h} L ${CB.x + CB.w} ${CB.y}`));
-  edges.append(line(`M ${RG.ctrl.x + RG.ctrl.w} ${RG.ctrl.y} L ${CB.x} ${CB.y + CB.h}`));
-  edges.append(line(`M ${RG.conf.x} ${RG.conf.y} L ${CB.x + CB.w} ${CB.y + CB.h}`));
-  nodes.append(tag(CB.x - 8,  CB.y - 12, M.rels.mech, 'end'));
-  nodes.append(tag(CB.x + CB.w + 8, CB.y - 12, M.rels.app, 'start'));
-  nodes.append(tag(CB.x - 8,  CB.y + CB.h + 14, M.rels.ctrl, 'end'));
-  nodes.append(tag(CB.x + CB.w + 8, CB.y + CB.h + 14, M.rels.conf, 'start'));
+  /* typed relations — labelled ties, not directional runtime arrows. Each tie is ONE
+     continuous line leaving a CB corner and landing on the region edge facing the centre at
+     the box's THIRD division (1/3 in from the inner corner). Each label RUNS ALONG its tie:
+     rotated to the tie's angle, centred on the tie's midpoint, and offset a few px
+     perpendicular (toward the open centre band) so it reads parallel to — and just off — the
+     continuous line. Text is oriented left→right so it stays upright. Recomputed on
+     fonts.ready so the perpendicular offset stays exact once the embedded font loads. */
+  const third = 1 / 3;
+  const RELTIES = [
+    { x1: CB.x,        y1: CB.y,        x2: RG.mech.x + RG.mech.w * (1 - third), y2: RG.mech.y + RG.mech.h, rel: M.rels.mech },
+    { x1: CB.x + CB.w, y1: CB.y,        x2: RG.app.x  + RG.app.w * third,        y2: RG.app.y  + RG.app.h,  rel: M.rels.app  },
+    { x1: CB.x,        y1: CB.y + CB.h, x2: RG.ctrl.x + RG.ctrl.w * (1 - third), y2: RG.ctrl.y,             rel: M.rels.ctrl },
+    { x1: CB.x + CB.w, y1: CB.y + CB.h, x2: RG.conf.x + RG.conf.w * third,       y2: RG.conf.y,             rel: M.rels.conf },
+  ];
+  const relEdges = el('g', { class: 'edges' }); edges.append(relEdges);
+  const relLabels = el('g', { class: 'nodes' }); nodes.append(relLabels);
+  function drawRelations() {
+    while (relEdges.firstChild) relEdges.removeChild(relEdges.firstChild);
+    while (relLabels.firstChild) relLabels.removeChild(relLabels.firstChild);
+    const probe = tag(0, CY, 'Xg', 'middle'); relLabels.append(probe);
+    const bh = probe.getBBox().height; relLabels.removeChild(probe);
+    const dPerp = bh / 2 + 4;                          // offset just clear of the tie
+    for (const t of RELTIES) {
+      relEdges.append(line(`M ${t.x1} ${t.y1} L ${t.x2} ${t.y2}`));   // one continuous tie
+      const midX = (t.x1 + t.x2) / 2, midY = (t.y1 + t.y2) / 2;
+      // orient left→right so the rotated text reads upright along the tie
+      const [ax, ay, bx, by] = t.x1 <= t.x2 ? [t.x1, t.y1, t.x2, t.y2] : [t.x2, t.y2, t.x1, t.y1];
+      const dx = bx - ax, dy = by - ay, L = Math.hypot(dx, dy);
+      const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+      // unit perpendicular, flipped to point toward CY (into the open centre band)
+      let px = -dy / L, py = dx / L;
+      if (Math.sign(py) !== ((midY < CY) ? 1 : -1)) { px = -px; py = -py; }
+      const cx = midX + px * dPerp, cy = midY + py * dPerp;
+      const lab = tag(cx, cy, t.rel, 'middle');
+      lab.setAttribute('transform', `rotate(${angle.toFixed(2)} ${cx.toFixed(1)} ${cy.toFixed(1)})`);
+      relLabels.append(lab);
+    }
+  }
+  drawRelations();
 
   /* ===== 1 · MECHANISM — two parallel axis inventories, deliberately not a matrix ===== */
   {
-    const r = RG.mech;
+    const r = RG.mech, m = PF.m;
     nodes.append(tag(r.x + 22, r.y + 22, M.mech.tag));
-    const AX = [{ c: M.mech.carrier, x: r.x + 22,  w: 340 },
-                { c: M.mech.runtime, x: r.x + 420, w: 400 }];
+    // two equal columns filling the region's inner band with symmetric 22px side insets
+    // (left col at +22, right col ending 22 from the region's right edge).
+    const AX = [{ c: M.mech.carrier, x: r.x + 22,  w: 379 },
+                { c: M.mech.runtime, x: r.x + 459, w: 379 }];
     AX.forEach(a => {
-      nodes.append(lbl(a.x, r.y + 52, a.c.h));
+      nodes.append(lbl(a.x, r.y + m.hdr, a.c.h));
       a.c.items.forEach((t, i) => {
-        const y = r.y + 64 + i * 32;
-        nodes.append(box(a.x, y, a.w, 26));
-        nodes.append(note(a.x + 12, y + 17, t));
+        const y = r.y + m.i0 + i * m.ip;
+        nodes.append(box(a.x, y, a.w, m.bh));
+        // single-line axis label: node-note carries dominant-baseline:middle, so the true
+        // geometric centre is y + bh/2 (an earlier bh*0.68 sat the text ~0.18·bh low).
+        nodes.append(note(a.x + 12, y + m.bh / 2, t));
       });
     });
-    const midY = r.y + 64 + 32 + 13;
+    const midY = r.y + m.i0 + m.ip + m.bh / 2;
     edges.append(line(`M ${AX[0].x + AX[0].w + 8} ${midY} L ${AX[1].x - 8} ${midY}`, 'edge held'));
-    nodes.append(note(r.x + 22, r.y + 178, M.mech.rel));
+    nodes.append(note(r.x + 22, r.y + r.h - m.relB, M.mech.rel));
   }
 
-  /* ===== 2 · APPLICATION — purpose, not a class ===== */
+  /* ===== 2 · APPLICATION — purpose, not a class =====
+     A real two-part composition, so the content spans the region instead of clustering in the
+     left edge of one wide card: a LEFT card carries the governed-elicitation cluster; a RIGHT
+     boundary block carries what application IS (names purpose) and what it is NOT (≠ carrier
+     species, ≠ runtime-context class). Semantic content is exact; only the spatial grammar
+     changes. */
   {
-    const r = RG.app;
+    const r = RG.app, a = PF.a;
     nodes.append(tag(r.x + 22, r.y + 22, M.app.tag));
-    nodes.append(box(r.x + 22, r.y + 36, r.w - 44, 88));
-    nodes.append(lbl(r.x + 40, r.y + 56, M.app.label));
-    M.app.notes.forEach((t, i) => nodes.append(note(r.x + 40, r.y + 74 + i * 15, t)));
-    nodes.append(note(r.x + 22, r.y + 146, M.app.rel));
+    // left card — the elicitation cluster
+    nodes.append(box(r.x + 22, r.y + a.cardDy, 397, a.cardH));
+    nodes.append(lbl(r.x + 44, r.y + a.lblDy, M.app.label));
+    M.app.notes.forEach((t, i) => nodes.append(note(r.x + 44, r.y + a.n0 + i * a.np, t)));
+    // right boundary block — names purpose · not a carrier/runtime class. A PEER of the left
+    // card: identical container (node-box), identical width, symmetric side insets — the split
+    // is spatial only, the border carries no distinct meaning.
+    nodes.append(box(r.x + 441, r.y + a.cardDy, 397, a.cardH));
+    nodes.append(note(r.x + 463, r.y + a.relDy, M.app.rel));
+    nodes.append(el('path', { class: 'section-rule', d: `M ${r.x + 463} ${r.y + a.ruleDy} L ${r.x + 816} ${r.y + a.ruleDy}` }));
     M.app.neg.forEach((t, i) =>
-      nodes.append(note(r.x + 22, r.y + 166 + i * 15, t, 'start', 'node-note legacy')));
+      nodes.append(note(r.x + 463, r.y + a.ng0 + i * a.np, t, 'start', 'node-note legacy')));
   }
 
   /* ===== 3 · AUTHORED CONTROL — two landed dials, the third visibly HELD ===== */
   {
-    const r = RG.ctrl;
+    const r = RG.ctrl, c = PF.c;
     nodes.append(tag(r.x + 22, r.y + 22, M.ctrl.tag));
+    // two dials, symmetric side insets: left at +22, right ending 22 from the region edge.
+    const dialW = 393;
     M.ctrl.dials.forEach((d, i) => {
-      const x = r.x + 22 + i * 420;
-      nodes.append(box(x, r.y + 38, 396, 48));
-      nodes.append(lbl(x + 16, r.y + 58, d.l));
-      nodes.append(note(x + 16, r.y + 76, d.n));
+      const x = r.x + 22 + i * (dialW + 30);
+      nodes.append(box(x, r.y + c.dialDy, dialW, c.dialH));
+      nodes.append(lbl(x + 18, r.y + c.lblDy, d.l));
+      nodes.append(note(x + 18, r.y + c.nDy, d.n));
     });
-    nodes.append(note(r.x + 22, r.y + 110, M.ctrl.rel));
-    /* held dial — dashed AND inset from the landed pair, so it cannot read as a third dial */
-    nodes.append(box(r.x + 100, r.y + 136, 660, 48, 'node-box held'));
-    nodes.append(lbl(r.x + 118, r.y + 156, M.ctrl.held.l, 'node-label held'));
-    nodes.append(note(r.x + 118, r.y + 174, M.ctrl.held.n));
+    nodes.append(note(r.x + 22, r.y + c.relDy, M.ctrl.rel));
+    /* held dial — dashed AND inset from the landed pair, anchored near the region bottom so the
+       gap above it reads as separation, not a third landed row */
+    const heldY = r.y + r.h - c.heldMargin - c.heldH;
+    nodes.append(box(r.x + 100, heldY, 660, c.heldH, 'node-box held'));
+    nodes.append(lbl(r.x + 118, heldY + 24, M.ctrl.held.l, 'node-label held'));
+    nodes.append(note(r.x + 118, heldY + 43, M.ctrl.held.n));
   }
 
   /* ===== 4 · CONFORMANCE — the membership gate =====
-     The outcomes are deliberately NOT peers: `preserved` sits high, solid and wider;
-     `violated` is dashed, set LOWER and narrower, and exits the region rather than
-     rejoining the centre. Fork-at-load is a failure state, not an alternate species. */
+     The outcomes are deliberately NOT peers, but they SHARE A TOP EDGE (vDy === pDy):
+     `preserved` is solid and wider and remains inside the population; `violated` is dashed,
+     narrower, and exits the region rather than rejoining the centre. The not-peers asymmetry
+     is carried by solid-vs-dashed + wider-vs-narrower + rejoin-vs-exit, not a vertical offset.
+     Fork-at-load is a failure state, not an alternate species. */
   {
-    const r = RG.conf;
+    const r = RG.conf, k = PF.k;
     nodes.append(tag(r.x + 22, r.y + 22, M.conf.tag));
-    nodes.append(box(r.x + 22, r.y + 36, r.w - 44, 46));
-    nodes.append(lbl(r.x + 40, r.y + 56, M.conf.gate.l));
-    nodes.append(note(r.x + 40, r.y + 73, M.conf.gate.n));
+    // gate — a taller card: label on the first line, the governing-entry-contract note below
+    nodes.append(box(r.x + 22, r.y + k.gateDy, r.w - 44, k.gateH));
+    nodes.append(lbl(r.x + 40, r.y + k.gLbl, M.conf.gate.l));
+    nodes.append(note(r.x + 40, r.y + k.gNote, M.conf.gate.n));
+    const gateBottom = r.y + k.gateDy + k.gateH;
 
-    const PY = r.y + 104;
-    nodes.append(box(r.x + 22, PY, 390, 84));
-    nodes.append(tag(r.x + 40, PY + 16, M.conf.ok.t));
-    nodes.append(lbl(r.x + 40, PY + 38, M.conf.ok.l));
-    nodes.append(note(r.x + 40, PY + 56, M.conf.ok.n1));
-    nodes.append(note(r.x + 40, PY + 72, M.conf.ok.n2));
-    edges.append(line(`M ${r.x + 217} ${r.y + 82} L ${r.x + 217} ${PY - 10}`));
-    edges.append(headD(r.x + 217, PY - 2));
+    // preserved — solid, wider, shares its top edge with violated (inside the population)
+    const PY = r.y + k.pDy;
+    nodes.append(box(r.x + 22, PY, 404, k.pH));
+    nodes.append(tag(r.x + 40, PY + 20, M.conf.ok.t));
+    nodes.append(lbl(r.x + 40, PY + 44, M.conf.ok.l));
+    nodes.append(note(r.x + 40, PY + 64, M.conf.ok.n1));
+    nodes.append(note(r.x + 40, PY + 82, M.conf.ok.n2));
+    edges.append(line(`M ${r.x + 224} ${gateBottom} L ${r.x + 224} ${PY - 10}`));
+    edges.append(headD(r.x + 224, PY - 2));
 
-    const VY = r.y + 134;
-    nodes.append(box(r.x + 470, VY, 330, 70, 'node-box held'));
-    nodes.append(tag(r.x + 488, VY + 16, M.conf.bad.t));
-    nodes.append(lbl(r.x + 488, VY + 38, M.conf.bad.l, 'node-label held'));
-    nodes.append(note(r.x + 488, VY + 56, M.conf.bad.n1));
-    edges.append(line(`M ${r.x + 635} ${r.y + 82} L ${r.x + 635} ${VY - 10}`, 'edge held'));
-    edges.append(headD(r.x + 635, VY - 2, 'edge-arrowhead held'));
+    // violated / fork-at-load — dashed, narrower, shares its top edge with preserved but EXITS the population
+    const VY = r.y + k.vDy, VM = VY + Math.round(k.vH / 2);
+    nodes.append(box(r.x + 476, VY, 330, k.vH, 'node-box held'));
+    nodes.append(tag(r.x + 494, VY + 20, M.conf.bad.t));
+    nodes.append(lbl(r.x + 494, VY + 44, M.conf.bad.l, 'node-label held'));
+    nodes.append(note(r.x + 494, VY + 64, M.conf.bad.n1));
+    edges.append(line(`M ${r.x + 641} ${gateBottom} L ${r.x + 641} ${VY - 10}`, 'edge held'));
+    edges.append(headD(r.x + 641, VY - 2, 'edge-arrowhead held'));
     /* exit — leaves the population rather than rejoining the centre */
-    edges.append(line(`M ${r.x + 800} ${VY + 35} L ${r.x + 824} ${VY + 35}`, 'edge held'));
-    edges.append(headR(r.x + 832, VY + 35, 'edge-arrowhead held'));
-    nodes.append(note(r.x + 470, VY + 88, M.conf.bad.n2 + ' ' + M.conf.bad.n3,
+    edges.append(line(`M ${r.x + 806} ${VM} L ${r.x + 832} ${VM}`, 'edge held'));
+    edges.append(headR(r.x + 840, VM, 'edge-arrowhead held'));
+    nodes.append(note(r.x + 476, VY + k.vH + 20, M.conf.bad.n2 + ' ' + M.conf.bad.n3,
                       'start', 'node-note legacy'));
 
+    // behavioral test strip — anchored near the region bottom
+    const supY = r.y + r.h - k.supMargin;
     M.conf.sup.forEach((t, i) =>
-      nodes.append(note(r.x + 22, PY + 106 + i * 15, t, 'start', 'node-note legacy')));
+      nodes.append(note(r.x + 22, supY + i * k.supP, t, 'start', 'node-note legacy')));
   }
 
   /* ===== held fringe + category-boundary footer — outside the four settled regions ===== */
   {
-    const BY = 612, BH = 78;
+    const BY = FT.by, BH = FT.bh, f = PF.f;
     nodes.append(el('rect', { x:40, y:BY, width:860, height:BH, rx:12, ry:12,
                               class:'flow-group', 'stroke-dasharray':'4 3' }));
-    nodes.append(tag(62, BY + 18, M.held.tag));
+    nodes.append(tag(62, BY + f.tagDy, M.held.tag));
     M.held.items.forEach((t, i) => {
       const col = i < 3 ? 0 : 1;
-      nodes.append(note(62 + col * 430, BY + 36 + (i % 3) * 15, '·  ' + t, 'start', 'node-note legacy'));
+      nodes.append(note(62 + col * 430, BY + f.i0 + (i % 3) * f.ip, '·  ' + t, 'start', 'node-note legacy'));
     });
 
     nodes.append(el('path', { class:'section-rule', d:`M 980 ${BY} L 1840 ${BY}` }));
-    nodes.append(tag(980, BY + 18, M.foot.tag));
+    nodes.append(tag(980, BY + f.tagDy, M.foot.tag));
     M.foot.items.forEach((t, i) => {
       const col = i < 3 ? 0 : 1;
-      nodes.append(note(980 + col * 430, BY + 36 + (i % 3) * 15, t));
+      nodes.append(note(980 + col * 430, BY + f.i0 + (i % 3) * f.ip, t));
     });
   }
 
@@ -277,7 +383,7 @@
     fit();
     const fonts = document.fonts;
     if (fonts && fonts.ready && typeof fonts.ready.then === 'function') {
-      fonts.ready.then(fit).catch(() => {});
+      fonts.ready.then(() => { drawRelations(); centerRoot(); fit(); }).catch(() => {});
     }
     window.addEventListener('resize', fit);
     const zi=document.getElementById('zoomIn'), zo=document.getElementById('zoomOut'), zf=document.getElementById('zoomFit');
