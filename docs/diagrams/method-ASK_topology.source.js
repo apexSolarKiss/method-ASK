@@ -1,11 +1,27 @@
 /* method-ASK_topology.source.js
    Source data for the method-ASK topology / relative-externality map diagram.
-   Renderable by diagrams-engine.js.
+   Renderable by diagrams-static-H-engine.js.
 
-   D02 // method-ASK topology / relative-externality map // source-v5 // 2026-07-18
+   D02 // method-ASK topology / relative-externality map // source-v6 // 2026-07-21
+   v6 (2026-07-21): ecology-state scrub to the landed shared-protocol architecture.
+   Corrects the stale renderer comment (diagrams-engine.js -> diagrams-static-H-engine.js)
+   and the D03 name (ecology-ASK overall -> system-ASK topology). method-ASK is a
+   RESOLVED-LOCAL consumer of the control-surface-owned execution-protocol canonical
+   (direct-core repo-reset authority): its root AGENTS.md resolves the shared rule body +
+   core-ecology profile + method-local delta. The downstream execution-protocol layer now
+   distinguishes four DISTINCT artifacts / planes (NOT four carriers — protocol/ is the owner
+   canonical, the resolved AGENTS.md files are the carriers): protocol/ (owner canonical) ·
+   AGENTS.shared.md (authoritative shared rule body) · manifest.json (normative registry, NOT
+   live state) · the protocol consumer ledger (live carrier / grant / visibility / propagation
+   state plane). Adds
+   seed-mediated-generated-interface.md to the doctrine cluster + personal-context-system as
+   the public SMGI proof scaffold (applicable-but-carrier-blocked for protocol). Tier 3 restated
+   as resolved locally by source-of-intent + brand distance. Absorption rule qualified (recipient
+   owns candidate absorption; deterministic GREEN conformance may move directly under established
+   jurisdiction). No live SHAs/PRs in the tree. Content-only; render held render-v20.
    Single-tree extraction of TREE_D02 from the v9 operator-side ecology-ASK
    package. This repo carries TREE_D02 only; it does not carry TREE_D01
-   (control-surface architecture tree) or TREE_D03 (ecology-ASK overall),
+   (control-surface architecture tree) or TREE_D03 (system-ASK topology),
    which remain in their respective owners' surfaces.
 
    source-v3 (2026-06-23): the doctrine-docs group now reflects the graduated
@@ -35,7 +51,7 @@ window.TREE_D02 = {
       kind: 'section', label: 'repo-local method surfaces',
       children: [
         { label: 'README.md' },
-        { label: 'AGENTS.md' },
+        { label: 'AGENTS.md', note: 'resolved-local carrier of the control-surface-owned execution-protocol · resolves the shared rule body + core-ecology profile + method-local delta (direct-core repo-reset authority)' },
         { label: 'docs/method.md', note: 'primary method articulation' },
         { label: 'docs/articles.md', note: 'canonical article-line index' },
         { kind: 'group', label: 'doctrine docs', note: 'source-of-intent doctrine cluster + method spine', children: [
@@ -43,6 +59,7 @@ window.TREE_D02 = {
           { label: 'source-of-intent.md', note: 'operational / handling face' },
           { label: 'governance.md', note: 'governance architecture · rulemaking → verification → recourse' },
           { label: 'bounded-generativity.md', note: 'bounded discretion + functional judgment topology' },
+          { label: 'seed-mediated-generated-interface.md', note: 'SMGI doctrine — seed >> loading boundary >> grammar >> runtime; the two committed SMGI figures illustrate it' },
           { label: 'absorption-discipline.md' },
           { label: 'portable-definition-layer.md' },
           { label: 'relative-externality.md' },
@@ -65,8 +82,9 @@ window.TREE_D02 = {
       tag: 'ecology-ASK-EXTERNAL/ · method-ASK slice',
       children: [
         { label: 'method-ASK_grounding-note.md', note: 'root canonical' },
-        { label: 'sources of intent/', note: 'shared ecology intake', children: [
+        { label: 'sources of intent/', note: 'shared ecology INBOUND intake · genuinely inbound material only — NOT a core-repo routing bus (direct-core movement is a hard repo-boundary reset, not a -TBI ingestion event)', children: [
           { label: 'routed handoffs · -TBI = received, awaiting ingestion' },
+          { label: 'received records from separately-operated or walled surfaces' },
         ]},
         { label: 'scratch/', note: 'shared ecology operator scratch', children: [
           { label: 'topology drafts' },
@@ -81,13 +99,13 @@ window.TREE_D02 = {
       tag: 'operator-side · inherited by reference · not absorbed',
       children: [
         { label: 'ASK as source-of-intent principal', note: 'upstream normative authority' },
-        { label: 'personal-ASK/inheritable/', note: 'granted subtree · the only layer a capability-bearing tool can reach', children: [
+        { label: 'personal-ASK/inheritable/', note: 'external WALL-SAFE grant surface · the external read/folder grant reaches this subtree and NOTHING else · inherited by reference', children: [
           { label: 'context architecture ADR', note: 'cross-tool inheritance boundary' },
           { label: 'brand architecture', note: 'tier model authority' },
           { label: 'visual identity system', note: 'visual decisions authority' },
           { label: 'voice / style / typography' },
         ]},
-        { label: 'private layer structurally unreachable', note: 'lives outside the grant · only category names surface here' },
+        { label: 'household personal-context perimeter outside the external grant', note: 'two subject-owned instances · instance boundaries organize ownership / retrieval / maintenance / least-need access, NOT default confidentiality · WALL-BOUND content + confidential enclaves remain outside that grant · operator capability ≠ audience authority' },
       ],
     },
     {
@@ -102,12 +120,17 @@ window.TREE_D02 = {
     },
     {
       kind: 'section', label: 'downstream execution-protocol layer',
+      tag: 'downstream of method methodologically · yet the OWNER of the shared execution-protocol canonical that method consumes',
       children: [
-        { label: 'control-surface', note: 'execution-protocol repo · downstream of method-ASK', children: [
-          { label: 'AGENTS rules' },
-          { label: 'templates' },
-          { label: 'prompts', note: 'nudge ladder · critique cycle · instantiation' },
-          { label: 'examples', note: 'workflow-asset notes per project' },
+        { label: 'control-surface', note: 'execution-protocol repo · downstream of method-ASK · owns the shared execution-protocol canonical', children: [
+          { kind: 'group', label: 'protocol/ owner canonical', note: 'shared execution-protocol owner canonical · resolved consumers carry the applicable shared / profile bodies locally · live carrier / grant / visibility state lives in the protocol consumer ledger', children: [
+            { label: 'AGENTS.shared.md', note: 'authoritative shared rule body' },
+            { label: 'manifest.json', note: 'normative registry — ownership / scope / applicability / metadata · NOT live state' },
+            { label: 'profiles/ · fragments/ · check.sh', note: 'rule profiles · standing-grant body · deterministic validator (--local / --wave / --all)' },
+          ]},
+          { label: 'method-ASK resolves it locally', note: 'root AGENTS.md = resolved-local carrier (shared body + core-ecology profile + method-local delta) · direct-core repo-reset authority path' },
+          { label: 'protocol consumer ledger', note: 'live carrier / grant / visibility / propagation STATE · operator-side, not in this repo' },
+          { label: 'templates · prompts · examples', note: 'bootstrap shells · nudge ladder · critique cycle · per-project workflow notes' },
           { label: 'compact method bridge in docs/method.md' },
         ]},
       ],
@@ -117,7 +140,7 @@ window.TREE_D02 = {
       children: [
         { label: 'design-system-ASK', note: 'externalized ASK visual / aesthetic-intent implementation', children: [
           { label: 'Tier 1 + Tier 2 inherited by child surfaces by reference' },
-          { label: 'Tier 3 local to ASK', note: 'excluded from child surfaces' },
+          { label: 'Tier 3 instance identity', note: 'resolved locally by source-of-intent + brand distance (ASK-native · domain-partner · client) — not simply excluded' },
           { label: 'urban-observatory v1→v2 child proof', note: 'n=1 · observation-level per absorption-discipline.md' },
         ]},
       ],
@@ -126,8 +149,9 @@ window.TREE_D02 = {
       kind: 'section', label: 'downstream project pressure surfaces',
       tag: 'own absorption decisions',
       children: [
-        { label: 'asset-pipeline-ASK', note: 'mature single-node primary pressure surface' },
-        { label: 'urban-observatory', note: 'newer single-node · source-of-intent recovery pressure' },
+        { label: 'asset-pipeline-ASK', note: 'mature single-node primary pressure surface · separately operated under a standing GREEN maintenance grant' },
+        { label: 'urban-observatory', note: 'newer single-node · source-of-intent recovery pressure · separately operated under a standing GREEN maintenance grant' },
+        { label: 'personal-context-system', note: 'public scaffold · the SMGI proof surface (seed-mediated setup prompt >> working system) · direct-core consumer, but applicable-but-carrier-blocked for the shared protocol (no root AGENTS.md) — the proof role and the carrier hold are distinct' },
         { label: 'mazeASK', note: 'Model A working example', status: 'legacy' },
       ],
     },
@@ -149,6 +173,7 @@ window.TREE_D02 = {
         { label: 'rule may move downstream · payload may not' },
         { label: 'observation-level holds n=1 material', note: 'promotion awaits n=2 or strong structural argument' },
         { label: 'downstream absorbs from inside its own active project surface' },
+        { label: 'candidate absorption is recipient-owned', note: 'but deterministic GREEN conformance (protocol / design-system maintenance) may move directly under established jurisdiction — not everything routes as candidate material' },
       ],
     },
   ],
