@@ -2,9 +2,11 @@
 
    source-v2 (2026-07-20): dual-profile recomposition. ONE semantic model, two coordinate profiles
    selected by ?layout= — `screen` (default, compact-but-recomposed, 1440×900 read-all) and `page`
-   (~1900×1025, fills the 3840×2880 page; the committed dark mirror is generated from ?layout=page).
+   (the taller page-optimized composition that fills the 3840×2880 page below the chrome; the committed
+   dark mirror is generated from ?layout=page).
    Application became a two-part composition (elicitation card + boundary block) and Conformance was
-   deepened (taller gate, preserved high/solid vs fork low/dashed/exiting, behavioral test strip).
+   deepened (taller gate; preserved + violated share a top edge — preserved solid/wider and inside the
+   population, violated dashed/narrower and exiting — plus a behavioral test strip).
    Text, categories, held status, branch asymmetry, and typed relations are identical across profiles.
 
    Subject: the CATEGORY BOUNDARIES of the doctrine — what kind of thing each named
@@ -91,8 +93,9 @@
      fill the 3840×2880 page AND stay read-all at 1440×900. The SAME semantic model above is
      laid out under two coordinate profiles selected by ?layout= :
        screen (default) — compact-but-recomposed; 1440×900 stays read-all without zoom;
-       page            — ~1900×1025; spends the page height; the committed dark full-page mirror
-                          is generated from this profile (?layout=page&export=png).
+       page            — the taller page-optimized composition; spends the 3840×2880 page height
+                          below the chrome; the committed dark full-page mirror is generated from
+                          this profile (?layout=page&export=png).
      Text, categories, held status, branch asymmetry, and typed relations are IDENTICAL across
      profiles — only coordinates differ. The recomposition itself (Application's two cards,
      Conformance's deepened gate / outcomes / test-strip) is present in BOTH profiles. */
@@ -281,9 +284,11 @@
   }
 
   /* ===== 4 · CONFORMANCE — the membership gate =====
-     The outcomes are deliberately NOT peers: `preserved` sits high, solid and wider;
-     `violated` is dashed, set LOWER and narrower, and exits the region rather than
-     rejoining the centre. Fork-at-load is a failure state, not an alternate species. */
+     The outcomes are deliberately NOT peers, but they SHARE A TOP EDGE (vDy === pDy):
+     `preserved` is solid and wider and remains inside the population; `violated` is dashed,
+     narrower, and exits the region rather than rejoining the centre. The not-peers asymmetry
+     is carried by solid-vs-dashed + wider-vs-narrower + rejoin-vs-exit, not a vertical offset.
+     Fork-at-load is a failure state, not an alternate species. */
   {
     const r = RG.conf, k = PF.k;
     nodes.append(tag(r.x + 22, r.y + 22, M.conf.tag));
@@ -293,7 +298,7 @@
     nodes.append(note(r.x + 40, r.y + k.gNote, M.conf.gate.n));
     const gateBottom = r.y + k.gateDy + k.gateH;
 
-    // preserved — solid, HIGHER, wider
+    // preserved — solid, wider, shares its top edge with violated (inside the population)
     const PY = r.y + k.pDy;
     nodes.append(box(r.x + 22, PY, 404, k.pH));
     nodes.append(tag(r.x + 40, PY + 20, M.conf.ok.t));
@@ -303,7 +308,7 @@
     edges.append(line(`M ${r.x + 224} ${gateBottom} L ${r.x + 224} ${PY - 10}`));
     edges.append(headD(r.x + 224, PY - 2));
 
-    // violated / fork-at-load — dashed, LOWER, narrower, and exits the population
+    // violated / fork-at-load — dashed, narrower, shares its top edge with preserved but EXITS the population
     const VY = r.y + k.vDy, VM = VY + Math.round(k.vH / 2);
     nodes.append(box(r.x + 476, VY, 330, k.vH, 'node-box held'));
     nodes.append(tag(r.x + 494, VY + 20, M.conf.bad.t));
