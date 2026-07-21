@@ -105,13 +105,13 @@
   const PF = {
     screen: { topH:230, botH:300, rowGap:92, cbH:56, footGap:28, footH:98,
       m:{ hdr:58, i0:76, ip:42, bh:30, relB:24 },
-      a:{ cardDy:44, cardH:178, lblDy:74, n0:104, np:24, relDy:80, ruleDy:102, ng0:130 },
+      a:{ cardDy:44, cardH:154, lblDy:74, n0:104, np:24, relDy:80, ruleDy:102, ng0:130 },
       c:{ dialDy:46, dialH:62, lblDy:66, nDy:88, relDy:138, heldMargin:38, heldH:54 },
       k:{ gateDy:46, gateH:62, gLbl:66, gNote:88, pDy:128, pH:104, vDy:128, vH:86, supMargin:34, supP:18 },
       f:{ tagDy:22, i0:48, ip:18 } },
     page:   { topH:285, botH:355, rowGap:130, cbH:64, footGap:36, footH:112,
       m:{ hdr:66, i0:88, ip:48, bh:34, relB:26 },
-      a:{ cardDy:48, cardH:224, lblDy:82, n0:118, np:30, relDy:88, ruleDy:112, ng0:150 },
+      a:{ cardDy:48, cardH:196, lblDy:82, n0:118, np:30, relDy:88, ruleDy:112, ng0:150 },
       c:{ dialDy:54, dialH:72, lblDy:78, nDy:102, relDy:160, heldMargin:40, heldH:62 },
       k:{ gateDy:50, gateH:70, gLbl:73, gNote:97, pDy:150, pH:118, vDy:150, vH:98, supMargin:40, supP:20 },
       f:{ tagDy:24, i0:54, ip:20 } },
@@ -163,22 +163,34 @@
   nodes.append(box(CB.x, CB.y, CB.w, CB.h));
   nodes.append(lbl(CX, CY + 5, M.centre, 'node-label root', 'middle'));
 
-  /* typed relations — labelled ties, not directional runtime arrows */
-  edges.append(line(`M ${RG.mech.x + RG.mech.w} ${RG.mech.y + RG.mech.h} L ${CB.x} ${CB.y}`));
-  edges.append(line(`M ${RG.app.x} ${RG.app.y + RG.app.h} L ${CB.x + CB.w} ${CB.y}`));
-  edges.append(line(`M ${RG.ctrl.x + RG.ctrl.w} ${RG.ctrl.y} L ${CB.x} ${CB.y + CB.h}`));
-  edges.append(line(`M ${RG.conf.x} ${RG.conf.y} L ${CB.x + CB.w} ${CB.y + CB.h}`));
-  nodes.append(tag(CB.x - 8,  CB.y - 12, M.rels.mech, 'end'));
-  nodes.append(tag(CB.x + CB.w + 8, CB.y - 12, M.rels.app, 'start'));
-  nodes.append(tag(CB.x - 8,  CB.y + CB.h + 14, M.rels.ctrl, 'end'));
-  nodes.append(tag(CB.x + CB.w + 8, CB.y + CB.h + 14, M.rels.conf, 'start'));
+  /* typed relations — labelled ties, not directional runtime arrows. Each tie leaves a CB
+     corner and lands on the region edge facing the centre at the box's THIRD division — 1/3
+     of the box width in from the inner corner (the outer 2/3 point) — so the ties meet a
+     structural division of each big box rather than clustering at the corners. The relation
+     label sits just OUTSIDE its landing point (away from the centre), in the box↔centre gap,
+     so the tie never strikes through the text. */
+  const third = 1 / 3;
+  const mechLand = RG.mech.x + RG.mech.w * (1 - third), appLand = RG.app.x + RG.app.w * third;
+  const ctrlLand = RG.ctrl.x + RG.ctrl.w * (1 - third), confLand = RG.conf.x + RG.conf.w * third;
+  const gapTopY = (RG.mech.y + RG.mech.h + CB.y) / 2;      // mid of the top-row box↔CB gap
+  const gapBotY = (CB.y + CB.h + RG.ctrl.y) / 2;           // mid of the bottom-row CB↔box gap
+  edges.append(line(`M ${CB.x} ${CB.y} L ${mechLand} ${RG.mech.y + RG.mech.h}`));
+  edges.append(line(`M ${CB.x + CB.w} ${CB.y} L ${appLand} ${RG.app.y + RG.app.h}`));
+  edges.append(line(`M ${CB.x} ${CB.y + CB.h} L ${ctrlLand} ${RG.ctrl.y}`));
+  edges.append(line(`M ${CB.x + CB.w} ${CB.y + CB.h} L ${confLand} ${RG.conf.y}`));
+  nodes.append(tag(mechLand - 12, gapTopY, M.rels.mech, 'end'));
+  nodes.append(tag(appLand + 12,  gapTopY, M.rels.app, 'start'));
+  nodes.append(tag(ctrlLand - 12, gapBotY, M.rels.ctrl, 'end'));
+  nodes.append(tag(confLand + 12, gapBotY, M.rels.conf, 'start'));
 
   /* ===== 1 · MECHANISM — two parallel axis inventories, deliberately not a matrix ===== */
   {
     const r = RG.mech, m = PF.m;
     nodes.append(tag(r.x + 22, r.y + 22, M.mech.tag));
-    const AX = [{ c: M.mech.carrier, x: r.x + 22,  w: 360 },
-                { c: M.mech.runtime, x: r.x + 440, w: 380 }];
+    // two equal columns filling the region's inner band with symmetric 22px side insets
+    // (left col at +22, right col ending 22 from the region's right edge).
+    const AX = [{ c: M.mech.carrier, x: r.x + 22,  w: 379 },
+                { c: M.mech.runtime, x: r.x + 459, w: 379 }];
     AX.forEach(a => {
       nodes.append(lbl(a.x, r.y + m.hdr, a.c.h));
       a.c.items.forEach((t, i) => {
@@ -204,24 +216,28 @@
     const r = RG.app, a = PF.a;
     nodes.append(tag(r.x + 22, r.y + 22, M.app.tag));
     // left card — the elicitation cluster
-    nodes.append(box(r.x + 22, r.y + a.cardDy, 404, a.cardH));
+    nodes.append(box(r.x + 22, r.y + a.cardDy, 397, a.cardH));
     nodes.append(lbl(r.x + 44, r.y + a.lblDy, M.app.label));
     M.app.notes.forEach((t, i) => nodes.append(note(r.x + 44, r.y + a.n0 + i * a.np, t)));
-    // right boundary block — names purpose · not a carrier/runtime class
-    nodes.append(el('rect', { x: r.x + 448, y: r.y + a.cardDy, width: 390, height: a.cardH, rx: 12, ry: 12, class: 'flow-group' }));
-    nodes.append(note(r.x + 470, r.y + a.relDy, M.app.rel));
-    nodes.append(el('path', { class: 'section-rule', d: `M ${r.x + 470} ${r.y + a.ruleDy} L ${r.x + 816} ${r.y + a.ruleDy}` }));
+    // right boundary block — names purpose · not a carrier/runtime class. A PEER of the left
+    // card: identical container (node-box), identical width, symmetric side insets — the split
+    // is spatial only, the border carries no distinct meaning.
+    nodes.append(box(r.x + 441, r.y + a.cardDy, 397, a.cardH));
+    nodes.append(note(r.x + 463, r.y + a.relDy, M.app.rel));
+    nodes.append(el('path', { class: 'section-rule', d: `M ${r.x + 463} ${r.y + a.ruleDy} L ${r.x + 816} ${r.y + a.ruleDy}` }));
     M.app.neg.forEach((t, i) =>
-      nodes.append(note(r.x + 470, r.y + a.ng0 + i * a.np, t, 'start', 'node-note legacy')));
+      nodes.append(note(r.x + 463, r.y + a.ng0 + i * a.np, t, 'start', 'node-note legacy')));
   }
 
   /* ===== 3 · AUTHORED CONTROL — two landed dials, the third visibly HELD ===== */
   {
     const r = RG.ctrl, c = PF.c;
     nodes.append(tag(r.x + 22, r.y + 22, M.ctrl.tag));
+    // two dials, symmetric side insets: left at +22, right ending 22 from the region edge.
+    const dialW = 393;
     M.ctrl.dials.forEach((d, i) => {
-      const x = r.x + 22 + i * 430;
-      nodes.append(box(x, r.y + c.dialDy, 400, c.dialH));
+      const x = r.x + 22 + i * (dialW + 30);
+      nodes.append(box(x, r.y + c.dialDy, dialW, c.dialH));
       nodes.append(lbl(x + 18, r.y + c.lblDy, d.l));
       nodes.append(note(x + 18, r.y + c.nDy, d.n));
     });
