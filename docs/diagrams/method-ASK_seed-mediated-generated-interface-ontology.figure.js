@@ -161,17 +161,25 @@
     nodes.append(el('rect', { x:r.x, y:r.y, width:r.w, height:r.h, rx:12, ry:12, class:'flow-group' })));
 
   nodes.append(box(CB.x, CB.y, CB.w, CB.h));
-  // geometric centre: node-label carries dominant-baseline:middle, so y = box centre (CY);
-  // an earlier +5 nudge sat the root label low.
-  nodes.append(lbl(CX, CY, M.centre, 'node-label root', 'middle'));
+  // centre the label on the box: node-label is dominant-baseline:middle, but the glyph bbox is
+  // slightly asymmetric (ascenders vs the 'g' descender), so measure it and offset y so the
+  // rendered glyphs — not just the baseline — centre on the box (recomputed on fonts.ready).
+  const rootLbl = lbl(CX, CY, M.centre, 'node-label root', 'middle');
+  nodes.append(rootLbl);
+  function centerRoot() {
+    rootLbl.setAttribute('y', CY);
+    const bb = rootLbl.getBBox();
+    rootLbl.setAttribute('y', (CY + (CY - (bb.y + bb.height / 2))).toFixed(1));
+  }
+  centerRoot();
 
-  /* typed relations — labelled ties, not directional runtime arrows. Each tie leaves a CB
-     corner and lands on the region edge facing the centre at the box's THIRD division — 1/3
-     of the box width in from the inner corner (the outer 2/3 point). Each tie is ONE
-     continuous line; its label sits near the midpoint, nudged OUTWARD toward the landing and
-     off the line into the open centre band, so the line never crosses the text. The vertical
-     nudge is measured from the rendered label so the whole label (wide ones included) clears
-     the sloped tie; redrawn on fonts.ready so it stays exact once the embedded font loads. */
+  /* typed relations — labelled ties, not directional runtime arrows. Each tie is ONE
+     continuous line leaving a CB corner and landing on the region edge facing the centre at
+     the box's THIRD division (1/3 in from the inner corner). Each label RUNS ALONG its tie:
+     rotated to the tie's angle, centred on the tie's midpoint, and offset a few px
+     perpendicular (toward the open centre band) so it reads parallel to — and just off — the
+     continuous line. Text is oriented left→right so it stays upright. Recomputed on
+     fonts.ready so the perpendicular offset stays exact once the embedded font loads. */
   const third = 1 / 3;
   const RELTIES = [
     { x1: CB.x,        y1: CB.y,        x2: RG.mech.x + RG.mech.w * (1 - third), y2: RG.mech.y + RG.mech.h, rel: M.rels.mech },
@@ -184,18 +192,23 @@
   function drawRelations() {
     while (relEdges.firstChild) relEdges.removeChild(relEdges.firstChild);
     while (relLabels.firstChild) relLabels.removeChild(relLabels.firstChild);
+    const probe = tag(0, CY, 'Xg', 'middle'); relLabels.append(probe);
+    const bh = probe.getBBox().height; relLabels.removeChild(probe);
+    const dPerp = bh / 2 + 4;                          // offset just clear of the tie
     for (const t of RELTIES) {
       relEdges.append(line(`M ${t.x1} ${t.y1} L ${t.x2} ${t.y2}`));   // one continuous tie
       const midX = (t.x1 + t.x2) / 2, midY = (t.y1 + t.y2) / 2;
-      const lab = tag(midX + Math.sign(t.x2 - t.x1) * 24, midY, t.rel, 'middle');
+      // orient left→right so the rotated text reads upright along the tie
+      const [ax, ay, bx, by] = t.x1 <= t.x2 ? [t.x1, t.y1, t.x2, t.y2] : [t.x2, t.y2, t.x1, t.y1];
+      const dx = bx - ax, dy = by - ay, L = Math.hypot(dx, dy);
+      const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+      // unit perpendicular, flipped to point toward CY (into the open centre band)
+      let px = -dy / L, py = dx / L;
+      if (Math.sign(py) !== ((midY < CY) ? 1 : -1)) { px = -px; py = -py; }
+      const cx = midX + px * dPerp, cy = midY + py * dPerp;
+      const lab = tag(cx, cy, t.rel, 'middle');
+      lab.setAttribute('transform', `rotate(${angle.toFixed(2)} ${cx.toFixed(1)} ${cy.toFixed(1)})`);
       relLabels.append(lab);
-      const bb = lab.getBBox(), m = 6;
-      const yAt = (x) => t.y1 + (t.y2 - t.y1) * (x - t.x1) / (t.x2 - t.x1);
-      const edgeYs = [yAt(bb.x), yAt(bb.x + bb.width)];   // tie height across the label's span
-      const ly = (midY < CY)                              // top tie → clear below the line; bottom → above
-        ? Math.max(...edgeYs) + m + bb.height / 2
-        : Math.min(...edgeYs) - m - bb.height / 2;
-      lab.setAttribute('y', ly.toFixed(1));
     }
   }
   drawRelations();
@@ -365,7 +378,7 @@
     fit();
     const fonts = document.fonts;
     if (fonts && fonts.ready && typeof fonts.ready.then === 'function') {
-      fonts.ready.then(() => { drawRelations(); fit(); }).catch(() => {});
+      fonts.ready.then(() => { drawRelations(); centerRoot(); fit(); }).catch(() => {});
     }
     window.addEventListener('resize', fit);
     const zi=document.getElementById('zoomIn'), zo=document.getElementById('zoomOut'), zf=document.getElementById('zoomFit');
