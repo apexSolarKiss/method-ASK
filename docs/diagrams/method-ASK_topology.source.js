@@ -9,9 +9,11 @@
    RESOLVED-LOCAL consumer of the control-surface-owned execution-protocol canonical
    (direct-core repo-reset authority): its root AGENTS.md resolves the shared rule body +
    core-ecology profile + method-local delta. The downstream execution-protocol layer now
-   distinguishes the four separate carriers — protocol/ (owner canonical) · AGENTS.shared.md
-   (authoritative shared rule body) · manifest.json (normative registry, NOT live state) · the
-   protocol consumer ledger (live carrier / grant / visibility / propagation state). Adds
+   distinguishes four DISTINCT artifacts / planes (NOT four carriers — protocol/ is the owner
+   canonical, the resolved AGENTS.md files are the carriers): protocol/ (owner canonical) ·
+   AGENTS.shared.md (authoritative shared rule body) · manifest.json (normative registry, NOT
+   live state) · the protocol consumer ledger (live carrier / grant / visibility / propagation
+   state plane). Adds
    seed-mediated-generated-interface.md to the doctrine cluster + personal-context-system as
    the public SMGI proof scaffold (applicable-but-carrier-blocked for protocol). Tier 3 restated
    as resolved locally by source-of-intent + brand distance. Absorption rule qualified (recipient
@@ -80,8 +82,9 @@ window.TREE_D02 = {
       tag: 'ecology-ASK-EXTERNAL/ · method-ASK slice',
       children: [
         { label: 'method-ASK_grounding-note.md', note: 'root canonical' },
-        { label: 'sources of intent/', note: 'shared ecology intake', children: [
+        { label: 'sources of intent/', note: 'shared ecology INBOUND intake · genuinely inbound material only — NOT a core-repo routing bus (direct-core movement is a hard repo-boundary reset, not a -TBI ingestion event)', children: [
           { label: 'routed handoffs · -TBI = received, awaiting ingestion' },
+          { label: 'received records from separately-operated or walled surfaces' },
         ]},
         { label: 'scratch/', note: 'shared ecology operator scratch', children: [
           { label: 'topology drafts' },
@@ -96,13 +99,13 @@ window.TREE_D02 = {
       tag: 'operator-side · inherited by reference · not absorbed',
       children: [
         { label: 'ASK as source-of-intent principal', note: 'upstream normative authority' },
-        { label: 'personal-ASK/inheritable/', note: 'the external WALL-SAFE granted subtree · the only layer a capability-bearing tool can reach · inherited by reference', children: [
+        { label: 'personal-ASK/inheritable/', note: 'external WALL-SAFE grant surface · the external read/folder grant reaches this subtree and NOTHING else · inherited by reference', children: [
           { label: 'context architecture ADR', note: 'cross-tool inheritance boundary' },
           { label: 'brand architecture', note: 'tier model authority' },
           { label: 'visual identity system', note: 'visual decisions authority' },
           { label: 'voice / style / typography' },
         ]},
-        { label: 'private layer outside the grant', note: 'the household personal-context perimeter lives beyond inheritable/ · out of tool reach · only category names surface here (structural, not conventional)' },
+        { label: 'household personal-context perimeter outside the external grant', note: 'two subject-owned instances · instance boundaries organize ownership / retrieval / maintenance / least-need access, NOT default confidentiality · WALL-BOUND content + confidential enclaves remain outside that grant · operator capability ≠ audience authority' },
       ],
     },
     {
@@ -120,7 +123,7 @@ window.TREE_D02 = {
       tag: 'downstream of method methodologically · yet the OWNER of the shared execution-protocol canonical that method consumes',
       children: [
         { label: 'control-surface', note: 'execution-protocol repo · downstream of method-ASK · owns the shared execution-protocol canonical', children: [
-          { kind: 'group', label: 'protocol/ owner canonical', note: 'the shared execution-protocol carrier control-surface owns', children: [
+          { kind: 'group', label: 'protocol/ owner canonical', note: 'shared execution-protocol owner canonical · resolved consumers carry the applicable shared / profile bodies locally · live carrier / grant / visibility state lives in the protocol consumer ledger', children: [
             { label: 'AGENTS.shared.md', note: 'authoritative shared rule body' },
             { label: 'manifest.json', note: 'normative registry — ownership / scope / applicability / metadata · NOT live state' },
             { label: 'profiles/ · fragments/ · check.sh', note: 'rule profiles · standing-grant body · deterministic validator (--local / --wave / --all)' },
