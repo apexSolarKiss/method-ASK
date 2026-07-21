@@ -106,14 +106,14 @@
     screen: { topH:230, botH:300, rowGap:92, cbH:56, footGap:28, footH:98,
       m:{ hdr:58, i0:76, ip:42, bh:30, relB:24 },
       a:{ cardDy:44, cardH:178, lblDy:74, n0:104, np:24, relDy:80, ruleDy:102, ng0:130 },
-      c:{ dialDy:46, dialH:54, lblDy:74, nDy:96, relDy:138, heldMargin:38, heldH:54 },
-      k:{ gateDy:46, gateH:54, gLbl:70, gNote:94, pDy:128, pH:104, vDy:128, vH:86, supMargin:34, supP:18 },
+      c:{ dialDy:46, dialH:62, lblDy:66, nDy:88, relDy:138, heldMargin:38, heldH:54 },
+      k:{ gateDy:46, gateH:62, gLbl:66, gNote:88, pDy:128, pH:104, vDy:128, vH:86, supMargin:34, supP:18 },
       f:{ tagDy:22, i0:48, ip:18 } },
     page:   { topH:285, botH:355, rowGap:130, cbH:64, footGap:36, footH:112,
       m:{ hdr:66, i0:88, ip:48, bh:34, relB:26 },
       a:{ cardDy:48, cardH:224, lblDy:82, n0:118, np:30, relDy:88, ruleDy:112, ng0:150 },
-      c:{ dialDy:54, dialH:62, lblDy:82, nDy:104, relDy:160, heldMargin:40, heldH:62 },
-      k:{ gateDy:50, gateH:60, gLbl:76, gNote:100, pDy:150, pH:118, vDy:150, vH:98, supMargin:40, supP:20 },
+      c:{ dialDy:54, dialH:72, lblDy:78, nDy:102, relDy:160, heldMargin:40, heldH:62 },
+      k:{ gateDy:50, gateH:70, gLbl:73, gNote:97, pDy:150, pH:118, vDy:150, vH:98, supMargin:40, supP:20 },
       f:{ tagDy:24, i0:54, ip:20 } },
   }[LAYOUT];
   const W = 1900;
@@ -184,7 +184,9 @@
       a.c.items.forEach((t, i) => {
         const y = r.y + m.i0 + i * m.ip;
         nodes.append(box(a.x, y, a.w, m.bh));
-        nodes.append(note(a.x + 12, y + Math.round(m.bh * 0.68), t));
+        // single-line axis label: node-note carries dominant-baseline:middle, so the true
+        // geometric centre is y + bh/2 (an earlier bh*0.68 sat the text ~0.18·bh low).
+        nodes.append(note(a.x + 12, y + m.bh / 2, t));
       });
     });
     const midY = r.y + m.i0 + m.ip + m.bh / 2;
