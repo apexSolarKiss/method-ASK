@@ -53,6 +53,8 @@ The durable object is the structured statement of:
 
 **Applicability is relational, not a sixth facet.** It binds a claim or reference to the object, project, scale, or decision context it may describe or govern. Authentic source, correct provenance, and adequate basis do not by themselves establish that the material is attached to the right object. Where one context substrate spans several objects, the portable definition layer must preserve that relation; its carrier and enforcement mechanism are implementation-specific. This primitive is not a multi-object scope protocol.
 
+**Precedence ≠ applicability.** Precedence may resolve competing claims after their applicability has been established; it cannot establish which object, project, scale, or decision context a claim belongs to.
+
 These are what must survive a tool swap intact. The renderer, the base model, the pipeline, the interpretive surface are all replaceable; the definition layer is the object they are *about*.
 
 ## Worked instances (one implemented, one conceptual — across system kinds)
