@@ -165,23 +165,37 @@
 
   /* typed relations — labelled ties, not directional runtime arrows. Each tie leaves a CB
      corner and lands on the region edge facing the centre at the box's THIRD division — 1/3
-     of the box width in from the inner corner (the outer 2/3 point) — so the ties meet a
-     structural division of each big box rather than clustering at the corners. The relation
-     label sits just OUTSIDE its landing point (away from the centre), in the box↔centre gap,
-     so the tie never strikes through the text. */
+     of the box width in from the inner corner (the outer 2/3 point). The relation label sits
+     at the tie's MIDPOINT; the tie is drawn as TWO segments that stop short of the label on
+     either side, so the line reads as passing behind the label with no strike-through. The
+     gap is measured from the rendered label and redrawn on fonts.ready, so it stays exact
+     once the embedded font loads. */
   const third = 1 / 3;
-  const mechLand = RG.mech.x + RG.mech.w * (1 - third), appLand = RG.app.x + RG.app.w * third;
-  const ctrlLand = RG.ctrl.x + RG.ctrl.w * (1 - third), confLand = RG.conf.x + RG.conf.w * third;
-  const gapTopY = (RG.mech.y + RG.mech.h + CB.y) / 2;      // mid of the top-row box↔CB gap
-  const gapBotY = (CB.y + CB.h + RG.ctrl.y) / 2;           // mid of the bottom-row CB↔box gap
-  edges.append(line(`M ${CB.x} ${CB.y} L ${mechLand} ${RG.mech.y + RG.mech.h}`));
-  edges.append(line(`M ${CB.x + CB.w} ${CB.y} L ${appLand} ${RG.app.y + RG.app.h}`));
-  edges.append(line(`M ${CB.x} ${CB.y + CB.h} L ${ctrlLand} ${RG.ctrl.y}`));
-  edges.append(line(`M ${CB.x + CB.w} ${CB.y + CB.h} L ${confLand} ${RG.conf.y}`));
-  nodes.append(tag(mechLand - 12, gapTopY, M.rels.mech, 'end'));
-  nodes.append(tag(appLand + 12,  gapTopY, M.rels.app, 'start'));
-  nodes.append(tag(ctrlLand - 12, gapBotY, M.rels.ctrl, 'end'));
-  nodes.append(tag(confLand + 12, gapBotY, M.rels.conf, 'start'));
+  const RELTIES = [
+    { x1: CB.x,        y1: CB.y,        x2: RG.mech.x + RG.mech.w * (1 - third), y2: RG.mech.y + RG.mech.h, rel: M.rels.mech },
+    { x1: CB.x + CB.w, y1: CB.y,        x2: RG.app.x  + RG.app.w * third,        y2: RG.app.y  + RG.app.h,  rel: M.rels.app  },
+    { x1: CB.x,        y1: CB.y + CB.h, x2: RG.ctrl.x + RG.ctrl.w * (1 - third), y2: RG.ctrl.y,             rel: M.rels.ctrl },
+    { x1: CB.x + CB.w, y1: CB.y + CB.h, x2: RG.conf.x + RG.conf.w * third,       y2: RG.conf.y,             rel: M.rels.conf },
+  ];
+  const relEdges = el('g', { class: 'edges' }); edges.append(relEdges);
+  const relLabels = el('g', { class: 'nodes' }); nodes.append(relLabels);
+  function drawRelations() {
+    while (relEdges.firstChild) relEdges.removeChild(relEdges.firstChild);
+    while (relLabels.firstChild) relLabels.removeChild(relLabels.firstChild);
+    for (const t of RELTIES) {
+      const midX = (t.x1 + t.x2) / 2, midY = (t.y1 + t.y2) / 2;
+      const lab = tag(midX, midY, t.rel, 'middle');
+      relLabels.append(lab);
+      const bb = lab.getBBox(), padX = 7;
+      const gL = bb.x - padX, gR = bb.x + bb.width + padX;
+      const yAt = (x) => t.y1 + (t.y2 - t.y1) * (x - t.x1) / (t.x2 - t.x1);
+      // each half stops at the gap edge it actually reaches (ties run both L→R and R→L)
+      const s1 = t.x1 < midX ? gL : gR, s2 = t.x2 < midX ? gL : gR;
+      relEdges.append(line(`M ${t.x1} ${t.y1} L ${s1.toFixed(1)} ${yAt(s1).toFixed(1)}`));
+      relEdges.append(line(`M ${s2.toFixed(1)} ${yAt(s2).toFixed(1)} L ${t.x2} ${t.y2}`));
+    }
+  }
+  drawRelations();
 
   /* ===== 1 · MECHANISM — two parallel axis inventories, deliberately not a matrix ===== */
   {
@@ -348,7 +362,7 @@
     fit();
     const fonts = document.fonts;
     if (fonts && fonts.ready && typeof fonts.ready.then === 'function') {
-      fonts.ready.then(fit).catch(() => {});
+      fonts.ready.then(() => { drawRelations(); fit(); }).catch(() => {});
     }
     window.addEventListener('resize', fit);
     const zi=document.getElementById('zoomIn'), zo=document.getElementById('zoomOut'), zf=document.getElementById('zoomFit');
