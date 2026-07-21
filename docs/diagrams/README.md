@@ -73,14 +73,16 @@ The SMGI doctrine figure remains `source-v1 // render-v1`; the ontology figure i
 
 ## Lineage
 
-This diagram was rendered as part of the v9 operator-side `ecology-ASK` diagram package and absorbed here at `source-v2 // render-v9`. Future refreshes will bump the render version and may bump the source version if the tree data changes.
+This diagram originated in the v9 operator-side `ecology-ASK` diagram package and was first absorbed here at `source-v2 // render-v9`.
+
+The current tuple is `source-v6 // render-v20` (2026-07-21). Source advances when the authored topology changes; render advances only when the renderer realization changes.
 
 The operator-side package and historical render iterations remain in `ecology-ASK-EXTERNAL/scratch/` and are not repo truth.
 
 ## What this folder does not carry
 
 - `TREE_D01` (control-surface architecture tree) — lives in [`apexSolarKiss/control-surface/docs/diagrams/`](https://github.com/apexSolarKiss/control-surface/tree/main/docs/diagrams)
-- `TREE_D03` (ecology-ASK overall) — operator-side only; not authorized for any repo absorption (the ecology view includes operator-side context substrate)
+- `TREE_D03` (system-ASK topology) — operator-side only; not authorized for any repo absorption (the ecology view includes operator-side context substrate)
 - Operator-side context architecture payload (private; conform by reference, do not absorb)
 - `design-system-ASK` Tier 3 instance identity (logo, wordmark, ASK chrome) — excluded by Tier model
 - Runtime dynamic import from `design-system-ASK` CSS (no; conform at generation time)
