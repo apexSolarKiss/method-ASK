@@ -20,14 +20,14 @@ Linked ASK repos are citations to worked examples, lineage surfaces, or layer re
 
 ## Status
 
-`docs/method.md` carries the primary method articulation. Standalone doctrine docs and method-altitude worked-example explanations have landed in `docs/` and `examples/`; the article-line index lives at `docs/articles.md`. An illustrative topology / relative-externality diagram has landed in [`docs/diagrams/`](docs/diagrams/); the diagram is illustrative, and repo prose remains source truth. Lineage remains a candidate for later PRs as substrate earns it.
+`docs/method.md` carries the primary method articulation. Standalone doctrine docs and method-altitude worked-example explanations have landed in `docs/` and `examples/`; the article-line index lives at `docs/articles.md`. Illustrative diagrams have landed in [`docs/diagrams/`](docs/diagrams/) — a topology / relative-externality map, and doctrine figures for bounded generativity and the seed-mediated generated interface (doctrine + ontology); the diagrams are illustrative, and repo prose remains source truth. Lineage remains a candidate for later PRs as substrate earns it.
 
 ## Repo contents
 
 - `AGENTS.md` — repo-local workflow rules
 - `docs/method.md` — primary method articulation
 - `docs/` — standalone method doctrine and the article-line index
-- `docs/diagrams/` — illustrative diagrams (`method-ASK_topology.html`); not source truth
+- `docs/diagrams/` — illustrative diagrams (topology; bounded generativity; seed-mediated generated interface + ontology); not source truth
 - `examples/` — worked-example explanations at method altitude
 
 ## Anchor reading

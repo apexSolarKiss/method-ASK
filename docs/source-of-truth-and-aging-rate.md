@@ -92,8 +92,8 @@ The rule is a tripwire, not a ceremony. Most material answers the first three qu
 
 This doctrine should be superseded by:
 
-- a future `docs/relative-externality.md` if the surface-topology pieces (the core split, the boundary with adjacent surfaces, the recursive externality relationships) earn a more focused home there and this doc compresses toward the aging-rate and authority-assignment substrate
-- a future `docs/voice-surface-boundary.md` if the doctrine's failure-mode treatment for voice-bearing surfaces (article-as-spec confusion, summary-as-authority drift) earns specific treatment in that doc
+- `docs/relative-externality.md` if the surface-topology pieces (the core split, the boundary with adjacent surfaces, the recursive externality relationships) earn a more focused home there and this doc compresses toward the aging-rate and authority-assignment substrate
+- `docs/voice-surface-boundary.md` if the doctrine's failure-mode treatment for voice-bearing surfaces (article-as-spec confusion, summary-as-authority drift) earns specific treatment in that doc
 - compression into `docs/absorption-discipline.md` if the surface-split topology folds into absorption-discipline's §Layer destinations as the routing surface, and the aging-rate principle compresses into a shorter cross-reference
 - a future `docs/layer-classification.md` if multiple downstream projects produce enough surface-routing decisions to justify a more formal central routing doc that absorbs both this doc's surface split and the source-of-intent grounding-note refresh preflight
 
