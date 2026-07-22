@@ -276,7 +276,7 @@ This doctrine should be superseded by:
 - a future `docs/external-handoff-classification.md` if the now-promoted external/domain-authority handoff rule outgrows this doctrine's category distinctions and earns its own first-class home on separability grounds — a heavier threshold than the rule-level promotion already made
 - splitting-out of the validation-loop discipline into its own doc if validation-pattern substrate accumulates beyond what this doctrine can carry
 - broader refactoring if the category distinctions earn their own home (e.g., `docs/category-distinctions.md`) and source-of-intent contracts to a thinner doctrine that references it
-- a future `docs/layer-classification.md` or `docs/absorption-discipline.md` if the grounding-note refresh preflight subsection grows into a broader treatment that absorbs it
+- a future `docs/layer-classification.md`, or `docs/absorption-discipline.md`, if the grounding-note refresh preflight subsection grows into a broader treatment that absorbs it
 
 The doctrine is not finished. The eight-category distinction may refine as more pressure surfaces. The operator-grounding-note extension may earn fuller treatment if the operator-side architecture becomes method-relevant in its own right (rather than as adjacent pressure). The external/domain-authority handoff classification has been promoted to rule-level doctrine on the structural-argument exception; its remaining open move is the separability-driven split into its own doc, not a further promotion.
 

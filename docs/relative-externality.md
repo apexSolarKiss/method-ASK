@@ -149,7 +149,7 @@ This doctrine should be superseded by:
 
 - a formal topology diagram if textual map proves insufficient for navigating the relations (currently the map is textual by design; a diagram earns a home only if it improves operational clarity over prose)
 - compression into `docs/source-of-truth-and-aging-rate.md` if the surface-authority material there absorbs most of the topology substrate this doc carries
-- a future `docs/voice-surface-boundary.md` if the rule/payload subtype (the most specific failure-mode pattern here, around payload not crossing surface boundaries) earns its own focused treatment
+- `docs/voice-surface-boundary.md` if the rule/payload subtype (the most specific failure-mode pattern here, around payload not crossing surface boundaries) earns its own focused treatment
 - a more formal cross-repo externality taxonomy if multiple ASK-family child projects produce enough inheritance cases to justify a structured surface-relationship matrix (currently n=1 cross-repo inheritance proof from [`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) → UO; promotion to formal taxonomy waits for n=2)
 - a future `docs/layer-classification.md` if the routing/topology pieces from this doc, `docs/source-of-intent.md` (grounding-note refresh preflight), and `docs/source-of-truth-and-aging-rate.md` (surface split) consolidate into a central routing doc
 
