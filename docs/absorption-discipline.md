@@ -69,6 +69,24 @@ Observation-level material does not have to be small. A subsection-length treatm
 
 `docs/source-of-intent.md` carried the external / domain-authority handoff classification at observation-level until it was promoted to rule-level doctrine on the structural-argument branch of the evidence threshold — the pressure follows from the architect/operator vs domain-authority role split itself, not from any one project's local mechanics. Its remaining open move is a separate, heavier one: its own first-class doc on separability grounds, if it outgrows this discipline's category distinctions.
 
+## Reconciliation after absorption
+
+§Evidence thresholds and §Observation-level material govern when material earns a more durable home and how this repo carries what has not yet earned it. This section governs the inverse, equally load-bearing move: what happens to the *source* artifact once an operative claim has moved to a more durable owner. Absorption relocates ownership; it does not, by itself, retire the source.
+
+The core rule:
+
+> **Reconciliation after absorption.** Absorption changes the durable owner of a claim; it does not, by itself, determine the source artifact's fate. Reconcile at claim level. Before pruning, compacting, repointing, or retiring source material, verify that an equal-or-stronger durable owner has landed; that the owner is reachable through the consumer's normal read path; that provenance direction is established; and that surviving residue is classified. Preserve origin, incident, refusal, worked-example, local-exception, tool-calibration, and anti-re-derivation payload that the owner omits by design. An unchanged dependent artifact may become stale when its owner changes. Reopen only the affected claims rather than relitigating the whole artifact.
+
+Claim level, not artifact level. A single source artifact can hold several claims at once — a shared rule, a local exception, current state, and provenance — each with its own disposition. When an owner changes, reopen only claims whose authority, force, or retrieval depends on that owner; do not relitigate unrelated claims merely because one dependency changed. After reconciliation, the source must not continue to present the absorbed claim as current authority: repoint it to the durable owner, scope it as a local exception, or mark retained language as historical.
+
+Direction before deduplication. A near-duplicate of an owner is not automatically a redundant copy: it may be the *origin* record the owner was derived from. Establish provenance direction first — retiring an origin record as if it were a later duplicate destroys the lineage the owner depends on.
+
+Landing is not reaching. The four checks are gates, not a checklist passed mechanically. An owner that has landed but is not reachable through the consumer's normal read path has not completed the reconciliation; and staleness is relational — a dependent artifact may become stale without changing bytes when its owner changes.
+
+Residue is not redundancy. The payload an owner omits by design — origin, incident, refusal, worked-example, local-exception, tool-calibration, anti-re-derivation — is not made redundant when the generalized rule lands upstream. Preserving it is why a correct reconciliation may retire nothing at the artifact level even after the operative rule has moved.
+
+This is a refinement of the existing discipline, not a new primitive. §Evidence thresholds governs promotion *into* a more durable owner and is left untouched — the n=1 default and the structural-argument exception still hold; this section governs the source *after* promotion. One failure mode this section prevents is the existing §Failure modes › lossy supersession: a supersede-and-discard operation that sheds load-bearing residue. Unreachable ownership, reversed provenance, and competing current claims are additional reconciliation failures.
+
 ## Self-diagnostic nomination
 
 When the active control surface notices a routing or operational behavior recurring across surfaces, it should nominate the behavior as a candidate protocol rather than silently keep using it. Nomination is not promotion. The system does not promote the behavior on its own; ASK decides whether the noticing matters and what surface it belongs to.
