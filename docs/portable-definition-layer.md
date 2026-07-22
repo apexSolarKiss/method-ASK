@@ -84,6 +84,7 @@ This doc lands the **method primitive, not an implementation protocol.** It name
 
 - **Method-level, not project-specific.** AP is one implemented instance; UO is a conceptual second on the durability axis. Both cited as instances, **not dependencies or imports**.
 - **This defines the primitive; it authorizes nothing operational.** No schema, no project migration, no client doctrine, no implementation, no downstream repo mutation. No UO adoption claim; no "built second instance" claim.
+- **Auditability and accountability ≠ verification discipline.** Auditability and accountability are properties the durable object must preserve. The execution-time instruments, checks, and review procedures that test whether those properties are satisfied are not themselves facets or instances of the Portable Definition Layer; they belong to the verification discipline. A verification system may enforce or evaluate a portable definition layer without becoming the durable object it tests.
 - **It does not import bounded generativity's mechanics.** The durability axis is separable from generation; an interpretive instance carries no candidate-generation, creative-selection, or variance management.
 - **Source-of-intent remains human.** What the definition layer *means*, and what counts as a governed artifact-or-interpretation worth preserving, is the operator's — not produced by any tool.
 
