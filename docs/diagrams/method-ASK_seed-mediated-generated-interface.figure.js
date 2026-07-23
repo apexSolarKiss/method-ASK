@@ -82,6 +82,7 @@
   const COL = [612, 928, 1244, 1560];
   const NW = 252;                    // node width
   const H2 = 58, H3 = 78;            // two-line / three-line node heights
+  const BRK_Y = YM - 74;             // authority/governance bracket level — shared by the conforming-path header
 
   /* ===== authored seed — single origin, NEUTRAL ===== */
   nodes.append(box(126, SPINE - H3/2, 254, H3));
@@ -92,22 +93,25 @@
   edges.append(headR(BX - 12, SPINE));
 
   /* ===== the loading boundary — the seam this figure exists to show ===== */
-  edges.append(el('path', { class:'section-rule', d:`M ${BX} ${YM - 108} L ${BX} ${YF + 112}`, 'stroke-dasharray':'3 4' }));
+  /* The dashed seam starts BELOW its question caption so no text crosses the rule. */
+  edges.append(el('path', { class:'section-rule', d:`M ${BX} ${YM - 84} L ${BX} ${YF + 112}`, 'stroke-dasharray':'3 4' }));
   nodes.append(tag(BX, YM - 122, M.bound.tag));
   nodes.append(note(BX, YM - 104, M.bound.q, 'middle'));
 
-  /* branch out of the boundary: up = conforming, down = fork (broken continuity) */
-  edges.append(line(`M ${BX} ${SPINE} C ${BX+52} ${SPINE}, ${BX+52} ${YM}, ${COL[0]-16} ${YM}`));
+  /* Branch out of the boundary: up = conforming, down = fork (broken continuity).
+     Orthogonal (cartesian) split — a straight stub out of the seam, then a right-angle
+     riser to each branch line — rather than a curve. */
+  edges.append(line(`M ${BX} ${SPINE} L ${BX+52} ${SPINE} L ${BX+52} ${YM} L ${COL[0]-16} ${YM}`));
   edges.append(headR(COL[0] - 12, YM));
-  edges.append(line(`M ${BX} ${SPINE} C ${BX+52} ${SPINE}, ${BX+52} ${YF}, ${COL[0]-16} ${YF}`, 'edge held'));
+  edges.append(line(`M ${BX} ${SPINE} L ${BX+52} ${SPINE} L ${BX+52} ${YF} L ${COL[0]-16} ${YF}`, 'edge held'));
   edges.append(headR(COL[0] - 12, YF, 'edge-arrowhead held'));
 
-  /* Branch tags are RIGHT-anchored to end before the first node box of their branch.
-     Left-anchored at BX+74 they ran 90px (conforming) and 38px (fork) into those boxes —
-     visible in the exported raster, invisible to bbox checks, since a text node
-     overlapping a rect is not an overflow. */
-  nodes.append(tag(COL[0] - 16, YM - 26, M.conformTag, 'end'));
-  nodes.append(el('text', { x: COL[0] - 16, y: YF + 34, class:'flow-tag node-label-held', 'text-anchor':'end' }, [M.forkTag]));
+  /* Branch tags read as path HEADERS, centred over the first node box of each branch:
+     "conforming instance" rises to the authority/governance bracket level (BRK_Y), so it
+     reads as the conforming path's header — parallel to that bracket — and breathes clear
+     of the grammar box; "fork-at-load" sits centred below the seed-demoted box. */
+  nodes.append(tag(COL[0] + NW/2, BRK_Y, M.conformTag, 'middle'));
+  nodes.append(el('text', { x: COL[0] + NW/2, y: YF + 58, class:'flow-tag node-label-held', 'text-anchor':'middle' }, [M.forkTag]));
 
   /* ===== conforming branch — NEUTRAL, except the licensed legislative grammar box ===== */
   // 1 · grammar (LEGISLATIVE — doctrine: the grammar grants the aperture)
@@ -135,8 +139,8 @@
     edges.append(headR(COL[i+1] - 12, YM));
   }
 
-  /* authority + governance sit OUTSIDE the generated thread — dashed bracket above */
-  const BRK_Y = YM - 74;
+  /* authority + governance sit OUTSIDE the generated thread — dashed bracket above.
+     BRK_Y is defined with the grid; the conforming-path header shares that level. */
   edges.append(line(`M ${COL[1]} ${BRK_Y+14} L ${COL[1]} ${BRK_Y} L ${COL[3]+NW} ${BRK_Y} L ${COL[3]+NW} ${BRK_Y+14}`, 'edge held'));
   /* Both labels sit CLEAR ABOVE the bracket rule. .node-note is dominant-baseline:middle,
      so a note at BRK_Y-4 centres 4px above the rule and its body crosses it — which
