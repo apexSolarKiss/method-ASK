@@ -2,7 +2,13 @@
    Source data for the method-ASK topology / relative-externality map diagram.
    Renderable by diagrams-static-H-engine.js.
 
-   D02 // method-ASK topology / relative-externality map // source-v6 // 2026-07-21
+   D02 // method-ASK topology / relative-externality map // source-v7 // 2026-07-25
+   v7 (2026-07-25): operating-model current truth. The retired "single-node" label is
+   removed from the relay/execution topology and the downstream pressure surfaces; the
+   active control-surface node becomes the execution surface of the ASK-apexed
+   advisor-executor topology (the advisor-surface node already existed). mazeASK is
+   restated as a dormant historical origin case rather than a Model A working example.
+   Content-only; render held render-v20.
    v6 (2026-07-21): ecology-state scrub to the landed shared-protocol architecture.
    Corrects the stale renderer comment (diagrams-engine.js -> diagrams-static-H-engine.js)
    and the D03 name (ecology-ASK overall -> system-ASK topology). method-ASK is a
@@ -114,7 +120,7 @@ window.TREE_D02 = {
       children: [
         { label: 'ASK as relay / mediation operator', note: 'conduit · adopts advisor output into operative direction' },
         { label: 'advisor surface', note: 'GPT / Claude chat outside execution thread · no repo-write authority' },
-        { label: 'active control surface', note: 'Claude Code in single-node mode · executor' },
+        { label: 'execution surface', note: 'Claude Code · repo-attached executor · single-writer-per-branch' },
         { label: 'operative relay = adoption event', note: 'not all forwarding · fix-direction / question-forwarding / classification ≠ adoption' },
       ],
     },
@@ -149,10 +155,10 @@ window.TREE_D02 = {
       kind: 'section', label: 'downstream project pressure surfaces',
       tag: 'own absorption decisions',
       children: [
-        { label: 'asset-pipeline-ASK', note: 'mature single-node primary pressure surface · separately operated under a standing GREEN maintenance grant' },
-        { label: 'urban-observatory', note: 'newer single-node · source-of-intent recovery pressure · separately operated under a standing GREEN maintenance grant' },
+        { label: 'asset-pipeline-ASK', note: 'mature primary pressure surface · separately operated under a standing GREEN maintenance grant' },
+        { label: 'urban-observatory', note: 'newer · source-of-intent recovery pressure · separately operated under a standing GREEN maintenance grant' },
         { label: 'personal-context-system', note: 'public scaffold · the SMGI proof surface (seed-mediated setup prompt >> working system) · direct-core consumer, but applicable-but-carrier-blocked for the shared protocol (no root AGENTS.md) — the proof role and the carrier hold are distinct' },
-        { label: 'mazeASK', note: 'Model A working example', status: 'legacy' },
+        { label: 'mazeASK', note: 'dormant historical origin case · retired split-execution generation', status: 'legacy' },
       ],
     },
     {
