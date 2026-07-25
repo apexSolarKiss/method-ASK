@@ -194,15 +194,15 @@ The lifecycle:
 4. The recipient active surface's **first action, before any classification or absorption work begins, is to rename the file in place to remove `-TBI`.** Rename only. The rename is the *ingested* signal; it records nothing about what was absorbed, held, rejected, routed, or superseded.
 5. The recipient surface **then** classifies the memo per §Category distinctions and `docs/absorption-discipline.md` — **absorb / hold / reject / route-elsewhere / withdraw / no-route.** Classification is a separate, recipient-owned decision that follows the rename; it is never a precondition of it.
 6. If the memo produces any durable action, a held disposition, or a rejection, a separate dated closure memo in `scratch/` (`scratch/*_absorption.md`) is **required** — it is the closure record: classification, actions, non-actions, remaining held items. **A rename is not a closure record:** a memo that changes durable state but leaves only a renamed file (plus an ephemeral chat summary) is not closed until the separate closure memo exists.
-7. The recipient adds a **minimal status/receipt line** to the top of the received handoff pointing to the closure memo — e.g. `status: INGESTED // absorbed by <closure memo path> on <date>` or `status: INGESTED // HELD, see <closure memo path>`. This is a receipt annotation, not the closure body.
-8. The **body** of the received handoff remains the received record — not rewritten, re-argued, or replaced. The status line makes the file self-describing; the closure memo carries the actual disposition; the received memo preserves what was received.
+7. The recipient does **not** edit the received handoff after routing. The filename lifecycle marker carries current ingestion disposition. When step 6 requires a closure, that separate scratch record is current disposition evidence and must agree with the filename marker. Another explicitly maintained current-status record may serve the same role when present. No receipt annotation or successor link is written into the received file.
+8. The received handoff remains byte-identical to the received record. Any sender-authored status line remains routing-time historical evidence. The separate closure or maintained current-status record carries the later recipient disposition; the received body does not.
 
 ```text
-handoff memo body carries meaning (the received record — preserved)
--TBI carries ASK ingestion state (removed on ingestion — first action, before classification)
-recipient surface decides absorption (absorb / hold / reject / route / withdraw / no-route)
-scratch closure memo records what happened (the durable disposition)
-received memo carries a minimal status line pointing to that closure memo
+handoff memo body remains the byte-immutable received record
+filename marker carries current lifecycle disposition
+recipient surface decides absorption
+scratch closure records durable disposition when required
+any separate maintained current-status record agrees with the filename marker
 ```
 
 The marker confers no authority on the memo content. Without it, the recipient surface cannot distinguish a routed memo awaiting ingestion from one that has been seen but held, and the ingestion queue becomes invisible to the operator across multiple recipient surfaces.
@@ -221,9 +221,10 @@ A `-SUPERSEDED` intake artifact was never ingested and never absorbed. It carrie
 ```text
 filename marker    PRIMARY current-disposition carrier
                    -TBI active-intake · unmarked ingested · -SUPERSEDED retired-unconsumed
-closure + receipt  SECONDARY current evidence — the scratch closure memo (step 6) and the
-                   received-memo status line (step 7), present for an ingested memo that produces
-                   durable action; absent for a pre-ingestion -SUPERSEDED retirement
+closure / status   SECONDARY current evidence — the separate scratch closure
+record             memo (step 6), or another explicitly maintained
+                   current-status record, when present; never a post-receipt
+                   edit to the received memo
 received body      HISTORICAL — the received record, plus any sender routing-time status line
 ```
 
