@@ -194,18 +194,41 @@ The lifecycle:
 4. The recipient active surface's **first action, before any classification or absorption work begins, is to rename the file in place to remove `-TBI`.** Rename only. The rename is the *ingested* signal; it records nothing about what was absorbed, held, rejected, routed, or superseded.
 5. The recipient surface **then** classifies the memo per §Category distinctions and `docs/absorption-discipline.md` — **absorb / hold / reject / route-elsewhere / withdraw / no-route.** Classification is a separate, recipient-owned decision that follows the rename; it is never a precondition of it.
 6. If the memo produces any durable action, a held disposition, or a rejection, a separate dated closure memo in `scratch/` (`scratch/*_absorption.md`) is **required** — it is the closure record: classification, actions, non-actions, remaining held items. **A rename is not a closure record:** a memo that changes durable state but leaves only a renamed file (plus an ephemeral chat summary) is not closed until the separate closure memo exists.
-7. The recipient adds a **minimal status/receipt line** to the top of the received handoff pointing to the closure memo — e.g. `status: INGESTED // absorbed by <closure memo path> on <date>` or `status: INGESTED // HELD, see <closure memo path>`. This is a receipt annotation, not the closure body.
-8. The **body** of the received handoff remains the received record — not rewritten, re-argued, or replaced. The status line makes the file self-describing; the closure memo carries the actual disposition; the received memo preserves what was received.
+7. The recipient does **not** edit the received handoff after routing. The filename lifecycle marker carries current ingestion disposition. When step 6 requires a closure, that separate scratch record is current disposition evidence and must agree with the filename marker. Another explicitly maintained current-status record may serve the same role when present. No receipt annotation or successor link is written into the received file.
+8. The received handoff remains byte-identical to the received record. Any sender-authored status line remains routing-time historical evidence. The separate closure or maintained current-status record carries the later recipient disposition; the received body does not.
 
 ```text
-handoff memo body carries meaning (the received record — preserved)
--TBI carries ASK ingestion state (removed on ingestion — first action, before classification)
-recipient surface decides absorption (absorb / hold / reject / route / withdraw / no-route)
-scratch closure memo records what happened (the durable disposition)
-received memo carries a minimal status line pointing to that closure memo
+handoff memo body remains the byte-immutable received record
+filename marker carries current lifecycle disposition
+recipient surface decides absorption
+scratch closure records durable disposition when required
+any separate maintained current-status record agrees with the filename marker
 ```
 
 The marker confers no authority on the memo content. Without it, the recipient surface cannot distinguish a routed memo awaiting ingestion from one that has been seen but held, and the ingestion queue becomes invisible to the operator across multiple recipient surfaces.
+
+**Pre-ingestion supersession.** Removing `-TBI` is not the only exit from the unconsumed feed queue. Before ASK feeds a memo in, the memo may instead be *retired*: `-TBI` is replaced by `-SUPERSEDED`. The queue has two exits, and they are not the same event —
+
+```text
+-TBI removed, no replacement marker  = ingested (fed into the active surface)
+-TBI replaced by -SUPERSEDED         = retired before ingestion, unconsumed
+```
+
+A `-SUPERSEDED` intake artifact was never ingested and never absorbed. It carries no pending work; it remains in `sources of intent/` only as lineage, typically beside an active successor that carries its own `-TBI`. Its physical presence in the intake folder is not queue membership — it is not reactivated, re-ingested, or renamed off merely because the file is still there. This is the same queue-lies error this section corrects, one step earlier: an item can be superseded by a better-scoped successor before it is ever fed in, and that retirement must be expressible without pretending the retired item was ingested. Neither exit authorizes implementation.
+
+**Historical body versus current disposition.** The received handoff body is a fixed historical record: byte-immutable, edited neither on ingestion nor on pre-ingestion supersession. If the *sender* wrote a status line into the body, that line records the routing-time state and stays as historical evidence — it is not rewritten because the recipient later ingested or superseded the artifact. Current lifecycle disposition rides carriers that age at the rate the disposition itself changes:
+
+```text
+filename marker    PRIMARY current-disposition carrier
+                   -TBI active-intake · unmarked ingested · -SUPERSEDED retired-unconsumed
+closure / status   SECONDARY current evidence — the separate scratch closure
+record             memo (step 6), or another explicitly maintained
+                   current-status record, when present; never a post-receipt
+                   edit to the received memo
+received body      HISTORICAL — the received record, plus any sender routing-time status line
+```
+
+The filename marker is primary because it is the fastest-updating visible carrier of state. When more than one current carrier is present, they must agree. The immutable body is exempt from that agreement: a sender's historical routing-status string is not required to match a later recipient disposition, precisely because it is historical. Successor linkage — "retired in favor of X" — belongs in a closure or explicit lineage record, never in a post-receipt edit to the received body. This is the aging-rate split applied inside a single artifact: disposition changes over time; the received record does not, so the marker (not the body) carries current state.
 
 **External-origin / read-only-source variant.** Some handoff memos are generated by a source that cannot write directly into the recipient project's `sources of intent/` folder — for example, a domain-authority review chat with read-only access to the recipient's external directory. In that case, the `-TBI` suffix appears on the file in transit before it reaches `sources of intent/`. ASK routes the memo into the recipient folder with the suffix intact; the first recipient-side action on ingestion is still the in-place rename. The marker tracks ingestion state regardless of where the file originates.
 
