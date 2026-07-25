@@ -580,9 +580,9 @@ These rules are the repo-local delta for `method-ASK` (the methodology repo — 
 
 ## Operating model and layer
 
-The operating model is single-node: Claude Code is both control surface and executor. This inherits from the family default as articulated in [`apexSolarKiss/control-surface`](https://github.com/apexSolarKiss/control-surface).
+The operating model is **adversarial collaboration** — an ASK-apexed advisor–executor topology: ASK is the source-of-intent and authorization apex, the relay across surfaces, and the final adjudicator; a non-writing advisor surface supplies challenge, reconstruction, and verification from outside the execution thread; a repo-attached execution surface plans and performs authorized work under this file, single-writer-per-branch. Current occupants are a GPT advisor and Claude Code as executor; model identity is operational, not architectural. **Direct execution** — ASK driving the executor without an advisor pass where a separate pass would not materially reduce uncertainty — is a bounded variant within this model, not a separate model. Compactly: multi-surface in reasoning, single-writer in mutation, single-apex in authority.
 
-An advisor in chat-based form — typically GPT or Claude — remains available outside the execution thread.
+This inherits from the family default as articulated in [`apexSolarKiss/control-surface`](https://github.com/apexSolarKiss/control-surface).
 
 For repo-external context (graduation origin, project intent, audience, layer relationship to `control-surface`, foundational premises, durable loose threads), read the grounding note maintained outside this repository.
 
@@ -632,14 +632,16 @@ Branch plus PR is the default for meaningful structure or doctrine changes.
 
 ## Why These Rules Exist
 
-The single-node model collapses several functions that the earlier split-execution model handled by default. Most of the rules above are calibrated compensations for what gets lost when a single agent is both compiler and executor:
+Most of the rules above make reasoning inspectable across ASK, the executor, and any configured advisor while preserving one write authority. In the standard paired path they make the advisor/executor boundary productive; in direct execution they give ASK the same reviewable objects before mutation:
 
-- A split model has a natural prompt-compilation step. A single-node model collapses it into the executor. **Plan-Before-Execute** is the rule that restores the reasoning surface.
-- A split model has natural model separation, which surfaces disagreements as visible artifacts. A single-node model runs in one head, so disagreements become invisible. **Structured Change Summary** and **exact-scoped-diff approval** are the rules that compensate.
-- A single-node model has stronger session-topology pressure (Claude Code easily spawns parallel threads). **Single-Writer Discipline** is the compensation.
+- **Plan-Before-Execute** makes the executor's reasoning inspectable *before* it becomes a diff — the object an advisor, or ASK, can challenge on scope, assumptions, non-actions, and intended terminal state.
+- **Structured Change Summary** and **exact-scoped-diff approval** are the review objects themselves: what actually crosses the boundary, in a form precise enough to disagree with.
+- **Single-Writer Discipline** keeps exactly one write authority while other surfaces read and review. Multi-surface reasoning only works if mutation stays single-writer.
 - Generated summaries confidently confabulate file contents — chat-side retrieval, cached reads, and even a filesystem subagent's digest. **Repo-as-Arbiter** routes current-state questions to exact artifact state, not to any agent class's summary.
 
-When proposing rule changes, ask which failure mode the rule is compensating for and whether the compensation is still load-bearing.
+Historically these were calibrated against what the retired split-execution model provided by default; that framing is preserved in the article record. Stated forward, they are the machinery of the current model rather than compensation for a retired one.
+
+When proposing rule changes, ask which failure mode the rule addresses and whether it is still load-bearing.
 
 ## Comments, Docs, and PR Roles (method layer)
 
