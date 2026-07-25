@@ -2,7 +2,7 @@
 
 ## Role in the method
 
-[`apexSolarKiss/urban-observatory`](https://github.com/apexSolarKiss/urban-observatory) is the newer single-node pressure surface that exposed method-layer material [`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) had not pressured. The project is in early bootstrap / prototype-planning phase, and its pressure has been concentrated at inception and instantiation: source-of-intent recovery, validation loops, bootstrap grounding-note lifecycle, and the external-handoff classification observation.
+[`apexSolarKiss/urban-observatory`](https://github.com/apexSolarKiss/urban-observatory) is the newer pressure surface that exposed method-layer material [`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) had not pressured. The project is in early bootstrap / prototype-planning phase, and its pressure has been concentrated at inception and instantiation: source-of-intent recovery, validation loops, bootstrap grounding-note lifecycle, and the external-handoff classification observation.
 
 The role is structural, not biographical. The project is the worked example; the method is the durable element.
 

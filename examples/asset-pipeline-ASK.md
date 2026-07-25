@@ -2,7 +2,7 @@
 
 ## Role in the method
 
-[`apexSolarKiss/asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) is the mature single-node pressure surface from which most of the method's execution-protocol substrate was operationally refined before being absorbed upstream into [`apexSolarKiss/control-surface`](https://github.com/apexSolarKiss/control-surface). The project is what the method was first tested against; it is what `docs/method.md` currently centers as the worked example.
+[`apexSolarKiss/asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) is the mature pressure surface from which most of the method's execution-protocol substrate was operationally refined before being absorbed upstream into [`apexSolarKiss/control-surface`](https://github.com/apexSolarKiss/control-surface). The project is what the method was first tested against; it is what `docs/method.md` currently centers as the worked example.
 
 The role is structural, not biographical. The project is the worked example; the method is the durable element. Method-ASK preserves what generalizes beyond the project's domain.
 
