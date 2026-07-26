@@ -119,6 +119,8 @@ The protocol is **distinct from relay**. Relay (per [*The Relay Is the Instructi
 
 Copy into recipient `sources of intent/` ≠ automatic absorption. Recipient ownership of absorption is non-negotiable.
 
+Routing is the first of four events. Feeding, ingestion, and absorption follow, and each has its own actor and its own evidence — see §Inbound handoff TBI marker.
+
 ### Multi-repo operating surface: shared intake
 
 A single operating surface may operate across more than one repo. In that case, the surface may maintain one shared recipient `sources of intent/` intake for those repos, rather than one folder per repo. Receipt into that shared intake makes the material durably available for classification by the operating surface; it does **not** merge the artifact authority of the repos behind the surface.
@@ -170,27 +172,41 @@ All meaning the recipient needs must age at the recipient's aging rate.
 
 ## Inbound handoff TBI marker
 
-Routed handoff memos copied into a recipient project's `sources of intent/` should use the `-TBI.md` suffix until ASK has fed them into the recipient active project surface.
+Routed handoff memos copied into a recipient project's `sources of intent/` should use the `-TBI.md` suffix until the recipient active project surface has taken them up.
 
 TBI means "to be ingested." It does not mean "to be absorbed." The marker tracks operator ingestion state only; the receiving project owns absorption.
 
-More precisely, `-TBI` marks membership in the operator's **unconsumed feed queue**: material the operator has saved — out of an advisor conversation, or from another operating surface — but has not yet fed into the operating surface responsible for ingesting it. That is what the suffix tracks, and it is why the suffix comes off the moment the material is fed in. It is not a record of pending repo work, and it is not a statement about which repo owns the eventual decision.
+**Four events, not two.** A cross-surface handoff passes through four distinct events. Collapsing any adjacent pair is the failure this section corrects:
+
+```text
+routing     the origin makes material durably available in the recipient's intake
+            (§Cross-surface handoff routing) — candidate availability, nothing more
+feeding     ASK hands the material to the recipient's active surface — the operator-side act
+ingestion   the recipient surface takes it up, evidenced by striking `-TBI` — the recipient-side act
+absorption  the recipient classifies the material and records any required
+            durable disposition (`docs/absorption-discipline.md`)
+```
+
+**Feeding and ingestion are two faces of one boundary crossing — paired, but not atomic.** Feeding is what ASK does; ingestion is what the recipient does. They are ordinarily seconds apart, which is exactly why they get merged. But a feed can fail, be deferred, or be superseded before the recipient acts. Feeding therefore expresses ASK's *intent* to have the material ingested; it is never itself ingestion evidence. **Ingestion requires recipient-side evidence and is never inferred from the fact that a feed occurred.**
+
+More precisely, `-TBI` marks membership in the operator's **unconsumed feed queue**: material the operator has saved — out of an advisor conversation, or from another operating surface — but that the operating surface responsible for ingesting it has not yet taken up. That is what the suffix tracks, and it is why the suffix comes off when the recipient surface takes the material up. It is not a record of pending repo work, and it is not a statement about which repo owns the eventual decision.
 
 The disequality is hard and load-bearing:
 
 ```text
 ingestion ≠ absorption
 removing `-TBI` = the ingestion signal (first recipient-side action)
-absorption = the later recipient-owned classification + durable action / hold / rejection + closure record
+absorption = the later recipient-owned classification;
+             durable action / hold / rejection requires a closure record
 ```
 
-Leaving `-TBI` on a memo until its payload is absorbed is the failure this section corrects: it conflates the two and makes the ingestion queue lie — a memo already fed to the active surface still reads as un-ingested. Remove the suffix on ingestion; track absorption by the closure record, never by the filename suffix.
+Leaving `-TBI` on a memo until its payload is absorbed is the failure this section corrects: it conflates the two and makes the ingestion queue lie — a memo the recipient surface has already taken up still reads as un-ingested. (A memo that has been *fed* but not yet taken up is a different thing entirely: it is genuinely still queued, and its marker is telling the truth.) Remove the suffix on ingestion; track absorption by the closure record, never by the filename suffix.
 
 The lifecycle:
 
 1. Origin prepares a self-contained handoff memo per §Handoff memo completeness. The origin scratch trail copy uses a clean filename (no `-TBI`).
 2. The recipient copy lands in the recipient surface's `sources of intent/` with the `-TBI.md` suffix.
-3. ASK feeds the memo into the recipient active project surface (typically by attaching it to a new Claude session, or equivalent invocation).
+3. ASK feeds the memo into the recipient active project surface (typically by attaching it to a new Claude session, or equivalent invocation). Feeding is the operator-side act and expresses the intent to have the memo ingested; it records nothing on its own. A memo can be fed and still not be ingested — if the session never takes it up, if it is superseded first, or if the feed simply fails.
 4. The recipient active surface's **first action, before any classification or absorption work begins, is to rename the file in place to remove `-TBI`.** Rename only. The rename is the *ingested* signal; it records nothing about what was absorbed, held, rejected, routed, or superseded.
 5. The recipient surface **then** classifies the memo per §Category distinctions and `docs/absorption-discipline.md` — **absorb / hold / reject / route-elsewhere / withdraw / no-route.** Classification is a separate, recipient-owned decision that follows the rename; it is never a precondition of it.
 6. If the memo produces any durable action, a held disposition, or a rejection, a separate dated closure memo in `scratch/` (`scratch/*_absorption.md`) is **required** — it is the closure record: classification, actions, non-actions, remaining held items. **A rename is not a closure record:** a memo that changes durable state but leaves only a renamed file (plus an ephemeral chat summary) is not closed until the separate closure memo exists.
@@ -207,14 +223,14 @@ any separate maintained current-status record agrees with the filename marker
 
 The marker confers no authority on the memo content. Without it, the recipient surface cannot distinguish a routed memo awaiting ingestion from one that has been seen but held, and the ingestion queue becomes invisible to the operator across multiple recipient surfaces.
 
-**Pre-ingestion supersession.** Removing `-TBI` is not the only exit from the unconsumed feed queue. Before ASK feeds a memo in, the memo may instead be *retired*: `-TBI` is replaced by `-SUPERSEDED`. The queue has two exits, and they are not the same event —
+**Pre-ingestion supersession.** Removing `-TBI` is not the only exit from the unconsumed feed queue. At any point before ingestion — including after a feed that the recipient surface never took up — the memo may instead be *retired*: `-TBI` is replaced by `-SUPERSEDED`. The queue has two exits, and they are not the same event —
 
 ```text
--TBI removed, no replacement marker  = ingested (fed into the active surface)
+-TBI removed, no replacement marker  = ingested (taken up by the recipient surface)
 -TBI replaced by -SUPERSEDED         = retired before ingestion, unconsumed
 ```
 
-A `-SUPERSEDED` intake artifact was never ingested and never absorbed. It carries no pending work; it remains in `sources of intent/` only as lineage, typically beside an active successor that carries its own `-TBI`. Its physical presence in the intake folder is not queue membership — it is not reactivated, re-ingested, or renamed off merely because the file is still there. This is the same queue-lies error this section corrects, one step earlier: an item can be superseded by a better-scoped successor before it is ever fed in, and that retirement must be expressible without pretending the retired item was ingested. Neither exit authorizes implementation.
+A `-SUPERSEDED` intake artifact was never ingested and never absorbed. It carries no pending work; it remains in `sources of intent/` only as lineage, typically beside an active successor that carries its own `-TBI`. Its physical presence in the intake folder is not queue membership — it is not reactivated, re-ingested, or renamed off merely because the file is still there. This is the same queue-lies error this section corrects, one step earlier: an item can be superseded by a better-scoped successor before it is ever ingested, and that retirement must be expressible without pretending the retired item was ingested. Neither exit authorizes implementation.
 
 **Historical body versus current disposition.** The received handoff body is a fixed historical record: byte-immutable, edited neither on ingestion nor on pre-ingestion supersession. If the *sender* wrote a status line into the body, that line records the routing-time state and stays as historical evidence — it is not rewritten because the recipient later ingested or superseded the artifact. Current lifecycle disposition rides carriers that age at the rate the disposition itself changes:
 
@@ -230,7 +246,9 @@ received body      HISTORICAL — the received record, plus any sender routing-t
 
 The filename marker is primary because it is the fastest-updating visible carrier of state. When more than one current carrier is present, they must agree. The immutable body is exempt from that agreement: a sender's historical routing-status string is not required to match a later recipient disposition, precisely because it is historical. Successor linkage — "retired in favor of X" — belongs in a closure or explicit lineage record, never in a post-receipt edit to the received body. This is the aging-rate split applied inside a single artifact: disposition changes over time; the received record does not, so the marker (not the body) carries current state.
 
-**External-origin / read-only-source variant.** Some handoff memos are generated by a source that cannot write directly into the recipient project's `sources of intent/` folder — for example, a domain-authority review chat with read-only access to the recipient's external directory. In that case, the `-TBI` suffix appears on the file in transit before it reaches `sources of intent/`. ASK routes the memo into the recipient folder with the suffix intact; the first recipient-side action on ingestion is still the in-place rename. The marker tracks ingestion state regardless of where the file originates.
+**The queue is logical, not a folder.** The unconsumed feed queue may occupy more than one physical location — an ASK-side staging area, an origin's scratch space, a transit surface, and the recipient's declared intake path. The `-TBI` marker attaches when the artifact **enters the queue**, wherever that is; relocation *within* the queue is not a lifecycle event and neither applies nor re-applies a marker. The queue is exited only by ingestion (`-TBI` struck) or by pre-ingestion retirement (`-TBI` → `-SUPERSEDED`).
+
+**External-origin / read-only-source variant.** This is the logical queue's most common shape, not a special case. Some handoff memos are generated by a source that cannot write directly into the recipient project's `sources of intent/` folder — for example, a domain-authority review chat with read-only access to the recipient's external directory. In that case, the `-TBI` suffix appears on the file in transit before it reaches `sources of intent/`. ASK routes the memo into the recipient folder with the suffix intact; the first recipient-side action on ingestion is still the in-place rename. Arriving in the intake folder is a move within the queue, not an entry into it and not an exit from it. The marker tracks ingestion state regardless of where the file originates or how many locations it occupies on the way.
 
 Copy + suffix do not authorize anything. The marker tracks operator ingestion state; absorption belongs to the recipient.
 
