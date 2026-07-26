@@ -183,8 +183,8 @@ routing     the origin makes material durably available in the recipient's intak
             (§Cross-surface handoff routing) — candidate availability, nothing more
 feeding     ASK hands the material to the recipient's active surface — the operator-side act
 ingestion   the recipient surface takes it up, evidenced by striking `-TBI` — the recipient-side act
-absorption  the recipient classifies and acts, evidenced by a closure record
-            (`docs/absorption-discipline.md`)
+absorption  the recipient classifies the material and records any required
+            durable disposition (`docs/absorption-discipline.md`)
 ```
 
 **Feeding and ingestion are two faces of one boundary crossing — paired, but not atomic.** Feeding is what ASK does; ingestion is what the recipient does. They are ordinarily seconds apart, which is exactly why they get merged. But a feed can fail, be deferred, or be superseded before the recipient acts. Feeding therefore expresses ASK's *intent* to have the material ingested; it is never itself ingestion evidence. **Ingestion requires recipient-side evidence and is never inferred from the fact that a feed occurred.**
@@ -196,7 +196,8 @@ The disequality is hard and load-bearing:
 ```text
 ingestion ≠ absorption
 removing `-TBI` = the ingestion signal (first recipient-side action)
-absorption = the later recipient-owned classification + durable action / hold / rejection + closure record
+absorption = the later recipient-owned classification;
+             durable action / hold / rejection requires a closure record
 ```
 
 Leaving `-TBI` on a memo until its payload is absorbed is the failure this section corrects: it conflates the two and makes the ingestion queue lie — a memo the recipient surface has already taken up still reads as un-ingested. (A memo that has been *fed* but not yet taken up is a different thing entirely: it is genuinely still queued, and its marker is telling the truth.) Remove the suffix on ingestion; track absorption by the closure record, never by the filename suffix.
