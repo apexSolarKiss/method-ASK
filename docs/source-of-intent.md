@@ -119,7 +119,7 @@ The protocol is **distinct from relay**. Relay (per [*The Relay Is the Instructi
 
 Copy into the recipient intent inbox ≠ automatic absorption. Recipient ownership of absorption is non-negotiable.
 
-Routing is the first of four events. Feeding, ingestion, and absorption follow, and each has its own actor and its own evidence — see §Inbound handoff TBI marker.
+The full ingest-and-classify path distinguishes four events — routing, feeding, ingestion, absorption — each with its own actor and its own evidence. A routed artifact may instead exit before ingestion through `-supersededA`, either before feeding or after a feed that did not result in ingestion. See §Inbound handoff TBI marker.
 
 ### Multi-repo operating surface: shared intake
 
@@ -179,7 +179,7 @@ Routed handoff memos copied into a recipient project's **intent inbox** carry th
 
 TBI means "to be ingested." It does not mean "to be absorbed." The marker tracks operator ingestion state only; the receiving project owns absorption.
 
-**Four events, not two.** A cross-surface handoff passes through four distinct events. Collapsing any adjacent pair is the failure this section corrects:
+**Four events, not two.** The full ingest-and-classify path distinguishes four distinct events. A routed artifact may instead exit before ingestion through `-supersededA`, either before feeding or after a feed that did not result in ingestion; the four-event path is what an artifact traverses when it *is* ingested and classified, not an inevitability of routing. Collapsing any adjacent pair of the four is the failure this section corrects:
 
 ```text
 routing     the origin makes material durably available in the recipient's intake
@@ -218,8 +218,8 @@ The lifecycle:
 3. ASK feeds the memo into the recipient active project surface — **by value** (attaching or pasting it) or **by reference** (supplying the exact path, which the recipient then resolves through a connector or by reading the filesystem). Both are valid feeds; a bare exact path addressed to an active surface is a feed. Ingestion still requires the recipient to retrieve and read the artifact: a failed retrieval, or a path resolving only to metadata, has not produced ingestion. A lossy or normalized view may constitute content read under a bounded fidelity claim; where the omitted portion could affect classification, obtain an adequate representation first. Feeding is the operator-side act and expresses the intent to have the memo ingested; it records nothing on its own. A memo can be fed and still not be ingested — if the session never reads it into active context, if it is superseded first, or if the feed simply fails.
 4. The recipient active surface's **first lifecycle mutation after successful content read — before any classification or absorption work begins — is to rename the file in place from `-TBI` to `-ingested`.** The content read establishes ingestion; the rename records it. Rename only. The rename is the *ingested* signal; it records nothing about what was absorbed, held, declined, routed, or superseded.
 5. The recipient surface **then** classifies the memo per §Category distinctions and `docs/absorption-discipline.md` — **absorb / hold / decline / route-elsewhere / withdraw / no-route.** (The classification verb is `decline`; its filename form is `-declined`. Earlier text used `reject` for the same classification — prospectively, use `decline`.) Classification is a separate, recipient-owned decision that follows the rename; it is never a precondition of it.
-6. **Every transition from `-ingested` to a terminal disposition suffix requires a durable disposition record, recorded in the same bounded operation — including `-supersededP`.** A durable closure record is **required** — classification, actions, non-actions, remaining held items. It may be a separate dated memo in `scratch/` (`scratch/*_absorption.md`) **or** an appended terminal section in an explicitly maintained program or absorption record; do not create a new artifact solely to satisfy form. **A rename is not a closure record**, and a closure record without the rename leaves the filename lying. **Recording the closure and applying the terminal rename are one bounded operation** — `-ingested` becomes an accurate lower-case disposition suffix (`-absorbed`, `-held`, `-declined`, `-withdrawn`, `-routed`, `-no-route`, `-closed`) at the same moment the disposition becomes durable. Use `-absorbed` only where absorption describes the artifact-level outcome; use `-closed` where the closure carries mixed claim-level outcomes.
-7. The recipient does **not** edit the received handoff after routing. The filename lifecycle marker carries current disposition. When step 6 requires a closure, that separate scratch record is current disposition evidence and must agree with the filename marker. Another explicitly maintained current-status record may serve the same role when present. No receipt annotation or successor link is written into the received file.
+6. **Every transition from `-ingested` to a terminal disposition suffix requires a durable disposition record, recorded in the same bounded operation — including `-supersededP`.** A durable closure record is **required** — classification, actions, non-actions, remaining held items. It may be a separate dated memo in `scratch/` (`scratch/*_absorption.md`) **or** an appended terminal section in an explicitly maintained program or absorption record; do not create a new artifact solely to satisfy form. **A rename is not a closure record**, and a closure record without the rename leaves the filename lying. **Recording the closure and applying the terminal rename are one bounded operation** — `-ingested` becomes an accurate terminal disposition suffix (`-absorbed`, `-held`, `-declined`, `-withdrawn`, `-routed`, `-no-route`, `-closed`, `-supersededP`) at the same moment the disposition becomes durable. Use `-absorbed` only where absorption describes the artifact-level outcome; use `-closed` where the closure carries mixed claim-level outcomes.
+7. The recipient does **not** edit the received handoff after routing. The filename lifecycle marker carries current disposition. The durable disposition record required by step 6 — whether a dedicated scratch memo or an appended terminal / current-status section — is current disposition evidence and must agree with the filename marker. No receipt annotation or successor link is written into the received file.
 8. The received handoff remains byte-identical to the received record. Any sender-authored status line remains routing-time historical evidence. The separate closure or maintained current-status record carries the later recipient disposition; the received body does not.
 
 ```text
@@ -249,10 +249,10 @@ filename marker    PRIMARY current-disposition carrier
                    -TBI active-intake · -ingested read-but-not-closed
                    terminal disposition suffix · -supersededA retired-unconsumed
                    -supersededP ingested-then-displaced
-closure / status   SECONDARY current evidence — the separate scratch closure
-record             memo (step 6), or another explicitly maintained
-                   current-status record, when present; never a post-receipt
-                   edit to the received memo
+disposition        SECONDARY current evidence — the durable disposition record
+record             required by step 6, whether a dedicated scratch memo or an
+                   appended terminal / current-status section; never a
+                   post-receipt edit to the received memo
 received body      HISTORICAL — the received record, plus any sender routing-time status line
 ```
 
@@ -273,11 +273,11 @@ topic-4ASK-TBI.md  →  topic-4ASK-supersededA.md
 topic-4ASK-ingested.md  →  topic-4ASK-supersededP.md
 ```
 
-`-TBI` and `-PTX` stay uppercase: they are the human-facing markers ASK scans a directory for — one says *this still needs feeding*, the other names an artifact role. Post-ingestion disposition suffixes are lower-case so they recede once no operator action is pending. `-PTX` is an artifact-role marker, not a lifecycle state, and is never stacked with a handoff lifecycle suffix.
+`-TBI` and `-PTX` stay uppercase: they are the human-facing markers ASK scans a directory for — one says *this still needs feeding*, the other names an artifact role. Ordinary post-ingestion disposition words are lower-case, so they recede once no operator action is pending; supersession uses the lower-case `superseded` stem plus the ruled uppercase phase qualifier `A` or `P`, which is the one deliberate exception. `-PTX` is an artifact-role marker, not a lifecycle state, and is never stacked with a handoff lifecycle suffix.
 
 **This convention is prospective.** Existing unmarked ingested artifacts, and existing upper-case `-INGESTED`, `-ABSORBED`, `-SUPERSEDED`, `-CLOSED`, or other historically informative suffixes, are preserved and are **not** normalized to match this grammar. A filename carries information; syntactic consistency is not a reason to destroy it. Historical filenames retain the conventions in force when they were created, and legacy tokens do not acquire the prospective meanings defined here.
 
-One consequence should be stated rather than discovered: because the convention is prospective, artifacts predating it stay permanently ambiguous between *ingested-and-closed* and *ingested-with-closure-pending*. The `-ingested` signal answers "what still needs closure?" only for artifacts created after a surface adopts it. A pre-adoption plane is therefore not a complete closure queue, and should not be read as one.
+One consequence should be stated rather than discovered: because the convention is prospective, pre-adoption **unmarked** artifacts may remain ambiguous between *ingested-and-closed* and *ingested-with-closure-pending*. Historically informative suffixes retain whatever evidence they actually carry — an old `-ABSORBED` or `-CLOSED` filename is not ambiguous in the same way an unmarked one is. The `-ingested` signal provides a complete post-ingestion closure queue only for artifacts governed after a surface adopts the convention; the pre-adoption plane as a whole is therefore not a complete closure queue, and should not be read as one.
 
 Version succession is not supersession. A carrier canonical advancing `_v2` → `_v3` is ordinary revision lineage; `-supersededA` and `-supersededP` answer a different question — whether an *addressed routed artifact* crossed ingestion before being displaced. Standing and invocable carriers do not take handoff lifecycle suffixes at all (`docs/intent-artifacts.md`).
 
