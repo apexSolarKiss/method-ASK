@@ -101,10 +101,12 @@ The two doctrines compose: the relation (this doc) names where material currentl
 The intent-artifact classes (`docs/intent-artifacts.md`) sit inside this doctrine's frame rather than beside it: **externality is what determines whether a carrier crossing is a handoff at all.**
 
 ```text
-standing normative context   crosses no boundary — it is fetched and read in place
-standing operative carrier   deployed once into a surface; the deployment persists
+standing normative context   remains on its owning surface and is read across a standing
+                             upstream-external relation; no routing or relocation event
+standing operative carrier   deployed into a surface; the deployment persists
 invocable operative carrier  invoked within a surface, or relayed across one
-routed instance              defined by crossing an operating-surface boundary
+routed instance              its routed-instance identity arises from an addressed
+                             operating-surface crossing
 ```
 
 A routed instance is the only class whose identity depends on the crossing. That is why the same artifact moving *within* one operating surface is not a handoff and takes no lifecycle marker: no externality relation is crossed, so there is nothing for the marker to track. Two repositories operated by one surface do not sit on opposite sides of that boundary, even though their artifact authority stays separate.

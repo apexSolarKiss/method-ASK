@@ -12,7 +12,9 @@ A role is not a file. Naming a folder after the role was the category error this
 
 ## Three artifact families
 
-Every durable artifact in a method-governed system falls into one of three families by **primary role**. Primary role is not determined by content alone — a context artifact may carry authoritative intent-bearing claims without becoming an instruction.
+Every durable artifact **this doctrine classifies** falls into one of three families by **primary role**. Primary role is not determined by content alone — a context artifact may carry authoritative intent-bearing claims without becoming an instruction.
+
+**Produced and execution artifacts are outside this taxonomy** — code, images, datasets, diagrams, published works, and the other work created *under* intent. They are governed as produced artifacts, not as carriers of intent, unless a particular artifact's primary role is itself context, intent, or provenance.
 
 ```text
 ARTIFACTS OF CONTEXT      orient, describe, constrain, preserve
@@ -48,12 +50,21 @@ provenance artifact          a record of what occurred
 **Axis B — authority and voice.** What makes its language operative?
 
 ```text
-apex-authored        the apex composed it; operative on utterance
-apex-relayed         composed elsewhere — advisor, domain authority, another surface —
-                     and operative only through the apex's relay
-quoted-not-adopted   present inside an apex utterance as reported speech
-surface-generated    a recipient's own product; never self-authorizing
+apex-uttered          composed or adopted and addressed by the apex; operative within
+                      the envelope of that utterance
+delegated-authority   composed by a role holding an already-recognized delegation;
+                      operative within that named delegated scope, without a fresh
+                      apex relay
+apex-relayed          composed elsewhere without independently delegated binding force —
+                      an advisor, an executor, another surface — and operative within
+                      the apex's relay envelope
+quoted-not-adopted    present inside an apex utterance as reported speech
+surface-generated     a recipient's own product; never self-authorizing
 ```
+
+**Composition by the apex is not itself the operative event.** A draft, a private note, or a quotation the apex wrote does not bind until the apex addresses or adopts it within a scope. The operative act is the addressing, not the authorship — which is the same reason advisor-drafted language becomes operative on relay.
+
+**Delegated authority is a real posture, not a special case of relay.** A domain authority operating inside a named delegation binds within that scope on its own footing; requiring a fresh apex relay for each judgment would collapse a delegation into a courier arrangement. `docs/governance.md` owns what may be delegated and how the scope is named.
 
 **Axis C — activation.** How does it enter an active surface?
 
@@ -148,7 +159,9 @@ by reference  an exact path or locator the recipient is authorized and able to r
               → recipient reads the artifact into active context
 ```
 
-In a feed by reference the apex relays the locator plus the envelope governing how the artifact is to be treated; the recipient then retrieves it — through a connector, or by reading the filesystem directly. **Supplying or resolving the path is not ingestion.** Ingestion occurs when the artifact's content is actually in the recipient's active context. If retrieval fails, or yields only metadata or a lossy representation, ingestion has not occurred.
+In a feed by reference the apex relays the locator plus the envelope governing how the artifact is to be treated; the recipient then retrieves it — through a connector, or by reading the filesystem directly. **Supplying or resolving the path is not ingestion.** Ingestion occurs when the artifact's content is actually in the recipient's active context. A failed retrieval, or metadata-only reachability, is not ingestion.
+
+A normalized or lossy inspection view is a different case: it **may** constitute content read, but it carries a bounded fidelity claim and never establishes exact-byte identity. Where the omitted portion could affect classification, the recipient obtains an adequate representation before recording ingestion as complete.
 
 ```text
 path resolves   ≠ content read
@@ -212,14 +225,16 @@ The consequences are practical:
 ```text
 transcript sequence   ≠ native chronology
 transcript order      ≠ system-level relay topology
-speaker marker        = drafting provenance of the included words,
-                        not necessarily the operative voice downstream
-a passage quoted twice = the apex supplying context, not two events
+speaker marker         records the apex's assembled attribution of the source strand —
+                       evidence of drafting provenance, not infallible proof, and not
+                       the operative voice downstream
+a passage appearing     may be an intentional re-quotation rather than two events;
+twice                   duplication alone settles neither
 ```
 
 **Capture is not conversion of authority.** Assembling an utterance into a transcript gives it durable bytes, a path, and a role marker. It does not make it operative, and it does not change who drafted it, what the relay envelope authorized, or whether the instruction was executed. Relay created the operative intent, at the original event; the transcript records that it happened.
 
-Reading a transcript's line order and speaker markers as a literal execution trace produces false findings. That failure has been observed: a duplicated block read as two rulings when it was one ruling quoted twice, and a proposal-generation turn read as an authority breach when the same turn recorded that no authoritative write occurred.
+Reading a transcript's line order and speaker markers as a literal execution trace produces false findings. That failure has been observed: a duplicated block read as two rulings when it was one ruling quoted twice, and a proposal-generation turn read as an authority breach when the same turn recorded that no authoritative write occurred. Both were settled only by reading the actual bytes — **a marker, a summary, or a structural proxy is a reason to look, never a substitute for looking.** A hand-assembled projection is also subject to ordinary assembly error, so an anomalous marker may be a mistake rather than evidence of anything.
 
 ## The non-identities
 
