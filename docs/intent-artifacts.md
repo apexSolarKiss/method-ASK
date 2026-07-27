@@ -139,6 +139,16 @@ The received body is byte-immutable; no canonical mirror and no `_vN` chain are 
 
 A provenance transcript receives neither the canonical-plus-snapshot model nor the routed-instance lifecycle. Its role marker is orthogonal to lifecycle state.
 
+**Feed-obligation overlay** — orthogonal to all three architectures:
+
+```text
+<otherwise-complete-underlying-filename>-TBI.md
+```
+
+`-TBI` is not part of any one lifecycle architecture. It is human ASK's terminal flag that a successful feed of that exact artifact is still owed, and it may sit above a canonical carrier, a routed instance, a provenance transcript, or an ordinary artifact carrying no marker at all. Placing it there imports no other class's lifecycle: `topic-PTX-TBI.md` is a provenance transcript with a feed owed, not a routed handoff, and resolving the overlay returns it to `topic-PTX.md`.
+
+Only a **fresh routed handoff** specializes the resolution into `-TBI` → `-ingested`; every other class has the overlay removed and its underlying filename restored unchanged. An in-place overlay is valid only where resolving it leaves the filename truthful and preserves any contractual locator — `docs/source-of-intent.md` §Resolving the feed-obligation overlay owns the mechanics, including the `-supersededA` and fixed-path carve-outs.
+
 ## Relay and feeding
 
 ```text
@@ -256,6 +266,11 @@ feeding                   ≠ wholesale adoption of the payload
 feeding                   ≠ ingestion
 ingestion                 ≠ disposition       (and therefore ≠ absorption)
 disposition               ≠ absorption         (absorption is one disposition)
+feed obligation           ≠ artifact role
+feed obligation           ≠ prior ingestion history
+feed obligation           ≠ durable lifecycle state
+feed-obligation removal   ≠ disposition change
+re-feeding                ≠ reopening
 absorption                ≠ implementation
 transcript projection     ≠ native topology
 transcript capture        ≠ conversion into operative authority
