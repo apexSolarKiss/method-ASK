@@ -71,7 +71,7 @@ surface-generated     a recipient's own product; never self-authorizing
 ```text
 standing      always available, or continuously deployed
 invoked       selected and relayed for one use
-routed        made durably available, then fed
+routed        made durably available for a possible later feed
 fed           presented by the apex to an active surface
 ingested      the resulting recipient-side state when a feed succeeds
 ```

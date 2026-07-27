@@ -111,7 +111,7 @@ routed instance              its routed-instance identity arises from an address
 
 A routed instance is the only class whose identity depends on the crossing. That is why the same artifact moving *within* one operating surface is not a handoff and takes no lifecycle marker: no externality relation is crossed, so there is nothing for the marker to track. Two repositories operated by one surface do not sit on opposite sides of that boundary, even though their artifact authority stays separate.
 
-The relay graph is the externality map in motion. Each apex–agent strand is internal to itself; a relay edge is an apex act that crosses between strands. A provenance transcript projects that graph into one linear record — faithful as a projection, not identical as a topology — which is why transcript order cannot be read as system-level topology, and why a speaker marker records drafting provenance rather than the operative voice a relay confers.
+The relay graph is the externality map in motion. Each apex–agent strand is internal to itself; a cross-strand relay edge is an apex act that carries material or a ruling from one strand into another. A provenance transcript projects that graph into one linear record — faithful as a projection, not identical as a topology — which is why transcript order cannot be read as system-level topology, and why a speaker marker records drafting provenance rather than the operative voice a relay confers.
 
 ## Boundary with source of intent
 
