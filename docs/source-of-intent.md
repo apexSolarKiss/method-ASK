@@ -175,7 +175,7 @@ All meaning the recipient needs must age at the recipient's aging rate.
 
 *The ontology this lifecycle sits inside — artifact classes, activation postures, the relay/feeding relation, and how routed instances differ from canonical and provenance lineages — is `docs/intent-artifacts.md`. This section owns two things: the **cross-cutting terminal feed-obligation overlay**, which may sit above any artifact class, and the **fresh-routed-handoff first-ingestion specialization** within the routed-instance state machine.*
 
-Routed handoff memos copied into a recipient project's **intent inbox** carry the `-TBI.md` suffix until ASK has fed them and the recipient active project surface has ingested them. (At method altitude the plane is the intent inbox; the target folder convention is `intent-INbox/`, and each surface's live index governs its current physical path until that surface completes its cutover.)
+A fresh routed handoff copied into a recipient project's **intent inbox** carries the `-TBI.md` suffix until either its first ingestion is recorded by `-ingested` or its pre-ingestion retirement is recorded by `-supersededA`. (At method altitude the plane is the intent inbox; the target folder convention is `intent-INbox/`, and each surface's live index governs its current physical path until that surface completes its cutover.)
 
 `-TBI` is human ASK's **outstanding feed-obligation marker**, and its operator-facing question is the one ASK asks from a directory listing: *does this exact artifact still need to be fed into an active recipient-project thread?* It means a successful feed is still owed — either none has occurred, or a prior feed did not result in ingestion. TBI keeps the mnemonic "to be ingested," but the obligation it tracks is the operator's: **ASK feeds; the recipient-project surface ingests.** It does not mean "to be absorbed." The recipient project owns post-ingestion disposition.
 
@@ -214,11 +214,11 @@ disposition = the later recipient-owned classification; every transition
               Absorption is one such disposition, not the name for all
 ```
 
-Leaving `-TBI` on a memo until its payload is absorbed is the failure this section corrects: it conflates the two and makes the ingestion queue lie — a memo the recipient surface has already ingested still reads as un-ingested. (A memo that has been *fed* but not yet ingested is a different thing entirely: it is genuinely still queued, and its marker is telling the truth.) Rename to `-ingested` on ingestion; record the later durable disposition in a terminal suffix that agrees with its disposition record.
+Leaving `-TBI` on a fresh routed handoff until its payload is absorbed is the failure this section corrects: after successful first ingestion, retaining `-TBI` falsely leaves a satisfied feed obligation open and hides the visible `-ingested` / pre-disposition interval. (A memo that has been *fed* but not yet ingested is a different thing entirely: it is genuinely still queued, and its marker is telling the truth.) Rename to `-ingested` on ingestion; record the later durable disposition in a terminal suffix that agrees with its disposition record.
 
 **Why a fresh routed handoff carries two states rather than one.** This rationale is specific to the fresh-handoff case; for a PTX, an ordinary artifact, or an already-dispositioned one, removing only the overlay *is* the correct operation. But a fresh routed handoff whose `-TBI` were simply removed would be indistinguishable from one that never carried a marker — so a bare unmarked filename could not answer *"has this been ingested but not yet closed?"* In long branching work, that question is exactly the one that goes unanswered while a thread descends through successive rabbit holes. `-ingested` makes the post-ingestion, pre-closure interval visible, so the open tail is legible from a directory listing rather than reconstructible only from memory.
 
-The lifecycle:
+**The fresh routed-handoff lifecycle.** The numbered steps below govern a *fresh routed handoff* only. Any other artifact class resolves its overlay under §Resolving the feed-obligation overlay and then **exits this lifecycle**: for a non-handoff, removing `-TBI` is a feed-obligation filename mutation, not a routed-instance lifecycle mutation, and it triggers no handoff classification, disposition, or closure. Whatever review or classification follows comes from ASK's relay envelope or from that artifact class's own rules.
 
 1. Origin prepares a self-contained handoff memo per §Handoff memo completeness. The origin scratch trail copy uses a clean filename (no `-TBI`).
 2. The recipient copy lands in the recipient surface's intent inbox with the `-TBI.md` suffix.
@@ -237,7 +237,7 @@ closure record and terminal rename are one bounded operation
 any separate maintained current-status record agrees with the filename marker
 ```
 
-The marker confers no authority on the memo content. Without it, a *fresh routed handoff* awaiting ingestion is indistinguishable from one that has been seen but held, and the queue becomes invisible to the operator across multiple recipient surfaces. That benefit is the fresh-handoff specialization's, not a universal property of the overlay.
+The marker confers no authority on the memo content. Without it, a *fresh routed handoff* awaiting first ingestion is indistinguishable from one whose first ingestion occurred but whose durable disposition remains open, and the queue becomes invisible to the operator across multiple recipient surfaces. That benefit is the fresh-handoff specialization's, not a universal property of the overlay.
 
 **Supersession has two phases.** Ingestion is not the only way a *fresh routed handoff* leaves the outstanding feed-obligation queue. At any point before ingestion — including after a feed the recipient surface never ingested — the memo may instead be *retired*. And an artifact that was ingested may later be displaced by a successor. These are different events and the marker distinguishes them by phase —
 
@@ -252,8 +252,8 @@ Pre-ingestion retirement to `-supersededA` is the one transition that needs no a
 **Historical body versus current disposition.** The received handoff body is a fixed historical record: byte-immutable, edited neither on ingestion nor on pre-ingestion supersession. If the *sender* wrote a status line into the body, that line records the routing-time state and stays as historical evidence — it is not rewritten because the recipient later ingested or superseded the artifact. Current lifecycle disposition rides carriers that age at the rate the disposition itself changes:
 
 ```text
-underlying         PRIMARY current-disposition carrier — artifact role and, where
-filename           the class has one, durable routed-instance state
+underlying         artifact identity / role + PRIMARY durable-state marker where
+filename           the class has one
                    -ingested read-but-not-closed · terminal disposition suffix ·
                    -supersededA retired-unconsumed · -supersededP ingested-then-displaced
 terminal -TBI      SECOND, FASTER-AGING AXIS — ASK's outstanding feed obligation.
@@ -267,7 +267,7 @@ record             required by step 6, whether a dedicated scratch memo or an
 received body      HISTORICAL — the received record, plus any sender routing-time status line
 ```
 
-The filename marker is primary because it is the fastest-updating visible carrier of state. When more than one current carrier is present, they must agree. The immutable body is exempt from that agreement: a sender's historical routing-status string is not required to match a later recipient disposition, precisely because it is historical. Successor linkage — "retired in favor of X" — belongs in a closure or explicit lineage record, never in a post-receipt edit to the received body. This is the aging-rate split applied inside a single artifact: disposition changes over time; the received record does not, so the marker (not the body) carries current state.
+The underlying durable-state marker is the primary filename evidence of disposition, where the artifact class has one; any disposition record must agree with it. Terminal `-TBI` is **independent** evidence of an outstanding feed obligation. It may coexist with any truthful underlying role or durable state, and it neither participates in nor overrides that agreement check — `topic-absorbed-TBI.md` asserts two simultaneously true things on two axes, not one claim that could contradict itself. The immutable body is exempt from that agreement: a sender's historical routing-status string is not required to match a later recipient disposition, precisely because it is historical. Successor linkage — "retired in favor of X" — belongs in a closure or explicit lineage record, never in a post-receipt edit to the received body. This is the aging-rate split applied inside a single artifact: disposition changes over time; the received record does not, so the marker (not the body) carries current state.
 
 **The queue is logical, not a folder.** The outstanding feed-obligation queue may occupy more than one physical location — an ASK-side staging area, an origin's scratch space, a transit surface, and the recipient's declared intake path. The `-TBI` marker attaches when the artifact **enters the queue**, wherever that is; relocation *within* the queue is not a lifecycle event and neither applies nor re-applies a marker. A fresh routed handoff leaves the queue by ingestion (`-TBI` → `-ingested`) or by pre-ingestion retirement (`-TBI` → `-supersededA`); any other artifact leaves it when the overlay is resolved or canceled, its underlying filename unchanged.
 
@@ -306,7 +306,7 @@ artifact already carrying a durable disposition
     remove terminal `-TBI` and restore the complete underlying filename unchanged
 ```
 
-**Determine the class; do not infer it from the filename.** Stripping `-TBI` and finding no other suffix does **not** establish a fresh routed handoff — an ordinary unmarked report carries the overlay the same way. Neither does inbox residency: the queue is logical, and a file sits in the intake for reasons that have nothing to do with its class. Establish fresh-routed-handoff status from the artifact's **governed role, body, location, and routing record** before choosing a branch. Where the class is genuinely unclear, the safe operation is to remove the overlay only and classify separately — that leaves every durable claim in the filename true, while a wrong `-ingested` asserts a first ingestion that may never have been owed.
+**Determine the class; do not infer it from the filename.** Stripping `-TBI` and finding no other suffix does **not** establish a fresh routed handoff — an ordinary unmarked report carries the overlay the same way. Neither does inbox residency: the queue is logical, and a file sits in the intake for reasons that have nothing to do with its class. Establish fresh-routed-handoff status from the artifact's **governed role, body, location, and routing record** before choosing a branch. **A genuinely unclear class is a stop condition.** Removal-only is not a safe default there, because the unresolved artifact might *be* a fresh routed handoff — and one may never become bare and unmarked. Resolve neither branch until class is established: do not remove `-TBI`, and do not append `-ingested`. Determine class **before feeding** where practicable; where content has already been read, record that the read occurred and resolve the filename immediately after classification rather than asserting either false state in the interim.
 
 A re-feed is a genuine new ingestion event. It does **not** reopen, reclassify, erase, or advance the underlying durable disposition, and it does not convert one artifact class into another: feeding a PTX does not make it a handoff, project truth, an implementation instruction, or an absorption candidate. Where a re-feed needs durable audit evidence, record the feed event in the appropriate provenance or status record — never by overloading the disposition suffix to count reads.
 
@@ -335,7 +335,7 @@ One consequence should be stated rather than discovered: because the convention 
 
 Version succession is not supersession. A carrier canonical advancing `_v2` → `_v3` is ordinary revision lineage; `-supersededA` and `-supersededP` answer a different question — whether an *addressed routed artifact* crossed ingestion before being displaced. Standing and invocable carriers do not take routed-instance **disposition** suffixes at all (`docs/intent-artifacts.md`) — though an eligible artifact, or an addressed copy of one, may carry the orthogonal terminal `-TBI` overlay, subject to the truth-preservation and fixed-locator constraints above.
 
-Copy + suffix do not authorize anything. `-TBI` carries human ASK's unconsumed feed obligation; the recipient owns post-ingestion disposition, while ASK may retire the artifact before ingestion through `-supersededA`.
+Copy + suffix do not authorize anything. `-TBI` carries human ASK's outstanding feed obligation; the recipient owns post-ingestion disposition, while ASK may retire the artifact before ingestion through `-supersededA`.
 
 ## External / domain-authority handoff classification
 
