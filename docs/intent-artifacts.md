@@ -80,7 +80,8 @@ ingested      the resulting recipient-side state when a feed succeeds
 
 ```text
 canonical family     unversioned current canonical + frozen _vN snapshots
-routed instance      immutable body + filename lifecycle + closure record
+routed instance      immutable body + filename lifecycle +
+                     disposition / lineage record as applicable
 deployment mirror    an installed copy of a canonical carrier
 provenance lineage   the transcript's own versioning
 ```
