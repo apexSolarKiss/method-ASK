@@ -41,6 +41,20 @@ The debate usually runs on a two-term ontology — human vs. machine, two minds 
 
 The requirement holds **independent of the consciousness question.** Whether or not anyone is home in the executor, a consequential system still needs a locatable apex. The requirement is over-determined: the purpose and beneficiary of the system, *and* the executor's incapacity to legitimate its own standard, each suffice to secure it.
 
+## Source of intent is a role, not an artifact
+
+The apex is a **locatable governing role** — a chair, a hat, an office someone occupies. It is not a file, a folder, or a document. Artifacts *carry* the role's intent; they never constitute it.
+
+```text
+source of intent    the role that supplies or authorizes purpose and the governing standard
+artifact of intent  a carrier through which that role's intent is expressed, deployed,
+                    routed, relayed, or preserved
+```
+
+The confusion is easy to make and expensive to keep: naming a storage plane after the role invites the reading that the plane *is* the source of intent, and therefore that placing an artifact there confers authority. It does not. Folder membership confers no authority, no activation, and no queue state.
+
+A document *about* source of intent — a grounding note, a context master — remains an artifact of context, even when its subject is the apex and even when it carries authoritative intent-bearing claims. `docs/intent-artifacts.md` governs the carrier classes and their lifecycles; this doctrine governs the role.
+
 ## The non-identities
 
 The subject is one primitive stated in distinctions the discourse keeps eliding:

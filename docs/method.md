@@ -258,7 +258,7 @@ The method is not separate from this history; it is what makes the history coher
 
 This document is the method's primary articulation in [`apexSolarKiss/method-ASK`](../README.md). It should be superseded by:
 
-- the splitting-out of any method element above into its own first-class doc as the substrate accumulates — `docs/relative-externality.md`, `docs/voice-surface-boundary.md`, `docs/source-of-truth-and-aging-rate.md`, `docs/source-of-intent.md`, and others as they land
+- the splitting-out of any method element above into its own first-class doc as the substrate accumulates — `docs/intent-artifacts.md`, `docs/relative-externality.md`, `docs/voice-surface-boundary.md`, `docs/source-of-truth-and-aging-rate.md`, `docs/source-of-intent.md`, and others as they land
 - subsequent articulations of the method that earn deeper coverage of any single element above
 - whatever later synthesis absorbs the methodology layer alongside the project's own evolution
 

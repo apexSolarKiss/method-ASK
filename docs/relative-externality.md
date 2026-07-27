@@ -96,6 +96,23 @@ Absorption applies when the topology stays the same but specific material moves:
 
 The two doctrines compose: the relation (this doc) names where material currently is and which way authority flows; absorption (`absorption-discipline.md`) governs the conditions under which the material moves to a different surface.
 
+## Boundary with intent artifacts
+
+The intent-artifact classes (`docs/intent-artifacts.md`) sit inside this doctrine's frame rather than beside it: **externality is what determines whether a carrier crossing is a handoff at all.**
+
+```text
+standing normative context   remains on its owning surface and is read across a standing
+                             upstream-external relation; no routing or relocation event
+standing operative carrier   deployed into a surface; the deployment persists
+invocable operative carrier  invoked within a surface, or relayed across one
+routed instance              its routed-instance identity arises from an addressed
+                             operating-surface crossing
+```
+
+A routed instance is the only class whose identity depends on the crossing. That is why the same artifact moving *within* one operating surface is not a handoff and takes no lifecycle marker: no externality relation is crossed, so there is nothing for the marker to track. Two repositories operated by one surface do not sit on opposite sides of that boundary, even though their artifact authority stays separate.
+
+The relay graph is the externality map in motion. Each apex–agent strand is internal to itself; a cross-strand relay edge is an apex act that carries material or a ruling from one strand into another. A provenance transcript projects that graph into one linear record — faithful as a projection, not identical as a topology — which is why transcript order cannot be read as system-level topology, and why a speaker marker records ASK's assembled attribution of drafting provenance — evidence, not infallible proof — rather than the operative voice a relay confers.
+
 ## Boundary with source of intent
 
 `docs/source-of-intent.md` carries the doctrine governing source-of-intent origination, recovery, validation, and routing. This doc references it as the operator-owned axiom that sits upstream-external to the entire recursion.
