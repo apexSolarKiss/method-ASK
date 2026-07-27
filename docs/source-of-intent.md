@@ -112,14 +112,14 @@ The boundary this protocol turns on is the **operating surface**, not the reposi
 ```text
 origin scratch records the sending
 recipient intent inbox records the receiving
-recipient active surface decides absorption
+recipient active surface decides disposition
 ```
 
 The protocol is **distinct from relay**. Relay (per [*The Relay Is the Instruction*](https://atomicspacekitten.substack.com/p/the-relay-is-the-instruction)) confers operative force **within the scope of ASK's relay envelope** — the envelope determines whether the recipient is to read, classify, review, execute, hold, or otherwise act. Mere inclusion of an artifact does not make every proposition inside it operative intent. Cross-surface handoff routing confers candidate normative availability only — the copy into the recipient intent inbox does not authorize anything; it makes the material durably available for classification. Conflating the two reintroduces the failure mode [*The Handoff Is Not the Instruction*](https://atomicspacekitten.substack.com/p/the-handoff-is-not-the-instruction) names.
 
 Copy into the recipient intent inbox ≠ automatic absorption. Recipient ownership of absorption is non-negotiable.
 
-The full ingest-and-classify path distinguishes four events — routing, feeding, ingestion, absorption — each with its own actor and its own evidence. A routed artifact may instead exit before ingestion through `-supersededA`, either before feeding or after a feed that did not result in ingestion. See §Inbound handoff TBI marker.
+The full ingest-and-classify path distinguishes four events — routing, feeding, ingestion, disposition — each with its own actor and its own evidence. A routed artifact may instead exit before ingestion through `-supersededA`, either before feeding or after a feed that did not result in ingestion. See §Inbound handoff TBI marker.
 
 ### Multi-repo operating surface: shared intake
 
@@ -164,7 +164,7 @@ The routing act may identify the file and the destination. It does not supply su
 handoff memo carries durable handling meaning
 routing makes the artifact available
 ASK's relay envelope governs the feed
-recipient surface decides absorption
+recipient surface decides disposition
 ```
 
 The completeness rule is the operational mechanism that makes cross-surface handoff routing work as designed. Without it, the routing protocol's promise — that the memo is durably available for recipient classification — is partially defeated: the file lands in the intent inbox (slow-aging) but its handling instructions live in chat relay (event-rate), and the durable copy ages out of sync with the meaning it depends on. The completeness rule restores the alignment.
@@ -177,7 +177,7 @@ All meaning the recipient needs must age at the recipient's aging rate.
 
 Routed handoff memos copied into a recipient project's **intent inbox** carry the `-TBI.md` suffix until ASK has fed them and the recipient active project surface has ingested them. (At method altitude the plane is the intent inbox; the target folder convention is `intent-INbox/`, and each surface's live index governs its current physical path until that surface completes its cutover.)
 
-TBI means "to be ingested." It does not mean "to be absorbed." The marker tracks operator ingestion state only; the receiving project owns absorption.
+`-TBI` is human ASK's **unconsumed feed-queue marker**, and its operator-facing question is the one ASK asks from a directory listing: *does this exact artifact still need to be fed into an active recipient-project thread?* It means a successful feed is still owed — either none has occurred, or a prior feed did not result in ingestion. It remains until a recipient-project surface's content read is recorded by `-ingested`, or until the artifact exits before ingestion as `-supersededA`. TBI keeps the mnemonic "to be ingested," but the obligation it tracks is the operator's: **ASK feeds; the recipient-project surface ingests.** It does not mean "to be absorbed" — the receiving project owns disposition.
 
 **Four events, not two.** The full ingest-and-classify path distinguishes four distinct events. A routed artifact may instead exit before ingestion through `-supersededA`, either before feeding or after a feed that did not result in ingestion; the four-event path is what an artifact traverses when it *is* ingested and classified, not an inevitability of routing. Collapsing any adjacent pair of the four is the failure this section corrects:
 
@@ -188,8 +188,9 @@ feeding     ASK hands the material to the recipient's active surface — the ope
 ingestion   the recipient surface reads the exact artifact into active context —
             the resulting state when a feed succeeds, evidenced by renaming `-TBI`
             to `-ingested`
-absorption  the recipient classifies the material and records any required
-            durable disposition (`docs/absorption-discipline.md`)
+disposition the recipient classifies the material and records the resulting
+            durable disposition — absorption is one of them, not the name
+            for all of them (`docs/absorption-discipline.md`)
 ```
 
 **Feeding and ingestion are two faces of one boundary crossing — paired, but not atomic.** Feeding is what ASK does; ingestion is the recipient-side state that results when the feed succeeds. **Ingestion is not a proactive election by the surface** — the surface does not decide to ingest, it ingests because it was fed. They are ordinarily seconds apart, which is exactly why they get merged. But a feed can fail, be deferred, or be superseded before the recipient acts. Feeding therefore expresses ASK's *intent* to have the material ingested; it is never itself ingestion evidence. **Ingestion requires recipient-side evidence and is never inferred from the fact that a feed occurred.**
@@ -199,12 +200,13 @@ More precisely, `-TBI` marks membership in the operator's **unconsumed feed queu
 The disequality is hard and load-bearing:
 
 ```text
-ingestion ≠ absorption
+ingestion ≠ disposition — and therefore ingestion ≠ absorption
 `-TBI` → `-ingested` = the ingestion signal (first lifecycle mutation after
                        successful content read)
-absorption = the later recipient-owned classification; every transition
-             from `-ingested` to a terminal disposition suffix requires
-             a durable disposition record in the same bounded operation
+disposition = the later recipient-owned classification; every transition
+              from `-ingested` to a terminal disposition suffix requires
+              a durable disposition record in the same bounded operation.
+              Absorption is one such disposition, not the name for all
 ```
 
 Leaving `-TBI` on a memo until its payload is absorbed is the failure this section corrects: it conflates the two and makes the ingestion queue lie — a memo the recipient surface has already ingested still reads as un-ingested. (A memo that has been *fed* but not yet ingested is a different thing entirely: it is genuinely still queued, and its marker is telling the truth.) Rename to `-ingested` on ingestion; record the later durable disposition in a terminal suffix that agrees with its disposition record.
@@ -216,7 +218,7 @@ The lifecycle:
 1. Origin prepares a self-contained handoff memo per §Handoff memo completeness. The origin scratch trail copy uses a clean filename (no `-TBI`).
 2. The recipient copy lands in the recipient surface's intent inbox with the `-TBI.md` suffix.
 3. ASK feeds the memo into the recipient active project surface — **by value** (attaching or pasting it) or **by reference** (supplying the exact path, which the recipient then resolves through a connector or by reading the filesystem). Both are valid feeds; a bare exact path addressed to an active surface is a feed. Ingestion still requires the recipient to retrieve and read the artifact: a failed retrieval, or a path resolving only to metadata, has not produced ingestion. A lossy or normalized view may constitute content read under a bounded fidelity claim; where the omitted portion could affect classification, obtain an adequate representation first. Feeding is the operator-side act and expresses the intent to have the memo ingested; it records nothing on its own. A memo can be fed and still not be ingested — if the session never reads it into active context, if it is superseded first, or if the feed simply fails.
-4. The recipient active surface's **first lifecycle mutation after successful content read — before any classification or absorption work begins — is to rename the file in place from `-TBI` to `-ingested`.** The content read establishes ingestion; the rename records it. Rename only. The rename is the *ingested* signal; it records nothing about what was absorbed, held, declined, routed, or superseded.
+4. The recipient active surface's **first lifecycle mutation after successful content read — before any classification or disposition work begins — is to rename the file in place from `-TBI` to `-ingested`.** The content read establishes ingestion; the rename records it. Rename only. The rename is the *ingested* signal; it records nothing about what was absorbed, held, declined, routed, or superseded.
 5. The recipient surface **then** classifies the memo per §Category distinctions and `docs/absorption-discipline.md` — **absorb / hold / decline / route-elsewhere / withdraw / no-route.** (The classification verb is `decline`; its filename form is `-declined`. Earlier text used `reject` for the same classification — prospectively, use `decline`.) Classification is a separate, recipient-owned decision that follows the rename; it is never a precondition of it.
 6. **Every transition from `-ingested` to a terminal disposition suffix requires a durable disposition record, recorded in the same bounded operation — including `-supersededP`.** A durable closure record is **required** — classification, actions, non-actions, remaining held items. It may be a separate dated memo in `scratch/` (`scratch/*_absorption.md`) **or** an appended terminal section in an explicitly maintained program or absorption record; do not create a new artifact solely to satisfy form. **A rename is not a closure record**, and a closure record without the rename leaves the filename lying. **Recording the closure and applying the terminal rename are one bounded operation** — `-ingested` becomes an accurate terminal disposition suffix (`-absorbed`, `-held`, `-declined`, `-withdrawn`, `-routed`, `-no-route`, `-closed`, `-supersededP`) at the same moment the disposition becomes durable. Use `-absorbed` only where absorption describes the artifact-level outcome; use `-closed` where the closure carries mixed claim-level outcomes.
 7. The recipient does **not** edit the received handoff after routing. The filename lifecycle marker carries current disposition. The durable disposition record required by step 6 — whether a dedicated scratch memo or an appended terminal / current-status section — is current disposition evidence and must agree with the filename marker. No receipt annotation or successor link is written into the received file.
@@ -225,7 +227,7 @@ The lifecycle:
 ```text
 handoff memo body remains the byte-immutable received record
 filename marker carries current lifecycle disposition
-recipient surface decides absorption
+recipient surface decides disposition
 closure record and terminal rename are one bounded operation
 any separate maintained current-status record agrees with the filename marker
 ```

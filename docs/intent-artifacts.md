@@ -120,7 +120,7 @@ canonical authored and accepted
 → the canonical line ends only on explicit retirement
 ```
 
-A prior `_vN` is **historical**, not superseded. Version succession is ordinary revision. "Superseded" names a different event: one carrier, carrier family, or addressed artifact displaced by another.
+A prior `_vN` is **historical**, not superseded. Version succession is ordinary revision. Prospectively, **supersession names an addressed routed artifact displaced by a successor** — the phase-sensitive `-supersededA` / `-supersededP` event on the routed-instance lifecycle below. Standing and invocable carrier families are **revised, retired, or replaced** under canonical lineage; they do not acquire routed-instance supersession semantics. Historical carrier filenames retain their original labels in their own lineage plane without acquiring the prospective meanings defined here.
 
 **Routed-instance lifecycle** — addressed artifacts crossing a surface boundary:
 
@@ -253,7 +253,8 @@ routing                   ≠ relay
 relay                     ≠ feeding          (all feeding ⊂ relay)
 feeding                   ≠ wholesale adoption of the payload
 feeding                   ≠ ingestion
-ingestion                 ≠ absorption
+ingestion                 ≠ disposition       (and therefore ≠ absorption)
+disposition               ≠ absorption         (absorption is one disposition)
 absorption                ≠ implementation
 transcript projection     ≠ native topology
 transcript capture        ≠ conversion into operative authority
