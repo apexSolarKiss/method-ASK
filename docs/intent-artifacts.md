@@ -126,10 +126,16 @@ A prior `_vN` is **historical**, not superseded. Version succession is ordinary 
 **Routed-instance lifecycle** — addressed artifacts crossing a surface boundary:
 
 ```text
--TBI → -ingested → a durable disposition suffix
+fresh routed handoff + terminal -TBI overlay
+  ├─ successful first ingestion
+  │    → -ingested
+  │    → a durable post-ingestion disposition suffix
+  │
+  └─ ASK-side pre-ingestion retirement
+       → -supersededA
 ```
 
-The received body is byte-immutable; no canonical mirror and no `_vN` chain are created. **`docs/source-of-intent.md` §Inbound handoff TBI marker is the authoritative state machine** — the exact suffix transitions, marker grammar, queue mechanics, supersession phases, and exceptions live there and are not restated here.
+`-ingested` begins the durable **post-ingestion** branch of the routed-instance filename lifecycle; `-supersededA` is its durable **pre-ingestion retirement** branch. Terminal `-TBI` remains the cross-cutting feed overlay, not a durable routed-instance state. The received body is byte-immutable; no canonical mirror and no `_vN` chain are created. **`docs/source-of-intent.md` is the authoritative state machine** — the exact suffix transitions, marker grammar, queue mechanics, supersession phases, and exceptions live in §Inbound handoff TBI marker, and the overlay-resolution mechanics in §Resolving the feed-obligation overlay; neither is restated here.
 
 **Provenance lineage** — transcripts:
 
@@ -138,6 +144,16 @@ The received body is byte-immutable; no canonical mirror and no `_vN` chain are 
 ```
 
 A provenance transcript receives neither the canonical-plus-snapshot model nor the routed-instance lifecycle. Its role marker is orthogonal to lifecycle state.
+
+**Feed-obligation overlay** — orthogonal to all three architectures:
+
+```text
+<otherwise-complete-underlying-filename>-TBI.md
+```
+
+`-TBI` is not part of any one lifecycle architecture. It is human ASK's terminal flag that a successful feed of that exact artifact is still owed, and it may sit above a canonical carrier, a routed instance, a provenance transcript, or an ordinary artifact carrying no marker at all. Placing it there imports no other class's lifecycle: `topic-PTX-TBI.md` is a provenance transcript with a feed owed, not a routed handoff, and resolving the overlay returns it to `topic-PTX.md`.
+
+Only a **fresh routed handoff** specializes the resolution, and only on a successful feed: `-TBI` → `-ingested`. A fresh handoff may instead leave the overlay through the ASK-side pre-ingestion retirement branch, `-TBI` → `-supersededA`, without ever reaching `-ingested`. Anything **not currently in that state** — a provenance transcript, an ordinary artifact, or a routed instance already ingested or dispositioned — has the overlay removed and its underlying filename restored unchanged. The discriminator is the fresh-handoff *state*, not the artifact's class: `topic-absorbed-TBI.md → topic-absorbed.md` is a routed instance by class, and it takes the removal branch because its first ingestion is already behind it. An in-place overlay is valid only where resolving it leaves the filename truthful and preserves any contractual locator — `docs/source-of-intent.md` §Resolving the feed-obligation overlay owns the mechanics, including the `-supersededA` and fixed-path carve-outs.
 
 ## Relay and feeding
 
@@ -256,6 +272,11 @@ feeding                   ≠ wholesale adoption of the payload
 feeding                   ≠ ingestion
 ingestion                 ≠ disposition       (and therefore ≠ absorption)
 disposition               ≠ absorption         (absorption is one disposition)
+feed obligation           ≠ artifact role
+feed obligation           ≠ prior ingestion history
+feed obligation           ≠ durable lifecycle state
+feed-obligation removal   ≠ disposition change
+re-feeding                ≠ reopening
 absorption                ≠ implementation
 transcript projection     ≠ native topology
 transcript capture        ≠ conversion into operative authority
@@ -266,6 +287,7 @@ transcript capture        ≠ conversion into operative authority
 This doctrine owns the ontology. It does not own:
 
 - the routed-instance state machine, marker grammar, or queue mechanics — `docs/source-of-intent.md` §Inbound handoff TBI marker;
+- feed-overlay resolution mechanics, including the governed-role and prior-lifecycle-state discriminator, the truth-preservation invariant, and the fixed-locator carve-out — `docs/source-of-intent.md` §Resolving the feed-obligation overlay;
 - absorption criteria, durable disposition, closure requirements, or reconciliation after absorption — `docs/absorption-discipline.md`;
 - the structural face of source of intent — `docs/normative-apex.md`;
 - the surface-relation frame these classes sit inside — `docs/relative-externality.md`;
