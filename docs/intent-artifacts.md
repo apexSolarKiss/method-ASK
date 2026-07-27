@@ -287,7 +287,7 @@ transcript capture        ≠ conversion into operative authority
 This doctrine owns the ontology. It does not own:
 
 - the routed-instance state machine, marker grammar, or queue mechanics — `docs/source-of-intent.md` §Inbound handoff TBI marker;
-- feed-overlay resolution mechanics, including the class discriminator, the truth-preservation invariant, and the fixed-locator carve-out — `docs/source-of-intent.md` §Resolving the feed-obligation overlay;
+- feed-overlay resolution mechanics, including the governed-role and prior-lifecycle-state discriminator, the truth-preservation invariant, and the fixed-locator carve-out — `docs/source-of-intent.md` §Resolving the feed-obligation overlay;
 - absorption criteria, durable disposition, closure requirements, or reconciliation after absorption — `docs/absorption-discipline.md`;
 - the structural face of source of intent — `docs/normative-apex.md`;
 - the surface-relation frame these classes sit inside — `docs/relative-externality.md`;
