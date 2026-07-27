@@ -112,7 +112,7 @@ The boundary this protocol turns on is the **operating surface**, not the reposi
 ```text
 origin scratch records the sending
 recipient intent inbox records the receiving
-recipient active surface decides disposition
+recipient active surface decides post-ingestion disposition
 ```
 
 The protocol is **distinct from relay**. Relay (per [*The Relay Is the Instruction*](https://atomicspacekitten.substack.com/p/the-relay-is-the-instruction)) confers operative force **within the scope of ASK's relay envelope** — the envelope determines whether the recipient is to read, classify, review, execute, hold, or otherwise act. Mere inclusion of an artifact does not make every proposition inside it operative intent. Cross-surface handoff routing confers candidate normative availability only — the copy into the recipient intent inbox does not authorize anything; it makes the material durably available for classification. Conflating the two reintroduces the failure mode [*The Handoff Is Not the Instruction*](https://atomicspacekitten.substack.com/p/the-handoff-is-not-the-instruction) names.
@@ -164,7 +164,7 @@ The routing act may identify the file and the destination. It does not supply su
 handoff memo carries durable handling meaning
 routing makes the artifact available
 ASK's relay envelope governs the feed
-recipient surface decides disposition
+recipient surface decides post-ingestion disposition
 ```
 
 The completeness rule is the operational mechanism that makes cross-surface handoff routing work as designed. Without it, the routing protocol's promise — that the memo is durably available for recipient classification — is partially defeated: the file lands in the intent inbox (slow-aging) but its handling instructions live in chat relay (event-rate), and the durable copy ages out of sync with the meaning it depends on. The completeness rule restores the alignment.
@@ -227,7 +227,7 @@ The lifecycle:
 ```text
 handoff memo body remains the byte-immutable received record
 filename marker carries current lifecycle disposition
-recipient surface decides disposition
+recipient surface decides post-ingestion disposition
 closure record and terminal rename are one bounded operation
 any separate maintained current-status record agrees with the filename marker
 ```
@@ -283,7 +283,7 @@ One consequence should be stated rather than discovered: because the convention 
 
 Version succession is not supersession. A carrier canonical advancing `_v2` → `_v3` is ordinary revision lineage; `-supersededA` and `-supersededP` answer a different question — whether an *addressed routed artifact* crossed ingestion before being displaced. Standing and invocable carriers do not take handoff lifecycle suffixes at all (`docs/intent-artifacts.md`).
 
-Copy + suffix do not authorize anything. The marker tracks operator ingestion state; absorption belongs to the recipient.
+Copy + suffix do not authorize anything. `-TBI` carries human ASK's unconsumed feed obligation; the recipient owns post-ingestion disposition, while ASK may retire the artifact before ingestion through `-supersededA`.
 
 ## External / domain-authority handoff classification
 
