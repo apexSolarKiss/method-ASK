@@ -126,10 +126,12 @@ A prior `_vN` is **historical**, not superseded. Version succession is ordinary 
 **Routed-instance lifecycle** — addressed artifacts crossing a surface boundary:
 
 ```text
--TBI → -ingested → a durable disposition suffix
+fresh routed handoff + terminal -TBI overlay
+  → -ingested
+  → a durable disposition suffix
 ```
 
-The received body is byte-immutable; no canonical mirror and no `_vN` chain are created. **`docs/source-of-intent.md` §Inbound handoff TBI marker is the authoritative state machine** — the exact suffix transitions, marker grammar, queue mechanics, supersession phases, and exceptions live there and are not restated here.
+`-ingested` begins the artifact's **durable routed-instance filename lifecycle**; terminal `-TBI` is the cross-cutting feed overlay, not a routed-instance durable state, and its resolution specializes into `-ingested` only for a *fresh* handoff. The received body is byte-immutable; no canonical mirror and no `_vN` chain are created. **`docs/source-of-intent.md` §Inbound handoff TBI marker is the authoritative state machine** — the exact suffix transitions, feed-overlay resolution mechanics, marker grammar, queue mechanics, supersession phases, and exceptions live there and are not restated here.
 
 **Provenance lineage** — transcripts:
 
