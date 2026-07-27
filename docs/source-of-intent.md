@@ -183,7 +183,7 @@ A fresh routed handoff copied into a recipient project's **intent inbox** carrie
 
 **`-TBI` is an orthogonal terminal overlay, not a step in the routed-instance state machine.** It sits above whatever the artifact already is: a fresh routed handoff, a provenance transcript, an ordinary unmarked report, or an artifact that already carries a durable disposition. It is therefore **not** evidence that the artifact has never been ingested — an already-absorbed memo ASK wants read again carries the same flag, and means the same thing by it. The queue `-TBI` populates is an **outstanding feed-obligation queue**, not an unconsumed-artifact queue.
 
-**Four events, not two.** The full first-ingest-and-classify path for a **fresh routed handoff** distinguishes four distinct events. A fresh routed handoff may instead exit before ingestion through `-supersededA`, either before feeding or after a feed that did not result in ingestion; the four-event path is what a fresh handoff traverses when it *is* ingested and classified, not an inevitability of routing. Other artifact classes never enter it — they resolve the overlay under §Resolving the feed-obligation overlay. Collapsing any adjacent pair of the four is the failure this section corrects:
+**Four events, not two.** The full first-ingest-and-classify path for a **fresh routed handoff** distinguishes four distinct events. A fresh routed handoff may instead exit before ingestion through `-supersededA`, either before feeding or after a feed that did not result in ingestion; the four-event path is what a fresh handoff traverses when it *is* ingested and classified, not an inevitability of routing. Anything not currently in that state never enters it — including a routed instance whose first ingestion already occurred — and resolves the overlay under §Resolving the feed-obligation overlay instead. Collapsing any adjacent pair of the four is the failure this section corrects:
 
 ```text
 routing     the origin makes material durably available in the recipient's intake
@@ -207,9 +207,10 @@ The disequality is hard and load-bearing:
 ingestion ≠ disposition — and therefore ingestion ≠ absorption
 `-TBI` → `-ingested` = the ingestion signal for a FRESH ROUTED HANDOFF
                        (first lifecycle mutation after successful content
-                       read). For every other artifact class, a successful
-                       feed removes the overlay only — see §Resolving the
-                       feed-obligation overlay
+                       read). For anything NOT CURRENTLY IN THAT STATE —
+                       including an already-ingested or dispositioned routed
+                       instance — a successful feed removes the overlay only.
+                       See §Resolving the feed-obligation overlay
 disposition = the later recipient-owned classification; every transition
               from `-ingested` to a terminal disposition suffix requires
               a durable disposition record in the same bounded operation.
@@ -220,7 +221,7 @@ Leaving `-TBI` on a fresh routed handoff until its payload is absorbed is the fa
 
 **Why a fresh routed handoff carries two states rather than one.** This rationale is specific to the fresh-handoff case; for a PTX, an ordinary artifact, or an already-dispositioned one, removing only the overlay *is* the correct operation. But a fresh routed handoff whose `-TBI` were simply removed would be indistinguishable from one that never carried a marker — so a bare unmarked filename could not answer *"has this been ingested but not yet closed?"* In long branching work, that question is exactly the one that goes unanswered while a thread descends through successive rabbit holes. `-ingested` makes the post-ingestion, pre-closure interval visible, so the open tail is legible from a directory listing rather than reconstructible only from memory.
 
-**The fresh routed-handoff lifecycle.** The numbered steps below govern a *fresh routed handoff* only. Any other artifact class resolves its overlay under §Resolving the feed-obligation overlay and then **exits this lifecycle**: for a non-handoff, removing `-TBI` is a feed-obligation filename mutation, not a routed-instance lifecycle mutation, and it triggers no handoff classification, disposition, or closure. Whatever review or classification follows comes from ASK's relay envelope or from that artifact class's own rules.
+**The fresh routed-handoff lifecycle.** The numbered steps below govern a *fresh routed handoff* only. Anything not currently in that state — including a routed instance already ingested or dispositioned — resolves its overlay under §Resolving the feed-obligation overlay and then **exits this lifecycle**: outside a fresh handoff's first ingestion, removing `-TBI` is a feed-obligation filename mutation, not a routed-instance lifecycle mutation, and it triggers no handoff classification, disposition, or closure. Whatever review or classification follows comes from ASK's relay envelope or from that artifact class's own rules.
 
 1. Origin prepares a self-contained handoff memo per §Handoff memo completeness. The origin scratch trail copy uses a clean filename (no `-TBI`).
 2. The recipient copy lands in the recipient surface's intent inbox with the `-TBI.md` suffix.
@@ -299,7 +300,7 @@ Within the underlying filename an addressee marker (`-4ASK`, `-4TMK`) precedes t
 
 ## Resolving the feed-obligation overlay
 
-A successful content read satisfies the feed obligation. The filename overlay is then resolved once class is established — the read and the rename are distinct events, and what the filename becomes depends on the artifact's class and prior state, not on whether the name already contains another suffix:
+A successful content read **of the marked payload, by the intended active recipient surface, under ASK's feed** satisfies the current feed obligation. A source-side inspection — reading a governing record, verifying bytes, or consulting an inspection copy — is not that read and satisfies nothing. The filename overlay is then resolved once class is established — the read and the rename are distinct events, and what the filename becomes depends on the artifact's class and prior state, not on whether the name already contains another suffix:
 
 ```text
 IF the underlying artifact is a fresh routed handoff awaiting its first ingestion
@@ -312,9 +313,9 @@ artifact already carrying a durable disposition
 
 **Determine the class; do not infer it from the filename.** Stripping `-TBI` and finding no other suffix does **not** establish a fresh routed handoff — an ordinary unmarked report carries the overlay the same way. Neither does inbox residency: the queue is logical, and a file sits in the intake for reasons that have nothing to do with its class. Establish fresh-routed-handoff status from the artifact's **governed role, body, location, and routing record** before choosing a branch. **A genuinely unclear class is a stop condition.** Removal-only is not a safe default there, because the unresolved artifact might *be* a fresh routed handoff — and one may never become bare and unmarked. Resolve neither branch until class is established: do not remove `-TBI`, and do not append `-ingested`.
 
-**Establish class before feeding.** This is a normal-path precondition, not a preference. Where class cannot be established from the artifact's governed role, routing record, location, and existing context, **do not feed that marked artifact yet** — classify it first from the governing record or an inspection copy. Classification is cheap before the read and unrecoverable after it.
+**Establish class before feeding.** This is a normal-path precondition, not a preference. Where class cannot be established from the artifact's governed role, routing record, location, and existing context, **do not feed that marked artifact yet** — classify it first from the governing record or an inspection copy. The *opportunity* to classify before feeding is lost once the marked artifact has been read; classification itself remains recoverable through the bounded exception path below.
 
-**Already-read recovery.** If an unclassified marked artifact was read anyway, the feed obligation is already satisfied and a retained `-TBI` no longer states it truthfully — but removing it and appending `-ingested` are both still unavailable, because either would assert a class that has not been established. Record the successful read and the unresolved-class exception, treat the filename as **temporarily non-authoritative queue evidence** rather than a current claim, and resolve it immediately once classification is established. This is bounded error recovery, not a second normal path, and the exception record is what keeps the interim honest.
+**Already-read recovery.** If an unclassified marked artifact was read anyway, the feed obligation is already satisfied and a retained `-TBI` no longer states it truthfully — but removing it and appending `-ingested` are both still unavailable, because either would assert a class that has not been established. Record the successful read and the unresolved-class exception, treat terminal `-TBI` as **temporarily non-authoritative feed-obligation evidence** rather than a current claim, and resolve it immediately once classification is established. The demotion is confined to that axis: the underlying artifact identity and any truthful durable-state marker remain authoritative under their own rules — in `topic-absorbed-TBI.md` the `absorbed` disposition keeps saying exactly what it says while only the feed flag is stale. This is bounded error recovery, not a second normal path, and the exception record is what keeps the interim honest.
 
 A re-feed is a genuine new ingestion event. It does **not** reopen, reclassify, erase, or advance the underlying durable disposition, and it does not convert one artifact class into another: feeding a PTX does not make it a handoff, project truth, an implementation instruction, or an absorption candidate. Where a re-feed needs durable audit evidence, record the feed event in the appropriate provenance or status record — never by overloading the disposition suffix to count reads.
 
@@ -338,18 +339,21 @@ fixed-path carriers `_INDEX` · `_STATE.md` · a grounding-note canonical · any
 The two cases fail that test for different reasons, so their remedies differ:
 
 ```text
-historical          preserve the original UNREAD and untouched. Feeding it by
--supersededA        reference still successfully feeds that exact artifact and
-artifact            falsifies its retired-unconsumed claim, even though nothing
-                    was renamed. Feed an addressed copy, or a reference-bearing
-                    feed artifact derived from it.
+historical          preserve the original untouched, and do not let it be the
+-supersededA        payload read into the intended recipient surface under the
+artifact            new obligation. Feeding it by reference still delivers that
+                    exact artifact and falsifies its retired-unconsumed claim,
+                    even though nothing was renamed. Feed an addressed copy, or
+                    a reference-bearing feed artifact derived from it.
+                    Source-side verification, provenance inspection, and the
+                    copying needed to build that derivative are unaffected.
 
 fixed-path          feed the original BY REFERENCE at its stable contractual
-canonical /         path, or use an addressed copy. Reading it breaks nothing;
-structural carrier  renaming it is what breaks the retrieval contract.
+canonical /         path, or use an addressed copy. Recipient-side reading
+structural carrier  breaks nothing; renaming it is what breaks the contract.
 ```
 
-The distinction is which operation does the damage. For a `-supersededA` artifact it is the successful read, so the original must not be the thing fed. For a fixed-path carrier it is the rename, so the original may be read freely and simply must keep its name.
+The distinction is which operation does the damage. For a `-supersededA` artifact it is the **recipient-surface** read, so the original must not be the thing fed — its historical disposition stays truthful precisely because no recipient ever consumed it. Source-side reading does not touch that claim. For a fixed-path carrier it is the rename, so the original may be fed freely and simply must keep its name.
 
 **This convention is prospective.** Existing unmarked ingested artifacts, and existing upper-case `-INGESTED`, `-ABSORBED`, `-SUPERSEDED`, `-CLOSED`, or other historically informative suffixes, are preserved and are **not** normalized to match this grammar. A filename carries information; syntactic consistency is not a reason to destroy it. Historical filenames retain the conventions in force when they were created, and legacy tokens do not acquire the prospective meanings defined here.
 
