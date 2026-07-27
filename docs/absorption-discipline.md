@@ -22,7 +22,7 @@ Absorption is not:
 - turning event chronology into grounding-note posture because the event was important
 - promoting a first sighting into rule-level doctrine because the pattern feels structural
 - treating a polished handoff as current instruction because the handoff format is convincing
-- **ingesting a routed handoff — removing its `-TBI` suffix — is not absorbing it.** Ingestion ≠ absorption: the rename is only the ingestion signal and records nothing about disposition. Absorption is the separate recipient-owned classification that follows (absorb / hold / reject / route / withdraw / no-route), recorded by a separate `scratch/*_absorption.md` closure memo when the classification requires durable closure; the received memo remains byte-immutable, and current lifecycle disposition is carried by the filename marker plus any separate current-status record (see `docs/source-of-intent.md` §Inbound handoff TBI marker). Leaving `-TBI` on a memo until its payload is absorbed conflates the two and makes the ingestion queue unreliable. Ingestion is the third of four events — routing, feeding, ingestion, absorption — modelled in full at that section; absorption is the fourth, and the only one this doc owns. (In that model *routing* means cross-surface artifact routing, a different sense from the material-to-layer routing in §Layer destinations below.)
+- **ingesting a routed handoff — renaming its `-TBI` suffix to `-ingested` — is not absorbing it.** Ingestion ≠ absorption: that rename is only the ingestion signal and records nothing about disposition. Absorption is the separate recipient-owned classification that follows (absorb / hold / reject / route / withdraw / no-route), recorded in a durable closure record when the classification requires one; the received memo remains byte-immutable, and current lifecycle disposition is carried by the filename marker plus any separate current-status record (see `docs/source-of-intent.md` §Inbound handoff TBI marker). Leaving `-TBI` on a memo until its payload is absorbed conflates the two and makes the ingestion queue unreliable; leaving `-ingested` on a memo whose disposition is durably recorded makes the closure queue unreliable in the same way, one step later. Ingestion is the third of four events — routing, feeding, ingestion, absorption — modelled in full at that section; absorption is the fourth, and the only one this doc owns. (In that model *routing* means cross-surface artifact routing, a different sense from the material-to-layer routing in §Layer destinations below.)
 - treating future roadmap as current-stage work because the roadmap looks actionable
 - turning implementation architecture into method before the method stage has earned it
 - absorbing material on first sighting that has not yet been pressure-tested across more than one surface
@@ -68,6 +68,29 @@ The methodology repo carries observation-level material without pretending it is
 Observation-level material does not have to be small. A subsection-length treatment is appropriate when the pattern is dense; a sentence-length flag is appropriate when the pattern is thin. The discipline lives in the labeling and the explicit promotion condition, not the length.
 
 `docs/source-of-intent.md` carried the external / domain-authority handoff classification at observation-level until it was promoted to rule-level doctrine on the structural-argument branch of the evidence threshold — the pressure follows from the architect/operator vs domain-authority role split itself, not from any one project's local mechanics. Its remaining open move is a separate, heavier one: its own first-class doc on separability grounds, if it outgrows this discipline's category distinctions.
+
+## Closure and the terminal rename are one operation
+
+A durable disposition has two faces, and they are recorded together. The closure record carries the reasoning — classification, actions, non-actions, remaining held items. The filename carries the state, so the disposition is legible without opening anything.
+
+```text
+-ingested  →  -absorbed · -held · -declined · -withdrawn · -routed · -no-route · -closed
+```
+
+**Record the closure and apply the rename in the same bounded operation.** A closure without the rename leaves the filename advertising an open tail that is in fact closed; a rename without the closure asserts a disposition no record supports. Either half alone makes the queue lie, which is the failure the marker exists to prevent.
+
+What earns each suffix:
+
+- **`-absorbed`** — absorption accurately describes the *artifact-level* outcome: the material reached a durable destination per §Layer destinations. Use it only when that is true of the artifact, not merely of its strongest claim.
+- **`-held`** — classification is complete and the disposition is deliberate deferral. A hold is a decision, not an absence of one.
+- **`-declined`** · **`-withdrawn`** · **`-routed`** · **`-no-route`** — the remaining terminal classifications, matching the vocabulary above.
+- **`-closed`** — the closure carries **mixed claim-level outcomes**: one claim absorbed, another held, a third routed elsewhere. Because this doc classifies claim by claim, a single artifact frequently has no single artifact-level verdict; `-closed` is the honest suffix in that case, and the closure record carries the per-claim detail.
+
+The closure record may be a dedicated dated memo in `scratch/` or an appended terminal section in an explicitly maintained program or absorption record. **Do not create a new artifact solely to satisfy the form** — that manufactures ceremony without adding evidence.
+
+`-absorbed` records absorption only. It does not imply implementation, merge, publication, release, or any other downstream completion.
+
+The routed-instance state machine, marker grammar, and queue mechanics are owned by `docs/source-of-intent.md` §Inbound handoff TBI marker; the artifact ontology these classes sit inside is `docs/intent-artifacts.md`. This section owns only what earns which disposition.
 
 ## Reconciliation after absorption
 
