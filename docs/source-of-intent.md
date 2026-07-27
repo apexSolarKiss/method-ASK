@@ -337,7 +337,7 @@ One consequence should be stated rather than discovered: because the convention 
 
 Version succession is not supersession. A carrier canonical advancing `_v2` → `_v3` is ordinary revision lineage; `-supersededA` and `-supersededP` answer a different question — whether an *addressed routed artifact* crossed ingestion before being displaced. Standing and invocable carriers do not take routed-instance **disposition** suffixes at all (`docs/intent-artifacts.md`) — though an eligible artifact, or an addressed copy of one, may carry the orthogonal terminal `-TBI` overlay, subject to the truth-preservation and fixed-locator constraints above.
 
-Copy + suffix do not authorize anything. `-TBI` carries human ASK's outstanding feed obligation; the recipient owns post-ingestion disposition, while ASK may retire the artifact before ingestion through `-supersededA`.
+Copy + suffix do not authorize anything. `-TBI` carries human ASK's outstanding feed obligation; the recipient owns post-ingestion disposition, while ASK may retire a fresh routed handoff before ingestion through `-supersededA`.
 
 ## External / domain-authority handoff classification
 

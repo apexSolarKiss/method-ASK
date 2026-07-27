@@ -127,11 +127,15 @@ A prior `_vN` is **historical**, not superseded. Version succession is ordinary 
 
 ```text
 fresh routed handoff + terminal -TBI overlay
-  → -ingested
-  → a durable disposition suffix
+  ├─ successful first ingestion
+  │    → -ingested
+  │    → a durable post-ingestion disposition suffix
+  │
+  └─ ASK-side pre-ingestion retirement
+       → -supersededA
 ```
 
-`-ingested` begins the artifact's **durable routed-instance filename lifecycle**; terminal `-TBI` is the cross-cutting feed overlay, not a routed-instance durable state, and its resolution specializes into `-ingested` only for a *fresh* handoff. The received body is byte-immutable; no canonical mirror and no `_vN` chain are created. **`docs/source-of-intent.md` §Inbound handoff TBI marker is the authoritative state machine** — the exact suffix transitions, feed-overlay resolution mechanics, marker grammar, queue mechanics, supersession phases, and exceptions live there and are not restated here.
+`-ingested` begins the durable **post-ingestion** branch of the routed-instance filename lifecycle; `-supersededA` is its durable **pre-ingestion retirement** branch. Terminal `-TBI` remains the cross-cutting feed overlay, not a durable routed-instance state. The received body is byte-immutable; no canonical mirror and no `_vN` chain are created. **`docs/source-of-intent.md` is the authoritative state machine** — the exact suffix transitions, marker grammar, queue mechanics, supersession phases, and exceptions live in §Inbound handoff TBI marker, and the overlay-resolution mechanics in §Resolving the feed-obligation overlay; neither is restated here.
 
 **Provenance lineage** — transcripts:
 
@@ -149,7 +153,7 @@ A provenance transcript receives neither the canonical-plus-snapshot model nor t
 
 `-TBI` is not part of any one lifecycle architecture. It is human ASK's terminal flag that a successful feed of that exact artifact is still owed, and it may sit above a canonical carrier, a routed instance, a provenance transcript, or an ordinary artifact carrying no marker at all. Placing it there imports no other class's lifecycle: `topic-PTX-TBI.md` is a provenance transcript with a feed owed, not a routed handoff, and resolving the overlay returns it to `topic-PTX.md`.
 
-Only a **fresh routed handoff** specializes the resolution into `-TBI` → `-ingested`; every other class has the overlay removed and its underlying filename restored unchanged. An in-place overlay is valid only where resolving it leaves the filename truthful and preserves any contractual locator — `docs/source-of-intent.md` §Resolving the feed-obligation overlay owns the mechanics, including the `-supersededA` and fixed-path carve-outs.
+Only a **fresh routed handoff** specializes the resolution, and only on a successful feed: `-TBI` → `-ingested`. A fresh handoff may instead leave the overlay through the ASK-side pre-ingestion retirement branch, `-TBI` → `-supersededA`, without ever reaching `-ingested`. Every other class has the overlay removed and its underlying filename restored unchanged. An in-place overlay is valid only where resolving it leaves the filename truthful and preserves any contractual locator — `docs/source-of-intent.md` §Resolving the feed-obligation overlay owns the mechanics, including the `-supersededA` and fixed-path carve-outs.
 
 ## Relay and feeding
 
@@ -283,6 +287,7 @@ transcript capture        ≠ conversion into operative authority
 This doctrine owns the ontology. It does not own:
 
 - the routed-instance state machine, marker grammar, or queue mechanics — `docs/source-of-intent.md` §Inbound handoff TBI marker;
+- feed-overlay resolution mechanics, including the class discriminator, the truth-preservation invariant, and the fixed-locator carve-out — `docs/source-of-intent.md` §Resolving the feed-obligation overlay;
 - absorption criteria, durable disposition, closure requirements, or reconciliation after absorption — `docs/absorption-discipline.md`;
 - the structural face of source of intent — `docs/normative-apex.md`;
 - the surface-relation frame these classes sit inside — `docs/relative-externality.md`;
