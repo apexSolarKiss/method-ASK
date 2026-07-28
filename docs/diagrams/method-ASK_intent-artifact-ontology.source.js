@@ -2,7 +2,7 @@
    Source data for the intent / context / provenance ontology diagram.
    Renderable by diagrams-static-H-engine.js.
 
-   D04 // intent-artifact ontology // source-v1 // 2026-07-28
+   D10 // intent-artifact ontology // source-v2 // 2026-07-28
 
    Subject: what KIND of thing each artifact is, and the one distinction the ontology
    exists to protect — that a source of intent is a locatable governing ROLE, not a
@@ -20,7 +20,7 @@
 
    Repo prose is source truth: docs/intent-artifacts.md, docs/source-of-intent.md. */
 
-window.TREE_D04 = {
+window.TREE_D10 = {
   kind: 'root',
   label: 'SOURCE OF INTENT',
   note: 'the locatable governing role · the apex relation — NOT a folder, NOT an artifact',
