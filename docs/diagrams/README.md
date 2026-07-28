@@ -16,6 +16,20 @@ Each diagram is a structural snapshot of the repo at a point in time. Diagrams a
 
 The diagram conforms to [`apexSolarKiss/design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) Tier 1 + Tier 2 by reference at generation time. The compiled `diagrams.css` in this folder is render support, not identity source truth. `design-system-ASK` remains the visual authority; this folder does not own visual identity.
 
+## The four intent-architecture figures
+
+`TREE_D04`–`TREE_D07` are one delivery unit against the landed intent-artifact ontology and routed-instance
+lifecycle (`docs/intent-artifacts.md`, `docs/source-of-intent.md`). They are structural maps rendered by the
+shared tree engine, not bespoke `figure.js` compositions like the SMGI pair — the subject in each case is a
+classification or a set of distinctions, which is what the tree engine is for.
+
+They exist to prevent four specific collapses, one per figure:
+
+- **D04** — a source of intent is a locatable ROLE, not a folder or a file; ASK authorship does not make an artifact an intent carrier.
+- **D05** — a canonical `vN` lineage is not a routed-instance lifecycle; only routed instances take the inbox suffixes.
+- **D06** — the relay ENVELOPE supplies operative force; the payload supplies content. Ingestion is what results when a feed succeeds, and it is not a disposition.
+- **D07** — a PTX is a faithful linear projection of a partially-ordered exchange, not the exchange itself and not an authority converter.
+
 ## Update cadence
 
 - topology or method-altitude structural change: refresh the source data file
@@ -29,7 +43,23 @@ The diagram conforms to [`apexSolarKiss/design-system-ASK`](https://github.com/a
 ```text
 README.md                              this file
 method-ASK_topology.html               renders TREE_D02
-method-ASK_topology.source.js          TREE_D02 data
+method-ASK_topology.source.js          TREE_D02 data (source-v8)
+method-ASK_intent-artifact-ontology.html            renders TREE_D04
+method-ASK_intent-artifact-ontology.source.js       TREE_D04 data (source-v1) — source of intent as a
+                                                    locatable ROLE; context / intent / provenance families;
+                                                    the claim-level vs artifact-level discipline
+method-ASK_activation-lifecycle-comparison.html         renders TREE_D05
+method-ASK_activation-lifecycle-comparison.source.js    TREE_D05 data (source-v1) — five carrier classes and
+                                                        their distinct activation + lineage models; the figure
+                                                        that stops every carrier inheriting the inbox lifecycle
+method-ASK_relay-feeding-ingestion.html             renders TREE_D06
+method-ASK_relay-feeding-ingestion.source.js        TREE_D06 data (source-v1) — direct relay vs payload-bearing
+                                                    feed; the envelope supplies force, the payload supplies
+                                                    content; ingestion as a resulting state; disposition separate
+method-ASK_relay-graph-ptx-projection.html          renders TREE_D07
+method-ASK_relay-graph-ptx-projection.source.js     TREE_D07 data (source-v1) — the native partially-ordered
+                                                    multi-thread topology vs the linear PTX projection; three
+                                                    labels on one relayed passage
 method-ASK_bounded-generativity.html         renders the bounded-generativity system-model figure
 method-ASK_bounded-generativity.figure.js    figure builder (source-v4)
 method-ASK_bounded-generativity-dark.png     sole committed doctrine mirror (dark full-page); the
