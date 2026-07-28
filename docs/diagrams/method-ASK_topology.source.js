@@ -2,7 +2,16 @@
    Source data for the method-ASK topology / relative-externality map diagram.
    Renderable by diagrams-static-H-engine.js.
 
-   D02 // method-ASK topology / relative-externality map // source-v7 // 2026-07-25
+   D02 // method-ASK topology / relative-externality map // source-v8 // 2026-07-28
+   v8 (2026-07-28): intake-label conformance to the landed routed-instance lifecycle.
+   The stale gloss `-TBI = received, awaiting ingestion` is replaced by terminal -TBI as
+   ASK's outstanding FEED obligation. The node LABEL becomes the plane's role — `intent
+   inbox` — with the current ecology path carried in the tag and note, so the method
+   diagram stops presenting `source of intent` as a folder beside D04's doctrine that a
+   source of intent is a ROLE. The physical path is NOT relabelled: the separated-plane architecture activated 2026-07-28, but this
+   surface's own Unit-6 cutover has not occurred, and pre-cutover the current mapped
+   path remains required and operative. The note now carries that pending-rename fact.
+   Content-only; render held render-v20.
    v7 (2026-07-25): operating-model current truth. The retired "single-node" label is
    removed from the relay/execution topology and the downstream pressure surfaces; the
    active control-surface node becomes the execution surface of the ASK-apexed
@@ -88,8 +97,8 @@ window.TREE_D02 = {
       tag: 'ecology-ASK-EXTERNAL/ · method-ASK slice',
       children: [
         { label: 'method-ASK_grounding-note.md', note: 'root canonical' },
-        { label: 'sources of intent/', note: 'shared ecology INBOUND intake · genuinely inbound material only — NOT a core-repo routing bus (direct-core movement is a hard repo-boundary reset, not a -TBI ingestion event)', children: [
-          { label: 'routed handoffs · -TBI = received, awaiting ingestion' },
+        { label: 'intent inbox', tag: 'current ecology path: sources of intent/ · pre-cutover', note: 'shared ecology INBOUND intake · genuinely inbound material only — NOT a core-repo routing bus (direct-core movement is a hard repo-boundary reset, not an ingestion event). The separated-plane architecture activated 2026-07-28; target path intent-INbox/ after THIS surface completes its own Unit-6 cutover, which has not yet occurred. The live index controls the current physical path until then', children: [
+          { label: 'routed handoffs · terminal -TBI = ASK still owes a feed of that exact artifact' },
           { label: 'received records from separately-operated or walled surfaces' },
         ]},
         { label: 'scratch/', note: 'shared ecology operator scratch', children: [
