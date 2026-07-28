@@ -7,8 +7,9 @@
    The native exchange is a partially-ordered multi-thread graph. A PTX is a faithful
    linearized PROJECTION of that graph, selected and ordered by ASK. It is not the
    native topology, not necessarily wall-clock chronology, and not an authority
-   converter: it records who drafted, who adopted, and who executed — it does not
-   change any of them.
+   converter: it records ASK's ASSEMBLED ATTRIBUTION of drafting, adoption, and execution.
+   It does not change those roles, and the recorded attribution may itself require
+   verification.
 
    One relayed passage carries three different labels at once, and the figure exists to
    keep them separable.
@@ -22,7 +23,7 @@ window.TREE_D07 = {
   children: [
     { kind: 'section', label: 'panel A · native topology', tag: 'what actually happens · partially ordered', children: [
       { kind: 'group', label: 'parallel strands', note: 'separate ACTIVE THREAD CONTEXTS; no automatic shared thread state. Named durable sources may be read independently by both', children: [
-        { label: 'ASK', note: 'the apex · the only surface that relays across strands' },
+        { label: 'ASK', note: 'the apex · the only ACTOR that relays conversational material across strands' },
         { label: 'GPT advisor strand', note: 'non-writing · challenge, reconstruction, verification' },
         { label: 'Claude executor strand', note: 'single-writer · plans and performs authorized work' },
       ]},

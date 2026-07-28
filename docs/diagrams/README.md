@@ -26,7 +26,7 @@ classification or a set of distinctions, which is what the tree engine is for.
 They exist to prevent four specific collapses, one per figure:
 
 - **D04** — a source of intent is a locatable ROLE, not a folder or a file; ASK authorship does not make an artifact an intent carrier.
-- **D05** — a canonical `vN` lineage is not a routed-instance lifecycle; only routed instances take the inbox suffixes.
+- **D05** — a canonical `vN` lineage is not a routed-instance lifecycle. Only a **fresh routed handoff awaiting first ingestion** enters the routed-instance filename lifecycle; terminal `-TBI` remains orthogonal and may overlay other eligible artifact forms without importing it.
 - **D06** — the relay ENVELOPE supplies operative force; the payload supplies content. Ingestion is what results when a feed succeeds, and it is not a disposition.
 - **D07** — a PTX is a faithful linear projection of a partially-ordered exchange, not the exchange itself and not an authority converter.
 
@@ -49,9 +49,12 @@ method-ASK_intent-artifact-ontology.source.js       TREE_D04 data (source-v1) �
                                                     locatable ROLE; context / intent / provenance families;
                                                     the claim-level vs artifact-level discipline
 method-ASK_activation-lifecycle-comparison.html         renders TREE_D05
-method-ASK_activation-lifecycle-comparison.source.js    TREE_D05 data (source-v1) — five carrier classes and
-                                                        their distinct activation + lineage models; the figure
-                                                        that stops every carrier inheriting the inbox lifecycle
+method-ASK_activation-lifecycle-comparison.source.js    TREE_D05 data (source-v1) — five artifact forms and
+                                                        their distinct activation + lineage models; prevents
+                                                        every artifact form from inheriting the fresh
+                                                        routed-handoff filename lifecycle merely because it is
+                                                        read, fed, or co-located. Terminal -TBI remains an
+                                                        orthogonal overlay
 method-ASK_relay-feeding-ingestion.html             renders TREE_D06
 method-ASK_relay-feeding-ingestion.source.js        TREE_D06 data (source-v1) — direct relay vs payload-bearing
                                                     feed; the envelope supplies force, the payload supplies
