@@ -18,14 +18,14 @@ The diagram conforms to [`apexSolarKiss/design-system-ASK`](https://github.com/a
 
 ## The four intent-architecture figures
 
-`TREE_D04`–`TREE_D07` are one delivery unit against the landed intent-artifact ontology and routed-instance
+`TREE_D10` and `TREE_D05`–`TREE_D07` are one delivery unit against the landed intent-artifact ontology and routed-instance
 lifecycle (`docs/intent-artifacts.md`, `docs/source-of-intent.md`). They are structural maps rendered by the
 shared tree engine, not bespoke `figure.js` compositions like the SMGI pair — the subject in each case is a
 classification or a set of distinctions, which is what the tree engine is for.
 
 They exist to prevent four specific collapses, one per figure:
 
-- **D04** — a source of intent is a locatable ROLE, not a folder or a file; ASK authorship does not make an artifact an intent carrier.
+- **D10** — a source of intent is a locatable ROLE, not a folder or a file; ASK authorship does not make an artifact an intent carrier.
 - **D05** — a canonical `vN` lineage is not a routed-instance lifecycle. Only a **fresh routed handoff awaiting first ingestion** enters the routed-instance filename lifecycle; terminal `-TBI` remains orthogonal and may overlay other eligible artifact forms without importing it.
 - **D06** — the relay ENVELOPE supplies operative force; the payload supplies content. Ingestion is what results when a feed succeeds, and it is not a disposition.
 - **D07** — a PTX is a faithful linear projection of a partially-ordered exchange, not the exchange itself and not an authority converter.
@@ -44,8 +44,8 @@ They exist to prevent four specific collapses, one per figure:
 README.md                              this file
 method-ASK_topology.html               renders TREE_D02
 method-ASK_topology.source.js          TREE_D02 data (source-v8)
-method-ASK_intent-artifact-ontology.html            renders TREE_D04
-method-ASK_intent-artifact-ontology.source.js       TREE_D04 data (source-v1) — source of intent as a
+method-ASK_intent-artifact-ontology.html            renders TREE_D10
+method-ASK_intent-artifact-ontology.source.js       TREE_D10 data (source-v2) — source of intent as a
                                                     locatable ROLE; context / intent / provenance families;
                                                     the claim-level vs artifact-level discipline
 method-ASK_activation-lifecycle-comparison.html         renders TREE_D05

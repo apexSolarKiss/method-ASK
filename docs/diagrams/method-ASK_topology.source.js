@@ -7,7 +7,7 @@
    The stale gloss `-TBI = received, awaiting ingestion` is replaced by terminal -TBI as
    ASK's outstanding FEED obligation. The node LABEL becomes the plane's role — `intent
    inbox` — with the current ecology path carried in the tag and note, so the method
-   diagram stops presenting `source of intent` as a folder beside D04's doctrine that a
+   diagram stops presenting `source of intent` as a folder beside D10's doctrine that a
    source of intent is a ROLE. The physical path is NOT relabelled: the separated-plane architecture activated 2026-07-28, but this
    surface's own Unit-6 cutover has not occurred, and pre-cutover the current mapped
    path remains required and operative. The note now carries that pending-rename fact.
