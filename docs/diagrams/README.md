@@ -105,7 +105,7 @@ The SMGI doctrine figure remains `source-v1 // render-v1`; the ontology figure i
 
 This diagram originated in the v9 operator-side `ecology-ASK` diagram package and was first absorbed here at `source-v2 // render-v9`.
 
-The current tuple is `source-v7 // render-v20` (2026-07-25). Source advances when the authored topology changes; render advances only when the renderer realization changes.
+The current tuple is `source-v8 // render-v20` (2026-07-28). Source advances when the authored topology changes; render advances only when the renderer realization changes.
 
 The operator-side package and historical render iterations remain in `ecology-ASK-EXTERNAL/scratch/` and are not repo truth.
 

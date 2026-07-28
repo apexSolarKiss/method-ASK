@@ -21,12 +21,12 @@ window.TREE_D07 = {
   note: 'a partially-ordered multi-thread exchange, and the linear artifact that represents it',
   children: [
     { kind: 'section', label: 'panel A · native topology', tag: 'what actually happens · partially ordered', children: [
-      { kind: 'group', label: 'parallel strands', note: 'separate threads, separate contexts, no shared memory', children: [
+      { kind: 'group', label: 'parallel strands', note: 'separate ACTIVE THREAD CONTEXTS; no automatic shared thread state. Named durable sources may be read independently by both', children: [
         { label: 'ASK', note: 'the apex · the only surface that relays across strands' },
         { label: 'GPT advisor strand', note: 'non-writing · challenge, reconstruction, verification' },
         { label: 'Claude executor strand', note: 'single-writer · plans and performs authorized work' },
       ]},
-      { kind: 'group', label: 'what crosses between them', note: 'only ASK’s relay — the strands never touch directly', children: [
+      { kind: 'group', label: 'what crosses between them', note: 'there is no direct thread-to-thread channel. Cross-strand CONVERSATIONAL transfer occurs through ASK’s relay; both strands may separately read named durable artifacts', children: [
         { label: 'ASK relays advisor output to the executor' },
         { label: 'ASK relays executor state back to the advisor' },
         { label: 'parallel side conversations' },
@@ -50,6 +50,7 @@ window.TREE_D07 = {
       { label: 'drafting provenance', note: 'GPT — who composed the words' },
       { label: 'normative voice', note: 'ASK, through relay — who made them operative' },
       { label: 'execution provenance', note: 'Claude — who acted on them' },
+      { label: 'speaker marker', note: 'ASK-ASSEMBLED ATTRIBUTION EVIDENCE — a reason to inspect, not infallible proof of drafting provenance. PTX assembly itself may contain error; an anomalous marker is a signal to CHECK, not a settled fact' },
       { label: 'the collapse to avoid', note: 'reading a quoted passage inside a PTX as operative because it appears in the transcript' },
     ]},
   ],

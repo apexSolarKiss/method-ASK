@@ -1,9 +1,12 @@
 /* method-ASK_activation-lifecycle-comparison.source.js
    D05 // activation and lifecycle comparison // source-v1 // 2026-07-28
 
-   Subject: five carrier classes and their DISTINCT activation and lineage models.
+   Subject: five artifact forms and their DISTINCT activation and lineage models. They are NOT
+   one carrier family — a grounding note is a context artifact and a PTX is a provenance
+   artifact; only some members here are intent carriers.
    The figure exists to stop one inheritance error: every carrier type inheriting the
-   routed-instance inbox lifecycle because they share a plane.
+   routed-instance filename lifecycle because they share a plane. The orthogonal terminal
+   -TBI overlay may still sit above other eligible artifacts without entering that lifecycle.
 
    A canonical vN lineage is not a routed-instance lifecycle. A deployment is not an
    invocation. An ingestion is not a disposition.
@@ -13,13 +16,13 @@
 window.TREE_D05 = {
   kind: 'root',
   label: 'ACTIVATION + LIFECYCLE',
-  note: 'five carrier classes · five different models — none inherits another’s',
+  note: 'five artifact forms · five different models — none inherits another’s',
   children: [
     { kind: 'section', label: 'grounding note', tag: 'standing context canonical', children: [
       { label: 'lineage', note: 'canonical vN · frozen _vN snapshots in the historical plane' },
       { label: 'activation', note: 'STANDING — a required read; no invocation event, no deployment act' },
       { label: 'force', note: 'normative context. May carry durable intent limbs without becoming an intent carrier' },
-      { label: 'NOT', note: 'not routed · not fed · not ingested · never takes a routed-instance suffix' },
+      { label: 'NOT', note: 'not a routed instance. Reading or feeding it creates no routed-instance filename state, and its fixed-path canonical is never renamed merely to record that it was read' },
     ]},
     { kind: 'section', label: 'Project Instructions', tag: 'standing operative carrier', children: [
       { label: 'lineage', note: 'canonical vN + snapshots' },
@@ -32,7 +35,7 @@ window.TREE_D05 = {
       { label: 'activation', note: 'INVOKED — ASK selects it and relays or feeds it; the invocation produces a result, not a state change on the carrier' },
       { label: 'NOT', note: 'invocation leaves no suffix. A prompt does not become -ingested' },
     ]},
-    { kind: 'section', label: 'routed handoff', tag: 'routed instance — the ONLY inbox lifecycle', children: [
+    { kind: 'section', label: 'routed handoff', tag: 'the ONLY routed-instance filename lifecycle', children: [
       { label: '1 · routed', note: 'origin makes it durably available at the recipient intake · terminal -TBI = ASK still owes a feed' },
       { label: '2 · fed', note: 'ASK hands it to the recipient’s active surface — by value or by exact path' },
       { label: '3 · ingested', note: 'the recipient reads it into active context · -TBI becomes -ingested · disposition still OPEN' },
@@ -41,7 +44,8 @@ window.TREE_D05 = {
     ]},
     { kind: 'section', label: 'PTX', tag: 'provenance artifact', children: [
       { label: 'lineage', note: 'the PTX files ARE the lineage · optional _vN indexes the transcript artifact · no canonical-plus-snapshot chain' },
-      { label: 'activation', note: 'ASSEMBLED by ASK from multi-thread events — capture and projection' },
+      { label: 'creation', note: 'ASK ASSEMBLES the multi-thread projection — capture, not activation' },
+      { label: 'activation', note: 'read as evidence, or later FED under a new relay envelope' },
       { label: 'later feed', note: 'a PTX MAY carry terminal -TBI. Feeding it creates a NEW relay whose envelope governs how it is read — it does not make the transcript a handoff' },
       { label: 'NOT', note: 'not an authority converter · quoting a statement inside a PTX does not make that statement operative' },
     ]},
