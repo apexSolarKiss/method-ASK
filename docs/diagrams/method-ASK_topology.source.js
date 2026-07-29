@@ -2,7 +2,13 @@
    Source data for the method-ASK topology / relative-externality map diagram.
    Renderable by diagrams-static-H-engine.js.
 
-   D02 // method-ASK topology / relative-externality map // source-v8 // 2026-07-28
+   D02 // method-ASK topology / relative-externality map // source-v9 // 2026-07-29
+   v9 (2026-07-29): the ecology surface completed its Unit-6B cutover on 2026-07-29, so
+   v8's pending-rename fact is spent. The intake node's tag now carries the live path
+   `intent-INbox/`, and its note records the completed cutover in place of the
+   not-yet-occurred clause. Both v8 claims the cutover falsified are corrected in the one
+   node they occupy; no other node is touched.
+   Content-only; render held render-v20.
    v8 (2026-07-28): intake-label conformance to the landed routed-instance lifecycle.
    The stale gloss `-TBI = received, awaiting ingestion` is replaced by terminal -TBI as
    ASK's outstanding FEED obligation. The node LABEL becomes the plane's role — `intent
@@ -97,7 +103,7 @@ window.TREE_D02 = {
       tag: 'ecology-ASK-EXTERNAL/ · method-ASK slice',
       children: [
         { label: 'method-ASK_grounding-note.md', note: 'root canonical' },
-        { label: 'intent inbox', tag: 'current ecology path: sources of intent/ · pre-cutover', note: 'shared ecology INBOUND intake · genuinely inbound material only — NOT a core-repo routing bus (direct-core movement is a hard repo-boundary reset, not an ingestion event). The separated-plane architecture activated 2026-07-28; target path intent-INbox/ after THIS surface completes its own Unit-6 cutover, which has not yet occurred. The live index controls the current physical path until then', children: [
+        { label: 'intent inbox', tag: 'current ecology path: intent-INbox/', note: 'shared ecology INBOUND intake · genuinely inbound material only — NOT a core-repo routing bus (direct-core movement is a hard repo-boundary reset, not an ingestion event). The separated-plane architecture activated 2026-07-28; this surface completed its own Unit-6B cutover 2026-07-29, so intent-INbox/ is the live routed-instance plane, with standing invocable carriers separated into intent-carriers/', children: [
           { label: 'routed handoffs · terminal -TBI = ASK still owes a feed of that exact artifact' },
           { label: 'received records from separately-operated or walled surfaces' },
         ]},
