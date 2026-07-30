@@ -31,7 +31,9 @@ These failure modes share a structural cause: a surface that ages slowly receive
 
 ## Layer destinations
 
-Likely destinations for material being considered for absorption:
+Where material being considered for absorption may end up. Two kinds of outcome sit here, and the difference is load-bearing for §Closure and the terminal rename are one operation: a **positive durable landing** is a surface the material actually reaches; a **non-absorption disposition** is a decision not to land it anywhere yet.
+
+**Positive durable landings.** The material reaches one of these:
 
 - **Repo-local public-safe truth** — stable, generalized project truth that belongs in a public repo's prose. Slow-aging.
 - **Grounding note** — slow-aging source-of-intent, audience, durable constraints, durable role boundaries.
@@ -39,10 +41,15 @@ Likely destinations for material being considered for absorption:
 - **[`method-ASK`](../README.md) doctrine** — cross-project method articulation that has earned generalization beyond a single project.
 - **[`control-surface`](https://github.com/apexSolarKiss/control-surface) execution protocol** — workflow rules, templates, prompts that operationalize the method per session.
 - **Project-local observation** — project-specific patterns that have not earned generalization beyond their project. The project's own grounding note or repo carries the project-local form.
-- **Future roadmap context** — direction that may matter later but is not current-stage source-of-intent. Held without reshaping current work.
-- **Hold / no action** — material the discipline declines to absorb anywhere yet. Held material is not lost; it is preserved at the surface where it currently sits, pending evidence that would warrant a move.
+- **Future roadmap context** — direction that may matter later but is not current-stage source-of-intent. Retained without reshaping current work. This is a landing when the material is durably placed in the owning roadmap surface; being kept out of current-stage work does not by itself make it a non-absorption disposition.
 
-The classification step — what kind of material is this — uses the category distinctions in [`docs/source-of-intent.md`](source-of-intent.md). The routing step — where does it go — uses the destinations above. The two steps compose: classify first, then route.
+**Non-absorption disposition.** The material lands nowhere new:
+
+- **Hold / no action** — material the discipline declines to absorb anywhere yet: deliberate deferral without a landing. Held material is not lost; it is preserved at the surface where it currently sits, pending evidence that would warrant a move.
+
+Only a positive durable landing satisfies the `-absorbed` test below. Recording a non-absorption disposition alongside absorbed claims produces a mixed claim-level outcome; the artifact therefore takes `-closed`, not `-absorbed`.
+
+The classification step — what kind of material is this — uses the category distinctions in [`docs/source-of-intent.md`](source-of-intent.md). The routing step — where does it go, or does it stay — uses the outcomes above. The two steps compose: classify first, then route.
 
 ## Evidence thresholds
 
@@ -82,8 +89,8 @@ A durable disposition has two faces, and they are recorded together. The closure
 
 What earns each suffix:
 
-- **`-absorbed`** — absorption accurately describes the *artifact-level* outcome: the material reached a durable destination per §Layer destinations. Use it only when that is true of the artifact, not merely of its strongest claim.
-- **`-held`** — classification is complete and the disposition is deliberate deferral. A hold is a decision, not an absence of one.
+- **`-absorbed`** — absorption accurately describes the *artifact-level* outcome: the material reached a **positive durable landing** per §Layer destinations, not one of the non-absorption dispositions recorded there. Use it only when that is true of the artifact, not merely of its strongest claim.
+- **`-held`** — classification is complete and the disposition is deliberate deferral **without a landing**: the material stays at the surface where it already sits. A hold is a decision, not an absence of one — and not a destination.
 - **`-declined`** · **`-withdrawn`** · **`-routed`** · **`-no-route`** — the remaining terminal classifications, matching the vocabulary above.
 - **`-closed`** — the closure carries **mixed claim-level outcomes**: one claim absorbed, another held, a third routed elsewhere. Because this doc classifies claim by claim, a single artifact frequently has no single artifact-level verdict; `-closed` is the honest suffix in that case, and the closure record carries the per-claim detail.
 - **`-supersededP`** — the artifact was ingested and was later closed because a **named successor** displaced it. The disposition record names the successor and preserves the post-ingestion lineage. The uppercase phase qualifier distinguishes it from `-supersededA`, which retires an artifact that was never ingested and therefore never reaches this doc's classifications at all.
@@ -168,8 +175,8 @@ The gate happens before Plan-Before-Execute for a grounding-note refresh, not af
 Method altitude mentions only. Domain detail lives in the project repos and in the project examples (`examples/`).
 
 - **[`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK)** surfaced the aging-rate principle, the source-of-truth split, and the voice / surface-boundary discipline. These were absorbed upstream into `control-surface` (workflow templates, `AGENTS.md` rules) and into `docs/method.md` (method-altitude articulation). The absorption was earned by repeated pressure across the project's own phases plus structural validation against a second pressure surface as it landed.
-- **[`urban-observatory`](https://github.com/apexSolarKiss/urban-observatory)** surfaced source-of-intent recovery, the validation loop discipline, the post-bootstrap trim pass, and the external / domain-authority handoff classification pattern. The post-bootstrap trim pass earned absorption into `control-surface/templates/grounding-note.template.md` because the lifecycle gate generalizes beyond the urban-observatory domain. The external-handoff classification was first held at observation-level — the protocol repo declined to absorb a project-specific guardrail before generalization was earned — and was later promoted to rule-level on the structural-argument branch of the evidence threshold, the pressure following from the architect/operator vs domain-authority role split itself rather than from any one project's local mechanics. That sequence was the first case where the absorption discipline was applied in the moment of its own application, and the first exercise of its structural-argument branch.
-- **[`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK)** is not yet an absorption example in `method-ASK`. The repo exists and is internally tier-demarcated, and one downstream child project — `urban-observatory`'s Example-2 prototype — has inherited Tier 1 + Tier 2 in practice (the n=1 child proof, held at observation-level). If a second child project (a downstream ASK-family instance) inherits Tier 1 + Tier 2 in real use, the inheritance pattern may earn method-altitude absorption. Until then, the tier model is a design-system-internal artifact, not method doctrine. The absorption discipline applies to itself: a freshly-built reference implementation does not retroactively constitute a proven inheritance pattern.
+- **[`urban-observatory`](https://github.com/apexSolarKiss/urban-observatory)** surfaced source-of-intent recovery, the validation loop discipline, the post-bootstrap trim pass, and the external / domain-authority handoff classification pattern. The post-bootstrap trim pass earned absorption into `control-surface/templates/grounding-note.template.md` because the lifecycle gate generalizes beyond the urban-observatory domain. The external-handoff classification was first carried at observation-level — the protocol repo declined to absorb a project-specific guardrail before generalization was earned — and was later promoted to rule-level on the structural-argument branch of the evidence threshold, the pressure following from the architect/operator vs domain-authority role split itself rather than from any one project's local mechanics. That sequence was the first case where the absorption discipline was applied in the moment of its own application, and the first exercise of its structural-argument branch.
+- **[`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK)** is not yet an absorption example in `method-ASK`. The repo exists and is internally tier-demarcated, and one downstream child project — `urban-observatory`'s Example-2 prototype — has inherited Tier 1 + Tier 2 in practice (the n=1 child proof, carried at observation-level). If a second child project (a downstream ASK-family instance) inherits Tier 1 + Tier 2 in real use, the inheritance pattern may earn method-altitude absorption. Until then, the tier model is a design-system-internal artifact, not method doctrine. The absorption discipline applies to itself: a freshly-built reference implementation does not retroactively constitute a proven inheritance pattern.
 
 ## Failure modes
 
