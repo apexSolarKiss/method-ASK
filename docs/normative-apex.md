@@ -41,6 +41,8 @@ The debate usually runs on a two-term ontology — human vs. machine, two minds 
 
 The requirement holds **independent of the consciousness question.** Whether or not anyone is home in the executor, a consequential system still needs a locatable apex. The requirement is over-determined: the purpose and beneficiary of the system, *and* the executor's incapacity to legitimate its own standard, each suffice to secure it.
 
+**Held source-role boundary:** The permitted-source list above and the human-or-computational executor ruling do not together determine whether a computational office may itself occupy the source role. This doctrine also does not determine whether chains of constituted authority must ultimately terminate in natural persons. Both questions are deliberately held open.
+
 ## Source of intent is a role, not an artifact
 
 The apex is a **locatable governing role** — a chair, a hat, an office someone occupies. It is not a file, a folder, or a document. Artifacts *carry* the role's intent; they never constitute it.
