@@ -40,48 +40,42 @@ They exist to prevent four specific collapses, one per figure:
 
 ## Contents
 
-```text
-README.md                              this file
-method-ASK_topology.html               renders TREE_D02
-method-ASK_topology.source.js          TREE_D02 data (source-v8)
-method-ASK_intent-artifact-ontology.html            renders TREE_D10
-method-ASK_intent-artifact-ontology.source.js       TREE_D10 data (source-v2) — source of intent as a
-                                                    locatable ROLE; context / intent / provenance families;
-                                                    the claim-level vs artifact-level discipline
-method-ASK_activation-lifecycle-comparison.html         renders TREE_D05
-method-ASK_activation-lifecycle-comparison.source.js    TREE_D05 data (source-v1) — five artifact forms and
-                                                        their distinct activation + lineage models; prevents
-                                                        every artifact form from inheriting the fresh
-                                                        routed-handoff filename lifecycle merely because it is
-                                                        read, fed, or co-located. Terminal -TBI remains an
-                                                        orthogonal overlay
-method-ASK_relay-feeding-ingestion.html             renders TREE_D06
-method-ASK_relay-feeding-ingestion.source.js        TREE_D06 data (source-v1) — direct relay vs payload-bearing
-                                                    feed; the envelope supplies force, the payload supplies
-                                                    content; ingestion as a resulting state; disposition separate
-method-ASK_relay-graph-ptx-projection.html          renders TREE_D07
-method-ASK_relay-graph-ptx-projection.source.js     TREE_D07 data (source-v1) — the native partially-ordered
-                                                    multi-thread topology vs the linear PTX projection; three
-                                                    labels on one relayed passage
-method-ASK_bounded-generativity.html         renders the bounded-generativity system-model figure
-method-ASK_bounded-generativity.figure.js    figure builder (source-v4)
-method-ASK_bounded-generativity-dark.png     sole committed doctrine mirror (dark full-page); the
-                                             light-page + chrome-free diagram variants are on-demand
-                                             exporter outputs, not committed
-method-ASK_seed-mediated-generated-interface.html         renders the SMGI DOCTRINE figure
-method-ASK_seed-mediated-generated-interface.figure.js    figure builder (source-v1)
-method-ASK_seed-mediated-generated-interface-dark.png     committed doctrine mirror (dark full-page)
-method-ASK_seed-mediated-generated-interface-ontology.html        renders the SMGI ONTOLOGY figure
-method-ASK_seed-mediated-generated-interface-ontology.figure.js   figure builder (source-v2; dual-profile — ?layout=screen default / page)
-method-ASK_seed-mediated-generated-interface-ontology-dark.png    committed doctrine mirror (dark full-page)
-diagrams-fit.js                        DS-owned fit support; loads BEFORE the engine
-                                       AND before every figure builder — each builder
-                                       throws a named error if it is missing
-diagrams-static-H-engine.js            layout + pan/zoom engine
-_dsa-tokens/                           vendored Tier 1 + Tier 2 token mirror
-diagrams.css                           compiled Tier 1 + Tier 2 style
-export-png.js                          3840×2880 PNG export
-```
+### Topology + intent-architecture trees
+
+- `README.md` — this file.
+- `method-ASK_topology.html` — renders `TREE_D02`.
+  - `method-ASK_topology.source.js` — `TREE_D02` data (`source-v9`).
+- `method-ASK_intent-artifact-ontology.html` — renders `TREE_D10`.
+  - `method-ASK_intent-artifact-ontology.source.js` — `TREE_D10` data (`source-v2`): source of intent as a locatable ROLE; context / intent / provenance families; the claim-level vs artifact-level discipline.
+- `method-ASK_activation-lifecycle-comparison.html` — renders `TREE_D05`.
+  - `method-ASK_activation-lifecycle-comparison.source.js` — `TREE_D05` data (`source-v1`): five artifact forms and their distinct activation + lineage models; prevents every artifact form from inheriting the fresh routed-handoff filename lifecycle merely because it is read, fed, or co-located. Terminal `-TBI` remains an orthogonal overlay.
+- `method-ASK_relay-feeding-ingestion.html` — renders `TREE_D06`.
+  - `method-ASK_relay-feeding-ingestion.source.js` — `TREE_D06` data (`source-v1`): direct relay vs payload-bearing feed; the envelope supplies force, the payload supplies content; ingestion as a resulting state; disposition separate.
+- `method-ASK_relay-graph-ptx-projection.html` — renders `TREE_D07`.
+  - `method-ASK_relay-graph-ptx-projection.source.js` — `TREE_D07` data (`source-v1`): the native partially-ordered multi-thread topology vs the linear PTX projection; three labels on one relayed passage.
+
+### Doctrine figures
+
+- **Bounded generativity**
+  - `method-ASK_bounded-generativity.html` — renders the bounded-generativity system-model figure.
+  - `method-ASK_bounded-generativity.figure.js` — figure builder (`source-v4`).
+  - `method-ASK_bounded-generativity-dark.png` — sole committed doctrine mirror (dark full-page); the light-page + chrome-free diagram variants are on-demand exporter outputs, not committed.
+- **Seed-Mediated Generated Interface // doctrine**
+  - `method-ASK_seed-mediated-generated-interface.html` — renders the SMGI DOCTRINE figure.
+  - `method-ASK_seed-mediated-generated-interface.figure.js` — figure builder (`source-v1`).
+  - `method-ASK_seed-mediated-generated-interface-dark.png` — committed doctrine mirror (dark full-page).
+- **Seed-Mediated Generated Interface // ontology**
+  - `method-ASK_seed-mediated-generated-interface-ontology.html` — renders the SMGI ONTOLOGY figure.
+  - `method-ASK_seed-mediated-generated-interface-ontology.figure.js` — figure builder (`source-v2`; dual-profile — `?layout=screen` default / `?layout=page`).
+  - `method-ASK_seed-mediated-generated-interface-ontology-dark.png` — committed doctrine mirror (dark full-page).
+
+### Shared render support
+
+- `diagrams-fit.js` — DS-owned fit support; loads BEFORE the engine AND before every figure builder — each builder throws a named error if it is missing.
+- `diagrams-static-H-engine.js` — layout + pan/zoom engine.
+- `_dsa-tokens/` — vendored Tier 1 + Tier 2 token mirror.
+- `diagrams.css` — compiled Tier 1 + Tier 2 style.
+- `export-png.js` — 3840×2880 PNG export.
 
 ### The two SMGI figures
 
@@ -108,7 +102,7 @@ The SMGI doctrine figure remains `source-v1 // render-v1`; the ontology figure i
 
 This diagram originated in the v9 operator-side `ecology-ASK` diagram package and was first absorbed here at `source-v2 // render-v9`.
 
-The current tuple is `source-v8 // render-v20` (2026-07-28). Source advances when the authored topology changes; render advances only when the renderer realization changes.
+The current tuple is `source-v9 // render-v20` (2026-07-29). Source advances when the authored topology changes; render advances only when the renderer realization changes.
 
 The operator-side package and historical render iterations remain in `ecology-ASK-EXTERNAL/scratch/` and are not repo truth.
 
