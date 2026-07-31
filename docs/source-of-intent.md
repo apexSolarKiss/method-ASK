@@ -40,6 +40,39 @@ A held implementation question is not the same as a held purpose question. Do no
 
 The guard is what prevents the system from manufacturing source-of-intent decisions out of every gap that surfaces. The operator's attention to source-of-intent is finite and load-bearing; the system protects it by not spending it on means-level questions disguised as purpose-level questions.
 
+## Intent repair targets current standing intent
+
+Where a system carries intent into its own operation, that realization can drift, degrade, or be disturbed. Repairing it raises a question the repair mechanism cannot answer by itself: repair *toward what*.
+
+> **Intent repair reconciles the current realization against current standing intent, not merely against the realization that preceded the disturbance.**
+
+Restoring the prior state is not the same operation as restoring the authorized one. A realization that persists, or reconstructs itself, thereby demonstrates only its own durability — never that the authorization behind it still holds (`docs/normative-apex.md` §The non-identities). Three cases stay distinct:
+
+```text
+LESION / DRIFT
+  the current realization diverges from current standing intent
+  >> repair toward the current authorized target
+
+AUTHORIZED REVISION
+  a role authorized for that scope revises standing intent, acting through the
+  applicable governance path
+  >> migrate the realization to the revised target
+  >> subsequent repair protects the revised target
+
+CANDIDATE CORRECTION
+  evidence, critique, or generated reasoning suggests the target should change,
+  but no authorized revision has occurred
+  >> preserve the candidate and surface it to the role authorized to revise
+     that scope
+  >> neither silently adopt it nor automatically repair it away
+```
+
+The third case is the load-bearing one. A divergence measure registers movement away from the current target; it cannot tell whether that movement is damage or warranted correction. Repair instrumentation measures distance. Governance classifies warrant.
+
+Candidate correction composes with the guard above rather than loosening it: surfacing a candidate to the authorized role is not a request to reauthorize settled purpose, and a framing already rejected through the validation loop does not re-enter as a candidate correction. What the case forbids is the opposite failure — a repair process silently deleting the evidence that its target may be wrong.
+
+For intent-bearing conflicts, reconcile memory-mediated realization against the current authoritative owner of standing intent. Realization does not become authoritative merely because it persists or regenerates. This is the intent-specific application of the broader source-of-truth and private-memory rules, not their origin.
+
 ## Category distinctions
 
 Before naming operator-required source-of-intent input, distinguish what kind of question is actually live. Eight categories recur:

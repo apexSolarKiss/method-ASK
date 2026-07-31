@@ -57,12 +57,24 @@ The confusion is easy to make and expensive to keep: naming a storage plane afte
 
 A document *about* source of intent — a grounding note, a context master — remains an artifact of context, even when its subject is the apex and even when it carries authoritative intent-bearing claims. `docs/intent-artifacts.md` governs the carrier classes and their lifecycles; this doctrine governs the role.
 
+**Standing intent** is normative content adopted by a source of intent for a named scope, remaining in force until revised, revoked, or retired through the applicable governance path. Its continuing force does not require a fresh source-of-intent act for every downstream action within that scope. *Standing* here describes the status of the intent-content — not whether any carrier is continuously deployed or available, which is a separate activation posture governed by `docs/intent-artifacts.md`.
+
+Four slots stay distinct, and collapsing any pair is the recurring error:
+
+```text
+source of intent      the governing role that may adopt or authorize
+standing intent       adopted normative content currently in force for a named scope
+artifact of intent    what preserves, expresses, deploys, routes, or relays that content
+runtime realization   the causal organization through which intent influences operation
+```
+
 ## The non-identities
 
 The subject is one primitive stated in distinctions the discourse keeps eliding:
 
 - **power ≠ authority** — the capacity to act is not the right to act.
 - **authorization evidence ≠ conferred authority** — credentials, identity proofs, role grants, signatures, permissions, and approval records are operational carriers by which governance recognizes an upstream grant; they are not the source of that grant. Verification may recognize an authorization within scope under the current policy, but it cannot originate or legitimate the authority behind it.
+- **realization persistence ≠ continuing authorization** — that a system still carries an intent, and reconstructs it after disturbance, establishes only that the realization persists. It does not establish that the authorization behind it remains in force. A goal can outlive the standing intent it once realized.
 - **aggregation ≠ origination of intent** — a blend of participants, or a statistical composite of preferences, does not originate a governing intent. A poll aggregates; a constituted collective decides.
 - **intention alone ≠ legitimate authority** — private will does not self-authorize; it acts through attributable authority, closure, and recourse.
 - **the interactional dyad ≠ the governance stack that contains it** — the field mistakes the two-minds-across-a-gap picture for the whole structure.
