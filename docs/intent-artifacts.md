@@ -68,7 +68,7 @@ surface-generated     a recipient's own product; never self-authorizing
 
 **Delegated authority is a real posture, not a special case of relay.** A domain authority operating inside a named delegation binds within that scope on its own footing; requiring a fresh apex relay for each judgment would collapse a delegation into a courier arrangement. `docs/governance.md` owns what may be delegated and how the scope is named.
 
-**Axis C — activation.** How does it enter an active surface?
+**Axis C — activation.** What is its activation posture or event?
 
 ```text
 standing      always available, or continuously deployed
@@ -76,6 +76,8 @@ invoked       selected and relayed for one use
 routed        made durably available for a possible later feed
 fed           presented by the apex to an active surface
 ingested      the resulting recipient-side state when a feed succeeds
+dispatched    supplied to a nested execution context by a delegate acting
+              within its grant — no apex relay per dispatch
 ```
 
 **Axis D — lineage.** How does its history persist?
@@ -104,11 +106,17 @@ routed handoff      routed instance           routed/fed/   routed-instance
                                               ingested      lifecycle
 provenance          provenance artifact       read as       provenance lineage
 transcript                                    evidence
+subagent task       utterance event           dispatched    none — event
+brief
 ```
 
 **A grounding note and Project Instructions are both standing, and they differ in force.** The grounding note establishes why, for whom, and under what durable premises a surface operates; Project Instructions establish how it must behave. The grounding note *constrains the interpretation of* instructions. It is authoritative for project purpose while authorizing no particular mutation.
 
 **A prompt canonical and a prompt invocation are different objects with different lifecycles.** The canonical is a durable file with a version lineage. An invocation is an event. A prompt canonical is never renamed to record that it was used — otherwise every reusable instrument would acquire the routed-instance lifecycle simply by being useful.
+
+**A subagent task brief is an artifact of intent inside one execution surface.** A parent executor operating under a recognized grant composes sub-briefs that carry **derived task intent** to computational subagents. On the axes: its form is an **utterance event**; its voice is **delegated-authority** — operative within the parent's named grant, without a fresh apex relay per subtask, which is what delegation is for; its activation is **dispatched** — not routed, not fed, not ingested. Its authority is derivative and bounded: the task dispatch instantiates derived task intent in a nested execution context, constitutes no source role, crosses no surface boundary, and acquires no routed-instance lifecycle.
+
+The dispatched sub-brief is ordinarily an utterance event. Where a reusable durable prompt canonical supplies or generates that brief, the canonical remains classified by the existing `prompt canonical` row — invocable operative carrier, canonical lineage — while the resulting sub-brief is the dispatched event. [`docs/source-of-intent.md`](source-of-intent.md) §Runtime delegation through the execution span owns the operational chain; [`docs/normative-apex.md`](normative-apex.md) §Delegation does not propagate the apex owns why the recursion creates no new apex.
 
 ## Three lifecycle architectures
 

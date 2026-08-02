@@ -130,6 +130,31 @@ A nudge that returns "no new source-of-intent is needed" or "stop" is a successf
 
 The nudge is a lighter-weight control loop than the fresh-context critique cycle. Use it before invoking fresh external critique when the question is local sequencing, absorption, routing, or next-pressure choice. Escalate to fresh-context critique when the nudge surfaces drift, stale durable context, unresolved purpose, or a need for independent reconstruction from repo plus grounding note.
 
+## Runtime delegation through the execution span
+
+Standing intent reaches execution through a chain of derivation and realization. Each link changes its operational form or granularity without changing its normative origin:
+
+```text
+standing intent
+  >> execution grant           the scope and decision rights the apex delegates
+    >> derived task intent     the parent executor's decomposition into bounded tasks
+      >> task brief / dispatch a sub-brief supplied to a subagent through runtime
+                               delegation
+        >> local plan + action the subagent's realization inside the granted aperture
+          >> parent verification + selection + integration
+            >> program-level authorization + closure by the governing role
+              >> authorized program result
+```
+
+Task derivation is **runtime realization of standing intent** — the causal path through which adopted purpose actually influences work — not a new act of origination. Four disciplines keep the chain honest:
+
+- **Local subgoals do not revise standing intent.** A parent decomposing an objective sets subgoals *under* the standard. Discovering mid-execution that the standard itself should change routes as candidate correction (§Intent repair targets current standing intent), never as silent local revision.
+- **Ordinary subagent output is candidate material.** It enters the program only when the authorized parent verifies and accepts it. Evaluative language in a return does not make the return binding; acceptance is the parent's act, within the parent's grant, and a false finding dies at verification rather than surviving into the record.
+- **Local completion is not program closure.** A subtask closing successfully ends its nested aperture; program-level normative closure remains with the role that authorized the program.
+- **Authority attenuates down the chain.** A delegate redelegates only what its own grant allows; a downstream aperture may not silently exceed the upstream one; and execution success confers no authority to revise the standard executed under.
+
+**Vocabulary guard.** In ordinary language a parent *feeds* delegated intent to its subagents, and the intuition is sound — but in this doctrine **feeding names the apex relay that introduces an external payload into an active surface** (§Inbound handoff TBI marker), and the two events must not share a term. Use *runtime delegation*, *task dispatch*, or *supplying a sub-brief* for the parent→subagent operation. A sub-brief is an artifact of intent carrying derived task intent ([`docs/intent-artifacts.md`](intent-artifacts.md)); dispatching it crosses no surface boundary, creates no feed obligation, and acquires no routed-instance lifecycle.
+
 ## Cross-surface handoff routing
 
 When one ASK project surface prepares a handoff for another, the routing follows a specific pattern. The originating surface preserves the handoff in its own scratch space; a copy lands in the recipient surface's **intent inbox**.
