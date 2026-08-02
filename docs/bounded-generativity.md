@@ -76,6 +76,26 @@ Variance is technical; discretion is normative; **selection is the curatorial cl
 
 Bounded generativity does not eliminate variance; it makes variance usable. A generative process produces a **candidate field** — noise in the broad sense of surplus, accident, unstable pattern, and unclosed possibility. **Source of intent defines what can count as signal** inside that field; intent is not itself the signal, it is the standard by which signal is distinguished. **Bounded judgment** separates signal from noise under the governing standard; **selection** closes the candidate spread; **governance** records what becomes durable. Disorder is not the enemy of the work — it is the material the aperture is opened onto and the judgment closes over.
 
+## Nested realization fields and recursive delegation
+
+The bounded realization field composes with itself. A parent executor operating inside one bracket may open a nested bracket of its own: it derives a sub-brief from its grant — a local legislative act performed under delegated authority, not a new apex — a subagent fills the nested aperture, and the parent verifies and selects from what returns. The outer bracket's selection and governance then apply to the integrated result.
+
+```text
+OUTER BRACKET    apex grammar / brief
+                   >> parent + subagents bounded realization field
+                     >> apex-governed selection + closure
+
+NESTED BRACKET   parent's derived sub-brief
+                   >> subagent realization
+                     >> parent verification / selection / integration
+```
+
+Three invariants:
+
+- **Nesting creates brackets, not apexes.** The sub-brief is derivative — authored under, and bounded by, the outer grammar. However deep the recursion, the normative apex does not multiply; delegation depth is execution structure, not source-role height ([`docs/normative-apex.md`](normative-apex.md) §Delegation does not propagate the apex).
+- **Identity is orthogonal to function.** A span is variance-producing or judgment-bearing by what it is authorized to do, never by who or what performs it. A human span may produce unjudged candidates; a computational span may hold a scoped grant to bind. A subagent may be variance-producing, judgment-bearing, or both — its grant decides, not the kind of actor performing it.
+- **Evaluation without a grant is still candidate production.** A subagent that reasons, compares, critiques, and concludes has produced a candidate conclusion. It becomes judgment only under the criterion §The structure already states: an authorized decision-maker evaluating admissible alternatives against the governing standard and binding within scope — one criterion, not a second one keyed on different words.
+
 ## Worked instances (identical structure, increasing sophistication)
 
 These are **ASK-system worked examples and antecedent studies, not dependencies** — cite them as worked examples, never as imports (this protects each project's aesthetic-agnostic posture).
@@ -85,6 +105,7 @@ These are **ASK-system worked examples and antecedent studies, not dependencies*
 - **[`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK)** — commercial asset production: intent + constraints + references (grammar) → AI candidate variance → curation (selection + closure) → artifact governance → governed asset + governance record. The full topology, with governance first-class.
 - **[studioLeoV](https://a-s-k.studio/studioleov/)** — collaborative expressive image-making under ASK-authored conditions: ASK supplies the substrate, the conditions for making, the body-of-work frame (continuity, collection, presentation, curation), and selection + closure; LeoV's live expressive judgment fills the realization span through drawing. The bounded-generativity structure lies in the authored aperture and governed closure, not in instructions for each mark. The instance shows that source of intent and expressive execution can be distinct roles while the middle remains fully judgment-bearing.
 - **ASK advisory / extended-cognition workflows** — ASK opens an aperture for cognition by posing a question, a source-of-intent frame, or a candidate fold. AI advisors, external readers, source texts, domain evidence, and critique loops supply candidate distinctions, objections, formulations, and evidence — **some of that middle span is stochastic, some model-generated, and some judgment-bearing human contribution** (an external reader's objection, a delegated read). ASK selects, rejects, revises, or closes what becomes durable in a master note, repo doc, tracker, article, or closure memo. The middle span supplies real value **without owning admission into the standard**: the bounded-generativity structure lies in the authored aperture and the governed closure — the source of intent sets the grammar and remains answerable for what it admits. As with studioLeoV, the middle can be expressive, intelligent, and valuable while still being neither the source of intent nor the closure authority: the primitive governs a *cognition* loop, not only artifact production.
+- **Executor→subagent delegation** — the mundane, primary instance running throughout ASK program work: a parent executor under an operator-authorized brief derives bounded sub-briefs and dispatches research, comparison, critique, or verification tasks to computational subagents; the subagents fill their nested apertures; the parent verifies findings — rejecting false ones — and integrates only what survives; the operator retains authorization and closure. Every such dispatch is a nested bounded-generativity bracket (§Nested realization fields and recursive delegation). The scoped-binding contrast case is an [`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) approval agent authorized to evaluate images against an inherited brief and bind approval within a named scope: a judgment-bearing span where the ordinary research subagent is a variance-producing one. Same field, different grants — and neither grant makes either agent the source of intent.
 - **Generative-AI workflows generally** — seed, sampler, guidance, temperature, top-p and related controls modulate the candidate spread. The normative brief sets the aperture; the model fills it. The variance is technical; the discretion is normative; selection is the closure gate, not the whole of authorship.
 
 ## Tiering (where the primitive and its relations live)

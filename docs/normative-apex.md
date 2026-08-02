@@ -68,6 +68,14 @@ artifact of intent    what preserves, expresses, deploys, routes, or relays that
 runtime realization   the causal organization through which intent influences operation
 ```
 
+## Delegation does not propagate the apex
+
+A source of intent may delegate task formation, local subgoal-setting, evidence gathering, candidate generation, evaluation, and — where governance names the scope — bounded binding judgment. None of those acts, alone or stacked, delegates the source role itself. What travels down a delegation chain is **intent, apertures, and bounded decision rights from the apex**; the apex does not travel with them.
+
+The ordinary worked topology makes this concrete. An operator authorizes a program objective and its governing aperture. A parent executor receives that delegated intent, derives bounded task intent, and dispatches sub-briefs to computational subagents. Subagents realize the tasks — generating candidates, analyzing, comparing, critiquing, testing — and exercise scoped binding judgment only where an explicit grant permits it. The parent verifies what returns, rejects or integrates it, and performs local selection within its own grant. The operator retains operative authorization, program-level closure, and ultimate answerability. Delegation may recurse where the grant permits: each authorized dispatch opens a nested aperture inside the outer one, and **recursion increases execution depth, never source-role height**.
+
+A lower office comes to occupy a source-of-intent role only where governance separately constitutes or recognizes it there for a named scope, with purpose, authorization, closure, and answerability attributable for that scope — the same requirements the decomposition states. Ordinary dispatch constitutes nothing: the proximate author of a task brief is not thereby its source of intent, because causal or textual origin of an instruction is not normative origination of the standard it serves ([`docs/intent-artifacts.md`](intent-artifacts.md) owns the matching drafting-provenance ≠ normative-voice distinction). Whether a computational office may itself occupy the source role, and whether chains of constituted authority must ultimately terminate in natural persons, remain the held source-role boundary above — this section answers neither question in either direction.
+
 ## The non-identities
 
 The subject is one primitive stated in distinctions the discourse keeps eliding:
@@ -82,6 +90,9 @@ The subject is one primitive stated in distinctions the discourse keeps eliding:
 - **location ≠ origin** — the apex is directional, not positional: "on top" is a picture, "intent originates here and flows down" is the definition.
 - **system capability ≠ apex integrity** — a capability gain in the lower layers cannot offset erosion of the apex faculty (judgment / selection); "the *system* got more intelligent" never answers an origin question.
 - **candidate-generation ≠ standard-authorship** — generating candidates, including candidate *standards*, is not authoring or adopting the standard by which they are judged; the apex faculty is the adoption, not the proposal.
+- **delegated intent ≠ delegated source role** — tasks, apertures, and bounded decision rights travel down a delegation chain; the governing role does not travel with them.
+- **delegation depth ≠ source-role height** — recursive delegation deepens execution; it raises no delegate toward the apex.
+- **proximate task instruction ≠ origination of standing intent** — composing the brief that directs a lower layer is derivative authorship under the upstream standard, not adoption of a standard.
 - **non-derivable ≠ immutable** — the standard is non-derivable at any instant yet plastic across time; the apex may revise it through cycles without it becoming derivable from below.
 - **convergence ≠ authority** — a loop may converge to its own fixed point; convergence can stabilize a candidate standard, but it does not authorize that standard. Authority requires adoption by a locatable source of intent and remains answerable through governance and recourse.
 - **convergence ≠ convergence-to-truth** — a converging process settles to the fixed point its dynamics define, not necessarily to a true one. Truth-tracking requires contact with a signal outside the loop; otherwise convergence may only stabilize the system's own attractor.
