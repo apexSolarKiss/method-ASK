@@ -98,6 +98,17 @@ the more the seed / wrapper must itself encode:
 
 When an operator performs the load, the seed can lean on that operator's standing context. When the consumer loads it alone, the seed must be idiot-proof — self-explaining, the first action obvious, with a named recovery path when the channel misbehaves.
 
+**Distance is fitted, not maximized.** Operator distance is an encoding-and-support dial set to fit the consumer and the delivery context, not a maturity score to drive upward. A low-distance realization is a legitimate realization posture, not a degraded one.
+
+**Externality is not operator distance.** The two answer different questions and vary independently:
+
+```text
+externality        who supplies the judgment
+operator distance  how the activation is supported
+```
+
+An outside party can supply genuinely external judgment through an operator-assisted activation; conversely, an unassisted load establishes nothing about externality on its own. Reading distance as a proxy for externality overstates what a delivery posture can settle. This is a distinction between two things already named here, not a further classification axis.
+
 ## The categories // illustrated
 
 <img alt="Seed-mediated generated interface ontology as a category map. Four orthogonal layers surround one neutral membership node reading 'conforming SMGI instance', joined by typed relations. Mechanism classifies, holding two parallel axis inventories — carrier (repo-mediated, packet-mediated, prompt-mediated) and runtime context (self-contained opaque, connected authorized, author-controlled null) — presented as inventories rather than a populated matrix. Application names purpose, carrying governed elicitation. Authored control meters, with the aperture and operator-distance dials, and a dashed held box for the unresolved stakes/blast-radius question. Conformance admits or excludes: governing-role integrity at load branches to a solid preserved outcome that admits the conforming instance, and to a lower, narrower, dashed violated outcome, fork-at-load, whose arrow exits the population rather than returning. A dashed held fringe and a category-boundaries footer sit outside the four settled regions, stating that application is not mechanism, a control dial is not a classification axis, a conformance precondition is neither, and fork-at-load is not an SMGI species." src="diagrams/method-ASK_seed-mediated-generated-interface-ontology-dark.png">
@@ -112,14 +123,18 @@ The genus is observed across two carrier species (packet, prompt); the **repo-me
 Case                          Carrier                          Runtime context           Operator distance
 Personal Context System       prompt-mediated (repo fallback)  self-contained opaque     high (self-setup)
 Internal domain review (4TMK) packet-mediated                  connected authorized      low (operator-loaded)
-External review (AP)          packet-mediated                  self-contained opaque      highest (+ high stakes)
+External review (AP)          packet-mediated                  self-contained opaque     intended high · observed low
 ```
 
 **Personal Context System (PCS) — prompt-mediated (repo fallback), self-contained opaque runtime, high operator distance.** The consumer loads a **setup prompt** into their own AI tool with no operator present; the repo is the *fallback* link, not the primary loading object — so this is prompt-mediated with a repo fallback, not a repo-mediated case. Setup is delivered as a **social-channel setup wrapper**: explain the purpose; tell the user to *paste* the prompt rather than understand it; give the raw setup URL; **name the fetch-failure mode** (the tool that cannot open links says so verbatim); provide a fallback repo link. PCS is the clearest evidence that the interface is *generated, not built*, and the strongest lightweight example of **social-channel setup UX**. Load-bearing lessons: first-action clarity and a fallback when the fetch fails.
 
 **Internal domain-expert review (governed elicitation; UO 4TMK) — packet-mediated, connected authorized runtime, low operator distance.** An operator loads the whole packet into a known, trusted-collaborator reviewer's standing advisor thread, which has **authorized live read access to the repo (+ scratch + EXTERNAL via the Dropbox connector)** — the runtime with the most authorized context access of the three, yet still packet-mediated by carrier. The package-loading burden on the consumer is low, so this case is **not** the source of heavy package-load UX; it is the source of three other durable lessons: the **packet carries the review behavior** (the standing advisor prompt infers none of it), and the **human artifact must survive its actual access path** — the reviewer can reach the artifact by clicking it inside the AI thread, which downloads the bare file and **leaves the package folder behind**. That access-path failure, not complex loading, is why the human artifact must render self-sufficiently.
 
-**External review (AP) — packet-mediated, self-contained opaque runtime, highest operator distance and stakes.** An outside reviewer receives, processes, and loads the packet directly, with no operator between and no authorized repo access. This is the **strongest package-loading UX pressure**: the packet must be self-explaining, must **separate the human-facing artifact from the AI-facing facilitator materials** (the AI works from machine-readable source, not the heavy sealed artifact), and must carry an explicit return shape. The full external-review packet protocol remains a **held subtype** (see *What remains local or held*) pending an actual outside-reviewer run.
+**External review (AP) — packet-mediated, self-contained opaque runtime; intended high operator distance, one completed run observed at low.** The design target is an outside reviewer who receives, processes, and loads the packet directly, with no operator between and no authorized repo access. That target is why the case carries the **strongest package-loading UX pressure**: the packet must be self-explaining, must **separate the human-facing artifact from the AI-facing facilitator materials** (the AI works from machine-readable source, not the heavy sealed artifact), and must carry an explicit return shape.
+
+**The outside-reviewer run has now occurred.** It **confirms** an operator-assisted external-review instance while **modifying** the intended high-distance realization. One external producer completed a review of a shipped release and reached a defensible approve decision, judging implementation able to proceed. Two facts hold together and neither may be dropped: the judgment was **genuinely external** — the operator supplied activation, never the judgment — and the activation was **operator-assisted at low distance**, after an unassisted attempt failed. The decision ask was not self-evident on cold entry; it became legible only once a facilitator surfaced it. The run does not validate the unassisted onboarding path. The review did not independently surface the author-known open risks, and adversarial pressure on those risks was not demonstrated. One case.
+
+So the **settled reusable / self-service external-review packet protocol remains a held subtype** (see *What remains local or held*). The next evidence condition for the **self-service realization** is a property, not another event: a completed review in which the consumer reaches the decision ask and the role split unaided, through the actual delivery path. That would validate the unassisted realization; **broader reusable-wrapper generality remains held** pending repeated or differently situated evidence.
 
 **The null case (bracketed).** Author-controlled self-use is the null case: in-category by mechanism (a repo-shaped context loaded into the author's own AI tool each session), but running in an **author-controlled runtime** — operator distance zero, no runtime opacity, none of the delivery failure surface that gives the doctrine its bite. In-category by mechanism, but outside the hard runtime-opacity case; named here only so the count is honest, not counted as a delivered case.
 
@@ -139,8 +154,9 @@ The earlier repo-mediated label named one carrier species, while the observed ev
 
 - **Behavior travels with the governing seed.** The seed carries the process only if it survives the loading boundary in its governing role — visible shape or causal provenance alone does not establish conformance. Do not rely on a standing reviewer/advisor prompt to infer the process.
 - **The interface begins at the loading path.** Setup UX is method-bearing.
-- **Operator distance sets the encoding budget.** The farther the consumer from the operator, the more the seed must carry on its own.
-- **The first action must be obvious** — and the human setup actions **minimized** and **named in the artifact itself**.
+- **Operator distance sets the encoding budget — and is fitted, not maximized.** The farther the consumer from the operator, the more the seed must carry on its own; but the distance is chosen to fit the consumer and the delivery context, not driven upward as a maturity value. **Externality is distinct from operator distance** — who supplies the judgment is not the question of how the activation is supported.
+- **The first action must be obvious — and unambiguously targeted.** An action whose object the consumer must infer has not been made obvious. Human setup actions are **minimized** and **named in the artifact itself**; where a name carries an instruction, name the object by what the consumer must do with it, and supply identity only where the consumer needs identity in order to act.
+- **Presence is not governance.** A governing instruction has not successfully travelled when it is merely present but not perceptually dominant at cold entry. Information carried is not hierarchy transmitted: if surrounding explanation, internal vocabulary, or a stale instruction wins the first-screen contest, the controlling rule did not arrive, however completely it was written.
 - **Test the consumer's actual access path**, not the author's intended folder structure — the delivery channel may strip context the author assumed survives.
 - **Separate consumers, separate surfaces.** Where a seed serves multiple consumers, keep the **human-facing artifact**, the **AI-facing facilitator materials**, and the **operator-side audit / provenance** distinct, and ship each consumer only what it needs.
 - **Markers are distinct concepts.** Reviewer-routing markers ≠ ingestion-state markers ≠ provenance handles; one string must not carry all three.
@@ -151,7 +167,9 @@ The earlier repo-mediated label named one carrier species, while the observed ev
 ```text
 self-setup user        prompt-mediated; social-channel wrapper; idiot-proof first action; fetch fallback
 internal domain expert packet-mediated; operator loads; behavior-carrying + artifact survives the access path
-outside reviewer       packet-mediated; consumer loads directly; self-explaining + AI-facilitator split + return handle
+outside reviewer       packet-mediated; direct consumer load is the design target and an
+                       operator-assisted activation is a legitimate fitted posture;
+                       self-explaining + AI-facilitator split + return handle
 ```
 
 The invariants hold across all carriers, runtimes, and distances; the *realization* is set by the consumer, the carrier, and the operator distance.
@@ -164,8 +182,8 @@ This doc lands the **broad genus pattern**. The following are surface-local real
 - a project's reviewer-routing suffix mechanics and its exact artifact-class taxonomy;
 - exact packet folder names and provenance-handle strings;
 - sealed single-file HTML as a universal requirement — it is the right realization where the access path strips the folder, not a law;
-- the **external-review packet protocol as settled doctrine** — held pending an actual outside-reviewer run;
-- **whether stakes / blast-radius is a third control dial** (beyond aperture × operator distance) — a **held analytical thread** (the external-review corner co-maxes operator distance + stakes while running a *tight* aperture); connected here, **not resolved in this pass**;
+- the **settled reusable / self-service external-review packet protocol** — still held. The outside-reviewer run has occurred and is recorded above as an **operator-assisted** instance, so the hold no longer waits on that event. The next evidence condition for the **unassisted realization** is a completed run in which the consumer reaches the decision ask and role split unaided; that would validate the unassisted realization only, and **reusable-wrapper generality across reviewers, products, channels, and relationships remains held** pending repeated or differently situated evidence;
+- **whether stakes / blast-radius is a third control dial** (beyond aperture × operator distance) — a **held analytical thread**. The earlier framing, that the external-review corner co-maxes operator distance and stakes while running a *tight* aperture, is **retired as a fixed characterization**: the one completed external review ran at low operator distance, so external review does not occupy a fixed corner. The question is unresolved, and the evidence that would resolve it is **comparative** — vary distance at comparable consequence, or vary consequence at comparable distance — since one run at a single point cannot separate a corner, a latent third axis, and an interaction effect;
 - consumer-owned renderer / sealing tooling;
 - a **settled cross-carrier behavioral conformance test** — the principle (test whether the governance properties operate) is doctrine; the reusable checklist or score is held pending a second case;
 - **independently verified seed attestation**, and whether it can support a larger evidence stack — a self-carried marker does not independently establish conformance and is not added here;
