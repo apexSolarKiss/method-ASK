@@ -30,6 +30,8 @@ prompt-mediated   a prompt or prompt-wrapper is the primary seed / loading objec
 
 Repo-mediated is one **carrier species**, not the genus. **A prompt or packet may reference a repo, and a runtime may have live repo access, without making the interface repo-mediated by carrier** — carrier is *what is loaded*, not what is merely referenced or reachable. (The doctrine was formerly titled after this species; the genus is seed-mediated.)
 
+**Carrier is classified by the primary loading object for the realization.** Later host-internal operations performed as part of that object's loading path — such as matching, invocation, or progressive resource loading — are runtime mechanics inside the already-classified realization, not additional carrier-classification events.
+
 **Runtime context — what the generated interface *runs against*, and how opaque it is to the author:**
 
 ```text
@@ -188,6 +190,6 @@ This doc lands the **broad genus pattern**. The following are surface-local real
 - a **settled cross-carrier behavioral conformance test** — the principle (test whether the governance properties operate) is doctrine; the reusable checklist or score is held pending a second case;
 - **independently verified seed attestation**, and whether it can support a larger evidence stack — a self-carried marker does not independently establish conformance and is not added here;
 - a generalized **derivative-label taxonomy**, and whether repeated cases warrant a standalone seed-integrity doctrine rather than this section;
-- **delivered launch form** (e.g. "the user clones the repo and uses it") — a plausible **B2B** form for AP + UO, but **stated intent, not a landed instance**; it is **not** the universal launch form. Consumer-facing delivery, hosted-runtime, and monetization reasoning are **out of scope for this doctrine** and stay live on their originating surface, not method doctrine.
+- **delivered launch form** (e.g. "the user clones the repo and uses it") — a plausible **B2B** form for AP + UO, but **stated intent, not a landed instance**; it is **not** the universal launch form. Consumer-facing delivery, hosted-runtime, and monetization reasoning are **out of scope for this doctrine** and stay live on their originating surface, not method doctrine. **Runtime-native skill packaging is one possible substrate-specific delivery form inside this same held seam and may carry a host-specific activation path.** A `SKILL.md` bundle or host installation wrapper would still classify through the existing carrier axis and would not, by itself, establish SMGI membership. The current ASK evidence set includes no observed skill-packaged SMGI instance; this held possibility creates no method-level implementation requirement.
 
 The broad genus thesis is doctrine; the review-packet subtype, the stakes dial, and the delivered launch form stay held or out until their own gates land.
