@@ -12,7 +12,9 @@ grammar / brief (aperture set)
         >> governed artifact + governance record
 ```
 
-This is the mechanized form of the standing ASK ecology tagline — *order from chaos // beauty in systems*. Order is not the elimination of randomness. It is randomness **bounded, made legible, and selected from.**
+This is the mechanized form of the standing ASK ecology tagline — *order from chaos // beauty in systems*. Order is not the elimination of variance. It is variance **bounded, made legible, and selected from.**
+
+**Stochasticity is neither necessary nor sufficient for bounded generativity.** It may characterize how a realization span produces variance, but it does not classify the span or the topology. Bounded generativity turns on the authored grammar, the function + authorization of the realization spans, selection + closure, and artifact governance. Here, **bounded** names the authored aperture and governance bracket, not bounded probabilistic support.
 
 ## The primitive // illustrated
 
