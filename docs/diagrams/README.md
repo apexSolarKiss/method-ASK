@@ -40,6 +40,15 @@ They exist to prevent four specific collapses, one per figure:
 
 ## Contents
 
+### Live navigation surface
+
+- `index.html` — ASK-branded live navigation surface for this folder's diagram
+  set. It consumes the local Tier 1 + Tier 2 mirror and the vendored
+  `_dsa-surface/` carriers; its Tier 3 does not propagate into the diagrams.
+- `_dsa-surface/` — pinned, byte-identical `surface-shell`, `surface-panel`, and
+  `surface-action` carriers plus the mode-aware ASK wordmark pair used only by
+  `index.html`.
+
 ### Topology + intent-architecture trees
 
 - `README.md` — this file.
@@ -111,6 +120,6 @@ The operator-side package and historical render iterations remain in `ecology-AS
 - `TREE_D01` (control-surface architecture tree) — lives in [`apexSolarKiss/control-surface/docs/diagrams/`](https://github.com/apexSolarKiss/control-surface/tree/main/docs/diagrams)
 - `TREE_D03` (system-ASK topology) — operator-side only; not authorized for any repo absorption (the ecology view includes operator-side context substrate)
 - Operator-side context architecture payload (private; conform by reference, do not absorb)
-- `design-system-ASK` Tier 3 instance identity (logo, wordmark, ASK chrome) — excluded by Tier model
+- Tier 3 identity inside the diagram artifacts — excluded by the Tier model. `index.html` is a separate ASK-branded live navigation surface for this repo and carries the mode-aware ASK wordmark pair; its Tier 3 does not propagate into the diagrams it indexes.
 - Runtime dynamic import from `design-system-ASK` CSS (no; conform at generation time)
 - Fast-aging state (PR numbers, commit hashes, current grounding-note version stamps, branch names, recent activity chronology)
