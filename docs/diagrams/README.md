@@ -1,6 +1,6 @@
 # Diagrams // illustrative
 
-These diagrams are illustrative. They are not source truth.
+These diagrams are illustrative. They are not source of truth.
 
 Repo prose remains authoritative. If a diagram and the repo prose disagree, trust the prose and refresh the diagram; do not modify the repo prose to match the diagram.
 
@@ -8,13 +8,13 @@ Each diagram is a structural snapshot of the repo at a point in time. Diagrams a
 
 ## Authority cadence
 
-- repo prose: source truth — [`docs/method.md`](../method.md) is the primary method articulation, and the doctrine docs (`docs/relative-externality.md`, `docs/voice-surface-boundary.md`, `docs/source-of-truth-and-aging-rate.md`, `docs/source-of-intent.md`, `docs/absorption-discipline.md`) own their respective doctrine
+- repo prose: source of truth — [`docs/method.md`](../method.md) is the primary method articulation, and the doctrine docs (`docs/relative-externality.md`, `docs/voice-surface-boundary.md`, `docs/source-of-truth-and-aging-rate.md`, `docs/source-of-intent.md`, `docs/absorption-discipline.md`) own their respective doctrine
 - diagram: illustrative snapshot, refreshed at topology / milestone changes
 - repo [`README.md`](../../README.md): canonical front-door articulation
 
 ## Inheritance
 
-The diagram conforms to [`apexSolarKiss/design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) Tier 1 + Tier 2 by reference at generation time. The compiled `diagrams.css` in this folder is render support, not identity source truth. `design-system-ASK` remains the visual authority; this folder does not own visual identity.
+The diagram conforms to [`apexSolarKiss/design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) Tier 1 + Tier 2 by reference at generation time. The compiled `diagrams.css` in this folder is render support, not identity source of truth. `design-system-ASK` remains the visual authority; this folder does not own visual identity.
 
 ## The four intent-architecture figures
 
@@ -114,6 +114,8 @@ This diagram originated in the v9 operator-side `ecology-ASK` diagram package an
 The current tuple is `source-v9 // render-v20` (2026-07-29). Source advances when the authored topology changes; render advances only when the renderer realization changes.
 
 The operator-side package and historical render iterations remain in `ecology-ASK-EXTERNAL/scratch/` and are not repo truth.
+
+**Terminology conformance 2026-08-24.** The abbreviated authority term was expanded to `source of truth` throughout the current repo. No topology, semantic model, renderer, or carrier changed; all source and render stamps hold. The three committed dark full-page mirrors were regenerated only to keep their visible caption copy current.
 
 ## What this folder does not carry
 

@@ -18,7 +18,7 @@
    follow the named primary canonical function. A grounding note may carry durable
    intent limbs and remains a context canonical.
 
-   Repo prose is source truth: docs/intent-artifacts.md, docs/source-of-intent.md. */
+   Repo prose is source of truth: docs/intent-artifacts.md, docs/source-of-intent.md. */
 
 window.TREE_D10 = {
   kind: 'root',

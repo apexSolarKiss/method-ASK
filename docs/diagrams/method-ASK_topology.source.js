@@ -93,7 +93,7 @@ window.TREE_D02 = {
           { label: 'design-system-ASK.md' },
           { label: 'image-making-source-of-intent.md', note: 'compact image-making worked example' },
         ]},
-        { label: 'docs/diagrams/', note: 'illustrative diagrams · not source truth', children: [
+        { label: 'docs/diagrams/', note: 'illustrative diagrams · not source of truth', children: [
           { label: 'method-ASK_topology.html', note: 'this diagram' },
         ]},
       ],

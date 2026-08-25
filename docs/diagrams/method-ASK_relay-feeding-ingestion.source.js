@@ -8,7 +8,7 @@
 
    The envelope, not the payload, determines operative force.
 
-   Repo prose is source truth: docs/source-of-intent.md §Inbound handoff TBI marker. */
+   Repo prose is source of truth: docs/source-of-intent.md §Inbound handoff TBI marker. */
 
 window.TREE_D06 = {
   kind: 'root',

@@ -14,7 +14,7 @@
    One relayed passage carries three different labels at once, and the figure exists to
    keep them separable.
 
-   Repo prose is source truth: docs/source-of-intent.md §Provenance transcript PTX marker. */
+   Repo prose is source of truth: docs/source-of-intent.md §Provenance transcript PTX marker. */
 
 window.TREE_D07 = {
   kind: 'root',

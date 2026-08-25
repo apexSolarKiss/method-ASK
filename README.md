@@ -20,7 +20,7 @@ Linked ASK repos are citations to worked examples, lineage surfaces, or layer re
 
 ## Status
 
-`docs/method.md` carries the primary method articulation. Standalone doctrine docs and method-altitude worked-example explanations have landed in `docs/` and `examples/`; the article-line index lives at `docs/articles.md`. Illustrative diagrams have landed in [`docs/diagrams/`](docs/diagrams/) — a topology / relative-externality map, and doctrine figures for bounded generativity and the seed-mediated generated interface (doctrine + ontology); the diagrams are illustrative, and repo prose remains source truth. Lineage remains a candidate for later PRs as substrate earns it.
+`docs/method.md` carries the primary method articulation. Standalone doctrine docs and method-altitude worked-example explanations have landed in `docs/` and `examples/`; the article-line index lives at `docs/articles.md`. Illustrative diagrams have landed in [`docs/diagrams/`](docs/diagrams/) — a topology / relative-externality map, and doctrine figures for bounded generativity and the seed-mediated generated interface (doctrine + ontology); the diagrams are illustrative, and repo prose remains source of truth. Lineage remains a candidate for later PRs as substrate earns it.
 
 ## Repo contents
 
@@ -28,7 +28,7 @@ Linked ASK repos are citations to worked examples, lineage surfaces, or layer re
 - `docs/method.md` — primary method articulation
 - `docs/` — standalone method doctrine and the article-line index
 - `docs/intent-artifacts.md` — the intent-artifact ontology: carrier classes, activation postures, relay vs feeding, provenance projection
-- `docs/diagrams/` — illustrative diagrams (topology; bounded generativity; seed-mediated generated interface + ontology; intent-artifact ontology; activation + lifecycle comparison; relay / feeding / ingestion; adversarial relay graph + PTX projection); not source truth
+- `docs/diagrams/` — illustrative diagrams (topology; bounded generativity; seed-mediated generated interface + ontology; intent-artifact ontology; activation + lifecycle comparison; relay / feeding / ingestion; adversarial relay graph + PTX projection); not source of truth
 - `examples/` — worked-example explanations at method altitude
 
 ## Anchor reading
