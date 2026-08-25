@@ -11,7 +11,7 @@
    A canonical vN lineage is not a routed-instance lifecycle. A deployment is not an
    invocation. An ingestion is not a disposition.
 
-   Repo prose is source truth: docs/intent-artifacts.md, docs/source-of-intent.md. */
+   Repo prose is source of truth: docs/intent-artifacts.md, docs/source-of-intent.md. */
 
 window.TREE_D05 = {
   kind: 'root',

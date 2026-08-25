@@ -31,7 +31,7 @@
    executive, or judicial; these are categories, not powers. Held material is dashed +
    muted, never alarm chrome.
 
-   Repo prose is source truth: docs/seed-mediated-generated-interface.md. */
+   Repo prose is source of truth: docs/seed-mediated-generated-interface.md. */
 (function () {
   /* FAIL CLOSED BEFORE ANY LAYOUT. diagrams-fit.js is a DS-owned support file that must be
      vendored alongside this figure and loaded immediately BEFORE it. */

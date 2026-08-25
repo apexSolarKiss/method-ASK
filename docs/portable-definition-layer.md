@@ -90,7 +90,7 @@ This doc lands the **method primitive, not an implementation protocol.** It name
 
 ## Anchors
 
-- Public articulation: [*The Missing Layer Is Not Generation*](https://atomicspacekitten.substack.com/p/the-missing-layer-is-not-generation) (asset-pipeline-ASK domain, 2026-06-13) — the outward translation; companion to [*Creative Discretion Is Not Creative Intent*](https://atomicspacekitten.substack.com/p/creative-discretion-is-not-creative). The article translates the finding outward; the repo/finding chain (AP milestone-14) is the source truth.
+- Public articulation: [*The Missing Layer Is Not Generation*](https://atomicspacekitten.substack.com/p/the-missing-layer-is-not-generation) (asset-pipeline-ASK domain, 2026-06-13) — the outward translation; companion to [*Creative Discretion Is Not Creative Intent*](https://atomicspacekitten.substack.com/p/creative-discretion-is-not-creative). The article translates the finding outward; the repo/finding chain (AP milestone-14) is the source of truth.
 - Sibling primitive: [`docs/bounded-generativity.md`](bounded-generativity.md) — the **process** axis this is positioned against.
 - Inbound routing record: `2026-06-13_asset-pipeline-ASK_to_method-ASK_portable-definition-layer-candidate-primitive.md` — retained in the ecology operator surface's intent inbox; resolve its current physical path through `ecology-ASK-EXTERNAL/_INDEX-ecology-ASK.md` (ingested 2026-06-13).
 - Interpretive second-instance confirmation: `2026-06-13_urban-observatory_to_method-ASK_portable-definition-layer-interpretive-instance-feedback.md` — retained in the ecology operator surface's intent inbox; resolve its current physical path through `ecology-ASK-EXTERNAL/_INDEX-ecology-ASK.md` (ingested 2026-06-13).
