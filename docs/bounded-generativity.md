@@ -67,6 +67,8 @@ Compact: **the frontier substrate supplies the generative capacity; the bounded-
 
 Creative discretion — judgment exercised *within* standards (Dworkin's **weak** discretion, not freedom from standards) — may enter **before, during, or after** realization: in authoring or authorizing the grammar that grants the aperture, in judgment-bearing intervention within the granted realization field, and in selecting from what comes back. What is uniformly non-judgmental is the **variance-producing operation** itself — it fills the aperture; it does not evaluate against the standard and bind.
 
+**Scope of the Dworkin anchor.** Here, **weak discretion** names judgment exercised within a governing standard. It does not confer finality or unreviewability. Under [`docs/governance.md`](governance.md), application remains verifiable, adjudicable, and revisable, and authorization remains defeasible. The anchor is judgment inside a standard, not immunity from review.
+
 The distinction that keeps this honest:
 
 - The **aperture** is a *quantity* — the permitted variance, **granted by the grammar / brief**.
