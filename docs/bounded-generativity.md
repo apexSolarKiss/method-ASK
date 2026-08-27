@@ -80,6 +80,26 @@ Variance is technical; discretion is normative; **selection is the curatorial cl
 
 Bounded generativity does not eliminate variance; it makes variance usable. A generative process produces a **candidate field** — noise in the broad sense of surplus, accident, unstable pattern, and unclosed possibility. **Source of intent defines what can count as signal** inside that field; intent is not itself the signal, it is the standard by which signal is distinguished. **Bounded judgment** separates signal from noise under the governing standard; **selection** closes the candidate spread; **governance** records what becomes durable. Disorder is not the enemy of the work — it is the material the aperture is opened onto and the judgment closes over.
 
+## The operative surface of the realized work
+
+The same source-of-intent and governance topology can recur across artifacts whose effects arise through different surfaces. That does not move authorship into the apparatus or establish a hierarchy of authored standing among realization modes. It changes the **evidence burden** the governing role carries.
+
+**Realization form is not work-content.** **Work-content** means the properties that, under the governing standard, belong to what the governed work is. It is not restricted to propositional or semantic content, and the non-identity is not a claim of disjointness: realization form may belong to work-content.
+
+Where the governing standard makes the realized form part of the work-content, the form is among the properties adopted. In a gestural abstraction governed that way, the mark, the material behavior, and the resulting visual field are not packaging around a separately expressible proposition. In discursive work — philosophy, technical writing, research, explanation, and argument — the work-content lies in the propositions, distinctions, inferential structure, evidence, and conclusions, and prose is the realization form through which that content is delivered.
+
+Contributing to work-content is separate from authoring the governing standard and from holding closure authority. A realization span may contribute to the first without holding either of the others (§Worked instances).
+
+Realization form may also be **load-bearing without belonging to work-content**. It can preserve or corrupt scope, precision, implication, tone, persuasive force, credibility, and whether an intended audience engages the work at all. Perceived signals about fabrication, care, or governance may redirect an audience from the work to its apparent production and cause a real delivery failure even where the inference about provenance, authorship, effort, or truth is wrong. **Credibility-mediated delivery is a durable concern; the signals that trigger suspicion, the audiences that react to them, and the reception environments in which they operate are time-indexed and may change as toolchains and conventions change.** Audience response is performance evidence, not fabrication-provenance evidence or an authorship verdict. A form becoming essential to faithful and credible delivery does not thereby become identical with the content it delivers.
+
+Whether the realized form is **operative** is a further question. Under an existing legal, institutional, or computational arrangement, a duly formed contract, an enacted statute, executable code, or a performative utterance made under the relevant conditions may create obligations, alter institutional states, or produce behavior. The representation does not confer its own authority; its form matters because the applicable arrangement gives that form operative effect.
+
+**Manual realization is not a condition of authorship; abstract approval is not sufficient either.** The governing role obtains evidence adequate to the properties it adopts and answers for — directly, or through delegates whose grants assign that work ([`docs/governance.md`](governance.md)) — then selects, revises, rejects, or accepts accordingly and remains answerable for the result. Where form belongs to work-content, the realized form is among those properties. Where form delivers work-content, the governing role remains answerable for the form's fidelity and its fit to the intended audience under the governing standard; actual reception remains performance evidence rather than a guaranteed outcome.
+
+Reading, execution, testing, source checking, expert judgment, and audience observation may each supply evidence. The operative surface exposes which properties require it; the property being adopted determines the appropriate evidence channel. Medium and performer identity may matter, but neither establishes adequacy by itself.
+
+Compact: **the topology is shared; the operative properties and evidence burden are not.**
+
 ## Nested realization fields and recursive delegation
 
 The bounded realization field composes with itself. A parent executor operating inside one bracket may open a nested bracket of its own: it derives a sub-brief from its grant — a local legislative act performed under delegated authority, not a new apex — a subagent fills the nested aperture, and the parent verifies and selects from what returns. The outer bracket's selection and governance then apply to the integrated result.
