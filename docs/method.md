@@ -21,6 +21,8 @@ The two layers are at different altitudes:
 
 The pendulum / swing motion that *From Execution Proof Back to Normative Structure* names as the project's rhythm is one element of the method, not the whole. It names the across-time rhythm of adversarial iteration. Other elements — ontology development, vocabulary deconstruction, pressure-surface use of prototypes, evidence-trail integrity, fresh-context critique, source-of-intent guard, source-of-intent nudge, externality-decision routing, and drift audit — are equally load-bearing.
 
+The rake names a shared restoration function across several of these distinct mechanisms: it returns source of intent, ownership, carriers, state, local difference, and representations to a more legible relation after ordinary system-building motion has accumulated drift. It is not a master metaphor for the method.
+
 The nudge layer adds something different from a metaphor. It is an operational simulation of the external-intent boundary: the system asks whether durable sources already supply enough intent for the next move, whether new operator intent is needed, whether external synthesis is enough, or whether fresh-context critique should be nominated. The method doc covers the broader method; no single rhythm, metaphor, or control layer exhausts the content.
 
 ## What This Doc Captures
@@ -39,7 +41,7 @@ The method applies across recursive system roles, not a single fixed level.
 - **System-of-systems** — an operational system composed of interacting subsystems. A governed visual asset production pipeline can fit this role: brand inputs, product data, reference systems, generation surfaces, curation seams, governance records, and output assets operate together as one production system.
 - **System-building system** — a system that produces, governs, templates, or instantiates other systems. [`apexSolarKiss/asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) fits this role for governed visual asset production pipelines. [`apexSolarKiss/control-surface`](https://github.com/apexSolarKiss/control-surface) fits this role for AI-native execution workflows.
 
-The method does not change shape across these roles. Ontology development, vocabulary deconstruction, architecture-attempt-before-prototype, pressure-surface prototypes, ceremony budget, evidence-trail integrity, self-superseding clauses, the swing, and the fresh-context critique cycle apply whether the work is an articulated system, a system-of-systems, or a system-building system.
+The method does not change shape across these roles. Ontology development, vocabulary deconstruction, architecture-attempt-before-prototype, pressure-surface prototypes, ceremony budget, evidence-trail integrity, self-superseding clauses, the swing, the rake, and the fresh-context critique cycle apply whether the work is an articulated system, a system-of-systems, or a system-building system.
 
 The recursion is part of why the method is worth articulating as itself. This document is itself a structured artifact produced by the method it describes.
 
@@ -177,7 +179,7 @@ A good nudge can also return a stop signal: the current closure is a real pause 
 
 This nudge operationalizes the source-of-intent guard. It reduces false stops, where the system asks for operator input even though the intent is already supplied, and false autonomy, where the system continues without noticing that a genuine source-of-intent premise is missing or changed.
 
-The nudge is a lighter-weight control loop than the fresh-context critique cycle. Use it before invoking fresh external critique when the question is local sequencing, absorption, routing, or next-pressure choice. Escalate to fresh-context critique when the nudge surfaces drift, stale durable context, unresolved purpose, or a need for independent reconstruction from repo plus grounding note.
+The nudge is a lighter-weight control loop than the fresh-context critique cycle. Use it before invoking fresh external critique when the question is local sequencing, absorption, routing, or next-pressure choice. Nominate fresh-context critique when the nudge surfaces drift, stale durable context, unresolved purpose, or a need for independent reconstruction from repo plus grounding note.
 
 The nudge ladder has three roles. The **default lightweight nudge** is a live reusable prompt in the protocol repo: [`control-surface/prompts/repo-nudge-prompt.md`](https://github.com/apexSolarKiss/control-surface/blob/main/prompts/repo-nudge-prompt.md) — a single-question nudge anchored against the grounding note. The two heavier roles — a **structured boundary-classification instrument** (the seven-outcome routing form) and an **externality-decision instrument** (for serious pause / routing decisions) — are non-default: they are not maintained as standing prompt files and are re-derived when a heavier routing pass is warranted. The protocol repo owns its own prompt inventory; this doc asserts the ladder's roles, not another repo's current file list.
 
@@ -185,7 +187,7 @@ Operationally, the minimal nudge is the default cycle prompt. The structured rol
 
 ### Fresh-context critique cycle
 
-At larger thresholds where the project's structure, posture, or direction needs re-examination beyond what a source-of-intent nudge can classify, start fresh advisor threads and give each only the durable context — the repo and the grounding note. Do not give them the working thread's accumulated explanations unless the task is to fold a prior critique. The load-bearing property is **context reset**: the critic is denied working-thread momentum and forced to reconstruct the project from durable truth. That reconstruction is what surfaces drift, ceremony, overclaimed architecture, stale navigation, weak naming, missing proof, or mismatched source-of-truth boundaries.
+When ASK authorizes a fresh-context critique because the project's structure, posture, or direction needs re-examination beyond what a source-of-intent nudge can classify, start fresh advisor threads and give each only the durable context — the repo and the grounding note. Do not give them the working thread's accumulated explanations unless the task is to fold a prior critique. The load-bearing property is **context reset**: the critic is denied working-thread momentum and forced to reconstruct the project from durable truth. That reconstruction is what surfaces drift, ceremony, overclaimed architecture, stale navigation, weak naming, missing proof, or mismatched source-of-truth boundaries.
 
 The cycle has three moves, each assigned to a distinct surface:
 
@@ -199,7 +201,7 @@ This pattern composes both adversarial collaboration and adversarial iteration: 
 
 This is distinct from Stage 2 PR review. Stage 2 is targeted advisor review of a pushed branch before merge, scoped to the change at hand. The fresh-context critique cycle is broader: repo- or phase-level critique of accumulated system state at structural-posture moments. Different cadences, different surfaces.
 
-The cycle is not a standing ceremony. It is warranted at thresholds — after a major plateau, when proof-chain gravity has accumulated, when naming or tier ownership has become unstable, or when the project's artifacts feel more coherent locally than globally. Routinizing the cycle would re-introduce the ceremony class the method is calibrated against.
+The cycle is not a standing ceremony and has no deterministic internal trigger. Major plateaus, accumulated proof-chain gravity, unstable naming or tier ownership, and a mismatch between local and global coherence are signals the system may nominate and ASK may weigh; none authorizes the cycle by itself. Routinizing the cycle as an automatic workflow step would re-introduce the ceremony class the method is calibrated against.
 
 The cycle earns its keep not only by producing better critiques, but by identifying when the current pressure surface has saturated. A successful cycle may end by naming that the thread should stop, that the project needs exterior digestion, or that new operator intent is required before further work would be meaningful. Plateau detection is itself a successful outcome of the cycle, not a failure to produce one.
 
@@ -218,6 +220,37 @@ The pendulum motion between abstraction and execution. Each swing produces somet
 The swing leaves something for the next swing to do, and leaves something the next swing should preserve. Naming what each swing does *not* undo is what keeps the pendulum honest. Otherwise each swing pretends the previous swing was wasted, and the project loses the cumulative evidence each direction produced.
 
 The swing's shape is asymptotic. The architecture and the execution converge across each swing, approaching each other but never meeting. The work is the approach.
+
+### The rake // recurrent order restoration
+
+System-building work produces drift even when its individual changes are locally correct. New artifacts, exceptions, implementations, interpretations, consumers, and corrections enter different surfaces at different rates. Over time, the relations among source of intent, owners, carriers, live state, durable context, local differences, and public representations become less legible.
+
+The **rake** names a recurrent restoration function within the method: the work of returning those relations to legible differentiated order. It reconstructs governing relations from their owners, surfaces material drift, distinguishes error from legitimate local difference, routes correction to the proper surface, reconciles affected carriers and projections, and records the resulting raked state.
+
+The rake is not a master frame for the method. It does not subordinate every method mechanism, and no single rhythm, metaphor, or control layer exhausts the method. A mechanism may serve work other than raking; a rake may compose several mechanisms.
+
+The image is a Zen garden: the raked lines are valuable because they are ordered. In the method, a raked state likewise has more order, less drift, clearer boundaries, and better alignment. Ordinary activity and continued change soften those lines; that loss is not part of their value, but the suffered degradation recurrent raking mitigates.
+
+Raking is a continual system function implemented through mechanisms operating at different cadences:
+
+1. **Adversarial collaboration and critique** are the quotidian rake. Differently situated reasoning, execution, review, and adjudication continually pressure local work before one surface's account silently becomes the whole system's account.
+2. **Fresh-context critique** is a lower-cadence rake of accumulated framing, explanatory momentum, and self-description. It reconstructs from durable owners rather than inheriting the reasoning by which the current state was produced. Its concrete instantiation mechanics live in [`control-surface/docs/critique-protocol.md`](https://github.com/apexSolarKiss/control-surface/blob/main/docs/critique-protocol.md).
+3. **The pendulum, or adversarial iteration,** is a lower-cadence rake across phases between abstraction and execution. Each direction exposes and corrects the imbalance accumulated by the other while preserving the evidence the prior swing produced.
+4. **Compression, with bilateral calibration where the compression becomes a durable system-level self-map,** is a lower-cadence rake of the relation between distributed truth and its high-level representation. Compression is established practice: it makes a distributed system stateable at an appropriate altitude and leaves a standing artifact that can orient later work. That standing artifact is useful and dangerous for the same reason — it can itself drift, or be mistaken for the authority it depicts. The method therefore requires bilateral calibration for a durable system-level compression: test what the projection omits or distorts, what it asserts without owner support, where owners conflict, and whether the system's applicable authority, trust, disclosure, and public/private boundaries have been represented correctly. This is a normative requirement, not a claim that every existing compression has undergone it or that system-scale bilateral calibration has already been demonstrated. Named owners establish current fact, and ASK adjudicates what should change.
+
+Fresh-context critique and the pendulum are partly orthogonal. Fresh reconstruction pressures the system's inherited frame and self-description; adversarial iteration pressures abstraction against execution across time. Compression and its required bilateral calibration act on another axis again: the relation between distributed truth and its high-level representation. These mechanisms may compose, but none is a required stage of another, and adversarial collaboration may operate within any of them.
+
+Other rake strokes include source-of-intent guards and nudges; owner, carrier, and consumer reconciliation; ledger and projection reconciliation; absorption; and closure. The list names different surfaces on which order can be restored. It is not a mandatory sequence and does not require one synchronized ecology-wide cycle.
+
+Convening a deliberate rake cycle is externally triggered relative to the process it audits. The ecology may nominate such a cycle through a nudge, milestone, felt incoherence, accumulated change, or another signal. Those signals are evidence, not triggers. Because the state supplying them may itself be drifted, no deterministic internal threshold authorizes the cycle. ASK decides whether and when to initiate it.
+
+ASK may initiate a deliberate rake cycle without an internal nomination, and may defer one despite strong signals. Surface stabilization, opportunity, operator bandwidth, and critic bandwidth constrain timing; they do not determine legitimacy. More frequent raking would generally be desirable if those constraints disappeared.
+
+A raked-state claim is dated, banded, owner-relative, and explicit about what remained outside the pass. It records restored order, not permanent stability. Future-rake signals may be recorded for ASK's judgment, but none automatically triggers another cycle.
+
+A deliberate rake cycle remains subject to the proof-chain gravity well guard after it begins. Raking should improve an actual owner, relation, decision, boundary, or usable system state. Audit activity whose primary object becomes the preceding audit, without improving the system itself, is recursive performance rather than restoration. This constrains ceremony inside a rake; it does not condition ASK's authority to initiate one.
+
+Reflective lineage: [*The Drift Audit*](https://atomicspacekitten.substack.com/p/the-drift-audit) explains why the audited system may nominate but cannot own the final anti-drift trigger. [*The Auditor Is Inside the Trade*](https://atomicspacekitten.substack.com/p/the-auditor-is-inside-the-trade) explains why increasing internal fluency and coherence do not establish that the standard itself has not drifted.
 
 ### Threshold pauses at architectural closures
 
