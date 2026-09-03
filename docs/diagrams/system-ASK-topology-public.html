@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>system-ASK // topology</title>
+<meta name="description" content="Public projection of the system-ASK topology (D03) — one apex (human-ASK) over an internal surface ecology (ecology-ASK). Illustrative architecture, generated from a versioned canonical; live state lives in the named artifact owners and ledgers.">
+<meta name="generator" content="conforms to apexSolarKiss/design-system-ASK Tier 1 + Tier 2 by reference at generation time">
+<!-- Deployed-origin browser icons — the canonical ASK Tier-3 package at the origin root.
+     Transformed from the operator package's file-relative profile; see project-public.mjs. -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- design-system-ASK foundations — local mirror (Tier 1 + Tier 2), no CDN. See _dsa-tokens/MANIFEST.md -->
+<link rel="stylesheet" href="./_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="diagrams.css">
+</head>
+<body>
+
+<div class="shell">
+  <div class="bar">
+    <div class="mark">apexSolarKiss<span class="sep">/</span>system-ASK</div>
+    <div class="title-block">
+      <div class="t">Topology</div>
+      <div class="s">human source · methodology · execution-protocol · visual · downstream repos · public scaffold · active execution · invariant</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="stamp">
+      <div><span class="k">source-v12</span> // <span class="k">render-v26</span></div>
+      <div>2026-09-02</div>
+    </div>
+  </div>
+
+  <div class="canvas-wrap" id="canvasWrap">
+    <div class="stage" id="stage">
+      <svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+
+    <div class="corner-tick tl"></div>
+    <div class="corner-tick tr"></div>
+    <div class="corner-tick bl"></div>
+    <div class="corner-tick br"></div>
+
+    <div class="legend glass">
+      <div class="h"><span>Legend</span><span class="fig">3 states</span></div>
+      <div class="row">
+        <div class="sw"><div class="box-solid"></div></div>
+        <div><span class="lbl">earned</span><span class="sub">live today</span></div>
+      </div>
+      <div class="row">
+        <div class="sw"><div class="box-dashed"></div></div>
+        <div><span class="lbl">held</span><span class="sub">not yet authorized</span></div>
+      </div>
+      <div class="row">
+        <div class="sw"><span class="legacy-txt">legacy</span></div>
+        <div><span class="lbl">legacy</span><span class="sub">Model A residue</span></div>
+      </div>
+    </div>
+
+    <div class="hud glass">
+      <button id="zoomOut" title="Zoom out">−</button>
+      <div class="pct" id="zoomPct">100%</div>
+      <button id="zoomIn" title="Zoom in">+</button>
+      <button id="zoomFit" title="Fit">⤢</button>
+    </div>
+
+    <div class="caption glass">
+        <b>generated projection · illustrative · never source of truth</b><br>
+        generated from a versioned operator canonical; it carries no independent lineage authority. Live truth remains with the named artifact owners.
+      </div>
+  </div>
+</div>
+
+<script src="system-ASK-topology-public.source.js"></script>
+<!-- DS-owned fit support; must load immediately BEFORE the H engine (the engine throws a
+     named error if DIAGRAM_FIT is missing). Vendored from design-system-ASK; do not hand-edit. -->
+<script src="diagrams-fit.js"></script>
+<script src="diagrams-text-layout.js"></script>
+<script src="diagrams-static-H-engine.js"></script>
+<!-- DS embedded-font carrier — lets PNG export embed fonts with no server (file://).
+     Must load BEFORE export-png.js. Vendored from design-system-ASK; do not hand-edit. -->
+<script src="./_dsa-tokens/fonts-embedded.js"></script>
+<script src="export-png.js"></script>
+<script>
+window.DIAGRAMS.render(window.TREE_D03_PUBLIC);
+</script>
+
+</body>
+</html>

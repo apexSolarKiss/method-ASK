@@ -1,0 +1,75 @@
+{
+ "exporter": {
+  "file": "project-public.mjs",
+  "sha256": "cb4bb941f5f536ebe0ee1f4286f96778e257e60f8a8a123301534b4cc8870841",
+  "bytes": 27895
+ },
+ "inputManifest": {
+  "file": "projection-input.json",
+  "sha256": "68660fddea3b206b95ef3487f76ccd9f2b77abb27be497abc627059e3d5b5741",
+  "bytes": 2747
+ },
+ "canonicalInput": {
+  "file": "system-ASK-topology.source.js",
+  "sha256": "e89c277144211001925c05499d452b5be01f56240a2d293608136bec8db6965f",
+  "bytes": 22165,
+  "parsedTuple": {
+   "sourceVersion": "source-v12",
+   "renderVersion": "render-v26",
+   "date": "2026-09-02"
+  }
+ },
+ "htmlShell": {
+  "file": "system-ASK-topology.html",
+  "sha256": "9d5d0c25d36a711a1b1121982716d4e0a5b2bb7cba4b1ceabc4b1f694969fae4",
+  "bytes": 4135
+ },
+ "determinism": "the three generated artifacts are a pure function of exporter + input-manifest + canonical + html-shell bytes",
+ "assuranceModel": {
+  "contentBoundary": "structural tree projection over parsed data — every top-level branch classified exactly once, projection rebuilt from the included set",
+  "chrome": "typed plain text, HTML-escaped by the exporter, exact output reviewed",
+  "shell": "one exact pinned + reviewed input; the SHA detects movement, it does not make alternate bytes trusted. Editing the shell and updating its pin creates a NEW review candidate",
+  "postimageConformance": "HARD fail-closed assertions over the exact admitted shell transformation; NOT a security sandbox and NOT proof about an arbitrarily edited + re-pinned shell",
+  "excludedTermChecking": "LINT only — not a security boundary, not a semantic non-disclosure proof, not proof about browser-visible text",
+  "filesystem": "fixed filenames, in-memory generation, fresh staging directory, exclusive no-clobber writes"
+ },
+ "classification": {
+  "topLevelBranches": 12,
+  "included": 8,
+  "excluded": 4,
+  "unclassified": 0,
+  "multiplyClassified": 0,
+  "generatedAdditions": 0,
+  "includedLabels": [
+   "human source layer · THE APEX (human-ASK)",
+   "methodology layer",
+   "execution-protocol layer",
+   "visual / aesthetic-intent implementation layer",
+   "downstream project repos",
+   "public scaffold / proof surface",
+   "active execution composition",
+   "invariant"
+  ],
+  "excludedLabels": [
+   "operator-side context architecture",
+   "reflective writing layer",
+   "source-of-intent evidence layer",
+   "operator-side runtime surfaces"
+  ]
+ },
+ "outputs": {
+  "source": {
+   "file": "system-ASK-topology-public.source.js",
+   "sha256": "45948dffd2ba243170418ac1a60245292954403cd79e369baa9c4f51bf6d3d02",
+   "bytes": 16290
+  },
+  "html": {
+   "file": "system-ASK-topology-public.html",
+   "sha256": "a485276e0a9ad6d203d12f1ebe5a5c09a512020c31fb35bbe97bae8f6cd123ce",
+   "bytes": 4037
+  },
+  "receipt": {
+   "file": "system-ASK-topology-public.generation.json"
+  }
+ }
+}
