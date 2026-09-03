@@ -48,6 +48,11 @@ They exist to prevent four specific collapses, one per figure:
 - `_dsa-surface/` — pinned, byte-identical `surface-shell`, `surface-panel`, and
   `surface-action` carriers plus the mode-aware ASK wordmark pair used only by
   `index.html`.
+  - `surface-shell.js` — the shell's responsive-navigation runtime, adopted by
+    `index.html`. The identity mark is the disclosure: the runtime upgrades the
+    authored anchor in place, so with JavaScript unavailable the mark stays an
+    ordinary home link and no panel, trigger or dead control appears. The
+    diagram pages adopt none of it and load none of these files.
 
 ### Topology + intent-architecture trees
 
@@ -60,6 +65,18 @@ They exist to prevent four specific collapses, one per figure:
   - `method-ASK_activation-lifecycle-comparison.source.js` — `TREE_D05` data (`source-v1`): five artifact forms and their distinct activation + lineage models; prevents every artifact form from inheriting the fresh routed-handoff filename lifecycle merely because it is read, fed, or co-located. Terminal `-TBI` remains an orthogonal overlay.
 - `method-ASK_relay-feeding-ingestion.html` — renders `TREE_D06`.
   - `method-ASK_relay-feeding-ingestion.source.js` — `TREE_D06` data (`source-v1`): direct relay vs payload-bearing feed; the envelope supplies force, the payload supplies content; ingestion as a resulting state; disposition separate.
+- `system-ASK-topology-public.html` — renders `TREE_D03_PUBLIC`, the governed
+  PUBLIC PROJECTION of the operator-side system-ASK topology. It is generated,
+  not authored here, and it is not method doctrine: the four intent-architecture
+  figures and the two SMGI figures state what this repo argues, while this page
+  reports a structure the operator canonical owns.
+  - `system-ASK-topology-public.source.js` — the projected `TREE_D03_PUBLIC`
+    data: eight public top-level branches derived from the canonical's twelve.
+  - `system-ASK-topology-public.generation.json` — the generation receipt. It
+    records the exporter, the operator canonical and its `source-v/render-v`
+    tuple, the input manifest, the HTML shell, and the produced outputs, each
+    by SHA-256, plus the include/exclude classification that makes the 12 -> 8
+    reduction checkable rather than asserted.
 - `method-ASK_relay-graph-ptx-projection.html` — renders `TREE_D07`.
   - `method-ASK_relay-graph-ptx-projection.source.js` — `TREE_D07` data (`source-v1`): the native partially-ordered multi-thread topology vs the linear PTX projection; three labels on one relayed passage.
 
@@ -81,7 +98,15 @@ They exist to prevent four specific collapses, one per figure:
 ### Shared render support
 
 - `diagrams-fit.js` — DS-owned fit support; loads BEFORE the engine AND before every figure builder — each builder throws a named error if it is missing.
+- `diagrams-text-layout.js` — the DS-owned shared text-layout contract: it measures and wraps long node labels for the static tree engines. It loads AFTER `diagrams-fit.js` and IMMEDIATELY BEFORE the engine.
 - `diagrams-static-H-engine.js` — layout + pan/zoom engine.
+
+**The helper and the engine are indivisible.** The engine throws
+`Diagram text-layout support is missing or incomplete. Load diagrams-text-layout.js before the diagram engine.`
+when the carrier is absent, and it further requires `DIAGRAM_TEXT_LAYOUT.TARGETS`
+to name its own pattern. Neither file may be re-vendored, moved or upgraded
+without the other, and a page may not load one alone — the failure is loud by
+design rather than a silently unwrapped label.
 - `_dsa-tokens/` — vendored Tier 1 + Tier 2 token mirror.
 - `diagrams.css` — compiled Tier 1 + Tier 2 style.
 - `export-png.js` — 3840×2880 PNG export.
@@ -93,7 +118,7 @@ They are a pair with different jobs, and neither substitutes for the other:
 - **doctrine figure** (`…_seed-mediated-generated-interface`) — the **instantiation path** and the loading-boundary seam. Authored seed >> loading boundary >> grammar grants the aperture >> runtime >> generated interaction >> return, or, at the boundary, fork-at-load. Consumes the Three Functions primitive for one licensed node: the grammar box, where the grammar is a concrete actor in the runtime path.
 - **ontology figure** (`…_seed-mediated-generated-interface-ontology`) — the **category boundaries**. Four orthogonal layers (mechanism · application · authored control · conformance) around one membership node, joined by typed relations. **Fully neutral — no function colour**, because it classifies concepts rather than diagramming the functions; it does not load `three-functions.css`.
 
-The SMGI doctrine figure remains `source-v1 // render-v1`; the ontology figure is `source-v2 // render-v1`.
+The SMGI doctrine figure is `source-v1 // render-v2`; the ontology figure is `source-v2 // render-v1`.
 
 **Responsive behaviour.** `1440×900` is the reference read-all composition (doctrine `0.750`, ontology **`~0.67` on the default `screen` profile**). Within the current fixed-chrome contract, shorter and narrower windows use fit-all as a navigable **overview**: macrostructure remains identifiable in both figures, the ontology's membership gate remains identifiable, and zoom/pan exposes the authored detail. Read-all composition at every aspect ratio would require either content reduction or a separate responsive-chrome contract; neither is part of these figures.
 
@@ -120,7 +145,7 @@ The operator-side package and historical render iterations remain in `ecology-AS
 ## What this folder does not carry
 
 - `TREE_D01` (control-surface architecture tree) — lives in [`apexSolarKiss/control-surface/docs/diagrams/`](https://github.com/apexSolarKiss/control-surface/tree/main/docs/diagrams)
-- `TREE_D03` (system-ASK topology) — operator-side only; not authorized for any repo absorption (the ecology view includes operator-side context substrate)
+- `TREE_D03` (system-ASK topology) — the OPERATOR CANONICAL stays outside this repo, and is not absorbed here. What this folder carries is its governed PUBLIC PROJECTION, `TREE_D03_PUBLIC`, generated from that canonical with the operator-side branches excluded. The projection is not the canonical, does not stand in for it, and confers no authority over it.
 - Operator-side context architecture payload (private; conform by reference, do not absorb)
 - Tier 3 identity inside the diagram artifacts — excluded by the Tier model. `index.html` is a separate ASK-branded live navigation surface for this repo and carries the mode-aware ASK wordmark pair; its Tier 3 does not propagate into the diagrams it indexes.
 - Runtime dynamic import from `design-system-ASK` CSS (no; conform at generation time)
