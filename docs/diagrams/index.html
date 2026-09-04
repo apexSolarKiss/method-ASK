@@ -6,6 +6,10 @@
 <title>method-ASK // diagrams</title>
 <meta name="description" content="method-ASK // the repo's illustrative diagram set — topology and intent-architecture trees, and the doctrine figures.">
 <meta name="color-scheme" content="light dark">
+<!-- Canonical ASK browser icons — deployed-origin root profile. Vendored from design-system-ASK; do not hand-edit. -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <!-- ============================================================
      DIAGRAM FRONT DOOR — method-ASK/docs/diagrams/index.html
 
@@ -99,7 +103,21 @@
         <img class="surface-mark-light" src="_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
         <img class="surface-mark-dark" src="_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
       </a>
-      <h1 class="surface-title"><span class="org">apexSolarKiss</span> <span class="sep" aria-hidden="true">//</span> method-ASK <span class="sep" aria-hidden="true">//</span> diagrams</h1>
+      <!-- BREADCRUMB, not a plain title. The pattern's test is ancestry, not local
+           rootedness: every ancestor above this surface is real, public and
+           reachable, so every one of them appears. `apex solar kiss` is the
+           human-facing brand name rather than the `apexSolarKiss` GitHub handle,
+           because a breadcrumb names a place a reader goes, not a repository
+           namespace — and the GitHub organization is a UTILITY destination, which
+           is why it sits in the navigation panel below instead of in this chain.
+           `method-ASK` is static: the repo has no public page of its own above
+           this one, and inventing a destination to make a segment interactive is
+           the failure the ancestry rule guards against. The chain is authored
+           once, visibly; the panel DERIVES its current path from it, which is why
+           there is no data-nav-root-* configuration below. -->
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> method-ASK <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">diagrams</span></h1>
+      </nav>
       <p class="surface-lede">Structural snapshots of the method at a point in time. Diagrams are illustrative and
         age; the repo prose is source of truth, and each figure below links the doctrine document that governs it.</p>
       <span class="surface-badge">illustrative &gt;&gt; not source of truth</span>
@@ -166,6 +184,21 @@
         <a class="surface-action" href="method-ASK_relay-graph-ptx-projection.html">open</a>
         <a class="surface-action surface-action--secondary" href="method-ASK_relay-graph-ptx-projection.source.js">source</a>
         <a class="surface-action surface-action--secondary" href="../source-of-intent.md">doctrine</a>
+      </div>
+    </div>
+
+    <!-- The one card on this page that does NOT project a method-ASK canonical.
+         It is a GENERATED public projection of a versioned operator canonical
+         that lives outside this repo, so it carries no doctrine link: no
+         document in this repository governs it. It is illustrative and is never
+         source of truth — live state stays with the named artifact owners. -->
+    <div class="card surface-panel">
+      <div class="cls">tree // TREE_D03 · generated projection</div>
+      <h2 class="surface-panel-title">system-ASK topology</h2>
+      <p class="surface-panel-support">A generated public projection: one apex (human-ASK) over an internal surface ecology, and where this repo sits within it. Illustrative architecture, generated from a versioned canonical — never source of truth; live state lives with the named artifact owners and ledgers.</p>
+      <div class="actions">
+        <a class="surface-action" href="system-ASK-topology-public.html">open</a>
+        <a class="surface-action surface-action--secondary" href="system-ASK-topology-public.source.js">source</a>
       </div>
     </div>
 
@@ -237,13 +270,55 @@
 
   </main>
 
+  <!-- Terminal destinations, as compact actions. The shell RETIRED its former
+       unboxed `.surface-footer a` role in the surface-shell owner generation
+       this folder vendors — deliberately,
+       and without leaving type declarations behind, so a row that forgot its
+       classes fails visibly rather than looking roughly correct. Footer
+       destinations are `surface-action` objects now. They remain anchors: three
+       of these leave the surface and two leave the origin entirely, and a button
+       would keep the look while losing the destination. -->
   <footer class="surface-footer">
-    <a href="README.md">README</a>
-    <a href="../method.md">method</a>
-    <a href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
-    <a href="https://a-s-k.studio/" target="_blank" rel="noopener">A-S-K.studio</a>
+    <a class="surface-action surface-action--secondary" href="README.md">README</a>
+    <a class="surface-action surface-action--secondary" href="../method.md">method</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    <a class="surface-action surface-action--secondary" href="https://a-s-k.studio/" target="_blank" rel="noopener">A-S-K.studio</a>
   </footer>
 
+  <!-- Responsive navigation. The identity mark discloses the panel, which is the
+       mark's one meaning across the family.
+
+       PARENT FORM. This surface IS the diagrams front door, so its current
+       location is the PARENT of its local destinations rather than their
+       sibling: the placeholder carries a nested list. The current label and its
+       aria-current are authored once, in the visible breadcrumb above —
+       `data-surface-nav-current` is an inert POSITION marker, and writing the
+       label again would give the panel a second current-page source that can
+       drift from the title. `diagrams` is deliberately not repeated as an
+       "overview" child, because two rows reaching one destination is the defect
+       this IA removes. The repository is a utility destination, not an ancestor. -->
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li data-surface-nav-current>
+        <ul>
+          <li><a href="method-ASK_topology.html">topology</a></li>
+          <li><a href="method-ASK_intent-artifact-ontology.html">intent-artifact ontology</a></li>
+          <li><a href="method-ASK_activation-lifecycle-comparison.html">activation + lifecycle comparison</a></li>
+          <li><a href="method-ASK_relay-feeding-ingestion.html">relay / feeding / ingestion</a></li>
+          <li><a href="method-ASK_relay-graph-ptx-projection.html">adversarial relay graph + PTX projection</a></li>
+          <li><a href="system-ASK-topology-public.html">system-ASK topology</a></li>
+          <li><a href="method-ASK_bounded-generativity.html">bounded generativity</a></li>
+          <li><a href="method-ASK_seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+          <li><a href="method-ASK_seed-mediated-generated-interface-ontology.html">seed-mediated generated interface — ontology</a></li>
+        </ul>
+      </li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
 </div>
+<script src="_dsa-surface/surface-shell.js"></script>
 </body>
 </html>
