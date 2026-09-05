@@ -47,6 +47,8 @@ The requirement holds **independent of the consciousness question.** Whether or 
 
 On the **liability limb** specifically, a natural-person terminus is not required. Liability is one indexed strand of a chain of constituted authority, and settling it does not settle the register in which such a chain finally comes to rest for answering: non-retributive answerability, punitive or retributive responsibility, and the anchor a tracing argument would need all remain open. That is the *terminus* question, not the requirement that answerability remain locatable, which the decomposition above states. Neither partial resolves either held question. The legal-personality result does not establish root-role occupancy; the liability result does not address it.
 
+**Where the underlying evidence sits.** The partial results above are already part of this doctrine. The underlying evidence record and the ASK rulings indexed here are assembled in the Consciousness + Free Will structured survey. Its public projection is implemented under `apexSolarKiss/ASK/apex-solar-kiss/consciousness-free-will/` and rendered at [a-s-k.studio/apex-solar-kiss/consciousness-free-will/](https://a-s-k.studio/apex-solar-kiss/consciousness-free-will/). Two of the survey's held questions restate this boundary's limbs verbatim, and a third bears on the occupancy limb without being identical to it. The survey informs this doctrine; it does not authorize it, and it resolves neither held question.
+
 ## Source of intent is a role, not an artifact
 
 The apex is a **locatable governing role** — a chair, a hat, an office someone occupies. It is not a file, a folder, or a document. Artifacts *carry* the role's intent; they never constitute it.
