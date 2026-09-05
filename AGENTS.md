@@ -897,7 +897,7 @@ Do not absorb patterns into rule-level doctrine on first sighting. The disciplin
 
 This method-local rule extends the shared §Default: Hold or Carry Through Per Adversarial-Collaboration Preconditions.
 
-If no advisor surface is configured, or if the PR is method-doc work with no live architectural uncertainty, carry through to merged + cleanup once diff approval is given. The pattern is proportional to architectural uncertainty live at any moment.
+If no advisor surface is configured, follow the shared carry-through rule after scoped diff approval. With an advisor configured, a method-doc PR may proceed through merge and cleanup without a further Stage-2 review only when ASK has determined that the scoped PR carries no live architectural uncertainty and has authorized that carry-through path. The executor may recommend the classification and must identify the applicable ASK decision; neither its own assessment nor silence supplies that authorization. The decision may be part of the scoped approval or an explicitly applicable standing ASK decision, without a duplicate approval phrase. This provision does not remove Stage-1 requirements under §Advisor-Readable Review Objects. Material changes to the approved scope or uncertainty basis require re-evaluation before carry-through.
 
 ## Direct Push to Main (method layer)
 
@@ -944,7 +944,7 @@ When a project-specific pattern surfaces that might become method doctrine, do n
 - Verify repo state before meaningful work.
 - Read repo-local truth and grounding note before responding.
 - Route current-state questions to exact artifact state (working tree, `git`, exact ref / PR, repo-qualified API); do not trust generated summaries, regardless of agent class.
-- Stop at exact scoped diff before commit; carry through to merged + cleanup once approved.
+- Stop at exact scoped diff before commit; after approval, follow the applicable shared review and merge gates and §Method-doc carry-through carve-out.
 - State the plan before executing.
 - Single-writer per branch. Treat repo as audit trail.
 - Match the unit of work to the level of the question.
