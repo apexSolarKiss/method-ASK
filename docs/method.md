@@ -109,7 +109,7 @@ The method's integrity at scale depends on this — without it, each new archite
 
 ### Aging-rate principle / source-of-truth split
 
-Different surfaces age at different rates. State ages fast (lives in the repo). Rules age slow (live in `AGENTS.md`). Context ages slow (lives in the grounding note). Per-conversation tracking is ephemeral (lives in operator-side memory).
+Different surfaces age at different rates. State ages fast (lives in the repo). Rules age slow (live in `AGENTS.md`). Context ages slow (lives in the grounding note). Per-conversation tracking is ephemeral (lives in current task context, never in private agent memory).
 
 Each surface is sized to a single aging rate. Mixing aging rates within one surface produces a doc that ages at the rate of its fastest-aging contents — usually badly. Maintaining the aging-rate split is part of the method's surface discipline.
 
@@ -258,7 +258,7 @@ Major junctures earn pauses. Phase 1 closure earns a pause. Sequencing forks ear
 
 ### Absorption reviews at major thresholds
 
-In-thread reflective pass at major junctures. The output is sometimes a clean assessment, sometimes a small repo correction, sometimes a memory entry, sometimes nothing. The discipline is that the reflection happens before the next work begins.
+In-thread reflective pass at major junctures. The output is sometimes a clean assessment, sometimes a small repo correction, sometimes nothing. Where the pass surfaces something durable, it routes to that claim's visible owner; private persistent memory is not a default destination for it and is separately gated. The discipline is that the reflection happens before the next work begins.
 
 Absorption reviews are explicitly not always artifact-producing. The right output of a reflective pass is often "the existing state is honest; proceed."
 

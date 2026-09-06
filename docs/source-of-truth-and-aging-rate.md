@@ -14,7 +14,7 @@ Source of truth and aging rate are the same problem viewed from two angles. Sour
 
 ## Core split
 
-The method assigns authority across these surfaces:
+The method distinguishes the roles and authority of these surfaces:
 
 - **Repo** — project state, public-safe truth, current artifacts, doctrine docs, code, schema. Authoritative for *what the project currently is*. Aging rate is project-specific but generally slow within categories (doctrine slower; state faster).
 - **`AGENTS.md`** — repo-local workflow rules for executors working on the repo. Authoritative for *how repo work is done*. Slow-aging. Refreshes only when a workflow rule is added, removed, or materially revised — not when project state changes.
@@ -23,7 +23,8 @@ The method assigns authority across these surfaces:
 - **[`method-ASK`](../README.md) docs** — cross-project method doctrine that has earned generalization. Authoritative for *the method itself*. Slow-aging. Refreshes only when the underlying method articulation has materially evolved.
 - **[`control-surface`](https://github.com/apexSolarKiss/control-surface)** — execution protocol, workflow templates, prompts, project-instantiation workflow, the per-PR cadence. Authoritative for *how sessions operate against repos*. Slow-aging.
 - **Articles** — reflection at its own pace. Authoritative for *the public reflective articulation of method elements*, not for current repo state or method doctrine. Own pace, distinct from doctrine cadence.
-- **Operator memory** — per-conversation reminders, project-session ephemera (Claude Code's `MEMORY.md`, ChatGPT thread history, in-flight task lists). Authoritative for *what the operator needs to remember session-to-session*. Ephemeral. Not repo truth.
+- **Current task context** — per-conversation tracking, in-flight task lists, thread history, and session state. Ephemeral working context, not a durable owner. Authorized source material may be read into it without transferring authority from its named owners. “Ephemeral” describes the task-state role, not a deletion rule for transcripts or governed records.
+- **Private agent memory** — an executor's own persistent store (for example Claude Code's `MEMORY.md`). **Non-authoritative operator context.** It never owns project truth, workflow protocol, or current task state. Eligible residue is separately classified and requires exact-target, exact-payload operator approval before it is written. Persistence does not confer authority.
 
 Each surface has a single dominant aging rate. The split is not separation-of-concerns alone; it is separation-by-aging-rate.
 
@@ -69,7 +70,7 @@ The surface split is a topology; absorption discipline is the routing rule that 
 
 Method altitude mentions only. Domain detail lives in the project repos and in the project examples (`examples/`).
 
-- **[`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK)** surfaced the aging-rate principle and the source-of-truth split under mature project pressure. The friction of mixing rules, state, and context in a single doc was the original surfacing event. The doctrine that resulted — repo carries project state, `AGENTS.md` carries workflow rules, grounding note carries source-of-intent, operator-side memory carries per-conversation tracking — generalized cleanly upstream into `control-surface` workflow templates and into `docs/method.md`'s §Disciplines During Execution treatment.
+- **[`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK)** surfaced the aging-rate principle and the source-of-truth split under mature project pressure. The friction of mixing rules, state, and context in a single doc was the original surfacing event. The doctrine that resulted — repo carries project state, `AGENTS.md` carries workflow rules, grounding note carries source-of-intent, current task context carries per-conversation tracking — generalized cleanly upstream into `control-surface` workflow templates and into `docs/method.md`'s §Disciplines During Execution treatment.
 - **[`urban-observatory`](https://github.com/apexSolarKiss/urban-observatory)** surfaced source-of-intent recovery, the post-bootstrap grounding-note trim pass, and state-vs-context routing. The grounding-note layer-classification gate (now in `docs/source-of-intent.md` §Grounding-note refresh preflight) was the structural absorption of this pressure. State / event records route to scratch even when the event was important.
 - **[`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK)** surfaced the presence-vs-structure verification observation and the freshly-built-reference-implementation-vs-proven-inheritance distinction. The presence-vs-structure observation is currently carried at observation-level; n=1 across child projects. Promotion to rule-level treatment in this doc, in `docs/absorption-discipline.md`, or in `control-surface` templates waits for a second child project surfacing the same failure mode. The reference-implementation-vs-proof distinction is captured in `examples/design-system-ASK.md` as the worked-example framing.
 
@@ -77,8 +78,8 @@ Method altitude mentions only. Domain detail lives in the project repos and in t
 
 Before writing or updating any artifact, ask in order:
 
-- What kind of claim is this? (project state / workflow rule / source of intent / event record / cross-project doctrine / execution protocol / reflection / operator memory)
-- Which surface owns this claim? (repo / `AGENTS.md` / grounding note / scratch / `method-ASK` doc / `control-surface` / article / operator memory)
+- What kind of claim is this? (project state / workflow rule / source of intent / event record / cross-project doctrine / execution protocol / reflection / task-context ephemera)
+- Which surface owns this claim? (repo / `AGENTS.md` / grounding note / scratch / `method-ASK` doc / `control-surface` / article / current task context)
 - How fast will it age? (slow / own pace / fast / ephemeral)
 - What would become stale if placed here? (the test for wrong-surface fit)
 - What would be lost if it stays where it is? (the test for under-absorption)
@@ -97,6 +98,6 @@ This doctrine should be superseded by:
 - compression into `docs/absorption-discipline.md` if the surface-split topology folds into absorption-discipline's §Layer destinations as the routing surface, and the aging-rate principle compresses into a shorter cross-reference
 - a future `docs/layer-classification.md` if multiple downstream projects produce enough surface-routing decisions to justify a more formal central routing doc that absorbs both this doc's surface split and the source-of-intent grounding-note refresh preflight
 
-The doctrine is not finished. The eight-surface split is the current best articulation of the method's lived surface topology. As surfaces shift — articles becoming codified differently, new repos earning their own classes, operator memory evolving with tool changes — the split will refine. The aging-rate principle itself is more stable than the specific surface list; the surfaces are the substrate, the aging-rate is the doctrine.
+The doctrine is not finished. The nine-surface split is the current best articulation of the method's lived surface topology. As surfaces shift — articles becoming codified differently, new repos earning their own classes, executor tooling changing what a session holds — the split will refine. The aging-rate principle itself is more stable than the specific surface list; the surfaces are the substrate, the aging-rate is the doctrine.
 
 Anchor reading lives in [`docs/articles.md`](articles.md). The articles most directly substrating this doctrine are *Lessons from the First Prototype Phase* (the structural retrospective; the original surfacing of aging-rate and source-of-truth as load-bearing principles), *The Rule the Repo Could Not Contain* (externality as a relation, not a property; surfaces carry the structural category but not always the payload), and *Three Agents Got Into an Argument // The Repo Won* (repo-as-arbiter for current-state questions; the operating rule that splits chat-side advisors from the artifact-owning surface).
