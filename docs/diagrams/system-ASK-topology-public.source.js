@@ -5,11 +5,11 @@
  * and regenerate; edits here are lost.
  *
  * operator canonical            system-ASK-topology.source.js
- * operator canonical version    source-v12
+ * operator canonical version    source-v13
  * operator canonical render     render-v26
- * operator canonical date       2026-09-03
- * operator canonical SHA-256    e91001cfae5c94036e295ea7b8b7b54466afc76ee933b323f42d1364afd68304
- * input manifest SHA-256        31cdb0ccced0fe29f8f3b6aeba63801bddf7c219720181ce10fb77286605b4e5
+ * operator canonical date       2026-09-06
+ * operator canonical SHA-256    afc6f39cf3dad12bdea960b271c3c209c59f8c675df1f6bef99292a892eb0d65
+ * input manifest SHA-256        c7f43481f51026e083cd524a7b2e825f01857352ced5ac0ae81629e5efefb0f1
  *
  * This is a PROJECTION: 8 of 12 top-level branches are carried, and the
  * remaining 4 are not present. The operator canonical is not publicly resolvable and

@@ -6,22 +6,22 @@
  },
  "inputManifest": {
   "file": "projection-input.json",
-  "sha256": "31cdb0ccced0fe29f8f3b6aeba63801bddf7c219720181ce10fb77286605b4e5",
+  "sha256": "c7f43481f51026e083cd524a7b2e825f01857352ced5ac0ae81629e5efefb0f1",
   "bytes": 2747
  },
  "canonicalInput": {
   "file": "system-ASK-topology.source.js",
-  "sha256": "e91001cfae5c94036e295ea7b8b7b54466afc76ee933b323f42d1364afd68304",
-  "bytes": 22165,
+  "sha256": "afc6f39cf3dad12bdea960b271c3c209c59f8c675df1f6bef99292a892eb0d65",
+  "bytes": 22287,
   "parsedTuple": {
-   "sourceVersion": "source-v12",
+   "sourceVersion": "source-v13",
    "renderVersion": "render-v26",
-   "date": "2026-09-03"
+   "date": "2026-09-06"
   }
  },
  "htmlShell": {
   "file": "system-ASK-topology.html",
-  "sha256": "cc6d4d1f95463880579b556d98ec3ab6654becdee59b326fca8e9cde04cbd2e5",
+  "sha256": "2136e09e1a1dcefb9399ad293ab7492ab3ec1090fa10e7fd0ef07354d8a3fde5",
   "bytes": 4135
  },
  "determinism": "the three generated artifacts are a pure function of exporter + input-manifest + canonical + html-shell bytes",
@@ -60,12 +60,12 @@
  "outputs": {
   "source": {
    "file": "system-ASK-topology-public.source.js",
-   "sha256": "a962c45216ad4159d55b3a8a86b8b4d14175b7a8e8434722ec170f310d65716d",
+   "sha256": "b8c39ce4c86c7ed549b48dd60c87d545841266b0821bfe529fa8b58df55d12ed",
    "bytes": 16290
   },
   "html": {
    "file": "system-ASK-topology-public.html",
-   "sha256": "fa34ded59d21fbebd108279f8663203e83ff3866018b946fc261447523bf62d0",
+   "sha256": "f4b101d36fb5af4265038a68e3d638bb52aba2fed24287f916da41cb64401f4a",
    "bytes": 4037
   },
   "receipt": {
