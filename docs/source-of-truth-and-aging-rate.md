@@ -16,7 +16,7 @@ Source of truth and aging rate are the same problem viewed from two angles. Sour
 
 The method distinguishes the roles and authority of these surfaces:
 
-- **Repo** — project state, public-safe truth, current artifacts, doctrine docs, code, schema. Authoritative for *what the project currently is*. Aging rate is project-specific but generally slow within categories (doctrine slower; state faster).
+- **Repo** — project state, public-safe truth, current artifacts, doctrine docs, code, schema. Authoritative for *repo-owned project truth and current repo state*; purpose, workflow, identity, operator state and delegated domain judgment remain with their own owners. Aging rate is project-specific but generally slow within categories (doctrine slower; state faster).
 - **`AGENTS.md`** — repo-local workflow rules for executors working on the repo. Authoritative for *how repo work is done*. Slow-aging. Refreshes only when a workflow rule is added, removed, or materially revised — not when project state changes.
 - **Grounding note** — slow-aging source-of-intent + external context (graduation origin, audience, durable role boundaries, foundational premises, durable loose threads). Authoritative for *why this project exists and what its enduring premises are*. Slow-aging by design. Lives operator-side, external to the repo.
 - **Scratch** — event records, state chronology, working memory, in-flight per-conversation tracking, post-event recaps. Authoritative for *what happened, when, in what sequence*. Fast-aging. Lives operator-side.
