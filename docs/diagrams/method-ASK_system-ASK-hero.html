@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // system-ASK — one apex, distributed owners, governed return</title>
+<meta name="description" content="Illustrative causal-orientation figure for system-ASK, projected from the accepted claim set in apexSolarKiss/method-ASK examples/system-ASK.md, which is source of truth.">
+<meta name="generator" content="conforms to apexSolarKiss/design-system-ASK Tier 1 + Tier 2 by reference at generation time">
+<!-- Canonical ASK browser icons — deployed-origin root profile. Vendored from design-system-ASK; do not hand-edit. -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- design-system-ASK foundations — local mirror (Tier 1 + Tier 2), no CDN. See _dsa-tokens/MANIFEST.md -->
+<link rel="stylesheet" href="./_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="diagrams.css">
+<!-- ASK Three Functions — opt-in semantic function-color primitive, vendored from design-system-ASK. See _dsa-tokens/MANIFEST.md -->
+<link rel="stylesheet" href="./_dsa-tokens/three-functions.css">
+<style>
+  /* ===== D11 light-theme high-contrast text opt-in — FIGURE-LOCAL =====
+     Registered with the design owner at design-system-ASK/README.md, under
+     "High-contrast foreground — registered uses", entry 3. Measured need: in the light
+     theme every rendered text role in this figure falls below the 4.5:1 normal-text
+     threshold against the lavender gradient and against the 30% role fills — ink 2.87,
+     muted 1.93, section tags 2.67, field tag 2.87. The role exists for exactly this case.
+
+     Bounded on purpose. Light is the foundation's DEFAULT theme, so the opt-in is declared
+     on bare :root and then HANDED BACK to the ordinary ramp in both dark selectors, which
+     mirror the foundation's own theme model. Consequences that are deliberately NOT taken:
+     no --fg-1 / --fg-2 / --fg-3 rebind, no new hex or palette role, no mutation of the
+     shared method-ASK diagrams.css, no claim on any other figure. Dark renders byte-for-byte
+     as before, which is why the committed raster is unaffected.
+
+     Cost, stated rather than hidden: in light the ink / muted / faint lightness ramp
+     collapses to one value, so text hierarchy there is carried by size and weight alone.
+     Flattened and readable is the correct trade against graded and unreadable. */
+  :root {
+    --diagram-ink:   var(--fg-high-contrast);
+    --diagram-muted: var(--fg-high-contrast);
+    --diagram-faint: var(--fg-high-contrast);
+  }
+  :root[data-theme="dark"] {
+    --diagram-ink: var(--fg-1); --diagram-muted: var(--fg-2); --diagram-faint: var(--fg-3);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]):not([data-theme="dark"]) {
+      --diagram-ink: var(--fg-1); --diagram-muted: var(--fg-2); --diagram-faint: var(--fg-3);
+    }
+  }
+
+  /* ===== Three Functions consumption (source-v1) =====
+     The owner's rendering contract, unmodified: every role-bearing apparatus carries a
+     30% role fill and the full role value as stroke. No local opacity ramp — the owner
+     carries field-vs-object in geometry and negative space, not in a lighter wash.
+       legislative  the execution grant / aperture · the enforced path-scoped grant
+       executive    the executor — the bounded realization chamber
+       judicial     the adjudication gate · disposition
+     NEUTRAL, and the exclusions are the claim: the source-of-intent apex, artifact
+     governance, the governed artifact and its record, project cells, public surfaces,
+     and every structural frame and edge. Structure, not state: Spectral State is
+     deliberately not used. */
+  .node-box.fn-leg,
+  .flow-group.fn-leg { stroke: var(--function-legislative); fill: color-mix(in srgb, var(--function-legislative) 30%, transparent); }
+  .node-box.fn-jud   { stroke: var(--function-judicial);    fill: color-mix(in srgb, var(--function-judicial) 30%, transparent); }
+  .node-box.fn-exe   { stroke: var(--function-executive);   fill: color-mix(in srgb, var(--function-executive) 30%, transparent); }
+
+  /* A label sitting ON a role-bearing apparatus takes the theme FOREGROUND rather than the
+     de-emphasised muted ramp — the owner's rule, and the measured requirement: against a 30%
+     role wash on the dark field the muted ramp lands at 2.98-4.35 : 1, below AA. */
+  .node-note.on-role { fill: var(--diagram-ink); }
+
+  /* ===== EDGE GRAMMAR — six classes =====
+     Five inherited, plus CONFORMANCE. INHERITANCE and CONFORMANCE are the closest
+     neighbours, so they differ on TWO axes — dash cadence AND terminal form — and must
+     stay separable at a glance, without the legend. */
+  .edge.e-auth      { stroke-width: 2.4; }
+  .edge.e-inherit   { stroke-width: 1.5; stroke-dasharray: 7 5; }
+  .edge.e-conform   { stroke-width: 1.5; stroke-dasharray: 2 3 10 3; }
+  .edge.e-evidence  { stroke-width: 1.05; opacity: .8; }
+  .edge.e-relay     { stroke-width: 1.6; stroke-dasharray: 13 7; }
+  .edge.e-relay-mark{ stroke-width: 1.6; fill: none; }
+  .edge.e-pointer   { stroke-width: 1; stroke-dasharray: 2 5; opacity: .55; }
+  .edge.e-membrane  { stroke-width: 2; stroke-dasharray: 3 4; opacity: .9; }
+
+  /* legend line swatches */
+  .legend .ln { width: 46px; height: 12px; display: block; }
+  .legend .ln line, .legend .ln path, .legend .ln circle, .legend .ln rect { stroke: var(--diagram-ink); fill: none; }
+  .legend .sw { min-width: 52px; }
+  .legend { max-width: 372px; }
+  .legend .fn-divider { border: none; border-top: 1px dotted var(--diagram-line); margin: 11px 0 8px; }
+  .legend .fn-down { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--diagram-muted); margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <div class="bar">
+    <div class="mark">apexSolarKiss<span class="sep">/</span>method-ASK</div>
+    <div class="title-block">
+      <div class="t">system-ASK // one apex · distributed owners · governed return</div>
+      <div class="s">how one normative apex governs a recursive ecology of distributed owners and plural reasoning, while evidence returns upward and authority does not</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="stamp">
+      <div><span class="k">D11</span> // <span class="k">source-v1</span> // <span class="k">render-v1</span></div>
+      <div>2026-09-09</div>
+    </div>
+  </div>
+
+  <div class="canvas-wrap" id="canvasWrap">
+    <div class="stage" id="stage">
+      <svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+
+    <div class="corner-tick tl"></div>
+    <div class="corner-tick tr"></div>
+    <div class="corner-tick bl"></div>
+    <div class="corner-tick br"></div>
+
+    <div class="legend glass">
+      <div class="h"><span>Edge grammar</span><span class="fig">six classes</span></div>
+      <div class="row">
+        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="2" y1="6" x2="34" y2="6" stroke-width="2.4"/><path d="M 34 2.5 L 34 9.5 L 42 6 Z" fill="var(--diagram-ink)"/></svg></div>
+        <div><span class="lbl">authority</span><span class="sub">intent · grant · adjudication</span></div>
+      </div>
+      <div class="row">
+        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="2" y1="6" x2="34" y2="6" stroke-width="1.5" stroke-dasharray="7 5"/><path d="M 34 2.5 L 34 9.5 L 42 6 Z" fill="var(--diagram-ink)"/></svg></div>
+        <div><span class="lbl">inheritance</span><span class="sub">vendoring — pinned, never hot-linked</span></div>
+      </div>
+      <div class="row">
+        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="2" y1="6" x2="34" y2="6" stroke-width="1.5" stroke-dasharray="2 3 10 3"/><circle cx="38" cy="6" r="4"/></svg></div>
+        <div><span class="lbl">conformance</span><span class="sub">a rail consuming the rail above it — RING terminal</span></div>
+      </div>
+      <div class="row">
+        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="10" y1="6" x2="42" y2="6" stroke-width="1.05" opacity=".8"/><path d="M 12 2 L 6 6 L 12 10" stroke-width="1.05"/></svg></div>
+        <div><span class="lbl">evidence</span><span class="sub">pressure · critique — OPEN head, never filled</span></div>
+      </div>
+      <div class="row">
+        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="2" y1="6" x2="14" y2="6" stroke-width="1.6"/><rect x="17" y="3" width="6" height="6"/><line x1="26" y1="6" x2="42" y2="6" stroke-width="1.6"/></svg></div>
+        <div><span class="lbl">relay</span><span class="sub">cross-surface transfer through ASK — gated break</span></div>
+      </div>
+      <div class="row">
+        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="2" y1="6" x2="42" y2="6" stroke-width="1" stroke-dasharray="2 5" opacity=".55"/></svg></div>
+        <div><span class="lbl">pointer</span><span class="sub">live state resolving to its owner</span></div>
+      </div>
+    </div>
+
+    <div class="hud glass">
+      <button id="zoomOut" title="Zoom out">−</button>
+      <div class="pct" id="zoomPct">100%</div>
+      <button id="zoomIn" title="Zoom in">+</button>
+      <button id="zoomFit" title="Fit">⤢</button>
+    </div>
+
+    <div class="caption glass">
+      <b>Illustrative projection, current as of its render.</b> Named owners establish current fact;
+      ASK adjudicates correction. This figure owns neither, and is not the authority it depicts.<br>
+      Source of truth: <a href="../../examples/system-ASK.md">examples/system-ASK.md</a> — the accepted claim set this figure projects.
+    </div>
+  </div>
+</div>
+
+<script src="diagrams-fit.js"></script>
+<script src="method-ASK_system-ASK-hero.figure.js"></script>
+<!-- DS embedded-font carrier — lets PNG export embed fonts with no server (file://).
+     Must load BEFORE export-png.js. Vendored from design-system-ASK; do not hand-edit. -->
+<script src="./_dsa-tokens/fonts-embedded.js"></script>
+<script src="export-png.js"></script>
+
+</body>
+</html>
