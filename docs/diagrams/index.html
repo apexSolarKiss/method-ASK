@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>method-ASK // diagrams</title>
-<meta name="description" content="method-ASK // the repo's illustrative diagram set — topology and intent-architecture trees, and the doctrine figures.">
+<meta name="description" content="method-ASK // the repo's illustrative diagram set — topology and intent-architecture trees, and the bespoke figures.">
 <meta name="color-scheme" content="light dark">
 <!-- Canonical ASK browser icons — deployed-origin root profile. Vendored from design-system-ASK; do not hand-edit. -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -27,8 +27,16 @@
      wordmark pair. The diagrams it indexes remain Tier 1 + Tier 2 only — the
      Tier 3 identity here does not propagate into them. See README.md.
 
-     The diagrams are ILLUSTRATIVE, not source of truth. Repo prose is
-     authoritative; each card links the doctrine document that governs it.
+     The diagrams are ILLUSTRATIVE, not source of truth, and each figure names its
+     own governing prose rather than a single shared one. Repo-owned figures are
+     governed by repo prose — a doctrine document for the doctrine figures, the
+     worked example for system-ASK. A generated projection declares the external
+     owner it derives from and carries no repo doctrine link.
+
+     NOT EVERY LINKED DOCUMENT SITS INSIDE THIS DEPLOYMENT ROOT. The deployed site is
+     rooted at docs/, so a card linking outside it — examples/system-ASK.md — resolves
+     in a clone but needs a route at the deployment boundary. That route is owned once
+     in docs/vercel.json, not patched into each link.
      ============================================================ -->
 <link rel="stylesheet" href="_dsa-tokens/colors_and_type.css">
 <link rel="stylesheet" href="_dsa-surface/surface-panel.css">
@@ -119,7 +127,8 @@
         <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> method-ASK <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">diagrams</span></h1>
       </nav>
       <p class="surface-lede">Structural snapshots of the method at a point in time. Diagrams are illustrative and
-        age; the repo prose is source of truth, and each figure below links the doctrine document that governs it.</p>
+        age. Repo prose governs the repo-owned figures — doctrine for some, a worked example for others — and a
+        generated projection declares the external owner it derives from.</p>
       <span class="surface-badge">illustrative &gt;&gt; not source of truth</span>
     </div>
   </header>

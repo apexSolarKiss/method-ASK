@@ -1,7 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
-    { "source": "/", "destination": "/diagrams/", "permanent": false }
+    { "source": "/", "destination": "/diagrams/", "permanent": false },
+    {
+      "source": "/examples/system-ASK.md",
+      "destination": "https://github.com/apexSolarKiss/method-ASK/blob/main/examples/system-ASK.md",
+      "permanent": false
+    }
   ],
   "headers": [
     {
