@@ -80,12 +80,22 @@ They exist to prevent four specific collapses, one per figure:
 - `method-ASK_relay-graph-ptx-projection.html` — renders `TREE_D07`.
   - `method-ASK_relay-graph-ptx-projection.source.js` — `TREE_D07` data (`source-v1`): the native partially-ordered multi-thread topology vs the linear PTX projection; three labels on one relayed passage.
 
-### Doctrine figures
+### Bespoke figures
 
 - **Bounded generativity**
   - `method-ASK_bounded-generativity.html` — renders the bounded-generativity system-model figure.
   - `method-ASK_bounded-generativity.figure.js` — figure builder (`source-v4`).
   - `method-ASK_bounded-generativity-dark.png` — sole committed doctrine mirror (dark full-page); the light-page + chrome-free diagram variants are on-demand exporter outputs, not committed.
+- **system-ASK // one apex · distributed owners · governed return** (`D11` — worked example)
+  - `method-ASK_system-ASK-hero.html` — renders the system-ASK causal-orientation figure.
+  - `method-ASK_system-ASK-hero.figure.js` — figure builder (`source-v1`).
+  - `method-ASK_system-ASK-hero-dark.png` — committed worked-example mirror (dark full-page).
+  - Projects the accepted claim set in [`examples/system-ASK.md`](../../examples/system-ASK.md), which is
+    source of truth for the figure; the two are one delivery unit, while neither is authority for the
+    distributed system they depict. It answers one question — how a single normative apex governs a
+    recursive ecology of distributed owners and plural reasoning while evidence returns upward and
+    authority does not — and it is **not** derived from the operator topology map or from that map's
+    generated public projection, which sits in this folder and shares the subject.
 - **Seed-Mediated Generated Interface // doctrine**
   - `method-ASK_seed-mediated-generated-interface.html` — renders the SMGI DOCTRINE figure.
   - `method-ASK_seed-mediated-generated-interface.figure.js` — figure builder (`source-v1`).
@@ -130,7 +140,7 @@ The SMGI doctrine figure is `source-v1 // render-v2`; the ontology figure is `so
 - Drag to pan; scroll to zoom; HUD controls in the bottom-left; `⤢` to fit.
 - Theme follows the OS preference (`prefers-color-scheme`); the CSS supports explicit `data-theme="light"` or `data-theme="dark"` on `<html>` if a specific theme is needed.
 - The PNG export outputs a 3840×2880 image in the resolved theme.
-- **Theme by embedding surface** — adopting the [`design-system-ASK` convention](https://github.com/apexSolarKiss/design-system-ASK/blob/main/README.md#theme-by-embedding-surface) (pinned `7921b79`): this folder is repository documentation, so its embedded diagrams **default to dark**. Repository doctrine figures commit exactly one **versionless dark full-page** mirror each, named with the semantic figure stem plus the `-dark.png` theme suffix. The current mirrors are **bounded generativity**, the **SMGI doctrine figure**, and the **SMGI ontology figure**. Light-page and chrome-free diagram variants remain on-demand exporter outputs, not committed. Most other diagrams here are HTML-only; a doctrine diagram gets exactly one supplemental raster when the Markdown needs it.
+- **Theme by embedding surface** — adopting the [`design-system-ASK` convention](https://github.com/apexSolarKiss/design-system-ASK/blob/main/README.md#theme-by-embedding-surface) (pinned `7921b79`): this folder is repository documentation, so its embedded diagrams **default to dark**. Bespoke figures with an approved committed mirror use one **versionless dark full-page** raster each, named with the semantic figure stem plus the `-dark.png` theme suffix. The current mirrors are **system-ASK** (`D11`), **bounded generativity**, the **SMGI doctrine figure**, and the **SMGI ontology figure**. Light-page and chrome-free diagram variants remain on-demand exporter outputs, not committed. Most other diagrams here are HTML-only; a bespoke figure gets exactly one supplemental raster when the Markdown needs it.
 
 ## Lineage
 
