@@ -60,10 +60,14 @@ terminology, and no owner carries them as terms of art. Each names a relation th
 owners are cited below.
 
 ```text
-method explains          protocol operates          design expresses
-projects realize + pressure                          operator planes coordinate + preserve
-public surfaces render + articulate
-ASK authorizes · selects · adjudicates · closes · answers
+method            explains
+protocol          operates
+design            expresses
+projects          realize + pressure
+operator planes   coordinate + preserve
+public surfaces   render + articulate
+
+ASK               authorizes · selects · adjudicates · closes · answers
 ```
 
 ## One apex
@@ -210,8 +214,13 @@ in this worked example, owner-relative to the public owners cited
 inline. Excluded: claims deliberately omitted or held at operator
 altitude, live rosters and state, private-instance topology, and the
 process and review mechanics by which it was prepared. This records the
-bounded basis of the pass. By itself it claims neither a completed rake
-nor permanent stability.
+bounded basis of the pass.
+
+Calibration // adjudicated 2026-09-08; corrections landed 2026-09-10.
+This compression is the corrected result of the bilateral calibration
+it requires, run on a proposal-stage version of it. Completion belongs
+to that calibration, not to this file, which still certifies neither
+itself nor any permanent stability.
 ```
 
 ## Three coupled circuits

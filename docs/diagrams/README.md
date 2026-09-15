@@ -84,11 +84,11 @@ They exist to prevent four specific collapses, one per figure:
 
 - **Bounded generativity**
   - `method-ASK_bounded-generativity.html` — renders the bounded-generativity system-model figure.
-  - `method-ASK_bounded-generativity.figure.js` — figure builder (`source-v4`).
+  - `method-ASK_bounded-generativity.figure.js` — figure builder (`source-v5`).
   - `method-ASK_bounded-generativity-dark.png` — sole committed doctrine mirror (dark full-page); the light-page + chrome-free diagram variants are on-demand exporter outputs, not committed.
 - **system-ASK // one apex · distributed owners · governed return** (`D11` — worked example)
   - `method-ASK_system-ASK-hero.html` — renders the system-ASK causal-orientation figure.
-  - `method-ASK_system-ASK-hero.figure.js` — figure builder (`source-v1`).
+  - `method-ASK_system-ASK-hero.figure.js` — figure builder (`source-v2`).
   - `method-ASK_system-ASK-hero-dark.png` — committed worked-example mirror (dark full-page).
   - Projects the accepted claim set in [`examples/system-ASK.md`](../../examples/system-ASK.md), which is
     source of truth for the figure; the two are one delivery unit, while neither is authority for the

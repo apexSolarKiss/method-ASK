@@ -74,6 +74,29 @@ artifact of intent    what preserves, expresses, deploys, routes, or relays that
 runtime realization   the causal organization through which intent influences operation
 ```
 
+### Three Functions bridge
+
+[`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK)'s **Three Functions** primitive marks legislative, executive, and judicial function in a figure. Its **function-admissibility criteria** are upstream; which concrete element instantiates a classified role is consumer-local. The criteria bear directly on the four slots above, so the mapping is stated here rather than inferred at each figure:
+
+```text
+source of intent      the ROLE is the CONSTITUTIVE LEGISLATIVE SOURCE — it adopts or
+                      authorizes the governing standard
+standing intent       adopted normative content; it performs no legislative function
+artifact of intent    classified by WHAT IT DOES: DELEGATED legislative apparatus where it
+                      acts as a grammar, brief, rule, or grant carrying the standard into
+                      operative scope — not legislative merely because it carries intent
+runtime realization   a causal organization, not itself a function class; what operates
+                      within it is classified by what it does — realizing candidates under
+                      the standard is executive; evaluating, selecting, and closing is
+                      judicial; deriving a sub-brief under a grant is delegated legislation
+```
+
+**Constitutive and delegated legislation are one function.** A figure marks both with the same legislative treatment and carries the hierarchy between them in topology, labels, and geometry — never a second color, an opacity rank, or a fourth function. The grant is apparatus; the aperture it produces is a bounded permission, not apparatus.
+
+**The role is not the function, and the actor is not the role.** Classifying the source-of-intent role as the constitutive legislative source makes neither the role identical to the legislative function — the purpose, authorization, closure, and answerability this doctrine requires of the apex are unchanged — nor the person or institution occupying it legislative *only*: the same actor may occupy a legislative role and a judicial one without collapsing either. Where a figure draws the occupying actor separately from the role, the actor's envelope stays neutral while the role it occupies stays legislative. This is the actor / role distinction this doctrine already draws, stated in the primitive's vocabulary.
+
+This bridge aligns vocabulary; it adds no apex doctrine. The apex doctrine above — membership and derivability, the intent · authority · recourse decomposition, non-derivability, delegation, and the **held source-role boundary** — is unchanged, and the primitive settles none of the held questions.
+
 ## Delegation does not propagate the apex
 
 A source of intent may delegate task formation, local subgoal-setting, evidence gathering, candidate generation, evaluation, and — where governance names the scope — bounded binding judgment. None of those acts, alone or stacked, delegates the source role itself. What travels down a delegation chain is **intent, apertures, and bounded decision rights from the apex**; the apex does not travel with them.

@@ -27,34 +27,44 @@
      on bare :root and then HANDED BACK to the ordinary ramp in both dark selectors, which
      mirror the foundation's own theme model. Consequences that are deliberately NOT taken:
      no --fg-1 / --fg-2 / --fg-3 rebind, no new hex or palette role, no mutation of the
-     shared method-ASK diagrams.css, no claim on any other figure. Dark renders byte-for-byte
-     as before, which is why the committed raster is unaffected.
+     shared method-ASK diagrams.css, no claim on any other figure.
 
-     Cost, stated rather than hidden: in light the ink / muted / faint lightness ramp
-     collapses to one value, so text hierarchy there is carried by size and weight alone.
-     Flattened and readable is the correct trade against graded and unreadable. */
+     In light the ink / muted / faint lightness ramp collapses to one value, so text hierarchy
+     there is carried by size, family, case and weight. source-v2 adds one weight step for that
+     reason — below — and changes no foreground value. */
   :root {
     --diagram-ink:   var(--fg-high-contrast);
     --diagram-muted: var(--fg-high-contrast);
     --diagram-faint: var(--fg-high-contrast);
+    --d11-label-weight: 500;
   }
   :root[data-theme="dark"] {
     --diagram-ink: var(--fg-1); --diagram-muted: var(--fg-2); --diagram-faint: var(--fg-3);
+    --d11-label-weight: 400;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]):not([data-theme="dark"]) {
       --diagram-ink: var(--fg-1); --diagram-muted: var(--fg-2); --diagram-faint: var(--fg-3);
+      --d11-label-weight: 400;
     }
   }
+  /* ===== LIGHT-THEME HIERARCHY STEP — FIGURE-LOCAL (source-v2) =====
+     Where the lightness ramp is collapsed, box labels step from weight 400 to 500 so the
+     primary tier separates from the 300-weight mono notes and tags on the same foreground.
+     Dark keeps the shared 400: its ordinary ramp already carries the hierarchy. No
+     foreground, fill, background or accent value moves. */
+  .node-label { font-weight: var(--d11-label-weight); }
 
-  /* ===== Three Functions consumption (source-v1) =====
+  /* ===== Three Functions consumption (source-v2 · primitive v0.2) =====
      The owner's rendering contract, unmodified: every role-bearing apparatus carries a
      30% role fill and the full role value as stroke. No local opacity ramp — the owner
      carries field-vs-object in geometry and negative space, not in a lighter wash.
-       legislative  the execution grant / aperture · the enforced path-scoped grant
-       executive    the executor — the bounded realization chamber
+       legislative  the source-of-intent role (constitutive) · the execution grant and the
+                    enforced path-scoped grant (delegated); the aperture a grant produces is a
+                    permission, not apparatus, and takes no role color
+       executive    the executor — the bounded realization chamber — and the realization span
        judicial     the adjudication gate · disposition
-     NEUTRAL, and the exclusions are the claim: the source-of-intent apex, artifact
+     NEUTRAL, and the exclusions are the claim: the human ASK actor envelope, artifact
      governance, the governed artifact and its record, project cells, public surfaces,
      and every structural frame and edge. Structure, not state: Spectral State is
      deliberately not used. */
@@ -63,31 +73,36 @@
   .node-box.fn-jud   { stroke: var(--function-judicial);    fill: color-mix(in srgb, var(--function-judicial) 30%, transparent); }
   .node-box.fn-exe   { stroke: var(--function-executive);   fill: color-mix(in srgb, var(--function-executive) 30%, transparent); }
 
+  /* The occupying actor's envelope: the neutral structural line, no fill. It is an element
+     the figure names, so it takes the full structural line rather than a frame's soft one. */
+  .flow-group.actor-envelope { stroke: var(--diagram-line); fill: none; }
+
   /* A label sitting ON a role-bearing apparatus takes the theme FOREGROUND rather than the
-     de-emphasised muted ramp — the owner's rule, and the measured requirement: against a 30%
-     role wash on the dark field the muted ramp lands at 2.98-4.35 : 1, below AA. */
+     de-emphasized muted ramp — the owner's label rule. (Measured at source-v1: on a 30% role
+     wash in dark, the muted ramp landed at 2.98-4.35 : 1.) */
   .node-note.on-role { fill: var(--diagram-ink); }
+
+  /* The owner's legend-only divider in the in-SVG key: a dotted rule on the soft structural
+     line, separating the three functions from the one neutral exemplar beneath them. It is
+     key furniture, not an edge class, and appears nowhere in the figure body. */
+  .key-divider { fill: none; stroke: var(--diagram-line-soft); stroke-width: 1; stroke-dasharray: 1 4; stroke-linecap: round; }
 
   /* ===== EDGE GRAMMAR — six classes =====
      Five inherited, plus CONFORMANCE. INHERITANCE and CONFORMANCE are the closest
      neighbours, so they differ on TWO axes — dash cadence AND terminal form — and must
-     stay separable at a glance, without the legend. */
+     stay separable at a glance, without the key. The key itself — the three functions and
+     these six classes — is drawn inside the SVG by the figure builder, from the same
+     classes, so the page carries no corner legend panel. CONFORMANCE's terminal is a hollow
+     head, outlined at the edge's own weight and solid, so it carries no dash. */
   .edge.e-auth      { stroke-width: 2.4; }
   .edge.e-inherit   { stroke-width: 1.5; stroke-dasharray: 7 5; }
   .edge.e-conform   { stroke-width: 1.5; stroke-dasharray: 2 3 10 3; }
+  .edge.e-conform-head { stroke-width: 1.5; }
   .edge.e-evidence  { stroke-width: 1.05; opacity: .8; }
   .edge.e-relay     { stroke-width: 1.6; stroke-dasharray: 13 7; }
   .edge.e-relay-mark{ stroke-width: 1.6; fill: none; }
   .edge.e-pointer   { stroke-width: 1; stroke-dasharray: 2 5; opacity: .55; }
   .edge.e-membrane  { stroke-width: 2; stroke-dasharray: 3 4; opacity: .9; }
-
-  /* legend line swatches */
-  .legend .ln { width: 46px; height: 12px; display: block; }
-  .legend .ln line, .legend .ln path, .legend .ln circle, .legend .ln rect { stroke: var(--diagram-ink); fill: none; }
-  .legend .sw { min-width: 52px; }
-  .legend { max-width: 372px; }
-  .legend .fn-divider { border: none; border-top: 1px dotted var(--diagram-line); margin: 11px 0 8px; }
-  .legend .fn-down { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--diagram-muted); margin-bottom: 8px; }
 </style>
 </head>
 <body>
@@ -101,8 +116,8 @@
     </div>
     <div class="spacer"></div>
     <div class="stamp">
-      <div><span class="k">D11</span> // <span class="k">source-v1</span> // <span class="k">render-v1</span></div>
-      <div>2026-09-09</div>
+      <div><span class="k">D11</span> // <span class="k">source-v2</span> // <span class="k">render-v1</span></div>
+      <div>2026-09-14</div>
     </div>
   </div>
 
@@ -115,34 +130,6 @@
     <div class="corner-tick tr"></div>
     <div class="corner-tick bl"></div>
     <div class="corner-tick br"></div>
-
-    <div class="legend glass">
-      <div class="h"><span>Edge grammar</span><span class="fig">six classes</span></div>
-      <div class="row">
-        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="2" y1="6" x2="34" y2="6" stroke-width="2.4"/><path d="M 34 2.5 L 34 9.5 L 42 6 Z" fill="var(--diagram-ink)"/></svg></div>
-        <div><span class="lbl">authority</span><span class="sub">intent · grant · adjudication</span></div>
-      </div>
-      <div class="row">
-        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="2" y1="6" x2="34" y2="6" stroke-width="1.5" stroke-dasharray="7 5"/><path d="M 34 2.5 L 34 9.5 L 42 6 Z" fill="var(--diagram-ink)"/></svg></div>
-        <div><span class="lbl">inheritance</span><span class="sub">vendoring — pinned, never hot-linked</span></div>
-      </div>
-      <div class="row">
-        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="2" y1="6" x2="34" y2="6" stroke-width="1.5" stroke-dasharray="2 3 10 3"/><circle cx="38" cy="6" r="4"/></svg></div>
-        <div><span class="lbl">conformance</span><span class="sub">a rail consuming the rail above it — RING terminal</span></div>
-      </div>
-      <div class="row">
-        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="10" y1="6" x2="42" y2="6" stroke-width="1.05" opacity=".8"/><path d="M 12 2 L 6 6 L 12 10" stroke-width="1.05"/></svg></div>
-        <div><span class="lbl">evidence</span><span class="sub">pressure · critique — OPEN head, never filled</span></div>
-      </div>
-      <div class="row">
-        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="2" y1="6" x2="14" y2="6" stroke-width="1.6"/><rect x="17" y="3" width="6" height="6"/><line x1="26" y1="6" x2="42" y2="6" stroke-width="1.6"/></svg></div>
-        <div><span class="lbl">relay</span><span class="sub">cross-surface transfer through ASK — gated break</span></div>
-      </div>
-      <div class="row">
-        <div class="sw"><svg class="ln" viewBox="0 0 46 12"><line x1="2" y1="6" x2="42" y2="6" stroke-width="1" stroke-dasharray="2 5" opacity=".55"/></svg></div>
-        <div><span class="lbl">pointer</span><span class="sub">live state resolving to its owner</span></div>
-      </div>
-    </div>
 
     <div class="hud glass">
       <button id="zoomOut" title="Zoom out">−</button>
