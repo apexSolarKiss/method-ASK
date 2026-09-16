@@ -77,8 +77,9 @@
      the figure names, so it takes the full structural line rather than a frame's soft one. */
   .flow-group.actor-envelope { stroke: var(--diagram-line); fill: none; }
 
-  /* A label sitting ON a role-bearing apparatus takes the theme FOREGROUND rather than the
-     de-emphasized muted ramp — the owner's label rule. (Measured at source-v1: on a 30% role
+  /* A note sitting ON a role-bearing apparatus takes the theme FOREGROUND rather than the
+     de-emphasized muted ramp. A note is not a label under the owner's label row; this is the
+     note's own neutral foreground, never the role hue. (Measured at source-v1: on a 30% role
      wash in dark, the muted ramp landed at 2.98-4.35 : 1.) */
   .node-note.on-role { fill: var(--diagram-ink); }
 
