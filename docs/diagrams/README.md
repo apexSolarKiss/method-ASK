@@ -125,7 +125,7 @@ design rather than a silently unwrapped label.
 
 They are a pair with different jobs, and neither substitutes for the other:
 
-- **doctrine figure** (`…_seed-mediated-generated-interface`) — the **instantiation path** and the loading-boundary seam. Authored seed >> loading boundary >> grammar grants the aperture >> runtime >> generated interaction >> return, or, at the boundary, fork-at-load. Consumes the Three Functions primitive for one licensed node: the grammar box, where the grammar is a concrete actor in the runtime path.
+- **doctrine figure** (`…_seed-mediated-generated-interface`) — the **instantiation path** and the loading-boundary seam. Authored seed >> loading boundary >> grammar grants the aperture >> runtime >> generated interaction >> return, or, at the boundary, fork-at-load. Consumes the Three Functions primitive for one licensed node: the grammar box, where the grammar is operative apparatus in the runtime path.
 - **ontology figure** (`…_seed-mediated-generated-interface-ontology`) — the **category boundaries**. Four orthogonal layers (mechanism · application · authored control · conformance) around one membership node, joined by typed relations. **Fully neutral — no function colour**, because it classifies concepts rather than diagramming the functions; it does not load `three-functions.css`.
 
 The SMGI doctrine figure is `source-v1 // render-v2`; the ontology figure is `source-v2 // render-v1`.
