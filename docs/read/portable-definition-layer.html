@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // portable definition layer</title>
+<meta name="description" content="The Portable Definition Layer // the durable object, separable from the tool that holds it">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/portable-definition-layer.md">
+<meta name="source-sha256" content="56e6bc81a179483cadcaa976d3b02e1b709671ab9e8de37c7c6f3ab8707954d8">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">portable definition layer</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="the-portable-definition-layer--the-durable-object-separable-from-the-tool-that-holds-it" class="doc-title">The Portable Definition Layer // the durable object, separable from the tool that holds it</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>portable-definition-layer.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">10418 B &middot;</span> <span class="doc-meta-item">source sha256 56e6bc81a179</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/portable-definition-layer.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../portable-definition-layer.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">A method primitive: <strong>the durable normative object a system must preserve across a substrate change</strong> — the structured statement of <em>intent, constraints, discretion, references, and governance</em> that makes outputs (or interpretations) <strong>recoverable, auditable, and accountable</strong> independent of whatever generator, tool of record, or workflow happened to hold them.</p>
+<pre class="doc-pre"><code class="language-text">intent · constraints · discretion · references · governance
+  → the portable definition layer (the durable object)
+    → survives a generator / tool-of-record / workflow swap
+      → the output or interpretation stays recoverable · auditable · accountable
+</code></pre>
+<p class="doc-body">It is not a renderer, a substrate, or an execution. It is the durable object those three replaceable things are <em>about</em>.</p>
+<hr class="doc-rule" />
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#classification">Classification</a>
+</li>
+<li class="doc-body"><a href="#distinct-from-bounded-generativity--a-different-axis">Distinct from bounded generativity — a different axis</a>
+</li>
+<li class="doc-body"><a href="#the-five-facets">The five facets</a>
+</li>
+<li class="doc-body"><a href="#worked-instances-one-implemented-one-conceptual--across-system-kinds">Worked instances (one implemented, one conceptual — across system kinds)</a>
+</li>
+<li class="doc-body"><a href="#evidence-posture-read-this-before-citing-the-primitive">Evidence posture (read this before citing the primitive)</a>
+</li>
+<li class="doc-body"><a href="#tiering-where-the-primitive-and-its-relations-live">Tiering (where the primitive and its relations live)</a>
+</li>
+<li class="doc-body"><a href="#boundaries">Boundaries</a>
+</li>
+<li class="doc-body"><a href="#anchors">Anchors</a>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="classification" class="doc-section-title">Classification</h3>
+<div class="doc-prose">
+<p class="doc-body"><strong>Accepted as method doctrine (a distinct method primitive), 2026-06-14.</strong> Routed from <code class="doc-code">asset-pipeline-ASK</code> as a candidate (2026-06-13); classified here per <code class="doc-code">docs/absorption-discipline.md</code>; ASK-approved as <strong>option 1</strong> (a distinct primitive, not a facet or umbrella) once the interpretive second instance was confirmed.</p>
+<p class="doc-body">It clears the §Evidence thresholds as a <strong>two-instance bracket across structurally different kinds of system</strong>:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">asset-pipeline-ASK</code></a> (generative, implemented)</strong> — the proven worked instance (milestone-14 portability frontier: recovery / auditability / consumability).</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/urban-observatory"><code class="doc-code">urban-observatory</code></a> (interpretive, non-generative — conceptual)</strong> — independent-domain confirmation on the durability axis; the five facets map while it explicitly does <em>not</em> carry generative mechanics.</li>
+</ul>
+<p class="doc-body">The second instance is what disambiguates: a non-generative domain confirming the same durable-structure pattern is direct evidence the primitive concerns <strong>durable normative structure across substrates, separable from generation</strong> — not a feature of any one generator or domain.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="distinct-from-bounded-generativity--a-different-axis" class="doc-section-title">Distinct from bounded generativity — a different axis</h3>
+<div class="doc-prose">
+<p class="doc-body"><a href="https://github.com/apexSolarKiss/method-ASK/blob/main/README.md"><code class="doc-code">method-ASK</code></a> already holds the <strong>bounded generativity</strong> primitive (<code class="doc-code">docs/bounded-generativity.md</code>). The portable definition layer is <strong>orthogonal</strong>, not nested:</p>
+<pre class="doc-pre"><code class="language-text">bounded generativity     — PROCESS axis
+  grammar → bounded variance → selection → governed artifact
+  (how a governed artifact is generated)
+
+portable definition layer — DURABILITY axis
+  intent / constraints / discretion / references / governance
+  (which normative structure is the durable object, and whether it
+   survives being lifted out of the tool that held it)
+</code></pre>
+<p class="doc-body">They are complementary peers. The portable definition layer is <strong>not a facet</strong> of bounded generativity — an interpretive, non-generative system instantiates it with no generation at all. It is <strong>not an umbrella</strong> over bounded generativity — generation is not a special case of durability; it is a different axis. A system may exhibit one, the other, or both.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-five-facets" class="doc-section-title">The five facets</h3>
+<div class="doc-prose">
+<p class="doc-body">The durable object is the structured statement of:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Intent</strong> — what the work is for (the source of intent a substrate change must not lose).</li>
+<li class="doc-body"><strong>Constraints</strong> — the anti-goals and boundaries the work is held within.</li>
+<li class="doc-body"><strong>Discretion</strong> — judgment exercised <em>within</em> standards. <em>Generative</em> discretion (which realized candidate is truest) and <em>evidentiary</em> discretion (how strong the evidence must be before a claim is licensed) are both instances; the facet is the governed exercise of judgment, not its specific kind.</li>
+<li class="doc-body"><strong>References</strong> — the sources the work is accountable to — first-class accountability anchors (source + provenance + basis + applicability), not decoration.</li>
+<li class="doc-body"><strong>Governance</strong> — what becomes a durable record, who may say so, and what recourse exists when it is wrong.</li>
+</ul>
+<p class="doc-body"><strong>Applicability is relational, not a sixth facet.</strong> It binds a claim or reference to the object, project, scale, or decision context it may describe or govern. Authentic source, correct provenance, and adequate basis do not by themselves establish that the material is attached to the right object. Where one context substrate spans several objects, the portable definition layer must preserve that relation; its carrier and enforcement mechanism are implementation-specific. This primitive is not a multi-object scope protocol.</p>
+<p class="doc-body"><strong>Precedence ≠ applicability.</strong> Precedence may resolve competing claims after their applicability has been established; it cannot establish which object, project, scale, or decision context a claim belongs to.</p>
+<p class="doc-body">These are what must survive a tool swap intact. The renderer, the base model, the pipeline, the interpretive surface are all replaceable; the definition layer is the object they are <em>about</em>.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="worked-instances-one-implemented-one-conceptual--across-system-kinds" class="doc-section-title">Worked instances (one implemented, one conceptual — across system kinds)</h3>
+<div class="doc-prose">
+<p class="doc-body">These are <strong>ASK-system worked examples and antecedent studies, not dependencies</strong> — cite them as worked examples, never as imports.</p>
+<ul class="doc-list">
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">asset-pipeline-ASK</code></a></strong> — <em>generative, implemented.</em> One complete governed creative decision (brief → accepted asset) proven <strong>recoverable</strong> outside its tool (re-expressed as tool-agnostic structured data, reconstructed by a fresh reader), <strong>auditable</strong> without carrying the pixels (content hash for identity + durable pointer for access, inspection on demand), and worth holding even absent a downstream consumer (a receipt is valuable because it can be held, checked, and trusted). The durable object was the definition layer, not the generator, the base, or the pipeline. (Milestone-14 portability frontier + the byte-boundary and consuming-artifact findings.)</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/urban-observatory"><code class="doc-code">urban-observatory</code></a></strong> — <em>interpretive, non-generative, conceptual.</em> Reconstructs public-record evidence (<code class="doc-code">Assumption → ImplementationSignal → ImplementationFinding → InterventionCandidate</code>), provenance-first, with <strong>gated interpretation</strong> as its bounded-discretion analog and a <strong>reviewer-role boundary</strong> as governance. All five facets map; <strong>auditability by construction</strong> — public-data-only + provenance-first makes the interpretation natively inspectable against the public record. UO confirms the durability axis <strong>only</strong>, and has <strong>not built or adopted</strong> a liftable portability layer.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="evidence-posture-read-this-before-citing-the-primitive" class="doc-section-title">Evidence posture (read this before citing the primitive)</h3>
+<div class="doc-prose">
+<pre class="doc-pre"><code class="language-text">asset-pipeline-ASK  — proven generative worked instance (implemented)
+urban-observatory   — confirmed interpretive instance (conceptual; durability axis only)
+                      UO has NOT built or adopted liftable portability infrastructure
+</code></pre>
+<p class="doc-body">This doc lands the <strong>method primitive, not an implementation protocol.</strong> It names the durable object a system must preserve across tools; it does <strong>not</strong> assert a built second instance, a schema, a workflow requirement, or an automation claim. The interpretive confirmation is conceptual; promotion of a <em>primitive</em> (a structural concept) turns on cross-domain conceptual confirmation, which is met — implementation enforcement is a separate, later question.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="tiering-where-the-primitive-and-its-relations-live" class="doc-section-title">Tiering (where the primitive and its relations live)</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/method-ASK/blob/main/README.md"><code class="doc-code">method-ASK</code></a></strong> owns the primitive definition — this doc.</li>
+<li class="doc-body"><strong>Project repos</strong> reference the primitive at high-level doctrine altitude — <strong>not</strong> as schema, proof-test, or implementation requirement. AP is the antecedent worked instance; UO holds a scratch analog it has not adopted.</li>
+<li class="doc-body">A cross-repo <em>relationship</em> record, if/when warranted, belongs in <a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">control-surface</code></a>, not here.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="boundaries" class="doc-section-title">Boundaries</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong>Method-level, not project-specific.</strong> AP is one implemented instance; UO is a conceptual second on the durability axis. Both cited as instances, <strong>not dependencies or imports</strong>.</li>
+<li class="doc-body"><strong>This defines the primitive; it authorizes nothing operational.</strong> No schema, no project migration, no client doctrine, no implementation, no downstream repo mutation. No UO adoption claim; no &quot;built second instance&quot; claim.</li>
+<li class="doc-body"><strong>Auditability and accountability ≠ verification discipline.</strong> Auditability and accountability are properties the durable object must preserve. The execution-time instruments, checks, and review procedures that test whether those properties are satisfied are not themselves facets or instances of the Portable Definition Layer; they belong to the verification discipline. A verification system may enforce or evaluate a portable definition layer without becoming the durable object it tests.</li>
+<li class="doc-body"><strong>It does not import bounded generativity's mechanics.</strong> The durability axis is separable from generation; an interpretive instance carries no candidate-generation, creative-selection, or variance management.</li>
+<li class="doc-body"><strong>Source of intent, in the worked instances documented here, remains human/institutional.</strong> What the definition layer <em>means</em>, and what counts as a governed artifact-or-interpretation worth preserving, is supplied or authorized by the operator or governing institution — not produced merely by the tool that carries or executes it.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="anchors" class="doc-section-title">Anchors</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body">Public articulation: <a href="https://atomicspacekitten.substack.com/p/the-missing-layer-is-not-generation"><em>The Missing Layer Is Not Generation</em></a> (asset-pipeline-ASK domain, 2026-06-13) — the outward translation; companion to <a href="https://atomicspacekitten.substack.com/p/creative-discretion-is-not-creative"><em>Creative Discretion Is Not Creative Intent</em></a>. The article translates the finding outward; the repo/finding chain (AP milestone-14) is the source of truth.</li>
+<li class="doc-body">Sibling primitive: <a href="bounded-generativity.html"><code class="doc-code">docs/bounded-generativity.md</code></a> — the <strong>process</strong> axis this is positioned against.</li>
+<li class="doc-body">Inbound routing record: <code class="doc-code">2026-06-13_asset-pipeline-ASK_to_method-ASK_portable-definition-layer-candidate-primitive.md</code> — retained in the ecology operator surface's intent inbox; resolve its current physical path through <code class="doc-code">ecology-ASK-EXTERNAL/_INDEX-ecology-ASK.md</code> (ingested 2026-06-13).</li>
+<li class="doc-body">Interpretive second-instance confirmation: <code class="doc-code">2026-06-13_urban-observatory_to_method-ASK_portable-definition-layer-interpretive-instance-feedback.md</code> — retained in the ecology operator surface's intent inbox; resolve its current physical path through <code class="doc-code">ecology-ASK-EXTERNAL/_INDEX-ecology-ASK.md</code> (ingested 2026-06-13).</li>
+</ul>
+</div>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/portable-definition-layer.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../portable-definition-layer.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="method.html">method</a></li>
+      <li><a href="absorption-discipline.html">absorption discipline</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="bounded-generativity.html">bounded generativity</a></li>
+      <li><a href="governance.html">governance</a></li>
+      <li><a href="intent-artifacts.html">intent artifacts</a></li>
+      <li><a href="normative-apex.html">normative apex</a></li>
+      <li data-surface-nav-current></li>
+      <li><a href="relative-externality.html">relative externality</a></li>
+      <li><a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+      <li><a href="source-of-intent.html">source of intent</a></li>
+      <li><a href="source-of-truth-and-aging-rate.html">source of truth and aging rate</a></li>
+      <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/portable-definition-layer.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../portable-definition-layer.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>

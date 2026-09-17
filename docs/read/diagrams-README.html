@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // diagrams README</title>
+<meta name="description" content="Diagrams // illustrative">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/diagrams/README.md">
+<meta name="source-sha256" content="73da8aa863992d019a6aa262902fbe6bbfa5683670ff0907835c1625a878e1db">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">diagrams README</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="diagrams--illustrative" class="doc-title">Diagrams // illustrative</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>README.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">15275 B &middot;</span> <span class="doc-meta-item">source sha256 73da8aa86399</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/diagrams/README.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../diagrams/README.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">These diagrams are illustrative. They are not source of truth.</p>
+<p class="doc-body">Repo prose remains authoritative. If a diagram and the repo prose disagree, trust the prose and refresh the diagram; do not modify the repo prose to match the diagram.</p>
+<p class="doc-body">Each diagram is a structural snapshot of the repo at a point in time. Diagrams age. Repo prose ages too, but more slowly. The diagram should track the repo, not the other way around.</p>
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#authority-cadence">Authority cadence</a>
+</li>
+<li class="doc-body"><a href="#inheritance">Inheritance</a>
+</li>
+<li class="doc-body"><a href="#the-four-intent-architecture-figures">The four intent-architecture figures</a>
+</li>
+<li class="doc-body"><a href="#update-cadence">Update cadence</a>
+</li>
+<li class="doc-body"><a href="#contents">Contents</a>
+<ul class="doc-toc-list doc-hierarchy">
+<li class="doc-body"><a href="#live-navigation-surface">Live navigation surface</a></li>
+<li class="doc-body"><a href="#topology--intent-architecture-trees">Topology + intent-architecture trees</a></li>
+<li class="doc-body"><a href="#bespoke-figures">Bespoke figures</a></li>
+<li class="doc-body"><a href="#shared-render-support">Shared render support</a></li>
+<li class="doc-body"><a href="#the-two-smgi-figures">The two SMGI figures</a></li>
+</ul>
+</li>
+<li class="doc-body"><a href="#how-to-use">How to use</a>
+</li>
+<li class="doc-body"><a href="#lineage">Lineage</a>
+</li>
+<li class="doc-body"><a href="#what-this-folder-does-not-carry">What this folder does not carry</a>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="authority-cadence" class="doc-section-title">Authority cadence</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body">repo prose: source of truth — <a href="method.html"><code class="doc-code">docs/method.md</code></a> is the primary method articulation, and the doctrine docs (<code class="doc-code">docs/relative-externality.md</code>, <code class="doc-code">docs/voice-surface-boundary.md</code>, <code class="doc-code">docs/source-of-truth-and-aging-rate.md</code>, <code class="doc-code">docs/source-of-intent.md</code>, <code class="doc-code">docs/absorption-discipline.md</code>) own their respective doctrine</li>
+<li class="doc-body">diagram: illustrative snapshot, refreshed at topology / milestone changes</li>
+<li class="doc-body">repo <a href="https://github.com/apexSolarKiss/method-ASK/blob/main/README.md"><code class="doc-code">README.md</code></a>: canonical front-door articulation</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="inheritance" class="doc-section-title">Inheritance</h3>
+<div class="doc-prose">
+<p class="doc-body">The diagram conforms to <a href="https://github.com/apexSolarKiss/design-system-ASK"><code class="doc-code">apexSolarKiss/design-system-ASK</code></a> Tier 1 + Tier 2 by reference at generation time. The compiled <code class="doc-code">diagrams.css</code> in this folder is render support, not identity source of truth. <code class="doc-code">design-system-ASK</code> remains the visual authority; this folder does not own visual identity.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-four-intent-architecture-figures" class="doc-section-title">The four intent-architecture figures</h3>
+<div class="doc-prose">
+<p class="doc-body"><code class="doc-code">TREE_D10</code> and <code class="doc-code">TREE_D05</code>–<code class="doc-code">TREE_D07</code> are one delivery unit against the landed intent-artifact ontology and routed-instance
+lifecycle (<code class="doc-code">docs/intent-artifacts.md</code>, <code class="doc-code">docs/source-of-intent.md</code>). They are structural maps rendered by the
+shared tree engine, not bespoke <code class="doc-code">figure.js</code> compositions like the SMGI pair — the subject in each case is a
+classification or a set of distinctions, which is what the tree engine is for.</p>
+<p class="doc-body">They exist to prevent four specific collapses, one per figure:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>D10</strong> — a source of intent is a locatable ROLE, not a folder or a file; ASK authorship does not make an artifact an intent carrier.</li>
+<li class="doc-body"><strong>D05</strong> — a canonical <code class="doc-code">vN</code> lineage is not a routed-instance lifecycle. Only a <strong>fresh routed handoff awaiting first ingestion</strong> enters the routed-instance filename lifecycle; terminal <code class="doc-code">-TBI</code> remains orthogonal and may overlay other eligible artifact forms without importing it.</li>
+<li class="doc-body"><strong>D06</strong> — the relay ENVELOPE supplies operative force; the payload supplies content. Ingestion is what results when a feed succeeds, and it is not a disposition.</li>
+<li class="doc-body"><strong>D07</strong> — a PTX is a faithful linear projection of a partially-ordered exchange, not the exchange itself and not an authority converter.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="update-cadence" class="doc-section-title">Update cadence</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body">topology or method-altitude structural change: refresh the source data file</li>
+<li class="doc-body">new doctrine doc landing: refresh the source data file (the doctrine-docs group needs to track what has landed)</li>
+<li class="doc-body">per-PR repo edits: do not refresh</li>
+<li class="doc-body">per-article work: do not refresh</li>
+<li class="doc-body">ecology-level structural shift: open a new <code class="doc-code">source-vN</code></li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="contents" class="doc-section-title">Contents</h3>
+<section class="doc-section">
+<h4 id="live-navigation-surface" class="doc-subsection-title">Live navigation surface</h4>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">index.html</code> — ASK-branded live navigation surface for this folder's diagram
+set. It consumes the local Tier 1 + Tier 2 mirror and the vendored
+<code class="doc-code">_dsa-surface/</code> carriers; its Tier 3 does not propagate into the diagrams.</li>
+<li class="doc-body"><code class="doc-code">_dsa-surface/</code> — pinned, byte-identical <code class="doc-code">surface-shell</code>, <code class="doc-code">surface-panel</code>, and
+<code class="doc-code">surface-action</code> carriers plus the mode-aware ASK wordmark pair used by
+<code class="doc-code">index.html</code> and by the reading pages in <code class="doc-code">../read/</code>.
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">surface-shell.js</code> — the shell's responsive-navigation runtime, adopted by
+<code class="doc-code">index.html</code> and the reading pages. The identity mark is the disclosure:
+the runtime upgrades the authored anchor in place, so with JavaScript
+unavailable the mark stays an ordinary home link and no panel, trigger or
+dead control appears. The diagram pages adopt none of it and load none of
+these files.</li>
+<li class="doc-body"><code class="doc-code">surface-document.css</code>, <code class="doc-code">surface-treatments.css</code> and
+<code class="doc-code">surface-document-overflow.js</code> — the document register, loaded only by the
+reading pages, which <code class="doc-code">tools/read/read_gen.py</code> generates from the
+repository's Markdown.</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="topology--intent-architecture-trees" class="doc-subsection-title">Topology + intent-architecture trees</h4>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">README.md</code> — this file.</li>
+<li class="doc-body"><code class="doc-code">method-ASK_topology.html</code> — renders <code class="doc-code">TREE_D02</code>.
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">method-ASK_topology.source.js</code> — <code class="doc-code">TREE_D02</code> data (<code class="doc-code">source-v9</code>).</li>
+</ul>
+</li>
+<li class="doc-body"><code class="doc-code">method-ASK_intent-artifact-ontology.html</code> — renders <code class="doc-code">TREE_D10</code>.
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">method-ASK_intent-artifact-ontology.source.js</code> — <code class="doc-code">TREE_D10</code> data (<code class="doc-code">source-v2</code>): source of intent as a locatable ROLE; context / intent / provenance families; the claim-level vs artifact-level discipline.</li>
+</ul>
+</li>
+<li class="doc-body"><code class="doc-code">method-ASK_activation-lifecycle-comparison.html</code> — renders <code class="doc-code">TREE_D05</code>.
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">method-ASK_activation-lifecycle-comparison.source.js</code> — <code class="doc-code">TREE_D05</code> data (<code class="doc-code">source-v1</code>): five artifact forms and their distinct activation + lineage models; prevents every artifact form from inheriting the fresh routed-handoff filename lifecycle merely because it is read, fed, or co-located. Terminal <code class="doc-code">-TBI</code> remains an orthogonal overlay.</li>
+</ul>
+</li>
+<li class="doc-body"><code class="doc-code">method-ASK_relay-feeding-ingestion.html</code> — renders <code class="doc-code">TREE_D06</code>.
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">method-ASK_relay-feeding-ingestion.source.js</code> — <code class="doc-code">TREE_D06</code> data (<code class="doc-code">source-v1</code>): direct relay vs payload-bearing feed; the envelope supplies force, the payload supplies content; ingestion as a resulting state; disposition separate.</li>
+</ul>
+</li>
+<li class="doc-body"><code class="doc-code">system-ASK-topology-public.html</code> — renders <code class="doc-code">TREE_D03_PUBLIC</code>, the governed
+PUBLIC PROJECTION of the operator-side system-ASK topology. It is generated,
+not authored here, and it is not method doctrine: the four intent-architecture
+figures and the two SMGI figures state what this repo argues, while this page
+reports a structure the operator canonical owns.
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">system-ASK-topology-public.source.js</code> — the projected <code class="doc-code">TREE_D03_PUBLIC</code>
+data: eight public top-level branches derived from the canonical's twelve.</li>
+<li class="doc-body"><code class="doc-code">system-ASK-topology-public.generation.json</code> — the generation receipt. It
+records the exporter, the operator canonical and its <code class="doc-code">source-v/render-v</code>
+tuple, the input manifest, the HTML shell, and the produced outputs, each
+by SHA-256, plus the include/exclude classification that makes the 12 -&gt; 8
+reduction checkable rather than asserted.</li>
+</ul>
+</li>
+<li class="doc-body"><code class="doc-code">method-ASK_relay-graph-ptx-projection.html</code> — renders <code class="doc-code">TREE_D07</code>.
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">method-ASK_relay-graph-ptx-projection.source.js</code> — <code class="doc-code">TREE_D07</code> data (<code class="doc-code">source-v1</code>): the native partially-ordered multi-thread topology vs the linear PTX projection; three labels on one relayed passage.</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="bespoke-figures" class="doc-subsection-title">Bespoke figures</h4>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong>Bounded generativity</strong>
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">method-ASK_bounded-generativity.html</code> — renders the bounded-generativity system-model figure.</li>
+<li class="doc-body"><code class="doc-code">method-ASK_bounded-generativity.figure.js</code> — figure builder (<code class="doc-code">source-v5</code>).</li>
+<li class="doc-body"><code class="doc-code">method-ASK_bounded-generativity-dark.png</code> — sole committed doctrine mirror (dark full-page); the light-page + chrome-free diagram variants are on-demand exporter outputs, not committed.</li>
+</ul>
+</li>
+<li class="doc-body"><strong>system-ASK // one apex · distributed owners · governed return</strong> (<code class="doc-code">D11</code> — worked example)
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">method-ASK_system-ASK-hero.html</code> — renders the system-ASK causal-orientation figure.</li>
+<li class="doc-body"><code class="doc-code">method-ASK_system-ASK-hero.figure.js</code> — figure builder (<code class="doc-code">source-v2</code>).</li>
+<li class="doc-body"><code class="doc-code">method-ASK_system-ASK-hero-dark.png</code> — committed worked-example mirror (dark full-page).</li>
+<li class="doc-body">Projects the accepted claim set in <a href="https://github.com/apexSolarKiss/method-ASK/blob/main/examples/system-ASK.md"><code class="doc-code">examples/system-ASK.md</code></a>, which is
+source of truth for the figure; the two are one delivery unit, while neither is authority for the
+distributed system they depict. It answers one question — how a single normative apex governs a
+recursive ecology of distributed owners and plural reasoning while evidence returns upward and
+authority does not — and it is <strong>not</strong> derived from the operator topology map or from that map's
+generated public projection, which sits in this folder and shares the subject.</li>
+</ul>
+</li>
+<li class="doc-body"><strong>Seed-Mediated Generated Interface // doctrine</strong>
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">method-ASK_seed-mediated-generated-interface.html</code> — renders the SMGI DOCTRINE figure.</li>
+<li class="doc-body"><code class="doc-code">method-ASK_seed-mediated-generated-interface.figure.js</code> — figure builder (<code class="doc-code">source-v1</code>).</li>
+<li class="doc-body"><code class="doc-code">method-ASK_seed-mediated-generated-interface-dark.png</code> — committed doctrine mirror (dark full-page).</li>
+</ul>
+</li>
+<li class="doc-body"><strong>Seed-Mediated Generated Interface // ontology</strong>
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">method-ASK_seed-mediated-generated-interface-ontology.html</code> — renders the SMGI ONTOLOGY figure.</li>
+<li class="doc-body"><code class="doc-code">method-ASK_seed-mediated-generated-interface-ontology.figure.js</code> — figure builder (<code class="doc-code">source-v2</code>; dual-profile — <code class="doc-code">?layout=screen</code> default / <code class="doc-code">?layout=page</code>).</li>
+<li class="doc-body"><code class="doc-code">method-ASK_seed-mediated-generated-interface-ontology-dark.png</code> — committed doctrine mirror (dark full-page).</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="shared-render-support" class="doc-subsection-title">Shared render support</h4>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">diagrams-fit.js</code> — DS-owned fit support; loads BEFORE the engine AND before every figure builder — each builder throws a named error if it is missing.</li>
+<li class="doc-body"><code class="doc-code">diagrams-text-layout.js</code> — the DS-owned shared text-layout contract: it measures and wraps long node labels for the static tree engines. It loads AFTER <code class="doc-code">diagrams-fit.js</code> and IMMEDIATELY BEFORE the engine.</li>
+<li class="doc-body"><code class="doc-code">diagrams-static-H-engine.js</code> — layout + pan/zoom engine.</li>
+</ul>
+<p class="doc-body"><strong>The helper and the engine are indivisible.</strong> The engine throws
+<code class="doc-code">Diagram text-layout support is missing or incomplete. Load diagrams-text-layout.js before the diagram engine.</code>
+when the carrier is absent, and it further requires <code class="doc-code">DIAGRAM_TEXT_LAYOUT.TARGETS</code>
+to name its own pattern. Neither file may be re-vendored, moved or upgraded
+without the other, and a page may not load one alone — the failure is loud by
+design rather than a silently unwrapped label.</p>
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">_dsa-tokens/</code> — vendored Tier 1 + Tier 2 token mirror.</li>
+<li class="doc-body"><code class="doc-code">diagrams.css</code> — compiled Tier 1 + Tier 2 style.</li>
+<li class="doc-body"><code class="doc-code">export-png.js</code> — 3840×2880 PNG export.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="the-two-smgi-figures" class="doc-subsection-title">The two SMGI figures</h4>
+<div class="doc-prose">
+<p class="doc-body">They are a pair with different jobs, and neither substitutes for the other:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>doctrine figure</strong> (<code class="doc-code">…_seed-mediated-generated-interface</code>) — the <strong>instantiation path</strong> and the loading-boundary seam. Authored seed &gt;&gt; loading boundary &gt;&gt; grammar grants the aperture &gt;&gt; runtime &gt;&gt; generated interaction &gt;&gt; return, or, at the boundary, fork-at-load. Consumes the Three Functions primitive for one licensed node: the grammar box, where the grammar is operative apparatus in the runtime path.</li>
+<li class="doc-body"><strong>ontology figure</strong> (<code class="doc-code">…_seed-mediated-generated-interface-ontology</code>) — the <strong>category boundaries</strong>. Four orthogonal layers (mechanism · application · authored control · conformance) around one membership node, joined by typed relations. <strong>Fully neutral — no function colour</strong>, because it classifies concepts rather than diagramming the functions; it does not load <code class="doc-code">three-functions.css</code>.</li>
+</ul>
+<p class="doc-body">The SMGI doctrine figure is <code class="doc-code">source-v1 // render-v2</code>; the ontology figure is <code class="doc-code">source-v2 // render-v1</code>.</p>
+<p class="doc-body"><strong>Responsive behaviour.</strong> <code class="doc-code">1440×900</code> is the reference read-all composition (doctrine <code class="doc-code">0.750</code>, ontology <strong><code class="doc-code">~0.67</code> on the default <code class="doc-code">screen</code> profile</strong>). Within the current fixed-chrome contract, shorter and narrower windows use fit-all as a navigable <strong>overview</strong>: macrostructure remains identifiable in both figures, the ontology's membership gate remains identifiable, and zoom/pan exposes the authored detail. Read-all composition at every aspect ratio would require either content reduction or a separate responsive-chrome contract; neither is part of these figures.</p>
+<p class="doc-body"><strong>Ontology dual-profile (source-v2).</strong> The ontology is height-limited at a normal viewport, so a single fixed canvas cannot both stay read-all at <code class="doc-code">1440×900</code> and fill the <code class="doc-code">3840×2880</code> page. One semantic model is laid out under two coordinate profiles selected by <code class="doc-code">?layout=</code>: <strong><code class="doc-code">screen</code></strong> (default) is compact-but-recomposed and stays read-all at <code class="doc-code">1440×900</code> without zoom; <strong><code class="doc-code">page</code></strong> (<code class="doc-code">?layout=page</code>) is the taller, page-optimized composition that spends the available <code class="doc-code">3840×2880</code> page height below the chrome. The committed dark full-page mirror is generated from the page profile (<code class="doc-code">?layout=page&amp;export=png</code>). Text, categories, held status, branch asymmetry, and typed relations are identical across profiles — only coordinates differ (the recomposition itself — Application's two cards, Conformance's deepened gate / outcomes / test-strip — is present in both).</p>
+</div>
+</section>
+</section>
+<section class="doc-section">
+<h3 id="how-to-use" class="doc-section-title">How to use</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body">Open any listed <code class="doc-code">.html</code> figure directly in a browser, or via GitHub Pages if configured.</li>
+<li class="doc-body">Drag to pan; scroll to zoom; HUD controls in the bottom-left; <code class="doc-code">⤢</code> to fit.</li>
+<li class="doc-body">Theme follows the OS preference (<code class="doc-code">prefers-color-scheme</code>); the CSS supports explicit <code class="doc-code">data-theme=&quot;light&quot;</code> or <code class="doc-code">data-theme=&quot;dark&quot;</code> on <code class="doc-code">&lt;html&gt;</code> if a specific theme is needed.</li>
+<li class="doc-body">The PNG export outputs a 3840×2880 image in the resolved theme.</li>
+<li class="doc-body"><strong>Theme by embedding surface</strong> — adopting the <a href="https://github.com/apexSolarKiss/design-system-ASK/blob/main/README.md#theme-by-embedding-surface"><code class="doc-code">design-system-ASK</code> convention</a> (pinned <code class="doc-code">7921b79</code>): this folder is repository documentation, so its embedded diagrams <strong>default to dark</strong>. Bespoke figures with an approved committed mirror use one <strong>versionless dark full-page</strong> raster each, named with the semantic figure stem plus the <code class="doc-code">-dark.png</code> theme suffix. The current mirrors are <strong>system-ASK</strong> (<code class="doc-code">D11</code>), <strong>bounded generativity</strong>, the <strong>SMGI doctrine figure</strong>, and the <strong>SMGI ontology figure</strong>. Light-page and chrome-free diagram variants remain on-demand exporter outputs, not committed. Most other diagrams here are HTML-only; a bespoke figure gets exactly one supplemental raster when the Markdown needs it.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="lineage" class="doc-section-title">Lineage</h3>
+<div class="doc-prose">
+<p class="doc-body">This diagram originated in the v9 operator-side <code class="doc-code">ecology-ASK</code> diagram package and was first absorbed here at <code class="doc-code">source-v2 // render-v9</code>.</p>
+<p class="doc-body">The current tuple is <code class="doc-code">source-v9 // render-v21</code> (2026-09-03). Source advances when the authored topology changes; render advances only when the renderer realization changes.</p>
+<p class="doc-body">The operator-side package and historical render iterations remain in <code class="doc-code">ecology-ASK-EXTERNAL/scratch/</code> and are not repo truth.</p>
+<p class="doc-body"><strong>Terminology conformance 2026-08-24.</strong> The abbreviated authority term was expanded to <code class="doc-code">source of truth</code> throughout the current repo. No topology, semantic model, renderer, or carrier changed; all source and render stamps hold. The three committed dark full-page mirrors were regenerated only to keep their visible caption copy current.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="what-this-folder-does-not-carry" class="doc-section-title">What this folder does not carry</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">TREE_D01</code> (control-surface architecture tree) — lives in <a href="https://github.com/apexSolarKiss/control-surface/tree/main/docs/diagrams"><code class="doc-code">apexSolarKiss/control-surface/docs/diagrams/</code></a></li>
+<li class="doc-body"><code class="doc-code">TREE_D03</code> (system-ASK topology) — the OPERATOR CANONICAL stays outside this repo, and is not absorbed here. What this folder carries is its governed PUBLIC PROJECTION, <code class="doc-code">TREE_D03_PUBLIC</code>, generated from that canonical with the operator-side branches excluded. The projection is not the canonical, does not stand in for it, and confers no authority over it.</li>
+<li class="doc-body">Operator-side context architecture payload (private; conform by reference, do not absorb)</li>
+<li class="doc-body">Tier 3 identity inside the diagram artifacts — excluded by the Tier model. <code class="doc-code">index.html</code> is a separate ASK-branded live navigation surface for this repo and carries the mode-aware ASK wordmark pair; its Tier 3 does not propagate into the diagrams it indexes.</li>
+<li class="doc-body">Runtime dynamic import from <code class="doc-code">design-system-ASK</code> CSS (no; conform at generation time)</li>
+<li class="doc-body">Fast-aging state (PR numbers, commit hashes, current grounding-note version stamps, branch names, recent activity chronology)</li>
+</ul>
+</div>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/diagrams/README.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/README.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li data-surface-nav-current></li>
+      <li><a href="diagrams-dsa-tokens-MANIFEST.html">token mirror MANIFEST</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/diagrams/README.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../diagrams/README.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>
