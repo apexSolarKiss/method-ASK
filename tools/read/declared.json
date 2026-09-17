@@ -39,7 +39,7 @@
   ],
   "carriers": {
     "owner": "apexSolarKiss/design-system-ASK",
-    "pin": "ab4ed4d6e32ee5245a74eddea03419b0a2b083f0",
+    "pin": "067691a2fb6ca979cb6a5b0c9ca1d97790134b3f",
     "files": [
       {"path": "docs/diagrams/_dsa-surface/surface-document.css", "owner_path": "surface-document.css", "sha256": "fb93081100ee82b7cfaf7f755b744336babf3e587f32d7ec29465760d808b785"},
       {"path": "docs/diagrams/_dsa-surface/surface-treatments.css", "owner_path": "surface-treatments.css", "sha256": "db2847e23b5f9327ed347a209f46e279cb5deda310d8e6f114f20edece120e0d"},
