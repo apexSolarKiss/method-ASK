@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // absorption discipline</title>
+<meta name="description" content="Absorption Discipline">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/absorption-discipline.md">
+<meta name="source-sha256" content="48cb0403b2ce96beab8d2e5240af71e560eaeee80a358c0596fedea8da1fa31b">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">absorption discipline</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="absorption-discipline" class="doc-title">Absorption Discipline</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>absorption-discipline.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">27442 B &middot;</span> <span class="doc-meta-item">source sha256 48cb0403b2ce</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/absorption-discipline.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../absorption-discipline.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">This doctrine governs how material moves between surfaces — when an observation, pattern, or piece of state earns a more durable or more general home, and when it does not. Absorption is the move; this doctrine is the discipline that prevents the move from happening for the wrong reasons.</p>
+<p class="doc-body">The methodology repo embodies the discipline it articulates. <code class="doc-code">AGENTS.md</code> carries the absorption discipline as a workflow rule. This doc carries it at method altitude: what the discipline is, what it prevents, where material routes, and how observation-level material is preserved without being promoted prematurely.</p>
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#definition">Definition</a>
+</li>
+<li class="doc-body"><a href="#what-absorption-is-not">What absorption is not</a>
+</li>
+<li class="doc-body"><a href="#layer-destinations">Layer destinations</a>
+</li>
+<li class="doc-body"><a href="#evidence-thresholds">Evidence thresholds</a>
+</li>
+<li class="doc-body"><a href="#observation-level-material">Observation-level material</a>
+</li>
+<li class="doc-body"><a href="#closure-and-the-terminal-rename-are-one-operation">Closure and the terminal rename are one operation</a>
+</li>
+<li class="doc-body"><a href="#reconciliation-after-absorption">Reconciliation after absorption</a>
+</li>
+<li class="doc-body"><a href="#self-diagnostic-nomination">Self-diagnostic nomination</a>
+</li>
+<li class="doc-body"><a href="#grounding-note-layer-classification-gate">Grounding-note layer-classification gate</a>
+</li>
+<li class="doc-body"><a href="#worked-pressure-surfaces">Worked pressure surfaces</a>
+</li>
+<li class="doc-body"><a href="#failure-modes">Failure modes</a>
+</li>
+<li class="doc-body"><a href="#self-superseding-clause">Self-superseding clause</a>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="definition" class="doc-section-title">Definition</h3>
+<div class="doc-prose">
+<p class="doc-body">Absorption is the promotion of material from one surface to another because it has earned a more durable or more general home.</p>
+<p class="doc-body">Surfaces in this method have different aging rates and different audiences. State ages fast and lives in the repo. Rules age slowly and live in <code class="doc-code">AGENTS.md</code>. Context ages slowly and lives in the grounding note. Per-conversation tracking is ephemeral and lives in operator-side memory. Reflection moves at its own pace and lives in external writing. Method articulation lives in <a href="https://github.com/apexSolarKiss/method-ASK/blob/main/README.md"><code class="doc-code">method-ASK</code></a>; execution protocol lives in <a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">control-surface</code></a>.</p>
+<p class="doc-body">Absorption moves material from its current surface to the appropriate one when the material has earned that move. The doctrine governs both the move and the refusal to make it.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="what-absorption-is-not" class="doc-section-title">What absorption is not</h3>
+<div class="doc-prose">
+<p class="doc-body">Not every insight gets absorbed. Most material stays where it is until the criteria for promotion are met.</p>
+<p class="doc-body">Absorption is not:</p>
+<ul class="doc-list">
+<li class="doc-body">copying scratch into repo merely because the scratch artifact is well-formed</li>
+<li class="doc-body">turning event chronology into grounding-note posture because the event was important</li>
+<li class="doc-body">promoting a first sighting into rule-level doctrine because the pattern feels structural</li>
+<li class="doc-body">treating a polished handoff as current instruction because the handoff format is convincing</li>
+<li class="doc-body"><strong>ingesting a routed handoff — renaming its <code class="doc-code">-TBI</code> suffix to <code class="doc-code">-ingested</code> — is not absorbing it.</strong> Ingestion ≠ absorption: that rename is only the ingestion signal and records nothing about disposition. Post-ingestion disposition is the separate recipient-owned classification that follows (absorb / hold / decline / route / withdraw / no-route), recorded in a durable disposition record; the received memo remains byte-immutable, and current lifecycle disposition is carried by the filename marker plus any separate current-status record (see <code class="doc-code">docs/source-of-intent.md</code> §Inbound handoff TBI marker). Leaving <code class="doc-code">-TBI</code> on a memo until its payload is absorbed conflates the two and makes the ingestion queue unreliable; leaving <code class="doc-code">-ingested</code> on a memo whose disposition is durably recorded makes the closure queue unreliable in the same way, one step later. Ingestion is the third of the four events on the full ingest-and-classify path — routing, feeding, ingestion, disposition — modelled in full at that section. <strong>Disposition is the fourth event, and absorption is one possible disposition</strong> among hold, decline, route-elsewhere, withdraw, no-route, mixed closure, and post-ingestion supersession; this doc owns which of them a given artifact earns. A routed artifact may instead exit before ingestion through <code class="doc-code">-supersededA</code>, in which case a pre-ingestion retirement disposition is recorded, but the recipient-classification stage is not reached; no absorption occurs and this doc's post-ingestion classification criteria do not apply. (In that model <em>routing</em> means cross-surface artifact routing, a different sense from the material-to-layer routing in §Layer destinations below.)</li>
+<li class="doc-body">treating future roadmap as current-stage work because the roadmap looks actionable</li>
+<li class="doc-body">turning implementation architecture into method before the method stage has earned it</li>
+<li class="doc-body">absorbing material on first sighting that has not yet been pressure-tested across more than one surface</li>
+</ul>
+<p class="doc-body">These failure modes share a structural cause: a surface that ages slowly receives material that ages faster than the surface does. The surface then ages at the rate of its fastest-aging contents — usually badly. The aging-rate principle (<code class="doc-code">docs/method.md</code> §Disciplines During Execution) is the upstream reason absorption discipline matters.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="layer-destinations" class="doc-section-title">Layer destinations</h3>
+<div class="doc-prose">
+<p class="doc-body">Where material being considered for absorption may end up. Two kinds of outcome sit here, and the difference is load-bearing for §Closure and the terminal rename are one operation: a <strong>positive durable landing</strong> is a surface the material actually reaches; a <strong>non-absorption disposition</strong> is a decision not to land it anywhere yet.</p>
+<p class="doc-body"><strong>Positive durable landings.</strong> The material reaches one of these:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Repo-local public-safe truth</strong> — stable, generalized project truth that belongs in a public repo's prose. Slow-aging.</li>
+<li class="doc-body"><strong>Grounding note</strong> — slow-aging source-of-intent, audience, durable constraints, durable role boundaries.</li>
+<li class="doc-body"><strong>Scratch / operator-side event record</strong> — state chronology, event records, in-flight per-conversation tracking. Fast-aging; never the absorption target for slow surfaces.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/method-ASK/blob/main/README.md"><code class="doc-code">method-ASK</code></a> doctrine</strong> — cross-project method articulation that has earned generalization beyond a single project.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">control-surface</code></a> execution protocol</strong> — workflow rules, templates, prompts that operationalize the method per session.</li>
+<li class="doc-body"><strong>Project-local observation</strong> — project-specific patterns that have not earned generalization beyond their project. The project's own grounding note or repo carries the project-local form.</li>
+<li class="doc-body"><strong>Future roadmap context</strong> — direction that may matter later but is not current-stage source-of-intent. Retained without reshaping current work. This is a landing when the material is durably placed in the owning roadmap surface; being kept out of current-stage work does not by itself make it a non-absorption disposition.</li>
+</ul>
+<p class="doc-body"><strong>Non-absorption disposition.</strong> The material lands nowhere new:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Hold / no action</strong> — material the discipline declines to absorb anywhere yet: deliberate deferral without a landing. Held material is not lost; it is preserved at the surface where it currently sits, pending evidence that would warrant a move.</li>
+</ul>
+<p class="doc-body">Only a positive durable landing satisfies the <code class="doc-code">-absorbed</code> test below. Recording a non-absorption disposition alongside absorbed claims produces a mixed claim-level outcome; the artifact therefore takes <code class="doc-code">-closed</code>, not <code class="doc-code">-absorbed</code>.</p>
+<p class="doc-body">The classification step — what kind of material is this — uses the category distinctions in <a href="source-of-intent.html"><code class="doc-code">docs/source-of-intent.md</code></a>. The routing step — where does it go, or does it stay — uses the outcomes above. The two steps compose: classify first, then route.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="evidence-thresholds" class="doc-section-title">Evidence thresholds</h3>
+<div class="doc-prose">
+<p class="doc-body">The core rule:</p>
+<blockquote class="doc-quote">
+<p>n=1 project-specific patterns stay at observation-level by default. Promotion to rule-level doctrine requires earned evidence: repeated pressure across projects, or an explicit structural argument strong enough to justify generalization before repetition. A second project is a useful threshold, not a mechanical law.</p>
+</blockquote>
+<p class="doc-body">The threshold prevents methodology bloat. Promoting on first sighting produces doctrine that has not been pressure-tested across projects, which then has to be retracted, narrowed, or quietly invalidated when the second project surfaces. Refusal is cheaper than retraction.</p>
+<p class="doc-body">The structural-argument exception applies when recurrence is forced by the architecture rather than waited for: if a pattern's recurrence is structurally guaranteed (every project of a known class will surface the same pressure), the absorption can earn promotion before the second case actually lands. The exception is exception, not loophole. Most patterns wait for evidence. The structural argument has to be strong enough that the recurrence is genuinely architectural, not just plausible.</p>
+<p class="doc-body">A second project is the most common threshold trigger because the second instance is what disambiguates project-specific shape from cross-project pattern. The first instance is always entangled with its project's specifics; the second is what isolates the generalizable substrate.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="observation-level-material" class="doc-section-title">Observation-level material</h3>
+<div class="doc-prose">
+<p class="doc-body">The methodology repo carries observation-level material without pretending it is doctrine. The discipline:</p>
+<ol class="doc-list">
+<li class="doc-body"><strong>Label explicitly.</strong> The subsection or doc names the material as observation-level, not rule.</li>
+<li class="doc-body"><strong>State the candidate generalization.</strong> Name what the observation suggests if pressure repeats — concretely enough that a second project's pressure can either confirm or disconfirm.</li>
+<li class="doc-body"><strong>State the promotion condition.</strong> What evidence would earn rule-level treatment, typically a second project surfacing the same pressure or a structural argument strong enough to justify generalization before repetition.</li>
+<li class="doc-body"><strong>Preserve the project-specific rule in the project surface where it belongs.</strong> The grounding note for the project that surfaced the pattern carries the project-local form; the methodology repo carries only what is generalizable, at observation-level until earned.</li>
+</ol>
+<p class="doc-body">Observation-level material does not have to be small. A subsection-length treatment is appropriate when the pattern is dense; a sentence-length flag is appropriate when the pattern is thin. The discipline lives in the labeling and the explicit promotion condition, not the length.</p>
+<p class="doc-body"><code class="doc-code">docs/source-of-intent.md</code> carried the external / domain-authority handoff classification at observation-level until it was promoted to rule-level doctrine on the structural-argument branch of the evidence threshold — the pressure follows from the architect/operator vs domain-authority role split itself, not from any one project's local mechanics. Its remaining open move is a separate, heavier one: its own first-class doc on separability grounds, if it outgrows this discipline's category distinctions.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="closure-and-the-terminal-rename-are-one-operation" class="doc-section-title">Closure and the terminal rename are one operation</h3>
+<div class="doc-prose">
+<p class="doc-body">A durable disposition has two faces, and they are recorded together. The closure record carries the reasoning — classification, actions, non-actions, remaining held items. The filename carries the state, so the disposition is legible without opening anything.</p>
+<pre class="doc-pre"><code class="language-text">-ingested  →  -absorbed · -held · -declined · -withdrawn · -routed ·
+              -no-route · -closed · -supersededP
+</code></pre>
+<p class="doc-body"><strong>Record the closure and apply the rename in the same bounded operation.</strong> A closure without the rename leaves the filename advertising an open tail that is in fact closed; a rename without the closure asserts a disposition no record supports. Either half alone makes the queue lie, which is the failure the marker exists to prevent.</p>
+<p class="doc-body">What earns each suffix:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong><code class="doc-code">-absorbed</code></strong> — absorption accurately describes the <em>artifact-level</em> outcome: the material reached a <strong>positive durable landing</strong> per §Layer destinations, not one of the non-absorption dispositions recorded there. Use it only when that is true of the artifact, not merely of its strongest claim.</li>
+<li class="doc-body"><strong><code class="doc-code">-held</code></strong> — classification is complete and the disposition is deliberate deferral <strong>without a landing</strong>: the material stays at the surface where it already sits. A hold is a decision, not an absence of one — and not a destination.</li>
+<li class="doc-body"><strong><code class="doc-code">-declined</code></strong> · <strong><code class="doc-code">-withdrawn</code></strong> · <strong><code class="doc-code">-routed</code></strong> · <strong><code class="doc-code">-no-route</code></strong> — the remaining terminal classifications, matching the vocabulary above.</li>
+<li class="doc-body"><strong><code class="doc-code">-closed</code></strong> — the closure carries <strong>mixed claim-level outcomes</strong>: one claim absorbed, another held, a third routed elsewhere. Because this doc classifies claim by claim, a single artifact frequently has no single artifact-level verdict; <code class="doc-code">-closed</code> is the honest suffix in that case, and the closure record carries the per-claim detail.</li>
+<li class="doc-body"><strong><code class="doc-code">-supersededP</code></strong> — the artifact was ingested and was later closed because a <strong>named successor</strong> displaced it. The disposition record names the successor and preserves the post-ingestion lineage. The uppercase phase qualifier distinguishes it from <code class="doc-code">-supersededA</code>, which retires an artifact that was never ingested and therefore never reaches this doc's classifications at all.</li>
+</ul>
+<p class="doc-body">The closure record may be a dedicated dated memo in <code class="doc-code">scratch/</code> or an appended terminal section in an explicitly maintained program or absorption record. <strong>Do not create a new artifact solely to satisfy the form</strong> — that manufactures ceremony without adding evidence.</p>
+<p class="doc-body"><code class="doc-code">-absorbed</code> records absorption only. It does not imply implementation, merge, publication, release, or any other downstream completion.</p>
+<p class="doc-body">The routed-instance state machine, marker grammar, and queue mechanics are owned by <code class="doc-code">docs/source-of-intent.md</code> §Inbound handoff TBI marker; the artifact ontology these classes sit inside is <code class="doc-code">docs/intent-artifacts.md</code>. This section owns only what earns which disposition.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="reconciliation-after-absorption" class="doc-section-title">Reconciliation after absorption</h3>
+<div class="doc-prose">
+<p class="doc-body">§Evidence thresholds and §Observation-level material govern when material earns a more durable home and how this repo carries what has not yet earned it. This section governs the inverse, equally load-bearing move: what happens to the <em>source</em> artifact once an operative claim has moved to a more durable owner. Absorption relocates ownership; it does not, by itself, retire the source.</p>
+<p class="doc-body">The core rule:</p>
+<blockquote class="doc-quote">
+<p><strong>Reconciliation after absorption.</strong> Absorption changes the durable owner of a claim; it does not, by itself, determine the source artifact's fate. Reconcile at claim level. Before pruning, compacting, repointing, or retiring source material, verify that an equal-or-stronger durable owner has landed; that the owner is reachable through the consumer's normal read path; that provenance direction is established; and that surviving residue is classified. Preserve origin, incident, refusal, worked-example, local-exception, tool-calibration, and anti-re-derivation payload that the owner omits by design. An unchanged dependent artifact may become stale when its owner changes. Reopen only the affected claims rather than relitigating the whole artifact.</p>
+</blockquote>
+<p class="doc-body">Claim level, not artifact level. A single source artifact can hold several claims at once — a shared rule, a local exception, current state, and provenance — each with its own disposition. When an owner changes, reopen only claims whose authority, force, or retrieval depends on that owner; do not relitigate unrelated claims merely because one dependency changed. After reconciliation, the source must not continue to present the absorbed claim as current authority: repoint it to the durable owner, scope it as a local exception, or mark retained language as historical.</p>
+<p class="doc-body">Direction before deduplication. A near-duplicate of an owner is not automatically a redundant copy: it may be the <em>origin</em> record the owner was derived from. Establish provenance direction first — retiring an origin record as if it were a later duplicate destroys the lineage the owner depends on.</p>
+<p class="doc-body">Landing is not reaching. The four checks are gates, not a checklist passed mechanically. An owner that has landed but is not reachable through the consumer's normal read path has not completed the reconciliation; and staleness is relational — a dependent artifact may become stale without changing bytes when its owner changes.</p>
+<p class="doc-body">Residue is not redundancy. The payload an owner omits by design — origin, incident, refusal, worked-example, local-exception, tool-calibration, anti-re-derivation — is not made redundant when the generalized rule lands upstream. Preserving it is why a correct reconciliation may retire nothing at the artifact level even after the operative rule has moved.</p>
+<p class="doc-body">This is a refinement of the existing discipline, not a new primitive. §Evidence thresholds governs promotion <em>into</em> a more durable owner and is left untouched — the n=1 default and the structural-argument exception still hold; this section governs the source <em>after</em> promotion. One failure mode this section prevents is the existing §Failure modes › lossy supersession: a supersede-and-discard operation that sheds load-bearing residue. Unreachable ownership, reversed provenance, and competing current claims are additional reconciliation failures.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="self-diagnostic-nomination" class="doc-section-title">Self-diagnostic nomination</h3>
+<div class="doc-prose">
+<p class="doc-body">When the active control surface notices a routing or operational behavior recurring across surfaces, it should nominate the behavior as a candidate protocol rather than silently keep using it. Nomination is not promotion. The system does not promote the behavior on its own; ASK decides whether the noticing matters and what surface it belongs to.</p>
+<p class="doc-body">A repeated local habit is not enough. The nomination threshold is recurrence across surfaces, recurrence at a structural boundary, or a clear failure mode created by leaving the behavior implicit. Without this guard, every reused local convenience becomes a candidate protocol and the methodology bloats.</p>
+<p class="doc-body">A nomination identifies:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Where</strong> the behavior repeated — which surfaces, which artifacts</li>
+<li class="doc-body"><strong>What problem</strong> it solved — what failure mode the implicit pattern was preventing</li>
+<li class="doc-body"><strong>What failure</strong> it prevents — the explicit failure-mode framing</li>
+<li class="doc-body"><strong>What surface</strong> might own the protocol — method-ASK doctrine candidate, control-surface workflow rule, project-local rule, or operator-side memo only</li>
+<li class="doc-body"><strong>What would happen</strong> if it remained implicit — silent continued use vs unbearable absence</li>
+</ul>
+<p class="doc-body">The discipline sits alongside three adjacent disciplines and confers different authority from each:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Relay</strong> confers operative intent on a specific forwarded artifact</li>
+<li class="doc-body"><strong>Cross-surface routing</strong> (per <code class="doc-code">docs/source-of-intent.md</code> §Cross-surface handoff routing) confers candidate normative availability of material</li>
+<li class="doc-body"><strong>Handoff memo completeness</strong> (per <code class="doc-code">docs/source-of-intent.md</code> §Handoff memo completeness) governs the integrity of a routed artifact</li>
+<li class="doc-body"><strong>Self-diagnostic nomination</strong> confers no authority on the noticed pattern; it only asks ASK whether a protocol is emerging</li>
+</ul>
+<p class="doc-body">The nomination protects against two opposite failures. <strong>Under-noticing</strong> keeps an emergent protocol implicit — the methodology cannot articulate its own emergence patterns, and future operators, advisors, and sessions inherit the protocol without knowing it is a protocol. <strong>Over-promoting</strong> turns every repeated behavior into doctrine on first sighting — the §Evidence thresholds rule is violated and the methodology bloats with material that has not been pressure-tested. Nomination is the middle: it preserves source-of-intent authority (ASK decides) while making the pattern legible (the system surfaces it for review).</p>
+<pre class="doc-pre"><code class="language-text">system notices recurrence
+system nominates candidate protocol
+ASK decides whether the noticing matters
+method / recipient surface absorbs only after scoped approval
+</code></pre>
+<p class="doc-body">The nomination itself confers no authority. Authority belongs to ASK and the receiving surface.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="grounding-note-layer-classification-gate" class="doc-section-title">Grounding-note layer-classification gate</h3>
+<div class="doc-prose">
+<p class="doc-body">Before refreshing a grounding note, classify the candidate content layer explicitly.</p>
+<p class="doc-body">A grounding note should absorb slow-aging source-of-intent: purpose, audience, durable constraints, durable role boundaries, source-of-intent implications. It should not absorb state chronology merely because the event was important.</p>
+<p class="doc-body">Use the eight-category distinctions in <a href="source-of-intent.html"><code class="doc-code">docs/source-of-intent.md</code></a> to route candidate content before drafting a grounding-note refresh:</p>
+<ul class="doc-list">
+<li class="doc-body">slow source-of-intent → grounding note</li>
+<li class="doc-body">state / event record → scratch</li>
+<li class="doc-body">repo-local public-safe project truth → repo</li>
+<li class="doc-body">future roadmap → roadmap context</li>
+<li class="doc-body">advisor scratch → scratch until validated</li>
+<li class="doc-body">premature implementation architecture → hold</li>
+</ul>
+<p class="doc-body">The failure mode the gate prevents: state-oriented reviewer chronology dressed up as durable posture. If placed in the grounding note, it forces the grounding note to age at the rate of the event record — the surface-aging-rate failure mode named in §What absorption is not.</p>
+<p class="doc-body">The gate happens before Plan-Before-Execute for a grounding-note refresh, not after the refresh has already been drafted. The full preflight detail lives in <code class="doc-code">docs/source-of-intent.md</code>. This doctrine invokes it as the routing surface for absorption decisions that touch a grounding note.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="worked-pressure-surfaces" class="doc-section-title">Worked pressure surfaces</h3>
+<div class="doc-prose">
+<p class="doc-body">Method altitude mentions only. Domain detail lives in the project repos and in the project examples (<code class="doc-code">examples/</code>).</p>
+<ul class="doc-list">
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">asset-pipeline-ASK</code></a></strong> surfaced the aging-rate principle, the source-of-truth split, and the voice / surface-boundary discipline. These were absorbed upstream into <code class="doc-code">control-surface</code> (workflow templates, <code class="doc-code">AGENTS.md</code> rules) and into <code class="doc-code">docs/method.md</code> (method-altitude articulation). The absorption was earned by repeated pressure across the project's own phases plus structural validation against a second pressure surface as it landed.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/urban-observatory"><code class="doc-code">urban-observatory</code></a></strong> surfaced source-of-intent recovery, the validation loop discipline, the post-bootstrap trim pass, and the external / domain-authority handoff classification pattern. The post-bootstrap trim pass earned absorption into <code class="doc-code">control-surface/templates/grounding-note.template.md</code> because the lifecycle gate generalizes beyond the urban-observatory domain. The external-handoff classification was first carried at observation-level — the protocol repo declined to absorb a project-specific guardrail before generalization was earned — and was later promoted to rule-level on the structural-argument branch of the evidence threshold, the pressure following from the architect/operator vs domain-authority role split itself rather than from any one project's local mechanics. That sequence was the first case where the absorption discipline was applied in the moment of its own application, and the first exercise of its structural-argument branch.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/design-system-ASK"><code class="doc-code">design-system-ASK</code></a></strong> is not yet an absorption example in <code class="doc-code">method-ASK</code>. The repo exists and is internally tier-demarcated, and one downstream child project — <code class="doc-code">urban-observatory</code>'s Example-2 prototype — has inherited Tier 1 + Tier 2 in practice (the n=1 child proof, carried at observation-level). If a second child project (a downstream ASK-family instance) inherits Tier 1 + Tier 2 in real use, the inheritance pattern may earn method-altitude absorption. Until then, the tier model is a design-system-internal artifact, not method doctrine. The absorption discipline applies to itself: a freshly-built reference implementation does not retroactively constitute a proven inheritance pattern.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="failure-modes" class="doc-section-title">Failure modes</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong>Over-absorption.</strong> Promoting first sightings into doctrine. The methodology bloats with material that has not earned its surface. Subsequent retraction is harder than refusal.</li>
+<li class="doc-body"><strong>Under-absorption.</strong> Material that has earned promotion stays in scratch or project-local because no one notices the threshold was crossed. The discipline is bidirectional — refusing to absorb is not the same as ignoring evidence.</li>
+<li class="doc-body"><strong>Wrong-surface absorption.</strong> Material lands in the right repo but on the wrong surface within it: project state in a grounding note, workflow rule in a doctrine doc, doctrine in <code class="doc-code">AGENTS.md</code>. Each surface's aging rate is compromised.</li>
+<li class="doc-body"><strong>Premature generalization.</strong> Promoting a project-specific pattern to universal rule before the structural argument is strong enough or the second pressure case has surfaced. The promoted rule then has to be narrowed when the second case disagrees.</li>
+<li class="doc-body"><strong>Stale source-of-intent capture.</strong> Source-of-intent absorbed at one project phase becomes a forward-reference that no longer matches current direction. The absorption was correct at the time and stale now; the discipline includes refreshing or retracting absorbed material when the underlying intent has moved.</li>
+<li class="doc-body"><strong>Event chronology masquerading as durable doctrine.</strong> State-oriented reviewer feedback, session recaps, or post-event narration find their way onto surfaces that should age slowly. The grounding-note layer-classification gate guards specifically against this.</li>
+<li class="doc-body"><strong>Lossy supersession.</strong> A superseding memo that <em>reframes</em> rather than <em>subsumes</em> sheds content silently when it says &quot;supersedes prior versions, discard&quot;: the new frame can be genuinely better and still fail to absorb load-bearing material from the versions it replaces — and the downstream fold then faithfully absorbs the loss, because it is faithful to the final memo, not to the session. The guard: a superseding memo either carries forward or <strong>explicitly retires</strong> each prior live claim, so nothing exits the chain unnoticed; and a recovery pass, when one runs, re-reads the discarded sources directly rather than trusting the recovery memo's own scoping (the recovery can itself be lossy).</li>
+<li class="doc-body"><strong>Repo bloat from article / prose duplication.</strong> Material lifted from the article line into repo prose, or repeated across multiple repo docs because each looked like a plausible home. The repo carries the structural articulation once; the article line carries the reflection at its own pace; cross-references handle the rest.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="self-superseding-clause" class="doc-section-title">Self-superseding clause</h3>
+<div class="doc-prose">
+<p class="doc-body">This doctrine should be superseded by:</p>
+<ul class="doc-list">
+<li class="doc-body">a future <code class="doc-code">docs/layer-classification.md</code> if the layer-classification gate grows beyond what <code class="doc-code">docs/source-of-intent.md</code>'s preflight subsection and this doc's §Layer destinations and §Grounding-note layer-classification gate can carry between them</li>
+<li class="doc-body">a future <code class="doc-code">docs/external-handoff-classification.md</code> if the now-promoted external / domain-authority handoff rule earns its own first-class home on separability grounds — a heavier threshold than the rule-level promotion already made</li>
+<li class="doc-body">a stable promotion taxonomy that earns its own home if multiple downstream projects produce enough absorption-decision cases to justify a more formal taxonomy than this doc's §Evidence thresholds and §Observation-level material</li>
+<li class="doc-body">compression into <code class="doc-code">docs/source-of-intent.md</code> or <code class="doc-code">docs/relative-externality.md</code> if those docs absorb this doctrine's substance as part of their own evolution and the standalone absorption-discipline doc becomes redundant</li>
+</ul>
+<p class="doc-body">The doctrine is not finished. Its evidence threshold and its observation-level treatment are themselves observation-level patterns — they have been pressure-tested by the methodology repo's own operating experience but not by a second methodology system at the same altitude. If a second methodology repo surfaces the same absorption pressure with different conclusions, the discipline may refine. The discipline applies to itself: this doc is not exempt from the absorption discipline it articulates.</p>
+<p class="doc-body">Anchor reading lives in <a href="articles.html"><code class="doc-code">docs/articles.md</code></a>. The articles most directly substrating this doctrine are <em>The Rule the Repo Could Not Contain</em> (meta-to-downstream absorption; ex-repo is not ex-system; externality as a relation; the recursive constraint that the methodology repo embodies the discipline it articulates), <em>The Handoff Is Not the Instruction</em> (the categorical classification of incoming material; well-formed handoffs structurally tend to be read as current direction; the operating rule that only valid source-of-intent and current-stage refinement reshape current work by default), and <em>Lessons from the First Prototype Phase</em> (the structural retrospective; calibrated compensations; the ~50x ceremony reduction; the principle that rules earn promotion, they are not declared).</p>
+</div>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/absorption-discipline.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../absorption-discipline.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="method.html">method</a></li>
+      <li data-surface-nav-current></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="bounded-generativity.html">bounded generativity</a></li>
+      <li><a href="governance.html">governance</a></li>
+      <li><a href="intent-artifacts.html">intent artifacts</a></li>
+      <li><a href="normative-apex.html">normative apex</a></li>
+      <li><a href="portable-definition-layer.html">portable definition layer</a></li>
+      <li><a href="relative-externality.html">relative externality</a></li>
+      <li><a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+      <li><a href="source-of-intent.html">source of intent</a></li>
+      <li><a href="source-of-truth-and-aging-rate.html">source of truth and aging rate</a></li>
+      <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/absorption-discipline.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../absorption-discipline.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>

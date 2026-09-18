@@ -1,0 +1,49 @@
+{
+  "repo": "apexSolarKiss/method-ASK",
+  "branch": "main",
+  "output": "docs/read",
+  "front_door": "docs/diagrams/index.html",
+  "documents": [
+    {"path": "docs/method.md", "label": "method"},
+    {"path": "docs/absorption-discipline.md", "label": "absorption discipline"},
+    {"path": "docs/articles.md", "label": "articles"},
+    {"path": "docs/bounded-generativity.md", "label": "bounded generativity"},
+    {"path": "docs/governance.md", "label": "governance"},
+    {"path": "docs/intent-artifacts.md", "label": "intent artifacts"},
+    {"path": "docs/normative-apex.md", "label": "normative apex"},
+    {"path": "docs/portable-definition-layer.md", "label": "portable definition layer"},
+    {"path": "docs/relative-externality.md", "label": "relative externality"},
+    {"path": "docs/seed-mediated-generated-interface.md", "label": "seed-mediated generated interface"},
+    {"path": "docs/source-of-intent.md", "label": "source of intent"},
+    {"path": "docs/source-of-truth-and-aging-rate.md", "label": "source of truth and aging rate"},
+    {"path": "docs/voice-surface-boundary.md", "label": "voice surface boundary"}
+  ],
+  "records": [
+    {"path": "docs/diagrams/README.md", "label": "diagrams README", "output": "diagrams-README.html"},
+    {"path": "docs/diagrams/_dsa-tokens/MANIFEST.md", "label": "token mirror MANIFEST", "output": "diagrams-dsa-tokens-MANIFEST.html"}
+  ],
+  "redirects": [
+    {"path": "docs/repo-mediated-generated-interface.md", "to": "docs/seed-mediated-generated-interface.md"}
+  ],
+  "source_views": [
+    {"path": "docs/diagrams/method-ASK_topology.source.js", "label": "topology source", "figure": "docs/diagrams/method-ASK_topology.html"},
+    {"path": "docs/diagrams/method-ASK_intent-artifact-ontology.source.js", "label": "intent-artifact ontology source", "figure": "docs/diagrams/method-ASK_intent-artifact-ontology.html"},
+    {"path": "docs/diagrams/method-ASK_activation-lifecycle-comparison.source.js", "label": "activation + lifecycle comparison source", "figure": "docs/diagrams/method-ASK_activation-lifecycle-comparison.html"},
+    {"path": "docs/diagrams/method-ASK_relay-feeding-ingestion.source.js", "label": "relay / feeding / ingestion source", "figure": "docs/diagrams/method-ASK_relay-feeding-ingestion.html"},
+    {"path": "docs/diagrams/method-ASK_relay-graph-ptx-projection.source.js", "label": "adversarial relay graph + PTX projection source", "figure": "docs/diagrams/method-ASK_relay-graph-ptx-projection.html"},
+    {"path": "docs/diagrams/system-ASK-topology-public.source.js", "label": "system-ASK topology source", "figure": "docs/diagrams/system-ASK-topology-public.html"},
+    {"path": "docs/diagrams/method-ASK_bounded-generativity.figure.js", "label": "bounded generativity source", "figure": "docs/diagrams/method-ASK_bounded-generativity.html"},
+    {"path": "docs/diagrams/method-ASK_system-ASK-hero.figure.js", "label": "system-ASK source", "figure": "docs/diagrams/method-ASK_system-ASK-hero.html"},
+    {"path": "docs/diagrams/method-ASK_seed-mediated-generated-interface.figure.js", "label": "seed-mediated generated interface source", "figure": "docs/diagrams/method-ASK_seed-mediated-generated-interface.html"},
+    {"path": "docs/diagrams/method-ASK_seed-mediated-generated-interface-ontology.figure.js", "label": "seed-mediated generated interface — ontology source", "figure": "docs/diagrams/method-ASK_seed-mediated-generated-interface-ontology.html"}
+  ],
+  "carriers": {
+    "owner": "apexSolarKiss/design-system-ASK",
+    "pin": "067691a2fb6ca979cb6a5b0c9ca1d97790134b3f",
+    "files": [
+      {"path": "docs/diagrams/_dsa-surface/surface-document.css", "owner_path": "surface-document.css", "sha256": "fb93081100ee82b7cfaf7f755b744336babf3e587f32d7ec29465760d808b785"},
+      {"path": "docs/diagrams/_dsa-surface/surface-treatments.css", "owner_path": "surface-treatments.css", "sha256": "db2847e23b5f9327ed347a209f46e279cb5deda310d8e6f114f20edece120e0d"},
+      {"path": "docs/diagrams/_dsa-surface/surface-document-overflow.js", "owner_path": "surface-document-overflow.js", "sha256": "e3b953dbb6845ef80217a71504e5f73976eb5ae265f9a813af4ae5ab8100c645"}
+    ]
+  }
+}

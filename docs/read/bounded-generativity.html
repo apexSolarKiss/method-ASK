@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // bounded generativity</title>
+<meta name="description" content="Bounded Generativity // order from chaos, mechanized">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/bounded-generativity.md">
+<meta name="source-sha256" content="e24495c3fda6d6ef85d577d872fee99abbfb79b83925404f0f3a90aa885f0692">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">bounded generativity</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="bounded-generativity--order-from-chaos-mechanized" class="doc-title">Bounded Generativity // order from chaos, mechanized</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>bounded-generativity.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">27485 B &middot;</span> <span class="doc-meta-item">source sha256 e24495c3fda6</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/bounded-generativity.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../bounded-generativity.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">A method primitive: <strong>define a grammar, permit bounded variance inside it, select from the realized candidates, and govern what becomes durable.</strong></p>
+<pre class="doc-pre"><code class="language-text">grammar / brief (aperture set)
+  &gt;&gt; bounded realization process
+       variance-producing spans (nonjudgmental)
+       judgment-bearing spans where present (authorized evaluation + scoped binding)
+    &gt;&gt; selection + closure
+      &gt;&gt; artifact governance
+        &gt;&gt; governed artifact + governance record
+</code></pre>
+<p class="doc-body">This is the mechanized form of the standing ASK ecology tagline — <em>order from chaos // beauty in systems</em>. Order is not the elimination of variance. It is variance <strong>bounded, made legible, and selected from.</strong></p>
+<p class="doc-body"><strong>Stochasticity is neither necessary nor sufficient for bounded generativity.</strong> It may characterize how a realization span produces variance, but it does not classify the span or the topology. Bounded generativity turns on the authored grammar, the function + authorization of the realization spans, selection + closure, and artifact governance. Here, <strong>bounded</strong> names the authored aperture and governance bracket, not bounded probabilistic support.</p>
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#the-primitive--illustrated">The primitive // illustrated</a>
+</li>
+<li class="doc-body"><a href="#classification">Classification</a>
+</li>
+<li class="doc-body"><a href="#the-structure--three-functions-on-the-montesquieu-spine">The structure — three functions on the Montesquieu spine</a>
+</li>
+<li class="doc-body"><a href="#delivery-through-an-external-ai-runtime">Delivery through an external AI runtime</a>
+</li>
+<li class="doc-body"><a href="#relation-to-the-frontier-substrate">Relation to the frontier substrate</a>
+</li>
+<li class="doc-body"><a href="#where-discretion-enters">Where discretion enters</a>
+</li>
+<li class="doc-body"><a href="#variance-signal-and-selection">Variance, signal, and selection</a>
+</li>
+<li class="doc-body"><a href="#the-operative-surface-of-the-realized-work">The operative surface of the realized work</a>
+</li>
+<li class="doc-body"><a href="#nested-realization-fields-and-recursive-delegation">Nested realization fields and recursive delegation</a>
+</li>
+<li class="doc-body"><a href="#worked-instances-identical-structure-increasing-sophistication">Worked instances (identical structure, increasing sophistication)</a>
+</li>
+<li class="doc-body"><a href="#tiering-where-the-primitive-and-its-relations-live">Tiering (where the primitive and its relations live)</a>
+</li>
+<li class="doc-body"><a href="#boundaries">Boundaries</a>
+</li>
+<li class="doc-body"><a href="#anchors">Anchors</a>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="the-primitive--illustrated" class="doc-section-title">The primitive // illustrated</h3>
+<div class="doc-prose">
+<a class="doc-image-link" href="../diagrams/method-ASK_bounded-generativity-dark.png"><img alt="Bounded generativity as a system-model topology. A source-of-intent / normative-apex role sits outside the frame and supplies purpose plus the governing standard. Inside the bounded-generativity bracket, the grammar / brief grants the aperture — the permitted variance — of a bounded realization field (the execution span, 'the middle') where candidate variance is produced and authorized judgment may enter. Selection + closure ratifies one candidate and closes the aperture; artifact governance binds it downstream as a distinct operation; the output, outside the frame, is a governed artifact plus governance record. A Three Functions color key labels the legend — legislative (magenta) marks the source-of-intent role outside the bracket and the grammar / brief inside it — the constitutive source and its delegated apparatus, ranked by that placement; executive (theme-neutral) is the realization chamber; judicial (cyan) is selection + closure — with artifact governance set apart below a divider as a neutral downstream row, not a fourth function. The aperture, its dimension arrow, and the connecting beams stay neutral." src="../diagrams/method-ASK_bounded-generativity-dark.png"></a>
+<p class="doc-body"><em>Illustrative — doctrine is the source of truth, not the diagram.</em> Bounded generativity is a <strong>topology</strong>, not a linear chain: the source-of-intent role, outside the frame, <strong>adopts or authorizes</strong> the governing standard; the grammar / brief carries it into operative scope and <strong>grants</strong> the aperture; realization fills it with candidate variance, authorized judgment may enter within the field and at closure, selection closes, and artifact governance binds the accepted result downstream. <code class="doc-code">asset-pipeline-ASK</code>'s ordered <em>creative-intent → creative-discretion → variance → selection → governance</em> sequence is the <strong>function-order projection</strong> of this model; this figure is the <strong>system-model topology</strong> that projection is true of. Source: <a href="../diagrams/method-ASK_bounded-generativity.html"><code class="doc-code">docs/diagrams/method-ASK_bounded-generativity.html</code></a>. The embedded raster is the dark full-page mirror — topology plus the load-bearing Three Functions legend (repository documentation embeds dark; both themes and a chrome-free diagram-only view remain exportable from the HTML, but are not committed).</p>
+<hr class="doc-rule" />
+</div>
+</section>
+<section class="doc-section">
+<h3 id="classification" class="doc-section-title">Classification</h3>
+<div class="doc-prose">
+<p class="doc-body"><strong>Accepted as method doctrine (a method primitive), 2026-06-06.</strong> Routed from <code class="doc-code">asset-pipeline-ASK</code> as a candidate source-of-intent; classified here per <code class="doc-code">docs/absorption-discipline.md</code>.</p>
+<p class="doc-body">It clears the §Evidence thresholds bar two ways at once:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Multi-instance, not n=1.</strong> The identical structure recurs across <code class="doc-code">isometric-cubes-ASK</code>, <code class="doc-code">mazeASK</code>, <code class="doc-code">asset-pipeline-ASK</code>, and generative-AI workflows generally (§Worked instances). The second-and-beyond instances are exactly what disambiguate project-specific shape from cross-project pattern.</li>
+<li class="doc-body"><strong>Structural argument.</strong> It is the mechanized form of the ecology's own tagline and sits on a known separation-of-powers spine (below). Its recurrence is architectural, not merely plausible — any ASK system that generates-then-selects realizes it.</li>
+</ul>
+<p class="doc-body">So it earns generalization beyond a single project, which is the definition of <code class="doc-code">method-ASK</code> doctrine. It is <strong>not</strong> project-specific observation-level material.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-structure--three-functions-on-the-montesquieu-spine" class="doc-section-title">The structure — three functions on the Montesquieu spine</h3>
+<div class="doc-prose">
+<p class="doc-body">A durable generative system keeps three functions distinguishable, even when one actor occupies several:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Legislative — the source-of-intent role, and the grammar / brief that carries its standard.</strong> The normative layer. The <strong>source-of-intent / normative-apex role is the constitutive legislative source</strong>: it adopts or authorizes the governing standard. The <strong>grammar / brief is delegated legislative apparatus</strong>: it carries that standard into operative scope and sets the aim, the constraints, the references, the output obligation, and <em>how wide to open the aperture</em>. Its grant produces the aperture — the permitted variance, a quantity rather than apparatus. An artifact that carries intent is legislative only where it acts as the grammar, brief, rule, or grant; standing intent, and storage, citation, routing, relay, or preservation of it, perform no legislative function. The role is not the actor: whoever occupies the source-of-intent role is not exhausted by it (<a href="normative-apex.html"><code class="doc-code">docs/normative-apex.md</code></a> §Three Functions bridge).</li>
+<li class="doc-body"><strong>Executive — generation.</strong> Fills the aperture with variance. The variance-producing operation itself is <strong>nonjudgmental</strong> — it does not evaluate against the governing standard and bind. A broader execution process may nonetheless <em>contain</em> judgment-bearing spans: judgment exists wherever an authorized decision-maker — human or computational — evaluates admissible alternatives against the governing standard and binds within scope. Authorization or human presence alone is insufficient, and current model sampling does not qualify.</li>
+<li class="doc-body"><strong>Judicial — selection + closure.</strong> Chooses one realized candidate and closes the aperture, ratifying it under the governing intent / standard.</li>
+</ul>
+<p class="doc-body">Downstream of the three-role spine, artifact governance binds the accepted result; the governance record carries the trace + stated basis, supporting durability, audit + recourse.</p>
+<p class="doc-body">Compact: <strong>the source of intent adopts or authorizes the standard; the brief carries it into operative scope as the grammar and grants the aperture; execution fills the aperture; authorized decision-makers may intervene; selection closes; artifact governance binds the accepted result; the governance record carries the trace + stated basis.</strong> (The legislative/executive/judicial spine here is the <strong>generative-artifact instance</strong> of the general governance architecture in <a href="governance.html"><code class="doc-code">docs/governance.md</code></a>; artifact governance is a downstream function; the governance record is its durable carrier, not another governance function.)</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="delivery-through-an-external-ai-runtime" class="doc-section-title">Delivery through an external AI runtime</h3>
+<div class="doc-prose">
+<p class="doc-body">When a bounded realization process is delivered through a user's own AI runtime rather than a controlled app surface, the brief / source-of-intent package must also carry its <strong>loading path</strong>. The model is unchanged — the brief / grammar grants the aperture, execution fills it, authorized decision-makers bind locally, selection closes, governance binds the accepted artifact. What changes is the <strong>failure surface</strong>: a grammar cannot govern a realization it fails to arrive as, so the seed must carry not only the aperture for the work but the setup instructions that let the user instantiate the interaction in their own AI tool. The loading path is an <strong>instantiation precondition</strong> carried by the delivery package: it may travel with the brief for portability, but it is <strong>not itself the normative grammar of the work</strong> — it governs <em>arrival</em>, while the brief governs <em>validity</em>. That delivery-side case is <a href="seed-mediated-generated-interface.html"><code class="doc-code">docs/seed-mediated-generated-interface.md</code></a>.</p>
+<p class="doc-body">Compact relation: <strong>bounded generativity governs the candidate space; seed-mediated generated interface governs the instantiation path.</strong></p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="relation-to-the-frontier-substrate" class="doc-section-title">Relation to the frontier substrate</h3>
+<div class="doc-prose">
+<p class="doc-body">Bounded generativity does not compete with the frontier model or the provider's generic reliability harness. Those layers are <strong>substrate</strong>: they supply generative capacity, the runtime affordance, and whatever generic scaffolding the provider exposes. In the three-function terms above, the substrate is a supplier to the <strong>executive</strong> (variance-producing) span — it fills apertures; it authors neither the grammar that opens one nor the selection that closes it.</p>
+<p class="doc-body">The bounded-generativity layer is the <strong>domain-specific architecture that bounds it</strong>: the delegated legislative grammar that opens the aperture, the judicial selection that closes it, and the artifact governance that binds. ASK's architecture does not merely <em>sit on</em> the substrate — it <strong>brackets</strong> the substrate's executive span (grammar before, selection + governance after), the same bracket the deterministic layer applies to generative execution internally, now one level out at the vendor boundary. There is a real build-dependency — the architecture is built <em>using</em> the substrate — but that dependency is generic; the differentiating relationship is the <strong>bound</strong>, not the <em>built-on</em>. The substrate supplies <strong>generative capacity</strong>; the bounded layer supplies <strong>domain-specific answerability</strong>. As generative capacity commoditizes across providers, the domain-specific grammar, selection, and governance do not — they are authored per domain, not supplied by the substrate; a better substrate only makes the bounded layer <em>more</em> purely the domain architecture that brackets it.</p>
+<p class="doc-body">This is also why, when the governing architecture is described as <strong>deterministic</strong>, the term belongs to that architecture, not to the output. The output may remain bounded-generative — variance is the payload the aperture exists to admit. The deterministic claim is only that the grammar, aperture, selection, and record are specified and legible enough to <strong>audit and govern</strong>; it is not a claim that the realization is predetermined.</p>
+<p class="doc-body">Compact: <strong>the frontier substrate supplies the generative capacity; the bounded-generativity architecture bounds it — supplying the domain-specific answerability the substrate does not.</strong> (Orthogonal to the instantiation-path concern of <a href="seed-mediated-generated-interface.html"><code class="doc-code">docs/seed-mediated-generated-interface.md</code></a>: that governs how a seed <em>arrives</em>; this governs what makes the bounded layer answerable on whatever substrate it runs.)</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="where-discretion-enters" class="doc-section-title">Where discretion enters</h3>
+<div class="doc-prose">
+<p class="doc-body">Creative discretion — judgment exercised <em>within</em> standards (Dworkin's <strong>weak</strong> discretion, not freedom from standards) — may enter <strong>before, during, or after</strong> realization: in authoring or authorizing the grammar that grants the aperture, in judgment-bearing intervention within the granted realization field, and in selecting from what comes back. What is uniformly non-judgmental is the <strong>variance-producing operation</strong> itself — it fills the aperture; it does not evaluate against the standard and bind.</p>
+<p class="doc-body"><strong>Scope of the Dworkin anchor.</strong> Here, <strong>weak discretion</strong> names judgment exercised within a governing standard. It does not confer finality or unreviewability. Under <a href="governance.html"><code class="doc-code">docs/governance.md</code></a>, application remains verifiable, adjudicable, and revisable, and authorization remains defeasible. The anchor is judgment inside a standard, not immunity from review.</p>
+<p class="doc-body">The distinction that keeps this honest:</p>
+<ul class="doc-list">
+<li class="doc-body">The <strong>aperture</strong> is a <em>quantity</em> — the permitted variance, <strong>granted by the grammar / brief</strong>.</li>
+<li class="doc-body"><strong>Discretion</strong> is an <em>act</em> — authorized judgment that <strong>shapes or authorizes the grammar which grants the aperture</strong>, intervenes within the granted realization field, or closes it through selection. Discretion is <strong>not itself the aperture</strong>: authoring or authorizing the aperture (how wide the grammar opens it) is distinct from discretion exercised <em>within</em> an already-granted aperture.</li>
+</ul>
+<p class="doc-body">Variance is technical; discretion is normative; <strong>selection is the curatorial closure gate — not the whole of authorship.</strong> Authorship may be attributable through source of intent, bounded discretion, judgment-bearing intervention, selection, and closure. Artifact governance constrains and records the accepted work's claim, use, circulation, and answerability; it preserves attribution and recourse but does not itself create authorship.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="variance-signal-and-selection" class="doc-section-title">Variance, signal, and selection</h3>
+<div class="doc-prose">
+<p class="doc-body">Bounded generativity does not eliminate variance; it makes variance usable. A generative process produces a <strong>candidate field</strong> — noise in the broad sense of surplus, accident, unstable pattern, and unclosed possibility. <strong>Source of intent defines what can count as signal</strong> inside that field; intent is not itself the signal, it is the standard by which signal is distinguished. <strong>Bounded judgment</strong> separates signal from noise under the governing standard; <strong>selection</strong> closes the candidate spread; <strong>governance</strong> records what becomes durable. Disorder is not the enemy of the work — it is the material the aperture is opened onto and the judgment closes over.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-operative-surface-of-the-realized-work" class="doc-section-title">The operative surface of the realized work</h3>
+<div class="doc-prose">
+<p class="doc-body">The same source-of-intent and governance topology can recur across artifacts whose effects arise through different surfaces. That does not move authorship into the apparatus or establish a hierarchy of authored standing among realization modes. It changes the <strong>evidence burden</strong> the governing role carries.</p>
+<p class="doc-body"><strong>Realization form is not work-content.</strong> <strong>Work-content</strong> means the properties that, under the governing standard, belong to what the governed work is. It is not restricted to propositional or semantic content, and the non-identity is not a claim of disjointness: realization form may belong to work-content.</p>
+<p class="doc-body">Where the governing standard makes the realized form part of the work-content, the form is among the properties adopted. In a gestural abstraction governed that way, the mark, the material behavior, and the resulting visual field are not packaging around a separately expressible proposition. In discursive work — philosophy, technical writing, research, explanation, and argument — the work-content lies in the propositions, distinctions, inferential structure, evidence, and conclusions, and prose is the realization form through which that content is delivered.</p>
+<p class="doc-body">Contributing to work-content is separate from authoring the governing standard and from holding closure authority. A realization span may contribute to the first without holding either of the others (§Worked instances).</p>
+<p class="doc-body">Realization form may also be <strong>load-bearing without belonging to work-content</strong>. It can preserve or corrupt scope, precision, implication, tone, persuasive force, credibility, and whether an intended audience engages the work at all. Perceived signals about fabrication, care, or governance may redirect an audience from the work to its apparent production and cause a real delivery failure even where the inference about provenance, authorship, effort, or truth is wrong. <strong>Credibility-mediated delivery is a durable concern; the signals that trigger suspicion, the audiences that react to them, and the reception environments in which they operate are time-indexed and may change as toolchains and conventions change.</strong> Audience response is performance evidence, not fabrication-provenance evidence or an authorship verdict. A form becoming essential to faithful and credible delivery does not thereby become identical with the content it delivers.</p>
+<p class="doc-body">Whether the realized form is <strong>operative</strong> is a further question. Under an existing legal, institutional, or computational arrangement, a duly formed contract, an enacted statute, executable code, or a performative utterance made under the relevant conditions may create obligations, alter institutional states, or produce behavior. The representation does not confer its own authority; its form matters because the applicable arrangement gives that form operative effect.</p>
+<p class="doc-body"><strong>Manual realization is not a condition of authorship; abstract approval is not sufficient either.</strong> The governing role obtains evidence adequate to the properties it adopts and answers for — directly, or through delegates whose grants assign that work (<a href="governance.html"><code class="doc-code">docs/governance.md</code></a>) — then selects, revises, rejects, or accepts accordingly and remains answerable for the result. Where form belongs to work-content, the realized form is among those properties. Where form delivers work-content, the governing role remains answerable for the form's fidelity and its fit to the intended audience under the governing standard; actual reception remains performance evidence rather than a guaranteed outcome.</p>
+<p class="doc-body">Reading, execution, testing, source checking, expert judgment, and audience observation may each supply evidence. The operative surface exposes which properties require it; the property being adopted determines the appropriate evidence channel. Medium and performer identity may matter, but neither establishes adequacy by itself.</p>
+<p class="doc-body">Compact: <strong>the topology is shared; the operative properties and evidence burden are not.</strong></p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="nested-realization-fields-and-recursive-delegation" class="doc-section-title">Nested realization fields and recursive delegation</h3>
+<div class="doc-prose">
+<p class="doc-body">The bounded realization field composes with itself. A parent executor operating inside one bracket may open a nested bracket of its own: it derives a sub-brief from its grant — a local legislative act performed under delegated authority, not a new apex — a subagent fills the nested aperture, and the parent verifies and selects from what returns. The outer bracket's selection and governance then apply to the integrated result.</p>
+<pre class="doc-pre"><code class="language-text">OUTER BRACKET    apex-authorized grammar / brief
+                   &gt;&gt; parent + subagents bounded realization field
+                     &gt;&gt; apex-governed selection + closure
+
+NESTED BRACKET   parent's derived sub-brief
+                   &gt;&gt; subagent realization
+                     &gt;&gt; parent verification / selection / integration
+</code></pre>
+<p class="doc-body">Three invariants:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Nesting creates brackets, not apexes.</strong> The sub-brief is derivative — authored under, and bounded by, the outer grammar. However deep the recursion, the normative apex does not multiply; delegation depth is execution structure, not source-role height (<a href="normative-apex.html"><code class="doc-code">docs/normative-apex.md</code></a> §Delegation does not propagate the apex).</li>
+<li class="doc-body"><strong>Identity is orthogonal to function.</strong> A span is variance-producing or judgment-bearing by what it is authorized to do, never by who or what performs it. A human span may produce unjudged candidates; a computational span may hold a scoped grant to bind. A subagent may be variance-producing, judgment-bearing, or both — its grant decides, not the kind of actor performing it.</li>
+<li class="doc-body"><strong>Evaluation without a grant is still candidate production.</strong> A subagent that reasons, compares, critiques, and concludes has produced a candidate conclusion. It becomes judgment only under the criterion §The structure already states: an authorized decision-maker evaluating admissible alternatives against the governing standard and binding within scope — one criterion, not a second one keyed on different words.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="worked-instances-identical-structure-increasing-sophistication" class="doc-section-title">Worked instances (identical structure, increasing sophistication)</h3>
+<div class="doc-prose">
+<p class="doc-body">These are <strong>ASK-system worked examples and antecedent studies, not dependencies</strong> — cite them as worked examples, never as imports (this protects each project's aesthetic-agnostic posture).</p>
+<ul class="doc-list">
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/isometric-cubes-ASK"><code class="doc-code">isometric-cubes-ASK</code></a></strong> — geometric constrained randomness: grid + weighted palette + size range as grammar; fully-random or mouse-radius-bounded variance; save-on-click as selection. The earliest, smallest form.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/mazeASK"><code class="doc-code">mazeASK</code></a></strong> — algorithmic bias under shared topology: same grid, same constraints, different rules; the rule that chooses the next connection introduces bias; even one algorithm never repeats a run. Topology = possible structure; carved links = chosen connectivity; rendering = derived output.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">asset-pipeline-ASK</code></a></strong> — commercial asset production: intent + constraints + references (grammar) → AI candidate variance → curation (selection + closure) → artifact governance → governed asset + governance record. The full topology, with governance first-class.</li>
+<li class="doc-body"><strong><a href="https://a-s-k.studio/studioleov/">studioLeoV</a></strong> — collaborative expressive image-making under ASK-authored conditions: ASK supplies the substrate, the conditions for making, the body-of-work frame (continuity, collection, presentation, curation), and selection + closure; LeoV's live expressive judgment fills the realization span through drawing. The bounded-generativity structure lies in the authored aperture and governed closure, not in instructions for each mark. The instance shows that source of intent and expressive execution can be distinct roles while the middle remains fully judgment-bearing.</li>
+<li class="doc-body"><strong>ASK advisory / extended-cognition workflows</strong> — ASK opens an aperture for cognition by posing a question, a source-of-intent frame, or a candidate fold. AI advisors, external readers, source texts, domain evidence, and critique loops supply candidate distinctions, objections, formulations, and evidence — <strong>some of that middle span is stochastic, some model-generated, and some judgment-bearing human contribution</strong> (an external reader's objection, a delegated read). ASK selects, rejects, revises, or closes what becomes durable in a master note, repo doc, tracker, article, or closure memo. The middle span supplies real value <strong>without owning admission into the standard</strong>: the bounded-generativity structure lies in the authored aperture and the governed closure — the source of intent sets the grammar and remains answerable for what it admits. As with studioLeoV, the middle can be expressive, intelligent, and valuable while still being neither the source of intent nor the closure authority: the primitive governs a <em>cognition</em> loop, not only artifact production.</li>
+<li class="doc-body"><strong>Executor→subagent delegation</strong> — the mundane, primary instance running throughout ASK program work: a parent executor under an operator-authorized brief derives bounded sub-briefs and dispatches research, comparison, critique, or verification tasks to computational subagents; the subagents fill their nested apertures; the parent verifies findings — rejecting false ones — and integrates only what survives; the operator retains authorization and closure. Every such dispatch is a nested bounded-generativity bracket (§Nested realization fields and recursive delegation). The scoped-binding contrast case is an <a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">asset-pipeline-ASK</code></a> approval agent authorized to evaluate images against an inherited brief and bind approval within a named scope: a judgment-bearing span where the ordinary research subagent is a variance-producing one. Same field, different grants — and neither grant makes either agent the source of intent.</li>
+<li class="doc-body"><strong>Generative-AI workflows generally</strong> — seed, sampler, guidance, temperature, top-p and related controls modulate the candidate spread. The normative brief sets the aperture; the model fills it. The variance is technical; the discretion is normative; selection is the closure gate, not the whole of authorship.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="tiering-where-the-primitive-and-its-relations-live" class="doc-section-title">Tiering (where the primitive and its relations live)</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/method-ASK/blob/main/README.md"><code class="doc-code">method-ASK</code></a></strong> owns the primitive definition — this doc — and its method-altitude structural relations, including worked-example explanations of how concrete ASK systems instantiate the topology. <code class="doc-code">system-ASK</code> itself is one such instance at the practice level (<a href="https://github.com/apexSolarKiss/method-ASK/blob/main/examples/system-ASK-bounded-generativity.md"><code class="doc-code">examples/system-ASK-bounded-generativity.md</code></a>): the relation chain <code class="doc-code">order from chaos &gt;&gt; bounded generativity &gt;&gt; selection + closure &gt;&gt; artifact governance &gt;&gt; governed artifact + governance record</code> recurs across <code class="doc-code">isometric-cubes-ASK</code>, <code class="doc-code">mazeASK</code>, <code class="doc-code">asset-pipeline-ASK</code>, and generative-AI workflows, and across the practice as a whole. A relation among surfaces, not an implementation detail.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">control-surface</code></a></strong> owns the execution protocols that operationalize the method across sessions and surfaces — routing, handoffs, critique, review, instantiation, relay, and closure. It does not own the cross-surface structural relation.</li>
+<li class="doc-body"><strong>Project repos</strong> (<code class="doc-code">asset-pipeline-ASK</code> first) may reference or instantiate the primitive at doctrine altitude — not as schema or proof-test. A project-owned diagram may illustrate its domain instance while remaining doctrine-subordinate; it does not become the primitive's source of truth. Conformance across instances is by shared <strong>topology, semantic-role mapping</strong> (legislative / executive / judicial), <strong>Three Functions treatment</strong>, and <strong>governance boundary</strong> — not pixel-identical geometry; a project figure may adapt geometry, local labels, and rendered assets to its own surface.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="boundaries" class="doc-section-title">Boundaries</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong>Method-level, not project-specific.</strong> Bounded generativity is the general pattern; <code class="doc-code">asset-pipeline-ASK</code> is one instance with governance fully built out.</li>
+<li class="doc-body"><strong>This defines the primitive; it authorizes nothing operational.</strong> The canonical diagram (<a href="../diagrams/method-ASK_bounded-generativity.html"><code class="doc-code">docs/diagrams/method-ASK_bounded-generativity.html</code></a> + PNG mirror) is an <strong>illustrative rendering of this doctrine</strong> — doctrine-subordinate, and it authorizes no project schema migration, no client doctrine, no proof-test, and no implementation. Project repos may reference or instantiate the primitive at doctrine altitude.</li>
+<li class="doc-body"><strong>Source of intent, in these implementations, is human/institutional.</strong> In the worked implementations documented here, source of intent, decision ownership, and ultimate recourse remain human/institutional. A computational agent may exercise bounded delegated judgment without thereby becoming the source of intent or owning ultimate recourse. The model fills the aperture; it does not author the intent that opened it.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="anchors" class="doc-section-title">Anchors</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body">Public reflective articulation: <a href="https://atomicspacekitten.substack.com/p/creative-discretion-is-not-creative"><em>Creative Discretion Is Not Creative Intent</em></a> — intent &gt;&gt; discretion &gt;&gt; variance &gt;&gt; selection + closure &gt;&gt; artifact governance.</li>
+<li class="doc-body">Method-reflection companion: <a href="https://atomicspacekitten.substack.com/p/the-method-learns-from-exteriority"><em>The Method Learns from Exteriority</em></a> (method-series) — the leave-and-return that surfaced the intent ↔ discretion relation this primitive formalizes.</li>
+<li class="doc-body">Discretion grounding: Dworkin, <em>Taking Rights Seriously</em> (weak vs strong discretion); the Montesquieu separation-of-powers spine.</li>
+<li class="doc-body">Lineage studies: <a href="https://github.com/apexSolarKiss/isometric-cubes-ASK"><code class="doc-code">isometric-cubes-ASK</code></a>, <a href="https://github.com/apexSolarKiss/mazeASK"><code class="doc-code">mazeASK</code></a>.</li>
+<li class="doc-body">Inbound routing record: <code class="doc-code">2026-06-06_asset-pipeline-ASK_to_method-ASK_bounded-generativity-primitive.md</code> — retained in the ecology operator surface's intent inbox; resolve its current physical path through <code class="doc-code">ecology-ASK-EXTERNAL/_INDEX-ecology-ASK.md</code> (ingested 2026-06-06).</li>
+</ul>
+</div>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/bounded-generativity.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../bounded-generativity.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="method.html">method</a></li>
+      <li><a href="absorption-discipline.html">absorption discipline</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li data-surface-nav-current></li>
+      <li><a href="governance.html">governance</a></li>
+      <li><a href="intent-artifacts.html">intent artifacts</a></li>
+      <li><a href="normative-apex.html">normative apex</a></li>
+      <li><a href="portable-definition-layer.html">portable definition layer</a></li>
+      <li><a href="relative-externality.html">relative externality</a></li>
+      <li><a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+      <li><a href="source-of-intent.html">source of intent</a></li>
+      <li><a href="source-of-truth-and-aging-rate.html">source of truth and aging rate</a></li>
+      <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/bounded-generativity.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../bounded-generativity.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>
