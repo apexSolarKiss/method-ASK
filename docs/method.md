@@ -63,6 +63,16 @@ Pressure-test the words you are using before committing them to schema or to arc
 
 In asset-pipeline-ASK, the architecture-vocabulary-pass-v1 was this discipline in operation: five carrier-and-discretion distinctions (runtime curation vs upstream setup; prose vs structural representation; visual inputs vs prose fallback; scoped mode-independence; approximate layer count vs load-bearing inheritance) were surfaced before they could harden into structure, while there was still room to refine them.
 
+### Articulated concepts as reasoning resources
+
+Ontology and vocabulary work do more than describe a system to its readers. When a maintained articulation is brought into the work and used to recognize a situation, distinguish alternatives, or guide a correction, it also functions as a reasoning resource in the system's operation. A concise term can then stand for a fuller account — its meaning, contrasts, conditions of application, and consequences for inquiry or action — so participants can coordinate attention without reconstructing the distinction at every use. The resource is the articulated distinction and its relations, not the label; a definition in an unread document performs no such function merely by existing.
+
+The proof-chain gravity well guard below illustrates the relation. Naming the possible failure refers back to a mechanism and a discriminator: does another assurance cycle reduce decision-relevant uncertainty or meet a real gate, or does it mainly service the preceding cycle's own output? Applying the concept still requires examining the current work, including the case in which another check is warranted. The name neither proves the diagnosis nor licenses abandoning a necessary gate.
+
+Where the declared system includes a human operator, the operator's recognition and invocation of a concept belong to the system's operation; the contribution is not disqualified because no single component supplied it unaided. Prevention, unprompted detection, and operator-cued recovery nevertheless remain different capabilities, and this functional account neither redistributes authority nor makes differently situated participants epistemically independent.
+
+Meaning, applicability, and authority remain separate questions. What a concept says does not establish that the present case fits it, and a fitting diagnosis does not by itself authorize a response. Stale or conflicting definitions, inaccessible context, misclassification, and confirmation-seeking can all defeat the intended use. This extends ontology development and vocabulary discipline; it adds no primitive, artifact class, or compulsory procedure. Any claimed capability gain must name the system boundary, task, and outcome actually assessed: repeating a term correctly is not an outcome measure, and a system's agreement with its own doctrine validates neither the doctrine nor its application.
+
 ### Architecture-attempt-before-prototype
 
 Try to model the architecture against a concrete example before building anything. The failure mode this prevents: the prototype becomes the architecture by default, because the prototype is what got built and the architecture was never articulated.
