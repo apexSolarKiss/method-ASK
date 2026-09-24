@@ -8,7 +8,7 @@ The methodology repo embodies the discipline it articulates. `AGENTS.md` carries
 
 Absorption is the promotion of material from one surface to another because it has earned a more durable or more general home.
 
-Surfaces in this method have different aging rates and different audiences. State ages fast and lives in the repo. Rules age slowly and live in `AGENTS.md`. Context ages slowly and lives in the grounding note. Per-conversation tracking is ephemeral and lives in operator-side memory. Reflection moves at its own pace and lives in external writing. Method articulation lives in [`method-ASK`](../README.md); execution protocol lives in [`control-surface`](https://github.com/apexSolarKiss/control-surface).
+Surfaces in this method have different aging rates and different audiences. State ages fast and lives in the repo. Rules age slowly and live in `AGENTS.md`. Context ages slowly and lives in the grounding note. Per-conversation tracking is ephemeral and lives in current task context, not private agent memory. Reflection moves at its own pace and lives in external writing. Method articulation lives in [`method-ASK`](../README.md); execution protocol lives in [`control-surface`](https://github.com/apexSolarKiss/control-surface).
 
 Absorption moves material from its current surface to the appropriate one when the material has earned that move. The doctrine governs both the move and the refusal to make it.
 
