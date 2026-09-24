@@ -46,7 +46,7 @@ These failure modes share a structural cause: authority assignment by content ur
 
 Specifically:
 
-- Source of intent is operator-owned. The method can elaborate purpose endlessly but cannot originate it. The grounding note is the surface that carries operator-validated source of intent.
+- Source of intent is operator-owned. The method can elaborate purpose endlessly and propose new purposes or governing standards, but it cannot authorize those proposals merely by generating or executing them. The grounding note is the surface that carries operator-validated source of intent.
 - Recovery and validation precede repo encoding. The repo is not the first artifact; recovered intent is. The repo encodes the structure that validated intent earned.
 - The source-of-intent guard prevents unresolved means from becoming unresolved purpose. Most apparent purpose-level gaps are actually architectural-means questions that should be answered method-side, not routed back to the operator.
 - The grounding-note refresh preflight classifies candidate content before it enters the grounding note. State / event records route to scratch; slow source-of-intent routes to the grounding note; repo-local public-safe truth routes to the repo; future roadmap is held; advisor scratch waits for validation; premature implementation architecture is held.
