@@ -1,8 +1,20 @@
 # Governance
 
+Governance means the arrangements that establish who may decide what, under which authority and limits, how decisions and actions are checked, challenged, or corrected, and who remains answerable for the outcome.
+
 This doctrine governs **governance architecture**: the arrangement by which a normative source is constituted or recognized, decision rights are allocated and constrained, action is executed and verified, and both rules and their applications remain revisable, adjudicable, and answerable. It may **operationalize** a pre-existing source of intent or help **constitute** a collective one. **Procedure alone does not confer legitimacy on arbitrary intent.**
 
 Governance is articulated separately from the [normative apex](normative-apex.md) — and beside it, not inside it — because it has its own decomposition, its own consumer scope, and its own domain implementations. The two are jointly necessary in consequential, delegated, or collective systems.
+
+## A governed system in practice
+
+A governed system is a defined activity together with the people, roles, tools, rules, and decision paths organized under that arrangement. It need not be a government or a single software application: a publication workflow can be a governed system, and so can a production pipeline or an AI-assisted project.
+
+Consider a team commissioned to produce a report. Its governing arrangement identifies who may adopt the report's purpose and publication standard, who may research or draft it, what review is required, and who may approve publication. During the work, a researcher may find a better framing for the brief. That improvement is a proposal; it does not replace the approved brief until the role entitled to change it adopts the change. Likewise, a reviewer may advise or may hold a binding decision right, depending on the grant. When errors or disputes arise, they go to the person or process authorized to resolve them, with a route to correction and someone answerable for the result. The design problem is keeping those decision rights distinct as the work is interpreted, divided, delegated, or revised.
+
+The source of intent is the role authorized to adopt the purpose and governing standard. Governance is the arrangement that establishes and limits those decision rights and provides the checks, review, and recourse through which they operate. One person may occupy several roles; the functions remain distinct. Governments and corporate boards are examples of governance, not prerequisites for it.
+
+Governing does not mean determining every action. A rule can require approval without the software actually preventing an unapproved release. Enforcement makes particular requirements effective; verification supplies evidence about whether they were met. Calling a workflow governed proves neither that its rules are legitimate nor that its participants or tools comply with them.
 
 ## The altitude split
 
