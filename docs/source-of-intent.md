@@ -2,7 +2,7 @@
 
 This doctrine governs how the method handles purpose: where it originates, how it enters the system, how it is preserved across surfaces, how it is distinguished from look-alikes, and what discipline keeps the operator from being asked to reauthorize what is already settled.
 
-Source-of-intent is the axiom the recursion cannot supply. The system can elaborate purpose endlessly, but it cannot originate it. The operator's intent — recorded or carried in the grounding note, validated through the loop, recovered when inception was messy — is what the method's recursion stands on. This doc names the disciplines that keep that intent intact.
+Source-of-intent is the axiom the recursion cannot supply. The execution layers can elaborate purpose endlessly and propose new purposes or governing standards, but they cannot authorize those proposals merely by generating or executing them. The operator's intent — recorded or carried in the grounding note, validated through the loop, recovered when inception was messy — is what the method's recursion stands on. This doc names the disciplines that keep that intent intact.
 
 This doctrine governs the **operational** face of source of intent — how purpose is recovered, validated, preserved, and routed across surfaces. The **structural** face — what a source of intent *is* (the locatable governing role; intent · authority · recourse) — is governed by [`docs/normative-apex.md`](normative-apex.md); the governance architecture that operationalizes or constitutes a source lives in [`docs/governance.md`](governance.md).
 
