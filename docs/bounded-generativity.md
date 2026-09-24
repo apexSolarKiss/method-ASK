@@ -76,6 +76,16 @@ The distinction that keeps this honest:
 
 Variance is technical; discretion is normative; **selection is the curatorial closure gate — not the whole of authorship.** Authorship may be attributable through source of intent, bounded discretion, judgment-bearing intervention, selection, and closure. Artifact governance constrains and records the accepted work's claim, use, circulation, and answerability; it preserves attribution and recourse but does not itself create authorship.
 
+### Selection under a standard and revision of the standard
+
+The timing of judgment does not determine its authority. Selecting a candidate under an existing governing standard and revising that standard are different acts, even when one person performs both. A generated result may give the source of intent a reason to revise the purpose or acceptance criteria; producing the result does not authorize that revision. The authority relation is owned by [`docs/normative-apex.md`](normative-apex.md).
+
+In a self-directed artwork, the artist may hold both roles. An anomalous result can lead the artist to revise the creative intention and adopt the result for that revised work. In delegated work, permission to exercise creative discretion or select a result does not, by itself, include permission to change the governing intention. A delegate may propose a revision; making it operative requires authority covering that change. A grant may include bounded revision powers, but those powers remain limited by the grant and any governing constraints outside it.
+
+Unexpectedness alone establishes neither nonconformance nor a need to revise. A brief may already admit exploratory departures. Where accepting the result instead requires changing what the work answers to, that change must remain attributable as a revision, not be represented as selection under an unchanged standard.
+
+Revision after generation does not establish conformance with the earlier instruction, supply missing evidence, or erase the consequences of earlier acts. The same artist may revise and select in one practical decision; the distinction does not require separate people, an additional approval screen, or a formal record for every artistic choice. Where later action or interpretation depends on the change, preserve which standard governed which acceptance and use.
+
 ## Variance, signal, and selection
 
 Bounded generativity does not eliminate variance; it makes variance usable. A generative process produces a **candidate field** — noise in the broad sense of surplus, accident, unstable pattern, and unclosed possibility. **Source of intent defines what can count as signal** inside that field; intent is not itself the signal, it is the standard by which signal is distinguished. **Bounded judgment** separates signal from noise under the governing standard; **selection** closes the candidate spread; **governance** records what becomes durable. Disorder is not the enemy of the work — it is the material the aperture is opened onto and the judgment closes over.
