@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // relative externality</title>
+<meta name="description" content="Relative Externality">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/relative-externality.md">
+<meta name="source-sha256" content="181e829138dea67921abbb82ff2159b49c0af936fc04d79e77ec811862d5589e">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">relative externality</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="relative-externality" class="doc-title">Relative Externality</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>relative-externality.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">23545 B &middot;</span> <span class="doc-meta-item">source sha256 181e829138de</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/relative-externality.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../relative-externality.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">This doctrine governs how the method treats the relation between surfaces. Externality is not a property of a file, repo, or grounding note; it is a relation between two surfaces. The same artifact is external to one surface and internal to another at the same time, and authority flows in a specific direction across each boundary. This doc names the relation, the direction, and the operational rules that follow.</p>
+<p class="doc-body"><code class="doc-code">method-ASK_grounding-note.md</code> v2 names relative externality as a foundational premise. <code class="doc-code">docs/source-of-truth-and-aging-rate.md</code> carries the surface authority and aging-rate substrate. <code class="doc-code">docs/absorption-discipline.md</code> carries the movement-between-surfaces routing. This doc carries the relation itself: which surface is external to which, in which direction, with what consequence.</p>
+<p class="doc-body"><code class="doc-code">Recursive method ecology</code> is the portable category this doctrine supports: a topology of surfaces governed by relative externality. <code class="doc-code">ecology-ASK</code> is the ASK-specific, operator-side instance / altitude of that category. This document owns the portable relation doctrine; <code class="doc-code">recursive method ecology</code> is its category name and <code class="doc-code">ecology-ASK</code> is one application of it inside the ASK system — neither is a separate doctrine.</p>
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#definition">Definition</a>
+</li>
+<li class="doc-body"><a href="#two-axis-model">Two-axis model</a>
+</li>
+<li class="doc-body"><a href="#relative-externality-map">Relative-externality map</a>
+</li>
+<li class="doc-body"><a href="#recursive-discipline-non-recursive-authority">Recursive discipline, non-recursive authority</a>
+</li>
+<li class="doc-body"><a href="#boundary-with-source-of-truth-and-aging-rate">Boundary with source of truth and aging rate</a>
+</li>
+<li class="doc-body"><a href="#boundary-with-absorption-discipline">Boundary with absorption discipline</a>
+</li>
+<li class="doc-body"><a href="#boundary-with-intent-artifacts">Boundary with intent artifacts</a>
+</li>
+<li class="doc-body"><a href="#boundary-with-source-of-intent">Boundary with source of intent</a>
+</li>
+<li class="doc-body"><a href="#worked-pressure-surfaces">Worked pressure surfaces</a>
+</li>
+<li class="doc-body"><a href="#failure-modes">Failure modes</a>
+</li>
+<li class="doc-body"><a href="#practical-rule">Practical rule</a>
+</li>
+<li class="doc-body"><a href="#self-superseding-clause">Self-superseding clause</a>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="definition" class="doc-section-title">Definition</h3>
+<div class="doc-prose">
+<p class="doc-body">Externality is <strong>relative to a surface.</strong></p>
+<p class="doc-body">A file, repo, grounding note, article, prompt, or memory surface can be external to one surface and internal to another at the same time. The question is never <em>is X external?</em> The question is always <em>external to what?</em></p>
+<p class="doc-body">Three formulations the method uses:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Ex-repo is not ex-system.</strong> A grounding note lives outside the repo by surface boundary, but inside the system the repo participates in. The repo can read it; the method depends on it; the system reaches it.</li>
+<li class="doc-body"><strong>Outside the repo can still be inside the method system.</strong> Articles, operator memory, scratch, and grounding notes are all outside repos and all inside the method system. They are not stray context — they are layered context the method routes through.</li>
+<li class="doc-body"><strong>Inside one layer can be outside another.</strong> <a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">control-surface</code></a> is internal to the ASK family meta-architecture but external to each downstream project repo. The same artifact has different externality postures depending on which surface you stand on.</li>
+</ul>
+<p class="doc-body">There is no absolute externality. Every claim about externality has to name both surfaces.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="two-axis-model" class="doc-section-title">Two-axis model</h3>
+<div class="doc-prose">
+<p class="doc-body">Relative externality has two axes that have to be tracked separately:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Surface boundary</strong> — where the artifact physically or operationally lives. Inside the repo, outside the repo, inside this folder, in operator-side scratch, in a separate repo, in a chat thread, in published external writing.</li>
+<li class="doc-body"><strong>Normative direction</strong> — where authority flows. Upstream (the surface is authoritative for downstream surfaces; downstream conforms), downstream (the surface receives authority from upstream; the surface conforms), or reflective (the surface comments on adjacent surfaces without being upstream or downstream of them).</li>
+</ul>
+<p class="doc-body">The two axes do not align by default. A surface can be outside the repo <em>and</em> upstream of it (grounding notes). A surface can be inside the repo <em>and</em> downstream of an external source (an inheriting child project's files relative to an upstream design system referenced from outside). A surface can be outside everything <em>and</em> upstream of nothing (operator memory, by design).</p>
+<p class="doc-body">Examples illustrating both axes:</p>
+<ul class="doc-list">
+<li class="doc-body">A grounding note is outside the repo by surface boundary, but upstream to the repo by normative direction.</li>
+<li class="doc-body"><a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">control-surface</code></a> is outside downstream project repos by surface boundary, but upstream to them by normative direction (templates, prompts, instantiation workflow flow down).</li>
+<li class="doc-body"><a href="https://github.com/apexSolarKiss/method-ASK/blob/main/README.md"><code class="doc-code">method-ASK</code></a> is outside <code class="doc-code">control-surface</code> by surface boundary, but upstream to it by normative direction (methodology articulates the rules execution-protocol operationalizes).</li>
+<li class="doc-body">Articles are outside repos by surface boundary; reflective by normative direction (they comment on the method without being authoritative for current repo state, but can become substrate for later doctrine).</li>
+<li class="doc-body">Operator memory is outside repos and outside grounding notes by surface boundary, and not upstream or downstream of either by normative direction; it is ephemeral session-local — neither repo truth nor source-of-intent.</li>
+<li class="doc-body"><a href="https://github.com/apexSolarKiss/design-system-ASK"><code class="doc-code">design-system-ASK</code></a> is outside <a href="https://github.com/apexSolarKiss/urban-observatory"><code class="doc-code">urban-observatory</code></a> by surface boundary, and upstream to it by normative direction for visual inheritance (Tier 1 + Tier 2 flow down; ASK's own Tier 3 does not — UO resolves its own Tier 3 locally by brand-distance).</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="relative-externality-map" class="doc-section-title">Relative-externality map</h3>
+<div class="doc-prose">
+<p class="doc-body">The current ASK topology, textual:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Operator source-of-intent</strong> — axiom outside the recursion. Upstream-external to every surface; not a surface itself, but a substrate the method depends on. Per <code class="doc-code">docs/source-of-intent.md</code>, recovery and validation precede repo encoding because source-of-intent is not authored by the method.</li>
+<li class="doc-body"><strong>Grounding notes</strong> — external to repos by surface boundary; upstream to repos by normative direction. Carry slow-aging source-of-intent, durable role boundaries, and external context. Each repo (downstream project, method, design-system) has its own grounding note; each is upstream-external to its respective repo.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/method-ASK/blob/main/README.md"><code class="doc-code">method-ASK</code></a></strong> — upstream-external to <code class="doc-code">control-surface</code>. Methodology articulates the rules; execution-protocol operationalizes them. Doctrine moves from method to execution-protocol, not the other way.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">control-surface</code></a></strong> — downstream-internal to <code class="doc-code">method-ASK</code>; upstream-external to downstream project repos. Templates, prompts, project-instantiation workflow flow down. Each downstream repo inherits from control-surface; control-surface does not inherit from individual downstream repos (though it absorbs cross-project patterns when they earn promotion per absorption discipline).</li>
+<li class="doc-body"><strong>Downstream project repos</strong> — downstream-internal to <code class="doc-code">control-surface</code>; each is external to the others. <a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">asset-pipeline-ASK</code></a>, <a href="https://github.com/apexSolarKiss/urban-observatory"><code class="doc-code">urban-observatory</code></a>, <a href="https://github.com/apexSolarKiss/mazeASK"><code class="doc-code">mazeASK</code></a>, and similar — peers by surface boundary; not normatively related to each other in either direction.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/design-system-ASK"><code class="doc-code">design-system-ASK</code></a></strong> — peer to other repos by surface boundary; upstream-external to downstream surfaces that inherit visual language. Tier 1 (foundation) and Tier 2 (ASK design language) flow downstream by reference; ASK's own Tier 3 (instance identity) does not flow wholesale — each consuming surface resolves its own Tier 3 locally by source-of-intent + brand-distance.</li>
+<li class="doc-body"><strong>Canonical inheritable identity layer</strong> — external to repos by surface boundary; upstream to ASK-family surfaces for brand architecture, visual identity, voice/style, the tier model, and naming/structure conventions. Consumed by reference through <code class="doc-code">personal-ASK/inheritable/</code>; private context outside that grant is unreachable to a surface actually confined to an enforced path-scoped grant.</li>
+<li class="doc-body"><strong>Articles</strong> — external to all repos by surface boundary; reflective by normative direction. Move at their own pace. Can be substrate for later doctrine when pressure earns promotion; not authoritative for current repo state.</li>
+<li class="doc-body"><strong>Scratch / event records</strong> — operator-side; external to all repos by surface boundary; not upstream or downstream of any repo. Fast-aging by design. Carries event chronology and working memory; never the absorption target for slow surfaces.</li>
+<li class="doc-body"><strong>Operator memory</strong> — external to repos and grounding notes; ephemeral session-local. Not repo truth, not source-of-intent. Operator-only.</li>
+</ul>
+<p class="doc-body">The map is many-to-many. A single artifact (e.g., a grounding note) has externality postures vis-à-vis every other surface, not just one. Reading the map requires naming both surfaces in the relation.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="recursive-discipline-non-recursive-authority" class="doc-section-title">Recursive discipline, non-recursive authority</h3>
+<div class="doc-prose">
+<p class="doc-body">A surface can be governed by a discipline it helps execute, but it does not govern itself. The recursion is in discipline, not in authority.</p>
+<p class="doc-body"><a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">control-surface</code></a> encodes execution protocol that an execution surface consumes and applies during repo work. The protocol can itself be revised through the same scoped-review discipline it imposes on work, but authority for that revision does not come from the execution-protocol surface itself. Method-level doctrine governs how protocol patterns are interpreted, held, promoted, or rejected.</p>
+<p class="doc-body">This refines the same principle as internal location does not confer authority: executing a rule does not confer authority to revise that rule.</p>
+<p class="doc-body">The practical rule: when a rule changes, identify the surface that has authority to change it. A surface executing a rule is not automatically the surface authorized to revise that rule.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="boundary-with-source-of-truth-and-aging-rate" class="doc-section-title">Boundary with source of truth and aging rate</h3>
+<div class="doc-prose">
+<p class="doc-body"><code class="doc-code">docs/source-of-truth-and-aging-rate.md</code> carries the doctrine on surface authority and aging cadence. This doc references it as the upstream concept for authority assignment.</p>
+<p class="doc-body">The composition:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Relative externality identifies the relation.</strong> <em>X is external to Y, in direction D.</em></li>
+<li class="doc-body"><strong>Source-of-truth identifies authority.</strong> <em>For claim class C, surface S is authoritative.</em></li>
+<li class="doc-body"><strong>Aging rate identifies cadence.</strong> <em>Claims of type T age at rate R; the surface that owns them must be sized to that rate.</em></li>
+</ul>
+<p class="doc-body">A surface can be <strong>external but authoritative.</strong> A grounding note is external to the repo by surface boundary, but authoritative for source-of-intent claims about the project. The repo defers to the grounding note on those claims even though the grounding note lives outside it.</p>
+<p class="doc-body">A surface can be <strong>internal but non-authoritative for a given claim.</strong> A repo's own <code class="doc-code">examples/</code> folder is internal by surface boundary, but not authoritative for the doctrine the example illustrates — that authority belongs to the doctrine doc the example reflects. Internal location does not confer authority.</p>
+<p class="doc-body">The two doctrines compose: the relation (this doc) names which surface is external to which and in which direction; the authority assignment (<code class="doc-code">source-of-truth-and-aging-rate.md</code>) names which surface owns which claim class.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="boundary-with-absorption-discipline" class="doc-section-title">Boundary with absorption discipline</h3>
+<div class="doc-prose">
+<p class="doc-body"><code class="doc-code">docs/absorption-discipline.md</code> carries the doctrine on how material moves between surfaces. This doc references it as the operative movement mechanism when an external surface promotes content into the surface it is external to (or vice versa).</p>
+<p class="doc-body">The composition:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Externality names the relation between surfaces.</strong> It is a static topology fact — <em>grounding note is upstream-external to repo</em>.</li>
+<li class="doc-body"><strong>Absorption is movement across the relation.</strong> It is a dynamic event — <em>this observation moved from scratch to doctrine because it earned promotion.</em></li>
+</ul>
+<p class="doc-body">Not every external relation implies absorption. Some relations are persistent: the grounding note is upstream-external to the repo permanently; the source-of-intent it carries is read by the repo on each session entry without being absorbed into the repo as prose. Similarly, articles can be external-and-reflective to repos forever without ever being absorbed as doctrine — the reflection is the point, not the eventual movement.</p>
+<p class="doc-body">Absorption applies when the topology stays the same but specific material moves: a project-local observation moves to method doctrine; a state record moves from scratch to scratch-archive; an article-line insight earns method-altitude treatment after a second pressure case. The relation persists; the material's surface assignment changes.</p>
+<p class="doc-body">The two doctrines compose: the relation (this doc) names where material currently is and which way authority flows; absorption (<code class="doc-code">absorption-discipline.md</code>) governs the conditions under which the material moves to a different surface.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="boundary-with-intent-artifacts" class="doc-section-title">Boundary with intent artifacts</h3>
+<div class="doc-prose">
+<p class="doc-body">The intent-artifact classes (<code class="doc-code">docs/intent-artifacts.md</code>) sit inside this doctrine's frame rather than beside it: <strong>externality is what determines whether a carrier crossing is a handoff at all.</strong></p>
+<pre class="doc-pre"><code class="language-text">standing normative context   remains on its owning surface and is read across a standing
+                             upstream-external relation; no routing or relocation event
+standing operative carrier   deployed into a surface; the deployment persists
+invocable operative carrier  invoked within a surface, or relayed across one
+routed instance              its routed-instance identity arises from an addressed
+                             operating-surface crossing
+</code></pre>
+<p class="doc-body">A routed instance is the only class whose identity depends on the crossing. That is why the same artifact moving <em>within</em> one operating surface is not a handoff and takes no lifecycle marker: no externality relation is crossed, so there is nothing for the marker to track. Two repositories operated by one surface do not sit on opposite sides of that boundary, even though their artifact authority stays separate.</p>
+<p class="doc-body">The relay graph is the externality map in motion. Each apex–agent strand is internal to itself; a cross-strand relay edge is an apex act that carries material or a ruling from one strand into another. A provenance transcript projects that graph into one linear record — faithful as a projection, not identical as a topology — which is why transcript order cannot be read as system-level topology, and why a speaker marker records ASK's assembled attribution of drafting provenance — evidence, not infallible proof — rather than the operative voice a relay confers.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="boundary-with-source-of-intent" class="doc-section-title">Boundary with source of intent</h3>
+<div class="doc-prose">
+<p class="doc-body"><code class="doc-code">docs/source-of-intent.md</code> carries the doctrine governing source-of-intent origination, recovery, validation, and routing. This doc references it as the operator-owned axiom that sits upstream-external to the entire recursion.</p>
+<p class="doc-body">The composition:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Source-of-intent is upstream-external to every surface in the topology.</strong> It is not a surface itself; it is the substrate the surfaces depend on.</li>
+<li class="doc-body"><strong>Grounding notes carry source-of-intent</strong> at the slow-aging layer. They are external to repos by surface boundary, upstream to repos by normative direction, and internal to the system by relative-externality framing.</li>
+<li class="doc-body"><strong>The validation loop prevents AI from authoring the source it should serve.</strong> This is a structural rule about which direction authority flows: source-of-intent flows downstream from operator validation, never upstream from method articulation.</li>
+<li class="doc-body"><strong>The source-of-intent guard prevents unresolved means from being routed to the operator as unresolved purpose.</strong> This is a relative-externality rule applied at a specific seam: most apparent purpose-level gaps are actually architectural-means questions the method should answer, not source-of-intent questions to escalate operator-ward.</li>
+</ul>
+<p class="doc-body">The two doctrines compose: source-of-intent doctrine names the upstream axiom and its routing rules; this doc names the relative-externality posture of every surface that participates in the source-of-intent lifecycle.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="worked-pressure-surfaces" class="doc-section-title">Worked pressure surfaces</h3>
+<div class="doc-prose">
+<p class="doc-body">Method altitude only. Domain detail lives in project repos and project examples.</p>
+<ul class="doc-list">
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">asset-pipeline-ASK</code></a></strong> surfaced rule/payload and voice-boundary pressure: protected vocabulary, positioning tokens, and strategic rationale are external to the repo by surface boundary but internal to the project system by relative-externality framing. The repo can name the structural category (e.g., &quot;ASK-positioning voice&quot;); it cannot carry the payload (the specific vocabulary). The split between what's repo-internal and what's grounding-note-internal is a relative-externality decision, not a privacy-by-default decision.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/urban-observatory"><code class="doc-code">urban-observatory</code></a></strong> surfaced source-pack and validation-loop pressure: conversation captures, intent-recovery records, and domain-authority handoffs are external to the repo by surface boundary but internal to the source-of-intent system by relative-externality framing. The validation loop sits at a specific surface seam (operator validates against AI-surfaced candidates; the AI does not author the validated intent). The domain-authority handoff classification is itself a relative-externality instance: handoffs from a domain-authority role are external to the architect/operator's primary thread but internal to the project's broader source-of-intent loop.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/design-system-ASK"><code class="doc-code">design-system-ASK</code></a> → <a href="https://github.com/apexSolarKiss/urban-observatory"><code class="doc-code">urban-observatory</code></a></strong> surfaced inheritance-by-reference pressure: <code class="doc-code">design-system-ASK</code> is external to UO by surface boundary, upstream to UO by normative direction for Tier 1 + Tier 2 visual inheritance; it does not supply ASK's own Tier 3 — UO resolves its own Tier 3 locally as a domain-partner surface. The inheritance is by reference, not by fork — the upstream and downstream remain distinct surfaces; only the visual language flows. n=1 across child projects; the relative-externality pattern here is observation-level pending a second downstream inheritance case.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="failure-modes" class="doc-section-title">Failure modes</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong>Treating ex-repo as irrelevant.</strong> An artifact external to the repo is dismissed as not-part-of-the-system. This breaks the ex-repo-is-not-ex-system rule. Grounding notes, articles, and scratch are all ex-repo and all load-bearing.</li>
+<li class="doc-body"><strong>Treating ex-repo as private by default.</strong> An artifact external to the repo is assumed to carry private payload. This overshoots the privacy concern and conflates surface boundary with content classification. Externality is a relation, not a privacy attribute.</li>
+<li class="doc-body"><strong>Treating external source as current instruction.</strong> A well-formed external artifact (handoff, memo, advisor synthesis) is read as authoritative for current repo work without being routed through the absorption discipline. The form does not confer authority; the relation does.</li>
+<li class="doc-body"><strong>Absorbing external payload into public repo.</strong> An external surface carries payload (protected vocabulary, positioning, project-specific positioning rationale); the payload is promoted into repo prose because it &quot;sounded good.&quot; This violates rule/payload doctrine and breaks the surface's voice posture. The repo can name the category, not carry the payload.</li>
+<li class="doc-body"><strong>Ignoring normative direction.</strong> A surface relation is identified by surface boundary alone, without tracking which way authority flows. The downstream surface is then accidentally treated as authoritative for the upstream one, inverting the relation.</li>
+<li class="doc-body"><strong>Confusing downstream-external hooks with upstream-external grounding notes.</strong> A downstream project's own external scratch is treated as if it were an upstream grounding note for the method. Both are external to the project repo; only one is upstream. The downstream-external surface does not earn upstream authority just because it shares the external-by-surface-boundary characteristic.</li>
+<li class="doc-body"><strong>Mistaking article reflection for repo state.</strong> Articles are reflective by normative direction; reading them as authoritative for current repo state acts against a frame the repo may have already moved past. The article is upstream of itself; it is not upstream of the repo's current contents.</li>
+<li class="doc-body"><strong>Mistaking operator memory for repo truth.</strong> Operator memory is ephemeral and external to every authoritative surface. Treating a memory entry as authoritative for repo state or grounding-note substance violates surface assignment.</li>
+</ul>
+<p class="doc-body">These failure modes share a structural cause: collapsing the two-axis model into a single-axis intuition. Either surface boundary is treated as if it determined direction (it does not), or direction is presumed without checking which surface authoritatively owns the claim. The remedy is to name both axes explicitly before acting on the relation.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="practical-rule" class="doc-section-title">Practical rule</h3>
+<div class="doc-prose">
+<p class="doc-body">Before using or absorbing material from an external surface, ask in order:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>External to what?</strong> Name the surface the artifact is external to. Not external in absolute; external to a specific other surface.</li>
+<li class="doc-body"><strong>Internal to what larger system?</strong> Name the system the artifact is still inside. Ex-repo is not ex-system; the artifact has not left the system just because it left the repo.</li>
+<li class="doc-body"><strong>Which direction does authority flow?</strong> Upstream, downstream, or reflective. The relation is not symmetric.</li>
+<li class="doc-body"><strong>What claim class does this surface own?</strong> Per <code class="doc-code">docs/source-of-truth-and-aging-rate.md</code>, surfaces are authoritative for specific claim classes. Identify the class the artifact carries.</li>
+<li class="doc-body"><strong>What should be referenced, absorbed, ignored, or held?</strong> Per <code class="doc-code">docs/absorption-discipline.md</code>, the routing decision follows from claim class + aging-rate fit + evidence threshold.</li>
+<li class="doc-body"><strong>What payload must not cross the boundary?</strong> Protected vocabulary, positioning, project-specific positioning rationale, private stakeholder framing — these stay on their authoritative surface even when the structural category they carry crosses.</li>
+</ul>
+<p class="doc-body">The first three questions establish the relation. The fourth establishes authority. The fifth determines routing. The sixth catches payload leakage. All six are operational; none require deciding what externality &quot;really is.&quot;</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="self-superseding-clause" class="doc-section-title">Self-superseding clause</h3>
+<div class="doc-prose">
+<p class="doc-body">This doctrine should be superseded by:</p>
+<ul class="doc-list">
+<li class="doc-body">a formal topology diagram if textual map proves insufficient for navigating the relations (currently the map is textual by design; a diagram earns a home only if it improves operational clarity over prose)</li>
+<li class="doc-body">compression into <code class="doc-code">docs/source-of-truth-and-aging-rate.md</code> if the surface-authority material there absorbs most of the topology substrate this doc carries</li>
+<li class="doc-body"><code class="doc-code">docs/voice-surface-boundary.md</code> if the rule/payload subtype (the most specific failure-mode pattern here, around payload not crossing surface boundaries) earns its own focused treatment</li>
+<li class="doc-body">a more formal cross-repo externality taxonomy if multiple ASK-family child projects produce enough inheritance cases to justify a structured surface-relationship matrix (currently n=1 cross-repo inheritance proof from <a href="https://github.com/apexSolarKiss/design-system-ASK"><code class="doc-code">design-system-ASK</code></a> → UO; promotion to formal taxonomy waits for n=2)</li>
+<li class="doc-body">a future <code class="doc-code">docs/layer-classification.md</code> if the routing/topology pieces from this doc, <code class="doc-code">docs/source-of-intent.md</code> (grounding-note refresh preflight), and <code class="doc-code">docs/source-of-truth-and-aging-rate.md</code> (surface split) consolidate into a central routing doc</li>
+</ul>
+<p class="doc-body">The doctrine is not finished. The two-axis model is the current best articulation of the relation; the textual map is the current best snapshot of the topology. As the family grows (new child repos, new article-line surfaces, new operator-side patterns), the map will refine. The two-axis discipline itself is more stable than the specific surface list; the surfaces are substrate, the relational frame is doctrine.</p>
+<p class="doc-body">Anchor reading lives in <a href="articles.html"><code class="doc-code">docs/articles.md</code></a>. The article most directly substrating this doctrine is <em>The Rule the Repo Could Not Contain</em> (externality as a relation, not a property; ex-repo is not ex-system; the two-axis framing — surface boundary × normative direction; meta-to-downstream absorption as a worked instance; the invariant across surfaces).</p>
+</div>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/relative-externality.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../relative-externality.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="method.html">method</a></li>
+      <li><a href="absorption-discipline.html">absorption discipline</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="bounded-generativity.html">bounded generativity</a></li>
+      <li><a href="governance.html">governance</a></li>
+      <li><a href="intent-artifacts.html">intent artifacts</a></li>
+      <li><a href="normative-apex.html">normative apex</a></li>
+      <li><a href="portable-definition-layer.html">portable definition layer</a></li>
+      <li data-surface-nav-current></li>
+      <li><a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+      <li><a href="source-of-intent.html">source of intent</a></li>
+      <li><a href="source-of-truth-and-aging-rate.html">source of truth and aging rate</a></li>
+      <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/relative-externality.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../relative-externality.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>

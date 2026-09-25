@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // intent artifacts</title>
+<meta name="description" content="Intent Artifacts">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/intent-artifacts.md">
+<meta name="source-sha256" content="2ade70a3b91b7f7cfc651ed1a3bdfe60d011fdbdc5ac557c55ef81035045a078">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">intent artifacts</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="intent-artifacts" class="doc-title">Intent Artifacts</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>intent-artifacts.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">23089 B &middot;</span> <span class="doc-meta-item">source sha256 2ade70a3b91b</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/intent-artifacts.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../intent-artifacts.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">This doctrine governs the <strong>artifact</strong> face of source of intent: what carries intent, how each kind of carrier becomes operative, and how each ages. <code class="doc-code">docs/normative-apex.md</code> governs the structural face — what a source of intent <em>is</em>. The distinction those two docs draw between them is the one this doctrine exists to make unmissable:</p>
+<pre class="doc-pre"><code class="language-text">source of intent    a locatable governing role — a chair, a hat
+artifact of intent  a carrier through which that role's intent is expressed,
+                    deployed, routed, relayed, or preserved
+</code></pre>
+<p class="doc-body">A role is not a file. Naming a folder after the role was the category error this doctrine corrects: a folder holds artifacts of intent, and the source of intent is whoever sits in the chair.</p>
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#three-artifact-families">Three artifact families</a>
+</li>
+<li class="doc-body"><a href="#four-axes">Four axes</a>
+</li>
+<li class="doc-body"><a href="#the-classes-placed-on-the-axes">The classes, placed on the axes</a>
+</li>
+<li class="doc-body"><a href="#three-lifecycle-architectures">Three lifecycle architectures</a>
+</li>
+<li class="doc-body"><a href="#relay-and-feeding">Relay and feeding</a>
+</li>
+<li class="doc-body"><a href="#drafting-provenance-is-not-normative-voice">Drafting provenance is not normative voice</a>
+</li>
+<li class="doc-body"><a href="#provenance-transcripts-project-a-relay-graph">Provenance transcripts project a relay graph</a>
+</li>
+<li class="doc-body"><a href="#the-non-identities">The non-identities</a>
+</li>
+<li class="doc-body"><a href="#boundaries">Boundaries</a>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="three-artifact-families" class="doc-section-title">Three artifact families</h3>
+<div class="doc-prose">
+<p class="doc-body">Every durable artifact <strong>this doctrine classifies</strong> falls into one of three families by <strong>primary role</strong>. Primary role is not determined by content alone — a context artifact may carry authoritative intent-bearing claims without becoming an instruction.</p>
+<p class="doc-body"><strong>Produced and execution artifacts are outside this taxonomy</strong> — code, images, datasets, diagrams, published works, and the other work created <em>under</em> intent. They are governed as produced artifacts, not as carriers of intent, unless a particular artifact's primary role is itself context, intent, or provenance.</p>
+<pre class="doc-pre"><code class="language-text">ARTIFACTS OF CONTEXT      orient, describe, constrain, preserve
+                          grounding note · architecture-decision record ·
+                          durable context canonical
+
+ARTIFACTS OF INTENT       express, deploy, route, or relay intent from the apex
+                          Project Instructions · chat-tool settings · bootstrap ·
+                          session-start / critique / synthesis prompts ·
+                          routed handoffs · review returns
+
+PROVENANCE ARTIFACTS      record what occurred
+                          provenance transcript · closure · receipt · PR record
+</code></pre>
+<p class="doc-body"><strong>Mixed claims inside one artifact are ordinary.</strong> A grounding note carries project purpose, audience, and durable constraints — all intent-bearing — alongside origin, environment, and rationale, which are context. The artifact still has one primary role. Classify the artifact by what it is <em>for</em>, not by scanning its sentences.</p>
+<p class="doc-body"><strong>Internal goal state is a runtime realization of intent, not a fourth family.</strong> An explicit goal statement, policy, configuration, memory entry, or audit of that state may be an artifact when its primary role fits the taxonomy above. The causal organization through which intent actually influences planning and action is not identical to any one carrier, and does not enter the taxonomy at all. Four consequences follow. A carrier may preserve or deploy standing intent without being identical to it. A routed instance may carry content that is standing at its origin, candidate at its recipient, or neither — routing does not make content standing. Carriers may help instantiate or reconstruct a runtime realization. And where persistent memory causally sustains or reconstructs a goal, <em>that causal function</em> participates in runtime realization, while the memory surface itself remains non-authoritative context under its existing owner — it does not become a standing-intent carrier merely because a realization draws on it. Realization admits degrees — explicitly represented, behaviorally integrated, self-restoring — but these are descriptions of how deeply intent has been instantiated, not a fifth axis, a form, an activation posture, or a lineage.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="four-axes" class="doc-section-title">Four axes</h3>
+<div class="doc-prose">
+<p class="doc-body">One list cannot classify these artifacts, because at least four independent questions apply to each. Collapsing any two produces the confusions this doctrine resolves.</p>
+<p class="doc-body"><strong>Axis A — form.</strong> What kind of object is it?</p>
+<pre class="doc-pre"><code class="language-text">standing normative context   a canonical read to orient and constrain
+standing operative carrier   a continuously deployed instruction
+invocable operative carrier  a durable canonical activated episodically
+routed instance              an addressed artifact crossing a surface boundary
+utterance event              intent expressed in a composer, with no file of its own
+provenance artifact          a record of what occurred
+</code></pre>
+<p class="doc-body"><strong>Axis B — authority and voice.</strong> What makes its language operative?</p>
+<pre class="doc-pre"><code class="language-text">apex-uttered          composed or adopted and addressed by the apex; operative within
+                      the envelope of that utterance
+delegated-authority   composed by a role holding an already-recognized delegation;
+                      operative within that named delegated scope, without a fresh
+                      apex relay
+apex-relayed          composed elsewhere without independently delegated binding force —
+                      an advisor, an executor, another surface — and operative within
+                      the apex's relay envelope
+quoted-not-adopted    present inside an apex utterance as reported speech
+surface-generated     a recipient's own product; never self-authorizing
+</code></pre>
+<p class="doc-body"><strong>Composition by the apex is not itself the operative event.</strong> A draft, a private note, or a quotation the apex wrote does not bind until the apex addresses or adopts it within a scope. The operative act is the addressing, not the authorship — which is the same reason advisor-drafted language becomes operative on relay.</p>
+<p class="doc-body"><strong>Delegated authority is a real posture, not a special case of relay.</strong> A domain authority operating inside a named delegation binds within that scope on its own footing; requiring a fresh apex relay for each judgment would collapse a delegation into a courier arrangement. <code class="doc-code">docs/governance.md</code> owns what may be delegated and how the scope is named.</p>
+<p class="doc-body"><strong>Axis C — activation.</strong> What is its activation posture or event?</p>
+<pre class="doc-pre"><code class="language-text">standing      always available, or continuously deployed
+invoked       selected and relayed for one use
+routed        made durably available for a possible later feed
+fed           presented by the apex to an active surface
+ingested      the resulting recipient-side state when a feed succeeds
+dispatched    supplied to a nested execution context by a delegate acting
+              within its grant — no apex relay per dispatch
+</code></pre>
+<p class="doc-body"><strong>Axis D — lineage.</strong> How does its history persist?</p>
+<pre class="doc-pre"><code class="language-text">canonical family     unversioned current canonical + frozen _vN snapshots
+routed instance      immutable body + filename lifecycle +
+                     disposition / lineage record as applicable
+deployment mirror    an installed copy of a canonical carrier
+provenance lineage   the transcript's own versioning
+</code></pre>
+<p class="doc-body"><strong>Relayed intent is axis B, not a class on axis A.</strong> A relayed advisor approval may arrive as an utterance event, a routed instance, or a quoted passage. What makes it <em>relayed</em> is its origin plus the apex act that activates it — never its physical form. Treating &quot;relayed intent&quot; as a peer of &quot;standing carrier&quot; and &quot;routed instance&quot; mixes two axes and produces a taxonomy that cannot classify anything cleanly.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-classes-placed-on-the-axes" class="doc-section-title">The classes, placed on the axes</h3>
+<div class="doc-prose">
+<pre class="doc-pre"><code class="language-text">                    form                      activation    lineage
+grounding note      standing normative        standing      canonical family
+                    context
+Project             standing operative        deployed      canonical family
+Instructions        carrier                                 + deployment mirror
+prompt canonical    invocable operative       invoked       canonical family
+                    carrier                                 + invocation events
+routed handoff      routed instance           routed/fed/   routed-instance
+                                              ingested      lifecycle
+provenance          provenance artifact       read as       provenance lineage
+transcript                                    evidence
+subagent task       utterance event           dispatched    none — event
+brief
+</code></pre>
+<p class="doc-body"><strong>A grounding note and Project Instructions are both standing, and they differ in force.</strong> The grounding note establishes why, for whom, and under what durable premises a surface operates; Project Instructions establish how it must behave. The grounding note <em>constrains the interpretation of</em> instructions. It is authoritative for project purpose while authorizing no particular mutation.</p>
+<p class="doc-body"><strong>A prompt canonical and a prompt invocation are different objects with different lifecycles.</strong> The canonical is a durable file with a version lineage. An invocation is an event. A prompt canonical is never renamed to record that it was used — otherwise every reusable instrument would acquire the routed-instance lifecycle simply by being useful.</p>
+<p class="doc-body"><strong>A subagent task brief is an artifact of intent inside one execution surface.</strong> A parent executor operating under a recognized grant composes sub-briefs that carry <strong>derived task intent</strong> to computational subagents. On the axes: its form is an <strong>utterance event</strong>; its voice is <strong>delegated-authority</strong> — operative within the parent's named grant, without a fresh apex relay per subtask, which is what delegation is for; its activation is <strong>dispatched</strong> — not routed, not fed, not ingested. Its authority is derivative and bounded: the task dispatch instantiates derived task intent in a nested execution context, constitutes no source role, crosses no surface boundary, and acquires no routed-instance lifecycle.</p>
+<p class="doc-body">The dispatched sub-brief is ordinarily an utterance event. Where a reusable durable prompt canonical supplies or generates that brief, the canonical remains classified by the existing <code class="doc-code">prompt canonical</code> row — invocable operative carrier, canonical lineage — while the resulting sub-brief is the dispatched event. <a href="source-of-intent.html"><code class="doc-code">docs/source-of-intent.md</code></a> §Runtime delegation through the execution span owns the operational chain; <a href="normative-apex.html"><code class="doc-code">docs/normative-apex.md</code></a> §Delegation does not propagate the apex owns why the recursion creates no new apex.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="three-lifecycle-architectures" class="doc-section-title">Three lifecycle architectures</h3>
+<div class="doc-prose">
+<p class="doc-body">Not one lifecycle. Three, and applying the wrong one is the recurring failure.</p>
+<p class="doc-body"><strong>Canonical lineage</strong> — context canonicals and standing or invocable intent carriers:</p>
+<pre class="doc-pre"><code class="language-text">canonical authored and accepted
+→ unversioned canonical mirrors the latest accepted _vN
+→ revision produces the next _vN; the canonical mirrors it
+→ the canonical line ends only on explicit retirement
+</code></pre>
+<p class="doc-body">A prior <code class="doc-code">_vN</code> is <strong>historical</strong>, not superseded. Version succession is ordinary revision. Prospectively, <strong>supersession names an addressed routed artifact displaced by a successor</strong> — the phase-sensitive <code class="doc-code">-supersededA</code> / <code class="doc-code">-supersededP</code> event on the routed-instance lifecycle below. Standing and invocable carrier families are <strong>revised, retired, or replaced</strong> under canonical lineage; they do not acquire routed-instance supersession semantics. Historical carrier filenames retain their original labels in their own lineage plane without acquiring the prospective meanings defined here.</p>
+<p class="doc-body"><strong>Routed-instance lifecycle</strong> — addressed artifacts crossing a surface boundary:</p>
+<pre class="doc-pre"><code class="language-text">fresh routed handoff + terminal -TBI overlay
+  ├─ successful first ingestion
+  │    → -ingested
+  │    → a durable post-ingestion disposition suffix
+  │
+  └─ ASK-side pre-ingestion retirement
+       → -supersededA
+</code></pre>
+<p class="doc-body"><code class="doc-code">-ingested</code> begins the durable <strong>post-ingestion</strong> branch of the routed-instance filename lifecycle; <code class="doc-code">-supersededA</code> is its durable <strong>pre-ingestion retirement</strong> branch. Terminal <code class="doc-code">-TBI</code> remains the cross-cutting feed overlay, not a durable routed-instance state. The received body is byte-immutable; no canonical mirror and no <code class="doc-code">_vN</code> chain are created. <strong><code class="doc-code">docs/source-of-intent.md</code> is the authoritative state machine</strong> — the exact suffix transitions, marker grammar, queue mechanics, supersession phases, and exceptions live in §Inbound handoff TBI marker, and the overlay-resolution mechanics in §Resolving the feed-obligation overlay; neither is restated here.</p>
+<p class="doc-body"><strong>Provenance lineage</strong> — transcripts:</p>
+<pre class="doc-pre"><code class="language-text">-PTX, and -PTX_vN where the apex directs
+</code></pre>
+<p class="doc-body">A provenance transcript receives neither the canonical-plus-snapshot model nor the routed-instance lifecycle. Its role marker is orthogonal to lifecycle state.</p>
+<p class="doc-body"><strong>Feed-obligation overlay</strong> — orthogonal to all three architectures:</p>
+<pre class="doc-pre"><code class="language-text">&lt;otherwise-complete-underlying-filename&gt;-TBI.md
+</code></pre>
+<p class="doc-body"><code class="doc-code">-TBI</code> is not part of any one lifecycle architecture. It is human ASK's terminal flag that a successful feed of that exact artifact is still owed, and it may sit above a canonical carrier, a routed instance, a provenance transcript, or an ordinary artifact carrying no marker at all. Placing it there imports no other class's lifecycle: <code class="doc-code">topic-PTX-TBI.md</code> is a provenance transcript with a feed owed, not a routed handoff, and resolving the overlay returns it to <code class="doc-code">topic-PTX.md</code>.</p>
+<p class="doc-body">Only a <strong>fresh routed handoff</strong> specializes the resolution, and only on a successful feed: <code class="doc-code">-TBI</code> → <code class="doc-code">-ingested</code>. A fresh handoff may instead leave the overlay through the ASK-side pre-ingestion retirement branch, <code class="doc-code">-TBI</code> → <code class="doc-code">-supersededA</code>, without ever reaching <code class="doc-code">-ingested</code>. Anything <strong>not currently in that state</strong> — a provenance transcript, an ordinary artifact, or a routed instance already ingested or dispositioned — has the overlay removed and its underlying filename restored unchanged. The discriminator is the fresh-handoff <em>state</em>, not the artifact's class: <code class="doc-code">topic-absorbed-TBI.md → topic-absorbed.md</code> is a routed instance by class, and it takes the removal branch because its first ingestion is already behind it. An in-place overlay is valid only where resolving it leaves the filename truthful and preserves any contractual locator — <code class="doc-code">docs/source-of-intent.md</code> §Resolving the feed-obligation overlay owns the mechanics, including the <code class="doc-code">-supersededA</code> and fixed-path carve-outs.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="relay-and-feeding" class="doc-section-title">Relay and feeding</h3>
+<div class="doc-prose">
+<pre class="doc-pre"><code class="language-text">relay      the apex's authority-bearing act of addressing an utterance to a surface
+feeding    a relay that introduces material from outside the recipient's active context
+ingestion  the resulting recipient-side state when a feed succeeds
+</code></pre>
+<p class="doc-body"><strong>All feeding occurs through relay; not every relay is feeding.</strong> A direct instruction typed fresh into a thread is a relay with no external payload. Feeding is the delivery face of a relay that carries one.</p>
+<p class="doc-body">The distinction does <strong>not</strong> turn on transport. Inline paste, attachment, file path, mounted source, dragged canonical — any of these may carry any force. Transport says how the bytes arrived; it says nothing about authority.</p>
+<p class="doc-body"><strong>Feeding is transport-neutral and occurs by value or by reference.</strong></p>
+<pre class="doc-pre"><code class="language-text">by value      inline text · pasted excerpt · attachment · dragged carrier
+by reference  an exact path or locator the recipient is authorized and able to resolve
+              → recipient retrieves through its available route
+              → recipient reads the artifact into active context
+</code></pre>
+<p class="doc-body">In a feed by reference the apex relays the locator plus the envelope governing how the artifact is to be treated; the recipient then retrieves it — through a connector, or by reading the filesystem directly. <strong>Supplying or resolving the path is not ingestion.</strong> Ingestion occurs when the artifact's content is actually in the recipient's active context. A failed retrieval, or metadata-only reachability, is not ingestion.</p>
+<p class="doc-body">A normalized or lossy inspection view is a different case: it <strong>may</strong> constitute content read, but it carries a bounded fidelity claim and never establishes exact-byte identity. Where the omitted portion could affect classification, the recipient obtains an adequate representation before recording ingestion as complete.</p>
+<pre class="doc-pre"><code class="language-text">path resolves   ≠ content read
+content read    ≠ exact-byte identity proven
+</code></pre>
+<p class="doc-body">The second line is a separate verification question, governed by whatever evidence the task requires — not settled by the feed.</p>
+<p class="doc-body"><strong>The payload supplies content; the relay envelope supplies force and scope.</strong> A feed always relays at least a meta-intent — read this, consider this, ingest and classify this, execute this exactly, hold this — but it does not thereby adopt every proposition inside the payload as operative instruction.</p>
+<pre class="doc-pre"><code class="language-text">execute this exact prompt      envelope and payload coextensive; the whole payload
+                               becomes operative
+ingest and classify this       envelope authorizes ingestion and classification;
+                               the payload's recommendations remain candidate
+read this for context          envelope authorizes reading; nothing is adopted
+</code></pre>
+<p class="doc-body"><strong>Ingestion is not a proactive election by the recipient.</strong> The apex performs the act; ingestion is the resulting state when the material is read into the surface's active context. A surface does not decide to ingest — it ingests because it was fed.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="drafting-provenance-is-not-normative-voice" class="doc-section-title">Drafting provenance is not normative voice</h3>
+<div class="doc-prose">
+<pre class="doc-pre"><code class="language-text">drafting provenance   who composed the language
+normative voice       whose intent the language expresses operationally
+execution provenance  who performed the authorized act
+</code></pre>
+<p class="doc-body">Language may be drafted by an advisor, an executor, a domain authority, or another surface. Its drafting provenance remains true and remains part of the record. <strong>When the apex deliberately relays that exact language, the apex becomes the operative speaker within the relay's scope</strong> — the words are the apex's intent because the apex relayed them, not because the apex composed them.</p>
+<p class="doc-body">This is why advisor-drafted language often reads as though the apex is speaking: it is frequently drafted <em>as a proposed apex utterance</em>. Before relay it is a candidate. Relay converts it into an actual utterance.</p>
+<p class="doc-body">It follows that provenance forensics based on voice, style, pronouns, or a speaker label is unreliable:</p>
+<pre class="doc-pre"><code class="language-text">words carry an advisor's drafting provenance  ≠  the advisor supplied operative authority
+words read in the apex's voice                ≠  the apex originally composed them
+the apex relayed the exact words              =  the apex is the operative speaker,
+                                                 within the relay's scope
+</code></pre>
+<p class="doc-body">A single chain reads: <strong>advisor-drafted · apex-relayed · executor-performed.</strong> All three are true at once, and none of them is the others.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="provenance-transcripts-project-a-relay-graph" class="doc-section-title">Provenance transcripts project a relay graph</h3>
+<div class="doc-prose">
+<p class="doc-body">Each apex–agent conversation is individually linear. The system they compose is not.</p>
+<pre class="doc-pre"><code class="language-text">native topology     two or more linear strands
+                    + cross-strand relay edges made by the apex
+                    + side branches, delayed returns, re-quotations
+                    a partially ordered graph
+
+transcript          one total ordering of that graph, selected by the apex
+</code></pre>
+<p class="doc-body">A provenance transcript is therefore an <strong>apex-assembled linearized projection of a multi-thread relay graph</strong> — faithful as a projection, not identical as a topology. The apex chooses which branch appears first, which packet is quoted in full, where a side discussion rejoins the principal arc, and where a splice boundary falls. That selection is interpretive by necessity: two events in separate strands have no intrinsic &quot;next turn&quot; relation.</p>
+<p class="doc-body">The consequences are practical:</p>
+<pre class="doc-pre"><code class="language-text">transcript sequence   ≠ native chronology
+transcript order      ≠ system-level relay topology
+speaker marker         records the apex's assembled attribution of the source strand —
+                       evidence of drafting provenance, not infallible proof, and not
+                       the operative voice downstream
+a passage appearing     may be an intentional re-quotation rather than two events;
+twice                   duplication alone settles neither
+</code></pre>
+<p class="doc-body"><strong>Capture is not conversion of authority.</strong> Assembling an utterance into a transcript gives it durable bytes, a path, and a role marker. It does not make it operative, and it does not change who drafted it, what the relay envelope authorized, or whether the instruction was executed. Relay created the operative intent, at the original event; the transcript records that it happened.</p>
+<p class="doc-body">Reading a transcript's line order and speaker markers as a literal execution trace produces false findings. That failure has been observed: a duplicated block read as two rulings when it was one ruling quoted twice, and a proposal-generation turn read as an authority breach when the same turn recorded that no authoritative write occurred. Both were settled only by reading the actual bytes — <strong>a marker, a summary, or a structural proxy is a reason to look, never a substitute for looking.</strong> A hand-assembled projection is also subject to ordinary assembly error, so an anomalous marker may be a mistake rather than evidence of anything.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-non-identities" class="doc-section-title">The non-identities</h3>
+<div class="doc-prose">
+<pre class="doc-pre"><code class="language-text">source of intent          ≠ artifact of intent
+intent-bearing claim      ≠ intent-carrier artifact
+context carrying intent   ≠ a prompt or directive
+standing intent           ≠ standing operative instruction
+prompt canonical          ≠ prompt invocation
+deployment canonical      ≠ deployed mirror
+version succession        ≠ routed-artifact supersession
+drafting provenance       ≠ normative voice
+speaker marker            ≠ operative speaker after relay
+relay                     ≠ neutral forwarding
+routing                   ≠ relay
+relay                     ≠ feeding          (all feeding ⊂ relay)
+feeding                   ≠ wholesale adoption of the payload
+feeding                   ≠ ingestion
+ingestion                 ≠ disposition       (and therefore ≠ absorption)
+disposition               ≠ absorption         (absorption is one disposition)
+feed obligation           ≠ artifact role
+feed obligation           ≠ prior ingestion history
+feed obligation           ≠ durable lifecycle state
+feed-obligation removal   ≠ disposition change
+re-feeding                ≠ reopening
+absorption                ≠ implementation
+transcript projection     ≠ native topology
+transcript capture        ≠ conversion into operative authority
+</code></pre>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="boundaries" class="doc-section-title">Boundaries</h3>
+<div class="doc-prose">
+<p class="doc-body">This doctrine owns the ontology. It does not own:</p>
+<ul class="doc-list">
+<li class="doc-body">the routed-instance state machine, marker grammar, or queue mechanics — <code class="doc-code">docs/source-of-intent.md</code> §Inbound handoff TBI marker;</li>
+<li class="doc-body">feed-overlay resolution mechanics, including the governed-role and prior-lifecycle-state discriminator, the truth-preservation invariant, and the fixed-locator carve-out — <code class="doc-code">docs/source-of-intent.md</code> §Resolving the feed-obligation overlay;</li>
+<li class="doc-body">absorption criteria, durable disposition, closure requirements, or reconciliation after absorption — <code class="doc-code">docs/absorption-discipline.md</code>;</li>
+<li class="doc-body">the structural face of source of intent — <code class="doc-code">docs/normative-apex.md</code>;</li>
+<li class="doc-body">the surface-relation frame these classes sit inside — <code class="doc-code">docs/relative-externality.md</code>;</li>
+<li class="doc-body">physical placement on any operator surface. At method altitude the routed plane is the <strong>intent inbox</strong>; the target folder convention is <code class="doc-code">intent-INbox/</code>, and each surface's live index governs its current physical path until that surface completes its cutover.</li>
+</ul>
+</div>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/intent-artifacts.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../intent-artifacts.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="method.html">method</a></li>
+      <li><a href="absorption-discipline.html">absorption discipline</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="bounded-generativity.html">bounded generativity</a></li>
+      <li><a href="governance.html">governance</a></li>
+      <li data-surface-nav-current></li>
+      <li><a href="normative-apex.html">normative apex</a></li>
+      <li><a href="portable-definition-layer.html">portable definition layer</a></li>
+      <li><a href="relative-externality.html">relative externality</a></li>
+      <li><a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+      <li><a href="source-of-intent.html">source of intent</a></li>
+      <li><a href="source-of-truth-and-aging-rate.html">source of truth and aging rate</a></li>
+      <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/intent-artifacts.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../intent-artifacts.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>
