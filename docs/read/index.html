@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // documents</title>
+<meta name="description" content="method-ASK documents, rendered from the repository&#x27;s Markdown.">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+
+  .doc-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 20px; }
+  .doc-cards > .surface-panel { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+  .doc-cards .surface-panel-support { color: var(--fg-2); }
+  .doc-cards .doc-meta { overflow-wrap: anywhere; }
+  .doc-index { --doc-measure: none; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">documents</span></h1>
+      </nav>
+      <p class="surface-lede">method-ASK doctrine, rendered from the repository's Markdown. GitHub remains the source of record; every page links its source and its raw file.</p>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<div class="doc-flow doc-index">
+<section class="doc-section">
+<h2 class="doc-section-title">rendered documents</h2>
+<div class="doc-cards">
+<a class="surface-panel" href="method.html"><span class="doc-label">document</span><span class="surface-panel-title">method</span><span class="surface-panel-support">Method // Designing Systems That Build Systems</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>method.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">13 sections</span></span></a>
+<a class="surface-panel" href="absorption-discipline.html"><span class="doc-label">document</span><span class="surface-panel-title">absorption discipline</span><span class="surface-panel-support">Absorption Discipline</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>absorption-discipline.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">12 sections</span></span></a>
+<a class="surface-panel" href="articles.html"><span class="doc-label">document</span><span class="surface-panel-title">articles</span><span class="surface-panel-support">Articles</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>articles.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">4 sections</span></span></a>
+<a class="surface-panel" href="bounded-generativity.html"><span class="doc-label">document</span><span class="surface-panel-title">bounded generativity</span><span class="surface-panel-support">Bounded Generativity // order from chaos, mechanized</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>bounded-generativity.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">13 sections</span></span></a>
+<a class="surface-panel" href="governance.html"><span class="doc-label">document</span><span class="surface-panel-title">governance</span><span class="surface-panel-support">Governance</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>governance.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">11 sections</span></span></a>
+<a class="surface-panel" href="intent-artifacts.html"><span class="doc-label">document</span><span class="surface-panel-title">intent artifacts</span><span class="surface-panel-support">Intent Artifacts</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>intent-artifacts.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">9 sections</span></span></a>
+<a class="surface-panel" href="normative-apex.html"><span class="doc-label">document</span><span class="surface-panel-title">normative apex</span><span class="surface-panel-support">Normative Apex</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>normative-apex.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">13 sections</span></span></a>
+<a class="surface-panel" href="portable-definition-layer.html"><span class="doc-label">document</span><span class="surface-panel-title">portable definition layer</span><span class="surface-panel-support">The Portable Definition Layer // the durable object, separable from the tool that holds it</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>portable-definition-layer.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">8 sections</span></span></a>
+<a class="surface-panel" href="relative-externality.html"><span class="doc-label">document</span><span class="surface-panel-title">relative externality</span><span class="surface-panel-support">Relative Externality</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>relative-externality.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">12 sections</span></span></a>
+<a class="surface-panel" href="seed-mediated-generated-interface.html"><span class="doc-label">document</span><span class="surface-panel-title">seed-mediated generated interface</span><span class="surface-panel-support">Seed-Mediated Generated Interface // the interface begins at the loading path</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>seed-mediated-generated-interface.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">12 sections</span></span></a>
+<a class="surface-panel" href="source-of-intent.html"><span class="doc-label">document</span><span class="surface-panel-title">source of intent</span><span class="surface-panel-support">Source of Intent</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>source-of-intent.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">17 sections</span></span></a>
+<a class="surface-panel" href="source-of-truth-and-aging-rate.html"><span class="doc-label">document</span><span class="surface-panel-title">source of truth and aging rate</span><span class="surface-panel-support">Source of Truth and Aging Rate</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>source-of-truth-and-aging-rate.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">8 sections</span></span></a>
+<a class="surface-panel" href="voice-surface-boundary.html"><span class="doc-label">document</span><span class="surface-panel-title">voice surface boundary</span><span class="surface-panel-support">Voice Surface Boundary</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>voice-surface-boundary.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">12 sections</span></span></a>
+</div>
+</section>
+<section class="doc-section">
+<h2 class="doc-section-title">records</h2>
+<p class="doc-body">Operating records of the diagram folder, rendered from their Markdown.</p>
+<div class="doc-cards">
+<a class="surface-panel" href="diagrams-README.html"><span class="doc-label">record</span><span class="surface-panel-title">diagrams README</span><span class="surface-panel-support">Diagrams // illustrative</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>README.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">8 sections</span></span></a>
+<a class="surface-panel" href="diagrams-dsa-tokens-MANIFEST.html"><span class="doc-label">record</span><span class="surface-panel-title">token mirror MANIFEST</span><span class="surface-panel-support">_dsa-tokens — local design-system-ASK mirror</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>_<wbr>dsa-tokens/<wbr>MANIFEST.<wbr>md</span></span></a>
+</div>
+</section>
+<section class="doc-section">
+<h2 class="doc-section-title">source views</h2>
+<div class="doc-cards">
+<a class="surface-panel" href="source/method-ASK_topology.source.js.html"><span class="doc-label">source view</span><span class="surface-panel-title">topology source</span><span class="surface-panel-support">Read-only, line-numbered: one source file, in the view the diagram front door links.</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>method-ASK_<wbr>topology.<wbr>source.<wbr>js</span></span></a>
+<a class="surface-panel" href="source/method-ASK_intent-artifact-ontology.source.js.html"><span class="doc-label">source view</span><span class="surface-panel-title">intent-artifact ontology source</span><span class="surface-panel-support">Read-only, line-numbered: one source file, in the view the diagram front door links.</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>method-ASK_<wbr>intent-artifact-ontology.<wbr>source.<wbr>js</span></span></a>
+<a class="surface-panel" href="source/method-ASK_activation-lifecycle-comparison.source.js.html"><span class="doc-label">source view</span><span class="surface-panel-title">activation + lifecycle comparison source</span><span class="surface-panel-support">Read-only, line-numbered: one source file, in the view the diagram front door links.</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>method-ASK_<wbr>activation-lifecycle-comparison.<wbr>source.<wbr>js</span></span></a>
+<a class="surface-panel" href="source/method-ASK_relay-feeding-ingestion.source.js.html"><span class="doc-label">source view</span><span class="surface-panel-title">relay / feeding / ingestion source</span><span class="surface-panel-support">Read-only, line-numbered: one source file, in the view the diagram front door links.</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>method-ASK_<wbr>relay-feeding-ingestion.<wbr>source.<wbr>js</span></span></a>
+<a class="surface-panel" href="source/method-ASK_relay-graph-ptx-projection.source.js.html"><span class="doc-label">source view</span><span class="surface-panel-title">adversarial relay graph + PTX projection source</span><span class="surface-panel-support">Read-only, line-numbered: one source file, in the view the diagram front door links.</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>method-ASK_<wbr>relay-graph-ptx-projection.<wbr>source.<wbr>js</span></span></a>
+<a class="surface-panel" href="source/system-ASK-topology-public.source.js.html"><span class="doc-label">source view</span><span class="surface-panel-title">system-ASK topology source</span><span class="surface-panel-support">Read-only, line-numbered: one source file, in the view the diagram front door links.</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>system-ASK-topology-public.<wbr>source.<wbr>js</span></span></a>
+<a class="surface-panel" href="source/method-ASK_bounded-generativity.figure.js.html"><span class="doc-label">source view</span><span class="surface-panel-title">bounded generativity source</span><span class="surface-panel-support">Read-only, line-numbered: one source file, in the view the diagram front door links.</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>method-ASK_<wbr>bounded-generativity.<wbr>figure.<wbr>js</span></span></a>
+<a class="surface-panel" href="source/method-ASK_system-ASK-hero.figure.js.html"><span class="doc-label">source view</span><span class="surface-panel-title">system-ASK source</span><span class="surface-panel-support">Read-only, line-numbered: one source file, in the view the diagram front door links.</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>method-ASK_<wbr>system-ASK-hero.<wbr>figure.<wbr>js</span></span></a>
+<a class="surface-panel" href="source/method-ASK_seed-mediated-generated-interface.figure.js.html"><span class="doc-label">source view</span><span class="surface-panel-title">seed-mediated generated interface source</span><span class="surface-panel-support">Read-only, line-numbered: one source file, in the view the diagram front door links.</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>method-ASK_<wbr>seed-mediated-generated-interface.<wbr>figure.<wbr>js</span></span></a>
+<a class="surface-panel" href="source/method-ASK_seed-mediated-generated-interface-ontology.figure.js.html"><span class="doc-label">source view</span><span class="surface-panel-title">seed-mediated generated interface — ontology source</span><span class="surface-panel-support">Read-only, line-numbered: one source file, in the view the diagram front door links.</span><span class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>method-ASK_<wbr>seed-mediated-generated-interface-ontology.<wbr>figure.<wbr>js</span></span></a>
+</div>
+</section>
+<section class="doc-section">
+<h2 class="doc-section-title">not rendered</h2>
+<p class="doc-body">These files stay readable as raw Markdown on this origin and on GitHub. The declared list decides what is rendered; nothing here is browsed at runtime.</p>
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">docs/repo-mediated-generated-interface.md</code> &middot; redirect to <a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a> &middot; <a href="../repo-mediated-generated-interface.md">raw .md</a> &middot; <a href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/repo-mediated-generated-interface.md" target="_blank" rel="noopener">GitHub</a></li>
+</ul>
+</section>
+<section class="doc-section">
+<h2 class="doc-section-title">outside this origin</h2>
+<p class="doc-body">Repository-root files (<code class="doc-code">README.md</code>, <code class="doc-code">AGENTS.md</code>, <code class="doc-code">examples/</code>) are not hosted here. Links to them open on GitHub.</p>
+</section>
+</div>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    <a class="surface-action surface-action--secondary" href="https://a-s-k.studio/" target="_blank" rel="noopener">A-S-K.studio</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li data-surface-nav-current>
+        <ul>
+          <li><a href="method.html">method</a></li>
+          <li><a href="absorption-discipline.html">absorption discipline</a></li>
+          <li><a href="articles.html">articles</a></li>
+          <li><a href="bounded-generativity.html">bounded generativity</a></li>
+          <li><a href="governance.html">governance</a></li>
+          <li><a href="intent-artifacts.html">intent artifacts</a></li>
+          <li><a href="normative-apex.html">normative apex</a></li>
+          <li><a href="portable-definition-layer.html">portable definition layer</a></li>
+          <li><a href="relative-externality.html">relative externality</a></li>
+          <li><a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+          <li><a href="source-of-intent.html">source of intent</a></li>
+          <li><a href="source-of-truth-and-aging-rate.html">source of truth and aging rate</a></li>
+          <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+        </ul>
+      </li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // source of intent</title>
+<meta name="description" content="Source of Intent">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/source-of-intent.md">
+<meta name="source-sha256" content="f1ffe8c9208705afe1b2fa4192367c42852ff7f8c82495c4bd77d35a8a22198f">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">source of intent</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="source-of-intent" class="doc-title">Source of Intent</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>source-of-intent.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">65243 B &middot;</span> <span class="doc-meta-item">source sha256 f1ffe8c92087</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/source-of-intent.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../source-of-intent.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">This doctrine governs how the method handles purpose: where it originates, how it enters the system, how it is preserved across surfaces, how it is distinguished from look-alikes, and what discipline keeps the operator from being asked to reauthorize what is already settled.</p>
+<p class="doc-body">Source-of-intent is the axiom the recursion cannot supply. The system can elaborate purpose endlessly, but it cannot originate it. The operator's intent — recorded or carried in the grounding note, validated through the loop, recovered when inception was messy — is what the method's recursion stands on. This doc names the disciplines that keep that intent intact.</p>
+<p class="doc-body">This doctrine governs the <strong>operational</strong> face of source of intent — how purpose is recovered, validated, preserved, and routed across surfaces. The <strong>structural</strong> face — what a source of intent <em>is</em> (the locatable governing role; intent · authority · recourse) — is governed by <a href="normative-apex.html"><code class="doc-code">docs/normative-apex.md</code></a>; the governance architecture that operationalizes or constitutes a source lives in <a href="governance.html"><code class="doc-code">docs/governance.md</code></a>.</p>
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#source-of-intent-recovery">Source-of-intent recovery</a>
+</li>
+<li class="doc-body"><a href="#the-validation-loop">The validation loop</a>
+</li>
+<li class="doc-body"><a href="#source-of-intent-guard">Source-of-intent guard</a>
+</li>
+<li class="doc-body"><a href="#intent-repair-targets-current-standing-intent">Intent repair targets current standing intent</a>
+</li>
+<li class="doc-body"><a href="#category-distinctions">Category distinctions</a>
+</li>
+<li class="doc-body"><a href="#grounding-note-refresh-preflight">Grounding-note refresh preflight</a>
+</li>
+<li class="doc-body"><a href="#source-of-intent-nudge">Source-of-intent nudge</a>
+</li>
+<li class="doc-body"><a href="#runtime-delegation-through-the-execution-span">Runtime delegation through the execution span</a>
+</li>
+<li class="doc-body"><a href="#cross-surface-handoff-routing">Cross-surface handoff routing</a>
+<ul class="doc-toc-list doc-hierarchy">
+<li class="doc-body"><a href="#multi-repo-operating-surface-shared-intake">Multi-repo operating surface: shared intake</a></li>
+<li class="doc-body"><a href="#scope-guard-handoff-routing-vs-protocol-conformance">Scope guard: handoff routing vs protocol conformance</a></li>
+</ul>
+</li>
+<li class="doc-body"><a href="#handoff-memo-completeness">Handoff memo completeness</a>
+</li>
+<li class="doc-body"><a href="#inbound-handoff-tbi-marker">Inbound handoff TBI marker</a>
+</li>
+<li class="doc-body"><a href="#resolving-the-feed-obligation-overlay">Resolving the feed-obligation overlay</a>
+</li>
+<li class="doc-body"><a href="#external--domain-authority-handoff-classification">External / domain-authority handoff classification</a>
+</li>
+<li class="doc-body"><a href="#handoff-necessity--domain-authority-review">Handoff necessity // domain-authority review</a>
+</li>
+<li class="doc-body"><a href="#operator-grounding-note-extension-adjacent-pressure">Operator grounding-note extension (adjacent pressure)</a>
+</li>
+<li class="doc-body"><a href="#canonicality-is-not-normative-force">Canonicality is not normative force</a>
+</li>
+<li class="doc-body"><a href="#self-superseding-clause">Self-superseding clause</a>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="source-of-intent-recovery" class="doc-section-title">Source-of-intent recovery</h3>
+<div class="doc-prose">
+<p class="doc-body">Projects do not always begin with clean source-of-intent. Inception often happens in AI-mediated exploration: chat threads, sketches, overlapping conversation captures, partial framings that accumulate without consolidation. Repo prose comes later. Method discipline at this stage is recovery, not authorship.</p>
+<p class="doc-body">The load-bearing sequence is <em>recovered intent → validated constraint → repo</em>. Each step requires a distinct discipline:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Recovery</strong> — reconcile overlapping conversation captures into a coherent source pack. The work is reading, not writing. The operator surfaces what was already said across threads and consolidates the durable parts into a single readable artifact.</li>
+<li class="doc-body"><strong>Validation</strong> — confirm the recovered intent against operator judgment. The AI does not author intent at this stage; it surfaces candidates the operator validates or rejects. The validation loop is structural, not stylistic.</li>
+<li class="doc-body"><strong>Repo</strong> — only after recovered intent is validated does a repo become the right artifact. The repo is not the first artifact; the first artifact is recovered intent, and the repo encodes the structure that intent earned.</li>
+</ul>
+<p class="doc-body">The failure mode this prevents is letting the model produce another polished frame on top of stale exploration. A polished frame reads as direction; the operator validates against the underlying intent, not against the framing.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-validation-loop" class="doc-section-title">The validation loop</h3>
+<div class="doc-prose">
+<p class="doc-body">The validation loop is the structural pattern that keeps the model from authoring the source of intent it is supposed to serve. When recovery surfaces a candidate frame, the operator validates it against durable purpose before any synthesis builds on it.</p>
+<p class="doc-body">Three constraints make the loop work:</p>
+<ul class="doc-list">
+<li class="doc-body">The model proposes; it does not assert. Candidate framings carry an explicit &quot;validate or reject&quot; gate.</li>
+<li class="doc-body">The operator's validation is treated as ground truth for source-of-intent, regardless of how polished the candidate framing is.</li>
+<li class="doc-body">A rejected framing does not become a held question to relitigate. It becomes evidence that the recovery pass needs another loop, or that a candidate frame was wrong.</li>
+</ul>
+<p class="doc-body">The loop is not skepticism or ceremony. It is the structural separation between source-of-intent (operator-owned) and structural articulation (method-owned).</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="source-of-intent-guard" class="doc-section-title">Source-of-intent guard</h3>
+<div class="doc-prose">
+<p class="doc-body">Fresh critique, synthesis, and handoff recaps may surface gaps between stated purpose and current evidence. Those gaps must not automatically become requests for the operator to reauthorize the purpose.</p>
+<p class="doc-body">When the grounding note or repo-local premise already states the end, treat the gap as an architectural means problem: <em>what carrier, trace, model attempt, pressure test, inheritance structure, or boundary correction is required to make the stated purpose real?</em></p>
+<p class="doc-body">A held implementation question is not the same as a held purpose question. Do not promote unresolved means into an unresolved source-of-intent fork.</p>
+<p class="doc-body">The guard is what prevents the system from manufacturing source-of-intent decisions out of every gap that surfaces. The operator's attention to source-of-intent is finite and load-bearing; the system protects it by not spending it on means-level questions disguised as purpose-level questions.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="intent-repair-targets-current-standing-intent" class="doc-section-title">Intent repair targets current standing intent</h3>
+<div class="doc-prose">
+<p class="doc-body">Where a system carries intent into its own operation, that realization can drift, degrade, or be disturbed. Repairing it raises a question the repair mechanism cannot answer by itself: repair <em>toward what</em>.</p>
+<blockquote class="doc-quote">
+<p><strong>Intent repair reconciles the current realization against current standing intent, not merely against the realization that preceded the disturbance.</strong></p>
+</blockquote>
+<p class="doc-body">Restoring the prior state is not the same operation as restoring the authorized one. A realization that persists, or reconstructs itself, thereby demonstrates only its own durability — never that the authorization behind it still holds (<code class="doc-code">docs/normative-apex.md</code> §The non-identities). Three cases stay distinct:</p>
+<pre class="doc-pre"><code class="language-text">LESION / DRIFT
+  the current realization diverges from current standing intent
+  &gt;&gt; repair toward the current authorized target
+
+AUTHORIZED REVISION
+  a role authorized for that scope revises standing intent, acting through the
+  applicable governance path
+  &gt;&gt; migrate the realization to the revised target
+  &gt;&gt; subsequent repair protects the revised target
+
+CANDIDATE CORRECTION
+  evidence, critique, or generated reasoning suggests the target should change,
+  but no authorized revision has occurred
+  &gt;&gt; preserve the candidate and surface it to the role authorized to revise
+     that scope
+  &gt;&gt; neither silently adopt it nor automatically repair it away
+</code></pre>
+<p class="doc-body">The third case is the load-bearing one. A divergence measure registers movement away from the current target; it cannot tell whether that movement is damage or warranted correction. Repair instrumentation measures distance. Governance classifies warrant.</p>
+<p class="doc-body">Candidate correction composes with the guard above rather than loosening it: surfacing a candidate to the authorized role is not a request to reauthorize settled purpose, and a framing already rejected through the validation loop does not re-enter as a candidate correction. What the case forbids is the opposite failure — a repair process silently deleting the evidence that its target may be wrong.</p>
+<p class="doc-body">For intent-bearing conflicts, reconcile memory-mediated realization against the current authoritative owner of standing intent. Realization does not become authoritative merely because it persists or regenerates. This is the intent-specific application of the broader source-of-truth and private-memory rules, not their origin.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="category-distinctions" class="doc-section-title">Category distinctions</h3>
+<div class="doc-prose">
+<p class="doc-body">Before naming operator-required source-of-intent input, distinguish what kind of question is actually live. Eight categories recur:</p>
+<div class="doc-table-wrap">
+<table class="doc-table">
+<thead>
+<tr>
+<th class="doc-body">Category</th>
+<th class="doc-body">What it is</th>
+<th class="doc-body">Who decides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="doc-body" data-label="Category"><strong>Source of intent</strong></td>
+<td class="doc-body" data-label="What it is">new purpose, audience, or premise not already supplied by durable sources</td>
+<td class="doc-body" data-label="Who decides">operator (this is the only category that requires source-of-intent input)</td>
+</tr>
+<tr>
+<td class="doc-body" data-label="Category"><strong>Architectural means</strong></td>
+<td class="doc-body" data-label="What it is">how to operationalize an already-supplied premise</td>
+<td class="doc-body" data-label="Who decides">method / structural attempt against the premise</td>
+</tr>
+<tr>
+<td class="doc-body" data-label="Category"><strong>Sequencing choice</strong></td>
+<td class="doc-body" data-label="What it is">ordering among valid routes the durable sources already permit</td>
+<td class="doc-body" data-label="Who decides">operator may decide if the choice is load-bearing; otherwise method</td>
+</tr>
+<tr>
+<td class="doc-body" data-label="Category"><strong>Advisor scratch</strong></td>
+<td class="doc-body" data-label="What it is">exploratory framing surfaced during synthesis</td>
+<td class="doc-body" data-label="Who decides">not promoted to repo work until validated against purpose</td>
+</tr>
+<tr>
+<td class="doc-body" data-label="Category"><strong>Future roadmap</strong></td>
+<td class="doc-body" data-label="What it is">direction that may matter later but is not current-stage source-of-intent</td>
+<td class="doc-body" data-label="Who decides">preserved as roadmap context; does not reshape current repo work</td>
+</tr>
+<tr>
+<td class="doc-body" data-label="Category"><strong>Premature implementation architecture</strong></td>
+<td class="doc-body" data-label="What it is">structural commitment that gets ahead of the method's current stage</td>
+<td class="doc-body" data-label="Who decides">held, not adopted; the method's architecture-attempt-before-prototype discipline applies</td>
+</tr>
+<tr>
+<td class="doc-body" data-label="Category"><strong>State / event record</strong></td>
+<td class="doc-body" data-label="What it is">review chronology, who said what, what a specific review validated or did not validate, current event outcome</td>
+<td class="doc-body" data-label="Who decides">scratch / operator-side event record</td>
+</tr>
+<tr>
+<td class="doc-body" data-label="Category"><strong>Repo-local public-safe project truth</strong></td>
+<td class="doc-body" data-label="What it is">stable generalized project truth that belongs in public repo docs rather than the grounding note</td>
+<td class="doc-body" data-label="Who decides">repo</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="doc-body">The category distinctions are load-bearing. Conflating <em>architectural means</em> with <em>source of intent</em> burns operator attention on questions the method should answer. Conflating <em>advisor scratch</em> or <em>future roadmap</em> with <em>source of intent</em> lets exploratory or out-of-stage material reshape current work as if it were validated direction.</p>
+<p class="doc-body">Only the <em>source of intent</em> category requires the operator to supply new purpose-level input. The other categories route elsewhere: method-side attempt, sequencing decision, scratch, roadmap context, held implementation architecture, or repo-local truth.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="grounding-note-refresh-preflight" class="doc-section-title">Grounding-note refresh preflight</h3>
+<div class="doc-prose">
+<p class="doc-body">Before refreshing a grounding note, classify the candidate content layer explicitly.</p>
+<p class="doc-body">A grounding note should absorb slow-aging source-of-intent: purpose, audience, durable constraints, durable role boundaries, and source-of-intent implications. It should not absorb state chronology merely because the event was important.</p>
+<p class="doc-body">Use the category distinctions above before drafting a grounding-note refresh:</p>
+<ul class="doc-list">
+<li class="doc-body">slow source-of-intent → grounding note</li>
+<li class="doc-body">state / event record → scratch</li>
+<li class="doc-body">repo-local public-safe project truth → repo</li>
+<li class="doc-body">future roadmap → roadmap context</li>
+<li class="doc-body">advisor scratch → scratch until validated</li>
+<li class="doc-body">premature implementation architecture → hold</li>
+</ul>
+<p class="doc-body">The failure mode is state-oriented reviewer chronology dressed up as durable posture. If placed in the grounding note, it forces the grounding note to age at the rate of the event record.</p>
+<p class="doc-body">The gate should happen before Plan-Before-Execute for a grounding-note refresh, not after the refresh has already been drafted.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="source-of-intent-nudge" class="doc-section-title">Source-of-intent nudge</h3>
+<div class="doc-prose">
+<p class="doc-body">At local plateaus, after meaningful absorptions, or when the next move is unclear but the durable purpose may already be sufficient, the system asks the advisor surface what additional operator source of intent or direction is needed to continue developing the project toward its stated purpose.</p>
+<p class="doc-body">The nudge is not &quot;what next?&quot; — it is a boundary-classification pass. The advisor classifies the next move against the category distinctions above and returns one of:</p>
+<ul class="doc-list">
+<li class="doc-body"><em>No new source-of-intent needed.</em> The durable sources already contain the premise; derive the next move from the current architecture.</li>
+<li class="doc-body"><em>Sequencing choice; operator may decide.</em> Load-bearing-enough to ask, but not new purpose.</li>
+<li class="doc-body"><em>Architectural means; force an attempt against the premise.</em></li>
+<li class="doc-body"><em>Advisor scratch surfaced; validate before promoting.</em></li>
+<li class="doc-body"><em>Future roadmap surfaced; preserve, do not reshape current work.</em></li>
+<li class="doc-body"><em>Premature implementation architecture; hold.</em></li>
+<li class="doc-body"><em>Source-of-intent boundary actually reached; ask the operator.</em></li>
+<li class="doc-body"><em>Stop signal; the current closure is a real pause point, do not auto-chain.</em></li>
+</ul>
+<p class="doc-body">A nudge that returns &quot;no new source-of-intent is needed&quot; or &quot;stop&quot; is a successful result. The nudge's job is classification, not perpetual motion. Returning a stop signal protects against the failure mode where correct moves chained too quickly become their own drift vector.</p>
+<p class="doc-body">The nudge is a lighter-weight control loop than the fresh-context critique cycle. Use it before invoking fresh external critique when the question is local sequencing, absorption, routing, or next-pressure choice. Escalate to fresh-context critique when the nudge surfaces drift, stale durable context, unresolved purpose, or a need for independent reconstruction from repo plus grounding note.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="runtime-delegation-through-the-execution-span" class="doc-section-title">Runtime delegation through the execution span</h3>
+<div class="doc-prose">
+<p class="doc-body">Standing intent reaches execution through a chain of derivation and realization. Each link changes its operational form or granularity without changing its normative origin:</p>
+<pre class="doc-pre"><code class="language-text">standing intent
+  &gt;&gt; execution grant           the scope and decision rights the apex delegates
+    &gt;&gt; derived task intent     the parent executor's decomposition into bounded tasks
+      &gt;&gt; task brief / dispatch a sub-brief supplied to a subagent through runtime
+                               delegation
+        &gt;&gt; local plan + action the subagent's realization inside the granted aperture
+          &gt;&gt; parent verification + selection + integration
+            &gt;&gt; program-level authorization + closure by the governing role
+              &gt;&gt; authorized program result
+</code></pre>
+<p class="doc-body">Task derivation is <strong>runtime realization of standing intent</strong> — the causal path through which adopted purpose actually influences work — not a new act of origination. Four disciplines keep the chain honest:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Local subgoals do not revise standing intent.</strong> A parent decomposing an objective sets subgoals <em>under</em> the standard. Discovering mid-execution that the standard itself should change routes as candidate correction (§Intent repair targets current standing intent), never as silent local revision.</li>
+<li class="doc-body"><strong>Ordinary subagent output is candidate material.</strong> It enters the program only when the authorized parent verifies and accepts it. Evaluative language in a return does not make the return binding; acceptance is the parent's act, within the parent's grant, and a false finding dies at verification rather than surviving into the record.</li>
+<li class="doc-body"><strong>Local completion is not program closure.</strong> A subtask closing successfully ends its nested aperture; program-level normative closure remains with the role that authorized the program.</li>
+<li class="doc-body"><strong>Authority attenuates down the chain.</strong> A delegate redelegates only what its own grant allows; a downstream aperture may not silently exceed the upstream one; and execution success confers no authority to revise the standard executed under.</li>
+</ul>
+<p class="doc-body"><strong>Vocabulary guard.</strong> In ordinary language a parent <em>feeds</em> delegated intent to its subagents, and the intuition is sound — but in this doctrine <strong>feeding names the apex relay that introduces an external payload into an active surface</strong> (§Inbound handoff TBI marker), and the two events must not share a term. Use <em>runtime delegation</em>, <em>task dispatch</em>, or <em>supplying a sub-brief</em> for the parent→subagent operation. A sub-brief is an artifact of intent carrying derived task intent (<a href="intent-artifacts.html"><code class="doc-code">docs/intent-artifacts.md</code></a>); dispatching it crosses no surface boundary, creates no feed obligation, and acquires no routed-instance lifecycle.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="cross-surface-handoff-routing" class="doc-section-title">Cross-surface handoff routing</h3>
+<div class="doc-prose">
+<p class="doc-body">When one ASK project surface prepares a handoff for another, the routing follows a specific pattern. The originating surface preserves the handoff in its own scratch space; a copy lands in the recipient surface's <strong>intent inbox</strong>.</p>
+<p class="doc-body">The two copies serve different purposes at different aging rates. The origin scratch copy records the sending — authorship, local pressure, event context, what the origin thought it was sending — at the rate of the originating session (fast). The recipient intent-inbox copy records the receiving: the material is now durably available to the recipient as candidate normative input, aging at the recipient project's source-of-intent rate (slow). The two copies are necessary; neither replaces the other.</p>
+<p class="doc-body">The recipient project owns the absorption decision. It reads the handoff from inside its own active project surface — against its own repo truth, its own grounding note, and the broader stage of its own work — then classifies (per §Category distinctions) whether the material belongs as repo-local truth, grounding-note source-of-intent, roadmap pressure, advisor scratch, or premature implementation architecture. The origin surface may prepare and route context. It does not mutate the recipient's repo, grounding note, or project truth from outside. This implements the downstream absorption boundary at the file-routing level.</p>
+<p class="doc-body">When material crosses as candidate input requiring recipient classification, this protocol applies between ASK project surfaces regardless of their relative altitude. Downstream → downstream, methodology → downstream, downstream → methodology: the same discipline.</p>
+<p class="doc-body">The boundary this protocol turns on is the <strong>operating surface</strong>, not the repository. Two repositories operated by the same surface do not sit on opposite sides of that boundary, even though their artifact authority remains separate. Routing moves material <em>between</em> operating surfaces; where no such boundary is crossed, no handoff arises.</p>
+<pre class="doc-pre"><code class="language-text">origin scratch records the sending
+recipient intent inbox records the receiving
+recipient active surface decides post-ingestion disposition
+</code></pre>
+<p class="doc-body">The protocol is <strong>distinct from relay</strong>. Relay (per <a href="https://atomicspacekitten.substack.com/p/the-relay-is-the-instruction"><em>The Relay Is the Instruction</em></a>) confers operative force <strong>within the scope of ASK's relay envelope</strong> — the envelope determines whether the recipient is to read, classify, review, execute, hold, or otherwise act. Mere inclusion of an artifact does not make every proposition inside it operative intent. Cross-surface handoff routing confers candidate normative availability only — the copy into the recipient intent inbox does not authorize anything; it makes the material durably available for classification. Conflating the two reintroduces the failure mode <a href="https://atomicspacekitten.substack.com/p/the-handoff-is-not-the-instruction"><em>The Handoff Is Not the Instruction</em></a> names.</p>
+<p class="doc-body">Copy into the recipient intent inbox ≠ automatic absorption. Recipient ownership of absorption is non-negotiable.</p>
+<p class="doc-body">The full first-ingest-and-classify path for a <strong>fresh routed handoff</strong> distinguishes four events — routing, feeding, ingestion, disposition — each with its own actor and its own evidence. A fresh routed handoff may instead exit before ingestion through <code class="doc-code">-supersededA</code>, either before feeding or after a feed that did not result in ingestion. See §Inbound handoff TBI marker.</p>
+</div>
+<section class="doc-section">
+<h4 id="multi-repo-operating-surface-shared-intake" class="doc-subsection-title">Multi-repo operating surface: shared intake</h4>
+<div class="doc-prose">
+<p class="doc-body">A single operating surface may operate across more than one repo. In that case, the surface may maintain one shared recipient intent inbox for those repos, rather than one plane per repo. Receipt into that shared intake makes the material durably available for classification by the operating surface; it does <strong>not</strong> merge the artifact authority of the repos behind the surface.</p>
+<p class="doc-body">The routed memo names its candidate owner surface or surfaces where known. The operating surface classifies the eventual owner or owners after ingestion. Each resulting owner acts through its own governing source of truth and workflow: repo actions follow the owning repo's workflow; operator-canonical actions follow that canonical's write, version, and snapshot discipline. Physical co-location in one intake grants no cross-repo authority, and a filename addressee (<code class="doc-code">_to_&lt;surface&gt;_</code>) records intent, not storage or ownership.</p>
+<p class="doc-body"><strong>A shared intake is not an internal routing bus.</strong> Separate repo authority does not oblige the operating surface to hand material back to itself. Material originating inside the surface and bound for a repo that same surface operates does not enter the intake: the surface changes repo context, performs that repo's required reset and reads, and works under its own branch, diff, review, and merge gates. A memo addressed from a surface to itself crosses no <strong>cross-surface handoff boundary</strong> — the destination already holds the material — so it acquires no <code class="doc-code">-TBI</code> <strong>as a handoff marker</strong>.</p>
+<p class="doc-body"><strong>That prohibition is about the handoff, not the overlay.</strong> ASK may independently apply the orthogonal terminal <code class="doc-code">-TBI</code> overlay to an eligible same-surface artifact, or to an addressed copy of one, when that exact artifact still needs to be fed or re-fed into an active thread. Doing so creates no handoff, no candidate source-of-intent relation, and no repo authority; it records only that a feed is owed.</p>
+<p class="doc-body"><strong>Two boundaries, not one.</strong> A cross-surface handoff boundary is not an active-context ingestion boundary, and same-surface work needs the distinction:</p>
+<pre class="doc-pre"><code class="language-text">cross-surface handoff boundary   crossed when material moves between separately
+                                 operated surfaces — what -TBI-as-handoff tracks
+
+active-context ingestion         crossed when a particular active thread reads a
+boundary                         payload into its context — what a feed produces
+</code></pre>
+<p class="doc-body">Moving material among repositories one surface already operates crosses the first boundary not at all: no routed handoff arises. It may still require a feed into a particular active thread, and when that thread reads the payload under ASK's feed, a normal ingestion event occurs. That event creates no handoff, no candidate source-of-intent relation, and no repo authority — which is why the overlay's own re-feed rule can call a re-feed a genuine new ingestion event without contradicting the no-self-handoff prohibition above.</p>
+<p class="doc-body">Separate repository ownership is real and is not weakened by this. It simply is not a second cross-surface handoff boundary. Work awaiting a decision inside a surface that already holds the material is repo state, not intake state.</p>
+<p class="doc-body">Bypassing the intake does not bypass the audit trail. Where a durable record is required, use the carrier appropriate to the work: repo or PR history, a scratch recommendation or closure, or a captured relay or approval record. Same-surface movement removes the <code class="doc-code">-TBI</code> <strong>handoff</strong> — not the independent feed overlay, and not any evidence, review, or closure duties the work otherwise requires.</p>
+<p class="doc-body">This refines the carrier only. Recipient-owned absorption (§Inbound handoff TBI marker), the ingestion ≠ absorption disequality, and the closure-record requirement are unchanged. The default remains one intent inbox per project surface; the shared intake is the declared multi-repo-operating-surface case, not a new general default.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="scope-guard-handoff-routing-vs-protocol-conformance" class="doc-subsection-title">Scope guard: handoff routing vs protocol conformance</h4>
+<div class="doc-prose">
+<p class="doc-body">This section governs candidate material whose status must be classified by the recipient, and any change that must cross a recipient-owned absorption boundary. It does not make every cross-surface update a handoff.</p>
+<p class="doc-body"><strong>Establish the operating-surface relation before classifying authority.</strong> Where the destination is a repository the acting surface already operates, no handoff arises under any authority class — including candidate material the owning repo must still classify. The surface changes repo context and works under that repository's own gates; the classification happens there, as repo work. The authority and write-jurisdiction tests below govern material that genuinely crosses between operating surfaces.</p>
+<p class="doc-body">An ASK-authorized conformance change to a shared protocol owned upstream may propagate directly where the acting surface has write jurisdiction, through the consumer's normal workflow gates. Where that jurisdiction does not exist, the change routes to the owning surface.</p>
+<p class="doc-body">Protocol authority and write permission are separate axes: upstream ownership does not pierce a wall, while the existence of a surface boundary does not turn an already-authoritative protocol update into candidate source-of-intent.</p>
+</div>
+</section>
+</section>
+<section class="doc-section">
+<h3 id="handoff-memo-completeness" class="doc-section-title">Handoff memo completeness</h3>
+<div class="doc-prose">
+<p class="doc-body">A routed handoff memo should be self-contained at the moment it lands in the recipient surface's intent inbox. §Cross-surface handoff routing governs delivery mechanics; this rule governs the integrity of the artifact being delivered.</p>
+<p class="doc-body">The memo itself should carry:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Recipient-facing classification</strong> — what the material is from the recipient's perspective, per §Category distinctions (valid source-of-intent, current-stage refinement, roadmap pressure, advisor scratch, premature implementation architecture, or another category named by the receiving surface)</li>
+<li class="doc-body"><strong>Boundary statement</strong> — what the memo is and is not; what it authorizes and does not authorize</li>
+<li class="doc-body"><strong>Intended use</strong> — why the memo was prepared; what the recipient is meant to do with it</li>
+<li class="doc-body"><strong>Non-actions / out-of-scope</strong> — what the memo explicitly does not authorize</li>
+<li class="doc-body"><strong>Absorption caveats</strong> — handling guidance specific to the recipient</li>
+<li class="doc-body"><strong>Routing target</strong> — where the memo is going, if known</li>
+</ul>
+<p class="doc-body">The routing act may identify the file and the destination. It does not supply substantive wrapper logic that the recipient needs to interpret the memo. If wrapper logic is needed, it belongs inside the memo before routing.</p>
+<pre class="doc-pre"><code class="language-text">handoff memo carries durable handling meaning
+routing makes the artifact available
+ASK's relay envelope governs the feed
+recipient surface decides post-ingestion disposition
+</code></pre>
+<p class="doc-body">The completeness rule is the operational mechanism that makes cross-surface handoff routing work as designed. Without it, the routing protocol's promise — that the memo is durably available for recipient classification — is partially defeated: the file lands in the intent inbox (slow-aging) but its handling instructions live in chat relay (event-rate), and the durable copy ages out of sync with the meaning it depends on. The completeness rule restores the alignment.</p>
+<p class="doc-body">All meaning the recipient needs must age at the recipient's aging rate.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="inbound-handoff-tbi-marker" class="doc-section-title">Inbound handoff TBI marker</h3>
+<div class="doc-prose">
+<p class="doc-body"><em>The ontology this lifecycle sits inside — artifact classes, activation postures, the relay/feeding relation, and how routed instances differ from canonical and provenance lineages — is <code class="doc-code">docs/intent-artifacts.md</code>. This section owns the <strong>cross-cutting terminal feed-obligation overlay</strong>, which may sit above any artifact class, and the <strong>complete fresh-routed-handoff filename lifecycle</strong>: successful first ingestion, pre-ingestion retirement, and post-ingestion disposition.</em></p>
+<p class="doc-body">A fresh routed handoff copied into a recipient project's <strong>intent inbox</strong> carries the <code class="doc-code">-TBI.md</code> suffix until either its first ingestion is recorded by <code class="doc-code">-ingested</code> or its pre-ingestion retirement is recorded by <code class="doc-code">-supersededA</code>. (At method altitude the plane is the intent inbox; the target folder convention is <code class="doc-code">intent-INbox/</code>, and each surface's live index governs its current physical path until that surface completes its cutover.)</p>
+<p class="doc-body"><code class="doc-code">-TBI</code> is human ASK's <strong>outstanding feed-obligation marker</strong>, and its operator-facing question is the one ASK asks from a directory listing: <em>does this exact artifact still need to be fed into an active recipient-project thread?</em> It means <strong>the current feed obligation remains unsatisfied</strong>: no attempt has yet succeeded for <em>this</em> obligation, whether because no attempt has occurred or an attempt failed to produce ingestion. It says nothing about earlier successful feeds or prior ingestion history. TBI keeps the mnemonic &quot;to be ingested,&quot; but the obligation it tracks is the operator's: <strong>ASK feeds; the recipient-project surface ingests.</strong> It does not mean &quot;to be absorbed.&quot; The recipient project owns post-ingestion disposition.</p>
+<p class="doc-body"><strong><code class="doc-code">-TBI</code> is an orthogonal terminal overlay, not a step in the routed-instance state machine.</strong> It sits above whatever the artifact already is: a fresh routed handoff, a provenance transcript, an ordinary unmarked report, or an artifact that already carries a durable disposition. It is therefore <strong>not</strong> evidence that the artifact has never been ingested — an already-absorbed memo ASK wants read again carries the same flag, and means the same thing by it. The queue <code class="doc-code">-TBI</code> populates is an <strong>outstanding feed-obligation queue</strong>, not an unconsumed-artifact queue.</p>
+<p class="doc-body"><strong>Four events, not two.</strong> The full first-ingest-and-classify path for a <strong>fresh routed handoff</strong> distinguishes four distinct events. A fresh routed handoff may instead exit before ingestion through <code class="doc-code">-supersededA</code>, either before feeding or after a feed that did not result in ingestion; the four-event path is what a fresh handoff traverses when it <em>is</em> ingested and classified, not an inevitability of routing. Anything not currently in that state never enters it — including a routed instance whose first ingestion already occurred — and resolves the overlay under §Resolving the feed-obligation overlay instead. Collapsing any adjacent pair of the four is the failure this section corrects:</p>
+<pre class="doc-pre"><code class="language-text">routing     the origin makes material durably available in the recipient's intake
+            (§Cross-surface handoff routing) — candidate availability, nothing more
+feeding     ASK hands the material to the recipient's active surface — the operator-side act
+ingestion   the recipient surface reads the exact artifact into active context —
+            the resulting state when a feed succeeds, evidenced by renaming `-TBI`
+            to `-ingested`
+disposition the recipient classifies the material and records the resulting
+            durable disposition — absorption is one of them, not the name
+            for all of them (`docs/absorption-discipline.md`)
+</code></pre>
+<p class="doc-body"><strong>Feeding and ingestion are two faces of one boundary crossing — paired, but not atomic.</strong> Feeding is what ASK does; ingestion is the recipient-side state that results when the feed succeeds. <strong>Ingestion is not a proactive election by the surface</strong> — the surface does not decide to ingest, it ingests because it was fed. They are ordinarily seconds apart, which is exactly why they get merged. But a feed can fail, be deferred, or be superseded before the recipient acts. Feeding therefore expresses ASK's <em>intent</em> to have the material ingested; it is never itself ingestion evidence. <strong>Ingestion requires recipient-side evidence and is never inferred from the fact that a feed occurred.</strong></p>
+<p class="doc-body">More precisely, <code class="doc-code">-TBI</code> marks membership in the operator's <strong>outstanding feed-obligation queue</strong>: material ASK has saved — out of an advisor conversation, from another operating surface, or from the recipient surface's own past work — and still owes a successful feed on. That is what the suffix tracks. A successful feed satisfies the obligation; the filename overlay resolves once governed role and prior lifecycle state are established, per §Resolving the feed-obligation overlay. It is not a record of pending repo work, not a statement about which repo owns the eventual decision, and <strong>not a claim that the artifact has never been ingested before</strong>.</p>
+<p class="doc-body">The disequality is hard and load-bearing:</p>
+<pre class="doc-pre"><code class="language-text">ingestion ≠ disposition — and therefore ingestion ≠ absorption
+`-TBI` → `-ingested` = the ingestion signal for a FRESH ROUTED HANDOFF
+                       (first lifecycle mutation after successful content
+                       read). For anything NOT CURRENTLY IN THAT STATE —
+                       including an already-ingested or dispositioned routed
+                       instance — a successful feed removes the overlay only.
+                       See §Resolving the feed-obligation overlay
+disposition = the later recipient-owned classification; every transition
+              from `-ingested` to a terminal disposition suffix requires
+              a durable disposition record in the same bounded operation.
+              Absorption is one such disposition, not the name for all
+</code></pre>
+<p class="doc-body">Leaving <code class="doc-code">-TBI</code> on a fresh routed handoff until its payload is absorbed is the failure this section corrects: after successful first ingestion, retaining <code class="doc-code">-TBI</code> falsely leaves a satisfied feed obligation open and hides the visible <code class="doc-code">-ingested</code> / pre-disposition interval. (A memo that has been <em>fed</em> but not yet ingested is a different thing entirely: it is genuinely still queued, and its marker is telling the truth.) Rename to <code class="doc-code">-ingested</code> on ingestion; record the later durable disposition in a terminal suffix that agrees with its disposition record.</p>
+<p class="doc-body"><strong>Why a fresh routed handoff carries two states rather than one.</strong> This rationale is specific to the fresh-handoff case; for a PTX, an ordinary artifact, or an already-dispositioned one, removing only the overlay <em>is</em> the correct operation. But a fresh routed handoff whose <code class="doc-code">-TBI</code> were simply removed would be indistinguishable from one that never carried a marker — so a bare unmarked filename could not answer <em>&quot;has this been ingested but not yet closed?&quot;</em> In long branching work, that question is exactly the one that goes unanswered while a thread descends through successive rabbit holes. <code class="doc-code">-ingested</code> makes the post-ingestion, pre-closure interval visible, so the open tail is legible from a directory listing rather than reconstructible only from memory.</p>
+<p class="doc-body"><strong>The fresh routed-handoff lifecycle.</strong> The numbered steps below govern a <em>fresh routed handoff</em> only. Anything not currently in that state — including a routed instance already ingested or dispositioned — resolves its overlay under §Resolving the feed-obligation overlay and then <strong>exits this lifecycle</strong>: outside a fresh handoff's first ingestion, removing <code class="doc-code">-TBI</code> is a feed-obligation filename mutation, not a routed-instance lifecycle mutation, and it triggers no handoff classification, disposition, or closure. Whatever review or classification follows comes from ASK's relay envelope or from that artifact class's own rules.</p>
+<ol class="doc-list">
+<li class="doc-body">Origin prepares a self-contained handoff memo per §Handoff memo completeness. The origin scratch trail copy uses a clean filename (no <code class="doc-code">-TBI</code>).</li>
+<li class="doc-body">The recipient copy lands in the recipient surface's intent inbox with the <code class="doc-code">-TBI.md</code> suffix.</li>
+<li class="doc-body">ASK feeds the memo into the recipient active project surface — <strong>by value</strong> (attaching or pasting it) or <strong>by reference</strong> (supplying the exact path, which the recipient then resolves through a connector or by reading the filesystem). Both are valid feeds; a bare exact path addressed to an active surface is a feed. Ingestion still requires the recipient to retrieve and read the artifact: a failed retrieval, or a path resolving only to metadata, has not produced ingestion. A lossy or normalized view may constitute content read under a bounded fidelity claim; where the omitted portion could affect classification, obtain an adequate representation first. Feeding is the operator-side act and expresses the intent to have the memo ingested; it records nothing on its own. A memo can be fed and still not be ingested — if the session never reads it into active context, if it is superseded first, or if the feed simply fails.</li>
+<li class="doc-body">The recipient active surface's <strong>first lifecycle mutation after successful content read — before any classification or disposition work begins — is to rename <code class="doc-code">-TBI</code> to <code class="doc-code">-ingested</code> in place.</strong> The content read establishes ingestion; the rename records it. Rename only. The rename records nothing about what was absorbed, held, declined, routed, or superseded.</li>
+<li class="doc-body">The recipient surface <strong>then</strong> classifies the memo per §Category distinctions and <code class="doc-code">docs/absorption-discipline.md</code> — <strong>absorb / hold / decline / route-elsewhere / withdraw / no-route.</strong> (The classification verb is <code class="doc-code">decline</code>; its filename form is <code class="doc-code">-declined</code>. Earlier text used <code class="doc-code">reject</code> for the same classification — prospectively, use <code class="doc-code">decline</code>.) Classification is a separate, recipient-owned decision that follows the rename; it is never a precondition of it.</li>
+<li class="doc-body"><strong>Every transition from <code class="doc-code">-ingested</code> to a terminal disposition suffix requires a durable disposition record, recorded in the same bounded operation — including <code class="doc-code">-supersededP</code>.</strong> A durable closure record is <strong>required</strong> — classification, actions, non-actions, remaining held items. It may be a separate dated memo in <code class="doc-code">scratch/</code> (<code class="doc-code">scratch/*_absorption.md</code>) <strong>or</strong> an appended terminal section in an explicitly maintained program or absorption record; do not create a new artifact solely to satisfy form. <strong>A rename is not a closure record</strong>, and a closure record without the rename leaves the filename lying. <strong>Recording the closure and applying the terminal rename are one bounded operation</strong> — <code class="doc-code">-ingested</code> becomes an accurate terminal disposition suffix (<code class="doc-code">-absorbed</code>, <code class="doc-code">-held</code>, <code class="doc-code">-declined</code>, <code class="doc-code">-withdrawn</code>, <code class="doc-code">-routed</code>, <code class="doc-code">-no-route</code>, <code class="doc-code">-closed</code>, <code class="doc-code">-supersededP</code>) at the same moment the disposition becomes durable. Use <code class="doc-code">-absorbed</code> only where absorption describes the artifact-level outcome; use <code class="doc-code">-closed</code> where the closure carries mixed claim-level outcomes.</li>
+<li class="doc-body">The recipient does <strong>not</strong> edit the received handoff after routing. The filename lifecycle marker carries current disposition. The durable disposition record required by step 6 — whether a dedicated scratch memo or an appended terminal / current-status section — is current disposition evidence and must agree with the filename marker. No receipt annotation or successor link is written into the received file.</li>
+<li class="doc-body">The received handoff remains byte-identical to the received record. Any sender-authored status line remains routing-time historical evidence. The separate closure or maintained current-status record carries the later recipient disposition; the received body does not.</li>
+</ol>
+<pre class="doc-pre"><code class="language-text">handoff memo body remains the byte-immutable received record
+filename marker carries current lifecycle disposition
+recipient surface decides post-ingestion disposition
+closure record and terminal rename are one bounded operation
+any separate maintained current-status record agrees with the filename marker
+</code></pre>
+<p class="doc-body">The marker confers no authority on the memo content. Without it, a <em>fresh routed handoff</em> awaiting first ingestion is indistinguishable from one whose first ingestion occurred but whose durable disposition remains open, and the queue becomes invisible to the operator across multiple recipient surfaces. That benefit is the fresh-handoff specialization's, not a universal property of the overlay.</p>
+<p class="doc-body"><strong>Supersession has two phases.</strong> Ingestion is not the only way a <em>fresh routed handoff</em> leaves the outstanding feed-obligation queue. At any point before ingestion — including after a feed the recipient surface never ingested — the memo may instead be <em>retired</em>. And an artifact that was ingested may later be displaced by a successor. These are different events and the marker distinguishes them by phase —</p>
+<pre class="doc-pre"><code class="language-text">-TBI → -ingested        ingested — read into the recipient's active context
+-TBI → -supersededA     ANTI-ingestion: retired before ingestion, never consumed
+-ingested → -supersededP  POST-ingestion: ingested, then displaced by a successor
+</code></pre>
+<p class="doc-body">Pre-ingestion retirement to <code class="doc-code">-supersededA</code> is the one transition that needs no absorption closure — no recipient absorption occurred — but it still requires an explicit lineage or current-status record naming the successor. A <code class="doc-code">-supersededA</code> intake artifact was never ingested and never absorbed. It carries no pending work; it remains in the intent inbox only as lineage, typically beside an active successor that carries its own <code class="doc-code">-TBI</code>. A <code class="doc-code">-supersededP</code> artifact <em>was</em> ingested — its lineage records that the recipient read it before a successor displaced it, which is a materially different history and is why the phase is encoded rather than flattened. Its physical presence in the intake folder is not queue membership — it is not reactivated, re-ingested, or renamed off merely because the file is still there. This is the same queue-lies error this section corrects, one step earlier: an item can be superseded by a better-scoped successor before it is ever ingested, and that retirement must be expressible without pretending the retired item was ingested. Neither exit authorizes implementation.</p>
+<p class="doc-body"><strong>Historical body versus current disposition.</strong> The received handoff body is a fixed historical record: byte-immutable, edited neither on ingestion nor on pre-ingestion supersession. If the <em>sender</em> wrote a status line into the body, that line records the routing-time state and stays as historical evidence — it is not rewritten because the recipient later ingested or superseded the artifact. Current lifecycle disposition rides carriers that age at the rate the disposition itself changes:</p>
+<pre class="doc-pre"><code class="language-text">underlying         artifact identity / role + PRIMARY durable-state marker where
+filename           the class has one
+                   -ingested read-but-not-closed · terminal disposition suffix ·
+                   -supersededA retired-unconsumed · -supersededP ingested-then-displaced
+terminal -TBI      SECOND, FASTER-AGING AXIS — ASK's outstanding feed obligation.
+                   Not a disposition; it neither displaces nor erases the
+                   underlying one. `topic-absorbed-TBI.md` says both at once:
+                   durable disposition absorbed · feed obligation outstanding
+disposition /      SECONDARY current evidence, as applicable — the step-6 durable
+lineage record     disposition record, OR the pre-ingestion lineage /
+                   current-status record naming the successor of a -supersededA
+                   artifact. Either may be a dedicated scratch memo or an
+                   appended terminal / current-status section; never a
+                   post-receipt edit to the received memo
+received body      HISTORICAL — the received record, plus any sender routing-time status line
+</code></pre>
+<p class="doc-body">The underlying durable-state marker is the primary filename evidence of disposition, where the artifact class has one; any disposition record must agree with it. Terminal <code class="doc-code">-TBI</code> is <strong>independent</strong> evidence of an outstanding feed obligation. It may coexist with any truthful underlying role or durable state, and it neither participates in nor overrides that agreement check — <code class="doc-code">topic-absorbed-TBI.md</code> asserts two simultaneously true things on two axes, not one claim that could contradict itself. The immutable body is exempt from that agreement: a sender's historical routing-status string is not required to match a later recipient disposition, precisely because it is historical. Successor linkage — &quot;retired in favor of X&quot; — belongs in a closure or explicit lineage record, never in a post-receipt edit to the received body. This is the aging-rate split applied inside a single artifact: the received record does not change, so the <strong>underlying durable-state marker — not the body — carries current disposition</strong>, while terminal <code class="doc-code">-TBI</code> separately carries the faster-aging feed obligation.</p>
+<p class="doc-body"><strong>The queue is logical, not a folder.</strong> The outstanding feed-obligation queue may occupy more than one physical location — an ASK-side staging area, an origin's scratch space, a transit surface, and the recipient's declared intake path. The <code class="doc-code">-TBI</code> marker attaches when the artifact <strong>enters the queue</strong>, wherever that is; relocation <em>within</em> the queue is not a lifecycle event and neither applies nor re-applies a marker. A fresh routed handoff leaves the queue by ingestion (<code class="doc-code">-TBI</code> → <code class="doc-code">-ingested</code>) or by pre-ingestion retirement (<code class="doc-code">-TBI</code> → <code class="doc-code">-supersededA</code>); any other artifact leaves it when the overlay is resolved or canceled, its underlying filename unchanged.</p>
+<p class="doc-body"><strong>External-origin / read-only-source variant.</strong> This is the logical queue's most common shape, not a special case. Some handoff memos are generated by a source that cannot write directly into the recipient project's intent inbox — for example, a domain-authority review chat with read-only access to the recipient's external directory. In that case, the <code class="doc-code">-TBI</code> suffix appears on the file in transit before it reaches the intent inbox. ASK routes the memo into the recipient plane with the suffix intact; after successful content read, the first recipient-side filename mutation resolves the overlay according to governed role and prior state — for a fresh handoff that is the in-place <code class="doc-code">-TBI</code> → <code class="doc-code">-ingested</code> rename, and for anything else it removes only <code class="doc-code">-TBI</code>, a feed-obligation filename mutation rather than a routed-instance lifecycle mutation. Arriving in the intake folder is a move within the queue, not an entry into it and not an exit from it. The marker tracks ASK's outstanding feed obligation regardless of where the file originates or how many locations it occupies on the way; first-ingestion state is the fresh-handoff specialization, not the overlay's general meaning.</p>
+<p class="doc-body"><strong>Marker grammar.</strong> <code class="doc-code">-TBI</code> is always the final token before <code class="doc-code">.md</code>, because it is the flag ASK scans a directory for. Everything else — stem, version index, role or addressee marker, durable lifecycle state — belongs to the artifact and precedes it:</p>
+<pre class="doc-pre"><code class="language-text">&lt;otherwise-complete-underlying-filename&gt;-TBI.md
+
+topic-4ASK-TBI.md  →  topic-4ASK-ingested.md  →  topic-4ASK-absorbed.md
+topic_v2-4TMK-TBI.md  →  topic_v2-4TMK-ingested.md  →  topic_v2-4TMK-closed.md
+topic-4ASK-TBI.md  →  topic-4ASK-supersededA.md
+topic-4ASK-ingested.md  →  topic-4ASK-supersededP.md
+
+topic-PTX-TBI.md      →  topic-PTX.md          overlay resolved; still a PTX
+topic-PTX_v2-TBI.md   →  topic-PTX_v2.md
+topic-report-TBI.md   →  topic-report.md       ordinary artifact, re-fed
+topic-absorbed-TBI.md →  topic-absorbed.md     disposition untouched
+</code></pre>
+<p class="doc-body">Within the underlying filename an addressee marker (<code class="doc-code">-4ASK</code>, <code class="doc-code">-4TMK</code>) precedes the durable lifecycle state and is never stacked after it.</p>
+<p class="doc-body"><code class="doc-code">-TBI</code> and <code class="doc-code">-PTX</code> stay uppercase: they are the human-facing markers ASK scans a directory for — one says <em>this still needs feeding</em>, the other names an artifact role. Ordinary post-ingestion disposition words are lower-case, so they recede once no operator action is pending; supersession uses the lower-case <code class="doc-code">superseded</code> stem plus the ruled uppercase phase qualifier <code class="doc-code">A</code> or <code class="doc-code">P</code>, which is the one deliberate exception. <code class="doc-code">-PTX</code> is an artifact-role marker, not a lifecycle state — and because <code class="doc-code">-TBI</code> is an orthogonal feed-obligation overlay rather than a lifecycle suffix, <strong><code class="doc-code">-PTX</code> may carry it</strong>. <code class="doc-code">topic-PTX-TBI.md</code> is valid and means exactly what it says: a provenance transcript ASK still owes a feed on.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="resolving-the-feed-obligation-overlay" class="doc-section-title">Resolving the feed-obligation overlay</h3>
+<div class="doc-prose">
+<p class="doc-body">A successful content read <strong>of the marked payload, by the intended active recipient surface, under ASK's feed</strong> satisfies the current feed obligation. A source-side inspection — reading a governing record, verifying bytes, or consulting an inspection copy — does not satisfy the current feed obligation, though it may supply exactly the role/state identification or verification evidence the preflight below calls for. The filename overlay is then resolved once role and prior state are established — the read and the rename are distinct events, and what the filename becomes depends on the artifact's class and prior state, not on whether the name already contains another suffix:</p>
+<pre class="doc-pre"><code class="language-text">IF the underlying artifact is a fresh routed handoff awaiting its first ingestion
+    replace terminal `-TBI` with `-ingested`
+
+OTHERWISE — a provenance transcript, an ordinary unmarked artifact, or an
+artifact already carrying a durable disposition
+    remove terminal `-TBI` and restore the complete underlying filename unchanged
+</code></pre>
+<p class="doc-body"><strong>Establish the governed artifact role and prior lifecycle state; do not infer either from the filename.</strong> Stripping <code class="doc-code">-TBI</code> and finding no other suffix does <strong>not</strong> establish a fresh routed handoff — an ordinary unmarked report carries the overlay the same way. Neither does inbox residency: the queue is logical, and a file sits in the intake for reasons that have nothing to do with what it is. Establish both from the artifact's <strong>governed role, body, location, and routing record</strong> before choosing a branch. Role alone is not enough: a known routed handoff whose prior ingestion state is unresolved leaves the branch unresolved too, because the discriminator is the fresh-awaiting-first-ingestion state rather than the class.</p>
+<pre class="doc-pre"><code class="language-text">verified fresh routed handoff awaiting first ingestion
+    -TBI becomes -ingested
+
+anything else with established role and prior state
+    remove only -TBI
+
+role or prior state unresolved
+    stop before feeding
+</code></pre>
+<p class="doc-body"><strong>An unresolved role or prior state is a stop condition.</strong> Removal-only is not a safe default there, because the unresolved artifact might <em>be</em> a fresh routed handoff — and one may never become bare and unmarked. Resolve neither branch until both are established: do not remove <code class="doc-code">-TBI</code>, and do not append <code class="doc-code">-ingested</code>.</p>
+<p class="doc-body"><em>Identify</em> and <em>establish</em> are the verbs for this operation. <strong>Classification</strong> is reserved for the later recipient-owned disposition decision at step 5 — the two are materially different operations and do not share a verb.</p>
+<p class="doc-body"><strong>Establish role and prior state before feeding.</strong> This is a normal-path precondition, not a preference. Where either cannot be established from the artifact's governed role, routing record, location, and existing context, <strong>do not feed that marked artifact yet</strong> — identify it first from the governing record or an inspection copy. The <em>opportunity</em> to identify before feeding is lost once the marked artifact has been read; identification itself remains recoverable through the bounded exception path below.</p>
+<p class="doc-body"><strong>Already-read recovery.</strong> If an unidentified marked artifact was read anyway, the feed obligation is already satisfied and a retained <code class="doc-code">-TBI</code> no longer states it truthfully — but removing it and appending <code class="doc-code">-ingested</code> are both still unavailable, because either would assert a role or prior state that has not been established. Record the successful read and the unresolved role/state exception, treat terminal <code class="doc-code">-TBI</code> as <strong>temporarily non-authoritative feed-obligation evidence</strong> rather than a current claim, and resolve it immediately once both are established. The demotion is confined to that axis: the underlying artifact identity and any truthful durable-state marker remain authoritative under their own rules — in <code class="doc-code">topic-absorbed-TBI.md</code> the <code class="doc-code">absorbed</code> disposition keeps saying exactly what it says while only the feed flag is stale. This is bounded error recovery, not a second normal path, and the exception record is what keeps the interim honest.</p>
+<p class="doc-body">A re-feed is a genuine new ingestion event. It does <strong>not</strong> reopen, reclassify, erase, or advance the underlying durable disposition, and it does not convert one artifact class into another: feeding a PTX does not make it a handoff, project truth, an implementation instruction, or an absorption candidate. Where a re-feed needs durable audit evidence, record the feed event in the appropriate provenance or status record — never by overloading the disposition suffix to count reads.</p>
+<p class="doc-body"><strong>Canceled feed obligation.</strong> ASK may withdraw an overlay without any content read, by removing <code class="doc-code">-TBI</code> alone. This is <em>not</em> a decline — <code class="doc-code">decline</code> is the recipient's classification verb and maps to <code class="doc-code">-declined</code>. Cancellation is ASK-side and touches nothing but the flag.</p>
+<p class="doc-body">Cancellation is available only where the underlying artifact already has an independently complete identity or durable state. <strong>A fresh routed handoff may never become bare and unmarked this way</strong> — it still requires an explicit pre-ingestion disposition, and <code class="doc-code">-supersededA</code> remains the named-successor displacement case. A no-successor withdrawal of a fresh routed handoff is not defined here and needs its own ruling rather than a silent bare filename.</p>
+<p class="doc-body"><strong>Truth preservation and contractual locators.</strong> Semantically any artifact may be the subject of a feed obligation. Physically, an <strong>in-place</strong> overlay is valid only where resolving it leaves an underlying filename whose claims remain true, and where no contractual locator breaks. Two cases fail that test:</p>
+<pre class="doc-pre"><code class="language-text">-supersededA        claims the artifact was retired before ingestion, never
+                    consumed. A successful re-feed makes that false, so
+                    `topic-supersededA-TBI.md → topic-supersededA.md` is not a
+                    valid in-place operation.
+
+fixed-path carriers `_INDEX` · `_STATE.md` · a grounding-note canonical · any
+                    locator another surface resolves by exact path. Renaming
+                    one to carry a temporary flag breaks the retrieval contract.
+</code></pre>
+<p class="doc-body">The two cases fail that test for different reasons, so their remedies differ:</p>
+<pre class="doc-pre"><code class="language-text">historical          preserve the original untouched, and do not let it be the
+-supersededA        payload read into the intended recipient surface under the
+artifact            new obligation. Feeding it by reference still delivers that
+                    exact artifact and falsifies its retired-unconsumed claim,
+                    even though nothing was renamed. Feed an addressed copy, or
+                    a reference-bearing feed artifact derived from it.
+                    Source-side verification, provenance inspection, and the
+                    copying needed to build that derivative are unaffected.
+
+fixed-path          feed the original BY REFERENCE at its stable contractual
+canonical /         path, or use an addressed copy. Recipient-side reading
+structural carrier  breaks nothing; renaming it is what breaks the contract.
+</code></pre>
+<p class="doc-body">The distinction is which operation does the damage. For a <code class="doc-code">-supersededA</code> artifact it is the <strong>recipient-surface</strong> read, so the original must not be the thing fed — its historical disposition stays truthful precisely because no recipient ever consumed it. Source-side reading does not touch that claim. For a fixed-path carrier it is the rename, so the original may be fed freely and simply must keep its name.</p>
+<p class="doc-body"><strong>This convention is prospective.</strong> Existing unmarked ingested artifacts, and existing upper-case <code class="doc-code">-INGESTED</code>, <code class="doc-code">-ABSORBED</code>, <code class="doc-code">-SUPERSEDED</code>, <code class="doc-code">-CLOSED</code>, or other historically informative suffixes, are preserved and are <strong>not</strong> normalized to match this grammar. A filename carries information; syntactic consistency is not a reason to destroy it. Historical filenames retain the conventions in force when they were created, and legacy tokens do not acquire the prospective meanings defined here.</p>
+<p class="doc-body">One consequence should be stated rather than discovered: because the convention is prospective, pre-adoption <strong>unmarked</strong> artifacts may remain ambiguous between <em>ingested-and-closed</em> and <em>ingested-with-closure-pending</em>. Historically informative suffixes retain whatever evidence they actually carry — an old <code class="doc-code">-ABSORBED</code> or <code class="doc-code">-CLOSED</code> filename is not ambiguous in the same way an unmarked one is. The <code class="doc-code">-ingested</code> signal provides a complete post-ingestion closure queue only for artifacts governed after a surface adopts the convention; the pre-adoption plane as a whole is therefore not a complete closure queue, and should not be read as one.</p>
+<p class="doc-body">Version succession is not supersession. A carrier canonical advancing <code class="doc-code">_v2</code> → <code class="doc-code">_v3</code> is ordinary revision lineage; <code class="doc-code">-supersededA</code> and <code class="doc-code">-supersededP</code> answer a different question — whether an <em>addressed routed artifact</em> crossed ingestion before being displaced. Standing and invocable carriers do not take routed-instance <strong>disposition</strong> suffixes at all (<code class="doc-code">docs/intent-artifacts.md</code>) — though an eligible artifact, or an addressed copy of one, may carry the orthogonal terminal <code class="doc-code">-TBI</code> overlay, subject to the truth-preservation and fixed-locator constraints above.</p>
+<p class="doc-body">Copy + suffix do not authorize anything. <code class="doc-code">-TBI</code> carries human ASK's outstanding feed obligation; the recipient owns post-ingestion disposition, while ASK may retire a fresh routed handoff before ingestion through <code class="doc-code">-supersededA</code>.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="external--domain-authority-handoff-classification" class="doc-section-title">External / domain-authority handoff classification</h3>
+<div class="doc-prose">
+<p class="doc-body">Some projects have an external source-of-intent loop where domain authority sits in a different role than architect/operator, and handoff content (memos, sketches, expert recaps) enters the system from outside the operator's direct authoring.</p>
+<p class="doc-body"><a href="https://github.com/apexSolarKiss/urban-observatory"><code class="doc-code">urban-observatory</code></a> is the project where this pattern first surfaced. ASK is the project's architect/operator; the domain authority is a separate role. Domain-authority input arrives as handoffs that may carry valid source-of-intent, current-stage refinement, future roadmap, advisor scratch, or premature implementation architecture in the same artifact. The project's grounding note v12 added a project-specific guardrail: classify the handoff against those categories before treating any of it as current repo direction.</p>
+<p class="doc-body">The project-specific guardrail itself stays in <code class="doc-code">urban-observatory</code>'s grounding note. The generalized rule lives here as method doctrine:</p>
+<blockquote class="doc-quote">
+<p>When a project separates domain authority from architect/operator authority, domain-authority input is classified against the project's current stage before it reshapes current repo work. The role split creates an unavoidable authority boundary: expertise may be authoritative within its named domain without authorizing project-stage advancement, implementation architecture, execution, publication, or closure. Domain facts, constraints, and judgments may therefore bind within an explicitly delegated scope, while future-facing or implementation-shaped material remains future roadmap, advisor scratch, or premature implementation architecture until the architect/operator promotes it.</p>
+</blockquote>
+<p class="doc-body">This rule is promoted under the absorption discipline's structural-argument exception. The pressure follows from the role structure itself rather than from Urban Observatory's local review mechanics. <code class="doc-code">urban-observatory</code> remains the first worked instance. A forthcoming second project may test and refine the rule, but is not counted as demonstrated evidence before implementation.</p>
+<p class="doc-body">The classification is claim-level, not whole-artifact: one handoff may carry a binding domain judgment and a premature implementation proposal at once, and each claim is classified on its own. A review does not advance project stage by implication — out-of-stage material is preserved as future roadmap, advisor scratch, or premature implementation architecture until the architect/operator promotes it, neither adopted as current direction nor silently discarded.</p>
+<p class="doc-body">The category mapping for handoff classification reuses the doctrine's category distinctions above. <em>Valid source-of-intent</em> maps to the first row; <em>current-stage refinement</em> maps to architectural-means; <em>future roadmap</em>, <em>advisor scratch</em>, and <em>premature implementation architecture</em> map directly. The classification is not a separate taxonomy — it is the doctrine's existing categories applied at the moment external content enters the system.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="handoff-necessity--domain-authority-review" class="doc-section-title">Handoff necessity // domain-authority review</h3>
+<div class="doc-prose">
+<p class="doc-body">§Cross-surface handoff routing separates two acts: the <strong>relay</strong> confers operative force within the scope of ASK's envelope — which may be as narrow as <em>read this</em> or as wide as <em>execute this exactly</em> — while routing a handoff into a recipient's intent inbox confers only candidate normative availability. A corollary the method must state explicitly, because omitting it produces ceremony: <strong>before creating a handoff, determine whether one is needed at all.</strong></p>
+<p class="doc-body">A domain authority supplies or validates judgment within a named domain. The role does not by itself confer project-level source-of-intent, architecture, execution, publication, or closure authority; those rights are named explicitly or they are absent. A domain authority's judgment may be advisory, delegated-binding within a named scope, or apex-level when the same person also owns the project intent — which one it is must be stated, not inferred from expertise (see <a href="governance.html"><code class="doc-code">docs/governance.md</code></a> §Operational governance, delegated discretion).</p>
+<p class="doc-body">When a decision is already settled and reaches the acting surface through an authorized relay, a new handoff adds nothing. A handoff is <strong>unnecessary</strong> when all of the following hold:</p>
+<ul class="doc-list">
+<li class="doc-body">the human decision is explicit;</li>
+<li class="doc-body">the proposal or target being decided is fixed and identifiable;</li>
+<li class="doc-body">the authorized operator forwards the decision with its qualifications and scope;</li>
+<li class="doc-body">no material meaning is lost between the human response and the executor.</li>
+</ul>
+<p class="doc-body">Then the route is direct:</p>
+<pre class="doc-pre"><code class="language-text">human judgment &gt;&gt; authorized relay &gt;&gt; execution
+</code></pre>
+<p class="doc-body">The relay is the instruction. <strong>Do not send a settled, already-relayed decision back to its source thread to be repackaged into a memo.</strong> Re-eliciting it to produce a transport artifact the relay already carried adds no judgment, condition, authorization, or scope; it spends the operator's ceremony budget and the reviewer's attention for redundant provenance. The executor's closure already preserves that provenance — proposal reviewed, decision as stated, qualifications applied, files changed, verification.</p>
+<p class="doc-body">A handoff <strong>is</strong> warranted when meaning genuinely needs asynchronous transport or durable structured capture: the review was asynchronous and the operator was not present; the answer spans many decisions or qualifications; ambiguity remains; the recipient lacks context the relay cannot safely compress; or an audit, legal, contractual, or confidentiality requirement demands a standalone record. A handoff preserves and transports meaning; it does not add authority, and neither does re-issuing one.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="operator-grounding-note-extension-adjacent-pressure" class="doc-section-title">Operator grounding-note extension (adjacent pressure)</h3>
+<div class="doc-prose">
+<p class="doc-body">Source-of-intent has a persistence problem at every layer below it — projects forget across threads, tools forget across sessions. The method's response is the grounding note: durable context that carries externalized, single-sourced intent the system reads on entry.</p>
+<p class="doc-body">The same persistence problem applies to the operator. The operator works across tools, across threads, across weeks. The durable facts about the operator — how they want to be engaged, what context shapes their judgment, what's load-bearing for them this week — do not survive a thread boundary either. Every new conversation starts cold; tools disagree about state; the operator re-explains constantly.</p>
+<p class="doc-body">This is the project-memory problem with the subject changed. If the grounding note is the durable carrier for a project, the operator needs a grounding note too. Same architecture: externalized files, organized by aging rate, single-sourced, read on entry, surviving any thread. Pointer discipline at the boundaries, aging-rate discipline within.</p>
+<p class="doc-body">This is adjacent method pressure, not method doctrine to absorb wholesale. The operator-grounding-note pattern lives operator-side; its specifics (file names, content layout, tool-specific behaviors) are not method-ASK's to articulate. What method-ASK preserves is the structural observation that <em>source-of-intent persistence applies recursively to the operator who supplies the intent</em>.</p>
+<p class="doc-body">Two implications for the doctrine:</p>
+<ul class="doc-list">
+<li class="doc-body">The operator's source-of-intent has the same load-bearing-ness as the project's. The axiom-outside-the-recursion (per <a href="https://atomicspacekitten.substack.com/p/machine-builds-machine"><em>Machine Builds Machine</em></a>) lives in the operator; the operator's context can no more be left to ephemeral threads than the project's can.</li>
+<li class="doc-body">The dual-axis role-typing matters. Architect/operator and domain authority are different roles, and the source-of-intent pattern works differently depending on which role is supplying intent. The external/domain-authority handoff classification rule above is one specific instance of this dual-axis structure.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="canonicality-is-not-normative-force" class="doc-section-title">Canonicality is not normative force</h3>
+<div class="doc-prose">
+<p class="doc-body">A canonical context note can carry, describe, or preserve source-of-intent material without becoming the authority behind it. Canonicalization — the absorption of settled reasoning into durable context — is distinct from <strong>normative adoption</strong>, the separate act by which the operator establishes intent, direction, or constraint. A file can hold the settled account of a decision without being the source of that decision; folder membership confers no canonicality, and the authorized source of intent remains the source; the note records or carries the settled account. Canonicality does not itself confer normative force. The mechanics of the authorized transition — when reasoning earns a durable home, and how — live in <a href="absorption-discipline.html"><code class="doc-code">docs/absorption-discipline.md</code></a>.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="self-superseding-clause" class="doc-section-title">Self-superseding clause</h3>
+<div class="doc-prose">
+<p class="doc-body">This doctrine should be superseded by:</p>
+<ul class="doc-list">
+<li class="doc-body">a future <code class="doc-code">docs/external-handoff-classification.md</code> if the now-promoted external/domain-authority handoff rule outgrows this doctrine's category distinctions and earns its own first-class home on separability grounds — a heavier threshold than the rule-level promotion already made</li>
+<li class="doc-body">splitting-out of the validation-loop discipline into its own doc if validation-pattern substrate accumulates beyond what this doctrine can carry</li>
+<li class="doc-body">broader refactoring if the category distinctions earn their own home (e.g., <code class="doc-code">docs/category-distinctions.md</code>) and source-of-intent contracts to a thinner doctrine that references it</li>
+<li class="doc-body">a future <code class="doc-code">docs/layer-classification.md</code>, or <code class="doc-code">docs/absorption-discipline.md</code>, if the grounding-note refresh preflight subsection grows into a broader treatment that absorbs it</li>
+</ul>
+<p class="doc-body">The doctrine is not finished. The eight-category distinction may refine as more pressure surfaces. The operator-grounding-note extension may earn fuller treatment if the operator-side architecture becomes method-relevant in its own right (rather than as adjacent pressure). The external/domain-authority handoff classification has been promoted to rule-level doctrine on the structural-argument exception; its remaining open move is the separability-driven split into its own doc, not a further promotion.</p>
+<p class="doc-body">Anchor reading lives in <a href="articles.html"><code class="doc-code">docs/articles.md</code></a>. The articles most directly substrating this doctrine are <em>From Conversation to Control Surface</em> (recovered intent → validated constraint → repo), <em>The Handoff Is Not the Instruction</em> (the five-category classification), and <em>Context // The Operator Needs a Grounding Note Too</em> (the operator-side persistence pressure).</p>
+</div>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/source-of-intent.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../source-of-intent.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="method.html">method</a></li>
+      <li><a href="absorption-discipline.html">absorption discipline</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="bounded-generativity.html">bounded generativity</a></li>
+      <li><a href="governance.html">governance</a></li>
+      <li><a href="intent-artifacts.html">intent artifacts</a></li>
+      <li><a href="normative-apex.html">normative apex</a></li>
+      <li><a href="portable-definition-layer.html">portable definition layer</a></li>
+      <li><a href="relative-externality.html">relative externality</a></li>
+      <li><a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+      <li data-surface-nav-current></li>
+      <li><a href="source-of-truth-and-aging-rate.html">source of truth and aging rate</a></li>
+      <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/source-of-intent.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../source-of-intent.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>

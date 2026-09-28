@@ -46,13 +46,18 @@ They exist to prevent four specific collapses, one per figure:
   set. It consumes the local Tier 1 + Tier 2 mirror and the vendored
   `_dsa-surface/` carriers; its Tier 3 does not propagate into the diagrams.
 - `_dsa-surface/` — pinned, byte-identical `surface-shell`, `surface-panel`, and
-  `surface-action` carriers plus the mode-aware ASK wordmark pair used only by
-  `index.html`.
+  `surface-action` carriers plus the mode-aware ASK wordmark pair used by
+  `index.html` and by the reading pages in `../read/`.
   - `surface-shell.js` — the shell's responsive-navigation runtime, adopted by
-    `index.html`. The identity mark is the disclosure: the runtime upgrades the
-    authored anchor in place, so with JavaScript unavailable the mark stays an
-    ordinary home link and no panel, trigger or dead control appears. The
-    diagram pages adopt none of it and load none of these files.
+    `index.html` and the reading pages. The identity mark is the disclosure:
+    the runtime upgrades the authored anchor in place, so with JavaScript
+    unavailable the mark stays an ordinary home link and no panel, trigger or
+    dead control appears. The diagram pages adopt none of it and load none of
+    these files.
+  - `surface-document.css`, `surface-treatments.css` and
+    `surface-document-overflow.js` — the document register, loaded only by the
+    reading pages, which `tools/read/read_gen.py` generates from the
+    repository's Markdown.
 
 ### Topology + intent-architecture trees
 

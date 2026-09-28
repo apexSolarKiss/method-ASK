@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // method-ASK_activation-lifecycle-comparison.source.js</title>
+<meta name="description" content="Read-only source view of docs/diagrams/method-ASK_activation-lifecycle-comparison.source.js">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/diagrams/method-ASK_activation-lifecycle-comparison.source.js">
+<meta name="source-sha256" content="d444edf68bda3f10a1dcb36d78e95c9b441bab1f96988da002649f1170ed33e0">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../../diagrams/_dsa-surface/surface-document.css">
+<style>
+  /* The reading measure on the title, provenance row and intro text; the code
+     frame keeps the full column. File-name titles break anywhere rather than
+     overflow. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  .doc-flow .doc-title { overflow-wrap: anywhere; }
+  /* Two columns: a stationary line-number gutter and a horizontally scrolling
+     code column. Lines are spans separated by literal newlines, so a copy of
+     the code column returns the file's text, blank lines included. */
+  .src-frame { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start;
+               font-family: var(--font-mono); font-size: var(--fs-caption); font-weight: var(--fw-light); line-height: 1.6; }
+  .src-gutter, .src-view { font: inherit; line-height: inherit; margin: 0; white-space: pre; }
+  .src-gutter { padding-right: 2ch; text-align: right; color: var(--fg-3); border-right: 1px solid var(--line-1);
+                user-select: none; -webkit-user-select: none; }
+  .src-view { padding-left: 2ch; color: var(--fg-1); overflow-x: auto; }
+  .src-line { display: inline-block; min-width: 100%; }
+  /* A blank line keeps a one-line box, so #L<n> lands on it and hits it. The
+     zero-width space is generated content: a copy does not include it. */
+  .src-line:empty::before { content: "\200b"; }
+  .src-line:target { background: var(--surface-glass-2); }
+  /* Fragment clearance, as for document headings. */
+  .src-line[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .src-line[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="../index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="../../diagrams/index.html">diagrams</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">activation + lifecycle comparison source</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 class="doc-title">method-<wbr>ASK_<wbr>activation-<wbr>lifecycle-<wbr>comparison.<wbr>source.<wbr>js</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>method-ASK_<wbr>activation-lifecycle-comparison.<wbr>source.<wbr>j<span class="doc-nowrap">s&nbsp;&middot;</span></span> <span class="doc-meta-item">4278 B &middot;</span> <span class="doc-meta-item">53 lines &middot;</span> <span class="doc-meta-item">read-only &middot;</span> <span class="doc-meta-item">source sha256 d444edf68bda</span></p>
+<div class="doc-actions"><a class="surface-action" href="../../diagrams/method-ASK_activation-lifecycle-comparison.html">open figure</a> <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/diagrams/method-ASK_activation-lifecycle-comparison.source.js" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../../diagrams/method-ASK_activation-lifecycle-comparison.source.js">raw file</a></div>
+<p class="doc-body">This view shows one file; the diagram front door links this view. It is generated, static and bounded: there is no browsing beyond this file.</p>
+</header>
+<div class="src-frame"><pre class="src-gutter" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53</pre><pre class="src-view" tabindex="0" aria-label="method-ASK_activation-lifecycle-comparison.source.js, 53 lines"><span class="src-line" id="L1">/* method-ASK_activation-lifecycle-comparison.source.js</span>
+<span class="src-line" id="L2">   D05 // activation and lifecycle comparison // source-v1 // 2026-07-28</span>
+<span class="src-line" id="L3"></span>
+<span class="src-line" id="L4">   Subject: five artifact forms and their DISTINCT activation and lineage models. They are NOT</span>
+<span class="src-line" id="L5">   one carrier family — a grounding note is a context artifact and a PTX is a provenance</span>
+<span class="src-line" id="L6">   artifact; only some members here are intent carriers.</span>
+<span class="src-line" id="L7">   The figure exists to stop one inheritance error: every carrier type inheriting the</span>
+<span class="src-line" id="L8">   routed-instance filename lifecycle because they share a plane. The orthogonal terminal</span>
+<span class="src-line" id="L9">   -TBI overlay may still sit above other eligible artifacts without entering that lifecycle.</span>
+<span class="src-line" id="L10"></span>
+<span class="src-line" id="L11">   A canonical vN lineage is not a routed-instance lifecycle. A deployment is not an</span>
+<span class="src-line" id="L12">   invocation. An ingestion is not a disposition.</span>
+<span class="src-line" id="L13"></span>
+<span class="src-line" id="L14">   Repo prose is source of truth: docs/intent-artifacts.md, docs/source-of-intent.md. */</span>
+<span class="src-line" id="L15"></span>
+<span class="src-line" id="L16">window.TREE_D05 = {</span>
+<span class="src-line" id="L17">  kind: &#x27;root&#x27;,</span>
+<span class="src-line" id="L18">  label: &#x27;ACTIVATION + LIFECYCLE&#x27;,</span>
+<span class="src-line" id="L19">  note: &#x27;five artifact forms · five different models — none inherits another’s&#x27;,</span>
+<span class="src-line" id="L20">  children: [</span>
+<span class="src-line" id="L21">    { kind: &#x27;section&#x27;, label: &#x27;grounding note&#x27;, tag: &#x27;standing context canonical&#x27;, children: [</span>
+<span class="src-line" id="L22">      { label: &#x27;lineage&#x27;, note: &#x27;canonical vN · frozen _vN snapshots in the historical plane&#x27; },</span>
+<span class="src-line" id="L23">      { label: &#x27;activation&#x27;, note: &#x27;STANDING — a required read; no invocation event, no deployment act&#x27; },</span>
+<span class="src-line" id="L24">      { label: &#x27;force&#x27;, note: &#x27;normative context. May carry durable intent limbs without becoming an intent carrier&#x27; },</span>
+<span class="src-line" id="L25">      { label: &#x27;NOT&#x27;, note: &#x27;not a routed instance. Reading or feeding it creates no routed-instance filename state, and its fixed-path canonical is never renamed merely to record that it was read&#x27; },</span>
+<span class="src-line" id="L26">    ]},</span>
+<span class="src-line" id="L27">    { kind: &#x27;section&#x27;, label: &#x27;Project Instructions&#x27;, tag: &#x27;standing operative carrier&#x27;, children: [</span>
+<span class="src-line" id="L28">      { label: &#x27;lineage&#x27;, note: &#x27;canonical vN + snapshots&#x27; },</span>
+<span class="src-line" id="L29">      { label: &#x27;activation&#x27;, note: &#x27;DEPLOYED — ASK installs the payload into a live field; the field is a deployment mirror verified against the canonical&#x27; },</span>
+<span class="src-line" id="L30">      { label: &#x27;drift check&#x27;, note: &#x27;the live field and the canonical are compared; a canonical revision does not by itself repaste the field&#x27; },</span>
+<span class="src-line" id="L31">      { label: &#x27;NOT&#x27;, note: &#x27;a canonical filename change is not a lifecycle event&#x27; },</span>
+<span class="src-line" id="L32">    ]},</span>
+<span class="src-line" id="L33">    { kind: &#x27;section&#x27;, label: &#x27;prompt&#x27;, tag: &#x27;invocable operative carrier&#x27;, children: [</span>
+<span class="src-line" id="L34">      { label: &#x27;lineage&#x27;, note: &#x27;canonical vN + snapshots — the canonical FILENAME is unchanged by use&#x27; },</span>
+<span class="src-line" id="L35">      { label: &#x27;activation&#x27;, note: &#x27;INVOKED — ASK selects it and relays or feeds it; the invocation produces a result, not a state change on the carrier&#x27; },</span>
+<span class="src-line" id="L36">      { label: &#x27;NOT&#x27;, note: &#x27;invocation leaves no suffix. A prompt does not become -ingested&#x27; },</span>
+<span class="src-line" id="L37">    ]},</span>
+<span class="src-line" id="L38">    { kind: &#x27;section&#x27;, label: &#x27;routed handoff&#x27;, tag: &#x27;the ONLY routed-instance filename lifecycle&#x27;, children: [</span>
+<span class="src-line" id="L39">      { label: &#x27;1 · routed&#x27;, note: &#x27;origin makes it durably available at the recipient intake · terminal -TBI = ASK still owes a feed&#x27; },</span>
+<span class="src-line" id="L40">      { label: &#x27;2 · fed&#x27;, note: &#x27;ASK hands it to the recipient’s active surface — by value or by exact path&#x27; },</span>
+<span class="src-line" id="L41">      { label: &#x27;3 · ingested&#x27;, note: &#x27;the recipient reads it into active context · -TBI becomes -ingested · disposition still OPEN&#x27; },</span>
+<span class="src-line" id="L42">      { label: &#x27;4 · disposition&#x27;, note: &#x27;terminal rename + durable record in ONE bounded operation · absorbed / held / declined / withdrawn / routed / no-route / closed / supersededP&#x27; },</span>
+<span class="src-line" id="L43">      { label: &#x27;pre-ingestion exit&#x27;, note: &#x27;-supersededA — retired before ingestion, never consumed&#x27; },</span>
+<span class="src-line" id="L44">    ]},</span>
+<span class="src-line" id="L45">    { kind: &#x27;section&#x27;, label: &#x27;PTX&#x27;, tag: &#x27;provenance artifact&#x27;, children: [</span>
+<span class="src-line" id="L46">      { label: &#x27;lineage&#x27;, note: &#x27;the PTX files ARE the lineage · optional _vN indexes the transcript artifact · no canonical-plus-snapshot chain&#x27; },</span>
+<span class="src-line" id="L47">      { label: &#x27;creation&#x27;, note: &#x27;ASK ASSEMBLES the multi-thread projection — capture, not activation&#x27; },</span>
+<span class="src-line" id="L48">      { label: &#x27;activation&#x27;, note: &#x27;read as evidence, or later FED under a new relay envelope&#x27; },</span>
+<span class="src-line" id="L49">      { label: &#x27;later feed&#x27;, note: &#x27;a PTX MAY carry terminal -TBI. Feeding it creates a NEW relay whose envelope governs how it is read — it does not make the transcript a handoff&#x27; },</span>
+<span class="src-line" id="L50">      { label: &#x27;NOT&#x27;, note: &#x27;not an authority converter · quoting a statement inside a PTX does not make that statement operative&#x27; },</span>
+<span class="src-line" id="L51">    ]},</span>
+<span class="src-line" id="L52">  ],</span>
+<span class="src-line" id="L53">};</span>
+</pre></div>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="../index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/diagrams/method-ASK_activation-lifecycle-comparison.source.js" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../../diagrams/method-ASK_activation-lifecycle-comparison.source.js">raw file</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="../index.html">documents</a></li>
+      <li data-surface-nav-current></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../../diagrams/method-ASK_activation-lifecycle-comparison.html">open figure</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/diagrams/method-ASK_activation-lifecycle-comparison.source.js" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../../diagrams/_dsa-surface/surface-shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // method</title>
+<meta name="description" content="Method // Designing Systems That Build Systems">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/method.md">
+<meta name="source-sha256" content="aacd5b799f072a008da45363a2f9aceb4a39444adc76c115312aa3e32393311e">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">method</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="method--designing-systems-that-build-systems" class="doc-title">Method // Designing Systems That Build Systems</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>method.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">57299 B &middot;</span> <span class="doc-meta-item">source sha256 aacd5b799f07</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/method.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../method.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">This document is the methodology layer's articulation of the method used to design systems that produce, govern, template, or instantiate other systems. Some downstream systems are themselves systems-of-systems; the broader target is the system-building layer.</p>
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#posture">Posture</a>
+</li>
+<li class="doc-body"><a href="#what-this-doc-captures">What This Doc Captures</a>
+</li>
+<li class="doc-body"><a href="#recursive-system-roles">Recursive System Roles</a>
+</li>
+<li class="doc-body"><a href="#pre-architecture-moves">Pre-Architecture Moves</a>
+<ul class="doc-toc-list doc-hierarchy">
+<li class="doc-body"><a href="#ontology-development-as-primary-work">Ontology development as primary work</a></li>
+<li class="doc-body"><a href="#vocabulary--language-deconstruction">Vocabulary / language deconstruction</a></li>
+<li class="doc-body"><a href="#architecture-attempt-before-prototype">Architecture-attempt-before-prototype</a></li>
+<li class="doc-body"><a href="#attempt-model-before-plan">Attempt-model-before-plan</a></li>
+<li class="doc-body"><a href="#refusal-of-premature-doctrine--permission-to-be-wrong">Refusal of premature doctrine / permission to be wrong</a></li>
+</ul>
+</li>
+<li class="doc-body"><a href="#disciplines-during-execution">Disciplines During Execution</a>
+<ul class="doc-toc-list doc-hierarchy">
+<li class="doc-body"><a href="#pressure-surface-use-of-prototypes">Pressure-surface use of prototypes</a></li>
+<li class="doc-body"><a href="#smallest-honest-unit--right-altitude-scope-discipline">Smallest honest unit / right-altitude scope discipline</a></li>
+<li class="doc-body"><a href="#ceremony-budget">Ceremony budget</a></li>
+<li class="doc-body"><a href="#evidence-trail-integrity">Evidence-trail integrity</a></li>
+<li class="doc-body"><a href="#aging-rate-principle--source-of-truth-split">Aging-rate principle / source-of-truth split</a></li>
+</ul>
+</li>
+<li class="doc-body"><a href="#synthesis-disciplines">Synthesis Disciplines</a>
+<ul class="doc-toc-list doc-hierarchy">
+<li class="doc-body"><a href="#synthesis-attempt-against-concrete-example">Synthesis-attempt-against-concrete-example</a></li>
+<li class="doc-body"><a href="#entailment-laundering-guard">Entailment-laundering guard</a></li>
+<li class="doc-body"><a href="#proof-chain-gravity-well-guard">Proof-chain gravity well guard</a></li>
+<li class="doc-body"><a href="#self-superseding-clauses">Self-superseding clauses</a></li>
+<li class="doc-body"><a href="#source-of-intent-guard">Source-of-intent guard</a></li>
+<li class="doc-body"><a href="#source-of-intent-nudge">Source-of-intent nudge</a></li>
+<li class="doc-body"><a href="#fresh-context-critique-cycle">Fresh-context critique cycle</a></li>
+</ul>
+</li>
+<li class="doc-body"><a href="#cross-phase-workflow-shape">Cross-Phase Workflow Shape</a>
+<ul class="doc-toc-list doc-hierarchy">
+<li class="doc-body"><a href="#the-swing-adversarial-iteration">The swing (adversarial iteration)</a></li>
+<li class="doc-body"><a href="#the-rake--recurrent-order-restoration">The rake // recurrent order restoration</a></li>
+<li class="doc-body"><a href="#threshold-pauses-at-architectural-closures">Threshold pauses at architectural closures</a></li>
+<li class="doc-body"><a href="#absorption-reviews-at-major-thresholds">Absorption reviews at major thresholds</a></li>
+<li class="doc-body"><a href="#direction-check-questions-at-sequencing-forks">Direction-check questions at sequencing forks</a></li>
+</ul>
+</li>
+<li class="doc-body"><a href="#surface-and-voice-discipline">Surface and Voice Discipline</a>
+</li>
+<li class="doc-body"><a href="#relation-to-adversarial-collaboration">Relation to Adversarial Collaboration</a>
+</li>
+<li class="doc-body"><a href="#methodology-as-first-class-subject">Methodology as First-Class Subject</a>
+</li>
+<li class="doc-body"><a href="#worked-example-asset-pipeline-ask">Worked Example: asset-pipeline-ASK</a>
+</li>
+<li class="doc-body"><a href="#self-superseding-clause">Self-Superseding Clause</a>
+</li>
+<li class="doc-body"><a href="#anchor-documents">Anchor Documents</a>
+<ul class="doc-toc-list doc-hierarchy">
+<li class="doc-body"><a href="#article-cluster-the-methodology-articulated-externally">Article cluster (the methodology articulated externally)</a></li>
+<li class="doc-body"><a href="#repo-anchors">Repo anchors</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="posture" class="doc-section-title">Posture</h3>
+<div class="doc-prose">
+<pre class="doc-pre"><code class="language-text">methodology layer
+upstream of control-surface
+not just adversarial iteration
+comprehensive statement of the method
+articulates the rule it follows
+</code></pre>
+<p class="doc-body">This is the methodology layer. The execution-protocol layer that operationalizes it — <code class="doc-code">AGENTS.md</code> rules, two review windows, branch discipline, the cadence per <a href="https://atomicspacekitten.substack.com/p/adversarial-collaboration"><em>Adversarial Collaboration</em></a> — lives in <code class="doc-code">apexSolarKiss/control-surface</code>. That layer governs how work gets done within a session. The methodology layer governs how a project navigates its own evolution across phases.</p>
+<p class="doc-body">The two layers are at different altitudes:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Execution protocol</strong> — per-session, per-PR, multi-agent dialogue at the architectural altitude. Workflow rules live in <code class="doc-code">control-surface/AGENTS.md</code>; advisor posture and cadence context are recorded in <code class="doc-code">control-surface</code>'s grounding note. Anchored on <a href="https://atomicspacekitten.substack.com/p/adversarial-collaboration"><em>Adversarial Collaboration</em></a>.</li>
+<li class="doc-body"><strong>Methodology</strong> — cross-phase, across-time, single-mind project rhythm. Lives here. Anchored on <a href="https://atomicspacekitten.substack.com/p/from-execution-proof-back-to-normative"><em>From Execution Proof Back to Normative Structure</em></a>.</li>
+</ul>
+<p class="doc-body">The pendulum / swing motion that <em>From Execution Proof Back to Normative Structure</em> names as the project's rhythm is one element of the method, not the whole. It names the across-time rhythm of adversarial iteration. Other elements — ontology development, vocabulary deconstruction, pressure-surface use of prototypes, evidence-trail integrity, fresh-context critique, source-of-intent guard, source-of-intent nudge, externality-decision routing, and drift audit — are equally load-bearing.</p>
+<p class="doc-body">The rake names a shared restoration function across several of these distinct mechanisms: it returns source of intent, ownership, carriers, state, local difference, and representations to a more legible relation after ordinary system-building motion has accumulated drift. It is not a master metaphor for the method.</p>
+<p class="doc-body">The nudge layer adds something different from a metaphor. It is an operational simulation of the external-intent boundary: the system asks whether durable sources already supply enough intent for the next move, whether new operator intent is needed, whether external synthesis is enough, or whether fresh-context critique should be nominated. The method doc covers the broader method; no single rhythm, metaphor, or control layer exhausts the content.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="what-this-doc-captures" class="doc-section-title">What This Doc Captures</h3>
+<div class="doc-prose">
+<p class="doc-body">The method is the practice of designing systems whose structure is itself worth articulating before, during, and after implementation. The mature worked example this document currently centers is <a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">apexSolarKiss/asset-pipeline-ASK</code></a> — an information architecture for commercial visual asset production pipelines. The project is the worked example; the method is the durable element.</p>
+<p class="doc-body">The method is not a single principle. It is a coherent collection of pre-architecture moves, execution disciplines, synthesis disciplines, cross-phase workflow shape, surface-and-voice discipline, and a recursive observation about methodology itself.</p>
+<p class="doc-body">This doc names them in one place so a returning operator or external reader can read the method as itself, not only as residue distributed across other artifacts.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="recursive-system-roles" class="doc-section-title">Recursive System Roles</h3>
+<div class="doc-prose">
+<p class="doc-body">The method applies across recursive system roles, not a single fixed level.</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Articulated system</strong> — a discrete artifact or project whose structure is worth making explicit. <a href="https://github.com/apexSolarKiss/mazeASK"><code class="doc-code">apexSolarKiss/mazeASK</code></a> is the historical project-scale example: a concrete maze-game repo whose Model-A workflow pressure helped surface the need for a reusable control-surface pattern, later generalized in <a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">apexSolarKiss/control-surface</code></a>.</li>
+<li class="doc-body"><strong>System-of-systems</strong> — an operational system composed of interacting subsystems. A governed visual asset production pipeline can fit this role: brand inputs, product data, reference systems, generation surfaces, curation seams, governance records, and output assets operate together as one production system.</li>
+<li class="doc-body"><strong>System-building system</strong> — a system that produces, governs, templates, or instantiates other systems. <a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">apexSolarKiss/asset-pipeline-ASK</code></a> fits this role for governed visual asset production pipelines. <a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">apexSolarKiss/control-surface</code></a> fits this role for AI-native execution workflows.</li>
+</ul>
+<p class="doc-body">The method does not change shape across these roles. Ontology development, vocabulary deconstruction, architecture-attempt-before-prototype, pressure-surface prototypes, ceremony budget, evidence-trail integrity, self-superseding clauses, the swing, the rake, and the fresh-context critique cycle apply whether the work is an articulated system, a system-of-systems, or a system-building system.</p>
+<p class="doc-body">The recursion is part of why the method is worth articulating as itself. This document is itself a structured artifact produced by the method it describes.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="pre-architecture-moves" class="doc-section-title">Pre-Architecture Moves</h3>
+<div class="doc-prose">
+<p class="doc-body">What happens before any architectural commitment, often before any prototyping.</p>
+</div>
+<section class="doc-section">
+<h4 id="ontology-development-as-primary-work" class="doc-subsection-title">Ontology development as primary work</h4>
+<div class="doc-prose">
+<p class="doc-body">Articulating what concepts exist and how they connect — the structured-definition-of-intent — is the durable architectural deliverable. The interface is a view on top of it; the prototype is a pressure test of it; the method's job is to produce the ontology cleanly.</p>
+<p class="doc-body">This is distinct from data modeling or schema design. Data modeling answers &quot;what fields does this record have?&quot; Schema design answers &quot;what tables exist and how are they related?&quot; Ontology development answers a deeper question: &quot;what categories of thing does this work treat as load-bearing? what relationships among them make the structure cohere? what would be lost if any single category collapsed?&quot;</p>
+<p class="doc-body">In the asset-pipeline-ASK worked example, the ontology work is the IA layered-content articulation: what kinds of information operate at brand-system, category / product-class, packet, slot, and other layers; how those layers inherit, override, and combine; what is shared upstream and what is specific downstream.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="vocabulary--language-deconstruction" class="doc-subsection-title">Vocabulary / language deconstruction</h4>
+<div class="doc-prose">
+<p class="doc-body">Pressure-test the words you are using before committing them to schema or to architectural claims. Make sure terminology is doing the work you think it is. Surface where two words are being used as synonyms when they should not be. Surface where a single word is hiding distinctions that matter.</p>
+<p class="doc-body">In asset-pipeline-ASK, the architecture-vocabulary-pass-v1 was this discipline in operation: five carrier-and-discretion distinctions (runtime curation vs upstream setup; prose vs structural representation; visual inputs vs prose fallback; scoped mode-independence; approximate layer count vs load-bearing inheritance) were surfaced before they could harden into structure, while there was still room to refine them.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="architecture-attempt-before-prototype" class="doc-subsection-title">Architecture-attempt-before-prototype</h4>
+<div class="doc-prose">
+<p class="doc-body">Try to model the architecture against a concrete example before building anything. The failure mode this prevents: the prototype becomes the architecture by default, because the prototype is what got built and the architecture was never articulated.</p>
+<p class="doc-body">Architecture-attempt is not the same as architecture-completion. The attempt is allowed to be partial, exit-criterion-bounded, and self-superseding. What matters is that the attempt happens upstream of the prototype, and that the prototype runs against the attempt rather than producing the architecture as residue.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="attempt-model-before-plan" class="doc-subsection-title">Attempt-model-before-plan</h4>
+<div class="doc-prose">
+<p class="doc-body">Try to model the work shape before planning execution. Sister to architecture-attempt-before-prototype, applied at the project-direction altitude rather than the schema altitude.</p>
+<p class="doc-body">The principle prevents an analogous failure mode: the plan becomes the model by default, because the plan named tasks but never named the structural shape of the work the tasks were addressing.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="refusal-of-premature-doctrine--permission-to-be-wrong" class="doc-subsection-title">Refusal of premature doctrine / permission to be wrong</h4>
+<div class="doc-prose">
+<p class="doc-body">Do not lock posture or rules before evidence has earned them. Carry named limitations explicitly. Surface held questions rather than resolving them prematurely.</p>
+<p class="doc-body">This is the discipline that allows the method itself to evolve. Self-superseding clauses on artifacts; named limitations carried explicitly; held questions surfaced rather than answered too early — these all preserve the method's ability to update when later swings produce evidence the earlier swing could not have produced.</p>
+</div>
+</section>
+</section>
+<section class="doc-section">
+<h3 id="disciplines-during-execution" class="doc-section-title">Disciplines During Execution</h3>
+<div class="doc-prose">
+<p class="doc-body">What constrains how the work is done once a swing has begun.</p>
+</div>
+<section class="doc-section">
+<h4 id="pressure-surface-use-of-prototypes" class="doc-subsection-title">Pressure-surface use of prototypes</h4>
+<div class="doc-prose">
+<p class="doc-body">Prototypes are pressure surfaces for studying the architecture. They are not the project's center. The architecture is the project; the prototype is the test rig.</p>
+<p class="doc-body">This framing keeps the architecture in the position of being tested, refined, and articulated as itself. The prototype's outputs are evidence for or against architectural claims, not the architecture's substance.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="smallest-honest-unit--right-altitude-scope-discipline" class="doc-subsection-title">Smallest honest unit / right-altitude scope discipline</h4>
+<div class="doc-prose">
+<p class="doc-body">Match the unit of work to the level of the question. For implementation and repo hygiene, prefer the smallest honest unit (small bounded PRs are usually best). For conceptual architecture, prefer the largest tractable structural question. Refuse both bundling at the implementation altitude and ceremony at the architectural altitude.</p>
+<p class="doc-body">The corollary: do not let &quot;smallest unit&quot; become a rule that prevents zooming out to the right scale. A series of small honest units at the wrong layer adds up to ceremony without architectural progress.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="ceremony-budget" class="doc-subsection-title">Ceremony budget</h4>
+<div class="doc-prose">
+<p class="doc-body">Do not overspend on process where structure suffices. Workflow rules in <code class="doc-code">AGENTS.md</code> make reasoning inspectable across ASK, the executor, and any configured advisor while preserving one write authority; once the rules carry the discipline, the process ceremony that previously did the work becomes redundant. Removing redundant ceremony is part of the method. One concrete instance: do not require a reviewer-generated handoff memo after an authorized operator has already relayed an explicit decision with its qualifications and scope. When the relay already carries the complete decision, repackaging it into a return artifact adds no judgment, condition, or authorization — it is ceremony, not governance (see <a href="source-of-intent.html"><code class="doc-code">docs/source-of-intent.md</code></a> §Handoff necessity).</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="evidence-trail-integrity" class="doc-subsection-title">Evidence-trail integrity</h4>
+<div class="doc-prose">
+<p class="doc-body">Each phase preserves what it produced for the next phase to build on. Do not retrofit evidence-chain artifacts. Let them age in place. New artifacts can refine forward without rewriting history.</p>
+<p class="doc-body">The method's integrity at scale depends on this — without it, each new architectural claim either has to relitigate prior claims or quietly invalidates them.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="aging-rate-principle--source-of-truth-split" class="doc-subsection-title">Aging-rate principle / source-of-truth split</h4>
+<div class="doc-prose">
+<p class="doc-body">Different surfaces age at different rates. State ages fast (lives in the repo). Rules age slow (live in <code class="doc-code">AGENTS.md</code>). Context ages slow (lives in the grounding note). Per-conversation tracking is ephemeral (lives in current task context, never in private agent memory).</p>
+<p class="doc-body">Each surface is sized to a single aging rate. Mixing aging rates within one surface produces a doc that ages at the rate of its fastest-aging contents — usually badly. Maintaining the aging-rate split is part of the method's surface discipline.</p>
+</div>
+</section>
+</section>
+<section class="doc-section">
+<h3 id="synthesis-disciplines" class="doc-section-title">Synthesis Disciplines</h3>
+<div class="doc-prose">
+<p class="doc-body">How the project moves between phases without losing what came before.</p>
+</div>
+<section class="doc-section">
+<h4 id="synthesis-attempt-against-concrete-example" class="doc-subsection-title">Synthesis-attempt-against-concrete-example</h4>
+<div class="doc-prose">
+<p class="doc-body">A synthesis or architectural-pass should pressure the model against a concrete example, not become a recursive narration of earlier passes.</p>
+<p class="doc-body">This discipline applies the architecture-attempt-before-prototype principle to synthesis artifacts: the synthesis is allowed to be partial, exit-criterion-bounded, and self-superseding, but it must engage with concrete material rather than circulating among prior abstractions.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="entailment-laundering-guard" class="doc-subsection-title">Entailment-laundering guard</h4>
+<div class="doc-prose">
+<p class="doc-body">A coherent architecture can make an unearned premise look established by carrying it through its own descendants. Upstream, a stipulation, a speculative bridge, or a mechanism named for a property it has not been shown to possess enters the architecture; diagrams, models, simulations, implementations, essays, and reviews inherit it; their agreement then returns as though something had independently confirmed the premise. This requires no recursive assurance loop. One linear chain is enough: every downstream step can be locally valid while the transition where a description first acquired empirical or ontological force remains unwarranted.</p>
+<p class="doc-body"><strong>A premise does not become evidence by surviving its own descendants.</strong> When a process holds a premise fixed, derives its outputs from it, and checks them only for conformity to what it derived, successful outputs cannot show whether the premise is warranted, and producing more of them does not change that. Valid proofs, implementation checks, prototypes, and computational reasoning keep the evidentiary value they actually establish — consistency, fidelity to a specification, the consequences of a premise, reproducibility. A descendant can bear on the premise itself when it meets something the premise did not generate: a measurement, a user, an environment, a failure, or a differently situated argument. That is how prototype outputs come to bear on the premises an architecture rests on; conformity to what the architecture already assumed adds no warrant for those premises.</p>
+<p class="doc-body">The line runs between inherited assumption and new warrant, not between internal and external by location or authorship. For a load-bearing transition, ask what it establishes, where its warrant entered, and which later artifacts share its premise. The proof-chain gravity well guard below covers the neighboring failure, in which a system's own process outputs force further cycles, and, in its treatment of exterior pressure, states the tests this guard reuses: exteriority relative to the error class, the hall-of-mirrors discriminator, and the qualification on proxies. This guard applies them to individual inherited transitions, including a transition tested only through a proxy the architecture chose for its own named property. Adoption does not settle warrant either. Adopting a factual premise lets it govern the authorized work without making it true or immune to material contrary evidence; revising what governs remains with the source of intent. The guard is a recognition aid, not a checklist.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="proof-chain-gravity-well-guard" class="doc-subsection-title">Proof-chain gravity well guard</h4>
+<div class="doc-prose">
+<p class="doc-body">No new conceptual artifact unless it changes the model, schema pressure, carrier boundary, or governance seam. Findings that do not change those things belong in concise execution records or in-thread, not in new conceptual artifacts.</p>
+<p class="doc-body">This guards against the failure mode where every operational discrepancy or process amendment generates a durable artifact whether or not it changes anything load-bearing. The artifact economy stays proportional to actual architectural movement.</p>
+<p class="doc-body">That rule is narrow, and the mechanism it guards against is general. Naming the mechanism is what tells a reader when the rule extends beyond the artifact economy and when it does not.</p>
+</div>
+<section class="doc-section">
+<h5 id="corpus-quality-and-process-artifact-proportionality" class="doc-deep-title">Corpus quality and process-artifact proportionality</h5>
+<div class="doc-prose">
+<p class="doc-body">Correction threshold follows artifact function, not defect type.</p>
+<p class="doc-body">The <strong>corpus</strong> is work intended to remain current, authoritative, referential, operative, user-facing, or product-bearing: repositories, canonicals, operator-side reference artifacts, maintained diagrams, live instructions, and durable product surfaces. Aesthetic imprecision, redundant metadata, harmless but inferior wording, and internal inconsistency remain real defects there. Correct them in the owning corpus when they are inside the authorized scope; otherwise route them to that owner as bounded follow-on work. The fact that a defect does not block the current operation does not make it irrelevant to the quality of the work.</p>
+<p class="doc-body"><strong>Adversarial process artifacts</strong> serve a different function: proposals, review packets, receipts, temporary matrices, audit evidence, and other records of how a decision or transition was reached. Once frozen, they are historical evidence rather than product surfaces. Reopen, append to, or supersede them only when the defect can materially affect action, authorization or scope, safety, recovery, exact execution, or a durable interpretation another decision depends on. Otherwise record the imperfection where useful and leave the artifact frozen. Proportionality limits the polishing of process residue; it is not permission to leave the corpus sloppy.</p>
+<p class="doc-body">The distinction is not rigor versus looseness. It is where finish belongs: <strong>polish the corpus; keep the scaffolding sufficient.</strong></p>
+<p class="doc-body">A recurrent gravity-well mechanism is <strong>duplicated evidentiary garnish</strong>. Repeating the same path, hash, byte size, baseline account, target set, or unchanged-state inventory throughout a proposal creates additional claim surfaces and consistency obligations without necessarily strengthening the underlying proof. Each duplicate can drift, trigger another correction round, and cause the successor artifact to carry still more corrective narration — until the process is protecting its own account of the evidence rather than the external object.</p>
+<p class="doc-body"><strong>Repetition is not corroboration.</strong> Declare each load-bearing identity once, at the point where it gates the decision, give it a stable local name, and refer to that name elsewhere. Prefer one object identity, one base declaration, one authoritative description of the change, and one result per verified invariant. Repeat evidence only where the repetition independently changes a decision, crosses a boundary that must remain self-contained, satisfies a specialized contract, or supports recovery. A hash is not the default companion to every path; byte size is not the default companion to every hash. The aim is not less rigor — it is rigor concentrated where it does work.</p>
+<p class="doc-body">A project reaches <strong>asymptotic saturation</strong> when another internally generated cycle has little remaining capacity to reduce uncertainty about the external object under the current frame. Saturation is a legitimate plateau, not a failure — it is the condition the fresh-context critique cycle is naming when it detects that the current pressure surface has exhausted itself. It is not the same asymptote as the swing's: the swing approaches its limit while each stroke still produces evidence the other stroke could not, and the approach is the work. Saturation is the local exhaustion of that yield under the present frame.</p>
+<p class="doc-body"><strong>Asymptotic resonance</strong> begins when, at that plateau, the system's own process, evidence, proof, review, correction, absorption, or closure outputs become the dominant forcing input for the next cycle. A <strong>recursive-performance gravity well</strong> forms when that self-forcing continues without materially new evidence, method, decision pressure, or differently situated error, so internal activity rises while externally meaningful movement approaches zero. Process, evidence, and proof gravity wells are operational species of the one mechanism; the species names locate where the recursive performance is occurring and should not harden into a required taxonomy.</p>
+<p class="doc-body">Before opening another conceptual or assurance cycle, name the external object or changeable decision it can affect, the credible failure mode or uncertainty it can reduce, the genuinely new evidence, method, or differently situated pressure it introduces, the exact operative object set, and the terminal condition. If the next artifact exists mainly because the previous artifact now needs another proof, summary, absorption, verification, or closure — and no real authority, safety, recovery, lifecycle, or evidence gate requires that exact carrier — the cycle does not open. Stopping can be wrong too: a cycle still earns its opening when the conditions above are met and the work can materially change an external object or decision. The discipline is proportion between assurance activity and unresolved risk, not minimal activity.</p>
+<p class="doc-body">Escape has two valid forms — accept the plateau and stop, or admit nonredundant exterior pressure: a real user, a domain authority, failed execution, contradictory evidence, a new consumer, a new substrate, changed source intent, or genuinely fresh reconstruction from durable truth. Exteriority is relative to the error class, not to the number of agents. A second surface given the same premises, context, and evaluative frame may still be endogenous, which is why the fresh-context critique cycle's load-bearing property is context reset rather than a change of interlocutor.</p>
+<p class="doc-body">Dogfooding is productive when the system is applied to an externally anchored object and the result is allowed to falsify or change the system. It becomes a hall of mirrors when the system's own artifacts serve at once as the object, the evidence, the trigger, and the standard of success. The discriminator is not self-reference — this method is recursive by design — but whether something differently situated can still make the system wrong.</p>
+<p class="doc-body">Exteriority does not guarantee durable evidentiary value. Where exterior pressure is mediated by an incomplete stand-in for the property that actually matters, repeated optimization against that stand-in can erode what the resulting evidence establishes by selecting for the gap between proxy and property. This is a different axis from error dependence: a differently situated reviewer can still rely on an incomplete proxy, while a correlated reviewer can still contribute evidence when it reaches an adequate external source, test, environment, or observation. Exposure does not automatically invalidate a source of pressure. It changes the burden — after the candidate-generating process has been repeatedly revised or selected against that source, reassess what the source still establishes rather than assuming its earlier evidentiary force persists.</p>
+<p class="doc-body">The execution-protocol layer operationalizes this guard for verification and correction loops. <a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">control-surface</code></a> scales evidentiary depth and blocking thresholds to reversibility, blast radius, cost of error, and decision relevance; requires a named failure mode before a discrepancy may block; separates the operative review set from preserve-only history; states the conditions under which a correction round may open, a convergence stop, and a re-anchor remedy; and obliges the executor to read the finished object end-to-end before handing it across a surface boundary. Those controls bound the loop. This section explains why the loop can become self-amplifying in the first place.</p>
+</div>
+</section>
+</section>
+<section class="doc-section">
+<h4 id="self-superseding-clauses" class="doc-subsection-title">Self-superseding clauses</h4>
+<div class="doc-prose">
+<p class="doc-body">Every meaningful artifact names what would supersede it. This holds the work in place without locking it. A reader can see what the artifact intends to remain authoritative for, and what would replace or absorb it under specified conditions.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="source-of-intent-guard" class="doc-subsection-title">Source-of-intent guard</h4>
+<div class="doc-prose">
+<p class="doc-body">Fresh critique, synthesis, and handoff recaps may surface gaps between stated purpose and current evidence. Those gaps must not automatically become requests for the operator to reauthorize the purpose.</p>
+<p class="doc-body">When the grounding note or repo-local premise already states the end, treat the gap as an architectural means problem: what carrier, trace, model attempt, pressure test, inheritance structure, or boundary correction is required to make the stated purpose real?</p>
+<p class="doc-body">A held implementation question is not the same as a held purpose question. Do not promote unresolved means into an unresolved source-of-intent fork.</p>
+<p class="doc-body">Before naming operator-required input, distinguish:</p>
+<ul class="doc-list">
+<li class="doc-body">source-of-intent premises already supplied</li>
+<li class="doc-body">unresolved architectural means</li>
+<li class="doc-body">sequencing choices among valid routes</li>
+<li class="doc-body">operator-side positioning choices</li>
+<li class="doc-body">evidence-depth assessments</li>
+</ul>
+<p class="doc-body">The operator should be asked to decide only the latter categories when the durable sources do not already answer them. Where the premise is already supplied and the means are unresolved, the method should force an architecture attempt against the premise.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="source-of-intent-nudge" class="doc-subsection-title">Source-of-intent nudge</h4>
+<div class="doc-prose">
+<p class="doc-body">At local plateaus, after meaningful absorptions, or when the next move is unclear but the durable purpose may already be sufficient, ask the advisor surface what additional operator source of intent or direction is needed to continue developing the project toward its stated purpose.</p>
+<p class="doc-body">The nudge is not the same as asking &quot;what next?&quot; It is a boundary-classification pass. The advisor should distinguish whether the project needs new source intent, a sequencing choice, a bounded architecture attempt, repo-local absorption or routing, external synthesis, or a fresh-context reset.</p>
+<p class="doc-body">A good nudge can return &quot;no new purpose-level source-of-intent is needed.&quot; That is a successful result. It means the durable sources already contain the premise, and the next move should be derived from the current architecture rather than routed back to the operator as a new decision.</p>
+<p class="doc-body">A good nudge can also return a stop signal: the current closure is a real pause point and the next move should not auto-chain. That is also a successful result. It should route to absorption, external synthesis, or fresh-context critique depending on whether the current durable state merely needs sequencing, needs synthesis from current context, or needs independent reconstruction from repo plus grounding note.</p>
+<p class="doc-body">This nudge operationalizes the source-of-intent guard. It reduces false stops, where the system asks for operator input even though the intent is already supplied, and false autonomy, where the system continues without noticing that a genuine source-of-intent premise is missing or changed.</p>
+<p class="doc-body">The nudge is a lighter-weight control loop than the fresh-context critique cycle. Use it before invoking fresh external critique when the question is local sequencing, absorption, routing, or next-pressure choice. Nominate fresh-context critique when the nudge surfaces drift, stale durable context, unresolved purpose, or a need for independent reconstruction from repo plus grounding note.</p>
+<p class="doc-body">The nudge ladder has three roles. The <strong>default lightweight nudge</strong> is a live reusable prompt in the protocol repo: <a href="https://github.com/apexSolarKiss/control-surface/blob/main/prompts/repo-nudge-prompt.md"><code class="doc-code">control-surface/prompts/repo-nudge-prompt.md</code></a> — a single-question nudge anchored against the grounding note. The two heavier roles — a <strong>structured boundary-classification instrument</strong> (the seven-outcome routing form) and an <strong>externality-decision instrument</strong> (for serious pause / routing decisions) — are non-default: they are not maintained as standing prompt files and are re-derived when a heavier routing pass is warranted. The protocol repo owns its own prompt inventory; this doc asserts the ladder's roles, not another repo's current file list.</p>
+<p class="doc-body">Operationally, the minimal nudge is the default cycle prompt. The structured roles are heavier reset / routing instruments, not regular-cycle prompts. Fresh-context critique remains a distinct anti-drift mechanism: the nudge can nominate it, but ASK authorizes it. The critique cycle should not be used merely as a next-step finder when the nudge layer can classify the boundary.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="fresh-context-critique-cycle" class="doc-subsection-title">Fresh-context critique cycle</h4>
+<div class="doc-prose">
+<p class="doc-body">When ASK authorizes a fresh-context critique because the project's structure, posture, or direction needs re-examination beyond what a source-of-intent nudge can classify, start fresh advisor threads and give each only the durable context — the repo and the grounding note. Do not give them the working thread's accumulated explanations unless the task is to fold a prior critique. The load-bearing property is <strong>context reset</strong>: the critic is denied working-thread momentum and forced to reconstruct the project from durable truth. That reconstruction is what surfaces drift, ceremony, overclaimed architecture, stale navigation, weak naming, missing proof, or mismatched source-of-truth boundaries.</p>
+<p class="doc-body">The cycle has three moves, each assigned to a distinct surface:</p>
+<ol class="doc-list">
+<li class="doc-body"><strong>Independent critique</strong> — each critic thread reads durable truth and produces high-level concerns without seeing the other critique. Same prompt, same inputs, no shared thread momentum.</li>
+<li class="doc-body"><strong>Advisor-role synthesis</strong> — a separate thread in the advisor surface folds both critiques into one analysis and produces an advisory plan, from outside execution momentum. The role is what matters; the model occupying it does not need to differ from the critique threads. The structural value is exteriority to the threads that produced the critiques.</li>
+<li class="doc-body"><strong>Bounded absorption</strong> — the execution surface verifies repo state fresh, scopes the advisory plan into implementation work, and stops at exact scoped diff before any commit. Only corrections that survive synthesis and operator approval become repo work, grounding-note updates, or held threads.</li>
+</ol>
+<p class="doc-body">The fresh-context critique cycle runs on its default prompt surfaces. The default initial prompt preserves open-ended critique behavior: high-level observations, concerns, doubts, and source-of-intent needs anchored in the grounding note. The default synthesis prompt preserves simple fold-and-plan behavior. The default execution prompt preserves the fuller-context handoff: independent critique plus folded advisory plan, with execution still stopping at exact scoped diff. Structured variants are a non-default <em>role</em>, not standing files: re-derive one at the critique-cycle altitude when explicit boundary classification, convergence/divergence synthesis, or stricter execution scoping is useful. This preserves the same distinction the nudge ladder established: lightweight prompts keep regular motion organic; structured instruments are heavier routing forms.</p>
+<p class="doc-body">This pattern composes both adversarial collaboration and adversarial iteration: the independent critiques create multi-mind opposition in one moment (collaboration); the synthesis and absorption metabolize that opposition into the next cross-time swing of the project (iteration). Adversarial iteration uses adversarial collaboration as a pressure mechanism at the structural-review altitude.</p>
+<p class="doc-body">This is distinct from Stage 2 PR review. Stage 2 is targeted advisor review of a pushed branch before merge, scoped to the change at hand. The fresh-context critique cycle is broader: repo- or phase-level critique of accumulated system state at structural-posture moments. Different cadences, different surfaces.</p>
+<p class="doc-body">The cycle is not a standing ceremony and has no deterministic internal trigger. Major plateaus, accumulated proof-chain gravity, unstable naming or tier ownership, and a mismatch between local and global coherence are signals the system may nominate and ASK may weigh; none authorizes the cycle by itself. Routinizing the cycle as an automatic workflow step would re-introduce the ceremony class the method is calibrated against.</p>
+<p class="doc-body">The cycle earns its keep not only by producing better critiques, but by identifying when the current pressure surface has saturated. A successful cycle may end by naming that the thread should stop, that the project needs exterior digestion, or that new operator intent is required before further work would be meaningful. Plateau detection is itself a successful outcome of the cycle, not a failure to produce one.</p>
+<p class="doc-body">A third failure mode appears when the cycle works too well: correct moves chained too quickly become their own drift vector. The remedy is the self-diagnostic plateau signal — stop, preserve what landed, and re-enter through a fresh-context pass only when new intent or new pressure is available. The remedy is not more procedure; more procedure is the failure mode this guards against.</p>
+<p class="doc-body">The cycle's reusable prompts live in <a href="https://github.com/apexSolarKiss/control-surface/blob/main/prompts/repo-critique-initial-prompt.md"><code class="doc-code">control-surface/prompts/repo-critique-initial-prompt.md</code></a>, <a href="https://github.com/apexSolarKiss/control-surface/blob/main/prompts/repo-critique-synthesis-prompt.md"><code class="doc-code">control-surface/prompts/repo-critique-synthesis-prompt.md</code></a>, and <a href="https://github.com/apexSolarKiss/control-surface/blob/main/prompts/repo-critique-execution-prompt.md"><code class="doc-code">control-surface/prompts/repo-critique-execution-prompt.md</code></a>. The work happens in the durable backbone (repo + grounding note) and in the critics' independent reads. The operator does not direct what any critic should find; the artifacts speak. When the durable backbone is honest enough to serve as ground truth, the critique can be open-ended without losing focus.</p>
+</div>
+</section>
+</section>
+<section class="doc-section">
+<h3 id="cross-phase-workflow-shape" class="doc-section-title">Cross-Phase Workflow Shape</h3>
+<div class="doc-prose">
+<p class="doc-body">How the project navigates its own evolution.</p>
+</div>
+<section class="doc-section">
+<h4 id="the-swing-adversarial-iteration" class="doc-subsection-title">The swing (adversarial iteration)</h4>
+<div class="doc-prose">
+<p class="doc-body">The pendulum motion between abstraction and execution. Each swing produces something the other cannot. Pure abstraction produces beautiful diagrams that the world refuses to populate. Pure implementation produces a working system whose underlying model is never articulated. The motion between them is the method.</p>
+<p class="doc-body">The swing leaves something for the next swing to do, and leaves something the next swing should preserve. Naming what each swing does <em>not</em> undo is what keeps the pendulum honest. Otherwise each swing pretends the previous swing was wasted, and the project loses the cumulative evidence each direction produced.</p>
+<p class="doc-body">The swing's shape is asymptotic. The architecture and the execution converge across each swing, approaching each other but never meeting. The work is the approach.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="the-rake--recurrent-order-restoration" class="doc-subsection-title">The rake // recurrent order restoration</h4>
+<div class="doc-prose">
+<p class="doc-body">System-building work produces drift even when its individual changes are locally correct. New artifacts, exceptions, implementations, interpretations, consumers, and corrections enter different surfaces at different rates. Over time, the relations among source of intent, owners, carriers, live state, durable context, local differences, and public representations become less legible.</p>
+<p class="doc-body">The <strong>rake</strong> names a recurrent restoration function within the method: the work of returning those relations to legible differentiated order. It reconstructs governing relations from their owners, surfaces material drift, distinguishes error from legitimate local difference, routes correction to the proper surface, reconciles affected carriers and projections, and records the resulting raked state.</p>
+<p class="doc-body">The rake is not a master frame for the method. It does not subordinate every method mechanism, and no single rhythm, metaphor, or control layer exhausts the method. A mechanism may serve work other than raking; a rake may compose several mechanisms.</p>
+<p class="doc-body">The image is a Zen garden: the raked lines are valuable because they are ordered. In the method, a raked state likewise has more order, less drift, clearer boundaries, and better alignment. Ordinary activity and continued change soften those lines; that loss is not part of their value, but the suffered degradation recurrent raking mitigates.</p>
+<p class="doc-body">Raking is a continual system function implemented through mechanisms operating at different cadences:</p>
+<ol class="doc-list">
+<li class="doc-body"><strong>Adversarial collaboration and critique</strong> are the quotidian rake. Differently situated reasoning, execution, review, and adjudication continually pressure local work before one surface's account silently becomes the whole system's account.</li>
+<li class="doc-body"><strong>Fresh-context critique</strong> is a lower-cadence rake of accumulated framing, explanatory momentum, and self-description. It reconstructs from durable owners rather than inheriting the reasoning by which the current state was produced. Its concrete instantiation mechanics live in <a href="https://github.com/apexSolarKiss/control-surface/blob/main/docs/critique-protocol.md"><code class="doc-code">control-surface/docs/critique-protocol.md</code></a>.</li>
+<li class="doc-body"><strong>The pendulum, or adversarial iteration,</strong> is a lower-cadence rake across phases between abstraction and execution. Each direction exposes and corrects the imbalance accumulated by the other while preserving the evidence the prior swing produced.</li>
+<li class="doc-body"><strong>Compression, with bilateral calibration where the compression becomes a durable system-level self-map,</strong> is a lower-cadence rake of the relation between distributed truth and its high-level representation. Compression is established practice: it makes a distributed system stateable at an appropriate altitude and leaves a standing artifact that can orient later work. That standing artifact is useful and dangerous for the same reason — it can itself drift, or be mistaken for the authority it depicts. The method therefore requires bilateral calibration for a durable system-level compression: test what the projection omits or distorts, what it asserts without owner support, where owners conflict, and whether the system's applicable authority, trust, disclosure, and public/private boundaries have been represented correctly. This is a normative requirement, not a claim that every existing compression has undergone it. System-scale bilateral calibration has been completed: a proposal-stage version of the system-level compression now published in <a href="https://github.com/apexSolarKiss/method-ASK/blob/main/examples/system-ASK.md"><code class="doc-code">examples/system-ASK.md</code></a> was tested against reconstructions made from its named owners with the compression withheld, then compared with it in both directions; its material findings received explicit disposition from outside the representation, and the compression was corrected before publication. That pass shows the requirement can be met. It establishes no permanent stability of the system represented, and it calibrates no other compression. Named owners establish current fact, and ASK adjudicates what should change.</li>
+</ol>
+<p class="doc-body">Fresh-context critique and the pendulum are partly orthogonal. Fresh reconstruction pressures the system's inherited frame and self-description; adversarial iteration pressures abstraction against execution across time. Compression and its required bilateral calibration act on another axis again: the relation between distributed truth and its high-level representation. These mechanisms may compose, but none is a required stage of another, and adversarial collaboration may operate within any of them.</p>
+<p class="doc-body">Other rake strokes include source-of-intent guards and nudges; owner, carrier, and consumer reconciliation; ledger and projection reconciliation; absorption; and closure. The list names different surfaces on which order can be restored. It is not a mandatory sequence and does not require one synchronized ecology-wide cycle.</p>
+<p class="doc-body">Convening a deliberate rake cycle is externally triggered relative to the process it audits. The ecology may nominate such a cycle through a nudge, milestone, felt incoherence, accumulated change, or another signal. Those signals are evidence, not triggers. Because the state supplying them may itself be drifted, no deterministic internal threshold authorizes the cycle. ASK decides whether and when to initiate it.</p>
+<p class="doc-body">ASK may initiate a deliberate rake cycle without an internal nomination, and may defer one despite strong signals. Surface stabilization, opportunity, operator bandwidth, and critic bandwidth constrain timing; they do not determine legitimacy. More frequent raking would generally be desirable if those constraints disappeared.</p>
+<p class="doc-body">A raked-state claim is dated, banded, owner-relative, and explicit about what remained outside the pass. It records restored order, not permanent stability. Future-rake signals may be recorded for ASK's judgment, but none automatically triggers another cycle.</p>
+<p class="doc-body">A deliberate rake cycle remains subject to the proof-chain gravity well guard after it begins. Raking should improve an actual owner, relation, decision, boundary, or usable system state. Audit activity whose primary object becomes the preceding audit, without improving the system itself, is recursive performance rather than restoration. This constrains ceremony inside a rake; it does not condition ASK's authority to initiate one.</p>
+<p class="doc-body">Reflective lineage: <a href="https://atomicspacekitten.substack.com/p/the-drift-audit"><em>The Drift Audit</em></a> explains why the audited system may nominate but cannot own the final anti-drift trigger. <a href="https://atomicspacekitten.substack.com/p/the-auditor-is-inside-the-trade"><em>The Auditor Is Inside the Trade</em></a> explains why increasing internal fluency and coherence do not establish that the standard itself has not drifted.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="threshold-pauses-at-architectural-closures" class="doc-subsection-title">Threshold pauses at architectural closures</h4>
+<div class="doc-prose">
+<p class="doc-body">Major junctures earn pauses. Phase 1 closure earns a pause. Sequencing forks earn pauses. Auto-chaining is the failure mode to avoid. Closure is structural, not merely the absence of more work — and the structural closure deserves time to absorb before the next move opens.</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="absorption-reviews-at-major-thresholds" class="doc-subsection-title">Absorption reviews at major thresholds</h4>
+<div class="doc-prose">
+<p class="doc-body">In-thread reflective pass at major junctures. The output is sometimes a clean assessment, sometimes a small repo correction, sometimes nothing. Where the pass surfaces something durable, it routes to that claim's visible owner; private persistent memory is not a default destination for it and is separately gated. The discipline is that the reflection happens before the next work begins.</p>
+<p class="doc-body">Absorption reviews are explicitly not always artifact-producing. The right output of a reflective pass is often &quot;the existing state is honest; proceed.&quot;</p>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="direction-check-questions-at-sequencing-forks" class="doc-subsection-title">Direction-check questions at sequencing forks</h4>
+<div class="doc-prose">
+<p class="doc-body">&quot;What does milestone-X actually need next?&quot; is sharper than &quot;what is next?&quot; Asked at moments where the next move could be one of several. The question shapes the sequencing rather than the available options.</p>
+</div>
+</section>
+</section>
+<section class="doc-section">
+<h3 id="surface-and-voice-discipline" class="doc-section-title">Surface and Voice Discipline</h3>
+<div class="doc-prose">
+<p class="doc-body">The method maintains discipline about which voice belongs in which surface. Different artifact types (workflow rules, methodology articulation, project documentation, grounding notes, external writing) have different audiences and different appropriate voices.</p>
+<p class="doc-body">Repo-local prose (this doc, <code class="doc-code">AGENTS.md</code>, project documentation) stays in systemic / architectural voice. ASK-positioning voice belongs in operator-side grounding notes and external writing. The full articulation of which vocabulary belongs where lives operator-side; this document references the principle structurally without carrying its content.</p>
+<p class="doc-body">The principle is recursive: the rule about voice externality stays operator-side. Naming the rule's specifics inside repo prose would itself name the framing the rule keeps out. This document carries the structural reference (voice categories as method elements) and points to operator-side surfaces for the full articulation.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="relation-to-adversarial-collaboration" class="doc-section-title">Relation to Adversarial Collaboration</h3>
+<div class="doc-prose">
+<p class="doc-body">Adversarial collaboration is the within-session multi-mind execution-protocol layer. Adversarial iteration is the across-time single-mind methodology motion this document is about. They are different patterns at different altitudes operating on different timescales. Both are load-bearing in the working method.</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Adversarial collaboration</strong> — multi-mind, one moment. Workflow rules live in <code class="doc-code">control-surface/AGENTS.md</code>; advisor posture and cadence context are recorded in <code class="doc-code">control-surface</code>'s grounding note. Per-session, per-PR cadence with two review windows.</li>
+<li class="doc-body"><strong>Adversarial iteration</strong> — single-mind, across time. Lives here. Cross-phase swing motion.</li>
+</ul>
+<p class="doc-body">Both preserve productive opposition, but they do so through different structures. Adversarial collaboration separates roles across agents in one moment; adversarial iteration separates pressures across phases in time. Adversarial collaboration produces the within-session friction that surfaces architectural disagreements while they are still resolvable; adversarial iteration produces the across-phase motion that lets each phase's evidence pressure the next phase's claims.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="methodology-as-first-class-subject" class="doc-section-title">Methodology as First-Class Subject</h3>
+<div class="doc-prose">
+<p class="doc-body">The recursive observation: the method itself is part of the project's articulated value. The asset-pipeline-ASK grounding note frames the project as more than a pipeline — <em>&quot;a prototype system for designing such systems.&quot;</em> The meta-pattern (the moves articulated above) is what makes the project's approach reusable beyond its single domain.</p>
+<p class="doc-body">This document is the first move toward making the method legible as itself. Before this document, the method lived diffused across <code class="doc-code">AGENTS.md</code> rules, milestone notes, the corrective-principles section of milestone-7, and the article line. A returning operator or external reader could reconstruct the architecture-of-furniture-image-production from the docs much more readily than the architecture-of-arriving-at-such-architectures. If the meta-pattern is load-bearing for how the project is understood beyond its single domain, it should be legible as itself, not only as residue.</p>
+<p class="doc-body">The recursive shape: this document applies the method to itself. It is an architecture-attempt-before-prototype for the methodology layer. It is a synthesis-attempt-against-concrete-example (the concrete example being asset-pipeline-ASK). It carries a self-superseding clause. The method's own articulation respects the method's own discipline.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="worked-example-asset-pipeline-ask" class="doc-section-title">Worked Example: asset-pipeline-ASK</h3>
+<div class="doc-prose">
+<p class="doc-body">The method is visible in the project's history.</p>
+<p class="doc-body">The first swing was pure ontology — abstract architecture work. Then a directional reversal toward implementation produced the v1 prototype: the SKU-driven Furniture v1 base operationalized end-to-end, three other modes probed at probe-depth, the architecture surviving cross-mode pressure without structural mutation.</p>
+<p class="doc-body">The prototype phase produced its plateau (milestone-7) and surfaced corrective principles: architecture-attempt-before-prototype, vocabulary deconstruction before architectural commitment, synthesis-attempt-against-concrete-example, proof-chain gravity well guard. These are the moves articulated above, surfaced through the project's actual work rather than imposed in advance.</p>
+<p class="doc-body">The second swing moved back toward abstraction through the IA layered-content redirection: worked-example mode sketches, cross-mode synthesis, and later architecture attempts that pressure layered references, constraints, discretion, and inheritance. Later swings may return to demonstration or operational proof. The method cares about the pattern, not the worked example's current phase state: abstraction and execution keep pressuring each other; the asymptote does not arrive.</p>
+<p class="doc-body">The method is not separate from this history; it is what makes the history coherent.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="self-superseding-clause" class="doc-section-title">Self-Superseding Clause</h3>
+<div class="doc-prose">
+<p class="doc-body">This document is the method's primary articulation in <a href="https://github.com/apexSolarKiss/method-ASK/blob/main/README.md"><code class="doc-code">apexSolarKiss/method-ASK</code></a>. It should be superseded by:</p>
+<ul class="doc-list">
+<li class="doc-body">the splitting-out of any method element above into its own first-class doc as the substrate accumulates — <code class="doc-code">docs/intent-artifacts.md</code>, <code class="doc-code">docs/relative-externality.md</code>, <code class="doc-code">docs/voice-surface-boundary.md</code>, <code class="doc-code">docs/source-of-truth-and-aging-rate.md</code>, <code class="doc-code">docs/source-of-intent.md</code>, and others as they land</li>
+<li class="doc-body">subsequent articulations of the method that earn deeper coverage of any single element above</li>
+<li class="doc-body">whatever later synthesis absorbs the methodology layer alongside the project's own evolution</li>
+</ul>
+<p class="doc-body">The articulation is not finished. Each method element above could earn its own deeper treatment. Some elements may dissolve as later work shows they were instances of more general principles; others may earn first-class status as their own articulated patterns.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="anchor-documents" class="doc-section-title">Anchor Documents</h3>
+<section class="doc-section">
+<h4 id="article-cluster-the-methodology-articulated-externally" class="doc-subsection-title">Article cluster (the methodology articulated externally)</h4>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/beyond-vibe-coding-constraining-llms"><em>Beyond Vibe Coding: Constraining LLMs</em></a> — the prior argument for constrained LLMs and explicit rules; substrate for the discipline this method runs on</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/from-normative-structure-to-execution"><em>From Normative Structure to Execution Proof</em></a> — the swing toward implementation; &quot;architecture should not rush to implementation, but it should eventually submit itself to it&quot;</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/lessons-from-the-first-prototype"><em>Lessons from the First Prototype Phase</em></a> — the structural retrospective written when the split-execution model was retired; ~50x ceremony reduction; why the protocol's compensating rules exist</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/adversarial-collaboration"><em>Adversarial Collaboration</em></a> — the within-session multi-mind layer; complement to this document at the execution-protocol altitude</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/from-execution-proof-back-to-normative"><em>From Execution Proof Back to Normative Structure</em></a> — the swing back to abstraction; introduces <em>adversarial iteration</em> alongside adversarial collaboration</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/method-designing-systems-that-build"><em>Method // Designing Systems That Build Systems</em></a> — the external articulation of this document; names the category the method targets (system-building systems) and the productive Russellian shape of the method's self-membership</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/machine-builds-machine"><em>Machine Builds Machine</em></a> — the recursive limit of AI-native work; the plateau signal as a two-part discipline (when to ask for new operator intent + when not to ask); Russell + Hegel as bracketing anchors</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/the-nudge-layer"><em>The Nudge Layer</em></a> — the small control layer between normal execution and fresh-context critique; a boundary-classification pass that simulates the external-intent boundary check; reduces false stops and false autonomy; the stack-as-intelligence frame applied at workflow scale</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/the-drift-audit"><em>The Drift Audit</em></a> — the methodological refinement after the nudge layer; once the nudge ladder handles next-direction discovery, fresh-context critique returns to its proper role as anti-drift inspection; load-bearing asymmetry that anti-drift critique cannot be deterministically triggered from inside the system it inspects (system nominates; operator authorizes); the audit earns its value from externality; milestones are evidence, not triggers; names the four-layer ladder (minimal / structured / externality-decision / fresh-context critique) and the principle that the stack becomes smarter when each layer understands the size of its own job</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/from-conversation-to-control-surface"><em>From Conversation to Control Surface</em></a> — the method applied to project inception from messy AI-mediated exploration (<code class="doc-code">urban-observatory</code>); recovered intent → validated constraint → repo as the load-bearing sequence; source-of-intent recovery as architecture; reconciliation of overlapping conversation captures before synthesis; validation loops that prevent the model from authoring intent; the grounding note as external memory; catastrophic forgetting and other structural LLM failure modes (weak inhibitory control, weak cognitive flexibility, pattern completion, dispersal of focus) reframed as the class the control-surface method is calibrated against; the repo is not the first artifact</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/the-rule-the-repo-could-not-contain"><em>The Rule the Repo Could Not Contain</em></a> — the recursive externality topology across the cluster; the repo can name the structural category but cannot carry the protected payload; externality as a relation, not a property; two axes — surface boundary (internal/external) and normative direction (upstream / downstream / reflective); ex-repo is not ex-system; meta-to-downstream absorption (<code class="doc-code">urban-observatory</code> post-bootstrap trim pass as worked instance); the invariant across surfaces (repo-readable / grounding notes / operator-side memory / articles); the methodology-layer altitude distinct from the execution-protocol layer; the article is itself the principle in action, positioned as a link from <code class="doc-code">control-surface</code> rather than an absorption into it</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/three-agents-got-into-an-argument"><em>Three Agents Got Into an Argument // The Repo Won</em></a> — the method stress-tested on a multi-advisor disagreement about current file contents; distinguishes three surface-specific failure modes — confident causal confabulation, confident structural confabulation, and narrow surface authority — none well-described by the word <em>hallucination</em>; connects to the prior reasoning-failures piece; names the thematic-tidiness tell as heuristic (a diagnosis too clean is doing rhetorical work, not retrieval work); restates the operating rule that splits chat-side advisors from the artifact-owning surface; the architecture works because the principle is structural, not rhetorical — the artifact-owning surface gets the final read; positioned as a link from <code class="doc-code">control-surface</code> rather than an absorption into it</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/the-handoff-is-not-the-instruction"><em>The Handoff Is Not the Instruction</em></a> — the methodology-layer guardrail when expertise enters an AI-native workflow; well-formed artifacts (memos, sketches, expert handoffs) structurally tend to be read as current direction even when they represent exploration, future roadmap, or premature architecture; a five-category taxonomy for incoming contributions classified by operational status — valid source-of-intent / current-stage information-architecture or method refinement / future roadmap idea / advisor scratch or exploration / premature implementation architecture; the operating rule that only the first two categories reshape current control-surface work by default, with later categories stored for the stage that will need them rather than promoted into method on arrival; preserves repeatability of the method as the load-bearing constraint; positioned as a link from <code class="doc-code">control-surface</code> rather than an absorption into it</li>
+<li class="doc-body"><a href="https://atomicspacekitten.substack.com/p/the-method-learns-from-exteriority"><em>The Method Learns from Exteriority</em></a> — the method's leave-and-return stroke as method-series narrative; a system cannot see itself from inside its own frame, so it builds an external surface to reflect against and returns to re-represent what it made; re-representation (the diagram that refuses to interpolate) exposes the seam the inside view missed — the intent ↔ discretion relation; the pause is the mechanism, not lost time; the system surfaces the recursion but only the human decides it is significant; narrative companion to the bounded-generativity primitive (<code class="doc-code">docs/bounded-generativity.md</code>)</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h4 id="repo-anchors" class="doc-subsection-title">Repo anchors</h4>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><a href="https://github.com/apexSolarKiss/method-ASK/blob/main/AGENTS.md"><code class="doc-code">AGENTS.md</code></a> — workflow rules for this methodology repo</li>
+<li class="doc-body"><a href="bounded-generativity.html"><code class="doc-code">docs/bounded-generativity.md</code></a> — the <strong>bounded generativity</strong> method primitive (grammar → bounded variance → selection → governed artifact); the mechanized form of <em>order from chaos</em>; three functions on the Montesquieu spine; discretion brackets generation</li>
+<li class="doc-body"><a href="portable-definition-layer.html"><code class="doc-code">docs/portable-definition-layer.md</code></a> — the <strong>portable definition layer</strong> method primitive (intent / constraints / discretion / references / governance as the durable object preserved across substrates); the <strong>durability axis</strong>, orthogonal complementary peer to bounded generativity; AP implemented + UO conceptual interpretive instance — lands the primitive, not an implementation protocol</li>
+<li class="doc-body"><a href="seed-mediated-generated-interface.html"><code class="doc-code">docs/seed-mediated-generated-interface.md</code></a> — the <strong>seed-mediated generated interface</strong> pattern (a seed — repo / packet / prompt — + delivery wrapper supplies the material and behavior for an AI runtime to render the interface in conversation); <strong>carrier</strong> (repo- / packet- / prompt-mediated) and <strong>runtime context</strong> (self-contained opaque / connected authorized / author-controlled null) are orthogonal axes; setup UX is method-bearing; <strong>operator distance</strong> sets the encoding budget; observed across packet + prompt carriers (the repo-mediated <em>delivered</em> form is the forward AP/UO launch shape, not yet instantiated); the external-review packet subtype stays a held candidate. Repo-mediated GI is one carrier species of this genus</li>
+<li class="doc-body"><a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">apexSolarKiss/control-surface</code></a> — the execution-protocol repo that operationalizes the method; carries <code class="doc-code">AGENTS.md</code> rules, templates, prompts, and project-instantiation workflow</li>
+<li class="doc-body"><a href="https://github.com/apexSolarKiss/control-surface/blob/main/docs/architecture.md"><code class="doc-code">apexSolarKiss/control-surface/docs/architecture.md</code></a> — the execution-protocol repo's role-model architecture</li>
+<li class="doc-body"><a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">apexSolarKiss/asset-pipeline-ASK</code></a> — the mature worked example the method has been pressure-tested against</li>
+<li class="doc-body"><a href="https://github.com/apexSolarKiss/mazeASK"><code class="doc-code">apexSolarKiss/mazeASK</code></a> — separate dormant historical origin case for the retired split-execution generation; not a current operating-model example; if resumed, it migrates to the current model</li>
+</ul>
+</div>
+</section>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/method.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../method.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li data-surface-nav-current></li>
+      <li><a href="absorption-discipline.html">absorption discipline</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="bounded-generativity.html">bounded generativity</a></li>
+      <li><a href="governance.html">governance</a></li>
+      <li><a href="intent-artifacts.html">intent artifacts</a></li>
+      <li><a href="normative-apex.html">normative apex</a></li>
+      <li><a href="portable-definition-layer.html">portable definition layer</a></li>
+      <li><a href="relative-externality.html">relative externality</a></li>
+      <li><a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+      <li><a href="source-of-intent.html">source of intent</a></li>
+      <li><a href="source-of-truth-and-aging-rate.html">source of truth and aging rate</a></li>
+      <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/method.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../method.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>

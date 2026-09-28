@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // normative apex</title>
+<meta name="description" content="Normative Apex">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/normative-apex.md">
+<meta name="source-sha256" content="f059662357327006be3cc3f3979d989e49f0c5d830a8205aabbb5bf9398ebbc4">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">normative apex</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="normative-apex" class="doc-title">Normative Apex</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>normative-apex.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">23691 B &middot;</span> <span class="doc-meta-item">source sha256 f05966235732</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/normative-apex.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../normative-apex.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">This doctrine governs the <strong>structural</strong> face of source of intent: what a source of intent <em>is</em> — the locatable governing role that supplies or authorizes purpose and the governing standard, and from which legitimate authority, closure, and recourse take their bearings. The <strong>operational</strong> face — how purpose is recovered, validated, preserved, and routed across surfaces — lives in <a href="source-of-intent.html"><code class="doc-code">docs/source-of-intent.md</code></a>. This doc articulates the apex the recursion presupposes; the operational doctrine governs how source of intent is handled in practice.</p>
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#the-apex">The apex</a>
+</li>
+<li class="doc-body"><a href="#membership-and-derivability-are-different-axes">Membership and derivability are different axes</a>
+</li>
+<li class="doc-body"><a href="#the-decomposition-intent--authority--recourse">The decomposition: intent · authority · recourse</a>
+</li>
+<li class="doc-body"><a href="#the-field-models-a-dyad-the-structure-is-a-stack">The field models a dyad; the structure is a stack</a>
+</li>
+<li class="doc-body"><a href="#source-of-intent-is-a-role-not-an-artifact">Source of intent is a role, not an artifact</a>
+<ul class="doc-toc-list doc-hierarchy">
+<li class="doc-body"><a href="#three-functions-bridge">Three Functions bridge</a></li>
+</ul>
+</li>
+<li class="doc-body"><a href="#delegation-does-not-propagate-the-apex">Delegation does not propagate the apex</a>
+</li>
+<li class="doc-body"><a href="#the-non-identities">The non-identities</a>
+</li>
+<li class="doc-body"><a href="#the-operational-floor-is-downstream-of-the-standard">The operational floor is downstream of the standard</a>
+</li>
+<li class="doc-body"><a href="#relation-to-governance">Relation to governance</a>
+</li>
+<li class="doc-body"><a href="#jurisprudential-anchors">Jurisprudential anchors</a>
+</li>
+<li class="doc-body"><a href="#classification">Classification</a>
+</li>
+<li class="doc-body"><a href="#self-superseding-clause">Self-superseding clause</a>
+</li>
+<li class="doc-body"><a href="#anchors">Anchors</a>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="the-apex" class="doc-section-title">The apex</h3>
+<div class="doc-prose">
+<p class="doc-body">The governing standard a system runs on must be <strong>supplied to the execution function; it cannot be legitimated merely by executing it.</strong> A model, an orchestration layer, a decentralization scheme, a clean data foundation, a perfected hardware interlock — none supplies it. It enters from a locatable governing role.</p>
+<p class="doc-body">The same person or institution may occupy both the source role and the execution role. <strong>The dependency is logical, not necessarily a separation of actors:</strong> what cannot happen is the execution function authorizing the basic norm it presupposes, regardless of who runs it.</p>
+<p class="doc-body">A standard can be reshaped across time without being derived from the execution layers beneath it. Generated candidates, critique, evidence, or convergence inside a workflow may inform revision; they do not themselves authorize the revision. The regress halts only when a locatable source of intent adopts a standard under authority and recourse. Non-derivable does not mean immutable; it means the standard's authority is not produced by the machinery that later executes under it.</p>
+<p class="doc-body">Source of intent is a <strong>locatable governing role, not exhaustive specification or execution control.</strong> Execution may be delegated, stochastic, collective, or exploratory; the apex remains attributable as long as purpose, authorization, closure, and answerability remain attributable rather than dissolving into aggregation. The inverse error is to let private intention float free of those gates.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="membership-and-derivability-are-different-axes" class="doc-section-title">Membership and derivability are different axes</h3>
+<div class="doc-prose">
+<p class="doc-body">A distributed- or extended-cognition account may place the human <em>inside the boundary</em> of the coupled cognitive system — operator, models, repositories, critics, and durable context form one system. <strong>In ASK's topology, that does not reduce the human to another participant “in the loop”: human judgment stays at the apex, supplying or authorizing the purpose and governing standard the execution layers cannot derive.</strong> Read naively, system membership may still seem to collide with apex non-derivability: if the human is <em>part</em> of the system, how can the apex fail to be <em>produced by</em> it? The two claims answer different questions and do not compete.</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Membership</strong> — is the human part of the coupled cognitive system? <em>Yes.</em> That describes the system boundary, not the human's normative role; in ASK, human judgment remains at the apex.</li>
+<li class="doc-body"><strong>Derivability</strong> — can the apex's function (what the system is <em>for</em>, what counts as correct) be produced by the layers below it? <em>No.</em> Origin does not aggregate upward.</li>
+</ul>
+<p class="doc-body">An apex inside the system boundary is not a paradox but an <strong>axiom</strong> — internal to the scoped system, but supplied rather than generated by the execution layers beneath it.</p>
+<p class="doc-body"><strong>The apex is defined by directionality, not location.</strong> Intent originates at the apex and flows down; it is not synthesized upward from the components. The boundary may be drawn to <em>include</em> the apex (the whole apparatus) or to <em>exclude</em> it (the stack the apex governs) — both scopes are valid, and the invariant across both is the direction intent travels.</p>
+<p class="doc-body"><strong>Corollary:</strong> membership never answers an origin question. &quot;The human is part of the system&quot; (true) does not license &quot;the system can supply its own source of intent&quot; (false). Capability gains in the lower layers are not the apex being filled.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-decomposition-intent--authority--recourse" class="doc-section-title">The decomposition: intent · authority · recourse</h3>
+<div class="doc-prose">
+<p class="doc-body">Accountability decomposes into three things distribution can never produce:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Intent</strong> — <em>before</em> the act: what the system is for and which governing standard applies.</li>
+<li class="doc-body"><strong>Authority</strong> — the <em>right</em> to act, not merely the power.</li>
+<li class="doc-body"><strong>Recourse</strong> — <em>after</em> the act: who answers when an authorized move is later judged wrong.</li>
+</ul>
+<p class="doc-body">The three are jointly necessary. <strong>Intent without authority is preference. Authority without a nameable intent is power. Either without recourse is unaccountable.</strong> The source may be an individual, office, institution, governed collective, constitutional order, or delegated authority — but purpose, authorization, closure, and answerability must remain locatable. It need not precompute every result; it governs why the aperture exists, where its bounds sit, who may accept, reject, revise, or bind what emerges, and who answers for the result.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-field-models-a-dyad-the-structure-is-a-stack" class="doc-section-title">The field models a dyad; the structure is a stack</h3>
+<div class="doc-prose">
+<p class="doc-body">The debate usually runs on a two-term ontology — human vs. machine, two minds across a gap. That interactional dyad is real, but it sits <strong>inside a governance stack</strong>, and the executor may be <strong>human or computational</strong>. The dyad asks who is across the gap; the apex asks <strong>which layer answers.</strong> &quot;Apex&quot; names <strong>structural dependency and answerability, not moral status or dominance</strong> — a governed stack has different heights, but that is ordering, not rank.</p>
+<p class="doc-body">The requirement holds <strong>independent of the consciousness question.</strong> Whether or not anyone is home in the executor, a consequential system still needs a locatable apex. The requirement is over-determined: the purpose and beneficiary of the system, <em>and</em> the executor's incapacity to legitimate its own standard, each suffice to secure it.</p>
+<p class="doc-body"><strong>Held source-role boundary:</strong> The permitted-source list above and the human-or-computational executor ruling do not together determine whether a computational office may itself occupy the source role. This doctrine also does not determine whether chains of constituted authority must ultimately terminate in natural persons. Both questions are deliberately held open.</p>
+<p class="doc-body"><strong>Indexed partial results inside the hold.</strong> The hold is not lifted — both questions remain open — but the rulings bearing on them are indexed rather than general, and two carry results worth stating. An office may hold constituted authority <strong>without being a legal person in its own right</strong>. That settles the legal-personality component of the first question above; it does not establish root-role occupancy.</p>
+<p class="doc-body">On the <strong>liability limb</strong> specifically, a natural-person terminus is not required. Liability is one indexed strand of a chain of constituted authority, and settling it does not settle the register in which such a chain finally comes to rest for answering: non-retributive answerability, punitive or retributive responsibility, and the anchor a tracing argument would need all remain open. That is the <em>terminus</em> question, not the requirement that answerability remain locatable, which the decomposition above states. Neither partial resolves either held question. The legal-personality result does not establish root-role occupancy; the liability result does not address it.</p>
+<p class="doc-body"><strong>Where the underlying evidence sits.</strong> The partial results above are already part of this doctrine. The underlying evidence record and the ASK rulings indexed here are assembled in the Consciousness + Free Will structured survey. Its public projection is implemented under <code class="doc-code">apexSolarKiss/ASK/apex-solar-kiss/consciousness-free-will/</code> and rendered at <a href="https://a-s-k.studio/apex-solar-kiss/consciousness-free-will/">a-s-k.studio/apex-solar-kiss/consciousness-free-will/</a>. Two of the survey's held questions restate this boundary's limbs verbatim, and a third bears on the occupancy limb without being identical to it. The survey informs this doctrine; it does not authorize it, and it resolves neither held question.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="source-of-intent-is-a-role-not-an-artifact" class="doc-section-title">Source of intent is a role, not an artifact</h3>
+<div class="doc-prose">
+<p class="doc-body">The apex is a <strong>locatable governing role</strong> — a chair, a hat, an office someone occupies. It is not a file, a folder, or a document. Artifacts <em>carry</em> the role's intent; they never constitute it.</p>
+<pre class="doc-pre"><code class="language-text">source of intent    the role that supplies or authorizes purpose and the governing standard
+artifact of intent  a carrier through which that role's intent is expressed, deployed,
+                    routed, relayed, or preserved
+</code></pre>
+<p class="doc-body">The confusion is easy to make and expensive to keep: naming a storage plane after the role invites the reading that the plane <em>is</em> the source of intent, and therefore that placing an artifact there confers authority. It does not. Folder membership confers no authority, no activation, and no queue state.</p>
+<p class="doc-body">A document <em>about</em> source of intent — a grounding note, a context master — remains an artifact of context, even when its subject is the apex and even when it carries authoritative intent-bearing claims. <code class="doc-code">docs/intent-artifacts.md</code> governs the carrier classes and their lifecycles; this doctrine governs the role.</p>
+<p class="doc-body"><strong>Standing intent</strong> is normative content adopted by a source of intent for a named scope, remaining in force until revised, revoked, or retired through the applicable governance path. Its continuing force does not require a fresh source-of-intent act for every downstream action within that scope. <em>Standing</em> here describes the status of the intent-content — not whether any carrier is continuously deployed or available, which is a separate activation posture governed by <code class="doc-code">docs/intent-artifacts.md</code>.</p>
+<p class="doc-body">Four slots stay distinct, and collapsing any pair is the recurring error:</p>
+<pre class="doc-pre"><code class="language-text">source of intent      the governing role that may adopt or authorize
+standing intent       adopted normative content currently in force for a named scope
+artifact of intent    what preserves, expresses, deploys, routes, or relays that content
+runtime realization   the causal organization through which intent influences operation
+</code></pre>
+</div>
+<section class="doc-section">
+<h4 id="three-functions-bridge" class="doc-subsection-title">Three Functions bridge</h4>
+<div class="doc-prose">
+<p class="doc-body"><a href="https://github.com/apexSolarKiss/design-system-ASK"><code class="doc-code">design-system-ASK</code></a>'s <strong>Three Functions</strong> primitive marks legislative, executive, and judicial function in a figure. Its <strong>function-admissibility criteria</strong> are upstream; which concrete element instantiates a classified role is consumer-local. The criteria bear directly on the four slots above, so the mapping is stated here rather than inferred at each figure:</p>
+<pre class="doc-pre"><code class="language-text">source of intent      the ROLE is the CONSTITUTIVE LEGISLATIVE SOURCE — it adopts or
+                      authorizes the governing standard
+standing intent       adopted normative content; it performs no legislative function
+artifact of intent    classified by WHAT IT DOES: DELEGATED legislative apparatus where it
+                      acts as a grammar, brief, rule, or grant carrying the standard into
+                      operative scope — not legislative merely because it carries intent
+runtime realization   a causal organization, not itself a function class; what operates
+                      within it is classified by what it does — realizing candidates under
+                      the standard is executive; evaluating, selecting, and closing is
+                      judicial; deriving a sub-brief under a grant is delegated legislation
+</code></pre>
+<p class="doc-body"><strong>Constitutive and delegated legislation are one function.</strong> A figure marks both with the same legislative treatment and carries the hierarchy between them in topology, labels, and geometry — never a second color, an opacity rank, or a fourth function. The grant is apparatus; the aperture it produces is a bounded permission, not apparatus.</p>
+<p class="doc-body"><strong>The role is not the function, and the actor is not the role.</strong> Classifying the source-of-intent role as the constitutive legislative source makes neither the role identical to the legislative function — the purpose, authorization, closure, and answerability this doctrine requires of the apex are unchanged — nor the person or institution occupying it legislative <em>only</em>: the same actor may occupy a legislative role and a judicial one without collapsing either. Where a figure draws the occupying actor separately from the role, the actor's envelope stays neutral while the role it occupies stays legislative. This is the actor / role distinction this doctrine already draws, stated in the primitive's vocabulary.</p>
+<p class="doc-body">This bridge aligns vocabulary; it adds no apex doctrine. The apex doctrine above — membership and derivability, the intent · authority · recourse decomposition, non-derivability, delegation, and the <strong>held source-role boundary</strong> — is unchanged, and the primitive settles none of the held questions.</p>
+</div>
+</section>
+</section>
+<section class="doc-section">
+<h3 id="delegation-does-not-propagate-the-apex" class="doc-section-title">Delegation does not propagate the apex</h3>
+<div class="doc-prose">
+<p class="doc-body">A source of intent may delegate task formation, local subgoal-setting, evidence gathering, candidate generation, evaluation, and — where governance names the scope — bounded binding judgment. None of those acts, alone or stacked, delegates the source role itself. What travels down a delegation chain is <strong>intent, apertures, and bounded decision rights from the apex</strong>; the apex does not travel with them.</p>
+<p class="doc-body">The ordinary worked topology makes this concrete. An operator authorizes a program objective and its governing aperture. A parent executor receives that delegated intent, derives bounded task intent, and dispatches sub-briefs to computational subagents. Subagents realize the tasks — generating candidates, analyzing, comparing, critiquing, testing — and exercise scoped binding judgment only where an explicit grant permits it. The parent verifies what returns, rejects or integrates it, and performs local selection within its own grant. The operator retains operative authorization, program-level closure, and ultimate answerability. Delegation may recurse where the grant permits: each authorized dispatch opens a nested aperture inside the outer one, and <strong>recursion increases execution depth, never source-role height</strong>.</p>
+<p class="doc-body">A lower office comes to occupy a source-of-intent role only where governance separately constitutes or recognizes it there for a named scope, with purpose, authorization, closure, and answerability attributable for that scope — the same requirements the decomposition states. Ordinary dispatch constitutes nothing: the proximate author of a task brief is not thereby its source of intent, because causal or textual origin of an instruction is not normative origination of the standard it serves (<a href="intent-artifacts.html"><code class="doc-code">docs/intent-artifacts.md</code></a> owns the matching drafting-provenance ≠ normative-voice distinction). Whether a computational office may itself occupy the source role, and whether chains of constituted authority must ultimately terminate in natural persons, remain the held source-role boundary above, together with the indexed partial results recorded there — this section answers neither question in either direction.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-non-identities" class="doc-section-title">The non-identities</h3>
+<div class="doc-prose">
+<p class="doc-body">The subject is one primitive stated in distinctions the discourse keeps eliding:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>power ≠ authority</strong> — the capacity to act is not the right to act.</li>
+<li class="doc-body"><strong>authorization evidence ≠ conferred authority</strong> — credentials, identity proofs, role grants, signatures, permissions, and approval records are operational carriers by which governance recognizes an upstream grant; they are not the source of that grant. Verification may recognize an authorization within scope under the current policy, but it cannot originate or legitimate the authority behind it.</li>
+<li class="doc-body"><strong>realization persistence ≠ continuing authorization</strong> — that a system still carries an intent, and reconstructs it after disturbance, establishes only that the realization persists. It does not establish that the authorization behind it remains in force. A goal can outlive the standing intent it once realized.</li>
+<li class="doc-body"><strong>aggregation ≠ origination of intent</strong> — a blend of participants, or a statistical composite of preferences, does not originate a governing intent. A poll aggregates; a constituted collective decides.</li>
+<li class="doc-body"><strong>intention alone ≠ legitimate authority</strong> — private will does not self-authorize; it acts through attributable authority, closure, and recourse.</li>
+<li class="doc-body"><strong>free-will sourcehood ≠ the source-of-intent role</strong> — sourcehood in the free-will sense concerns an agent's relation to its own actions and motives; the source of intent is a normative-governance role carrying standing to originate a directive that binds another actor or office. They are not one question in two vocabularies. Non-identity is not non-requirement: whether a separate free-will condition bears on eligibility for the root source role is not settled here.</li>
+<li class="doc-body"><strong>the interactional dyad ≠ the governance stack that contains it</strong> — the field mistakes the two-minds-across-a-gap picture for the whole structure.</li>
+<li class="doc-body"><strong>membership ≠ derivability</strong> — being inside the system boundary is not being produced by the system. In ASK's topology, the human is inside the coupled system while judgment remains at the apex, a role the lower layers cannot generate.</li>
+<li class="doc-body"><strong>location ≠ origin</strong> — the apex is directional, not positional: &quot;on top&quot; is a picture, &quot;intent originates here and flows down&quot; is the definition.</li>
+<li class="doc-body"><strong>system capability ≠ apex integrity</strong> — a capability gain in the lower layers cannot offset erosion of the apex faculty (judgment / selection); &quot;the <em>system</em> got more intelligent&quot; never answers an origin question.</li>
+<li class="doc-body"><strong>candidate-generation ≠ standard-authorship</strong> — generating candidates, including candidate <em>standards</em>, is not authoring or adopting the standard by which they are judged; the apex faculty is the adoption, not the proposal.</li>
+<li class="doc-body"><strong>delegated intent ≠ delegated source role</strong> — tasks, apertures, and bounded decision rights travel down a delegation chain; the governing role does not travel with them.</li>
+<li class="doc-body"><strong>delegation depth ≠ source-role height</strong> — recursive delegation deepens execution; it raises no delegate toward the apex.</li>
+<li class="doc-body"><strong>proximate task instruction ≠ origination of standing intent</strong> — composing the brief that directs a lower layer is derivative authorship under the upstream standard, not adoption of a standard.</li>
+<li class="doc-body"><strong>non-derivable ≠ immutable</strong> — the standard is non-derivable at any instant yet plastic across time; the apex may revise it through cycles without it becoming derivable from below.</li>
+<li class="doc-body"><strong>convergence ≠ authority</strong> — a loop may converge to its own fixed point; convergence can stabilize a candidate standard, but it does not authorize that standard. Authority requires adoption by a locatable source of intent and remains answerable through governance and recourse.</li>
+<li class="doc-body"><strong>convergence ≠ convergence-to-truth</strong> — a converging process settles to the fixed point its dynamics define, not necessarily to a true one. Truth-tracking requires contact with a signal outside the loop; otherwise convergence may only stabilize the system's own attractor.</li>
+<li class="doc-body"><strong>adversarialness ≠ independent error</strong> — adversarial checking tracks truth only to the degree the critic's errors are independent of the error class being tested. Adversarialness is a posture; independence is a property, and it is graded per error class.</li>
+</ul>
+<p class="doc-body">Two further distinctions are argued in full in the essay line and carried here by reference: the <strong>residue of judgment ≠ the act of judgment</strong>, and <strong>outputs ≠ intent</strong> (see <a href="https://atomicspacekitten.substack.com/p/judgment-doesnt-transfer"><em>Judgment Doesn't Transfer</em></a>).</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-operational-floor-is-downstream-of-the-standard" class="doc-section-title">The operational floor is downstream of the standard</h3>
+<div class="doc-prose">
+<p class="doc-body">The normative apex supplies or authorizes the governing standard. Governance constitutes or recognizes authority, translates the standard into rules, thresholds + bounded decision rights, and provides verification, adjudication, revision + recourse. The <strong>operational floor</strong> is the boundary those rules establish. A substrate or execution mechanism may carry, expose, clear, or enforce that floor; it cannot legitimate the standard that authorized it.</p>
+<p class="doc-body">Every substrate verb — clear, see, enforce, run, audit, arrest, de-energize — operates on a floor whose location has already been supplied to that substrate. <strong><em>Define</em> is never on the substrate's list.</strong> The standard is presupposed and supplied upstream of the substrate's execution function. Four structurally different worked cases make the point and are argued in full in the essay line: the <strong>architecture</strong> layer, the <strong>state / enforcement</strong> layer (<em>Authority Without a Standard</em>), the <strong>operational</strong> layer (detection supplies what is true, never what the truth is allowed to mean), and the <strong>physical / limit</strong> layer (<a href="https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard"><em>Determinism Is Not a Standard</em></a> — perfecting enforcement only throws the standard's absence into sharper relief). <a href="https://atomicspacekitten.substack.com/p/you-cannot-build-your-way-to-the"><em>You Cannot Build Your Way to the Apex</em></a> synthesizes the essay arc; <a href="https://atomicspacekitten.substack.com/p/judgment-doesnt-transfer"><em>Judgment Doesn't Transfer</em></a> argues the corpus frame.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="relation-to-governance" class="doc-section-title">Relation to governance</h3>
+<div class="doc-prose">
+<p class="doc-body">The apex states the normative <strong>requirements</strong> — purpose, governing standard, legitimate authority, closure, recourse. <strong>Governance</strong> (<a href="governance.html"><code class="doc-code">docs/governance.md</code></a>) provides their institutional <strong>mechanisms</strong> — how authority is constituted or recognized, how rules are made and applied, how application is verified and adjudicated, how recourse is operated. Authority and recourse appear in both docs for this reason: the apex names them as requirements; governance operates them as mechanisms. The two are <strong>jointly necessary in consequential, delegated, or collective systems</strong>, and are articulated separately rather than merged.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="jurisprudential-anchors" class="doc-section-title">Jurisprudential anchors</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong>Kelsen — the Grundnorm.</strong> The basic norm is presupposed, supplied to the system, not generated by it.</li>
+<li class="doc-body"><strong>Dworkin — weak vs strong discretion.</strong> Bounded interpretive latitude inside a standard vs the authority to set the standard.</li>
+<li class="doc-body"><strong>Fuller — the Speluncean Explorers.</strong> Competing legitimate sources of authority; the standard is contested, never self-evident from the facts.</li>
+<li class="doc-body"><strong>Weiner — the Declaration of Intent.</strong> Intent declared and binding ahead of the act.</li>
+<li class="doc-body"><strong>Power vs right.</strong> The load-bearing distinction throughout.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="classification" class="doc-section-title">Classification</h3>
+<div class="doc-prose">
+<p class="doc-body">The structural face of source of intent, generalized beyond any single project. It clears the promotion bar by recurrence: the same apex absence recurs across distribution, data, enforcement, supply, operations, silicon, and corpus framings (the essay arc), and across image-making, asset production, and civic domains. It articulates the apex the operational handling doctrine (<a href="source-of-intent.html"><code class="doc-code">docs/source-of-intent.md</code></a>) presupposes.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="self-superseding-clause" class="doc-section-title">Self-superseding clause</h3>
+<div class="doc-prose">
+<p class="doc-body">This doctrine should be superseded by:</p>
+<ul class="doc-list">
+<li class="doc-body">a thinner apex statement if the non-identity field earns its own home (e.g. <code class="doc-code">docs/non-identities.md</code>);</li>
+<li class="doc-body">a refactor if <code class="doc-code">docs/governance.md</code> and this doc are found to share enough structure to warrant a common parent — the &quot;co-primitive&quot; question is deliberately held open here, not asserted.</li>
+</ul>
+<p class="doc-body">The doctrine is not finished; it states the apex modestly and refers the full arguments to the essay line.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="anchors" class="doc-section-title">Anchors</h3>
+<div class="doc-prose">
+<p class="doc-body">Anchor reading lives in <a href="articles.html"><code class="doc-code">docs/articles.md</code></a>. The source-of-intent arc and the trilogy — <a href="https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard"><em>Determinism Is Not a Standard</em></a>, <a href="https://atomicspacekitten.substack.com/p/judgment-doesnt-transfer"><em>Judgment Doesn't Transfer</em></a>, <a href="https://atomicspacekitten.substack.com/p/you-cannot-build-your-way-to-the"><em>You Cannot Build Your Way to the Apex</em></a> — carry the full arguments this doctrine states in compact form.</p>
+</div>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/normative-apex.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../normative-apex.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="method.html">method</a></li>
+      <li><a href="absorption-discipline.html">absorption discipline</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="bounded-generativity.html">bounded generativity</a></li>
+      <li><a href="governance.html">governance</a></li>
+      <li><a href="intent-artifacts.html">intent artifacts</a></li>
+      <li data-surface-nav-current></li>
+      <li><a href="portable-definition-layer.html">portable definition layer</a></li>
+      <li><a href="relative-externality.html">relative externality</a></li>
+      <li><a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+      <li><a href="source-of-intent.html">source of intent</a></li>
+      <li><a href="source-of-truth-and-aging-rate.html">source of truth and aging rate</a></li>
+      <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/normative-apex.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../normative-apex.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>

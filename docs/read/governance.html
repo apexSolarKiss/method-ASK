@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // governance</title>
+<meta name="description" content="Governance">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/governance.md">
+<meta name="source-sha256" content="9eebe9b501d65686c5f211e31158db50e77730ac768f75f698685b6e1109a11b">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">governance</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="governance" class="doc-title">Governance</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>governance.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">10551 B &middot;</span> <span class="doc-meta-item">source sha256 9eebe9b501d6</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/governance.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../governance.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">This doctrine governs <strong>governance architecture</strong>: the arrangement by which a normative source is constituted or recognized, decision rights are allocated and constrained, action is executed and verified, and both rules and their applications remain revisable, adjudicable, and answerable. It may <strong>operationalize</strong> a pre-existing source of intent or help <strong>constitute</strong> a collective one. <strong>Procedure alone does not confer legitimacy on arbitrary intent.</strong></p>
+<p class="doc-body">Governance is articulated separately from the <a href="normative-apex.html">normative apex</a> — and beside it, not inside it — because it has its own decomposition, its own consumer scope, and its own domain implementations. The two are jointly necessary in consequential, delegated, or collective systems.</p>
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#the-altitude-split">The altitude split</a>
+</li>
+<li class="doc-body"><a href="#enforcement-is-not-governance">Enforcement is not governance</a>
+</li>
+<li class="doc-body"><a href="#operational-governance">Operational governance</a>
+</li>
+<li class="doc-body"><a href="#authorization-recognition-is-downstream-and-defeasible">Authorization recognition is downstream and defeasible</a>
+</li>
+<li class="doc-body"><a href="#constitutive-governance">Constitutive governance</a>
+</li>
+<li class="doc-body"><a href="#the-non-identities">The non-identities</a>
+</li>
+<li class="doc-body"><a href="#artifact-governance">Artifact governance</a>
+</li>
+<li class="doc-body"><a href="#governance-record">Governance record</a>
+</li>
+<li class="doc-body"><a href="#classification">Classification</a>
+</li>
+<li class="doc-body"><a href="#self-superseding-clause">Self-superseding clause</a>
+</li>
+<li class="doc-body"><a href="#anchors">Anchors</a>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="the-altitude-split" class="doc-section-title">The altitude split</h3>
+<div class="doc-prose">
+<pre class="doc-pre"><code class="language-text">normative apex            purpose · governing standard · ultimate answerability
+governance architecture   constitution / recognition of authority · rulemaking · delegated discretion ·
+                          execution · verification · adjudication · revision · recourse
+operational floor         boundary established through governed rules · thresholds · limits · exceptions
+execution substrate       mechanisms that carry, expose, apply, or enforce the floor
+</code></pre>
+<p class="doc-body"><strong>Authority and recourse appear in both.</strong> The apex states them as normative <em>requirements</em> — authority must be legitimate, recourse must remain locatable. Governance provides their institutional <em>mechanisms</em> — how authority is constituted or recognized, how recourse is operated. The two docs are complementary, not duplicative.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="enforcement-is-not-governance" class="doc-section-title">Enforcement is not governance</h3>
+<div class="doc-prose">
+<p class="doc-body">Enforcement makes a rule effective. Governance asks whether the standard is legitimate, who may specify and revise it, who may apply it, who verifies the application, and who answers when either rule or application proves wrong. A perfectly enforced bad rule is not better governed because it is perfectly enforced; it is only harder to contest. The capacity to stop a system is power; the right to do so, under a standard, with limits, and with someone answerable, is governance.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="operational-governance" class="doc-section-title">Operational governance</h3>
+<div class="doc-prose">
+<p class="doc-body">A durable governance architecture keeps these functions distinct, auditable, and answerable, even when one organization or one person occupies several:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>rulemaking</strong> — translate the governing standard into predicates, limits, and exceptions.</li>
+<li class="doc-body"><strong>delegated discretion</strong> — bounded (Dworkin <em>weak</em>) judgment exercised by an authorized decision-maker within the governing standard and delegated scope.</li>
+<li class="doc-body"><strong>execution</strong> — apply the rule.</li>
+<li class="doc-body"><strong>verification</strong> — test whether the rule was applied correctly.</li>
+<li class="doc-body"><strong>adjudication</strong> — hear the disputed case.</li>
+<li class="doc-body"><strong>revision and recourse</strong> — correct the rule or its application; name who answers when an authorized move produces an unjust result.</li>
+</ul>
+<p class="doc-body">The <strong>Montesquieu separation</strong> runs through all of it: rulemaking, execution, and adjudication are different powers, and collapsing them into one unanswerable layer is arbitrary power, however reliable. The same separation is the spine of <a href="bounded-generativity.html"><code class="doc-code">docs/bounded-generativity.md</code></a> (legislative grammar / executive generation / judicial selection): bounded generativity is the <strong>generative-artifact instance</strong> of this general architecture, not a separate idea.</p>
+<p class="doc-body"><strong>Domain authority</strong> is a bounded instance of delegated discretion: a domain authority exercises weak-discretion judgment within a named subject area. Domain expertise alone confers no project-level rulemaking, execution, publication, or closure authority; the binding scope of a domain authority's judgment — advisory, delegated-binding within a named scope, or apex-level when the same person also owns the project intent — follows the governance arrangement that recognizes or delegates it, and is named rather than assumed.</p>
+<p class="doc-body"><strong>Recursive delegation</strong> stays inside the grant that creates it. A delegate may redelegate only what its own delegation allows, and a downstream scope may not silently exceed the upstream one. Where a parent delegates work to computational subagents, verification and integration of what returns remain assigned to the parent unless the governance arrangement explicitly assigns verification or integration elsewhere; a scoped binding grant elsewhere does not by itself relieve the parent of either. Local binding authority and ultimate recourse stay distinct at every depth: a delegate that may bind within its named scope does not thereby answer for the system, and actor identity or capability — human or computational — establishes no accountable office by itself. Offices are constituted or recognized; they are not inferred from capability.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="authorization-recognition-is-downstream-and-defeasible" class="doc-section-title">Authorization recognition is downstream and defeasible</h3>
+<div class="doc-prose">
+<p class="doc-body">Governance may encode recognized authority in identities, roles, credentials, signatures, delegated scopes, permissions, and approval paths. The execution layer may verify those carriers against the current governing policy. Absent a policy-defined conflict, revocation, scope breach, constraint, or escalation condition, an authorization result that passes the current governing policy is operative within its recognized scope: the executor does not acquire a free-standing normative veto over a decision the current policy recognizes as authorized.</p>
+<p class="doc-body">Operational recognition is evidence of a grant, not the source or final proof of the authority behind it. The apex or an authorized governance process may later determine that the identity, delegation, scope, policy, approval, or its application was invalid, stale, forged, revoked, mistaken, or misapplied. That adjudication governs the disputed case and activates correction and recourse.</p>
+<p class="doc-body">Technical access, authenticated identity, system-recognized authorization, and legitimately conferred authority are distinct layers. Governance may connect them through evidence and policy; no layer collapses into the next. Verification recognizes and applies an upstream grant; it neither originates nor legitimates it.</p>
+<p class="doc-body">A later policy revision changes the rule going forward and does not, by itself, retroactively invalidate acts that satisfied the policy then in force. Adjudication asks the different question: whether an earlier act actually satisfied the rule that governed it.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="constitutive-governance" class="doc-section-title">Constitutive governance</h3>
+<div class="doc-prose">
+<p class="doc-body">Governance does not only operationalize an existing source; it can help constitute a collective one. A democratic polity becomes capable of binding intent through a defined electorate, constitutional offices, procedure, scope, decision, closure + recourse; a corporation through its charter, ownership or membership, board authority, delegated officers, fiduciary duties + review. These arrangements do not make every decision legitimate merely by existing; they make authority, scope, closure + recourse attributable. Arithmetic supplies none of these — <strong>a poll aggregates; a constituted collective decides.</strong> In collective cases the relation is recursive: governance helps constitute the body capable of expressing binding intent, while that governance remains grounded in prior constitutional or normative commitments.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-non-identities" class="doc-section-title">The non-identities</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong>enforcement ≠ governance</strong> — applying or holding an operational floor is not authorizing the standard, governing its application, or judging the disputed case.</li>
+<li class="doc-body"><strong>determinism ≠ a standard</strong> — a perfectly reliable trigger is not the standard it fires on.</li>
+<li class="doc-body"><strong>a reflex ≠ a conscience</strong> — firing when someone else has decided is not deciding what is wrong.</li>
+</ul>
+<p class="doc-body">A fourth is argued in full in the essay line and carried here by reference: <strong>incorruptibility ≠ legitimacy</strong> — an incorruptible mechanism can faithfully execute an illegitimate command (see <a href="https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard"><em>Determinism Is Not a Standard</em></a>).</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="artifact-governance" class="doc-section-title">Artifact governance</h3>
+<div class="doc-prose">
+<p class="doc-body"><strong>Artifact governance</strong> is governance applied to a single produced artifact rather than a system: it binds an accepted artifact to its <strong>claim register, permitted use, circulation, approval, and answerability.</strong> It is the domain implementation of governance architecture inside a production pipeline — image-making and asset production are the worked instances (<a href="https://github.com/apexSolarKiss/method-ASK/blob/main/examples/image-making-source-of-intent.md"><code class="doc-code">examples/image-making-source-of-intent.md</code></a>; <a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">asset-pipeline-ASK</code></a>).</p>
+<p class="doc-body">Artifact governance does <strong>not</strong> author the work. <strong>Authorship is attributable through source of intent, bounded discretion, judgment-bearing intervention, selection, and closure.</strong> Artifact governance constrains and records the accepted work's claim, use, and answerability; it preserves attribution and recourse, but it does not itself create authorship.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="governance-record" class="doc-section-title">Governance record</h3>
+<div class="doc-prose">
+<p class="doc-body">A <strong>governance record</strong> carries the durable <strong>trace and stated basis</strong> of artifact-governance decisions: capture, provenance, curator, rationale, approval history. It <strong>supports audit and recourse</strong>; it does <strong>not</strong> by itself prove the decision was legitimate, correctly applied, or genuinely reviewed — a record may be incomplete or self-serving. <strong>The record is the carrier, not the governance function.</strong></p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="classification" class="doc-section-title">Classification</h3>
+<div class="doc-prose">
+<p class="doc-body">Governance architecture, generalized beyond any single project. It clears the promotion bar by multi-domain recurrence: state and physical-enforcement cases (the essay line), constituted-collective cases, and artifact-governance instances in image-making and asset production. It is a distinct articulation surface from the apex, ratified on separability and legibility grounds; the stronger &quot;co-primitive&quot; taxonomy is <strong>held</strong>, not asserted.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="self-superseding-clause" class="doc-section-title">Self-superseding clause</h3>
+<div class="doc-prose">
+<p class="doc-body">This doctrine should be superseded by a refactor if a common parent with <a href="normative-apex.html"><code class="doc-code">docs/normative-apex.md</code></a> is earned, or if <strong>artifact governance</strong> accrues enough cross-domain implementation detail to warrant its own subordinate doc. The taxonomy of governance relative to the apex is held open for fresh-context review.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="anchors" class="doc-section-title">Anchors</h3>
+<div class="doc-prose">
+<p class="doc-body">Anchor reading lives in <a href="articles.html"><code class="doc-code">docs/articles.md</code></a>. <a href="https://atomicspacekitten.substack.com/p/determinism-is-not-a-standard"><em>Determinism Is Not a Standard</em></a> (the silicon / limit case, argued in full) and <a href="https://atomicspacekitten.substack.com/p/you-cannot-build-your-way-to-the"><em>You Cannot Build Your Way to the Apex</em></a> (the synthesis) carry the arguments this doctrine states in compact form; Dworkin (<em>Taking Rights Seriously</em>) and the Montesquieu separation are the jurisprudential grounding.</p>
+</div>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/governance.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../governance.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="method.html">method</a></li>
+      <li><a href="absorption-discipline.html">absorption discipline</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="bounded-generativity.html">bounded generativity</a></li>
+      <li data-surface-nav-current></li>
+      <li><a href="intent-artifacts.html">intent artifacts</a></li>
+      <li><a href="normative-apex.html">normative apex</a></li>
+      <li><a href="portable-definition-layer.html">portable definition layer</a></li>
+      <li><a href="relative-externality.html">relative externality</a></li>
+      <li><a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+      <li><a href="source-of-intent.html">source of intent</a></li>
+      <li><a href="source-of-truth-and-aging-rate.html">source of truth and aging rate</a></li>
+      <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/governance.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../governance.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>

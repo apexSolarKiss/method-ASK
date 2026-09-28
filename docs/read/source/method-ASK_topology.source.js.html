@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // method-ASK_topology.source.js</title>
+<meta name="description" content="Read-only source view of docs/diagrams/method-ASK_topology.source.js">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/diagrams/method-ASK_topology.source.js">
+<meta name="source-sha256" content="a112426179db9365365d7e49f595d11ec5587b1980e6a6e480ea516cbf88d006">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../../diagrams/_dsa-surface/surface-document.css">
+<style>
+  /* The reading measure on the title, provenance row and intro text; the code
+     frame keeps the full column. File-name titles break anywhere rather than
+     overflow. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  .doc-flow .doc-title { overflow-wrap: anywhere; }
+  /* Two columns: a stationary line-number gutter and a horizontally scrolling
+     code column. Lines are spans separated by literal newlines, so a copy of
+     the code column returns the file's text, blank lines included. */
+  .src-frame { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start;
+               font-family: var(--font-mono); font-size: var(--fs-caption); font-weight: var(--fw-light); line-height: 1.6; }
+  .src-gutter, .src-view { font: inherit; line-height: inherit; margin: 0; white-space: pre; }
+  .src-gutter { padding-right: 2ch; text-align: right; color: var(--fg-3); border-right: 1px solid var(--line-1);
+                user-select: none; -webkit-user-select: none; }
+  .src-view { padding-left: 2ch; color: var(--fg-1); overflow-x: auto; }
+  .src-line { display: inline-block; min-width: 100%; }
+  /* A blank line keeps a one-line box, so #L<n> lands on it and hits it. The
+     zero-width space is generated content: a copy does not include it. */
+  .src-line:empty::before { content: "\200b"; }
+  .src-line:target { background: var(--surface-glass-2); }
+  /* Fragment clearance, as for document headings. */
+  .src-line[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .src-line[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="../index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="../../diagrams/index.html">diagrams</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">topology source</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 class="doc-title">method-<wbr>ASK_<wbr>topology.<wbr>source.<wbr>js</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>diagrams/<wbr>method-ASK_<wbr>topology.<wbr>source.<wbr>j<span class="doc-nowrap">s&nbsp;&middot;</span></span> <span class="doc-meta-item">14164 B &middot;</span> <span class="doc-meta-item">201 lines &middot;</span> <span class="doc-meta-item">read-only &middot;</span> <span class="doc-meta-item">source sha256 a112426179db</span></p>
+<div class="doc-actions"><a class="surface-action" href="../../diagrams/method-ASK_topology.html">open figure</a> <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/diagrams/method-ASK_topology.source.js" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../../diagrams/method-ASK_topology.source.js">raw file</a></div>
+<p class="doc-body">This view shows one file; the diagram front door links this view. It is generated, static and bounded: there is no browsing beyond this file.</p>
+</header>
+<div class="src-frame"><pre class="src-gutter" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201</pre><pre class="src-view" tabindex="0" aria-label="method-ASK_topology.source.js, 201 lines"><span class="src-line" id="L1">/* method-ASK_topology.source.js</span>
+<span class="src-line" id="L2">   Source data for the method-ASK topology / relative-externality map diagram.</span>
+<span class="src-line" id="L3">   Renderable by diagrams-static-H-engine.js.</span>
+<span class="src-line" id="L4"></span>
+<span class="src-line" id="L5">   D02 // method-ASK topology / relative-externality map // source-v9 // 2026-07-29</span>
+<span class="src-line" id="L6">   v9 (2026-07-29): the ecology surface completed its Unit-6B cutover on 2026-07-29, so</span>
+<span class="src-line" id="L7">   v8&#x27;s pending-rename fact is spent. The intake node&#x27;s tag now carries the live path</span>
+<span class="src-line" id="L8">   `intent-INbox/`, and its note records the completed cutover in place of the</span>
+<span class="src-line" id="L9">   not-yet-occurred clause. Both v8 claims the cutover falsified are corrected in the one</span>
+<span class="src-line" id="L10">   node they occupy; no other node is touched.</span>
+<span class="src-line" id="L11">   Content-only; render held render-v20.</span>
+<span class="src-line" id="L12">   v8 (2026-07-28): intake-label conformance to the landed routed-instance lifecycle.</span>
+<span class="src-line" id="L13">   The stale gloss `-TBI = received, awaiting ingestion` is replaced by terminal -TBI as</span>
+<span class="src-line" id="L14">   ASK&#x27;s outstanding FEED obligation. The node LABEL becomes the plane&#x27;s role — `intent</span>
+<span class="src-line" id="L15">   inbox` — with the current ecology path carried in the tag and note, so the method</span>
+<span class="src-line" id="L16">   diagram stops presenting `source of intent` as a folder beside D10&#x27;s doctrine that a</span>
+<span class="src-line" id="L17">   source of intent is a ROLE. The physical path is NOT relabelled: the separated-plane architecture activated 2026-07-28, but this</span>
+<span class="src-line" id="L18">   surface&#x27;s own Unit-6 cutover has not occurred, and pre-cutover the current mapped</span>
+<span class="src-line" id="L19">   path remains required and operative. The note now carries that pending-rename fact.</span>
+<span class="src-line" id="L20">   Content-only; render held render-v20.</span>
+<span class="src-line" id="L21">   v7 (2026-07-25): operating-model current truth. The retired &quot;single-node&quot; label is</span>
+<span class="src-line" id="L22">   removed from the relay/execution topology and the downstream pressure surfaces; the</span>
+<span class="src-line" id="L23">   active control-surface node becomes the execution surface of the ASK-apexed</span>
+<span class="src-line" id="L24">   advisor-executor topology (the advisor-surface node already existed). mazeASK is</span>
+<span class="src-line" id="L25">   restated as a dormant historical origin case rather than a Model A working example.</span>
+<span class="src-line" id="L26">   Content-only; render held render-v20.</span>
+<span class="src-line" id="L27">   v6 (2026-07-21): ecology-state scrub to the landed shared-protocol architecture.</span>
+<span class="src-line" id="L28">   Corrects the stale renderer comment (diagrams-engine.js -&gt; diagrams-static-H-engine.js)</span>
+<span class="src-line" id="L29">   and the D03 name (ecology-ASK overall -&gt; system-ASK topology). method-ASK is a</span>
+<span class="src-line" id="L30">   RESOLVED-LOCAL consumer of the control-surface-owned execution-protocol canonical</span>
+<span class="src-line" id="L31">   (direct-core repo-reset authority): its root AGENTS.md resolves the shared rule body +</span>
+<span class="src-line" id="L32">   core-ecology profile + method-local delta. The downstream execution-protocol layer now</span>
+<span class="src-line" id="L33">   distinguishes four DISTINCT artifacts / planes (NOT four carriers — protocol/ is the owner</span>
+<span class="src-line" id="L34">   canonical, the resolved AGENTS.md files are the carriers): protocol/ (owner canonical) ·</span>
+<span class="src-line" id="L35">   AGENTS.shared.md (authoritative shared rule body) · manifest.json (normative registry, NOT</span>
+<span class="src-line" id="L36">   live state) · the protocol consumer ledger (live carrier / grant / visibility / propagation</span>
+<span class="src-line" id="L37">   state plane). Adds</span>
+<span class="src-line" id="L38">   seed-mediated-generated-interface.md to the doctrine cluster + personal-context-system as</span>
+<span class="src-line" id="L39">   the public SMGI proof scaffold (applicable-but-carrier-blocked for protocol). Tier 3 restated</span>
+<span class="src-line" id="L40">   as resolved locally by source-of-intent + brand distance. Absorption rule qualified (recipient</span>
+<span class="src-line" id="L41">   owns candidate absorption; deterministic GREEN conformance may move directly under established</span>
+<span class="src-line" id="L42">   jurisdiction). No live SHAs/PRs in the tree. Content-only; render held render-v20.</span>
+<span class="src-line" id="L43">   Single-tree extraction of TREE_D02 from the v9 operator-side ecology-ASK</span>
+<span class="src-line" id="L44">   package. This repo carries TREE_D02 only; it does not carry TREE_D01</span>
+<span class="src-line" id="L45">   (control-surface architecture tree) or TREE_D03 (system-ASK topology),</span>
+<span class="src-line" id="L46">   which remain in their respective owners&#x27; surfaces.</span>
+<span class="src-line" id="L47"></span>
+<span class="src-line" id="L48">   source-v3 (2026-06-23): the doctrine-docs group now reflects the graduated</span>
+<span class="src-line" id="L49">   source-of-intent doctrine cluster (normative-apex · source-of-intent handling ·</span>
+<span class="src-line" id="L50">   governance · bounded-generativity) plus portable-definition-layer, and the</span>
+<span class="src-line" id="L51">   image-making worked example is added under examples/. Roles are distinguished</span>
+<span class="src-line" id="L52">   in the notes; no co-primitive taxonomy is asserted (held per method-GN v18).</span>
+<span class="src-line" id="L53"></span>
+<span class="src-line" id="L54">   Pre-emptive fixes from PR A&#x27;s Stage 2 lesson (transposing v9 from</span>
+<span class="src-line" id="L55">   operator-side scratch to repo-local context):</span>
+<span class="src-line" id="L56">   - &#x27;canonical mirror · currently v3&#x27; → &#x27;canonical external context mirror&#x27;</span>
+<span class="src-line" id="L57">     (fast-aging version claim does not belong inside a repo diagram)</span>
+<span class="src-line" id="L58">   - &#x27;topology drafts: this artifact lives here&#x27; note dropped</span>
+<span class="src-line" id="L59">     (the diagram now lives in this repo, not in operator-side scratch)</span>
+<span class="src-line" id="L60"></span>
+<span class="src-line" id="L61">   Each TREE follows the same shape:</span>
+<span class="src-line" id="L62">     { kind: &#x27;root&#x27;|&#x27;section&#x27;|&#x27;group&#x27;|&#x27;node&#x27;, label, note?, tag?, status?, children? }</span>
+<span class="src-line" id="L63">     status: &#x27;earned&#x27; (default) | &#x27;held&#x27; | &#x27;legacy&#x27;</span>
+<span class="src-line" id="L64">*/</span>
+<span class="src-line" id="L65"></span>
+<span class="src-line" id="L66">window.TREE_D02 = {</span>
+<span class="src-line" id="L67">  kind: &#x27;root&#x27;,</span>
+<span class="src-line" id="L68">  label: &#x27;method-ASK&#x27;,</span>
+<span class="src-line" id="L69">  note: &#x27;upstream methodology layer // designing systems that build systems&#x27;,</span>
+<span class="src-line" id="L70">  children: [</span>
+<span class="src-line" id="L71">    {</span>
+<span class="src-line" id="L72">      kind: &#x27;section&#x27;, label: &#x27;repo-local method surfaces&#x27;,</span>
+<span class="src-line" id="L73">      children: [</span>
+<span class="src-line" id="L74">        { label: &#x27;README.md&#x27; },</span>
+<span class="src-line" id="L75">        { label: &#x27;AGENTS.md&#x27;, note: &#x27;resolved-local carrier of the control-surface-owned execution-protocol · resolves the shared rule body + core-ecology profile + method-local delta (direct-core repo-reset authority)&#x27; },</span>
+<span class="src-line" id="L76">        { label: &#x27;docs/method.md&#x27;, note: &#x27;primary method articulation&#x27; },</span>
+<span class="src-line" id="L77">        { label: &#x27;docs/articles.md&#x27;, note: &#x27;canonical article-line index&#x27; },</span>
+<span class="src-line" id="L78">        { kind: &#x27;group&#x27;, label: &#x27;doctrine docs&#x27;, note: &#x27;source-of-intent doctrine cluster + method spine&#x27;, children: [</span>
+<span class="src-line" id="L79">          { label: &#x27;normative-apex.md&#x27;, note: &#x27;structural source-of-intent · the apex role&#x27; },</span>
+<span class="src-line" id="L80">          { label: &#x27;source-of-intent.md&#x27;, note: &#x27;operational / handling face&#x27; },</span>
+<span class="src-line" id="L81">          { label: &#x27;governance.md&#x27;, note: &#x27;governance architecture · rulemaking → verification → recourse&#x27; },</span>
+<span class="src-line" id="L82">          { label: &#x27;bounded-generativity.md&#x27;, note: &#x27;bounded discretion + functional judgment topology&#x27; },</span>
+<span class="src-line" id="L83">          { label: &#x27;seed-mediated-generated-interface.md&#x27;, note: &#x27;SMGI doctrine — seed &gt;&gt; loading boundary &gt;&gt; grammar &gt;&gt; runtime; the two committed SMGI figures illustrate it&#x27; },</span>
+<span class="src-line" id="L84">          { label: &#x27;absorption-discipline.md&#x27; },</span>
+<span class="src-line" id="L85">          { label: &#x27;portable-definition-layer.md&#x27; },</span>
+<span class="src-line" id="L86">          { label: &#x27;relative-externality.md&#x27; },</span>
+<span class="src-line" id="L87">          { label: &#x27;source-of-truth-and-aging-rate.md&#x27; },</span>
+<span class="src-line" id="L88">          { label: &#x27;voice-surface-boundary.md&#x27; },</span>
+<span class="src-line" id="L89">        ]},</span>
+<span class="src-line" id="L90">        { label: &#x27;examples/&#x27;, children: [</span>
+<span class="src-line" id="L91">          { label: &#x27;asset-pipeline-ASK.md&#x27; },</span>
+<span class="src-line" id="L92">          { label: &#x27;urban-observatory.md&#x27; },</span>
+<span class="src-line" id="L93">          { label: &#x27;design-system-ASK.md&#x27; },</span>
+<span class="src-line" id="L94">          { label: &#x27;image-making-source-of-intent.md&#x27;, note: &#x27;compact image-making worked example&#x27; },</span>
+<span class="src-line" id="L95">        ]},</span>
+<span class="src-line" id="L96">        { label: &#x27;docs/diagrams/&#x27;, note: &#x27;illustrative diagrams · not source of truth&#x27;, children: [</span>
+<span class="src-line" id="L97">          { label: &#x27;method-ASK_topology.html&#x27;, note: &#x27;this diagram&#x27; },</span>
+<span class="src-line" id="L98">        ]},</span>
+<span class="src-line" id="L99">      ],</span>
+<span class="src-line" id="L100">    },</span>
+<span class="src-line" id="L101">    {</span>
+<span class="src-line" id="L102">      kind: &#x27;section&#x27;, label: &#x27;operator-side method context · shared ecology external surface&#x27;,</span>
+<span class="src-line" id="L103">      tag: &#x27;ecology-ASK-EXTERNAL/ · method-ASK slice&#x27;,</span>
+<span class="src-line" id="L104">      children: [</span>
+<span class="src-line" id="L105">        { label: &#x27;method-ASK_grounding-note.md&#x27;, note: &#x27;root canonical&#x27; },</span>
+<span class="src-line" id="L106">        { label: &#x27;intent inbox&#x27;, tag: &#x27;current ecology path: intent-INbox/&#x27;, note: &#x27;shared ecology INBOUND intake · genuinely inbound material only — NOT a core-repo routing bus (direct-core movement is a hard repo-boundary reset, not an ingestion event). The separated-plane architecture activated 2026-07-28; this surface completed its own Unit-6B cutover 2026-07-29, so intent-INbox/ is the live routed-instance plane, with standing invocable carriers separated into intent-carriers/&#x27;, children: [</span>
+<span class="src-line" id="L107">          { label: &#x27;routed handoffs · terminal -TBI = ASK still owes a feed of that exact artifact&#x27; },</span>
+<span class="src-line" id="L108">          { label: &#x27;received records from separately-operated or walled surfaces&#x27; },</span>
+<span class="src-line" id="L109">        ]},</span>
+<span class="src-line" id="L110">        { label: &#x27;scratch/&#x27;, note: &#x27;shared ecology operator scratch&#x27;, children: [</span>
+<span class="src-line" id="L111">          { label: &#x27;topology drafts&#x27; },</span>
+<span class="src-line" id="L112">          { label: &#x27;article planning&#x27; },</span>
+<span class="src-line" id="L113">          { label: &#x27;critique / handoff memos&#x27; },</span>
+<span class="src-line" id="L114">        ]},</span>
+<span class="src-line" id="L115">        { label: &#x27;articles/&#x27;, note: &#x27;shared ecology publication corpus&#x27; },</span>
+<span class="src-line" id="L116">      ],</span>
+<span class="src-line" id="L117">    },</span>
+<span class="src-line" id="L118">    {</span>
+<span class="src-line" id="L119">      kind: &#x27;section&#x27;, label: &#x27;upstream source-of-intent substrate&#x27;,</span>
+<span class="src-line" id="L120">      tag: &#x27;operator-side · inherited by reference · not absorbed&#x27;,</span>
+<span class="src-line" id="L121">      children: [</span>
+<span class="src-line" id="L122">        { label: &#x27;ASK as source-of-intent principal&#x27;, note: &#x27;upstream normative authority&#x27; },</span>
+<span class="src-line" id="L123">        { label: &#x27;personal-ASK/inheritable/&#x27;, note: &#x27;external WALL-SAFE grant surface · the external read/folder grant reaches this subtree and NOTHING else · inherited by reference&#x27;, children: [</span>
+<span class="src-line" id="L124">          { label: &#x27;context architecture ADR&#x27;, note: &#x27;cross-tool inheritance boundary&#x27; },</span>
+<span class="src-line" id="L125">          { label: &#x27;brand architecture&#x27;, note: &#x27;tier model authority&#x27; },</span>
+<span class="src-line" id="L126">          { label: &#x27;visual identity system&#x27;, note: &#x27;visual decisions authority&#x27; },</span>
+<span class="src-line" id="L127">          { label: &#x27;voice / style / typography&#x27; },</span>
+<span class="src-line" id="L128">        ]},</span>
+<span class="src-line" id="L129">        { label: &#x27;household personal-context perimeter outside the external grant&#x27;, note: &#x27;two subject-owned instances · instance boundaries organize ownership / retrieval / maintenance / least-need access, NOT default confidentiality · WALL-BOUND content + confidential enclaves remain outside that grant · operator capability ≠ audience authority&#x27; },</span>
+<span class="src-line" id="L130">      ],</span>
+<span class="src-line" id="L131">    },</span>
+<span class="src-line" id="L132">    {</span>
+<span class="src-line" id="L133">      kind: &#x27;section&#x27;, label: &#x27;relay + execution topology&#x27;,</span>
+<span class="src-line" id="L134">      tag: &#x27;how surfaces compose&#x27;,</span>
+<span class="src-line" id="L135">      children: [</span>
+<span class="src-line" id="L136">        { label: &#x27;ASK as relay / mediation operator&#x27;, note: &#x27;conduit · adopts advisor output into operative direction&#x27; },</span>
+<span class="src-line" id="L137">        { label: &#x27;advisor surface&#x27;, note: &#x27;GPT / Claude chat outside execution thread · no repo-write authority&#x27; },</span>
+<span class="src-line" id="L138">        { label: &#x27;execution surface&#x27;, note: &#x27;Claude Code · repo-attached executor · single-writer-per-branch&#x27; },</span>
+<span class="src-line" id="L139">        { label: &#x27;operative relay = adoption event&#x27;, note: &#x27;not all forwarding · fix-direction / question-forwarding / classification ≠ adoption&#x27; },</span>
+<span class="src-line" id="L140">      ],</span>
+<span class="src-line" id="L141">    },</span>
+<span class="src-line" id="L142">    {</span>
+<span class="src-line" id="L143">      kind: &#x27;section&#x27;, label: &#x27;downstream execution-protocol layer&#x27;,</span>
+<span class="src-line" id="L144">      tag: &#x27;downstream of method methodologically · yet the OWNER of the shared execution-protocol canonical that method consumes&#x27;,</span>
+<span class="src-line" id="L145">      children: [</span>
+<span class="src-line" id="L146">        { label: &#x27;control-surface&#x27;, note: &#x27;execution-protocol repo · downstream of method-ASK · owns the shared execution-protocol canonical&#x27;, children: [</span>
+<span class="src-line" id="L147">          { kind: &#x27;group&#x27;, label: &#x27;protocol/ owner canonical&#x27;, note: &#x27;shared execution-protocol owner canonical · resolved consumers carry the applicable shared / profile bodies locally · live carrier / grant / visibility state lives in the protocol consumer ledger&#x27;, children: [</span>
+<span class="src-line" id="L148">            { label: &#x27;AGENTS.shared.md&#x27;, note: &#x27;authoritative shared rule body&#x27; },</span>
+<span class="src-line" id="L149">            { label: &#x27;manifest.json&#x27;, note: &#x27;normative registry — ownership / scope / applicability / metadata · NOT live state&#x27; },</span>
+<span class="src-line" id="L150">            { label: &#x27;profiles/ · fragments/ · check.sh&#x27;, note: &#x27;rule profiles · standing-grant body · deterministic validator (--local / --wave / --all)&#x27; },</span>
+<span class="src-line" id="L151">          ]},</span>
+<span class="src-line" id="L152">          { label: &#x27;method-ASK resolves it locally&#x27;, note: &#x27;root AGENTS.md = resolved-local carrier (shared body + core-ecology profile + method-local delta) · direct-core repo-reset authority path&#x27; },</span>
+<span class="src-line" id="L153">          { label: &#x27;protocol consumer ledger&#x27;, note: &#x27;live carrier / grant / visibility / propagation STATE · operator-side, not in this repo&#x27; },</span>
+<span class="src-line" id="L154">          { label: &#x27;templates · prompts · examples&#x27;, note: &#x27;bootstrap shells · nudge ladder · critique cycle · per-project workflow notes&#x27; },</span>
+<span class="src-line" id="L155">          { label: &#x27;compact method bridge in docs/method.md&#x27; },</span>
+<span class="src-line" id="L156">        ]},</span>
+<span class="src-line" id="L157">      ],</span>
+<span class="src-line" id="L158">    },</span>
+<span class="src-line" id="L159">    {</span>
+<span class="src-line" id="L160">      kind: &#x27;section&#x27;, label: &#x27;visual-inheritance reference surface&#x27;,</span>
+<span class="src-line" id="L161">      children: [</span>
+<span class="src-line" id="L162">        { label: &#x27;design-system-ASK&#x27;, note: &#x27;externalized ASK visual / aesthetic-intent implementation&#x27;, children: [</span>
+<span class="src-line" id="L163">          { label: &#x27;Tier 1 + Tier 2 inherited by child surfaces by reference&#x27; },</span>
+<span class="src-line" id="L164">          { label: &#x27;Tier 3 instance identity&#x27;, note: &#x27;resolved locally by source-of-intent + brand distance (ASK-native · domain-partner · client) — not simply excluded&#x27; },</span>
+<span class="src-line" id="L165">          { label: &#x27;urban-observatory v1→v2 child proof&#x27;, note: &#x27;n=1 · observation-level per absorption-discipline.md&#x27; },</span>
+<span class="src-line" id="L166">        ]},</span>
+<span class="src-line" id="L167">      ],</span>
+<span class="src-line" id="L168">    },</span>
+<span class="src-line" id="L169">    {</span>
+<span class="src-line" id="L170">      kind: &#x27;section&#x27;, label: &#x27;downstream project pressure surfaces&#x27;,</span>
+<span class="src-line" id="L171">      tag: &#x27;own absorption decisions&#x27;,</span>
+<span class="src-line" id="L172">      children: [</span>
+<span class="src-line" id="L173">        { label: &#x27;asset-pipeline-ASK&#x27;, note: &#x27;mature primary pressure surface · separately operated under a standing GREEN maintenance grant&#x27; },</span>
+<span class="src-line" id="L174">        { label: &#x27;urban-observatory&#x27;, note: &#x27;newer · source-of-intent recovery pressure · separately operated under a standing GREEN maintenance grant&#x27; },</span>
+<span class="src-line" id="L175">        { label: &#x27;personal-context-system&#x27;, note: &#x27;public scaffold · the SMGI proof surface (seed-mediated setup prompt &gt;&gt; working system) · direct-core consumer, but applicable-but-carrier-blocked for the shared protocol (no root AGENTS.md) — the proof role and the carrier hold are distinct&#x27; },</span>
+<span class="src-line" id="L176">        { label: &#x27;mazeASK&#x27;, note: &#x27;dormant historical origin case · retired split-execution generation&#x27;, status: &#x27;legacy&#x27; },</span>
+<span class="src-line" id="L177">      ],</span>
+<span class="src-line" id="L178">    },</span>
+<span class="src-line" id="L179">    {</span>
+<span class="src-line" id="L180">      kind: &#x27;section&#x27;, label: &#x27;reflective layer&#x27;,</span>
+<span class="src-line" id="L181">      children: [</span>
+<span class="src-line" id="L182">        { label: &#x27;article drafts&#x27;, note: &#x27;live in the shared ecology articles/ corpus&#x27; },</span>
+<span class="src-line" id="L183">        { label: &#x27;published Substack&#x27;, note: &#x27;canonical source for published essays&#x27; },</span>
+<span class="src-line" id="L184">        { label: &#x27;article line points to method&#x27;, note: &#x27;does not override repo truth&#x27; },</span>
+<span class="src-line" id="L185">      ],</span>
+<span class="src-line" id="L186">    },</span>
+<span class="src-line" id="L187">    {</span>
+<span class="src-line" id="L188">      kind: &#x27;section&#x27;, label: &#x27;relative-externality rules&#x27;,</span>
+<span class="src-line" id="L189">      tag: &#x27;doctrine that organizes the topology above&#x27;,</span>
+<span class="src-line" id="L190">      children: [</span>
+<span class="src-line" id="L191">        { label: &#x27;externality is a relation, not a property&#x27; },</span>
+<span class="src-line" id="L192">        { label: &#x27;two axes&#x27;, note: &#x27;surface boundary (internal/external) ⊥ normative direction (upstream/downstream/reflective)&#x27; },</span>
+<span class="src-line" id="L193">        { label: &#x27;ex-repo ≠ ex-system&#x27; },</span>
+<span class="src-line" id="L194">        { label: &#x27;rule may move downstream · payload may not&#x27; },</span>
+<span class="src-line" id="L195">        { label: &#x27;observation-level holds n=1 material&#x27;, note: &#x27;promotion awaits n=2 or strong structural argument&#x27; },</span>
+<span class="src-line" id="L196">        { label: &#x27;downstream absorbs from inside its own active project surface&#x27; },</span>
+<span class="src-line" id="L197">        { label: &#x27;candidate absorption is recipient-owned&#x27;, note: &#x27;but deterministic GREEN conformance (protocol / design-system maintenance) may move directly under established jurisdiction — not everything routes as candidate material&#x27; },</span>
+<span class="src-line" id="L198">      ],</span>
+<span class="src-line" id="L199">    },</span>
+<span class="src-line" id="L200">  ],</span>
+<span class="src-line" id="L201">};</span>
+</pre></div>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="../index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/diagrams/method-ASK_topology.source.js" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../../diagrams/method-ASK_topology.source.js">raw file</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="../index.html">documents</a></li>
+      <li data-surface-nav-current></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../../diagrams/method-ASK_topology.html">open figure</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/diagrams/method-ASK_topology.source.js" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../../diagrams/_dsa-surface/surface-shell.js"></script>
+</body>
+</html>

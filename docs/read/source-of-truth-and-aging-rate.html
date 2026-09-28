@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // source of truth and aging rate</title>
+<meta name="description" content="Source of Truth and Aging Rate">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/source-of-truth-and-aging-rate.md">
+<meta name="source-sha256" content="c3e64832764d4b92860d127ca6221f470f33f3e00cc4fa215012fced02f15c4e">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">source of truth and aging rate</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="source-of-truth-and-aging-rate" class="doc-title">Source of Truth and Aging Rate</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>source-of-truth-and-aging-rate.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">14620 B &middot;</span> <span class="doc-meta-item">source sha256 c3e64832764d</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/source-of-truth-and-aging-rate.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../source-of-truth-and-aging-rate.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">This doctrine governs how the method assigns authority to surfaces. A surface is authoritative for a class of claim because it is sized to that claim's aging rate. Mixing aging rates within one surface produces a surface that ages at the rate of its fastest-aging contents — usually badly. This doc names the split, the failure modes, and the routing rule.</p>
+<p class="doc-body"><code class="doc-code">AGENTS.md</code> carries the aging-rate principle as a workflow rule and the source-of-truth split as a brief enumeration. <code class="doc-code">docs/method.md</code> references both as elements within the broader method articulation. This doc carries them at full doctrine altitude: definition, the operative surface split, failure modes, boundaries with adjacent doctrine, and a practical decision rule.</p>
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#definition">Definition</a>
+</li>
+<li class="doc-body"><a href="#core-split">Core split</a>
+</li>
+<li class="doc-body"><a href="#failure-modes">Failure modes</a>
+</li>
+<li class="doc-body"><a href="#boundary-with-source-of-intent">Boundary with source of intent</a>
+</li>
+<li class="doc-body"><a href="#boundary-with-absorption-discipline">Boundary with absorption discipline</a>
+</li>
+<li class="doc-body"><a href="#worked-pressure-surfaces">Worked pressure surfaces</a>
+</li>
+<li class="doc-body"><a href="#practical-rule">Practical rule</a>
+</li>
+<li class="doc-body"><a href="#self-superseding-clause">Self-superseding clause</a>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="definition" class="doc-section-title">Definition</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong>Source of truth</strong> is the authoritative surface for a given class of claim. When two surfaces disagree, the authoritative one wins. Authority is assigned by claim type, not by recency or fluency.</li>
+<li class="doc-body"><strong>Aging rate</strong> is how quickly a claim type becomes stale. State ages fast. Rules age slowly. Source of intent ages slowly. Per-conversation tracking is ephemeral. Reflection moves at its own pace.</li>
+<li class="doc-body"><strong>Each surface should be sized to one dominant aging rate.</strong> A surface that mixes a slow-aging payload with fast-aging contents ages at the rate of the fastest contents. The slow payload becomes unreadable through the noise; the fast payload becomes stale-looking under the surface's slow-aging frame.</li>
+</ul>
+<p class="doc-body">Source of truth and aging rate are the same problem viewed from two angles. Source of truth asks <em>which surface owns this claim?</em> Aging rate asks <em>how fast does this claim go stale?</em> Both questions resolve to: pick the surface whose aging cadence matches the claim's, and let that surface be authoritative.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="core-split" class="doc-section-title">Core split</h3>
+<div class="doc-prose">
+<p class="doc-body">The method distinguishes the roles and authority of these surfaces:</p>
+<ul class="doc-list">
+<li class="doc-body"><strong>Repo</strong> — project state, public-safe truth, current artifacts, doctrine docs, code, schema. Authoritative for <em>repo-owned project truth and current repo state</em>; purpose, workflow, identity, operator state and delegated domain judgment remain with their own owners. Aging rate is project-specific but generally slow within categories (doctrine slower; state faster).</li>
+<li class="doc-body"><strong><code class="doc-code">AGENTS.md</code></strong> — repo-local workflow rules for executors working on the repo. Authoritative for <em>how repo work is done</em>. Slow-aging. Refreshes only when a workflow rule is added, removed, or materially revised — not when project state changes.</li>
+<li class="doc-body"><strong>Grounding note</strong> — slow-aging source-of-intent + external context (graduation origin, audience, durable role boundaries, foundational premises, durable loose threads). Authoritative for <em>why this project exists and what its enduring premises are</em>. Slow-aging by design. Lives operator-side, external to the repo.</li>
+<li class="doc-body"><strong>Scratch</strong> — event records, state chronology, working memory, in-flight per-conversation tracking, post-event recaps. Authoritative for <em>what happened, when, in what sequence</em>. Fast-aging. Lives operator-side.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/method-ASK/blob/main/README.md"><code class="doc-code">method-ASK</code></a> docs</strong> — cross-project method doctrine that has earned generalization. Authoritative for <em>the method itself</em>. Slow-aging. Refreshes only when the underlying method articulation has materially evolved.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/control-surface"><code class="doc-code">control-surface</code></a></strong> — execution protocol, workflow templates, prompts, project-instantiation workflow, the per-PR cadence. Authoritative for <em>how sessions operate against repos</em>. Slow-aging.</li>
+<li class="doc-body"><strong>Articles</strong> — reflection at its own pace. Authoritative for <em>the public reflective articulation of method elements</em>, not for current repo state or method doctrine. Own pace, distinct from doctrine cadence.</li>
+<li class="doc-body"><strong>Current task context</strong> — per-conversation tracking, in-flight task lists, thread history, and session state. Ephemeral working context, not a durable owner. Authorized source material may be read into it without transferring authority from its named owners. “Ephemeral” describes the task-state role, not a deletion rule for transcripts or governed records.</li>
+<li class="doc-body"><strong>Private agent memory</strong> — an executor's own persistent store (for example Claude Code's <code class="doc-code">MEMORY.md</code>). <strong>Non-authoritative operator context.</strong> It never owns project truth, workflow protocol, or current task state. Eligible residue is separately classified and requires exact-target, exact-payload operator approval before it is written. Persistence does not confer authority.</li>
+</ul>
+<p class="doc-body">Each surface has a single dominant aging rate. The split is not separation-of-concerns alone; it is separation-by-aging-rate.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="failure-modes" class="doc-section-title">Failure modes</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong>Mixing fast state into slow grounding notes.</strong> Event chronology, review outcomes, or current-stage status absorbed into the grounding note. The grounding note then ages at the rate of the events it carries, losing its slow-source-of-intent property.</li>
+<li class="doc-body"><strong>Duplicating repo truth in grounding notes.</strong> Repeating current project state in the grounding note creates two sources for the same claim. The grounding note drifts as the repo updates; the repo is authoritative but the grounding note is read first.</li>
+<li class="doc-body"><strong>Treating scratch as doctrine.</strong> A well-formed scratch artifact reads as authoritative even though it was sized to fast-aging contents. Promoting it into doctrine without absorption discipline (see boundary below) bypasses the surface-sizing check.</li>
+<li class="doc-body"><strong>Treating articles as repo specs.</strong> Articles reflect at their own pace; they are not authoritative for current repo state. A reader who treats the article as the operating rule risks acting against a frame the repo has already moved past.</li>
+<li class="doc-body"><strong>Treating generated summaries as authoritative without artifact verification.</strong> A chat-side summary of file contents, branch state, or PR diff can sound coherent while being stale. Authority belongs to the artifact, not to the summary.</li>
+<li class="doc-body"><strong>Letting chat-state outrank repo-state.</strong> Conversational fluency can produce confident claims about current file content that the actual file has already superseded. The repo decides; the conversation may frame.</li>
+<li class="doc-body"><strong>Letting a surface age at the rate of its fastest-aging contents.</strong> The meta-failure. Any surface that admits material from a faster-aging class will gradually take that faster cadence — regardless of intent. The fix is upstream (refuse the material) rather than downstream (try to age the surface differently).</li>
+</ul>
+<p class="doc-body">These failure modes share a structural cause: authority assignment by content urgency rather than by surface fit. The remedy is surface-sizing applied at the moment of writing, before the material lands.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="boundary-with-source-of-intent" class="doc-section-title">Boundary with source of intent</h3>
+<div class="doc-prose">
+<p class="doc-body"><code class="doc-code">docs/source-of-intent.md</code> carries the doctrine governing source-of-intent origination, recovery, validation, and the grounding-note refresh preflight. This doc references it as the upstream concept for the <em>source of intent</em> layer in the surface split above.</p>
+<p class="doc-body">Specifically:</p>
+<ul class="doc-list">
+<li class="doc-body">Source of intent is operator-owned. The method can elaborate purpose endlessly but cannot originate it. The grounding note is the surface that carries operator-validated source of intent.</li>
+<li class="doc-body">Recovery and validation precede repo encoding. The repo is not the first artifact; recovered intent is. The repo encodes the structure that validated intent earned.</li>
+<li class="doc-body">The source-of-intent guard prevents unresolved means from becoming unresolved purpose. Most apparent purpose-level gaps are actually architectural-means questions that should be answered method-side, not routed back to the operator.</li>
+<li class="doc-body">The grounding-note refresh preflight classifies candidate content before it enters the grounding note. State / event records route to scratch; slow source-of-intent routes to the grounding note; repo-local public-safe truth routes to the repo; future roadmap is held; advisor scratch waits for validation; premature implementation architecture is held.</li>
+</ul>
+<p class="doc-body">The aging-rate principle determines surface authority. The source-of-intent doctrine determines what counts as authoritative source-of-intent at the slow-aging layer. The two docs compose: source-of-intent doctrine names the upstream concept; this doc names the surface that carries it and the cadence at which it ages.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="boundary-with-absorption-discipline" class="doc-section-title">Boundary with absorption discipline</h3>
+<div class="doc-prose">
+<p class="doc-body"><code class="doc-code">docs/absorption-discipline.md</code> carries the doctrine governing how material moves between surfaces. This doc references it as the operative mechanism for changing a claim's surface assignment.</p>
+<p class="doc-body">Specifically:</p>
+<ul class="doc-list">
+<li class="doc-body">Absorption is the move from one surface to another when material has earned a more durable or more general home. The surface split above defines the <em>destinations</em>; absorption discipline governs the <em>movement</em>.</li>
+<li class="doc-body">Material earns a new surface only when it has earned that aging rate and that level of generality. Aging-rate fit alone is insufficient if the claim has not earned slow-surface durability. Generality alone is insufficient if the claim has not been pressure-tested.</li>
+<li class="doc-body">n=1 stays observation-level unless the structural argument is strong enough to justify generalization before repetition. The default is restraint.</li>
+<li class="doc-body">Absorption can move material upward (toward more durable or more general surfaces), downward (out of a surface where it no longer fits, into operator-side or scratch), or nowhere (held material that has not earned movement either way).</li>
+</ul>
+<p class="doc-body">The surface split is a topology; absorption discipline is the routing rule that respects it. A surface assignment without an absorption discipline produces drift; an absorption discipline without a surface split has nowhere to route material to.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="worked-pressure-surfaces" class="doc-section-title">Worked pressure surfaces</h3>
+<div class="doc-prose">
+<p class="doc-body">Method altitude mentions only. Domain detail lives in the project repos and in the project examples (<code class="doc-code">examples/</code>).</p>
+<ul class="doc-list">
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/asset-pipeline-ASK"><code class="doc-code">asset-pipeline-ASK</code></a></strong> surfaced the aging-rate principle and the source-of-truth split under mature project pressure. The friction of mixing rules, state, and context in a single doc was the original surfacing event. The doctrine that resulted — repo carries project state, <code class="doc-code">AGENTS.md</code> carries workflow rules, grounding note carries source-of-intent, current task context carries per-conversation tracking — generalized cleanly upstream into <code class="doc-code">control-surface</code> workflow templates and into <code class="doc-code">docs/method.md</code>'s §Disciplines During Execution treatment.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/urban-observatory"><code class="doc-code">urban-observatory</code></a></strong> surfaced source-of-intent recovery, the post-bootstrap grounding-note trim pass, and state-vs-context routing. The grounding-note layer-classification gate (now in <code class="doc-code">docs/source-of-intent.md</code> §Grounding-note refresh preflight) was the structural absorption of this pressure. State / event records route to scratch even when the event was important.</li>
+<li class="doc-body"><strong><a href="https://github.com/apexSolarKiss/design-system-ASK"><code class="doc-code">design-system-ASK</code></a></strong> surfaced the presence-vs-structure verification observation and the freshly-built-reference-implementation-vs-proven-inheritance distinction. The presence-vs-structure observation is currently carried at observation-level; n=1 across child projects. Promotion to rule-level treatment in this doc, in <code class="doc-code">docs/absorption-discipline.md</code>, or in <code class="doc-code">control-surface</code> templates waits for a second child project surfacing the same failure mode. The reference-implementation-vs-proof distinction is captured in <code class="doc-code">examples/design-system-ASK.md</code> as the worked-example framing.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="practical-rule" class="doc-section-title">Practical rule</h3>
+<div class="doc-prose">
+<p class="doc-body">Before writing or updating any artifact, ask in order:</p>
+<ul class="doc-list">
+<li class="doc-body">What kind of claim is this? (project state / workflow rule / source of intent / event record / cross-project doctrine / execution protocol / reflection / task-context ephemera)</li>
+<li class="doc-body">Which surface owns this claim? (repo / <code class="doc-code">AGENTS.md</code> / grounding note / scratch / <code class="doc-code">method-ASK</code> doc / <code class="doc-code">control-surface</code> / article / current task context)</li>
+<li class="doc-body">How fast will it age? (slow / own pace / fast / ephemeral)</li>
+<li class="doc-body">What would become stale if placed here? (the test for wrong-surface fit)</li>
+<li class="doc-body">What would be lost if it stays where it is? (the test for under-absorption)</li>
+<li class="doc-body">What later evidence would move it? (the explicit promotion / demotion condition)</li>
+</ul>
+<p class="doc-body">The first three questions establish surface fit. The fourth surfaces the staleness risk. The fifth surfaces the under-absorption risk. The sixth records the trigger that would warrant a future move, so the assignment is auditable rather than presumed permanent.</p>
+<p class="doc-body">The rule is a tripwire, not a ceremony. Most material answers the first three questions trivially and routes without friction. The rule earns its keep on the cases where the answers disagree.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="self-superseding-clause" class="doc-section-title">Self-superseding clause</h3>
+<div class="doc-prose">
+<p class="doc-body">This doctrine should be superseded by:</p>
+<ul class="doc-list">
+<li class="doc-body"><code class="doc-code">docs/relative-externality.md</code> if the surface-topology pieces (the core split, the boundary with adjacent surfaces, the recursive externality relationships) earn a more focused home there and this doc compresses toward the aging-rate and authority-assignment substrate</li>
+<li class="doc-body"><code class="doc-code">docs/voice-surface-boundary.md</code> if the doctrine's failure-mode treatment for voice-bearing surfaces (article-as-spec confusion, summary-as-authority drift) earns specific treatment in that doc</li>
+<li class="doc-body">compression into <code class="doc-code">docs/absorption-discipline.md</code> if the surface-split topology folds into absorption-discipline's §Layer destinations as the routing surface, and the aging-rate principle compresses into a shorter cross-reference</li>
+<li class="doc-body">a future <code class="doc-code">docs/layer-classification.md</code> if multiple downstream projects produce enough surface-routing decisions to justify a more formal central routing doc that absorbs both this doc's surface split and the source-of-intent grounding-note refresh preflight</li>
+</ul>
+<p class="doc-body">The doctrine is not finished. The nine-surface split is the current best articulation of the method's lived surface topology. As surfaces shift — articles becoming codified differently, new repos earning their own classes, executor tooling changing what a session holds — the split will refine. The aging-rate principle itself is more stable than the specific surface list; the surfaces are the substrate, the aging-rate is the doctrine.</p>
+<p class="doc-body">Anchor reading lives in <a href="articles.html"><code class="doc-code">docs/articles.md</code></a>. The articles most directly substrating this doctrine are <em>Lessons from the First Prototype Phase</em> (the structural retrospective; the original surfacing of aging-rate and source-of-truth as load-bearing principles), <em>The Rule the Repo Could Not Contain</em> (externality as a relation, not a property; surfaces carry the structural category but not always the payload), and <em>Three Agents Got Into an Argument // The Repo Won</em> (repo-as-arbiter for current-state questions; the operating rule that splits chat-side advisors from the artifact-owning surface).</p>
+</div>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/source-of-truth-and-aging-rate.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../source-of-truth-and-aging-rate.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="method.html">method</a></li>
+      <li><a href="absorption-discipline.html">absorption discipline</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="bounded-generativity.html">bounded generativity</a></li>
+      <li><a href="governance.html">governance</a></li>
+      <li><a href="intent-artifacts.html">intent artifacts</a></li>
+      <li><a href="normative-apex.html">normative apex</a></li>
+      <li><a href="portable-definition-layer.html">portable definition layer</a></li>
+      <li><a href="relative-externality.html">relative externality</a></li>
+      <li><a href="seed-mediated-generated-interface.html">seed-mediated generated interface</a></li>
+      <li><a href="source-of-intent.html">source of intent</a></li>
+      <li data-surface-nav-current></li>
+      <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/source-of-truth-and-aging-rate.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../source-of-truth-and-aging-rate.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>

@@ -29,6 +29,8 @@ Linked ASK repos are citations to worked examples, lineage surfaces, or layer re
 - `docs/` — standalone method doctrine and the article-line index
 - `docs/intent-artifacts.md` — the intent-artifact ontology: carrier classes, activation postures, relay vs feeding, provenance projection
 - `docs/diagrams/` — illustrative diagrams (topology; bounded generativity; seed-mediated generated interface + ontology; intent-artifact ontology; activation + lifecycle comparison; relay / feeding / ingestion; adversarial relay graph + PTX projection); not source of truth
+- `docs/read/` — generated reading pages for the doctrine documents, the diagram folder's records and the diagram source files; the Markdown stays source of truth
+- `tools/read/` — the generator and its drift and link checks for `docs/read/`
 - `examples/` — worked-example explanations at method altitude
 
 ## Anchor reading

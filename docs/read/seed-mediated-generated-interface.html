@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>method-ASK // seed-mediated generated interface</title>
+<meta name="description" content="Seed-Mediated Generated Interface // the interface begins at the loading path">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="tools/read/read_gen.py read-page-v1">
+<meta name="source-path" content="docs/seed-mediated-generated-interface.md">
+<meta name="source-sha256" content="bf897e8fd532c27cec58ddf7e70eb6a338aeb0f065de47a832043bb444561b4b">
+<!-- GENERATED from tools/read/declared.json by tools/read/read_gen.py. Do not hand-edit:
+     `read_gen.py check` fails on any byte that differs from a fresh build. -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../diagrams/_dsa-tokens/colors_and_type.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-action.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-shell.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-document.css">
+<link rel="stylesheet" href="../diagrams/_dsa-surface/surface-treatments.css">
+<style>
+  /* Consumer-owned composition only. Every value resolves through the
+     foundation or the shell; the register supplies the text roles. */
+  body { min-height: 100vh; }
+  /* Reading measure on text; preformatted blocks, tables and figures keep the
+     full column. 760px is a local literal: no measure token exists. */
+  .doc-flow { --doc-measure: 760px; }
+  .doc-flow :where(p, ul, ol, blockquote, h2, h3, h4, h5, h6, details) { max-width: var(--doc-measure); }
+  /* Fragment clearance. A heading reached by #fragment clears the seated
+     desktop mark, using the shell's own resting depth. */
+  .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: var(--space-5); }
+  :root[data-surface-nav-mode="desktop"] .doc-flow :where(h2, h3, h4, h5, h6)[id] { scroll-margin-top: calc(var(--surface-nav-top-depth) + var(--space-5)); }
+  /* Lists. */
+  .doc-list { margin: 0; padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+  .doc-list > li::marker { color: var(--fg-3); }
+  .doc-list .doc-list { margin-top: var(--space-2); }
+  /* A fenced block is literal text: the code element inside takes the block's metrics. */
+  .doc-pre > code { font: inherit; color: inherit; }
+  .doc-rule { border: 0; border-top: 1px solid var(--line-1); margin: var(--space-2) 0; }
+  /* Tables scroll inside their own box. Cells take the document body role. */
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { border-collapse: collapse; }
+  .doc-table :where(th, td) { text-align: left; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--line-1); }
+  .doc-table th { font-weight: var(--fw-medium); }
+  /* Break a long token only where it would overflow, so a column is never
+     narrower than its longest word. */
+  .doc-table td a, .doc-table th a, .doc-table .doc-code { overflow-wrap: break-word; }
+  /* Narrow widths: each row stacks, and each cell is preceded by its column
+     header (data-label). The full table returns at 840px: every table in the
+     declared set fits its column from a 830px viewport, measured when this
+     rule was set (839px is a local literal: media queries take no tokens). */
+  @media (max-width: 839px) {
+    .doc-table-wrap { overflow-x: visible; }
+    .doc-table, .doc-table :where(tbody, tr, th, td) { display: block; }
+    .doc-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .doc-table tr { padding: var(--space-2) 0; border-bottom: 1px solid var(--line-1); }
+    .doc-table :where(th, td) { padding: var(--space-1) 0; border-bottom: 0; }
+    .doc-table td[data-label]::before { content: attr(data-label); display: block; font-weight: var(--fw-medium); }
+  }
+  /* Images never widen the page: contained, aspect ratio kept, linked to the
+     full-resolution file. */
+  .doc-image-link { display: block; border-bottom: 0; }
+  .doc-flow img { display: block; max-width: 100%; height: auto; }
+  /* Contents list. Zero specificity, so the register's .doc-hierarchy inset and rail win on the nested list. */
+  :where(.doc-toc-list) { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  :where(.doc-toc-list .doc-hierarchy) { margin-top: var(--space-2); }
+
+  /* Chrome text breaks between items, never inside one: a provenance item
+     keeps its label, value, unit and separator together, and the repository
+     name keeps its hyphen. A path item still breaks anywhere when it alone is
+     wider than the column; its separator stays bound to its last character. */
+  .doc-meta-item, .doc-nowrap { white-space: nowrap; }
+  .doc-meta-item.doc-meta-path { white-space: normal; }
+</style>
+</head>
+<body>
+<div class="surface">
+  <header class="surface-head">
+    <div class="surface-head-main">
+      <a class="surface-mark" href="index.html" aria-label="method-ASK documents home">
+        <img class="surface-mark-light" src="../diagrams/_dsa-surface/assets/logo-ASK-white.png" alt="" aria-hidden="true" width="2160" height="974">
+        <img class="surface-mark-dark" src="../diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png" alt="" aria-hidden="true" width="2160" height="974">
+      </a>
+      <nav class="surface-breadcrumb" aria-label="Breadcrumb">
+        <h1 class="surface-title"><a class="org" href="https://a-s-k.studio/">ASK</a> <span class="sep" aria-hidden="true">//</span> <a href="https://a-s-k.studio/apex-solar-kiss">apex solar kiss</a> <span class="sep" aria-hidden="true">//</span> <span class="doc-nowrap">method-ASK</span> <span class="sep" aria-hidden="true">//</span> <a href="index.html">documents</a> <span class="sep" aria-hidden="true">//</span> <span class="page" aria-current="page">seed-mediated generated interface</span></h1>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="surface-rule">
+
+  <main class="surface-payload">
+<article class="doc-flow">
+<header class="doc-section doc-head">
+<h2 id="seed-mediated-generated-interface--the-interface-begins-at-the-loading-path" class="doc-title">Seed-Mediated Generated Interface // the interface begins at the loading path</h2>
+<p class="doc-meta"><span class="doc-meta-item doc-meta-path">docs/<wbr>seed-mediated-generated-interface.<wbr>m<span class="doc-nowrap">d&nbsp;&middot;</span></span> <span class="doc-meta-item">27751 B &middot;</span> <span class="doc-meta-item">source sha256 bf897e8fd532</span></p>
+<div class="doc-actions"><a class="surface-action" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/seed-mediated-generated-interface.md" target="_blank" rel="noopener">GitHub // main</a> <a class="surface-action surface-action--secondary" href="../seed-mediated-generated-interface.md">raw .md</a></div>
+<div class="doc-prose">
+<p class="doc-lede">A system pattern: a <strong>seed — a static artifact such as a repo, an assembled packet, or a prompt/prompt-wrapper — supplies enough structured material and behavioral instruction for an AI runtime to render the operative interface in conversation.</strong> The interface is <em>generated</em> — caused to happen inside a runtime — not <em>built</em> as application chrome. The static artifact is the <strong>seed</strong>; the interface is the guided, AI-mediated interaction the seed produces.</p>
+<p class="doc-body">The <strong>hard case is the user's own opaque runtime</strong> — a runtime the author can neither see nor control (see the runtime-context axis below). That is where the doctrine has its bite.</p>
+<pre class="doc-pre"><code class="language-text">seed (repo / packet / prompt)  +  delivery wrapper  +  user loading path
+  &gt;&gt; an AI runtime renders the interface (the user's own opaque tool is the hard case)
+    &gt;&gt; the interface is the guided interaction the seed causes to happen
+</code></pre>
+</div>
+</header>
+<details class="surface-disclosure surface-material-panel surface-attach-free surface-elevation-flush doc-toc">
+<summary><span class="surface-disclosure-label">on this page</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></summary>
+<nav class="surface-disclosure-body" aria-label="On this page">
+<ul class="doc-toc-list">
+<li class="doc-body"><a href="#the-path--illustrated">The path // illustrated</a>
+</li>
+<li class="doc-body"><a href="#two-orthogonal-axes-carrier-and-runtime-context">Two orthogonal axes: carrier and runtime context</a>
+</li>
+<li class="doc-body"><a href="#relation-to-bounded-generativity">Relation to bounded generativity</a>
+</li>
+<li class="doc-body"><a href="#governed-elicitation-as-an-application">Governed elicitation as an application</a>
+</li>
+<li class="doc-body"><a href="#the-interface-begins-before-the-ai-answers">The interface begins before the AI answers</a>
+</li>
+<li class="doc-body"><a href="#governing-role-integrity-at-load">Governing-role integrity at load</a>
+</li>
+<li class="doc-body"><a href="#operator-distance--the-encoding-budget-dial">Operator distance — the encoding-budget dial</a>
+</li>
+<li class="doc-body"><a href="#the-categories--illustrated">The categories // illustrated</a>
+</li>
+<li class="doc-body"><a href="#worked-cases--classified-by-carrier-and-runtime-context">Worked cases — classified by carrier and runtime context</a>
+</li>
+<li class="doc-body"><a href="#invariants">Invariants</a>
+</li>
+<li class="doc-body"><a href="#variation-by-consumer">Variation by consumer</a>
+</li>
+<li class="doc-body"><a href="#what-remains-local-or-held">What remains local or held</a>
+</li>
+</ul>
+</nav>
+</details>
+<section class="doc-section">
+<h3 id="the-path--illustrated" class="doc-section-title">The path // illustrated</h3>
+<div class="doc-prose">
+<a class="doc-image-link" href="../diagrams/method-ASK_seed-mediated-generated-interface-dark.png"><img alt="Seed-mediated generated interface as an instantiation path. An authored seed — carrying grammar, behavior, loading path and return contract — travels to a loading boundary, where the governing question is whether the authored seed remains governing. On the conforming branch the grammar grants the aperture, the runtime renders a generated interaction inside it, and a return is produced, with authority and governance shown by a dashed bracket remaining outside the generated thread. On the fork branch, drawn in broken continuity, the seed is demoted to source material, a derivative grammar is authored in the runtime, and a borrowed shape carries causal provenance without the governing role — yielding a nonconforming derivative that is not an instance of the authored interface. Two claims are labelled: seed provenance is not seed conformance, and morphology is not behavioral conformance." src="../diagrams/method-ASK_seed-mediated-generated-interface-dark.png"></a>
+<p class="doc-body"><em>Illustrative — this doctrine is the source of truth, not the diagram.</em> The figure carries the <strong>instantiation path</strong> and the loading-boundary seam: where the authored seed either remains governing or is demoted before its contract runs. Source: <a href="../diagrams/method-ASK_seed-mediated-generated-interface.html"><code class="doc-code">docs/diagrams/method-ASK_seed-mediated-generated-interface.html</code></a>. The embedded raster is the dark full-page mirror; both themes and a chrome-free diagram-only view remain exportable from the HTML, but are not committed.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="two-orthogonal-axes-carrier-and-runtime-context" class="doc-section-title">Two orthogonal axes: carrier and runtime context</h3>
+<div class="doc-prose">
+<p class="doc-body">The family is classified on two independent axes. Conflating them creates a category error: it mistakes what the runtime can access for what the user loaded.</p>
+<p class="doc-body"><strong>Carrier — what the seed <em>is</em> (the primary loading object):</strong></p>
+<pre class="doc-pre"><code class="language-text">repo-mediated     the repo is the primary seed / loading object
+packet-mediated   an assembled packet is the primary seed / loading object
+prompt-mediated   a prompt or prompt-wrapper is the primary seed / loading object
+</code></pre>
+<p class="doc-body">Repo-mediated is one <strong>carrier species</strong>, not the genus. <strong>A prompt or packet may reference a repo, and a runtime may have live repo access, without making the interface repo-mediated by carrier</strong> — carrier is <em>what is loaded</em>, not what is merely referenced or reachable. (The doctrine was formerly titled after this species; the genus is seed-mediated.)</p>
+<p class="doc-body"><strong>Carrier is classified by the primary loading object for the realization.</strong> Later host-internal operations performed as part of that object's loading path — such as matching, invocation, or progressive resource loading — are runtime mechanics inside the already-classified realization, not additional carrier-classification events.</p>
+<p class="doc-body"><strong>Runtime context — what the generated interface <em>runs against</em>, and how opaque it is to the author:</strong></p>
+<pre class="doc-pre"><code class="language-text">self-contained opaque   the runtime has no authorized live access to the author's context;
+                          the author can neither see nor control it                      &gt;&gt; the HARD case
+connected authorized    the runtime has authorized live access to the author's repo / context
+author-controlled null  the author's own runtime  &gt;&gt; the NULL case (no opacity, no delivery failure surface)
+</code></pre>
+<p class="doc-body">The two axes are orthogonal — the same carrier can run in any runtime context, and the same runtime context can carry any species. Worked polarity (below): on carrier, PCS and AP-external are opposite; on runtime context they are the <em>same</em> (self-contained opaque), while UO-4TMK is the outlier — the runtime with the <strong>most</strong> authorized context access, though it is <em>packet</em>-mediated by carrier. Do not let &quot;repo access at runtime&quot; bleed into &quot;repo-mediated delivery.&quot;</p>
+<p class="doc-body"><strong>The hard case is runtime opacity.</strong> The author ships behavior and the loading path, but the generated thread is <strong>not itself an authority surface</strong>. A seed-mediated interface running in a runtime the author <em>does</em> control (the null case) has none of this failure surface — <strong>opacity is the condition that gives the doctrine its bite, not the carrier name.</strong></p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="relation-to-bounded-generativity" class="doc-section-title">Relation to bounded generativity</h3>
+<div class="doc-prose">
+<p class="doc-body">Seed-mediated generated interface is <strong>bounded generativity delivered into a runtime the author cannot see or control</strong> — the bounded-generativity spine (<a href="bounded-generativity.html"><code class="doc-code">docs/bounded-generativity.md</code></a>) shipped past the author's observability. There, the brief / grammar grants the aperture, execution fills it, selection closes, and governance binds — and the author can, in principle, observe that the judicial (selection / closure) and governance functions ran as authored. Under runtime opacity that <strong>back half of the spine is partially exiled from the author's observability</strong>: the runtime is the renderer, and the author cannot directly confirm the generated thread selected, closed, or recorded as specified.</p>
+<p class="doc-body">The author compensates two ways: <strong>behavior travels with the seed</strong> (the process is carried, not left to a standing prompt to infer), and the <strong>generated thread is stripped of authorizing force</strong> — authorization stays in the repo / packet / governance record, never in the runtime conversation. This is why <em>a generated thread cannot self-authorize</em> is an invariant rather than a caution: the record is produced inside a runtime the author does not control. So the distinction from bounded generativity is not &quot;one more shipping step&quot; — it is the same spine with its judicial + governance tail moved out of the author's line of sight, compensated by seed-carried behavior and a de-authorized thread.</p>
+<p class="doc-body">So the seed governs <strong>two behaviors at once</strong>:</p>
+<pre class="doc-pre"><code class="language-text">the model's behavior   inside the generated interaction   &gt;&gt; the aperture (permitted variance)
+the user's setup       before the interaction can begin   &gt;&gt; the loading path (what to paste / open / upload;
+                                                              the failure mode · the fallback · the return shape)
+</code></pre>
+<p class="doc-body">A grammar cannot govern a realization it never arrives as. <strong>Bounded generativity governs the candidate space; seed-mediated generated interface governs the instantiation path.</strong> Aperture and operator distance are <strong>orthogonal control dials</strong>: the aperture meters permitted output variance; operator distance meters the setup-encoding burden the seed must carry. They interact, but neither is the delivery-side version of the other. (These control dials are distinct from the carrier and runtime-context classification axes above — a held question of whether <strong>stakes / blast-radius</strong> is a further dial is noted under <em>What remains local or held</em>.)</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="governed-elicitation-as-an-application" class="doc-section-title">Governed elicitation as an application</h3>
+<div class="doc-prose">
+<p class="doc-body">A prominent application of seed-mediated generated interface is <strong>governed elicitation</strong>: a domain expert engages a guided conversation rather than operating the repository, schema, taxonomy, or workflow that will receive the result.</p>
+<p class="doc-body">Elicitation names the interaction's <strong>purpose</strong>, not a carrier species or runtime-context class. A governed elicitation may be prompt-mediated, packet-mediated, or repo-mediated, and may run in any defined runtime context: <strong>self-contained opaque</strong>, <strong>connected authorized</strong>, or <strong>author-controlled null</strong>.</p>
+<p class="doc-body">The seed carries the review grammar, source material, behavioral instructions, loading path, and return contract. The grammar grants the aperture. The generated interaction realizes questions, reformulations, corrections, interpretations, and judgment inside it.</p>
+<p class="doc-body">A conversational stop and capture return a <strong>status-bearing record</strong>. They do not themselves select, close, authorize, or absorb the result. Recipient governance preserves any advisory or delegated-binding status already conferred on the expert's contribution and owns classification, validation where required, selection, closure, and durable handling.</p>
+<p class="doc-body"><strong>Conversation alone is not bounded generativity.</strong> The term applies where an authored grammar bounds the inquiry and the return enters a governed selection and closure path.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-interface-begins-before-the-ai-answers" class="doc-section-title">The interface begins before the AI answers</h3>
+<div class="doc-prose">
+<p class="doc-body">The first move of a generated interface is not the model's first reply. It is the <strong>user's loading action</strong> — pasting a prompt, dragging a folder, clicking a link. If that action is wrong, confusing, or fails silently, no interface comes into being. Therefore:</p>
+<p class="doc-body"><strong>Setup UX is method-bearing, not packaging trivia.</strong> File names, open-first instructions, message wrappers, folder shape, the named failure mode, the fallback path, and the expected user actions are part of the interface. They are designed, not decorated.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="governing-role-integrity-at-load" class="doc-section-title">Governing-role integrity at load</h3>
+<div class="doc-prose">
+<p class="doc-body">The seed must reach the runtime as the <strong>governing entry contract</strong>, not merely as material the runtime can see. The grammar grants the aperture only if the grammar is still governing when the interaction begins. Wrapping, transport, or a later import performed under the seed's own rules does not break that condition; the failure is the runtime reconciling, retargeting, summarizing, or rewriting the seed <strong>before its contract runs</strong>. Source material governed by the authored grammar is ordinary; source material participating in the authorship of a <em>replacement</em> grammar, before the seed governs, is the failure.</p>
+<p class="doc-body">A <strong>fork-at-load</strong> is the derivative grammar produced by that substitution and then run as though it were the authored interface. It may inherit names, read order, visible shape, and causal provenance while losing the aperture, authority boundaries, version discipline, selection, closure, audit, recourse, or the substrate mechanism that made those forms operative. <strong>Seed provenance is not seed conformance.</strong></p>
+<p class="doc-body">Prevention has a low ceiling in an opaque runtime: a seed can make an accidental mixed load visible, but it cannot compel a user or runtime to preserve it. <strong>Detection is therefore behavioral, not morphological</strong> — test whether the seed's declared governance properties operate in the delivered artifacts; never infer conformance from resemblance, provenance, or a marker the artifact carries about itself. This is the loading-boundary case of <em>a generated thread cannot self-authorize</em>: a runtime-produced rewrite does not authorize the derivative as the authored interface.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="operator-distance--the-encoding-budget-dial" class="doc-section-title">Operator distance — the encoding-budget dial</h3>
+<div class="doc-prose">
+<p class="doc-body">How much the seed must encode is a function of <strong>operator distance</strong>: how far the consumer sits from an operator who already holds the protocol.</p>
+<pre class="doc-pre"><code class="language-text">The farther the consumer is from the operator who knows the protocol,
+the more the seed / wrapper must itself encode:
+  the first action · the loading instruction · the fallback path
+  · the expected AI behavior · the return shape · the routing / provenance marker.
+</code></pre>
+<p class="doc-body">When an operator performs the load, the seed can lean on that operator's standing context. When the consumer loads it alone, the seed must be idiot-proof — self-explaining, the first action obvious, with a named recovery path when the channel misbehaves.</p>
+<p class="doc-body"><strong>Distance is fitted, not maximized.</strong> Operator distance is an encoding-and-support dial set to fit the consumer and the delivery context, not a maturity score to drive upward. A low-distance realization is a legitimate realization posture, not a degraded one.</p>
+<p class="doc-body"><strong>Externality is not operator distance.</strong> The two answer different questions and vary independently:</p>
+<pre class="doc-pre"><code class="language-text">externality        who supplies the judgment
+operator distance  how the activation is supported
+</code></pre>
+<p class="doc-body">An outside party can supply genuinely external judgment through an operator-assisted activation; conversely, an unassisted load establishes nothing about externality on its own. Reading distance as a proxy for externality overstates what a delivery posture can settle. This is a distinction between two things already named here, not a further classification axis.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="the-categories--illustrated" class="doc-section-title">The categories // illustrated</h3>
+<div class="doc-prose">
+<a class="doc-image-link" href="../diagrams/method-ASK_seed-mediated-generated-interface-ontology-dark.png"><img alt="Seed-mediated generated interface ontology as a category map. Four orthogonal layers surround one neutral membership node reading 'conforming SMGI instance', joined by typed relations. Mechanism classifies, holding two parallel axis inventories — carrier (repo-mediated, packet-mediated, prompt-mediated) and runtime context (self-contained opaque, connected authorized, author-controlled null) — presented as inventories rather than a populated matrix. Application names purpose, carrying governed elicitation. Authored control meters, with the aperture and operator-distance dials, and a dashed held box for the unresolved stakes/blast-radius question. Conformance admits or excludes: governing-role integrity at load branches to a solid preserved outcome that admits the conforming instance, and to a lower, narrower, dashed violated outcome, fork-at-load, whose arrow exits the population rather than returning. A dashed held fringe and a category-boundaries footer sit outside the four settled regions, stating that application is not mechanism, a control dial is not a classification axis, a conformance precondition is neither, and fork-at-load is not an SMGI species." src="../diagrams/method-ASK_seed-mediated-generated-interface-ontology-dark.png"></a>
+<p class="doc-body"><em>Illustrative — this doctrine is the source of truth, not the diagram.</em> Where the figure above carries the path, this one carries the <strong>category boundaries</strong>: mechanism classifies, application names purpose, authored control meters, and conformance decides membership. The distinction it exists to hold is that carrier and runtime context classify <em>members</em> of the population, while governing-role integrity decides <em>membership</em> in it — so a fork-at-load is failed conformance, not another kind of interface. The two axes are shown as inventories, not a populated matrix: no claim is made that every carrier × runtime cell has been observed. Source: <a href="../diagrams/method-ASK_seed-mediated-generated-interface-ontology.html"><code class="doc-code">docs/diagrams/method-ASK_seed-mediated-generated-interface-ontology.html</code></a>. Dark full-page mirror as above.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="worked-cases--classified-by-carrier-and-runtime-context" class="doc-section-title">Worked cases — classified by carrier and runtime context</h3>
+<div class="doc-prose">
+<p class="doc-body">The genus is observed across two carrier species (packet, prompt); the <strong>repo-mediated <em>delivered</em> species is not yet instantiated</strong> — it is the forward form of AP + UO at launch, intended, not yet observed. So these are worked cases of the <strong>genus</strong>, not evidence of the repo-named species.</p>
+<pre class="doc-pre"><code class="language-text">Case                          Carrier                          Runtime context           Operator distance
+Personal Context System       prompt-mediated (repo fallback)  self-contained opaque     high (self-setup)
+Internal domain review (4TMK) packet-mediated                  connected authorized      low (operator-loaded)
+External review (AP)          packet-mediated                  self-contained opaque     intended high · observed low
+</code></pre>
+<p class="doc-body"><strong>Personal Context System (PCS) — prompt-mediated (repo fallback), self-contained opaque runtime, high operator distance.</strong> The consumer loads a <strong>setup prompt</strong> into their own AI tool with no operator present; the repo is the <em>fallback</em> link, not the primary loading object — so this is prompt-mediated with a repo fallback, not a repo-mediated case. Setup is delivered as a <strong>social-channel setup wrapper</strong>: explain the purpose; tell the user to <em>paste</em> the prompt rather than understand it; give the raw setup URL; <strong>name the fetch-failure mode</strong> (the tool that cannot open links says so verbatim); provide a fallback repo link. PCS is the clearest evidence that the interface is <em>generated, not built</em>, and the strongest lightweight example of <strong>social-channel setup UX</strong>. Load-bearing lessons: first-action clarity and a fallback when the fetch fails.</p>
+<p class="doc-body"><strong>Internal domain-expert review (governed elicitation; UO 4TMK) — packet-mediated, connected authorized runtime, low operator distance.</strong> An operator loads the whole packet into a known, trusted-collaborator reviewer's standing advisor thread, which has <strong>authorized live read access to the repo (+ scratch + EXTERNAL via the Dropbox connector)</strong> — the runtime with the most authorized context access of the three, yet still packet-mediated by carrier. The package-loading burden on the consumer is low, so this case is <strong>not</strong> the source of heavy package-load UX; it is the source of three other durable lessons: the <strong>packet carries the review behavior</strong> (the standing advisor prompt infers none of it), and the <strong>human artifact must survive its actual access path</strong> — the reviewer can reach the artifact by clicking it inside the AI thread, which downloads the bare file and <strong>leaves the package folder behind</strong>. That access-path failure, not complex loading, is why the human artifact must render self-sufficiently.</p>
+<p class="doc-body"><strong>External review (AP) — packet-mediated, self-contained opaque runtime; intended high operator distance, one completed run observed at low.</strong> The design target is an outside reviewer who receives, processes, and loads the packet directly, with no operator between and no authorized repo access. That target is why the case carries the <strong>strongest package-loading UX pressure</strong>: the packet must be self-explaining, must <strong>separate the human-facing artifact from the AI-facing facilitator materials</strong> (the AI works from machine-readable source, not the heavy sealed artifact), and must carry an explicit return shape.</p>
+<p class="doc-body"><strong>The outside-reviewer run has now occurred.</strong> It <strong>confirms</strong> an operator-assisted external-review instance while <strong>modifying</strong> the intended high-distance realization. One external producer completed a review of a shipped release and reached a defensible approve decision, judging implementation able to proceed. Two facts hold together and neither may be dropped: the judgment was <strong>genuinely external</strong> — the operator supplied activation, never the judgment — and the activation was <strong>operator-assisted at low distance</strong>, after an unassisted attempt failed. The decision ask was not self-evident on cold entry; it became legible only once a facilitator surfaced it. The run does not validate the unassisted onboarding path. The review did not independently surface the author-known open risks, and adversarial pressure on those risks was not demonstrated. One case.</p>
+<p class="doc-body">So the <strong>settled reusable / self-service external-review packet protocol remains a held subtype</strong> (see <em>What remains local or held</em>). The next evidence condition for the <strong>self-service realization</strong> is a property, not another event: a completed review in which the consumer reaches the decision ask and the role split unaided, through the actual delivery path. That would validate the unassisted realization; <strong>broader reusable-wrapper generality remains held</strong> pending repeated or differently situated evidence.</p>
+<p class="doc-body"><strong>The null case (bracketed).</strong> Author-controlled self-use is the null case: in-category by mechanism (a repo-shaped context loaded into the author's own AI tool each session), but running in an <strong>author-controlled runtime</strong> — operator distance zero, no runtime opacity, none of the delivery failure surface that gives the doctrine its bite. In-category by mechanism, but outside the hard runtime-opacity case; named here only so the count is honest, not counted as a delivered case.</p>
+<p class="doc-body"><strong>Evidence, stated honestly:</strong></p>
+<pre class="doc-pre"><code class="language-text">packet-mediated               observed 2x   (AP external, UO 4TMK)
+prompt-mediated               observed 1x   (PCS setup, repo fallback)
+repo-mediated // delivered    observed 0x   (AP + UO launch form — intended, forward-looking, not yet instantiated)
+</code></pre>
+<p class="doc-body">The earlier repo-mediated label named one carrier species, while the observed evidence establishes the broader seed-mediated genus.</p>
+<p class="doc-body"><strong>Negative pressure case — fork-at-load (PCS setup prompt, 2026-07-09).</strong> The authored seed was loaded into a session already holding another project's exports and the runtime was asked to reconcile them; it produced a retargeted scaffold that was then run as the system. The derivative inherited the bootstrap/index morphology, read order, and causal provenance, and lost version discipline, grant boundaries, the no-self-authorization rule, and the substrate mechanism the copied filenames depended on. <strong>Not a conforming instance</strong> — it is recorded here as the first observed loading-boundary failure and deliberately kept outside the positive counts above, which are unchanged.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="invariants" class="doc-section-title">Invariants</h3>
+<div class="doc-prose">
+<ul class="doc-list">
+<li class="doc-body"><strong>Behavior travels with the governing seed.</strong> The seed carries the process only if it survives the loading boundary in its governing role — visible shape or causal provenance alone does not establish conformance. Do not rely on a standing reviewer/advisor prompt to infer the process.</li>
+<li class="doc-body"><strong>The interface begins at the loading path.</strong> Setup UX is method-bearing.</li>
+<li class="doc-body"><strong>Operator distance sets the encoding budget — and is fitted, not maximized.</strong> The farther the consumer from the operator, the more the seed must carry on its own; but the distance is chosen to fit the consumer and the delivery context, not driven upward as a maturity value. <strong>Externality is distinct from operator distance</strong> — who supplies the judgment is not the question of how the activation is supported.</li>
+<li class="doc-body"><strong>The first action must be obvious — and unambiguously targeted.</strong> An action whose object the consumer must infer has not been made obvious. Human setup actions are <strong>minimized</strong> and <strong>named in the artifact itself</strong>; where a name carries an instruction, name the object by what the consumer must do with it, and supply identity only where the consumer needs identity in order to act.</li>
+<li class="doc-body"><strong>Presence is not governance.</strong> A governing instruction has not successfully travelled when it is merely present but not perceptually dominant at cold entry. Information carried is not hierarchy transmitted: if surrounding explanation, internal vocabulary, or a stale instruction wins the first-screen contest, the controlling rule did not arrive, however completely it was written.</li>
+<li class="doc-body"><strong>Test the consumer's actual access path</strong>, not the author's intended folder structure — the delivery channel may strip context the author assumed survives.</li>
+<li class="doc-body"><strong>Separate consumers, separate surfaces.</strong> Where a seed serves multiple consumers, keep the <strong>human-facing artifact</strong>, the <strong>AI-facing facilitator materials</strong>, and the <strong>operator-side audit / provenance</strong> distinct, and ship each consumer only what it needs.</li>
+<li class="doc-body"><strong>Markers are distinct concepts.</strong> Reviewer-routing markers ≠ ingestion-state markers ≠ provenance handles; one string must not carry all three.</li>
+<li class="doc-body"><strong>A generated thread cannot self-authorize.</strong> A setup or review interaction produces a record that informs the owner's next decision; it does not promote, publish, or authorize anything (<a href="governance.html"><code class="doc-code">docs/governance.md</code></a>). This invariant is strongest in the opaque runtime and is what any future delivered form must not violate.</li>
+</ul>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="variation-by-consumer" class="doc-section-title">Variation by consumer</h3>
+<div class="doc-prose">
+<pre class="doc-pre"><code class="language-text">self-setup user        prompt-mediated; social-channel wrapper; idiot-proof first action; fetch fallback
+internal domain expert packet-mediated; operator loads; behavior-carrying + artifact survives the access path
+outside reviewer       packet-mediated; direct consumer load is the design target and an
+                       operator-assisted activation is a legitimate fitted posture;
+                       self-explaining + AI-facilitator split + return handle
+</code></pre>
+<p class="doc-body">The invariants hold across all carriers, runtimes, and distances; the <em>realization</em> is set by the consumer, the carrier, and the operator distance.</p>
+</div>
+</section>
+<section class="doc-section">
+<h3 id="what-remains-local-or-held" class="doc-section-title">What remains local or held</h3>
+<div class="doc-prose">
+<p class="doc-body">This doc lands the <strong>broad genus pattern</strong>. The following are surface-local realizations, still-held subtypes, or out-of-scope for this doctrine:</p>
+<ul class="doc-list">
+<li class="doc-body">a specific delivery-wrapper's copy and channel;</li>
+<li class="doc-body">a project's reviewer-routing suffix mechanics and its exact artifact-class taxonomy;</li>
+<li class="doc-body">exact packet folder names and provenance-handle strings;</li>
+<li class="doc-body">sealed single-file HTML as a universal requirement — it is the right realization where the access path strips the folder, not a law;</li>
+<li class="doc-body">the <strong>settled reusable / self-service external-review packet protocol</strong> — still held. The outside-reviewer run has occurred and is recorded above as an <strong>operator-assisted</strong> instance, so the hold no longer waits on that event. The next evidence condition for the <strong>unassisted realization</strong> is a completed run in which the consumer reaches the decision ask and role split unaided; that would validate the unassisted realization only, and <strong>reusable-wrapper generality across reviewers, products, channels, and relationships remains held</strong> pending repeated or differently situated evidence;</li>
+<li class="doc-body"><strong>whether stakes / blast-radius is a third control dial</strong> (beyond aperture × operator distance) — a <strong>held analytical thread</strong>. The earlier framing, that the external-review corner co-maxes operator distance and stakes while running a <em>tight</em> aperture, is <strong>retired as a fixed characterization</strong>: the one completed external review ran at low operator distance, so external review does not occupy a fixed corner. The question is unresolved, and the evidence that would resolve it is <strong>comparative</strong> — vary distance at comparable consequence, or vary consequence at comparable distance — since one run at a single point cannot separate a corner, a latent third axis, and an interaction effect;</li>
+<li class="doc-body">consumer-owned renderer / sealing tooling;</li>
+<li class="doc-body">a <strong>settled cross-carrier behavioral conformance test</strong> — the principle (test whether the governance properties operate) is doctrine; the reusable checklist or score is held pending a second case;</li>
+<li class="doc-body"><strong>independently verified seed attestation</strong>, and whether it can support a larger evidence stack — a self-carried marker does not independently establish conformance and is not added here;</li>
+<li class="doc-body">a generalized <strong>derivative-label taxonomy</strong>, and whether repeated cases warrant a standalone seed-integrity doctrine rather than this section;</li>
+<li class="doc-body"><strong>delivered launch form</strong> (e.g. &quot;the user clones the repo and uses it&quot;) — a plausible <strong>B2B</strong> form for AP + UO, but <strong>stated intent, not a landed instance</strong>; it is <strong>not</strong> the universal launch form. Consumer-facing delivery, hosted-runtime, and monetization reasoning are <strong>out of scope for this doctrine</strong> and stay live on their originating surface, not method doctrine. <strong>Runtime-native skill packaging is one possible substrate-specific delivery form inside this same held seam and may carry a host-specific activation path.</strong> A <code class="doc-code">SKILL.md</code> bundle or host installation wrapper would still classify through the existing carrier axis and would not, by itself, establish SMGI membership. The current ASK evidence set includes no observed skill-packaged SMGI instance; this held possibility creates no method-level implementation requirement.</li>
+</ul>
+<p class="doc-body">The broad genus thesis is doctrine; the review-packet subtype, the stakes dial, and the delivered launch form stay held or out until their own gates land.</p>
+</div>
+</section>
+</article>
+  </main>
+
+  <footer class="surface-footer">
+    <a class="surface-action surface-action--secondary" href="index.html">documents</a>
+    <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/seed-mediated-generated-interface.md" target="_blank" rel="noopener">GitHub</a>
+    <a class="surface-action surface-action--secondary" href="../seed-mediated-generated-interface.md">raw .md</a>
+    <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+  </footer>
+
+  <template class="surface-nav-source">
+    <ul class="surface-nav-local">
+      <li><a href="method.html">method</a></li>
+      <li><a href="absorption-discipline.html">absorption discipline</a></li>
+      <li><a href="articles.html">articles</a></li>
+      <li><a href="bounded-generativity.html">bounded generativity</a></li>
+      <li><a href="governance.html">governance</a></li>
+      <li><a href="intent-artifacts.html">intent artifacts</a></li>
+      <li><a href="normative-apex.html">normative apex</a></li>
+      <li><a href="portable-definition-layer.html">portable definition layer</a></li>
+      <li><a href="relative-externality.html">relative externality</a></li>
+      <li data-surface-nav-current></li>
+      <li><a href="source-of-intent.html">source of intent</a></li>
+      <li><a href="source-of-truth-and-aging-rate.html">source of truth and aging rate</a></li>
+      <li><a href="voice-surface-boundary.html">voice surface boundary</a></li>
+    </ul>
+    <p class="surface-nav-utilities">
+      <a class="surface-action surface-action--secondary" href="../diagrams/index.html">diagrams</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK/blob/main/docs/seed-mediated-generated-interface.md" target="_blank" rel="noopener">source on GitHub</a>
+      <a class="surface-action surface-action--secondary" href="../seed-mediated-generated-interface.md">raw .md</a>
+      <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
+    </p>
+  </template>
+
+</div>
+<script src="../diagrams/_dsa-surface/surface-shell.js"></script>
+<script src="../diagrams/_dsa-surface/surface-document-overflow.js"></script>
+</body>
+</html>
