@@ -13,6 +13,10 @@
 <!-- design-system-ASK foundations — local mirror (Tier 1 + Tier 2), no CDN. See _dsa-tokens/MANIFEST.md -->
 <link rel="stylesheet" href="./_dsa-tokens/colors_and_type.css">
 <link rel="stylesheet" href="diagrams.css">
+<!-- design-system-ASK disclosure grammar for the compact caption and legend triggers.
+     surface-panel.css loads first, as surface-treatments.css requires. -->
+<link rel="stylesheet" href="./_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="./_dsa-surface/surface-treatments.css">
 <!-- ASK Three Functions — opt-in semantic function-color primitive, vendored from design-system-ASK. See _dsa-tokens/MANIFEST.md -->
 <link rel="stylesheet" href="./_dsa-tokens/three-functions.css">
 <style>
@@ -43,9 +47,10 @@
       <div class="s">source of intent >> grammar / brief grants the aperture >> bounded realization (the middle) >> selection + closure >> artifact governance >> governed artifact + record</div>
     </div>
     <div class="spacer"></div>
+    <div class="diagram-cue">illustrative</div>
     <div class="stamp">
-      <div><span class="k">source-v5</span> // <span class="k">render-v5</span></div>
-      <div>2026-09-13</div>
+      <div><span class="k">source-v5</span> // <span class="k">render-v6</span></div>
+      <div>2026-09-28</div>
     </div>
   </div>
 
@@ -59,25 +64,36 @@
     <div class="corner-tick bl"></div>
     <div class="corner-tick br"></div>
 
-    <div class="legend glass">
-      <div class="h"><span>Three functions</span><span class="fig">one spine</span></div>
-      <div class="row">
-        <div class="sw"><div class="box-solid fn-leg"></div></div>
-        <div><span class="lbl">legislative</span><span class="sub">source-of-intent role · grammar / brief</span></div>
+    <div class="diagram-info" data-diagram-chrome>
+      <div class="diagram-info-triggers">
+        <button class="diagram-info-trigger surface-disclosure-trigger glass" type="button" aria-controls="diagramCaption" aria-expanded="true"><span class="surface-disclosure-label">About</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></button>
+        <button class="diagram-info-trigger surface-disclosure-trigger glass" type="button" aria-controls="diagramLegend" aria-expanded="true"><span class="surface-disclosure-label">Legend</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></button>
       </div>
-      <div class="row">
-        <div class="sw"><div class="box-solid fn-exe"></div></div>
-        <div><span class="lbl">executive</span><span class="sub">realization · fills the aperture · nonjudgmental</span></div>
+      <div class="caption glass" id="diagramCaption">
+        <b>bounded generativity >> order from chaos // beauty in systems</b><br>
+        illustrative · method-ASK/docs/bounded-generativity.md is source of truth.<br>
+        asset-pipeline-ASK is the commercial image-production instance; creative discretion names the authorized judgment exercised within it.
       </div>
-      <div class="row">
-        <div class="sw"><div class="box-solid fn-jud"></div></div>
-        <div><span class="lbl">judicial</span><span class="sub">selection + closure · ratifies one candidate</span></div>
-      </div>
-      <hr class="fn-divider">
-      <div class="fn-down">downstream — not a fourth function</div>
-      <div class="row">
-        <div class="sw"><div class="box-solid"></div></div>
-        <div><span class="lbl">artifact governance</span><span class="sub">binds the accepted result</span></div>
+      <div class="legend glass" id="diagramLegend">
+        <div class="h"><span>Three functions</span><span class="fig">one spine</span></div>
+        <div class="row">
+          <div class="sw"><div class="box-solid fn-leg"></div></div>
+          <div><span class="lbl">legislative</span><span class="sub">source-of-intent role · grammar / brief</span></div>
+        </div>
+        <div class="row">
+          <div class="sw"><div class="box-solid fn-exe"></div></div>
+          <div><span class="lbl">executive</span><span class="sub">realization · fills the aperture · nonjudgmental</span></div>
+        </div>
+        <div class="row">
+          <div class="sw"><div class="box-solid fn-jud"></div></div>
+          <div><span class="lbl">judicial</span><span class="sub">selection + closure · ratifies one candidate</span></div>
+        </div>
+        <hr class="fn-divider">
+        <div class="fn-down">downstream — not a fourth function</div>
+        <div class="row">
+          <div class="sw"><div class="box-solid"></div></div>
+          <div><span class="lbl">artifact governance</span><span class="sub">binds the accepted result</span></div>
+        </div>
       </div>
     </div>
 
@@ -88,14 +104,11 @@
       <button id="zoomFit" title="Fit">⤢</button>
     </div>
 
-    <div class="caption glass">
-      <b>bounded generativity >> order from chaos // beauty in systems</b><br>
-      illustrative · method-ASK/docs/bounded-generativity.md is source of truth.<br>
-      asset-pipeline-ASK is the commercial image-production instance; creative discretion names the authorized judgment exercised within it.
-    </div>
   </div>
 </div>
 
+<!-- DS-owned responsive chrome — after the chrome markup, before the fit contract. Re-vendor byte-identical. -->
+<script src="diagrams-chrome.js"></script>
 <script src="diagrams-fit.js"></script>
 <script src="method-ASK_bounded-generativity.figure.js"></script>
 <!-- DS embedded-font carrier — lets PNG export embed fonts with no server (file://).
