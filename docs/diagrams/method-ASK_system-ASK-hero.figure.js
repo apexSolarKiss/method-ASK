@@ -482,11 +482,12 @@
 
   /* ===== the viewBox: the drawn content plus a uniform margin, so the export frames the drawing rather than the
      fixed canvas — widened only as PAGE EXPORT, below, describes ===== */
-  /* PAGE EXPORT. The DS exporter (export-png.js, unchanged) scales a landscape figure to the page's content width,
-     3760 px, and places it below the caption panel only while its scaled height fits the 2128 px band beneath the
-     panel (page y 656..2784); otherwise it centers the figure in the full band, where the caption panel covers the
-     figure's top-left. For a figure of height H units, 2128 / H px per unit is therefore the largest scale that
-     keeps it below the caption, whatever its width. When the drawn content is taller than that band allows at its
+  /* PAGE EXPORT. The DS exporter (export-png.js) scales a landscape figure to the page's content width, 3760 px,
+     and places it below the caption panel only while its scaled height fits the 2128 px band beneath the panel
+     (page y 656..2784); otherwise it centers the figure in the full band and, when a drawn mark then comes within
+     the panel gutter, refits the whole figure below the panel band at the smaller scale that band allows. For a
+     figure of height H units, 2128 / H px per unit is therefore the largest scale that keeps it below the caption,
+     whatever its width. When the drawn content is taller than that band allows at its
      own width, the VIEWBOX — not the drawing — is widened, evenly on both sides and with nothing drawn in the added
      margin, to the width at which the exporter takes its below-caption branch with 4 px to spare. The width selects
      the placement; the height sets the scale. The two constants are the exporter's page geometry for this page's
