@@ -25,7 +25,7 @@ The validation loop is the structural pattern that keeps the model from authorin
 Three constraints make the loop work:
 
 - The model proposes; it does not assert. Candidate framings carry an explicit "validate or reject" gate.
-- The operator's validation is treated as ground truth for source-of-intent, regardless of how polished the candidate framing is.
+- No candidate framing, however polished, overrules the operator's validation for source-of-intent. Validation may recognize a recovered aim, adopt intent for the present scope, or do both. Recognition remains fallible evidence about prior or durable purpose. Adoption determines what governs within the authorized scope; it does not make that recognition historically infallible or establish factual or evaluative correctness. Standing intent remains operative until revised, revoked, or retired through the applicable governance path.
 - A rejected framing does not become a held question to relitigate. It becomes evidence that the recovery pass needs another loop, or that a candidate frame was wrong.
 
 The loop is not skepticism or ceremony. It is the structural separation between source-of-intent (operator-owned) and structural articulation (method-owned).
@@ -69,7 +69,7 @@ CANDIDATE CORRECTION
 
 The third case is the load-bearing one. A divergence measure registers movement away from the current target; it cannot tell whether that movement is damage or warranted correction. Repair instrumentation measures distance. Governance classifies warrant.
 
-Candidate correction composes with the guard above rather than loosening it: surfacing a candidate to the authorized role is not a request to reauthorize settled purpose, and a framing already rejected through the validation loop does not re-enter as a candidate correction. What the case forbids is the opposite failure — a repair process silently deleting the evidence that its target may be wrong.
+Candidate correction composes with the guard above rather than loosening it: surfacing a candidate to the authorized role is not a request to reauthorize settled purpose. A rejected framing does not re-enter as recovered intent or through unchanged-ground replay. Materially new evidence or argument bearing on the reasons for rejection may be surfaced as a new candidate for intentional revision through the applicable governance path. It does not alter standing intent unless the authorized role adopts the change. What the case forbids is the opposite failure — a repair process silently deleting the evidence that its target may be wrong.
 
 For intent-bearing conflicts, reconcile memory-mediated realization against the current authoritative owner of standing intent. Realization does not become authoritative merely because it persists or regenerates. This is the intent-specific application of the broader source-of-truth and private-memory rules, not their origin.
 
@@ -145,6 +145,8 @@ standing intent
             >> program-level authorization + closure by the governing role
               >> authorized program result
 ```
+
+Relay, ingestion, exact reproduction and compliant enactment do not by themselves establish understanding. For intent-bearing or explanatory material whose meaning is not already fixed inside the receiver, semantic uptake concerns whether the recipient reconstructs the load-bearing relations well enough for the relevant application, criticism and correction. Delegation carries standing force, scope and bounded decision rights; it does not transfer a completed understanding. Recipients reconstruct the material's meaning from its content and context.
 
 Task derivation is **runtime realization of standing intent** — the causal path through which adopted purpose actually influences work — not a new act of origination. Four disciplines keep the chain honest:
 
@@ -241,7 +243,7 @@ recipient surface decides post-ingestion disposition
 
 The completeness rule is the operational mechanism that makes cross-surface handoff routing work as designed. Without it, the routing protocol's promise — that the memo is durably available for recipient classification — is partially defeated: the file lands in the intent inbox (slow-aging) but its handling instructions live in chat relay (event-rate), and the durable copy ages out of sync with the meaning it depends on. The completeness rule restores the alignment.
 
-All meaning the recipient needs must age at the recipient's aging rate.
+The durable intent-bearing material and handling context needed for reconstruction must age at the recipient's aging rate.
 
 ## Inbound handoff TBI marker
 
@@ -475,7 +477,7 @@ When a decision is already settled and reaches the acting surface through an aut
 - the human decision is explicit;
 - the proposal or target being decided is fixed and identifiable;
 - the authorized operator forwards the decision with its qualifications and scope;
-- no material meaning is lost between the human response and the executor.
+- the executor can reconstruct the decision's material content, qualifications and scope from the authorized relay without a separate handoff.
 
 Then the route is direct:
 
@@ -485,7 +487,7 @@ human judgment >> authorized relay >> execution
 
 The relay is the instruction. **Do not send a settled, already-relayed decision back to its source thread to be repackaged into a memo.** Re-eliciting it to produce a transport artifact the relay already carried adds no judgment, condition, authorization, or scope; it spends the operator's ceremony budget and the reviewer's attention for redundant provenance. The executor's closure already preserves that provenance — proposal reviewed, decision as stated, qualifications applied, files changed, verification.
 
-A handoff **is** warranted when meaning genuinely needs asynchronous transport or durable structured capture: the review was asynchronous and the operator was not present; the answer spans many decisions or qualifications; ambiguity remains; the recipient lacks context the relay cannot safely compress; or an audit, legal, contractual, or confidentiality requirement demands a standalone record. A handoff preserves and transports meaning; it does not add authority, and neither does re-issuing one.
+A handoff **is** warranted when meaning genuinely needs asynchronous transport or durable structured capture: the review was asynchronous and the operator was not present; the answer spans many decisions or qualifications; ambiguity remains; the recipient lacks context the relay cannot safely compress; or an audit, legal, contractual, or confidentiality requirement demands a standalone record. A handoff preserves and transports the intent-bearing material, distinctions, scope and contextual support from which the recipient reconstructs the operative meaning; it does not add authority, and neither does re-issuing one.
 
 ## Operator grounding-note extension (adjacent pressure)
 
