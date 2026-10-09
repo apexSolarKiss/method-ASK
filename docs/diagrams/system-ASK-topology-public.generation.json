@@ -1,28 +1,28 @@
 {
  "exporter": {
   "file": "project-public.mjs",
-  "sha256": "cb4bb941f5f536ebe0ee1f4286f96778e257e60f8a8a123301534b4cc8870841",
-  "bytes": 27895
+  "sha256": "071b61600542b5af199853a2ad37b4b3d118dadc894183145b1913cfcaec7549",
+  "bytes": 28293
  },
  "inputManifest": {
   "file": "projection-input.json",
-  "sha256": "6069224449757460692fe1c6a3a737f8fe516c73d1366199971a734878fbbaf5",
+  "sha256": "090f0f7432d765313f9fe0120e0fe8c423d9b4599b8140a1da3bf65eef8ace95",
   "bytes": 2747
  },
  "canonicalInput": {
   "file": "system-ASK-topology.source.js",
-  "sha256": "df76319a3263ccee9fa710c34afb4fa3a27243ebd31f6ad031b8c3a5ab738eab",
+  "sha256": "c92c300ccc42a68be047b552799b4bb787e24da6b51fe52c6a69ab40b72cd8a8",
   "bytes": 22287,
   "parsedTuple": {
    "sourceVersion": "source-v13",
-   "renderVersion": "render-v27",
-   "date": "2026-09-10"
+   "renderVersion": "render-v28",
+   "date": "2026-10-08"
   }
  },
  "htmlShell": {
   "file": "system-ASK-topology.html",
-  "sha256": "749752e885e511b044b29ca2359c3655f807d5b108ce8e906c31593e71c518a4",
-  "bytes": 4135
+  "sha256": "3d43bf1e12f77e3c08578b01efe12414d0d4cca1ea845c8bd42cff9440cc81f2",
+  "bytes": 5587
  },
  "determinism": "the three generated artifacts are a pure function of exporter + input-manifest + canonical + html-shell bytes",
  "assuranceModel": {
@@ -60,13 +60,13 @@
  "outputs": {
   "source": {
    "file": "system-ASK-topology-public.source.js",
-   "sha256": "de02325efab284752b156ee250d7dbd11980adf809b5b9ff243bfc78c52ab43a",
+   "sha256": "a8903db54ac92730c5b3a40b1f04e43316719eb480784531fa813fe84d1e9fd9",
    "bytes": 16290
   },
   "html": {
    "file": "system-ASK-topology-public.html",
-   "sha256": "6f1fa4df1bb3d140626d84f6788503e0ae30c23ce0b445318e9e1d646ee65f96",
-   "bytes": 4037
+   "sha256": "5f405ead994cd7f6f6a22601f50396a209f3cc403653b94648ebb430e3e40b17",
+   "bytes": 5481
   },
   "receipt": {
    "file": "system-ASK-topology-public.generation.json"

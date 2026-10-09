@@ -21,6 +21,16 @@
   if (!window.DIAGRAM_FIT || typeof window.DIAGRAM_FIT.compute !== 'function') {
     throw new Error('Diagram fit support is missing. Load diagrams-fit.js before the figure builder.');
   }
+  /* The Fit's v3 placement options (balance, compactClearance) are not read by an older
+     diagrams-fit.js, which would silently keep the old geometry. FAIL CLOSED instead. */
+  if (!(window.DIAGRAM_FIT.VERSION >= 3)) {
+    throw new Error('diagrams-fit.js is older than v3. Re-vendor it from design-system-ASK with this figure builder.');
+  }
+  /* FAIL-CLOSED on the design-system gesture carrier, on the same terms: diagrams-pointer.js
+     (v2) is vendored alongside this figure and loaded BEFORE it. */
+  if (!window.DIAGRAM_POINTER || typeof window.DIAGRAM_POINTER.attach !== 'function' || !(window.DIAGRAM_POINTER.VERSION >= 2)) {
+    throw new Error('Diagram gesture support is missing. Load diagrams-pointer.js (v2) before the figure builder.');
+  }
 
   const M = {
     apex:   { label: 'source-of-intent role', sub: 'normative apex supplies', note1: 'purpose + governing standard' },
@@ -172,7 +182,7 @@
   svg.setAttribute('width', vbW);
   svg.setAttribute('height', vbH);
 
-  /* ---- pan / zoom / fit + drag + wheel (interaction is local; FIT is DS-owned) ---- */
+  /* ---- pan / zoom / fit + drag + wheel (the camera is local; FIT and gestures are DS-owned) ---- */
   const wrap = document.getElementById('canvasWrap'), stage = document.getElementById('stage'), pct = document.getElementById('zoomPct');
   if (wrap && stage) {
     /* Fit comes from the design-system helper (diagrams-fit.js; presence is checked at the
@@ -203,7 +213,10 @@
     const fitResult = () => window.DIAGRAM_FIT.compute({
         wrap,
         bounds: { minX: 0, minY: 0, maxX: vbW, maxY: vbH },
-        clearanceX: 90, clearanceY: 90, maxScale: 1.3, gutter: 26
+        clearanceX: 90, clearanceY: 90, maxScale: 1.3, gutter: 26,
+        /* v3 (diagrams-fit.js): centre vertically between the chrome above and below the figure,
+           and cap the clearance while the responsive chrome is compact. */
+        balance: true, compactClearance: 32
     });
     const applyFit = (f) => { fittedMinScale = Math.min(BASE_MIN_SCALE, f.scale); sc = f.scale; tx = f.tx; ty = f.ty; atFit = true; apply(); };
     /* The page's responsive chrome (diagrams-chrome.js): its open compact panel, the Fit the
@@ -248,20 +261,27 @@
     wrap.addEventListener('diagram-chrome-change', refitAtFit);
     const zi=document.getElementById('zoomIn'), zo=document.getElementById('zoomOut'), zf=document.getElementById('zoomFit');
     /* The view leaves Fit only when the reader moves it: a zoom at its limit changes nothing,
-       and a press that travels less than DRAG_START is a tap. */
-    const DRAG_START = 3;
+       and a press that stays inside the pointer controller's tap slop is a tap. */
     const zoomTo = (s) => { if (s === sc) return; sc = s; atFit = false; apply(); };
     if (zi) zi.onclick=()=>zoomTo(Math.min(sc*1.2,4));
     if (zo) zo.onclick=()=>zoomTo(Math.max(sc/1.2,fittedMinScale));
     if (zf) zf.onclick=fit;
-    let dragging=false, px0=0, py0=0, tx0=0, ty0=0;
-    wrap.addEventListener('pointerdown', (ev)=>{ if (ev.target.closest('.hud, .legend, .caption, .diagram-info')) return;
-      dragging=true; wrap.classList.add('dragging'); wrap.setPointerCapture(ev.pointerId); px0=ev.clientX; py0=ev.clientY; tx0=tx; ty0=ty; });
-    wrap.addEventListener('pointermove', (ev)=>{ if(!dragging) return; const dx=ev.clientX-px0, dy=ev.clientY-py0; if (!dx && !dy) return; tx=tx0+dx; ty=ty0+dy; if (Math.abs(dx)>=DRAG_START || Math.abs(dy)>=DRAG_START) atFit=false; apply(); });
-    const endDrag=()=>{ dragging=false; wrap.classList.remove('dragging'); };
-    wrap.addEventListener('pointerup', endDrag); wrap.addEventListener('pointercancel', endDrag);
-    /* Over the chrome block a wheel scrolls an open panel; a pinch (ctrlKey) still zooms the drawing, never the page. */
-    wrap.addEventListener('wheel', (ev)=>{ if (!ev.ctrlKey && ev.target.closest('.diagram-info')) return; ev.preventDefault(); const r=wrap.getBoundingClientRect(), mx=ev.clientX-r.left, my=ev.clientY-r.top;
-      const ns=Math.max(fittedMinScale, Math.min(4, sc*(ev.deltaY>0 ? 1/1.1 : 1.1))); if (ns===sc) return; const k=ns/sc; tx=mx-(mx-tx)*k; ty=my-(my-ty)*k; sc=ns; atFit=false; apply(); }, { passive:false });
+    /* GESTURES through the design-system pointer controller (diagrams-pointer.js, checked at the
+       top of this file): one pointer pans from anywhere on the drawing, two pinch about their
+       centroid, a wheel zooms about the pointer. The canvas carries `touch-action: none`
+       (diagrams.css), so a touch gesture there moves the drawing, never the page. A press on the
+       HUD or the chrome block stays native, and a wheel over the chrome block scrolls an open
+       panel unless it is a trackpad pinch (ctrlKey). A moved gesture swallows its own click. */
+    const clampK = (k) => Math.max(fittedMinScale, Math.min(4, k));
+    window.DIAGRAM_POINTER.attach({
+      stage: wrap, exclude: '.hud, .legend, .caption, .diagram-info', wheelStep: 1.1, clampK,
+      getView: () => ({ k: sc, x: tx, y: ty }),
+      setView: (v) => {
+        /* A gesture that moves the view takes it off Fit; float noise from a still pinch does not. */
+        if (Math.abs(v.k - sc) > 1e-9 * sc || Math.abs(v.x - tx) > 1e-6 || Math.abs(v.y - ty) > 1e-6) atFit = false;
+        sc = v.k; tx = v.x; ty = v.y; apply();
+      },
+      zoomAt: (f, mx, my) => { const ns = clampK(sc*f); if (ns === sc) return; const k = ns/sc; tx = mx-(mx-tx)*k; ty = my-(my-ty)*k; sc = ns; atFit = false; apply(); }
+    });
   }
 })();

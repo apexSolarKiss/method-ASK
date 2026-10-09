@@ -6,10 +6,10 @@
  *
  * operator canonical            system-ASK-topology.source.js
  * operator canonical version    source-v13
- * operator canonical render     render-v27
- * operator canonical date       2026-09-10
- * operator canonical SHA-256    df76319a3263ccee9fa710c34afb4fa3a27243ebd31f6ad031b8c3a5ab738eab
- * input manifest SHA-256        6069224449757460692fe1c6a3a737f8fe516c73d1366199971a734878fbbaf5
+ * operator canonical render     render-v28
+ * operator canonical date       2026-10-08
+ * operator canonical SHA-256    c92c300ccc42a68be047b552799b4bb787e24da6b51fe52c6a69ab40b72cd8a8
+ * input manifest SHA-256        090f0f7432d765313f9fe0120e0fe8c423d9b4599b8140a1da3bf65eef8ace95
  *
  * This is a PROJECTION: 8 of 12 top-level branches are carried, and the
  * remaining 4 are not present. The operator canonical is not publicly resolvable and

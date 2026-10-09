@@ -13,6 +13,10 @@
 <!-- design-system-ASK foundations — local mirror (Tier 1 + Tier 2), no CDN. See _dsa-tokens/MANIFEST.md -->
 <link rel="stylesheet" href="./_dsa-tokens/colors_and_type.css">
 <link rel="stylesheet" href="diagrams.css">
+<!-- design-system-ASK disclosure grammar for the compact chrome triggers, from the local surface-module
+     mirror. surface-panel.css loads first, as surface-treatments.css requires. -->
+<link rel="stylesheet" href="./_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="./_dsa-surface/surface-treatments.css">
 <!-- ASK Three Functions — opt-in semantic function-color primitive, vendored from design-system-ASK. See _dsa-tokens/MANIFEST.md -->
 <link rel="stylesheet" href="./_dsa-tokens/three-functions.css">
 <style>
@@ -116,9 +120,10 @@
       <div class="s">how one normative apex governs a recursive ecology of distributed owners and plural reasoning, while evidence returns upward and authority does not</div>
     </div>
     <div class="spacer"></div>
+    <div class="diagram-cue">illustrative</div>
     <div class="stamp">
-      <div><span class="k">D11</span> // <span class="k">source-v2</span> // <span class="k">render-v1</span></div>
-      <div>2026-09-14</div>
+      <div><span class="k">D11</span> // <span class="k">source-v2</span> // <span class="k">render-v2</span></div>
+      <div>2026-10-08</div>
     </div>
   </div>
 
@@ -132,6 +137,17 @@
     <div class="corner-tick bl"></div>
     <div class="corner-tick br"></div>
 
+    <div class="diagram-info" data-diagram-chrome>
+      <div class="diagram-info-triggers">
+        <button class="diagram-info-trigger surface-disclosure-trigger glass" type="button" aria-controls="diagramCaption" aria-expanded="true"><span class="surface-disclosure-label">About</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></button>
+      </div>
+      <div class="caption glass" id="diagramCaption">
+        <b>Illustrative projection, current as of its render.</b> Named owners establish current fact;
+        ASK adjudicates correction. This figure owns neither, and is not the authority it depicts.<br>
+        Source of truth: <a href="../../examples/system-ASK.md">examples/system-ASK.md</a> — the accepted claim set this figure projects.
+      </div>
+    </div>
+
     <div class="hud glass">
       <button id="zoomOut" title="Zoom out">−</button>
       <div class="pct" id="zoomPct">100%</div>
@@ -139,14 +155,13 @@
       <button id="zoomFit" title="Fit">⤢</button>
     </div>
 
-    <div class="caption glass">
-      <b>Illustrative projection, current as of its render.</b> Named owners establish current fact;
-      ASK adjudicates correction. This figure owns neither, and is not the authority it depicts.<br>
-      Source of truth: <a href="../../examples/system-ASK.md">examples/system-ASK.md</a> — the accepted claim set this figure projects.
-    </div>
   </div>
 </div>
 
+<!-- DS-owned responsive chrome — after the chrome markup, before the fit contract. Re-vendor byte-identical. -->
+<script src="diagrams-chrome.js"></script>
+<!-- DS-owned gesture controller — must load BEFORE the fit contract and the figure builder. Re-vendor byte-identical. -->
+<script src="diagrams-pointer.js"></script>
 <script src="diagrams-fit.js"></script>
 <script src="method-ASK_system-ASK-hero.figure.js"></script>
 <!-- DS embedded-font carrier — lets PNG export embed fonts with no server (file://).
