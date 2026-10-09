@@ -57,10 +57,9 @@ They exist to prevent four specific collapses, one per figure:
       appears. No diagram page loads the shell, its runtime,
       `surface-action.css` or the wordmark pair.
   - **Diagram disclosure.** `surface-panel.css`, then `surface-treatments.css`,
-    loaded by the two diagram pages that adopt the responsive chrome
+    loaded by every diagram page that adopts the responsive chrome
     (*Responsive chrome*, below). `surface-treatments.css` supplies the
-    controlled disclosure trigger their About and Legend triggers take. No
-    other diagram page loads either file.
+    controlled disclosure trigger their About and Legend triggers take.
 
 ### Topology + intent-architecture trees
 
@@ -115,19 +114,21 @@ They exist to prevent four specific collapses, one per figure:
 
 ### Responsive chrome
 
-Two figures adopt the `design-system-ASK` responsive diagram chrome: **bounded generativity** and the **SMGI doctrine figure**. Each wraps its caption and legend in one `.diagram-info` block with About and Legend triggers, and its figure builder follows the tree engine's Fit rules.
+Every diagram page here adopts the `design-system-ASK` responsive diagram chrome: the five tree pages, the four figures, and the generated system-ASK public projection. Each wraps its caption and, where it has one, its legend in one `.diagram-info` block with About and Legend triggers, and each figure builder follows the tree engine's Fit rules. The public projection's HTML is generated from its pinned operator shell (`system-ASK-topology-public.generation.json`), so it carries the chrome because that shell does.
 
 - **Wide.** The two panels sit together at the top of the canvas.
-- **Compact.** When the canvas is narrower than 640px, or the open panels would take more than a third of its height or more width than it gives, the panels close behind their triggers in one control area with the HUD. The header keeps its identity, its title and an `illustrative` cue; the subtitle and stamp move into About. At most one panel is open, and it scrolls within the space above the control area.
-- **Fit.** The view stays at Fit until the reader zooms or pans, and a resize or a chrome change refits only a view still at Fit. An open panel moves the drawing only where the drawing keeps its size; otherwise it overlays the drawing until it closes. `⤢` closes a panel that would cover the drawing.
+- **Compact.** When the canvas is narrower than 640px, or the open panels would take more than a third of its height, more width than it gives, or leave the drawing less room above the HUD than the fit needs to keep it clear, the panels close behind their triggers in one control area with the HUD. The header keeps its identity, its title and an `illustrative` cue; the subtitle and stamp move into About. At most one panel is open, and it scrolls within the space above the control area.
+- **Fit.** At Fit the drawing is centered vertically between the chrome above and below it. The view stays at Fit until the reader zooms or pans, and a resize or a chrome change refits only a view still at Fit. An open panel moves the drawing only where the drawing keeps its size; otherwise it overlays the drawing until it closes. `⤢` closes a panel that would cover the drawing.
 - **Export.** `PNG page` reads the subtitle and stamp wherever they sit, so the page export does not depend on the live layout.
+- **Touch.** Every engine page and figure hands its gestures to the shared pointer controller (`diagrams-pointer.js`): one finger pans the drawing from anywhere on it, two pinch the drawing rather than the page, and the panels keep their own taps and scrolling.
 
-Their live composition changed, so their render stamps advanced while their source did not: bounded generativity is `source-v5 // render-v6`, and the SMGI doctrine figure is `source-v1 // render-v3`. The other eight pages keep the fixed chrome and load neither `diagrams-chrome.js` nor anything in `_dsa-surface/`. The tree pages share the engine's Fit behavior, so a reader's zoom survives a resize; the SMGI ontology and system-ASK figures keep their own builders' Fit behavior.
+When bounded generativity and the SMGI doctrine figure first adopted it, their live composition changed, so their render stamps advanced while their source did not, to `source-v5 // render-v6` and `source-v1 // render-v3`. They advanced again when their Fit began centering the drawing and capping its compact clearance, which moved their at-rest view on narrow or crowded windows: bounded generativity is `source-v5 // render-v7`, and the SMGI doctrine figure is `source-v1 // render-v4`. The generated public projection took the chrome and the controller from its operator shell, at the operator canonical's `render-v28`. The tree pages share the engine's Fit behavior, so a reader's zoom survives a resize, and the four figures follow the same Fit rules.
 
 ### Shared render support
 
-- `diagrams-chrome.js` — DS-owned responsive chrome controller, loaded only by the two pages in *Responsive chrome*, BEFORE `diagrams-fit.js`. A page without the `.diagram-info` block is untouched by it.
-- `diagrams-fit.js` — DS-owned fit support; loads BEFORE the engine AND before every figure builder — each builder throws a named error if it is missing. Chrome may declare the edge it is anchored to with `data-diagram-fit-edge`; with nothing declared, the fit reserves exactly the panels it did before.
+- `diagrams-chrome.js` — DS-owned responsive chrome controller, loaded by every page in *Responsive chrome*, BEFORE `diagrams-fit.js`. A page without the `.diagram-info` block is untouched by it.
+- `diagrams-pointer.js` — DS-owned shared pointer controller (v2); loads after `diagrams-chrome.js` and BEFORE `diagrams-fit.js`, so before the engine and every figure builder, each of which throws a named error without it. The engine itself does not: a page that does not load it keeps the mouse drag and wheel.
+- `diagrams-fit.js` — DS-owned fit support (v3); loads BEFORE the engine AND before every figure builder — the engine and each builder throw a named error if it is missing or older than v3. Its v3 `balance` option centers each drawing vertically between the chrome above and below it, and `compactClearance` caps the clearance while the responsive chrome is compact. Chrome may declare the edge it is anchored to with `data-diagram-fit-edge`; with nothing declared, the fit reserves exactly the panels it did before.
 - `diagrams-text-layout.js` — the DS-owned shared text-layout contract: it measures and wraps long node labels for the static tree engines. It loads AFTER `diagrams-fit.js` and IMMEDIATELY BEFORE the engine.
 - `diagrams-static-H-engine.js` — layout + pan/zoom engine.
 
@@ -148,16 +149,16 @@ They are a pair with different jobs, and neither substitutes for the other:
 - **doctrine figure** (`…_seed-mediated-generated-interface`) — the **instantiation path** and the loading-boundary seam. Authored seed >> loading boundary >> grammar grants the aperture >> runtime >> generated interaction >> return, or, at the boundary, fork-at-load. Consumes the Three Functions primitive for one licensed node: the grammar box, where the grammar is operative apparatus in the runtime path.
 - **ontology figure** (`…_seed-mediated-generated-interface-ontology`) — the **category boundaries**. Four orthogonal layers (mechanism · application · authored control · conformance) around one membership node, joined by typed relations. **Fully neutral — no function colour**, because it classifies concepts rather than diagramming the functions; it does not load `three-functions.css`.
 
-The SMGI doctrine figure is `source-v1 // render-v3`; the ontology figure is `source-v2 // render-v1`.
+The SMGI doctrine figure is `source-v1 // render-v4`; the ontology figure is `source-v2 // render-v2`.
 
-**Responsive behavior.** `1440×900` is the reference read-all composition (doctrine about `0.75`, ontology about **`0.67` on the default `screen` profile**). The doctrine figure takes the responsive chrome (*Responsive chrome*, above): on a narrow or crowded window its panels close behind triggers, and fit-all gives the drawing the canvas as a navigable **overview**. The ontology keeps the fixed chrome: shorter and narrower windows use fit-all as a navigable overview, its macrostructure and membership gate remain identifiable, and zoom/pan exposes the authored detail. Read-all composition at every aspect ratio would require content reduction, which neither figure takes.
+**Responsive behavior.** `1440×900` is the reference read-all composition (doctrine about `0.75`, ontology about **`0.67` on the default `screen` profile**). The doctrine figure takes the responsive chrome (*Responsive chrome*, above): on a narrow or crowded window its panels close behind triggers, and fit-all gives the drawing the canvas as a navigable **overview**. The ontology now takes the same responsive chrome; on shorter and narrower windows fit-all is still a navigable overview, its macrostructure and membership gate remain identifiable, and zoom/pan exposes the authored detail. Read-all composition at every aspect ratio would require content reduction, which neither figure takes.
 
 **Ontology dual-profile (source-v2).** The ontology is height-limited at a normal viewport, so a single fixed canvas cannot both stay read-all at `1440×900` and fill the `3840×2880` page. One semantic model is laid out under two coordinate profiles selected by `?layout=`: **`screen`** (default) is compact-but-recomposed and stays read-all at `1440×900` without zoom; **`page`** (`?layout=page`) is the taller, page-optimized composition that spends the available `3840×2880` page height below the chrome. The committed dark full-page mirror is generated from the page profile (`?layout=page&export=png`). Text, categories, held status, branch asymmetry, and typed relations are identical across profiles — only coordinates differ (the recomposition itself — Application's two cards, Conformance's deepened gate / outcomes / test-strip — is present in both).
 
 ## How to use
 
 - Open any listed `.html` figure directly in a browser, or via GitHub Pages if configured.
-- Drag to pan; scroll to zoom; HUD controls in the bottom-left; `⤢` to fit. On the two pages with the responsive chrome, a narrow or short window gathers About and Legend behind triggers in one control area with the HUD, and a scroll over an open panel scrolls the panel.
+- Drag to pan; scroll to zoom; HUD controls in the bottom-left; `⤢` to fit. On every page with the responsive chrome, a narrow or short window gathers About and Legend behind triggers in one control area with the HUD, and a scroll over an open panel scrolls the panel. On a phone one finger pans the drawing from anywhere on it and two pinch it, never the page.
 - Theme follows the OS preference (`prefers-color-scheme`); the CSS supports explicit `data-theme="light"` or `data-theme="dark"` on `<html>` if a specific theme is needed.
 - The PNG export outputs a 3840×2880 image in the resolved theme.
 - **Theme by embedding surface** — adopting the [`design-system-ASK` convention](https://github.com/apexSolarKiss/design-system-ASK/blob/main/README.md#theme-by-embedding-surface) (pinned `7921b79`): this folder is repository documentation, so its embedded diagrams **default to dark**. Bespoke figures with an approved committed mirror use one **versionless dark full-page** raster each, named with the semantic figure stem plus the `-dark.png` theme suffix. The current mirrors are **system-ASK** (`D11`), **bounded generativity**, the **SMGI doctrine figure**, and the **SMGI ontology figure**. Light-page and chrome-free diagram variants remain on-demand exporter outputs, not committed. Most other diagrams here are HTML-only; a bespoke figure gets exactly one supplemental raster when the Markdown needs it.
@@ -166,7 +167,7 @@ The SMGI doctrine figure is `source-v1 // render-v3`; the ontology figure is `so
 
 This diagram originated in the v9 operator-side `ecology-ASK` diagram package and was first absorbed here at `source-v2 // render-v9`.
 
-The current tuple is `source-v9 // render-v22` (2026-09-28). Source advances when the authored topology changes; render advances only when the renderer realization changes.
+The current tuple is `source-v9 // render-v23` (2026-10-08). Source advances when the authored topology changes; render advances only when the renderer realization changes.
 
 The operator-side package and historical render iterations remain in `ecology-ASK-EXTERNAL/scratch/` and are not repo truth.
 

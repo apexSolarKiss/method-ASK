@@ -13,6 +13,10 @@
 <!-- design-system-ASK foundations — local mirror (Tier 1 + Tier 2), no CDN. See _dsa-tokens/MANIFEST.md -->
 <link rel="stylesheet" href="./_dsa-tokens/colors_and_type.css">
 <link rel="stylesheet" href="diagrams.css">
+<!-- design-system-ASK disclosure grammar for the compact chrome triggers, from the local surface-module
+     mirror. surface-panel.css loads first, as surface-treatments.css requires. -->
+<link rel="stylesheet" href="./_dsa-surface/surface-panel.css">
+<link rel="stylesheet" href="./_dsa-surface/surface-treatments.css">
 </head>
 <body>
 
@@ -24,9 +28,10 @@
       <div class="s">grounding note · Project Instructions · prompt · routed handoff · PTX</div>
     </div>
     <div class="spacer"></div>
+    <div class="diagram-cue">illustrative</div>
     <div class="stamp">
-      <div><span class="k">source-v1</span> // <span class="k">render-v3</span></div>
-      <div>2026-09-28</div>
+      <div><span class="k">source-v1</span> // <span class="k">render-v4</span></div>
+      <div>2026-10-08</div>
     </div>
   </div>
 
@@ -40,19 +45,30 @@
     <div class="corner-tick bl"></div>
     <div class="corner-tick br"></div>
 
-    <div class="legend glass">
-      <div class="h"><span>Reading the map</span><span class="fig">5 forms</span></div>
-      <div class="row">
-        <div class="sw"><div class="box-solid"></div></div>
-        <div><span class="lbl">form</span><span class="sub">what kind of artifact</span></div>
+    <div class="diagram-info" data-diagram-chrome>
+      <div class="diagram-info-triggers">
+        <button class="diagram-info-trigger surface-disclosure-trigger glass" type="button" aria-controls="diagramCaption" aria-expanded="true"><span class="surface-disclosure-label">About</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></button>
+        <button class="diagram-info-trigger surface-disclosure-trigger glass" type="button" aria-controls="diagramLegend" aria-expanded="true"><span class="surface-disclosure-label">Legend</span><span class="surface-disclosure-indicator" aria-hidden="true">&#9660;</span></button>
       </div>
-      <div class="row">
-        <div class="sw"><div class="box-solid"></div></div>
-        <div><span class="lbl">activation</span><span class="sub">how it enters active use</span></div>
+      <div class="caption glass" id="diagramCaption">
+        <b>illustrative</b><br>
+        method-ASK/docs/intent-artifacts.md + docs/source-of-intent.md are source of truth.<br>
+        diagram may lag the repo; refresh or trust the prose.
       </div>
-      <div class="row">
-        <div class="sw"><div class="box-solid"></div></div>
-        <div><span class="lbl">lineage</span><span class="sub">how its history persists</span></div>
+      <div class="legend glass" id="diagramLegend">
+        <div class="h"><span>Reading the map</span><span class="fig">5 forms</span></div>
+        <div class="row">
+          <div class="sw"><div class="box-solid"></div></div>
+          <div><span class="lbl">form</span><span class="sub">what kind of artifact</span></div>
+        </div>
+        <div class="row">
+          <div class="sw"><div class="box-solid"></div></div>
+          <div><span class="lbl">activation</span><span class="sub">how it enters active use</span></div>
+        </div>
+        <div class="row">
+          <div class="sw"><div class="box-solid"></div></div>
+          <div><span class="lbl">lineage</span><span class="sub">how its history persists</span></div>
+        </div>
       </div>
     </div>
 
@@ -63,15 +79,14 @@
       <button id="zoomFit" title="Fit">⤢</button>
     </div>
 
-    <div class="caption glass">
-      <b>illustrative</b><br>
-      method-ASK/docs/intent-artifacts.md + docs/source-of-intent.md are source of truth.<br>
-      diagram may lag the repo; refresh or trust the prose.
-    </div>
   </div>
 </div>
 
 <script src="method-ASK_activation-lifecycle-comparison.source.js"></script>
+<!-- DS-owned responsive chrome — after the chrome markup, before the fit contract. Re-vendor byte-identical. -->
+<script src="diagrams-chrome.js"></script>
+<!-- DS-owned gesture controller — must load BEFORE the fit contract and the engine. Re-vendor byte-identical. -->
+<script src="diagrams-pointer.js"></script>
 <script src="diagrams-fit.js"></script>
 <script src="diagrams-text-layout.js"></script>
 <script src="diagrams-static-H-engine.js"></script>
