@@ -32,6 +32,8 @@ execution substrate       mechanisms that carry, expose, apply, or enforce the f
 
 Enforcement makes a rule effective. Governance asks whether the standard is legitimate, who may specify and revise it, who may apply it, who verifies the application, and who answers when either rule or application proves wrong. A perfectly enforced bad rule is not better governed because it is perfectly enforced; it is only harder to contest. The capacity to stop a system is power; the right to do so, under a standard, with limits, and with someone answerable, is governance.
 
+The existence of machinery built around a rule does not by itself establish that the rule remains justified. Dependent metrics, workflows, and roles can create real transition costs, risks, and obligations. A usable correction path must let material evidence or argument reach examination of the rule itself, rather than test every challenge only for conformity to it. When revision or retirement is authorized, the change must reach the affected operational requirements, not only the rule's text, while necessary protections, surviving obligations, and required evidence remain preserved. This does not require costless reversal, continuous reauthorization, renewed examination of a rejected challenge on unchanged grounds, or an executor's free-standing normative veto.
+
 ## Operational governance
 
 A durable governance architecture keeps these functions distinct, auditable, and answerable, even when one organization or one person occupies several:
