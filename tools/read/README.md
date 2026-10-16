@@ -1,16 +1,15 @@
 # tools/read
 
-`read_gen.py` builds the site. It copies `docs/` as authored, except `docs/vercel.json`, hidden directories and symlinked directories, and adds `read/`, the reading pages generated from the repository's Markdown:
+`read_gen.py` builds the site. It copies `docs/` as authored, except `docs/vercel.json`, hidden directories and symlinked directories, and adds the pages it generates:
 
-- one page per declared document, worked example and record;
-- one read-only source view per declared source file;
-- a documents index.
+- the method-ASK home page at the site root, `index.html`, with its text and destinations from the `home` block of `declared.json`;
+- under `read/`, the reading pages generated from the repository's Markdown: one page per declared document, worked example and record, one read-only source view per declared source file, and a documents index.
 
 The Markdown and the source files stay the only source. The generated pages are build output: they are written to the directory the build is given, never into `docs/`, and never committed. Editing a Markdown file is enough to change its page at the next build, with two exceptions, both of which need `declared.json` changed in the same commit: a new blockquote needs a declared role, and changing the opening words of a declared passage or block needs its declaration changed to match. Until then the build fails and nothing new is deployed.
 
 The pages are static files. Each loads same-site stylesheets, fonts, icons and two scripts, `surface-shell.js` and `surface-document-overflow.js`; the shell script builds the responsive navigation panel from the page's own markup. No content is generated or fetched at runtime, and the site runs no server-side code.
 
-GitHub stays the source of record. Every page links its file on GitHub at `main` and its raw file. The raw `/…md` and `.js` routes under the site are unchanged, and so are the diagram pages and their assets, which the build copies byte for byte.
+GitHub stays the source of record. Every reading page and source view links its file on GitHub at `main` and its raw file. The raw `/…md` and `.js` routes under the site are unchanged, and so are the diagram pages and their assets, which the build copies byte for byte.
 
 ## The front door
 
@@ -18,9 +17,9 @@ GitHub stays the source of record. Every page links its file on GitHub at `main`
 
 - **Opened from a clone**, without a build, it works as written: its relative links open the files they name, the raw source, doctrine, example, README and method files included. Its root-absolute icons are the deployment's and do not load from a clone, as before.
 - **In the composed site**, the build serves a copy in which each link to a declared source file opens its source view, and each link to a rendered document, example or record opens its page. A query or `#fragment` on the link is kept. The mapping is the declaration's own; there is no separate list to keep in step.
-- **Build-only fragments.** Navigation whose destination exists only in a built site sits in a `<template data-read-build>` element. A template's content is inert, so a clone shows no dead link; the build removes the lines holding the two template tags, so the content renders. The documents route is the one such fragment.
+- **Build-only fragments.** Navigation whose destination exists only in a built site sits in a `<template data-read-build>` element. A template's content is inert, so a clone shows no dead link; the build removes the template tags, each with its line where it stands alone on one, so the content renders. Two links use them: the documents route, in one fragment, and the breadcrumb's link from `method-ASK` to the home page, whose opening tag and closing tag sit in two fragments so that a clone shows the segment as static text.
 
-Apart from the mapped `href` values and those two lines, the composed copy is the authored bytes, and nothing else under `docs/` is changed.
+Apart from the mapped `href` values and those template tags, the composed copy is the authored bytes, and nothing else under `docs/` is changed.
 
 ## Deployment
 
@@ -30,7 +29,7 @@ Apart from the mapped `href` values and those two lines, the composed copy is th
 2. installs the exact renderer pin into a temporary virtual environment, by hash, from wheels only;
 3. runs `read_gen.py build --out _site` at the repository root.
 
-A failed gate fails the build, so a broken document is never deployed. The redirects and headers in `docs/vercel.json` are unchanged.
+A failed gate fails the build, so a broken document is never deployed. `docs/vercel.json` also carries the site's headers and one redirect, of `/examples/system-ASK.md` to its GitHub page; the build changes neither.
 
 ## Setup
 
@@ -53,7 +52,7 @@ From the repository root:
 <venv>/bin/python tools/read/read_gen.py links --site _site
 ```
 
-- **build** writes the composed site to `--out`. That directory must not exist yet, or must be empty. It may not be the repository, sit inside `docs/` or `.git`, or contain the repository. These are judged by where `--out` physically lands: every symlink in the path, and any `..` after one, is followed first, and when the check fails nothing is staged. Open `_site/diagrams/index.html` or `_site/read/index.html`, or serve `_site/`, to read the result. `--report <file>` writes the pages, link classes, headings and the front-door mapping after a successful build. It may not land inside `docs/` or `.git`, and it may not be `--out`, lie inside it or contain it, judged the same way. That holds whether `--out` exists yet or not: when it does not, the build creates its missing directories for the comparison, so the volume itself decides which spellings name the same directory, and removes them again before anything is staged.
+- **build** writes the composed site to `--out`. That directory must not exist yet, or must be empty. It may not be the repository, sit inside `docs/` or `.git`, or contain the repository. These are judged by where `--out` physically lands: every symlink in the path, and any `..` after one, is followed first, and when the check fails nothing is staged. Open `_site/index.html`, `_site/diagrams/index.html` or `_site/read/index.html`, or serve `_site/`, to read the result. `--report <file>` writes the pages, link classes, headings and the front-door mapping after a successful build. It may not land inside `docs/` or `.git`, and it may not be `--out`, lie inside it or contain it, judged the same way. That holds whether `--out` exists yet or not: when it does not, the build creates its missing directories for the comparison, so the volume itself decides which spellings name the same directory, and removes them again before anything is staged.
 - **check** runs the same build into a temporary directory, prints the digest and removes the directory.
 - **links** runs the link check alone over a composed site.
 
@@ -64,7 +63,7 @@ Each successful build prints a digest of the composed tree. Identical inputs giv
 The build renders every page in memory first. It publishes nothing when any of these fails:
 
 **The declaration.**
-- `declared.json` is malformed: a path not normalized, with a `..` segment, or outside its place; two outputs on one path; or a passage or block declaration on a file that is not rendered.
+- `declared.json` is malformed: a path not normalized, with a `..` segment, or outside its place; two outputs on one path; a passage or block declaration on a file that is not rendered; or a home page without its description, lede and routes, or with a route that lacks a label or support copy, or is neither a site path nor an `https` URL.
 - `docs/read/` exists in the source tree.
 - A Markdown file under `docs/`, `examples/` or the repository root has no declared place: rendered, a redirect, or held with a reason.
 
@@ -84,10 +83,11 @@ The build renders every page in memory first. It publishes nothing when any of t
 - The authored front door does not open from a clone. Outside a build-only fragment, a relative link (`<a>`, `<area>`) or resource reference (`href`, `src`, `srcset`) does not resolve, case-exactly, in the source tree, or a link is root-absolute. A root-absolute resource, such as the deployment-root icons, is the site's and is not checked here. A build-only fragment that opens inside another or never closes fails too.
 - Its source links do not name exactly the declared source files: a declared source is not linked, or a `.js` file is linked that is not declared.
 - The composed front door does not link each declared source through its source view (`read/source/<file>.html`), links a page in that directory that maps to no declared source, or links a `.js` file directly, as a raw link in a build-only fragment would. A root-absolute link is resolved from the site root for this check. The raw file and GitHub are reached from the view.
+- The composed front door leaves a link unclosed, or opens one inside another: a build-only fragment that keeps only one of a link's two tags would do this.
 - A carrier a reading page loads does not match its declared sha256.
 
 **After composing.** It then composes the site in a staging directory beside `--out`. It re-reads every written file against its source, and the front door against its composed bytes, and runs the link check over the staging tree:
-- every relative `href`, `src` and `srcset` on a generated page or the composed front door that stays inside the site must exist, case-exactly. One on a generated page that leaves the site is reported as a warning; one on the composed front door fails, because the deployment would not serve it;
+- every relative `href`, `src` and `srcset` on a generated page, the home page included, or the composed front door that stays inside the site must exist, case-exactly. One on a generated page that leaves the site is reported as a warning; one on the composed front door fails, because the deployment would not serve it;
 - every `#fragment` must name an id in its target page;
 - a GitHub fragment must name a heading of that file;
 - no link may claim a fragment in a raw Markdown file;
@@ -103,6 +103,7 @@ Only then does the staging tree become `--out`.
 - `redirects` and `held` — what is not rendered, each with its target or reason;
 - `source_views` — the source files the front door's source actions open;
 - `site_exclude` — authored files under `docs/` that are configuration, not site: `docs/vercel.json`;
+- `home` — the home page's description, lede and routes, each route a label, a destination (a site path, or an `https` URL) and its support copy, in the order the page shows them;
 - `passages` — the role of each blockquote.
 - `blocks` — the shape of each structured preformatted block.
 

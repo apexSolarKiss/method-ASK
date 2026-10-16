@@ -30,7 +30,7 @@ Linked ASK repos are citations to worked examples, lineage surfaces, or layer re
 - `docs/intent-artifacts.md` — the intent-artifact ontology: carrier classes, activation postures, relay vs feeding, provenance projection
 - `docs/diagrams/` — illustrative diagrams (topology; bounded generativity; seed-mediated generated interface + ontology; intent-artifact ontology; activation + lifecycle comparison; relay / feeding / ingestion; adversarial relay graph + PTX projection); not source of truth
 - `examples/` — worked-example explanations at method altitude
-- `tools/read/` — the site build: it renders reading pages for `docs/`, `examples/` and the diagram sources from their Markdown and source files when the site is built; the generated pages are build output and are not committed
+- `tools/read/` — the site build: it renders the site's home page, and reading pages for `docs/`, `examples/` and the diagram sources from their Markdown and source files, when the site is built; the generated pages are build output and are not committed
 
 ## Anchor reading
 

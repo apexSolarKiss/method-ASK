@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """read_gen.py -- builds method-ASK's site with reading pages generated from its Markdown.
 
-The deployed site is docs/ as authored, plus read/: one reading page per declared
-document, worked example and record, one read-only source view per declared
-source file, and a documents index, all generated from tools/read/declared.json
-at build time. The generated pages are build output. They are never committed.
+The deployed site is docs/ as authored, plus the method-ASK home page at its
+root (index.html) and read/: one reading page per declared document, worked
+example and record, one read-only source view per declared source file, and a
+documents index, all generated from tools/read/declared.json at build time. The
+generated pages are build output. They are never committed.
 They are static files: each loads same-site stylesheets, fonts, icons and two
 scripts, one of which builds the responsive navigation panel from the page's own
 markup. No content is generated or fetched at runtime.
@@ -13,8 +14,9 @@ The front door (docs/diagrams/index.html) is authored once, with links to the
 raw files, so it opens from a clone. The composed site serves a copy whose
 links to declared source files and rendered documents point at their source
 views and reading pages, and whose build-only fragments (<template
-data-read-build>) render. Only those href values and the lines holding the
-fragments' template tags differ from the authored bytes.
+data-read-build>) render. Only those href values and the fragments' template
+tags, each with its line where it stands alone on one, differ from the
+authored bytes.
 
     build   python3 tools/read/read_gen.py build --out DIR [--root DIR] [--report FILE]
     check   python3 tools/read/read_gen.py check [--root DIR]
@@ -44,7 +46,8 @@ build   renders every page in memory and runs every gate first: the exact
         link and resource reference resolving in the source tree, no
         root-absolute link, and its source links naming exactly the declared
         source files), the composed front door linking each declared source
-        only through its source view, and every reading-page carrier
+        only through its source view and closing each link before the next
+        opens, and every reading-page carrier
         matching its declared sha256. It then composes docs/, with the front
         door composed, and the generated pages in a staging directory beside
         --out, verifies every written file byte for byte and runs the link
@@ -237,6 +240,9 @@ class Tree:
     def index_path(self):
         return self.read + "/index.html"
 
+    def home_path(self):
+        return "index.html"
+
     def rel(self, from_page, site_target):
         return url_path(posixpath.relpath(site_target, posixpath.dirname(from_page)))
 
@@ -314,6 +320,21 @@ def config_problems(tree):
             out.append("UNRESOLVED  held file %s: no such file" % h["path"])
         if not h.get("reason"):
             out.append("STRUCTURE-HELD  %s: a held file names its reason" % h["path"])
+    home = cfg.get("home") or {}
+    if not home.get("description") or not home.get("lede") or not home.get("routes"):
+        out.append("STRUCTURE-HOME  the home page declares its description, its lede and its routes")
+    for r in home.get("routes", []):
+        href = r.get("href", "")
+        if not r.get("label") or not r.get("support"):
+            out.append("STRUCTURE-HOME  route %r: a route declares its label and its support copy" % href)
+        parts = urlsplit(href)
+        if parts.scheme or parts.netloc:
+            if parts.scheme != "https" or not parts.netloc:
+                out.append("STRUCTURE-HOME  route %s: an external route is an https URL" % href)
+        elif not href or parts.query or parts.fragment:
+            out.append("STRUCTURE-HOME  route %r: a local route is a site path, with no query or fragment" % href)
+        else:
+            path_ok(href, "home route", "")
     for s in cfg["source_views"]:
         path_ok(s["path"], "source view", "docs")
         path_ok(s["figure"], "source view figure", "docs")
@@ -360,6 +381,7 @@ def config_problems(tree):
     for c in cfg["carriers"]["vendored"]:
         owners.setdefault(tree.carrier_path(c["owner_path"]).casefold(), []).append(c["path"])
     owners.setdefault(tree.index_path().casefold(), []).append("the documents index")
+    owners.setdefault(tree.home_path().casefold(), []).append("the home page")
     for output, who in sorted(owners.items()):
         if len(who) > 1:
             out.append("STRUCTURE-COLLISION  %s is written by %s" % (output, " and ".join(who)))
@@ -1051,6 +1073,12 @@ INDEX_CSS = """
   .doc-index { --doc-measure: none; }
 """
 
+HOME_CSS = """
+  /* The home page's routes are the documents index's full-panel cards. A route's
+     support copy may be a bare URL, so it breaks anywhere rather than widen its card. */
+  .doc-cards .surface-panel-support { overflow-wrap: anywhere; }
+"""
+
 # site-relative; the order is surface-document.html's, with the shell's two carriers around it
 STYLESHEETS = ["diagrams/_dsa-tokens/colors_and_type.css", "diagrams/_dsa-surface/surface-panel.css",
                "diagrams/_dsa-surface/surface-action.css", "read/_dsa/surface-text-link.css",
@@ -1104,21 +1132,30 @@ def head_block(tree, page, title, description, css, metas):
 
 
 def shell_open(tree, page, crumb_tail, lede=""):
+    """The shell's header. The breadcrumb's method-ASK links the home page; on the home page itself crumb_tail is
+    None, method-ASK is the current leaf and the mark names the home page."""
+    if crumb_tail is None:
+        mark, mark_label = tree.home_path(), "method-ASK home"
+        here = '<span class="page doc-nowrap" aria-current="page">method-ASK</span>'
+    else:
+        mark, mark_label = tree.index_path(), "method-ASK documents home"
+        here = ('<a class="doc-nowrap" href="%s">method-ASK</a> <span class="sep" aria-hidden="true">//</span> %s'
+                % (esc(tree.rel(page, tree.home_path())), crumb_tail))
     return ("<body>\n<div class=\"surface\">\n  <header class=\"surface-head\">\n    <div class=\"surface-head-main\">\n"
-            "      <a class=\"surface-mark\" href=\"%(home)s\" aria-label=\"method-ASK documents home\">\n"
+            "      <a class=\"surface-mark\" href=\"%(home)s\" aria-label=\"%(mark_label)s\">\n"
             "        <img class=\"surface-mark-light\" src=\"%(light)s\" alt=\"\" aria-hidden=\"true\" width=\"2160\" height=\"974\">\n"
             "        <img class=\"surface-mark-dark\" src=\"%(dark)s\" alt=\"\" aria-hidden=\"true\" width=\"2160\" height=\"974\">\n"
             "      </a>\n"
             "      <nav class=\"surface-breadcrumb\" aria-label=\"Breadcrumb\">\n"
             "        <h1 class=\"surface-title\"><a class=\"org\" href=\"https://a-s-k.studio/\">ASK</a> <span class=\"sep\" aria-hidden=\"true\">//</span> "
-            "<a href=\"https://a-s-k.studio/apex-solar-kiss\">apex solar kiss</a> <span class=\"sep\" aria-hidden=\"true\">//</span> <span class=\"doc-nowrap\">method-ASK</span> "
-            "<span class=\"sep\" aria-hidden=\"true\">//</span> %(tail)s</h1>\n"
+            "<a href=\"https://a-s-k.studio/apex-solar-kiss\">apex solar kiss</a> <span class=\"sep\" aria-hidden=\"true\">//</span> "
+            "%(here)s</h1>\n"
             "      </nav>\n%(lede)s"
             "    </div>\n  </header>\n\n  <hr class=\"surface-rule\">\n\n  <main class=\"surface-payload\">\n") % {
-        "home": esc(tree.rel(page, tree.index_path())),
+        "home": esc(tree.rel(page, mark)), "mark_label": mark_label,
         "light": esc(tree.rel(page, "diagrams/_dsa-surface/assets/logo-ASK-white.png")),
         "dark": esc(tree.rel(page, "diagrams/_dsa-surface/assets/logo-ASK-lavender-ASK.png")),
-        "tail": crumb_tail, "lede": lede}
+        "here": here, "lede": lede}
 
 
 def action(href, label, primary=False, external=False):
@@ -1346,6 +1383,34 @@ def render_index(tree, report):
     return doc
 
 
+def render_home(tree):
+    """The method-ASK home page, at the site root: a short introduction, then one full-panel card per declared
+    route, in declared order. Its text and destinations are declared.json's home block; a local route is a site
+    path and is linked relative to the page, and an external route opens in a new tab."""
+    cfg = tree.cfg
+    home = cfg["home"]
+    page = tree.home_path()
+    cards, local = [], []
+    for r in home["routes"]:
+        external = bool(urlsplit(r["href"]).scheme)
+        href = r["href"] if external else tree.rel(page, r["href"])
+        cards.append('<a class="surface-panel" href="%s"%s><span class="surface-panel-title">%s</span>'
+                     '<span class="surface-panel-support">%s</span></a>'
+                     % (esc(href), ' target="_blank" rel="noopener"' if external else "", esc(r["label"]), esc(r["support"])))
+        if not external:
+            local.append('          <li><a href="%s">%s</a></li>\n' % (esc(href), esc(r["label"])))
+    doc = head_block(tree, page, "method-ASK", home["description"], LOCAL_CSS + CHROME_CSS + INDEX_CSS + HOME_CSS, [])
+    doc += shell_open(tree, page, None, '      <p class="surface-lede">%s</p>\n' % esc(home["lede"]))
+    doc += '<div class="doc-cards">\n' + "\n".join(cards) + "\n</div>\n"
+    repo = "https://github.com/" + cfg["repo"]
+    doc += shell_close(
+        tree, page,
+        [action(repo, "repository", external=True), action("https://a-s-k.studio/", "A-S-K.studio", external=True)],
+        "      <li data-surface-nav-current>\n        <ul>\n" + "".join(local) + "        </ul>\n      </li>\n",
+        [action(repo, "repository", external=True)])
+    return doc
+
+
 # ---------------------------------------------------------------------------
 # gates
 
@@ -1422,6 +1487,34 @@ class FrontDoorScan(HTMLParser):
         return self
 
 
+class AnchorBalance(HTMLParser):
+    """Each <a> of a page closes before the next one opens. A build-only fragment may hold a link's opening tag and
+    a later fragment its closing tag, so the check reads the composed front door, where both tags must survive."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.open, self.problems = None, []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "a":
+            if self.open is not None:
+                self.problems.append("STRUCTURE-FRONT-DOOR  composed: a link opens on line %d while the link from line %d "
+                                     "is still open" % (self.getpos()[0], self.open))
+            self.open = self.getpos()[0]
+
+    def handle_endtag(self, tag):
+        if tag == "a":
+            if self.open is None:
+                self.problems.append("STRUCTURE-FRONT-DOOR  composed: a link closes on line %d with no link open" % self.getpos()[0])
+            self.open = None
+
+    def finish(self):
+        self.close()
+        if self.open is not None:
+            self.problems.append("STRUCTURE-FRONT-DOOR  composed: the link from line %d never closes" % self.open)
+        return self.problems
+
+
 HREF_ATTR = re.compile(r"""(\shref\s*=\s*)("[^"]*"|'[^']*'|[^\s"'=<>`]+)""")
 
 
@@ -1439,7 +1532,8 @@ def compose_front_door(tree):
     a link to a declared source file becomes its source view, and a link to a rendered document, example or
     record becomes its page. Every other byte is the authored byte, except that each
     build-only fragment's <template> tags are removed, so its content renders. Returns (composed text, the
-    mapping applied as [authored href, composed href, kind], problems). A query or #fragment on a mapped link is kept."""
+    mapping applied as [authored href, composed href, kind], problems), the problems including any link the
+    composed page leaves unclosed. A query or #fragment on a mapped link is kept."""
     text = tree.read_bytes(tree.cfg["front_door"]).decode("utf-8")
     scan = FrontDoorScan(text)
     scan.feed(text)
@@ -1480,7 +1574,10 @@ def compose_front_door(tree):
         out.append(rep)
         at = e1
     out.append(text[at:])
-    return "".join(out), mapping, problems
+    composed = "".join(out)
+    balance = AnchorBalance()
+    balance.feed(composed)
+    return composed, mapping, problems + balance.finish()
 
 
 def authored_navigation_problems(tree):
@@ -1590,6 +1687,7 @@ def render_all(tree):
     for s in tree.cfg["source_views"]:
         out[tree.source_view_path(s["path"])] = render_source(tree, s).encode("utf-8")
     out[tree.index_path()] = render_index(tree, report).encode("utf-8")
+    out[tree.home_path()] = render_home(tree).encode("utf-8")
     for c in tree.cfg["carriers"]["vendored"]:
         if tree.exists(c["path"]):
             out[tree.carrier_path(c["owner_path"])] = tree.read_bytes(c["path"])
@@ -1620,12 +1718,13 @@ def site_files(tree):
 
 
 def link_problems(tree, site):
-    """Link and anchor check over the generated pages and the front door of a composed site. Returns
-    (problems, warnings, counts, pages read)."""
+    """Link and anchor check over the generated pages, the home page among them, and the front door of a composed
+    site. Returns (problems, warnings, counts, pages read)."""
     read_root = os.path.join(site, tree.read)
     site_root = os.path.normpath(site)
     pages = {}
     targets = [os.path.join(dp, fn) for dp, _, fns in os.walk(read_root) for fn in fns if fn.endswith(".html")]
+    targets.append(os.path.join(site, *tree.home_path().split("/")))
     targets.append(os.path.join(site, *tree.site_path(tree.cfg["front_door"]).split("/")))
     for p in sorted(targets):
         c = LinkCollector()

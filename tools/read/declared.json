@@ -5,6 +5,18 @@
   "read": "read",
   "front_door": "docs/diagrams/index.html",
   "site_exclude": ["docs/vercel.json"],
+  "home": {
+    "description": "method-ASK // the method for designing systems that build systems: doctrine, worked examples and illustrative diagrams.",
+    "lede": "The methodology layer for the ASK family of projects: the cross-project method for designing systems that build systems, as doctrine, worked examples and illustrative diagrams. This site is built from the repository, which stays the source of record.",
+    "routes": [
+      {"label": "the method", "href": "read/method.html", "support": "The primary method articulation: the moves, disciplines and workflow shape of designing systems that build systems."},
+      {"label": "documents", "href": "read/index.html", "support": "The doctrine, the worked examples and the figure sources, rendered from this repository. Each page links GitHub and its raw file."},
+      {"label": "diagrams", "href": "diagrams/index.html", "support": "Structural snapshots of the method: the topology and intent-architecture trees and the bespoke figures. Illustrative, not source of truth."},
+      {"label": "repository", "href": "https://github.com/apexSolarKiss/method-ASK", "support": "github.com/apexSolarKiss/method-ASK"},
+      {"label": "design-system-ASK", "href": "https://github.com/apexSolarKiss/design-system-ASK", "support": "The visual authority. This surface vendors its carriers; it defines none of them."},
+      {"label": "A-S-K.studio", "href": "https://a-s-k.studio/", "support": "The ASK meta-brand front door."}
+    ]
+  },
   "documents": [
     {"path": "docs/method.md", "label": "method"},
     {"path": "docs/absorption-discipline.md", "label": "absorption discipline"},

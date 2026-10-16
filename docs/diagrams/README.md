@@ -48,7 +48,8 @@ They exist to prevent four specific collapses, one per figure:
   Opened from a clone, its source, doctrine, example, README and method links
   open the raw files they name. The site build (`tools/read/`) serves a
   composed copy, in which those links open the reading pages and source views
-  generated from the same files, and a documents route is added.
+  generated from the same files, a documents route is added, and the
+  breadcrumb's `method-ASK` links the site's home page.
 - `_dsa-surface/` — pinned, byte-identical `design-system-ASK` carriers, used
   by two different consumers in this folder.
   - **Index navigation.** `surface-shell.css`, `surface-panel.css`,
@@ -64,9 +65,10 @@ They exist to prevent four specific collapses, one per figure:
     loaded by every diagram page that adopts the responsive chrome
     (*Responsive chrome*, below). `surface-treatments.css` supplies the
     controlled disclosure trigger their About and Legend triggers take.
-  - **Reading pages.** The site build's reading pages under `/read/`
-    (`tools/read/`) also load `surface-shell.css`, `surface-shell.js`,
-    `surface-panel.css`, `surface-action.css`, the wordmark pair and the
+  - **Reading pages.** The site build's pages, the home page at the site root
+    and the reading pages under `/read/` (`tools/read/`), also load
+    `surface-shell.css`, `surface-shell.js`, `surface-panel.css`,
+    `surface-action.css`, the wordmark pair and the
     `_dsa-tokens/` mirror. They take their own document-register carriers
     from `tools/read/carriers/`, and never this folder's
     `surface-treatments.css`. `tools/read/declared.json` records the sha256

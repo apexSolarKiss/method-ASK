@@ -4,7 +4,6 @@
   "buildCommand": "sh ../tools/read/vercel-build.sh",
   "outputDirectory": "../_site",
   "redirects": [
-    { "source": "/", "destination": "/diagrams/", "permanent": false },
     {
       "source": "/examples/system-ASK.md",
       "destination": "https://github.com/apexSolarKiss/method-ASK/blob/main/examples/system-ASK.md",
