@@ -15,7 +15,15 @@
 
      A live navigation surface for the diagrams in this folder. It opens from
      the deployment or by double-click from a clean clone; every link below is
-     relative to this file, so both paths resolve identically.
+     relative to this file. In a clone, the source, doctrine, example, README and
+     method links open the raw files they name. The site build (tools/read/)
+     composes the deployed copy of this page from this file: it maps each of
+     those links to the reading page or source view generated from the same
+     file, and adds the documents route, which sits below in a build-only
+     <template data-read-build> because its destination exists only in a built
+     site. Apart from those links and the template's two lines, the page is
+     served as written here, and the figures, PNGs and diagram files are the
+     same in both.
 
      This page is METHOD-OWNED composition over vendored design-system-ASK
      carriers. The carriers under _dsa-surface/ are pinned byte-identical copies
@@ -35,8 +43,9 @@
 
      NOT EVERY LINKED DOCUMENT SITS INSIDE THIS DEPLOYMENT ROOT. The deployed site is
      rooted at docs/, so a card linking outside it — examples/system-ASK.md — resolves
-     in a clone but needs a route at the deployment boundary. That route is owned once
-     in docs/vercel.json, not patched into each link.
+     in a clone but not in the site. The build maps that link to the example's
+     reading page, rendered from the same file. The raw route /examples/system-ASK.md
+     stays the redirect to GitHub that docs/vercel.json owns.
      ============================================================ -->
 <link rel="stylesheet" href="_dsa-tokens/colors_and_type.css">
 <link rel="stylesheet" href="_dsa-surface/surface-panel.css">
@@ -273,6 +282,12 @@
       <span class="name surface-panel-title">the method</span>
       <span class="what surface-panel-support">The primary method articulation — source of truth for everything illustrated above.</span>
     </a>
+    <template data-read-build>
+    <a class="route surface-panel" href="../read/index.html">
+      <span class="name surface-panel-title">documents</span>
+      <span class="what surface-panel-support">The doctrine, the worked examples and the figure sources, rendered from this repository. Each page links GitHub and its raw file.</span>
+    </a>
+    </template>
     <a class="route surface-panel" href="https://github.com/apexSolarKiss/design-system-ASK" target="_blank" rel="noopener">
       <span class="name surface-panel-title">design-system-ASK</span>
       <span class="what surface-panel-support">The visual authority. This surface vendors its carriers; it defines none of them.</span>

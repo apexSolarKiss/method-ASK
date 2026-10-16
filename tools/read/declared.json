@@ -1,0 +1,108 @@
+{
+  "repo": "apexSolarKiss/method-ASK",
+  "branch": "main",
+  "site": "docs",
+  "read": "read",
+  "front_door": "docs/diagrams/index.html",
+  "site_exclude": ["docs/vercel.json"],
+  "documents": [
+    {"path": "docs/method.md", "label": "method"},
+    {"path": "docs/absorption-discipline.md", "label": "absorption discipline"},
+    {"path": "docs/articles.md", "label": "articles"},
+    {"path": "docs/bounded-generativity.md", "label": "bounded generativity"},
+    {"path": "docs/governance.md", "label": "governance"},
+    {"path": "docs/intent-artifacts.md", "label": "intent artifacts"},
+    {"path": "docs/normative-apex.md", "label": "normative apex"},
+    {"path": "docs/portable-definition-layer.md", "label": "portable definition layer"},
+    {"path": "docs/relative-externality.md", "label": "relative externality"},
+    {"path": "docs/seed-mediated-generated-interface.md", "label": "seed-mediated generated interface"},
+    {"path": "docs/source-of-intent.md", "label": "source of intent"},
+    {"path": "docs/source-of-truth-and-aging-rate.md", "label": "source of truth and aging rate"},
+    {"path": "docs/voice-surface-boundary.md", "label": "voice surface boundary"}
+  ],
+  "examples": [
+    {"path": "examples/system-ASK.md", "label": "system-ASK"},
+    {"path": "examples/system-ASK-bounded-generativity.md", "label": "system-ASK bounded generativity"},
+    {"path": "examples/asset-pipeline-ASK.md", "label": "asset-pipeline-ASK"},
+    {"path": "examples/design-system-ASK.md", "label": "design-system-ASK"},
+    {"path": "examples/image-making-source-of-intent.md", "label": "image-making source of intent"},
+    {"path": "examples/urban-observatory.md", "label": "urban-observatory"}
+  ],
+  "records": [
+    {"path": "docs/diagrams/README.md", "label": "diagrams README", "output": "diagrams-README.html"},
+    {"path": "docs/diagrams/_dsa-tokens/MANIFEST.md", "label": "token mirror MANIFEST", "output": "diagrams-dsa-tokens-MANIFEST.html"}
+  ],
+  "redirects": [
+    {"path": "docs/repo-mediated-generated-interface.md", "to": "docs/seed-mediated-generated-interface.md"}
+  ],
+  "held": [
+    {"path": "README.md", "reason": "the repository front page; its banner image sits outside the deployed site, and rendering it is an extend-or-hold decision"},
+    {"path": "AGENTS.md", "reason": "the repository's workflow rules for executors, not reading material for this site"},
+    {"path": "CLAUDE.md", "reason": "a runtime adapter that imports AGENTS.md"}
+  ],
+  "passages": {
+    "docs/absorption-discipline.md": [
+      {"starts": "n=1 project-specific patterns stay", "role": "callout"},
+      {"starts": "Reconciliation after absorption.", "role": "callout"}
+    ],
+    "docs/source-of-intent.md": [
+      {"starts": "Intent repair reconciles", "role": "callout"},
+      {"starts": "When a project separates domain authority", "role": "callout"}
+    ],
+    "examples/system-ASK.md": [
+      {"starts": "Projection boundary", "role": "callout"}
+    ]
+  },
+  "blocks": {
+    "docs/bounded-generativity.md": [
+      {"starts": "OUTER BRACKET", "shape": "groups-aligned"}
+    ],
+    "docs/intent-artifacts.md": [
+      {"starts": "ARTIFACTS OF CONTEXT", "shape": "groups-aligned"},
+      {"starts": "native topology", "shape": "groups-aligned"}
+    ],
+    "docs/portable-definition-layer.md": [
+      {"starts": "bounded generativity", "shape": "groups-rail"}
+    ],
+    "docs/source-of-intent.md": [
+      {"starts": "LESION / DRIFT", "shape": "groups-rail"},
+      {"starts": "cross-surface handoff boundary", "shape": "groups-aligned"},
+      {"starts": "IF the underlying artifact", "shape": "groups-rail"},
+      {"starts": "verified fresh routed handoff", "shape": "groups-rail"},
+      {"starts": "-supersededA", "shape": "groups-aligned"},
+      {"starts": "historical", "shape": "groups-aligned"}
+    ],
+    "examples/system-ASK.md": [
+      {"starts": "PRODUCTION", "shape": "groups-aligned"}
+    ]
+  },
+  "source_views": [
+    {"path": "docs/diagrams/method-ASK_topology.source.js", "label": "topology source", "figure": "docs/diagrams/method-ASK_topology.html"},
+    {"path": "docs/diagrams/method-ASK_intent-artifact-ontology.source.js", "label": "intent-artifact ontology source", "figure": "docs/diagrams/method-ASK_intent-artifact-ontology.html"},
+    {"path": "docs/diagrams/method-ASK_activation-lifecycle-comparison.source.js", "label": "activation + lifecycle comparison source", "figure": "docs/diagrams/method-ASK_activation-lifecycle-comparison.html"},
+    {"path": "docs/diagrams/method-ASK_relay-feeding-ingestion.source.js", "label": "relay / feeding / ingestion source", "figure": "docs/diagrams/method-ASK_relay-feeding-ingestion.html"},
+    {"path": "docs/diagrams/method-ASK_relay-graph-ptx-projection.source.js", "label": "adversarial relay graph + PTX projection source", "figure": "docs/diagrams/method-ASK_relay-graph-ptx-projection.html"},
+    {"path": "docs/diagrams/system-ASK-topology-public.source.js", "label": "system-ASK topology source", "figure": "docs/diagrams/system-ASK-topology-public.html"},
+    {"path": "docs/diagrams/method-ASK_bounded-generativity.figure.js", "label": "bounded generativity source", "figure": "docs/diagrams/method-ASK_bounded-generativity.html"},
+    {"path": "docs/diagrams/method-ASK_system-ASK-hero.figure.js", "label": "system-ASK source", "figure": "docs/diagrams/method-ASK_system-ASK-hero.html"},
+    {"path": "docs/diagrams/method-ASK_seed-mediated-generated-interface.figure.js", "label": "seed-mediated generated interface source", "figure": "docs/diagrams/method-ASK_seed-mediated-generated-interface.html"},
+    {"path": "docs/diagrams/method-ASK_seed-mediated-generated-interface-ontology.figure.js", "label": "seed-mediated generated interface — ontology source", "figure": "docs/diagrams/method-ASK_seed-mediated-generated-interface-ontology.html"}
+  ],
+  "carriers": {
+    "owner": "apexSolarKiss/design-system-ASK",
+    "pin": "53f706735595fa1b4a0e9375adeaf112b454d9de",
+    "vendored": [
+      {"path": "tools/read/carriers/surface-text-link.css", "owner_path": "surface-text-link.css", "sha256": "9a6acf457ffbe2a0bb31ae28507855b6446195ff9dcd3cc7112f04ec5bf0fce3"},
+      {"path": "tools/read/carriers/surface-document.css", "owner_path": "surface-document.css", "sha256": "7dbc392202aab5bb3f849f2947e585f7a6c4bccd7d8cd09171a6e12bd05bf888"},
+      {"path": "tools/read/carriers/surface-treatments.css", "owner_path": "surface-treatments.css", "sha256": "836f5957d28fce2ef06c01e4aedf82f84fc92b7615bbb880bbbe43ae9f7a5e91"},
+      {"path": "tools/read/carriers/surface-document-overflow.js", "owner_path": "surface-document-overflow.js", "sha256": "d66d31b36f697e20739ba009dcfa7ba05328be33fd6f401fa41443d3e268bca1"}
+    ],
+    "reused": [
+      {"path": "docs/diagrams/_dsa-tokens/colors_and_type.css", "owner_path": "colors_and_type.css", "sha256": "4fed9d796a0d51072802f430b9528459a5cbb9c709fa1964bf5b13f18464122a"},
+      {"path": "docs/diagrams/_dsa-surface/surface-panel.css", "owner_path": "surface-panel.css", "sha256": "883e24ac5407a4fe24f9149b0d8964a06995cc88b6b6150b1a1bdfd9aee2976e"},
+      {"path": "docs/diagrams/_dsa-surface/surface-action.css", "owner_path": "surface-action.css", "sha256": "f00ccde1b4db17687fd6ecd62644700932107352b37476184718f2036209fb2e"},
+      {"path": "docs/diagrams/_dsa-surface/surface-shell.css", "owner_path": "patterns/surface-shell/surface-shell.css", "sha256": "300031beef7cad336a4d4bc5f937789e730b0fbe5e1e9ae993f2edbd87c7f661"},
+      {"path": "docs/diagrams/_dsa-surface/surface-shell.js", "owner_path": "patterns/surface-shell/surface-shell.js", "sha256": "f626258684479879f5acf41644729e316574d450e2a057929bfa96fa9d1d0f36"}
+    ]
+  }
+}
