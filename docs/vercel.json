@@ -8,6 +8,11 @@
       "source": "/examples/system-ASK.md",
       "destination": "https://github.com/apexSolarKiss/method-ASK/blob/main/examples/system-ASK.md",
       "permanent": false
+    },
+    {
+      "source": "/read",
+      "destination": "/read/",
+      "permanent": true
     }
   ],
   "headers": [
