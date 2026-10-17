@@ -1132,13 +1132,12 @@ def head_block(tree, page, title, description, css, metas):
 
 
 def shell_open(tree, page, crumb_tail, lede=""):
-    """The shell's header. The breadcrumb's method-ASK links the home page; on the home page itself crumb_tail is
-    None, method-ASK is the current leaf and the mark names the home page."""
+    """The shell's header. The mark and the breadcrumb's method-ASK both link the home page; on the home page itself
+    crumb_tail is None and method-ASK is the current leaf."""
+    mark, mark_label = tree.home_path(), "method-ASK home"
     if crumb_tail is None:
-        mark, mark_label = tree.home_path(), "method-ASK home"
         here = '<span class="page doc-nowrap" aria-current="page">method-ASK</span>'
     else:
-        mark, mark_label = tree.index_path(), "method-ASK documents home"
         here = ('<a class="doc-nowrap" href="%s">method-ASK</a> <span class="sep" aria-hidden="true">//</span> %s'
                 % (esc(tree.rel(page, tree.home_path())), crumb_tail))
     return ("<body>\n<div class=\"surface\">\n  <header class=\"surface-head\">\n    <div class=\"surface-head-main\">\n"
@@ -1303,8 +1302,9 @@ def render_source(tree, entry):
         tree, page,
         [action(index, "documents"), action(diagrams, "diagrams"),
          action(tree.github(path), "GitHub", external=True), action(rel_raw, "raw file")],
-        '      <li><a href="%s">documents</a></li>\n      <li data-surface-nav-current></li>\n' % esc(index),
-        [action(rel_fig, "open figure"), action(tree.github(path), "source on GitHub", external=True),
+        '      <li data-surface-nav-current></li>\n',
+        [action(index, "documents"), action(rel_fig, "open figure"),
+         action(tree.github(path), "source on GitHub", external=True),
          action("https://github.com/" + cfg["repo"], "repository", external=True)])
     return doc
 
