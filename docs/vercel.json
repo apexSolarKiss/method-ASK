@@ -13,6 +13,11 @@
       "source": "/read",
       "destination": "/read/",
       "permanent": true
+    },
+    {
+      "source": "/diagrams",
+      "destination": "/diagrams/",
+      "permanent": true
     }
   ],
   "headers": [

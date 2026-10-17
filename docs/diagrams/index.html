@@ -21,9 +21,10 @@
      those links to the reading page or source view generated from the same
      file, and renders the build-only <template data-read-build> fragments,
      whose destinations exist only in a built site: the breadcrumb's link from
-     method-ASK to the site's home page, and the documents route below. Apart
-     from those links and the templates' tags, the page is served as written
-     here, and the figures, PNGs and diagram files are the same in both.
+     method-ASK to the site's home page, the documents route below, and the
+     navigation panel's documents action. Apart from those links and the
+     templates' tags, the page is served as written here, and the figures, PNGs
+     and diagram files are the same in both.
 
      This page is METHOD-OWNED composition over vendored design-system-ASK
      carriers. The carriers under _dsa-surface/ are pinned byte-identical copies
@@ -292,7 +293,7 @@
       <span class="what surface-panel-support">The doctrine, the worked examples and the figure sources, rendered from this repository. Each page links GitHub and its raw file.</span>
     </a>
     </template>
-    <a class="route surface-panel" href="https://github.com/apexSolarKiss/design-system-ASK" target="_blank" rel="noopener">
+    <a class="route surface-panel" href="https://design-system.a-s-k.studio/" target="_blank" rel="noopener">
       <span class="name surface-panel-title">design-system-ASK</span>
       <span class="what surface-panel-support">The visual authority. This surface vendors its carriers; it defines none of them.</span>
     </a>
@@ -336,7 +337,10 @@
        label again would give the panel a second current-page source that can
        drift from the title. `diagrams` is deliberately not repeated as an
        "overview" child, because two rows reaching one destination is the defect
-       this IA removes. The repository is a utility destination, not an ancestor. -->
+       this IA removes. The repository is a utility destination, not an ancestor.
+       The documents are this page's peer, not its child: they sit among the
+       utilities, in a build-only fragment, as the generated pages list the
+       diagrams among theirs. -->
   <template class="surface-nav-source">
     <ul class="surface-nav-local">
       <li data-surface-nav-current>
@@ -355,6 +359,9 @@
       </li>
     </ul>
     <p class="surface-nav-utilities">
+      <template data-read-build>
+      <a class="surface-action surface-action--secondary" href="../read/index.html">documents</a>
+      </template>
       <a class="surface-action surface-action--secondary" href="https://github.com/apexSolarKiss/method-ASK" target="_blank" rel="noopener">repository</a>
     </p>
   </template>

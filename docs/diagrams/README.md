@@ -48,8 +48,9 @@ They exist to prevent four specific collapses, one per figure:
   Opened from a clone, its source, doctrine, example, README and method links
   open the raw files they name. The site build (`tools/read/`) serves a
   composed copy, in which those links open the reading pages and source views
-  generated from the same files, a documents route is added, and the
-  breadcrumb's `method-ASK` links the site's home page.
+  generated from the same files, a documents route and a documents action in
+  the navigation panel are added, and the breadcrumb's `method-ASK` links the
+  site's home page.
 - `_dsa-surface/` — pinned, byte-identical `design-system-ASK` carriers, used
   by two different consumers in this folder.
   - **Index navigation.** `surface-shell.css`, `surface-panel.css`,

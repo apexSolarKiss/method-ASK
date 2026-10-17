@@ -17,7 +17,7 @@ GitHub stays the source of record. Every reading page and source view links its 
 
 - **Opened from a clone**, without a build, it works as written: its relative links open the files they name, the raw source, doctrine, example, README and method files included. Its root-absolute icons are the deployment's and do not load from a clone, as before.
 - **In the composed site**, the build serves a copy in which each link to a declared source file opens its source view, and each link to a rendered document, example or record opens its page. A query or `#fragment` on the link is kept. The mapping is the declaration's own; there is no separate list to keep in step.
-- **Build-only fragments.** Navigation whose destination exists only in a built site sits in a `<template data-read-build>` element. A template's content is inert, so a clone shows no dead link; the build removes the template tags, each with its line where it stands alone on one, so the content renders. Two links use them: the documents route, in one fragment, and the breadcrumb's link from `method-ASK` to the home page, whose opening tag and closing tag sit in two fragments so that a clone shows the segment as static text.
+- **Build-only fragments.** Navigation whose destination exists only in a built site sits in a `<template data-read-build>` element. A template's content is inert, so a clone shows no dead link; the build removes the template tags, each with its line where it stands alone on one, so the content renders. Three links use them: the documents route and the navigation panel's documents action, each in one fragment, and the breadcrumb's link from `method-ASK` to the home page, whose opening tag and closing tag sit in two fragments so that a clone shows the segment as static text.
 
 Apart from the mapped `href` values and those template tags, the composed copy is the authored bytes, and nothing else under `docs/` is changed.
 
@@ -29,7 +29,7 @@ Apart from the mapped `href` values and those template tags, the composed copy i
 2. installs the exact renderer pin into a temporary virtual environment, by hash, from wheels only;
 3. runs `read_gen.py build --out _site` at the repository root.
 
-A failed gate fails the build, so a broken document is never deployed. `docs/vercel.json` also carries the site's headers and one redirect, of `/examples/system-ASK.md` to its GitHub page; the build changes neither.
+A failed gate fails the build, so a broken document is never deployed. `docs/vercel.json` also carries the site's headers and three redirects: `/examples/system-ASK.md` to its GitHub page, and `/read` and `/diagrams` to `/read/` and `/diagrams/`, so the documents index and the diagram gallery, each served from a directory, keep their relative links. The build changes neither.
 
 ## Setup
 
