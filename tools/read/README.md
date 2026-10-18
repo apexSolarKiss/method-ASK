@@ -63,7 +63,7 @@ Each successful build prints a digest of the composed tree. Identical inputs giv
 The build renders every page in memory first. It publishes nothing when any of these fails:
 
 **The declaration.**
-- `declared.json` is malformed: a path not normalized, with a `..` segment, or outside its place; two outputs on one path; a passage or block declaration on a file that is not rendered; or a home page without its description, lede and routes, or with a route that lacks a label or support copy, or is neither a site path nor an `https` URL.
+- `declared.json` is malformed: a path not normalized, with a `..` segment, or outside its place; two outputs on one path; a passage or block declaration on a file that is not rendered; a link preview missing a key, with an origin that is not a bare lowercase `https` origin, with an `addresses` entry that is not the declared front door or not a directory address, or with an image that is missing, not served, not a PNG, smaller than 1200 × 627, or 5 MiB or larger; or a home page without its description, lede and routes, or with a route that lacks a label or support copy, or is neither a site path nor an `https` URL.
 - `docs/read/` exists in the source tree.
 - A Markdown file under `docs/`, `examples/` or the repository root has no declared place: rendered, a redirect, or held with a reason.
 
@@ -84,6 +84,7 @@ The build renders every page in memory first. It publishes nothing when any of t
 - Its source links do not name exactly the declared source files: a declared source is not linked, or a `.js` file is linked that is not declared.
 - The composed front door does not link each declared source through its source view (`read/source/<file>.html`), links a page in that directory that maps to no declared source, or links a `.js` file directly, as a raw link in a build-only fragment would. A root-absolute link is resolved from the site root for this check. The raw file and GitHub are reached from the view.
 - The composed front door leaves a link unclosed, or opens one inside another: a build-only fragment that keeps only one of a link's two tags would do this.
+- The authored front door's own head does not carry the declared link preview: one canonical address, the front door's public address on the declared origin (a directory's `index.html` by its directory, unless `link_preview.addresses` names another), with `og:url` the same; each Open Graph and Twitter key once, with the declared site name, image and alt text, the image's type and dimensions, and the page's own non-empty title and description; no other Open Graph or Twitter key; and none of these tags after the head.
 - A carrier a reading page loads does not match its declared sha256.
 
 **After composing.** It then composes the site in a staging directory beside `--out`. It re-reads every written file against its source, and the front door against its composed bytes, and runs the link check over the staging tree:
@@ -103,6 +104,7 @@ Only then does the staging tree become `--out`.
 - `redirects` and `held` — what is not rendered, each with its target or reason;
 - `source_views` — the source files the front door's source actions open;
 - `site_exclude` — authored files under `docs/` that are configuration, not site: `docs/vercel.json`;
+- `link_preview` — the site's public origin and name, and its social image, a site path, with that image's alt text. Every generated page's head names its canonical address on that origin, a directory's `index.html` by its directory, and carries Open Graph and Twitter large-image card metadata for the image, with the page's own title and description. The build reads the image's type and dimensions from the PNG itself. An optional `addresses` object maps a front door to the public address a deployment rewrite serves it at, a directory address such as `styleguide/`. The authored front door carries the same set in its own head, which the build checks;
 - `home` — the home page's description, lede and routes, each route a label, a destination (a site path, or an `https` URL) and its support copy, in the order the page shows them;
 - `passages` — the role of each blockquote.
 - `blocks` — the shape of each structured preformatted block.
