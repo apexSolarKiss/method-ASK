@@ -5,6 +5,8 @@
   "read": "read",
   "front_door": "docs/diagrams/index.html",
   "site_exclude": ["docs/vercel.json"],
+  "link_preview": {"origin": "https://method.a-s-k.studio", "site_name": "method-ASK",
+                   "image": "og-image.png", "image_alt": "ASK wordmark on lavender background"},
   "home": {
     "description": "method-ASK // the method for designing systems that build systems: doctrine, worked examples and illustrative diagrams.",
     "lede": "The methodology layer for the ASK family of projects: the cross-project method for designing systems that build systems, as doctrine, worked examples and illustrative diagrams. This site is built from the repository, which stays the source of record.",
