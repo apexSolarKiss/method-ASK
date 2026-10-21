@@ -15,7 +15,7 @@ It is not a renderer, a substrate, or an execution. It is the durable object tho
 
 ## Classification
 
-**Accepted as method doctrine (a distinct method primitive), 2026-06-14.** Routed from `asset-pipeline-ASK` as a candidate (2026-06-13); classified here per `docs/absorption-discipline.md`; ASK-approved as **option 1** (a distinct primitive, not a facet or umbrella) once the interpretive second instance was confirmed.
+**Accepted as method doctrine (a distinct method primitive), 2026-06-14.** Routed from `asset-pipeline-ASK` as a candidate (2026-06-13); classified here per [`docs/absorption-discipline.md`](absorption-discipline.md); ASK-approved as **option 1** (a distinct primitive, not a facet or umbrella) once the interpretive second instance was confirmed.
 
 It clears the §Evidence thresholds as a **two-instance bracket across structurally different kinds of system**:
 
@@ -26,7 +26,7 @@ The second instance is what disambiguates: a non-generative domain confirming th
 
 ## Distinct from bounded generativity — a different axis
 
-[`method-ASK`](../README.md) already holds the **bounded generativity** primitive (`docs/bounded-generativity.md`). The portable definition layer is **orthogonal**, not nested:
+[`method-ASK`](../README.md) already holds the **bounded generativity** primitive ([`docs/bounded-generativity.md`](bounded-generativity.md)). The portable definition layer is **orthogonal**, not nested:
 
 ```text
 bounded generativity     — PROCESS axis

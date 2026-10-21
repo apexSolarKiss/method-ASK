@@ -2,7 +2,7 @@
 
 ## Role in the method
 
-`system-ASK` — the ASK practice taken as a whole, apex and ecology together — is itself a concrete instance of the bounded-generativity topology defined in `docs/bounded-generativity.md`. The primitive's worked instances (§Worked instances) run from [`isometric-cubes-ASK`](https://github.com/apexSolarKiss/isometric-cubes-ASK) through [`mazeASK`](https://github.com/apexSolarKiss/mazeASK), [`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK), studioLeoV, generative-AI workflows, and the ASK advisory / extended-cognition loop. This example takes the last of those one altitude up: the same structure that governs a single advisory loop also governs the standing architecture of the whole practice.
+`system-ASK` — the ASK practice taken as a whole, apex and ecology together — is itself a concrete instance of the bounded-generativity topology defined in [`docs/bounded-generativity.md`](../docs/bounded-generativity.md). The primitive's worked instances (§Worked instances) run from [`isometric-cubes-ASK`](https://github.com/apexSolarKiss/isometric-cubes-ASK) through [`mazeASK`](https://github.com/apexSolarKiss/mazeASK), [`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK), studioLeoV, generative-AI workflows, and the ASK advisory / extended-cognition loop. This example takes the last of those one altitude up: the same structure that governs a single advisory loop also governs the standing architecture of the whole practice.
 
 This is a worked-example explanation at method altitude — not a second primitive definition and not an operational authorization. The primitive is defined in `docs/bounded-generativity.md`; this maps how `system-ASK` realizes it.
 
@@ -24,7 +24,7 @@ The bounded-generativity roles map onto `system-ASK` as follows:
 
 `order from chaos >> bounded generativity >> selection + closure >> artifact governance >> governed artifact + governance record`
 
-The recurrence is the point. The same topology holds at three scopes without changing shape: within a single generative artifact (`isometric-cubes-ASK`, `mazeASK`, image-making), within a single cognition loop (advisory / extended-cognition), and across the whole practice (this example). Second-and-beyond instances are what disambiguate project-specific shape from the cross-project type; the practice-level instance is the broadest of them.
+The recurrence is the point. The same topology holds at three scopes without changing shape: within a single generative artifact ([`isometric-cubes-ASK`](https://github.com/apexSolarKiss/isometric-cubes-ASK), [`mazeASK`](https://github.com/apexSolarKiss/mazeASK), image-making), within a single cognition loop (advisory / extended-cognition), and across the whole practice (this example). Second-and-beyond instances are what disambiguate project-specific shape from the cross-project type; the practice-level instance is the broadest of them.
 
 ## Boundary
 

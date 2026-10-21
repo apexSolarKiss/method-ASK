@@ -1,6 +1,6 @@
 # Intent Artifacts
 
-This doctrine governs the **artifact** face of source of intent: what carries intent, how each kind of carrier becomes operative, and how each ages. `docs/normative-apex.md` governs the structural face — what a source of intent *is*. The distinction those two docs draw between them is the one this doctrine exists to make unmissable:
+This doctrine governs the **artifact** face of source of intent: what carries intent, how each kind of carrier becomes operative, and how each ages. [`docs/normative-apex.md`](normative-apex.md) governs the structural face — what a source of intent *is*. The distinction those two docs draw between them is the one this doctrine exists to make unmissable:
 
 ```text
 source of intent    a locatable governing role — a chair, a hat
@@ -66,7 +66,7 @@ surface-generated     a recipient's own product; never self-authorizing
 
 **Composition by the apex is not itself the operative event.** A draft, a private note, or a quotation the apex wrote does not bind until the apex addresses or adopts it within a scope. The operative act is the addressing, not the authorship — which is the same reason advisor-drafted language becomes operative on relay.
 
-**Delegated authority is a real posture, not a special case of relay.** A domain authority operating inside a named delegation binds within that scope on its own footing; requiring a fresh apex relay for each judgment would collapse a delegation into a courier arrangement. `docs/governance.md` owns what may be delegated and how the scope is named.
+**Delegated authority is a real posture, not a special case of relay.** A domain authority operating inside a named delegation binds within that scope on its own footing; requiring a fresh apex relay for each judgment would collapse a delegation into a courier arrangement. [`docs/governance.md`](governance.md) owns what may be delegated and how the scope is named.
 
 **Axis C — activation.** What is its activation posture or event?
 
@@ -145,7 +145,7 @@ fresh routed handoff + terminal -TBI overlay
        → -supersededA
 ```
 
-`-ingested` begins the durable **post-ingestion** branch of the routed-instance filename lifecycle; `-supersededA` is its durable **pre-ingestion retirement** branch. Terminal `-TBI` remains the cross-cutting feed overlay, not a durable routed-instance state. The received body is byte-immutable; no canonical mirror and no `_vN` chain are created. **`docs/source-of-intent.md` is the authoritative state machine** — the exact suffix transitions, marker grammar, queue mechanics, supersession phases, and exceptions live in §Inbound handoff TBI marker, and the overlay-resolution mechanics in §Resolving the feed-obligation overlay; neither is restated here.
+`-ingested` begins the durable **post-ingestion** branch of the routed-instance filename lifecycle; `-supersededA` is its durable **pre-ingestion retirement** branch. Terminal `-TBI` remains the cross-cutting feed overlay, not a durable routed-instance state. The received body is byte-immutable; no canonical mirror and no `_vN` chain are created. **[`docs/source-of-intent.md`](source-of-intent.md) is the authoritative state machine** — the exact suffix transitions, marker grammar, queue mechanics, supersession phases, and exceptions live in §Inbound handoff TBI marker, and the overlay-resolution mechanics in §Resolving the feed-obligation overlay; neither is restated here.
 
 **Provenance lineage** — transcripts:
 
@@ -296,9 +296,9 @@ transcript capture        ≠ conversion into operative authority
 
 This doctrine owns the ontology. It does not own:
 
-- the routed-instance state machine, marker grammar, or queue mechanics — `docs/source-of-intent.md` §Inbound handoff TBI marker;
-- feed-overlay resolution mechanics, including the governed-role and prior-lifecycle-state discriminator, the truth-preservation invariant, and the fixed-locator carve-out — `docs/source-of-intent.md` §Resolving the feed-obligation overlay;
-- absorption criteria, durable disposition, closure requirements, or reconciliation after absorption — `docs/absorption-discipline.md`;
-- the structural face of source of intent — `docs/normative-apex.md`;
-- the surface-relation frame these classes sit inside — `docs/relative-externality.md`;
+- the routed-instance state machine, marker grammar, or queue mechanics — [`docs/source-of-intent.md`](source-of-intent.md#inbound-handoff-tbi-marker) §Inbound handoff TBI marker;
+- feed-overlay resolution mechanics, including the governed-role and prior-lifecycle-state discriminator, the truth-preservation invariant, and the fixed-locator carve-out — [`docs/source-of-intent.md`](source-of-intent.md#resolving-the-feed-obligation-overlay) §Resolving the feed-obligation overlay;
+- absorption criteria, durable disposition, closure requirements, or reconciliation after absorption — [`docs/absorption-discipline.md`](absorption-discipline.md);
+- the structural face of source of intent — [`docs/normative-apex.md`](normative-apex.md);
+- the surface-relation frame these classes sit inside — [`docs/relative-externality.md`](relative-externality.md);
 - physical placement on any operator surface. At method altitude the routed plane is the **intent inbox**; the target folder convention is `intent-INbox/`, and each surface's live index governs its current physical path until that surface completes its cutover.

@@ -8,7 +8,7 @@ Each diagram is a structural snapshot of the repo at a point in time. Diagrams a
 
 ## Authority cadence
 
-- repo prose: source of truth — [`docs/method.md`](../method.md) is the primary method articulation, and the doctrine docs (`docs/relative-externality.md`, `docs/voice-surface-boundary.md`, `docs/source-of-truth-and-aging-rate.md`, `docs/source-of-intent.md`, `docs/absorption-discipline.md`) own their respective doctrine
+- repo prose: source of truth — [`docs/method.md`](../method.md) is the primary method articulation, and the doctrine docs ([`docs/relative-externality.md`](../relative-externality.md), [`docs/voice-surface-boundary.md`](../voice-surface-boundary.md), [`docs/source-of-truth-and-aging-rate.md`](../source-of-truth-and-aging-rate.md), [`docs/source-of-intent.md`](../source-of-intent.md), [`docs/absorption-discipline.md`](../absorption-discipline.md)) own their respective doctrine
 - diagram: illustrative snapshot, refreshed at topology / milestone changes
 - repo [`README.md`](../../README.md): canonical front-door articulation
 
@@ -19,7 +19,7 @@ The diagram conforms to [`apexSolarKiss/design-system-ASK`](https://github.com/a
 ## The four intent-architecture figures
 
 `TREE_D10` and `TREE_D05`–`TREE_D07` are one delivery unit against the landed intent-artifact ontology and routed-instance
-lifecycle (`docs/intent-artifacts.md`, `docs/source-of-intent.md`). They are structural maps rendered by the
+lifecycle ([`docs/intent-artifacts.md`](../intent-artifacts.md), [`docs/source-of-intent.md`](../source-of-intent.md)). They are structural maps rendered by the
 shared tree engine, not bespoke `figure.js` compositions like the SMGI pair — the subject in each case is a
 classification or a set of distinctions, which is what the tree engine is for.
 
@@ -42,27 +42,27 @@ They exist to prevent four specific collapses, one per figure:
 
 ### Live navigation surface
 
-- `index.html` — ASK-branded live navigation surface for this folder's diagram
+- [`index.html`](index.html) — ASK-branded live navigation surface for this folder's diagram
   set. It consumes the local Tier 1 + Tier 2 mirror and the vendored
   `_dsa-surface/` carriers; its Tier 3 does not propagate into the diagrams.
   Opened from a clone, its source, doctrine, example, README and method links
-  open the raw files they name. The site build (`tools/read/`) serves a
+  open the raw files they name. The site build ([`tools/read/`](../../tools/read/README.md)) serves a
   composed copy, in which those links open the reading pages and source views
   generated from the same files, a documents route and a documents action in
   the navigation panel are added, and the breadcrumb's `method-ASK` links the
   site's home page.
-- `_dsa-surface/` — pinned, byte-identical `design-system-ASK` carriers, used
+- `_dsa-surface/` — pinned, byte-identical [`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) carriers, used
   by two different consumers in this folder.
-  - **Index navigation.** `surface-shell.css`, `surface-panel.css`,
-    `surface-action.css` and the mode-aware ASK wordmark pair, loaded by
+  - **Index navigation.** [`surface-shell.css`](_dsa-surface/surface-shell.css), [`surface-panel.css`](_dsa-surface/surface-panel.css),
+    [`surface-action.css`](_dsa-surface/surface-action.css), [`surface-text-link.css`](_dsa-surface/surface-text-link.css) and the mode-aware ASK wordmark pair, loaded by
     `index.html`.
-    - `surface-shell.js` — the shell's responsive-navigation runtime, adopted by
+    - [`surface-shell.js`](_dsa-surface/surface-shell.js) — the shell's responsive-navigation runtime, adopted by
       `index.html`. The identity mark is the disclosure: the runtime upgrades
       the authored anchor in place, so with JavaScript unavailable the mark
       stays an ordinary home link and no panel, trigger or dead control
       appears. No diagram page loads the shell, its runtime,
       `surface-action.css` or the wordmark pair.
-  - **Diagram disclosure.** `surface-panel.css`, then `surface-treatments.css`,
+  - **Diagram disclosure.** `surface-panel.css`, then [`surface-treatments.css`](_dsa-surface/surface-treatments.css),
     loaded by every diagram page that adopts the responsive chrome
     (*Responsive chrome*, below). `surface-treatments.css` supplies the
     controlled disclosure trigger their About and Legend triggers take.
@@ -72,46 +72,46 @@ They exist to prevent four specific collapses, one per figure:
     `surface-action.css`, the wordmark pair and the
     `_dsa-tokens/` mirror. They take their own document-register carriers
     from `tools/read/carriers/`, and never this folder's
-    `surface-treatments.css`. `tools/read/declared.json` records the sha256
+    `surface-treatments.css`. [`tools/read/declared.json`](../../tools/read/declared.json) records the sha256
     of each stylesheet and script they load, and the build stops when one of
     them moves without it.
 
 ### Topology + intent-architecture trees
 
 - `README.md` — this file.
-- `method-ASK_topology.html` — renders `TREE_D02`.
-  - `method-ASK_topology.source.js` — `TREE_D02` data (`source-v9`).
-- `method-ASK_intent-artifact-ontology.html` — renders `TREE_D10`.
-  - `method-ASK_intent-artifact-ontology.source.js` — `TREE_D10` data (`source-v2`): source of intent as a locatable ROLE; context / intent / provenance families; the claim-level vs artifact-level discipline.
-- `method-ASK_activation-lifecycle-comparison.html` — renders `TREE_D05`.
-  - `method-ASK_activation-lifecycle-comparison.source.js` — `TREE_D05` data (`source-v1`): five artifact forms and their distinct activation + lineage models; prevents every artifact form from inheriting the fresh routed-handoff filename lifecycle merely because it is read, fed, or co-located. Terminal `-TBI` remains an orthogonal overlay.
-- `method-ASK_relay-feeding-ingestion.html` — renders `TREE_D06`.
-  - `method-ASK_relay-feeding-ingestion.source.js` — `TREE_D06` data (`source-v1`): direct relay vs payload-bearing feed; the envelope supplies force, the payload supplies content; ingestion as a resulting state; disposition separate.
-- `system-ASK-topology-public.html` — renders `TREE_D03_PUBLIC`, the governed
+- [`method-ASK_topology.html`](method-ASK_topology.html) — renders `TREE_D02`.
+  - [`method-ASK_topology.source.js`](method-ASK_topology.source.js) — `TREE_D02` data (`source-v9`).
+- [`method-ASK_intent-artifact-ontology.html`](method-ASK_intent-artifact-ontology.html) — renders `TREE_D10`.
+  - [`method-ASK_intent-artifact-ontology.source.js`](method-ASK_intent-artifact-ontology.source.js) — `TREE_D10` data (`source-v2`): source of intent as a locatable ROLE; context / intent / provenance families; the claim-level vs artifact-level discipline.
+- [`method-ASK_activation-lifecycle-comparison.html`](method-ASK_activation-lifecycle-comparison.html) — renders `TREE_D05`.
+  - [`method-ASK_activation-lifecycle-comparison.source.js`](method-ASK_activation-lifecycle-comparison.source.js) — `TREE_D05` data (`source-v1`): five artifact forms and their distinct activation + lineage models; prevents every artifact form from inheriting the fresh routed-handoff filename lifecycle merely because it is read, fed, or co-located. Terminal `-TBI` remains an orthogonal overlay.
+- [`method-ASK_relay-feeding-ingestion.html`](method-ASK_relay-feeding-ingestion.html) — renders `TREE_D06`.
+  - [`method-ASK_relay-feeding-ingestion.source.js`](method-ASK_relay-feeding-ingestion.source.js) — `TREE_D06` data (`source-v1`): direct relay vs payload-bearing feed; the envelope supplies force, the payload supplies content; ingestion as a resulting state; disposition separate.
+- [`system-ASK-topology-public.html`](system-ASK-topology-public.html) — renders `TREE_D03_PUBLIC`, the governed
   PUBLIC PROJECTION of the operator-side system-ASK topology. It is generated,
   not authored here, and it is not method doctrine: the four intent-architecture
   figures and the two SMGI figures state what this repo argues, while this page
   reports a structure the operator canonical owns.
-  - `system-ASK-topology-public.source.js` — the projected `TREE_D03_PUBLIC`
+  - [`system-ASK-topology-public.source.js`](system-ASK-topology-public.source.js) — the projected `TREE_D03_PUBLIC`
     data: eight public top-level branches derived from the canonical's twelve.
-  - `system-ASK-topology-public.generation.json` — the generation receipt. It
+  - [`system-ASK-topology-public.generation.json`](system-ASK-topology-public.generation.json) — the generation receipt. It
     records the exporter, the operator canonical and its `source-v/render-v`
     tuple, the input manifest, the HTML shell, and the produced outputs, each
     by SHA-256, plus the include/exclude classification that makes the 12 -> 8
     reduction checkable rather than asserted.
-- `method-ASK_relay-graph-ptx-projection.html` — renders `TREE_D07`.
-  - `method-ASK_relay-graph-ptx-projection.source.js` — `TREE_D07` data (`source-v1`): the native partially-ordered multi-thread topology vs the linear PTX projection; three labels on one relayed passage.
+- [`method-ASK_relay-graph-ptx-projection.html`](method-ASK_relay-graph-ptx-projection.html) — renders `TREE_D07`.
+  - [`method-ASK_relay-graph-ptx-projection.source.js`](method-ASK_relay-graph-ptx-projection.source.js) — `TREE_D07` data (`source-v1`): the native partially-ordered multi-thread topology vs the linear PTX projection; three labels on one relayed passage.
 
 ### Bespoke figures
 
 - **Bounded generativity**
-  - `method-ASK_bounded-generativity.html` — renders the bounded-generativity system-model figure.
-  - `method-ASK_bounded-generativity.figure.js` — figure builder (`source-v5`).
-  - `method-ASK_bounded-generativity-dark.png` — sole committed doctrine mirror (dark full-page); the light-page + chrome-free diagram variants are on-demand exporter outputs, not committed.
+  - [`method-ASK_bounded-generativity.html`](method-ASK_bounded-generativity.html) — renders the bounded-generativity system-model figure.
+  - [`method-ASK_bounded-generativity.figure.js`](method-ASK_bounded-generativity.figure.js) — figure builder (`source-v5`).
+  - [`method-ASK_bounded-generativity-dark.png`](method-ASK_bounded-generativity-dark.png) — sole committed doctrine mirror (dark full-page); the light-page + chrome-free diagram variants are on-demand exporter outputs, not committed.
 - **system-ASK // one apex · distributed owners · governed return** (`D11` — worked example)
-  - `method-ASK_system-ASK-hero.html` — renders the system-ASK causal-orientation figure.
-  - `method-ASK_system-ASK-hero.figure.js` — figure builder (`source-v2`).
-  - `method-ASK_system-ASK-hero-dark.png` — committed worked-example mirror (dark full-page).
+  - [`method-ASK_system-ASK-hero.html`](method-ASK_system-ASK-hero.html) — renders the system-ASK causal-orientation figure.
+  - [`method-ASK_system-ASK-hero.figure.js`](method-ASK_system-ASK-hero.figure.js) — figure builder (`source-v2`).
+  - [`method-ASK_system-ASK-hero-dark.png`](method-ASK_system-ASK-hero-dark.png) — committed worked-example mirror (dark full-page).
   - Projects the accepted claim set in [`examples/system-ASK.md`](../../examples/system-ASK.md), which is
     source of truth for the figure; the two are one delivery unit, while neither is authority for the
     distributed system they depict. It answers one question — how a single normative apex governs a
@@ -119,17 +119,17 @@ They exist to prevent four specific collapses, one per figure:
     authority does not — and it is **not** derived from the operator topology map or from that map's
     generated public projection, which sits in this folder and shares the subject.
 - **Seed-Mediated Generated Interface // doctrine**
-  - `method-ASK_seed-mediated-generated-interface.html` — renders the SMGI DOCTRINE figure.
-  - `method-ASK_seed-mediated-generated-interface.figure.js` — figure builder (`source-v1`).
-  - `method-ASK_seed-mediated-generated-interface-dark.png` — committed doctrine mirror (dark full-page).
+  - [`method-ASK_seed-mediated-generated-interface.html`](method-ASK_seed-mediated-generated-interface.html) — renders the SMGI DOCTRINE figure.
+  - [`method-ASK_seed-mediated-generated-interface.figure.js`](method-ASK_seed-mediated-generated-interface.figure.js) — figure builder (`source-v1`).
+  - [`method-ASK_seed-mediated-generated-interface-dark.png`](method-ASK_seed-mediated-generated-interface-dark.png) — committed doctrine mirror (dark full-page).
 - **Seed-Mediated Generated Interface // ontology**
-  - `method-ASK_seed-mediated-generated-interface-ontology.html` — renders the SMGI ONTOLOGY figure.
-  - `method-ASK_seed-mediated-generated-interface-ontology.figure.js` — figure builder (`source-v2`; dual-profile — `?layout=screen` default / `?layout=page`).
-  - `method-ASK_seed-mediated-generated-interface-ontology-dark.png` — committed doctrine mirror (dark full-page).
+  - [`method-ASK_seed-mediated-generated-interface-ontology.html`](method-ASK_seed-mediated-generated-interface-ontology.html) — renders the SMGI ONTOLOGY figure.
+  - [`method-ASK_seed-mediated-generated-interface-ontology.figure.js`](method-ASK_seed-mediated-generated-interface-ontology.figure.js) — figure builder (`source-v2`; dual-profile — `?layout=screen` default / `?layout=page`).
+  - [`method-ASK_seed-mediated-generated-interface-ontology-dark.png`](method-ASK_seed-mediated-generated-interface-ontology-dark.png) — committed doctrine mirror (dark full-page).
 
 ### Responsive chrome
 
-Every diagram page here adopts the `design-system-ASK` responsive diagram chrome: the five tree pages, the four figures, and the generated system-ASK public projection. Each wraps its caption and, where it has one, its legend in one `.diagram-info` block with About and Legend triggers, and each figure builder follows the tree engine's Fit rules. The public projection's HTML is generated from its pinned operator shell (`system-ASK-topology-public.generation.json`), so it carries the chrome because that shell does.
+Every diagram page here adopts the [`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) responsive diagram chrome: the five tree pages, the four figures, and the generated system-ASK public projection. Each wraps its caption and, where it has one, its legend in one `.diagram-info` block with About and Legend triggers, and each figure builder follows the tree engine's Fit rules. The public projection's HTML is generated from its pinned operator shell (`system-ASK-topology-public.generation.json`), so it carries the chrome because that shell does.
 
 - **Wide.** The two panels sit together at the top of the canvas.
 - **Compact.** When the canvas is narrower than 640px, or the open panels would take more than a third of its height, more width than it gives, or leave the drawing less room above the HUD than the fit needs to keep it clear, the panels close behind their triggers in one control area with the HUD. The header keeps its identity, its title and an `illustrative` cue; the subtitle and stamp move into About. At most one panel is open, and it scrolls within the space above the control area.
@@ -141,11 +141,11 @@ When bounded generativity and the SMGI doctrine figure first adopted it, their l
 
 ### Shared render support
 
-- `diagrams-chrome.js` — DS-owned responsive chrome controller, loaded by every page in *Responsive chrome*, BEFORE `diagrams-fit.js`. A page without the `.diagram-info` block is untouched by it.
-- `diagrams-pointer.js` — DS-owned shared pointer controller (v2); loads after `diagrams-chrome.js` and BEFORE `diagrams-fit.js`, so before the engine and every figure builder, each of which throws a named error without it. The engine itself does not: a page that does not load it keeps the mouse drag and wheel.
-- `diagrams-fit.js` — DS-owned fit support (v3); loads BEFORE the engine AND before every figure builder — the engine and each builder throw a named error if it is missing or older than v3. Its v3 `balance` option centers each drawing vertically between the chrome above and below it, and `compactClearance` caps the clearance while the responsive chrome is compact. Chrome may declare the edge it is anchored to with `data-diagram-fit-edge`; with nothing declared, the fit reserves exactly the panels it did before.
-- `diagrams-text-layout.js` — the DS-owned shared text-layout contract: it measures and wraps long node labels for the static tree engines. It loads AFTER `diagrams-fit.js` and IMMEDIATELY BEFORE the engine.
-- `diagrams-static-H-engine.js` — layout + pan/zoom engine.
+- [`diagrams-chrome.js`](diagrams-chrome.js) — DS-owned responsive chrome controller, loaded by every page in *Responsive chrome*, BEFORE `diagrams-fit.js`. A page without the `.diagram-info` block is untouched by it.
+- [`diagrams-pointer.js`](diagrams-pointer.js) — DS-owned shared pointer controller (v2); loads after `diagrams-chrome.js` and BEFORE `diagrams-fit.js`, so before the engine and every figure builder, each of which throws a named error without it. The engine itself does not: a page that does not load it keeps the mouse drag and wheel.
+- [`diagrams-fit.js`](diagrams-fit.js) — DS-owned fit support (v3); loads BEFORE the engine AND before every figure builder — the engine and each builder throw a named error if it is missing or older than v3. Its v3 `balance` option centers each drawing vertically between the chrome above and below it, and `compactClearance` caps the clearance while the responsive chrome is compact. Chrome may declare the edge it is anchored to with `data-diagram-fit-edge`; with nothing declared, the fit reserves exactly the panels it did before.
+- [`diagrams-text-layout.js`](diagrams-text-layout.js) — the DS-owned shared text-layout contract: it measures and wraps long node labels for the static tree engines. It loads AFTER `diagrams-fit.js` and IMMEDIATELY BEFORE the engine.
+- [`diagrams-static-H-engine.js`](diagrams-static-H-engine.js) — layout + pan/zoom engine.
 
 **The helper and the engine are indivisible.** The engine throws
 `Diagram text-layout support is missing or incomplete. Load diagrams-text-layout.js before the diagram engine.`
@@ -154,8 +154,8 @@ to name its own pattern. Neither file may be re-vendored, moved or upgraded
 without the other, and a page may not load one alone — the failure is loud by
 design rather than a silently unwrapped label.
 - `_dsa-tokens/` — vendored Tier 1 + Tier 2 token mirror.
-- `diagrams.css` — compiled Tier 1 + Tier 2 style, including the responsive chrome's layout, which applies only to a page that wraps its panels in `.diagram-info`.
-- `export-png.js` — 3840×2880 PNG export. `PNG page` keeps the caption, the legend and the drawn marks apart.
+- [`diagrams.css`](diagrams.css) — compiled Tier 1 + Tier 2 style, including the responsive chrome's layout, which applies only to a page that wraps its panels in `.diagram-info`.
+- [`export-png.js`](export-png.js) — 3840×2880 PNG export. `PNG page` keeps the caption, the legend and the drawn marks apart.
 
 ### The two SMGI figures
 
@@ -193,6 +193,6 @@ The operator-side package and historical render iterations remain in `ecology-AS
 - `TREE_D01` (control-surface architecture tree) — lives in [`apexSolarKiss/control-surface/docs/diagrams/`](https://github.com/apexSolarKiss/control-surface/tree/main/docs/diagrams)
 - `TREE_D03` (system-ASK topology) — the OPERATOR CANONICAL stays outside this repo, and is not absorbed here. What this folder carries is its governed PUBLIC PROJECTION, `TREE_D03_PUBLIC`, generated from that canonical with the operator-side branches excluded. The projection is not the canonical, does not stand in for it, and confers no authority over it.
 - Operator-side context architecture payload (private; conform by reference, do not absorb)
-- Tier 3 identity inside the diagram artifacts — excluded by the Tier model. `index.html` is a separate ASK-branded live navigation surface for this repo and carries the mode-aware ASK wordmark pair; its Tier 3 does not propagate into the diagrams it indexes.
-- Runtime dynamic import from `design-system-ASK` CSS (no; conform at generation time)
+- Tier 3 identity inside the diagram artifacts — excluded by the Tier model. [`index.html`](index.html) is a separate ASK-branded live navigation surface for this repo and carries the mode-aware ASK wordmark pair; its Tier 3 does not propagate into the diagrams it indexes.
+- Runtime dynamic import from [`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) CSS (no; conform at generation time)
 - Fast-aging state (PR numbers, commit hashes, current grounding-note version stamps, branch names, recent activity chronology)

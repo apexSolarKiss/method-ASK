@@ -7,8 +7,9 @@ method-altitude worked-example explanations developed for method-ASK.
 This product also includes unmodified components from design-system-ASK
 (github.com/apexSolarKiss/design-system-ASK), including the vendored Tier 1 +
 Tier 2 foundations and design-system-owned diagram render support under
-docs/diagrams/, the surface-shell pattern, the surface-panel and surface-action
-visual rules, and the ASK wordmark pair used by docs/diagrams/index.html.
+docs/diagrams/, the surface-shell pattern, the surface-panel, surface-action and
+surface-text-link visual rules, and the ASK wordmark pair used by
+docs/diagrams/index.html.
 
 This product also includes the ASK social card, docs/og-image.png, copied
 unmodified from the ASK site (github.com/apexSolarKiss/ASK).
