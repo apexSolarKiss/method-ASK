@@ -2,9 +2,9 @@
 
 ## Role in the method
 
-[`apexSolarKiss/asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) is the mature pressure surface from which most of the method's execution-protocol substrate was operationally refined before being absorbed upstream into [`apexSolarKiss/control-surface`](https://github.com/apexSolarKiss/control-surface). The project is what the method was first tested against; it is what `docs/method.md` currently centers as the worked example.
+[`apexSolarKiss/asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK) is the mature pressure surface from which most of the method's execution-protocol substrate was operationally refined before being absorbed upstream into [`apexSolarKiss/control-surface`](https://github.com/apexSolarKiss/control-surface). The project is what the method was first tested against; it is what [`docs/method.md`](../docs/method.md) currently centers as the worked example.
 
-The role is structural, not biographical. The project is the worked example; the method is the durable element. Method-ASK preserves what generalizes beyond the project's domain.
+The role is structural, not biographical. The project is the worked example; the method is the durable element. [Method-ASK](../README.md) preserves what generalizes beyond the project's domain.
 
 ## What this project surfaced
 
@@ -20,32 +20,32 @@ The following method elements emerged through asset-pipeline-ASK work and were a
 
 ## What the protocol repo absorbed
 
-`control-surface` absorbed the patterns that generalize beyond the asset-pipeline domain:
+[`control-surface`](https://github.com/apexSolarKiss/control-surface) absorbed the patterns that generalize beyond the asset-pipeline domain:
 
-- Aging-rate principle articulated in `AGENTS.md`, `README.md` source-of-truth split, and `templates/grounding-note.template.md`
-- Architecture-uncertain rules overlay at `templates/overlays/architecture-uncertain-rules.template.md` — opt-in for projects with architectural uncertainty
-- Workflow templates (`templates/AGENTS.template.md`, `templates/grounding-note.template.md`, `templates/architecture.template.md`) carrying the patterns each new ASK project inherits
+- Aging-rate principle articulated in [`AGENTS.md`](https://github.com/apexSolarKiss/control-surface/blob/main/AGENTS.md), [`README.md`](https://github.com/apexSolarKiss/control-surface/blob/main/README.md#source-of-truth-split) source-of-truth split, and [`templates/grounding-note.template.md`](https://github.com/apexSolarKiss/control-surface/blob/main/templates/grounding-note.template.md)
+- Architecture-uncertain rules overlay at [`templates/overlays/architecture-uncertain-rules.template.md`](https://github.com/apexSolarKiss/control-surface/blob/main/templates/overlays/architecture-uncertain-rules.template.md) — opt-in for projects with architectural uncertainty
+- Workflow templates ([`templates/AGENTS.template.md`](https://github.com/apexSolarKiss/control-surface/blob/main/templates/AGENTS.template.md), `templates/grounding-note.template.md`, [`templates/architecture.template.md`](https://github.com/apexSolarKiss/control-surface/blob/main/templates/architecture.template.md)) carrying the patterns each new ASK project inherits
 - The two-review-windows cadence encoded in `AGENTS.md`
 - The source-of-truth split between repo, `AGENTS.md`, grounding note, and operator-side memory
 
-`control-surface/examples/asset-pipeline-ASK/notes.md` carries the workflow-asset summary for instantiation pattern reuse. That artifact is distinct from this method-altitude explanation.
+[`control-surface/examples/asset-pipeline-ASK/notes.md`](https://github.com/apexSolarKiss/control-surface/blob/main/examples/asset-pipeline-ASK/notes.md) carries the workflow-asset summary for instantiation pattern reuse. That artifact is distinct from this method-altitude explanation.
 
 ## What method-ASK preserves
 
-`docs/method.md` currently centers asset-pipeline-ASK as the worked example. The articulation includes:
+[`docs/method.md`](../docs/method.md) currently centers asset-pipeline-ASK as the worked example. The articulation includes:
 
 - The architecture-attempt-before-prototype, ontology-first, vocabulary-deconstruction, and pressure-surface principles named explicitly in the pre-architecture moves and execution disciplines sections
-- The recursive observation that the project is more than a pipeline — it is a system-building system for governed visual asset production pipelines, parallel to `control-surface` as a system-building system for AI-native execution workflows
+- The recursive observation that the project is more than a pipeline — it is a system-building system for governed visual asset production pipelines, parallel to [`control-surface`](https://github.com/apexSolarKiss/control-surface) as a system-building system for AI-native execution workflows
 - The asset-pipeline-ASK Worked Example section describing the swing motion (pure ontology → v1 prototype → IA layered-content redirection) as visible method-history
 
-With standalone doctrine docs now split out from `docs/method.md` — `docs/source-of-truth-and-aging-rate.md` for aging-rate and `docs/voice-surface-boundary.md` for voice / surface-boundary discipline — asset-pipeline-ASK pressure remains the historical evidence those docs reference. Architecture-uncertain principles continue to live in `docs/method.md` and the `control-surface` architecture-uncertain-rules overlay.
+With standalone doctrine docs now split out from `docs/method.md` — [`docs/source-of-truth-and-aging-rate.md`](../docs/source-of-truth-and-aging-rate.md) for aging-rate and [`docs/voice-surface-boundary.md`](../docs/voice-surface-boundary.md) for voice / surface-boundary discipline — asset-pipeline-ASK pressure remains the historical evidence those docs reference. Architecture-uncertain principles continue to live in `docs/method.md` and the `control-surface` architecture-uncertain-rules overlay.
 
 ## Boundary notes
 
-Domain-specific content lives in `apexSolarKiss/asset-pipeline-ASK`, not here:
+Domain-specific content lives in [`apexSolarKiss/asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK), not here:
 
 - specific asset categories, IA layered-content schema, brand-system / product-class / packet / slot layer details
 - the project's protected vocabulary, positioning, and strategic rationale
 - domain implementation detail beyond what is needed to make a method principle visible
 
-Method-ASK carries only what generalizes beyond the asset-pipeline domain. When asset-pipeline-ASK refines a principle further, the absorption flows through `control-surface` for execution-protocol patterns or directly upstream to method-ASK for methodology patterns.
+[Method-ASK](../README.md) carries only what generalizes beyond the asset-pipeline domain. When asset-pipeline-ASK refines a principle further, the absorption flows through [`control-surface`](https://github.com/apexSolarKiss/control-surface) for execution-protocol patterns or directly upstream to method-ASK for methodology patterns.

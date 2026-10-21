@@ -84,7 +84,7 @@ governs the execution protocol, and the execution protocol governs project reali
 relation, not a federation. A project does not originate protocol, and the protocol does not originate
 method doctrine; each layer supplies the standard the next one operates under.
 
-**Design crosses that stack rather than occupying a rung in it.** `design-system-ASK` is an upstream owner
+**Design crosses that stack rather than occupying a rung in it.** [`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) is an upstream owner
 on its own **visual-inheritance** axis, reaching named consuming surfaces through the routes its owner
 declares. Its upstream relation is the separate visual-inheritance axis just named, not a rung in the
 method-to-protocol-to-project authority chain; ordering it into that chain would assert a relation no
@@ -95,7 +95,7 @@ owner states.
 
 **Conformance runs on a separate axis, and it runs the other way.** `method-ASK` is itself a repository, and
 it resolves the execution protocol like any other consumer — so on the conformance axis it is downstream of
-`control-surface`, while on the authority axis it remains upstream of it. Collapsing the two axes inverts the
+[`control-surface`](https://github.com/apexSolarKiss/control-surface), while on the authority axis it remains upstream of it. Collapsing the two axes inverts the
 model: it would make the protocol the source of the doctrine it operates under.
 
 ## Distributed truth
@@ -134,7 +134,7 @@ discipline; ASK relays and adjudicates between them. Occupancy is operational, n
 are slots, not models.
 → [`control-surface/README.md`](https://github.com/apexSolarKiss/control-surface/blob/main/README.md)
 §Operating Model; [`control-surface/docs/architecture.md`](https://github.com/apexSolarKiss/control-surface/blob/main/docs/architecture.md)
-§Role Model; `control-surface/protocol/AGENTS.shared.md` §Session Topology / Single-Writer Discipline.
+§Role Model; [`control-surface/protocol/AGENTS.shared.md`](https://github.com/apexSolarKiss/control-surface/blob/main/protocol/AGENTS.shared.md#session-topology--single-writer-discipline) §Session Topology / Single-Writer Discipline.
 
 The mutation side is stricter than it looks, and its scope is exact: **a write to shared mutable state must
 declare the exclusion guarantee it actually has** — observed-state checks, cooperative exclusion among
@@ -174,7 +174,7 @@ is classified before it changes anything, the recipient owns the absorption deci
 operative by arriving.
 → [`docs/absorption-discipline.md`](../docs/absorption-discipline.md);
 [`docs/method.md`](../docs/method.md) §The swing, which additionally names absorption and closure as strokes
-of the same maintenance pass; `docs/source-of-intent.md` §Intent repair targets current standing intent,
+of the same maintenance pass; [`docs/source-of-intent.md`](../docs/source-of-intent.md#intent-repair-targets-current-standing-intent) §Intent repair targets current standing intent,
 which holds the load-bearing case: **repair instrumentation measures distance, governance classifies
 warrant.** A divergence measure registers movement away from the target; it cannot tell whether that movement
 is damage or warranted correction. So a candidate correction is preserved and surfaced to the role authorized
@@ -184,7 +184,7 @@ the absorption limb is owned doctrine.
 ## How the method itself changes
 
 The three circuits below are all relations *within* a pass. None of them says how the practice's own
-abstraction moves, and that movement is the reason `method-ASK` exists as a separate thing from the practice
+abstraction moves, and that movement is the reason [`method-ASK`](../README.md) exists as a separate thing from the practice
 it came from. **The methodology is abstracted from the practice and reapplied to it, and each pass is tested
 against the practice rather than against itself** — adversarial iteration across time, not a fourth loop
 inside any single pass. An abstraction validated only against its own prior generation stops tracking the
@@ -246,9 +246,9 @@ retained nowhere. A circuit in which everything that enters propagates would des
 refuse, and refusal is the part that keeps the doctrine small.
 
 The circuit names are this file's vocabulary; the mechanisms are owned by the execution protocol
-(`control-surface/protocol/AGENTS.shared.md` — plan-before-execute, the exact-scoped-diff gate, review
-objects, PR and post-merge discipline; §Learning Disposition; §Verification Claims and §Session-Start
-Discipline).
+([`control-surface/protocol/AGENTS.shared.md`](https://github.com/apexSolarKiss/control-surface/blob/main/protocol/AGENTS.shared.md) — plan-before-execute, the exact-scoped-diff gate, review
+objects, PR and post-merge discipline; [§Learning Disposition](https://github.com/apexSolarKiss/control-surface/blob/main/protocol/AGENTS.shared.md#learning-disposition); [§Verification Claims](https://github.com/apexSolarKiss/control-surface/blob/main/protocol/AGENTS.shared.md#verification-claims-and-evidence-boundaries) and [§Session-Start
+Discipline](https://github.com/apexSolarKiss/control-surface/blob/main/protocol/AGENTS.shared.md#session-start-discipline)).
 
 ## Stable roles
 
@@ -314,7 +314,7 @@ events with different actors and different evidence — routing, feeding, ingest
 instead exit before ingestion. **The path is not an inevitability of routing:** an artifact not currently
 awaiting first ingestion does not enter it. Absorption is one possible disposition, not the name for all of
 them.
-→ `control-surface/protocol/AGENTS.shared.md` §Inbound Handoff TBI Marker;
+→ [`control-surface/protocol/AGENTS.shared.md`](https://github.com/apexSolarKiss/control-surface/blob/main/protocol/AGENTS.shared.md#inbound-handoff-tbi-marker) §Inbound Handoff TBI Marker;
 [`docs/intent-artifacts.md`](../docs/intent-artifacts.md).
 
 The visual system is organized in **three tiers**, of which the third is the one that gets *assigned* to a
@@ -380,7 +380,7 @@ Three deserve their own sentence. **Fresh context is not epistemic independence*
 surfaces supply adversarial pressure from outside execution momentum, not independent epistemic authority;
 convergence between them is neither authority nor truth.
 → [`control-surface/templates/advisor-project-bootstrap.template.md`](https://github.com/apexSolarKiss/control-surface/blob/main/templates/advisor-project-bootstrap.template.md);
-`control-surface/docs/critique-protocol.md`.
+[`control-surface/docs/critique-protocol.md`](https://github.com/apexSolarKiss/control-surface/blob/main/docs/critique-protocol.md).
 
 **A diagram is not a source of truth** — a rendered figure illustrates a relation whose authority lives in
 the prose and the repo that own it, and a figure cannot repair an ambiguity the prose left open.

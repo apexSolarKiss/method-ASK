@@ -2,7 +2,7 @@
 
 This doctrine governs how the method treats the relation between surfaces. Externality is not a property of a file, repo, or grounding note; it is a relation between two surfaces. The same artifact is external to one surface and internal to another at the same time, and authority flows in a specific direction across each boundary. This doc names the relation, the direction, and the operational rules that follow.
 
-`method-ASK_grounding-note.md` v2 names relative externality as a foundational premise. `docs/source-of-truth-and-aging-rate.md` carries the surface authority and aging-rate substrate. `docs/absorption-discipline.md` carries the movement-between-surfaces routing. This doc carries the relation itself: which surface is external to which, in which direction, with what consequence.
+`method-ASK_grounding-note.md` v2 names relative externality as a foundational premise. [`docs/source-of-truth-and-aging-rate.md`](source-of-truth-and-aging-rate.md) carries the surface authority and aging-rate substrate. [`docs/absorption-discipline.md`](absorption-discipline.md) carries the movement-between-surfaces routing. This doc carries the relation itself: which surface is external to which, in which direction, with what consequence.
 
 `Recursive method ecology` is the portable category this doctrine supports: a topology of surfaces governed by relative externality. `ecology-ASK` is the ASK-specific, operator-side instance / altitude of that category. This document owns the portable relation doctrine; `recursive method ecology` is its category name and `ecology-ASK` is one application of it inside the ASK system — neither is a separate doctrine.
 
@@ -42,7 +42,7 @@ Examples illustrating both axes:
 
 The current ASK topology, textual:
 
-- **Operator source-of-intent** — axiom outside the recursion. Upstream-external to every surface; not a surface itself, but a substrate the method depends on. Per `docs/source-of-intent.md`, recovery and validation precede repo encoding because source-of-intent is not authored by the method.
+- **Operator source-of-intent** — axiom outside the recursion. Upstream-external to every surface; not a surface itself, but a substrate the method depends on. Per [`docs/source-of-intent.md`](source-of-intent.md), recovery and validation precede repo encoding because source-of-intent is not authored by the method.
 - **Grounding notes** — external to repos by surface boundary; upstream to repos by normative direction. Carry slow-aging source-of-intent, durable role boundaries, and external context. Each repo (downstream project, method, design-system) has its own grounding note; each is upstream-external to its respective repo.
 - **[`method-ASK`](../README.md)** — upstream-external to `control-surface`. Methodology articulates the rules; execution-protocol operationalizes them. Doctrine moves from method to execution-protocol, not the other way.
 - **[`control-surface`](https://github.com/apexSolarKiss/control-surface)** — downstream-internal to `method-ASK`; upstream-external to downstream project repos. Templates, prompts, project-instantiation workflow flow down. Each downstream repo inherits from control-surface; control-surface does not inherit from individual downstream repos (though it absorbs cross-project patterns when they earn promotion per absorption discipline).
@@ -67,7 +67,7 @@ The practical rule: when a rule changes, identify the surface that has authority
 
 ## Boundary with source of truth and aging rate
 
-`docs/source-of-truth-and-aging-rate.md` carries the doctrine on surface authority and aging cadence. This doc references it as the upstream concept for authority assignment.
+[`docs/source-of-truth-and-aging-rate.md`](source-of-truth-and-aging-rate.md) carries the doctrine on surface authority and aging cadence. This doc references it as the upstream concept for authority assignment.
 
 The composition:
 
@@ -83,7 +83,7 @@ The two doctrines compose: the relation (this doc) names which surface is extern
 
 ## Boundary with absorption discipline
 
-`docs/absorption-discipline.md` carries the doctrine on how material moves between surfaces. This doc references it as the operative movement mechanism when an external surface promotes content into the surface it is external to (or vice versa).
+[`docs/absorption-discipline.md`](absorption-discipline.md) carries the doctrine on how material moves between surfaces. This doc references it as the operative movement mechanism when an external surface promotes content into the surface it is external to (or vice versa).
 
 The composition:
 
@@ -98,7 +98,7 @@ The two doctrines compose: the relation (this doc) names where material currentl
 
 ## Boundary with intent artifacts
 
-The intent-artifact classes (`docs/intent-artifacts.md`) sit inside this doctrine's frame rather than beside it: **externality is what determines whether a carrier crossing is a handoff at all.**
+The intent-artifact classes ([`docs/intent-artifacts.md`](intent-artifacts.md)) sit inside this doctrine's frame rather than beside it: **externality is what determines whether a carrier crossing is a handoff at all.**
 
 ```text
 standing normative context   remains on its owning surface and is read across a standing
@@ -115,7 +115,7 @@ The relay graph is the externality map in motion. Each apex–agent strand is in
 
 ## Boundary with source of intent
 
-`docs/source-of-intent.md` carries the doctrine governing source-of-intent origination, recovery, validation, and routing. This doc references it as the operator-owned axiom that sits upstream-external to the entire recursion.
+[`docs/source-of-intent.md`](source-of-intent.md) carries the doctrine governing source-of-intent origination, recovery, validation, and routing. This doc references it as the operator-owned axiom that sits upstream-external to the entire recursion.
 
 The composition:
 
@@ -154,8 +154,8 @@ Before using or absorbing material from an external surface, ask in order:
 - **External to what?** Name the surface the artifact is external to. Not external in absolute; external to a specific other surface.
 - **Internal to what larger system?** Name the system the artifact is still inside. Ex-repo is not ex-system; the artifact has not left the system just because it left the repo.
 - **Which direction does authority flow?** Upstream, downstream, or reflective. The relation is not symmetric.
-- **What claim class does this surface own?** Per `docs/source-of-truth-and-aging-rate.md`, surfaces are authoritative for specific claim classes. Identify the class the artifact carries.
-- **What should be referenced, absorbed, ignored, or held?** Per `docs/absorption-discipline.md`, the routing decision follows from claim class + aging-rate fit + evidence threshold.
+- **What claim class does this surface own?** Per [`docs/source-of-truth-and-aging-rate.md`](source-of-truth-and-aging-rate.md), surfaces are authoritative for specific claim classes. Identify the class the artifact carries.
+- **What should be referenced, absorbed, ignored, or held?** Per [`docs/absorption-discipline.md`](absorption-discipline.md), the routing decision follows from claim class + aging-rate fit + evidence threshold.
 - **What payload must not cross the boundary?** Protected vocabulary, positioning, project-specific positioning rationale, private stakeholder framing — these stay on their authoritative surface even when the structural category they carry crosses.
 
 The first three questions establish the relation. The fourth establishes authority. The fifth determines routing. The sixth catches payload leakage. All six are operational; none require deciding what externality "really is."
@@ -165,10 +165,10 @@ The first three questions establish the relation. The fourth establishes authori
 This doctrine should be superseded by:
 
 - a formal topology diagram if textual map proves insufficient for navigating the relations (currently the map is textual by design; a diagram earns a home only if it improves operational clarity over prose)
-- compression into `docs/source-of-truth-and-aging-rate.md` if the surface-authority material there absorbs most of the topology substrate this doc carries
-- `docs/voice-surface-boundary.md` if the rule/payload subtype (the most specific failure-mode pattern here, around payload not crossing surface boundaries) earns its own focused treatment
+- compression into [`docs/source-of-truth-and-aging-rate.md`](source-of-truth-and-aging-rate.md) if the surface-authority material there absorbs most of the topology substrate this doc carries
+- [`docs/voice-surface-boundary.md`](voice-surface-boundary.md) if the rule/payload subtype (the most specific failure-mode pattern here, around payload not crossing surface boundaries) earns its own focused treatment
 - a more formal cross-repo externality taxonomy if multiple ASK-family child projects produce enough inheritance cases to justify a structured surface-relationship matrix (currently n=1 cross-repo inheritance proof from [`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) → UO; promotion to formal taxonomy waits for n=2)
-- a future `docs/layer-classification.md` if the routing/topology pieces from this doc, `docs/source-of-intent.md` (grounding-note refresh preflight), and `docs/source-of-truth-and-aging-rate.md` (surface split) consolidate into a central routing doc
+- a future `docs/layer-classification.md` if the routing/topology pieces from this doc, [`docs/source-of-intent.md`](source-of-intent.md#grounding-note-refresh-preflight) (grounding-note refresh preflight), and `docs/source-of-truth-and-aging-rate.md` (surface split) consolidate into a central routing doc
 
 The doctrine is not finished. The two-axis model is the current best articulation of the relation; the textual map is the current best snapshot of the topology. As the family grows (new child repos, new article-line surfaces, new operator-side patterns), the map will refine. The two-axis discipline itself is more stable than the specific surface list; the surfaces are substrate, the relational frame is doctrine.
 

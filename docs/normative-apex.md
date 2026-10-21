@@ -47,7 +47,7 @@ The requirement holds **independent of the consciousness question.** Whether or 
 
 On the **liability limb** specifically, a natural-person terminus is not required. Liability is one indexed strand of a chain of constituted authority, and settling it does not settle the register in which such a chain finally comes to rest for answering: non-retributive answerability, punitive or retributive responsibility, and the anchor a tracing argument would need all remain open. That is the *terminus* question, not the requirement that answerability remain locatable, which the decomposition above states. Neither partial resolves either held question. The legal-personality result does not establish root-role occupancy; the liability result does not address it.
 
-**Where the underlying evidence sits.** The partial results above are already part of this doctrine. The underlying evidence record and the ASK rulings indexed here are assembled in the Consciousness + Free Will structured survey. Its public projection is implemented under `apexSolarKiss/ASK/apex-solar-kiss/consciousness-free-will/` and rendered at [a-s-k.studio/apex-solar-kiss/consciousness-free-will/](https://a-s-k.studio/apex-solar-kiss/consciousness-free-will/). Two of the survey's held questions restate this boundary's limbs verbatim, and a third bears on the occupancy limb without being identical to it. The survey informs this doctrine; it does not authorize it, and it resolves neither held question.
+**Where the underlying evidence sits.** The partial results above are already part of this doctrine. The underlying evidence record and the ASK rulings indexed here are assembled in the Consciousness + Free Will structured survey. Its public projection is implemented under [`apexSolarKiss/ASK/apex-solar-kiss/consciousness-free-will/`](https://github.com/apexSolarKiss/ASK/tree/main/apex-solar-kiss/consciousness-free-will) and rendered at [a-s-k.studio/apex-solar-kiss/consciousness-free-will/](https://a-s-k.studio/apex-solar-kiss/consciousness-free-will/). Two of the survey's held questions restate this boundary's limbs verbatim, and a third bears on the occupancy limb without being identical to it. The survey informs this doctrine; it does not authorize it, and it resolves neither held question.
 
 ## Source of intent is a role, not an artifact
 
@@ -61,7 +61,7 @@ artifact of intent  a carrier through which that role's intent is expressed, dep
 
 The confusion is easy to make and expensive to keep: naming a storage plane after the role invites the reading that the plane *is* the source of intent, and therefore that placing an artifact there confers authority. It does not. Folder membership confers no authority, no activation, and no queue state.
 
-A document *about* source of intent — a grounding note, a context master — remains an artifact of context, even when its subject is the apex and even when it carries authoritative intent-bearing claims. `docs/intent-artifacts.md` governs the carrier classes and their lifecycles; this doctrine governs the role.
+A document *about* source of intent — a grounding note, a context master — remains an artifact of context, even when its subject is the apex and even when it carries authoritative intent-bearing claims. [`docs/intent-artifacts.md`](intent-artifacts.md) governs the carrier classes and their lifecycles; this doctrine governs the role.
 
 **Standing intent** is normative content adopted by a source of intent for a named scope, remaining in force until revised, revoked, or retired through the applicable governance path. Its continuing force does not require a fresh source-of-intent act for every downstream action within that scope. *Standing* here describes the status of the intent-content — not whether any carrier is continuously deployed or available, which is a separate activation posture governed by `docs/intent-artifacts.md`.
 
@@ -158,7 +158,7 @@ The structural face of source of intent, generalized beyond any single project. 
 This doctrine should be superseded by:
 
 - a thinner apex statement if the non-identity field earns its own home (e.g. `docs/non-identities.md`);
-- a refactor if `docs/governance.md` and this doc are found to share enough structure to warrant a common parent — the "co-primitive" question is deliberately held open here, not asserted.
+- a refactor if [`docs/governance.md`](governance.md) and this doc are found to share enough structure to warrant a common parent — the "co-primitive" question is deliberately held open here, not asserted.
 
 The doctrine is not finished; it states the apex modestly and refers the full arguments to the essay line.
 

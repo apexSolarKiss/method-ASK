@@ -2,7 +2,7 @@
 
 This doctrine governs how the method assigns authority to surfaces. A surface is authoritative for a class of claim because it is sized to that claim's aging rate. Mixing aging rates within one surface produces a surface that ages at the rate of its fastest-aging contents — usually badly. This doc names the split, the failure modes, and the routing rule.
 
-`AGENTS.md` carries the aging-rate principle as a workflow rule and the source-of-truth split as a brief enumeration. `docs/method.md` references both as elements within the broader method articulation. This doc carries them at full doctrine altitude: definition, the operative surface split, failure modes, boundaries with adjacent doctrine, and a practical decision rule.
+[`AGENTS.md`](../AGENTS.md) carries the aging-rate principle as a workflow rule and the source-of-truth split as a brief enumeration. [`docs/method.md`](method.md) references both as elements within the broader method articulation. This doc carries them at full doctrine altitude: definition, the operative surface split, failure modes, boundaries with adjacent doctrine, and a practical decision rule.
 
 ## Definition
 
@@ -42,7 +42,7 @@ These failure modes share a structural cause: authority assignment by content ur
 
 ## Boundary with source of intent
 
-`docs/source-of-intent.md` carries the doctrine governing source-of-intent origination, recovery, validation, and the grounding-note refresh preflight. This doc references it as the upstream concept for the *source of intent* layer in the surface split above.
+[`docs/source-of-intent.md`](source-of-intent.md) carries the doctrine governing source-of-intent origination, recovery, validation, and the grounding-note refresh preflight. This doc references it as the upstream concept for the *source of intent* layer in the surface split above.
 
 Specifically:
 
@@ -55,7 +55,7 @@ The aging-rate principle determines surface authority. The source-of-intent doct
 
 ## Boundary with absorption discipline
 
-`docs/absorption-discipline.md` carries the doctrine governing how material moves between surfaces. This doc references it as the operative mechanism for changing a claim's surface assignment.
+[`docs/absorption-discipline.md`](absorption-discipline.md) carries the doctrine governing how material moves between surfaces. This doc references it as the operative mechanism for changing a claim's surface assignment.
 
 Specifically:
 
@@ -70,9 +70,9 @@ The surface split is a topology; absorption discipline is the routing rule that 
 
 Method altitude mentions only. Domain detail lives in the project repos and in the project examples (`examples/`).
 
-- **[`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK)** surfaced the aging-rate principle and the source-of-truth split under mature project pressure. The friction of mixing rules, state, and context in a single doc was the original surfacing event. The doctrine that resulted — repo carries project state, `AGENTS.md` carries workflow rules, grounding note carries source-of-intent, current task context carries per-conversation tracking — generalized cleanly upstream into `control-surface` workflow templates and into `docs/method.md`'s §Disciplines During Execution treatment.
-- **[`urban-observatory`](https://github.com/apexSolarKiss/urban-observatory)** surfaced source-of-intent recovery, the post-bootstrap grounding-note trim pass, and state-vs-context routing. The grounding-note layer-classification gate (now in `docs/source-of-intent.md` §Grounding-note refresh preflight) was the structural absorption of this pressure. State / event records route to scratch even when the event was important.
-- **[`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK)** surfaced the presence-vs-structure verification observation and the freshly-built-reference-implementation-vs-proven-inheritance distinction. The presence-vs-structure observation is currently carried at observation-level; n=1 across child projects. Promotion to rule-level treatment in this doc, in `docs/absorption-discipline.md`, or in `control-surface` templates waits for a second child project surfacing the same failure mode. The reference-implementation-vs-proof distinction is captured in `examples/design-system-ASK.md` as the worked-example framing.
+- **[`asset-pipeline-ASK`](https://github.com/apexSolarKiss/asset-pipeline-ASK)** surfaced the aging-rate principle and the source-of-truth split under mature project pressure. The friction of mixing rules, state, and context in a single doc was the original surfacing event. The doctrine that resulted — repo carries project state, `AGENTS.md` carries workflow rules, grounding note carries source-of-intent, current task context carries per-conversation tracking — generalized cleanly upstream into [`control-surface`](https://github.com/apexSolarKiss/control-surface) workflow templates and into [`docs/method.md`](method.md#disciplines-during-execution)'s §Disciplines During Execution treatment.
+- **[`urban-observatory`](https://github.com/apexSolarKiss/urban-observatory)** surfaced source-of-intent recovery, the post-bootstrap grounding-note trim pass, and state-vs-context routing. The grounding-note layer-classification gate (now in [`docs/source-of-intent.md`](source-of-intent.md#grounding-note-refresh-preflight) §Grounding-note refresh preflight) was the structural absorption of this pressure. State / event records route to scratch even when the event was important.
+- **[`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK)** surfaced the presence-vs-structure verification observation and the freshly-built-reference-implementation-vs-proven-inheritance distinction. The presence-vs-structure observation is currently carried at observation-level; n=1 across child projects. Promotion to rule-level treatment in this doc, in [`docs/absorption-discipline.md`](absorption-discipline.md), or in `control-surface` templates waits for a second child project surfacing the same failure mode. The reference-implementation-vs-proof distinction is captured in [`examples/design-system-ASK.md`](../examples/design-system-ASK.md) as the worked-example framing.
 
 ## Practical rule
 
@@ -93,9 +93,9 @@ The rule is a tripwire, not a ceremony. Most material answers the first three qu
 
 This doctrine should be superseded by:
 
-- `docs/relative-externality.md` if the surface-topology pieces (the core split, the boundary with adjacent surfaces, the recursive externality relationships) earn a more focused home there and this doc compresses toward the aging-rate and authority-assignment substrate
-- `docs/voice-surface-boundary.md` if the doctrine's failure-mode treatment for voice-bearing surfaces (article-as-spec confusion, summary-as-authority drift) earns specific treatment in that doc
-- compression into `docs/absorption-discipline.md` if the surface-split topology folds into absorption-discipline's §Layer destinations as the routing surface, and the aging-rate principle compresses into a shorter cross-reference
+- [`docs/relative-externality.md`](relative-externality.md) if the surface-topology pieces (the core split, the boundary with adjacent surfaces, the recursive externality relationships) earn a more focused home there and this doc compresses toward the aging-rate and authority-assignment substrate
+- [`docs/voice-surface-boundary.md`](voice-surface-boundary.md) if the doctrine's failure-mode treatment for voice-bearing surfaces (article-as-spec confusion, summary-as-authority drift) earns specific treatment in that doc
+- compression into [`docs/absorption-discipline.md`](absorption-discipline.md) if the surface-split topology folds into absorption-discipline's §Layer destinations as the routing surface, and the aging-rate principle compresses into a shorter cross-reference
 - a future `docs/layer-classification.md` if multiple downstream projects produce enough surface-routing decisions to justify a more formal central routing doc that absorbs both this doc's surface split and the source-of-intent grounding-note refresh preflight
 
 The doctrine is not finished. The nine-surface split is the current best articulation of the method's lived surface topology. As surfaces shift — articles becoming codified differently, new repos earning their own classes, executor tooling changing what a session holds — the split will refine. The aging-rate principle itself is more stable than the specific surface list; the surfaces are the substrate, the aging-rate is the doctrine.

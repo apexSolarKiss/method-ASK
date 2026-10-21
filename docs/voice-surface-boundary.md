@@ -2,7 +2,7 @@
 
 This doctrine governs the relation between voice, payload, authority, and surface. Prose style, the specific vocabulary it carries, the authority it asserts, and the audience it addresses must all match the surface the prose lives on. A surface that carries the wrong voice or the wrong payload — even when the underlying point is correct — fails operationally: it leaks what should stay operator-side, or it sanitizes away what the work needs to name.
 
-`method-ASK_grounding-note.md` v2 names the rule/payload distinction as a foundational premise and the four-layer protection pattern as its operational expression. `docs/relative-externality.md` provides the surface topology this doctrine operates against. `docs/source-of-truth-and-aging-rate.md` provides the authority-and-cadence framing. `docs/absorption-discipline.md` provides the movement rule for material that crosses surfaces. This doc carries the voice/payload/surface composition itself.
+`method-ASK_grounding-note.md` v2 names the rule/payload distinction as a foundational premise and the four-layer protection pattern as its operational expression. [`docs/relative-externality.md`](relative-externality.md) provides the surface topology this doctrine operates against. [`docs/source-of-truth-and-aging-rate.md`](source-of-truth-and-aging-rate.md) provides the authority-and-cadence framing. [`docs/absorption-discipline.md`](absorption-discipline.md) provides the movement rule for material that crosses surfaces. This doc carries the voice/payload/surface composition itself.
 
 ## Definition
 
@@ -62,7 +62,7 @@ Each role has a different aging rate, audience, and payload class. Voice that fi
 
 The four-layer pattern that operationalizes the rule/payload doctrine, named at doctrine altitude:
 
-1. **Doctrine.** The principle and the recursive constraint live in grounding notes and method docs (this doc, the grounding note's §Voice Externality, the source-of-intent and absorption-discipline docs). Doctrine is propagatable through inheritance across the family.
+1. **Doctrine.** The principle and the recursive constraint live in grounding notes and method docs (this doc, the grounding note's §Voice Externality, the [source-of-intent](source-of-intent.md) and [absorption-discipline](absorption-discipline.md) docs). Doctrine is propagatable through inheritance across the family.
 2. **Operational protections.** The over-sanitization failure-mode warnings, project-specific protected-vocabulary lists, domain-vocabulary protection lists, audience-segment translation tables, and other project-tailored protected payload are held by the project's authorized operator-side owner for that payload. They are project-domain-specific, require tailoring at instantiation time, and cannot live in any method-altitude or repo-readable surface. Because they are required for correct execution they must have a visible owner; *operator-side* names a boundary, not an executor's private memory, and no private-memory artifact is assumed to exist or to hold them.
 3. **Mechanical safety net.** An operator-side hook, config, or scan (user-global or per-project; never in any project artifact) that catches high-precision protected tokens and blocks commits or surfaces warnings on match. The hook's contents are positioning-domain knowledge and stay operator-side; only its discipline (manual or automated scan at exact-scoped-diff time) is method-readable.
 4. **Discipline.** Repo-local workflow rules in `AGENTS.md` or templates can name the manual scan step as a structural action at exact-scoped-diff or review time. The rule names the scan discipline; it does not carry the token list.
@@ -98,7 +98,7 @@ The remedy is role-typed naming with optional structural-witness usage of indivi
 
 ## Boundary with relative externality
 
-`docs/relative-externality.md` carries the surface-topology and direction-of-authority doctrine. This doc composes with it on the voice/payload axis specifically:
+[`docs/relative-externality.md`](relative-externality.md) carries the surface-topology and direction-of-authority doctrine. This doc composes with it on the voice/payload axis specifically:
 
 - Voice payload can be **external to the repo by surface boundary, internal to the project system by relative-externality framing.** Ex-repo is not ex-system. The repo points to operator-side authority without absorbing the payload.
 - The two-axis model applies: protected vocabulary lives external-to-repo, upstream-to-the-rule-that-protects-it (the rule depends on the existence of the protected payload, but the rule does not encode the payload).
@@ -108,18 +108,18 @@ The two doctrines compose: relative externality names where the payload lives an
 
 ## Boundary with source-of-truth and aging rate
 
-`docs/source-of-truth-and-aging-rate.md` carries the surface-authority and aging-rate doctrine. This doc composes with it on the voice/payload aging axis specifically:
+[`docs/source-of-truth-and-aging-rate.md`](source-of-truth-and-aging-rate.md) carries the surface-authority and aging-rate doctrine. This doc composes with it on the voice/payload aging axis specifically:
 
 - Token lists, translation tables, reviewer chronology, and current-context payload age at different rates than doctrine. Repo prose carrying fast-aging payload becomes stale faster than the surface is designed to refresh.
 - Voice / payload material often belongs operator-side because the payload is project-specific (the audience-segment translation table for one project does not apply to another) and audience-sensitive (vocabulary that's clarifying to one audience is positioning-flavored to another).
-- Grounding notes can carry durable voice principles (slow-aging source-of-intent); they cannot carry fast event chronology (which routes to scratch per the layer-classification gate in `docs/source-of-intent.md`).
+- Grounding notes can carry durable voice principles (slow-aging source-of-intent); they cannot carry fast event chronology (which routes to scratch per the layer-classification gate in [`docs/source-of-intent.md`](source-of-intent.md)).
 - Repo prose must not become stale by carrying fast-aging or private payload. The aging-rate match check is a voice-surface boundary check.
 
 The two doctrines compose: source-of-truth and aging-rate names which surface owns which claim at which cadence; voice-surface boundary names which prose style and which payload class match each surface's aging cadence.
 
 ## Boundary with absorption discipline
 
-`docs/absorption-discipline.md` carries the movement-between-surfaces routing rule. This doc composes with it on what is and is not allowed to move:
+[`docs/absorption-discipline.md`](absorption-discipline.md) carries the movement-between-surfaces routing rule. This doc composes with it on what is and is not allowed to move:
 
 - Not every useful voice observation gets absorbed. A protected-vocabulary observation that helped a specific project stays project-side; the structural rule it informs may earn method-altitude treatment once pressure-tested.
 - n=1 role/payload observations stay observation-level. A single project's protected-vocabulary surfacing does not justify a method-altitude protected-vocabulary doctrine; it justifies an operator-side protection in that project.
@@ -164,7 +164,7 @@ Before writing or revising any repo prose, ask in order:
 
 - **What surface is this prose entering?** Identify the surface explicitly. Each surface has different allowed-payload classes.
 - **Who is the reader?** Executor, advisor, external reader, child-project inheritor, operator's future self. The audience constrains the voice.
-- **What claim class does it carry?** Rule, structural category, doctrine, method-altitude example, project-specific vocabulary, reviewer chronology, positioning. Per `docs/source-of-truth-and-aging-rate.md`, claim class determines surface ownership.
+- **What claim class does it carry?** Rule, structural category, doctrine, method-altitude example, project-specific vocabulary, reviewer chronology, positioning. Per [`docs/source-of-truth-and-aging-rate.md`](source-of-truth-and-aging-rate.md), claim class determines surface ownership.
 - **Is this a rule or a payload?** The core rule/payload check. Rules belong in repo prose; payloads stay on their authoritative surface.
 - **If it names a person, is the name structurally necessary or should it be role-typed?** Default to role-typed. Names appear only when the role relation requires the individual as structural witness.
 - **If it names vocabulary, is it category-level or protected token-level?** Categories ("positioning vocabulary," "audience-segment translation table") are repo-readable. Specific tokens are not.
@@ -180,8 +180,8 @@ This doctrine should be superseded by:
 
 - a future `docs/protected-vocabulary.md` if the operational protections (Layer 2 of the four-layer pattern) earn structured method-altitude treatment without leaking the payload they protect — the doc would name the operational-protection pattern at higher resolution; the protected vocabulary itself would still live operator-side
 - a future `docs/role-typed-naming.md` if the role-typed convention earns a focused home as ASK-family child projects produce more cases of role relations needing structural-witness naming
-- compression into `docs/relative-externality.md` if the voice-payload-surface composition folds cleanly into the relative-externality topology and this doc's content becomes redundant under that frame
-- partial compression into `docs/source-of-truth-and-aging-rate.md` if the aging-rate pieces of this doctrine (fast-aging payload not belonging on slow surfaces) absorb into that doc's failure-mode treatment
+- compression into [`docs/relative-externality.md`](relative-externality.md) if the voice-payload-surface composition folds cleanly into the relative-externality topology and this doc's content becomes redundant under that frame
+- partial compression into [`docs/source-of-truth-and-aging-rate.md`](source-of-truth-and-aging-rate.md) if the aging-rate pieces of this doctrine (fast-aging payload not belonging on slow surfaces) absorb into that doc's failure-mode treatment
 - a formal voice/payload taxonomy if multiple ASK-family projects produce enough leak / over-sanitize cases to justify a structured matrix of voice classes × surface classes × payload classes
 
 The doctrine is not finished. The four-layer pattern is the current best operationalization; the seven voice/surface roles are the current best snapshot of the surface landscape. As new surfaces emerge (new article-line forms, new operator-side patterns, new child-project voice requirements) the role list will refine. The dual-axis evaluation (leak + over-sanitize) is more stable than the specific role list; the roles are substrate, the dual-axis discipline is doctrine.

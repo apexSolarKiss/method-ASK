@@ -2,7 +2,7 @@
 
 This is the canonical article-line index for the ASK workflow / method series. Substack is authoritative for published article text and its canonical publication URL; this file is authoritative for the article index, ordering, and method-layer reading paths. LinkedIn mirrors are distribution copies and are not listed here.
 
-The index lives in `method-ASK` because the article line is reflection on the method. `control-surface` may keep a short execution-protocol subset in its own Background Reading, but the full series lives upstream.
+The index lives in [`method-ASK`](../README.md) because the article line is reflection on the method. [`control-surface`](https://github.com/apexSolarKiss/control-surface) may keep a short execution-protocol subset in its own Background Reading, but the full series lives upstream.
 
 Index rows summarize each article in the method's current vocabulary. An article's coinage does not become doctrine merely by appearing in this index: adoption into method terms requires an explicit doctrine or source-of-intent decision. Substack owns the published text; this file owns index, order, and navigation; the method docs own the terms.
 
@@ -183,4 +183,4 @@ A path through the public companions to the Consciousness + Free Will structured
 
 Substack URLs are canonical. LinkedIn mirrors exist as distribution copies and are not listed in this repo. If a future article publishes only to LinkedIn, it does not enter this index until it lands on Substack.
 
-When this repo's prose references an article, it should link to the Substack URL only. The same convention applies to `control-surface`.
+When this repo's prose references an article, it should link to the Substack URL only. The same convention applies to [`control-surface`](https://github.com/apexSolarKiss/control-surface).
