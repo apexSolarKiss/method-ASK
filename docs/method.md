@@ -111,6 +111,18 @@ The corollary: do not let "smallest unit" become a rule that prevents zooming ou
 
 Do not overspend on process where structure suffices. Workflow rules in `AGENTS.md` make reasoning inspectable across ASK, the executor, and any configured advisor while preserving one write authority; once the rules carry the discipline, the process ceremony that previously did the work becomes redundant. Removing redundant ceremony is part of the method. One concrete instance: do not require a reviewer-generated handoff memo after an authorized operator has already relayed an explicit decision with its qualifications and scope. When the relay already carries the complete decision, repackaging it into a return artifact adds no judgment, condition, or authorization — it is ceremony, not governance (see [`docs/source-of-intent.md`](source-of-intent.md) §Handoff necessity).
 
+### Review saturation
+
+**Observation-level recognition aid.** One recorded brand-review sequence motivates a possible failure mode: continuing review in substantially the same mode can stop earning its burden in useful additional judgment, even while legitimate questions remain. Review saturation names the mismatch among reviewer, task, representation, and accumulated interaction. It can concern a domain reviewer or the operator. It is not a diagnosis of the reviewer and sets no universal round limit.
+
+The interaction may need to change while the work still needs decisions. This need not mean the inquiry has reached the asymptotic saturation described under the proof-chain gravity well guard below: useful judgment may remain available through a different interaction. A reviewer can object to the format and still supply consequential answers.
+
+Before another broad pass, apply that guard's test for opening another cycle, asking in particular what unresolved decision the pass could change and what it brings that the previous pass did not. Carry settled direction forward and make the remaining decision and its consequences legible without requiring fluency in internal vocabulary. Possible responses include a focused conversation, concrete comparison, authorized test, or pause. A change of format leaves the applicable authority unchanged and must preserve the material meaning of what is under review and access to the evidence the decision needs. An internal correction that preserves the decision and its basis does not itself require re-eliciting that decision.
+
+Review saturation is not authorization; the limits that follow rest on existing authority and evidence discipline, not on this observation. General assent, whether spontaneous or prompted, must retain the question it answers, the speaker's authority, and the scope accepted. It is not by itself evidence of item-by-item examination. Silence or impatience supplies no missing permission and does not automatically invalidate a valid decision. Where required judgment remains unavailable, hold or narrow the dependent action.
+
+The candidate generalization is that review-mode fit may need recalibration during a sequence, including when content changes are legitimate. Promotion requires further differently situated evidence or a sufficient structural argument distinguishing this pattern from disagreement, entry friction, or decision readiness. Claims that a response improves judgment need their own evidence; no extra review or study is required solely to increase the case count.
+
 ### Evidence-trail integrity
 
 Each phase preserves what it produced for the next phase to build on. Do not retrofit evidence-chain artifacts. Let them age in place. New artifacts can refine forward without rewriting history.
