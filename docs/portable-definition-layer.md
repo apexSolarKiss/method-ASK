@@ -47,7 +47,7 @@ The durable object is the structured statement of:
 
 - **Intent** — what the work is for (the source of intent a substrate change must not lose).
 - **Constraints** — the anti-goals and boundaries the work is held within.
-- **Discretion** — judgment exercised *within* standards. *Generative* discretion (which realized candidate is truest) and *evidentiary* discretion (how strong the evidence must be before a claim is licensed) are both instances; the facet is the governed exercise of judgment, not its specific kind.
+- **Discretion** — judgment exercised *within* standards. *Generative* discretion (which realized candidate is truest) and *evidentiary* discretion (how strong the evidence must be before a claim is licensed) are both instances. The durable statement holds discretion's conditions (what may vary, under which standard, who may decide, and how the decision closes) and the record of decisions made under them. The exercise itself is an act performed in each application ([`bounded-generativity.md`](bounded-generativity.md#where-discretion-enters)), not content the layer preserves.
 - **References** — the sources the work is accountable to — first-class accountability anchors (source + provenance + basis + applicability), not decoration.
 - **Governance** — what becomes a durable record, who may say so, and what recourse exists when it is wrong.
 
