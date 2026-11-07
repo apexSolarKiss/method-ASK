@@ -106,6 +106,7 @@ Only then does the staging tree become `--out`.
 - `site_exclude` — authored files under `docs/` that are configuration, not site: `docs/vercel.json`;
 - `link_preview` — the site's public origin and name, and its social image, a site path, with that image's alt text. Every generated page's head names its canonical address on that origin, a directory's `index.html` by its directory, and carries Open Graph and Twitter large-image card metadata for the image, with the page's own title and description. The build reads the image's type and dimensions from the PNG itself. An optional `addresses` object maps a front door to the public address a deployment rewrite serves it at, a directory address such as `styleguide/`. The authored front door carries the same set in its own head, which the build checks;
 - `home` — the home page's description, lede and routes, each route a label, a destination (a site path, or an `https` URL) and its support copy, in the order the page shows them;
+- `utilities` — optional: routes outside the repository's own tree that the navigation panel's utilities carry before the repository link, in order, each a label and an https URL. Here they are design-system-ASK and design, the A-S-K.studio design gateway, both peers of this repository under apex solar kiss. Without the key, nothing is added before the repository link;
 - `passages` — the role of each blockquote.
 - `blocks` — the shape of each structured preformatted block.
 
