@@ -1,4 +1,7 @@
 /* method-ASK_bounded-generativity.figure.js — horizontal flow + Three Functions color (source-v5, ASK 2026-09-13)
+   render-v8: the Three Functions v0.3 solid fill, a change of paint only — the role binding below is
+   unchanged. Each role-bearing part is filled at 100% of its role value, text set on it takes the role's
+   ink, and the neutral marks inside the executive chamber are cut out of its fill (see the mask).
    source-v5: conforms to Three Functions v0.2. The source-of-intent / normative-apex ROLE is the
    CONSTITUTIVE legislative source, so it now carries the role treatment; the grammar / brief box stays
    DELEGATED legislative apparatus. Both take the same role value — their rank is carried by topology
@@ -65,15 +68,15 @@
   const box = (x, y, w, h, cls='node-box') => el('rect', { x, y, width:w, height:h, rx:4, ry:4, class:cls });
   const line = (d, cls='edge', dash=null) => el('path', { class:cls, fill:'none', d, 'stroke-dasharray':dash });
   const lbl = (x, y, t, cls='node-label', a='start') => el('text', { x, y, class:cls, 'text-anchor':a }, [t]);
-  const note = (x, y, t, a='start') => el('text', { x, y, class:'node-note', 'text-anchor':a }, [t]);
-  const tag = (x, y, t, a='middle') => el('text', { x, y, class:'flow-tag', 'text-anchor':a }, [t]);
+  const note = (x, y, t, a='start', cls='node-note') => el('text', { x, y, class:cls, 'text-anchor':a }, [t]);
+  const tag = (x, y, t, a='middle', cls='flow-tag') => el('text', { x, y, class:cls, 'text-anchor':a }, [t]);
 
   /* ===== source of intent / normative apex — OUTSIDE the frame, left · LEGISLATIVE (CONSTITUTIVE) =====
      The role box sits ON the main axis so the source beam visibly leaves it. It carries the role label
-     only, on the theme foreground; the two descriptive lines sit below it as neutral captions rather
+     only, in the role's ink; the two descriptive lines sit below it as neutral captions rather
      than on the role-bearing apparatus. */
   nodes.append(box(124, YM-20, 172, 40, 'node-box fn-leg'));
-  nodes.append(lbl(140, YM, M.apex.label));
+  nodes.append(lbl(140, YM, M.apex.label, 'node-label fn-leg-ink'));
   nodes.append(note(140, YM+36, M.apex.sub));
   nodes.append(note(140, YM+54, M.apex.note1));
 
@@ -87,8 +90,8 @@
   edges.append(line(`M 296 ${YM} L 372 ${YM}`));
   edges.append(headR(372, YM));
   nodes.append(box(376, YM-29, 150, 58, 'node-box fn-leg'));   // two-line node, 58px, centred on YM; 36px inset from the frame-left edge; width 150 (tight to the label)
-  nodes.append(lbl(392, YM-6, M.grammar.label));
-  nodes.append(note(392, YM+12, M.grammar.note));
+  nodes.append(lbl(392, YM-6, M.grammar.label, 'node-label fn-leg-ink'));
+  nodes.append(note(392, YM+12, M.grammar.note, 'start', 'node-note fn-leg-ink'));
 
   /* ===== grammar/brief grants the aperture → beam · NEUTRAL → chamber = EXECUTIVE apparatus ===== */
   const CX = 576, CY = 184, CW = 428, CH = 250;    // chamber; top aligned to artifact-governance (y=184). Right edge 1004 = 36px left of the governance box; the aperture ↕ arrow (CX-14 = 562) sits 36px right of the grammar box.
@@ -110,26 +113,37 @@
     g.t === 'circle' ? el('circle', Object.assign({ cx:g.cx, cy:g.cy, r:g.r }, attrs)) :
                        el('path',   Object.assign({ d:g.d }, attrs));
 
-  /* executive mask: chamber white (wash shows), glyphs black (punched out as holes) */
+  /* the aperture's iris blades and the dotted authorized-judgment path — NEUTRAL marks drawn in the edges layer,
+     beneath the chamber; their geometry is declared here because the executive mask also cuts them out */
+  const AP = 74;   // aperture half-height (opens AP above and below the entry)
+  const IRIS = [`M ${CX} ${YM-AP} L ${CX+18} ${YM-10}`, `M ${CX} ${YM+AP} L ${CX+18} ${YM+10}`];   // upper, lower blade
+  const JPATH = `M 606 396 L 974 396`;
+
+  /* executive mask: chamber white (the fill shows), glyphs black (punched out as holes). The solid executive fill
+     would cover the neutral marks beneath it, so they are cut out too, as negative space rather than drawn over the
+     fill: a channel along each iris blade, and one round hole under each dot of the judgment path. Each mark then
+     reads through the field in its own neutral line, and no mark takes a role value or a role ink. */
   const defs = el('defs');
   const mask = el('mask', { id:'exe-holes', maskUnits:'userSpaceOnUse', x:CX-4, y:CY-4, width:CW+8, height:CH+8 });
   mask.append(el('rect', { x:CX, y:CY, width:CW, height:CH, rx:8, ry:8, fill:'#fff' }));
   glyphs.forEach(g => mask.append(glyphEl(g, { fill:'#000' })));
+  IRIS.forEach(d => mask.append(el('path', { d, fill:'none', stroke:'#000', 'stroke-width':4, 'stroke-linecap':'round' })));
+  mask.append(el('path', { d:JPATH, fill:'none', stroke:'#000', 'stroke-width':3, 'stroke-linecap':'round',
+    'stroke-dasharray':'0 6', 'stroke-dashoffset':-0.5 }));   // a hole centred on each 1-unit dot of the '1 5' path
   defs.append(mask);
   svg.insertBefore(defs, edges);
 
-  /* chamber = the EXECUTIVE apparatus: executive fill (30%, from the consuming CSS) with the glyphs punched OUT as holes, + executive stroke */
-  nodes.append(el('rect', { x:CX, y:CY, width:CW, height:CH, rx:8, ry:8, class:'fn-exe-wash', mask:'url(#exe-holes)' }));
+  /* chamber = the EXECUTIVE apparatus: the solid executive fill (from the consuming CSS) with the glyphs and the neutral marks punched OUT as holes, + executive stroke */
+  nodes.append(el('rect', { x:CX, y:CY, width:CW, height:CH, rx:8, ry:8, class:'fn-exe-fill', mask:'url(#exe-holes)' }));
   nodes.append(el('rect', { x:CX, y:CY, width:CW, height:CH, rx:8, ry:8, class:'flow-group fn-exe-chamber' }));
   nodes.append(el('text', { x: CX + CW/2, y: CY + CH + 20, class:'section-tag', 'text-anchor':'middle' }, [M.field.tag]));
 
   /* ---- aperture: opening in the chamber's LEFT edge · NEUTRAL geometry (a quantity, not an actor) ---- */
-  const AP = 74;   // aperture half-height (opens AP above and below the entry)
   edges.append(line(`M ${CX-14} ${YM-AP} L ${CX-14} ${YM+AP}`));   // ↕ permitted-variance dimension
   edges.append(headU(CX-14, YM-AP));
   edges.append(headD(CX-14, YM+AP));
-  edges.append(line(`M ${CX} ${YM-AP} L ${CX+18} ${YM-10}`));       // iris blade (upper)
-  edges.append(line(`M ${CX} ${YM+AP} L ${CX+18} ${YM+10}`));       // iris blade (lower)
+  edges.append(line(IRIS[0]));       // iris blade (upper)
+  edges.append(line(IRIS[1]));       // iris blade (lower)
   // aperture / permitted variance — two labels flanking the arrow's centre (YM); the ↕ passes through the empty gap between them (no "·"), words held in place
   const apLoY = YM + 38, apHiY = YM - 74;
   nodes.append(el('text', { x: CX-28, y: apLoY, class:'flow-tag', 'text-anchor':'middle',
@@ -137,12 +151,12 @@
   nodes.append(el('text', { x: CX-28, y: apHiY, class:'flow-tag', 'text-anchor':'middle',
     transform:`rotate(-90 ${CX-28} ${apHiY})` }, [M.field.apertureHi]));   // "permitted variance" (upper)
 
-  /* ---- variance candidates — NEGATIVE cutouts through the executive wash, neutral outlines
+  /* ---- variance candidates — NEGATIVE cutouts through the executive fill, neutral outlines
          (executive produces variance; the glyphs are content, NOT executive-function objects) ---- */
   glyphs.forEach(g => nodes.append(glyphEl(g, { class:'node-box fn-cut' })));
-  nodes.append(tag(896, 208, M.field.variance, 'start'));
-  edges.append(line(`M 606 396 L 974 396`, 'edge', '1 5'));       // dotted authorized-judgment path · NEUTRAL
-  nodes.append(note(CX + CW/2, 390, M.field.judgment, 'middle'));
+  nodes.append(tag(896, 208, M.field.variance, 'start', 'flow-tag fn-exe-ink'));
+  edges.append(line(JPATH, 'edge', '1 5'));       // dotted authorized-judgment path · NEUTRAL
+  nodes.append(note(CX + CW/2, 390, M.field.judgment, 'middle', 'node-note fn-exe-ink'));
 
   /* ===== selection + closure = JUDICIAL — ring + ratified candidate ===== */
   const SC = { x: 1130, y: YM };   // pulled left with the chamber compression (tightens chamber → selection); centred under the governance box

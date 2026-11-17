@@ -20,19 +20,23 @@
 <!-- ASK Three Functions — opt-in semantic function-color primitive, vendored from design-system-ASK. See _dsa-tokens/MANIFEST.md -->
 <link rel="stylesheet" href="./_dsa-tokens/three-functions.css">
 <style>
-  /* ===== Three Functions consumption (source-v5 · primitive v0.2): role stroke + 30% fill; executive = the chamber, variance = negative cutouts.
+  /* ===== Three Functions consumption (source-v5 · primitive v0.3): solid fill — each role-bearing part is filled at
+     100% of its role value, its boundary in the same value; executive = the chamber, variance = negative cutouts.
      legislative = the source-of-intent role box (constitutive) and the grammar / brief box (delegated), one role value;
-     their rank is carried by topology — outside vs inside the bracket — not by a second hue. Labels stay on the theme
-     foreground. ===== */
-  .node-box.fn-leg  { stroke: var(--function-legislative); fill: color-mix(in srgb, var(--function-legislative) 30%, transparent); }
-  .node-box.fn-jud  { stroke: var(--function-judicial);    fill: color-mix(in srgb, var(--function-judicial) 30%, transparent); }
+     their rank is carried by topology — outside vs inside the bracket — not by a second hue. Text set on a role fill
+     takes that role's ink (--function-*-ink, which three-functions.css binds to the surface treatments' FILL PAINT);
+     text beside a part stays on the theme foreground. ===== */
+  .node-box.fn-leg  { stroke: var(--function-legislative); fill: var(--function-legislative); }
+  .node-box.fn-jud  { stroke: var(--function-judicial);    fill: var(--function-judicial); }
   .edge.fn-jud-ring { stroke: var(--function-judicial); }
-  .fn-exe-wash               { fill: color-mix(in srgb, var(--function-executive) 30%, transparent); }
+  .fn-exe-fill               { fill: var(--function-executive); }
   .flow-group.fn-exe-chamber { stroke: var(--function-executive); fill: none; }
   .node-box.fn-cut           { fill: none; }
-  .legend .box-solid.fn-leg { background: color-mix(in srgb, var(--function-legislative) 30%, transparent); border-color: var(--function-legislative); }
-  .legend .box-solid.fn-exe { background: color-mix(in srgb, var(--function-executive) 30%, transparent); border-color: var(--function-executive); }
-  .legend .box-solid.fn-jud { background: color-mix(in srgb, var(--function-judicial) 30%, transparent); border-color: var(--function-judicial); }
+  .fn-leg-ink { fill: var(--function-legislative-ink); }
+  .fn-exe-ink { fill: var(--function-executive-ink); }
+  .legend .box-solid.fn-leg { background: var(--function-legislative); border-color: var(--function-legislative); }
+  .legend .box-solid.fn-exe { background: var(--function-executive);   border-color: var(--function-executive); }
+  .legend .box-solid.fn-jud { background: var(--function-judicial);    border-color: var(--function-judicial); }
   .legend .fn-divider { border: none; border-top: 1px dotted var(--diagram-line); margin: 12px 0 9px; }
   .legend .fn-down { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--diagram-muted); margin-bottom: 9px; }
 </style>
@@ -49,8 +53,8 @@
     <div class="spacer"></div>
     <div class="diagram-cue">illustrative</div>
     <div class="stamp">
-      <div><span class="k">source-v5</span> // <span class="k">render-v7</span></div>
-      <div>2026-10-08</div>
+      <div><span class="k">source-v5</span> // <span class="k">render-v8</span></div>
+      <div>2026-11-17</div>
     </div>
   </div>
 

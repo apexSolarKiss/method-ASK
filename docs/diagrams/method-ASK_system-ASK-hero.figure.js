@@ -1,8 +1,9 @@
 /* method-ASK_system-ASK-hero.figure.js — D11 // system-ASK causal orientation (source-v2, ASK 2026-09-14)
    Bespoke one-off method figure. Projects the accepted P1 v5 claim set as published in
    examples/system-ASK.md. Consumes design-system-ASK Three Functions by reference
-   (_dsa-tokens/three-functions.css) at the owner's 30% role-fill + full role-stroke contract,
-   on FUNCTION-BEARING APPARATUS ONLY:
+   (_dsa-tokens/three-functions.css) at the owner's v0.3 solid-fill contract — the full role
+   value as fill and boundary, and the role's ink for any text set on it — on
+   FUNCTION-BEARING APPARATUS ONLY:
      legislative  the SOURCE-OF-INTENT ROLE, as the constitutive legislative source; the
                   execution grant and the enforced path-scoped grant, as DELEGATED apparatus.
                   The aperture a grant produces is a permission — a quantity, not apparatus —
@@ -16,8 +17,8 @@
    source-of-intent role and the judicial adjudication gate. The envelope takes no role color:
    the actor is not exhausted by any role it occupies, and the figure shows it, because one
    envelope holds a legislative role and a judicial one. The role at the apex is constitutively
-   legislative, so it carries the role treatment. Its label stays on the theme foreground — a
-   label is never the role hue. Constitutive and delegated legislation share the one role value;
+   legislative, so it carries the role treatment. Its label takes the role's ink — a label is
+   never the role hue. Constitutive and delegated legislation share the one role value;
    their rank is carried by TOPOLOGY (the source role sits outside the realization field that
    its grant opens inside) and by labels — never a second hue, an opacity rank, a fourth function
    or a role-colored label.
@@ -224,24 +225,26 @@
   /* ROLE 1 — the source-of-intent role at the apex. LEGISLATIVE (CONSTITUTIVE). Its center
      is the grant rail's height, so the grant leaves it directly. */
   nodes.append(box(X.role, ROLE_Y, NW, NH, 'node-box fn-leg', 4, { 'data-node':'ordinary', 'data-col':'c1' }));
-  nodes.append(lbl(X.role + 18, ROLE_Y + 26, 'source-of-intent role'));
-  nodes.append(note(X.role + 18, ROLE_Y + 46, 'the single normative apex', 'start', 'on-role'));
-  nodes.append(note(X.role + 18, ROLE_Y + 62, 'membership without derivability', 'start', 'on-role'));
+  nodes.append(lbl(X.role + 18, ROLE_Y + 26, 'source-of-intent role', 'node-label fn-leg-ink'));
+  nodes.append(note(X.role + 18, ROLE_Y + 46, 'the single normative apex', 'start', 'fn-leg-ink'));
+  nodes.append(note(X.role + 18, ROLE_Y + 62, 'membership without derivability', 'start', 'fn-leg-ink'));
 
   /* ROLE 2 — the adjudication gate, attached to the apex role, not a second authority
      center. JUDICIAL. */
   edges.append(line(`M ${X.ev} ${ROLE_Y + NH} L ${X.ev} ${GATE_Y}`, 'edge e-auth', 'apex-gate attachment'));
   nodes.append(box(X.role, GATE_Y, NW, NH, 'node-box fn-jud', 4, { 'data-node':'ordinary', 'data-col':'c1' }));
-  nodes.append(lbl(X.role + 18, GATE_Y + 26, 'adjudication gate'));
-  nodes.append(note(X.role + 18, GATE_Y + 46, 'evidence reaches ASK', 'start', 'on-role'));
-  nodes.append(note(X.role + 18, GATE_Y + 62, 'THROUGH the gate, as input', 'start', 'on-role'));
+  nodes.append(lbl(X.role + 18, GATE_Y + 26, 'adjudication gate', 'node-label fn-jud-ink'));
+  nodes.append(note(X.role + 18, GATE_Y + 46, 'evidence reaches ASK', 'start', 'fn-jud-ink'));
+  nodes.append(note(X.role + 18, GATE_Y + 62, 'THROUGH the gate, as input', 'start', 'fn-jud-ink'));
 
   /* ===== ordinary nodes — one size, placed on the column grid ===== */
   const node = (col, x, y, label, notes, cls='node-box') => {
     nodes.append(box(x, y, NW, NH, cls, 4, { 'data-node':'ordinary', 'data-col':col }));
-    nodes.append(lbl(x + 18, y + 26, label));
-    const onRole = /fn-/.test(cls) ? 'on-role' : '';
-    notes.forEach((t, i) => nodes.append(note(x + 18, y + (i ? 62 : 46), t, 'start', onRole)));
+    /* text set on a role fill takes that role's ink (fn-leg-ink · fn-exe-ink · fn-jud-ink) */
+    const role = /\bfn-(leg|exe|jud)\b/.exec(cls);
+    const ink = role ? 'fn-' + role[1] + '-ink' : '';
+    nodes.append(lbl(x + 18, y + 26, label, ink ? 'node-label ' + ink : 'node-label'));
+    notes.forEach((t, i) => nodes.append(note(x + 18, y + (i ? 62 : 46), t, 'start', ink)));
   };
 
   /* ===== RAILS — two relations, which must not be drawn as one. ===== */
@@ -281,10 +284,10 @@
      delegated narrowing — geometry, not a second fill — and the REALIZATION span is cut out of
      the grant's fill and carries the executive treatment, so no realization label sits on
      legislative fill.
-     Each level is an even-odd path with the next level CUT OUT of it, so no two role washes
-     ever stack into a lighter one: the owner's contract carries field-vs-object in geometry
-     and negative space, never in stacked opacity. The chamber keeps the column's edges; only
-     its height differs from an ordinary node. */
+     Each level is an even-odd path with the next level CUT OUT of it, so each role fill is a
+     field with the next level as its hole, never one fill painted over another: the owner's
+     contract carries field-vs-object in geometry and negative space, never in stacked fills.
+     The chamber keeps the column's edges; only its height differs from an ordinary node. */
   const rr = (x, y, w, h, r) =>
     `M ${x+r} ${y} H ${x+w-r} A ${r} ${r} 0 0 1 ${x+w} ${y+r} V ${y+h-r} ` +
     `A ${r} ${r} 0 0 1 ${x+w-r} ${y+h} H ${x+r} A ${r} ${r} 0 0 1 ${x} ${y+h-r} ` +
@@ -296,17 +299,17 @@
   const RX = IX + 20, RW = IW - 40;                 // realization span: 926..1066
   nodes.append(el('path', { class:'node-box fn-exe', 'fill-rule':'evenodd', 'data-node':'chamber', 'data-col':'c3',
                             d: rr(X.c3, EX, NW, EXH, 8) + ' ' + rr(GX, EN + 52, GW, 112, 6) }));
-  nodes.append(lbl(X.c3 + 18, EX + 24, 'executor'));
-  nodes.append(note(X.c3 + 18, EX + 42, 'plans + mutates  ·  single-writer', 'start', 'on-role'));
+  nodes.append(lbl(X.c3 + 18, EX + 24, 'executor', 'node-label fn-exe-ink'));
+  nodes.append(note(X.c3 + 18, EX + 42, 'plans + mutates  ·  single-writer', 'start', 'fn-exe-ink'));
   nodes.append(el('path', { class:'flow-group fn-leg', 'fill-rule':'evenodd', 'data-node':'grant',
                             d: rr(GX, EN + 52, GW, 112, 6) + ' ' + rr(RX, EN + 92, RW, 34, 4) }));
   nodes.append(el('rect', { x:IX, y:EN + 72, width:IW, height:74, rx:5, ry:5, class:'flow-group', 'data-node':'intent' }));
   nodes.append(el('rect', { x:RX, y:EN + 92, width:RW, height:34, rx:4, ry:4, class:'node-box fn-exe', 'data-node':'realization' }));
   /* Each nested label is centered in ITS OWN band, between the rect it names and the next
      rect inside it. */
-  nodes.append(note(GX + 10, EN + 63, 'execution grant', 'start', 'on-role'));
-  nodes.append(note(IX + 10, EN + 83, 'derived task intent', 'start', 'on-role'));
-  nodes.append(note(RX + 10, EN + 110, 'realization', 'start', 'on-role'));
+  nodes.append(note(GX + 10, EN + 63, 'execution grant', 'start', 'fn-leg-ink'));
+  nodes.append(note(IX + 10, EN + 83, 'derived task intent', 'start', 'fn-leg-ink'));   // on the grant's fill, inside the intent frame
+  nodes.append(note(RX + 10, EN + 110, 'realization', 'start', 'fn-exe-ink'));
 
   /* DOMAIN AUTHORITY — straddles the field boundary. TWO axes, drawn separately. It is an
      ordinary node, the same size as project cells, on the same row. */
@@ -333,7 +336,7 @@
   /* ===== MEMBRANE — a GATED crossing, not a plain boundary. ===== */
   /* The enforced grant is an ORDINARY NODE on the membrane: the one size, in the right-hand column, under the public
      context scaffold whose inheritance edge enters it. Delegated legislative apparatus, like the execution grant;
-     its label is a box heading on the theme foreground, as on every role-bearing ordinary node. It carries one line and no
+     its label is a box heading in the role's ink, as on every role-bearing ordinary node. It carries one line and no
      note, so the label is centered in the box, both ways, rather than set at the heading position. Its ink runs about 5.8
      units above its middle anchor and 7.3 below it (the g's descender), so the anchor sits 0.7 above the box's center. */
   const GRANT_Y = Y.membrane - NH/2;
@@ -342,7 +345,7 @@
   edges.append(line(`M ${X.outer0} ${Y.membrane} L ${X.c4} ${Y.membrane}`, 'edge e-membrane', 'membrane'));
   edges.append(line(`M ${X.c4 + NW} ${Y.membrane} L ${X.outer1} ${Y.membrane}`, 'edge e-membrane', 'membrane'));
   nodes.append(box(X.c4, GRANT_Y, NW, NH, 'node-box fn-leg', 4, { 'data-node':'ordinary', 'data-col':'c4', 'data-role':'enforced-grant' }));
-  nodes.append(lbl(CX.c4, Y.membrane - 0.7, 'enforced grant', 'node-label', 'middle'));
+  nodes.append(lbl(CX.c4, Y.membrane - 0.7, 'enforced grant', 'node-label fn-leg-ink', 'middle'));
   nodes.append(note(X.c2, Y.perimNote, 'private context perimeter  —  folder separation DEFINES the boundary and makes it AUDITABLE'));
   nodes.append(note(X.c2, Y.memNote, 'schematic wall, not a measure of reach  ·  an enforced grant confines ONE named surface to its granted subtree, and only there is the wall structural  ·  NO edge crosses into the private side'));
 

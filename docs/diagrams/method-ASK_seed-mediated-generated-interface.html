@@ -20,12 +20,16 @@
 <!-- ASK Three Functions — opt-in semantic function-color primitive, vendored from design-system-ASK. See _dsa-tokens/MANIFEST.md -->
 <link rel="stylesheet" href="./_dsa-tokens/three-functions.css">
 <style>
-  /* ===== Three Functions consumption (source-v1) — ONE licensed node only.
+  /* ===== Three Functions consumption (source-v1 · primitive v0.3) — ONE licensed node only.
      The grammar box carries legislative because the doctrine states the grammar grants
      the aperture. Nothing else is coloured: fork-at-load is a conformance condition, not
-     a fourth function, and is rendered as broken continuity (.held), never as alarm chrome. ===== */
-  .node-box.fn-leg { stroke: var(--function-legislative); fill: color-mix(in srgb, var(--function-legislative) 30%, transparent); }
-  .legend .box-solid.fn-leg { background: color-mix(in srgb, var(--function-legislative) 30%, transparent); border-color: var(--function-legislative); }
+     a fourth function, and is rendered as broken continuity (.held), never as alarm chrome.
+     v0.3 solid fill: the box is filled at 100% of the role value, its boundary in the same
+     value, and the text set on it takes the role's ink (--function-legislative-ink, which
+     three-functions.css binds to the surface treatments' FILL PAINT). ===== */
+  .node-box.fn-leg { stroke: var(--function-legislative); fill: var(--function-legislative); }
+  .fn-leg-ink { fill: var(--function-legislative-ink); }
+  .legend .box-solid.fn-leg { background: var(--function-legislative); border-color: var(--function-legislative); }
   /* fork-branch label tone — matches .node-label.held without needing a second class on every text node */
   .flow-tag.node-label-held { fill: var(--diagram-muted); }
   .legend .fn-divider { border: none; border-top: 1px dotted var(--diagram-line); margin: 12px 0 9px; }
@@ -49,8 +53,8 @@
     <div class="spacer"></div>
     <div class="diagram-cue">illustrative</div>
     <div class="stamp">
-      <div><span class="k">source-v1</span> // <span class="k">render-v4</span></div>
-      <div>2026-10-08</div>
+      <div><span class="k">source-v1</span> // <span class="k">render-v5</span></div>
+      <div>2026-11-17</div>
     </div>
   </div>
 

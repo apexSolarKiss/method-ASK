@@ -22,10 +22,12 @@
 <style>
   /* ===== D11 light-theme high-contrast text opt-in — FIGURE-LOCAL =====
      Registered with the design owner at design-system-ASK/README.md, under
-     "High-contrast foreground — registered uses", entry 3. Measured need: in the light
-     theme every rendered text role in this figure falls below the 4.5:1 normal-text
-     threshold against the lavender gradient and against the 30% role fills — ink 2.87,
-     muted 1.93, section tags 2.67, field tag 2.87. The role exists for exactly this case.
+     "High-contrast foreground — registered uses", entry 3. Measured need, when the role
+     fills were a 30% wash: in the light theme every rendered text role in this figure fell
+     below the 4.5:1 normal-text threshold against the lavender gradient and against those
+     fills — ink 2.87, muted 1.93, section tags 2.67, field tag 2.87. The role exists for
+     exactly this case. Under Three Functions v0.3 the text set on a role fill takes the
+     role's ink instead (below), so the opt-in now governs the text on the field.
 
      Bounded on purpose. Light is the foundation's DEFAULT theme, so the opt-in is declared
      on bare :root and then HANDED BACK to the ordinary ramp in both dark selectors, which
@@ -59,10 +61,12 @@
      foreground, fill, background or accent value moves. */
   .node-label { font-weight: var(--d11-label-weight); }
 
-  /* ===== Three Functions consumption (source-v2 · primitive v0.2) =====
-     The owner's rendering contract, unmodified: every role-bearing apparatus carries a
-     30% role fill and the full role value as stroke. No local opacity ramp — the owner
-     carries field-vs-object in geometry and negative space, not in a lighter wash.
+  /* ===== Three Functions consumption (source-v2 · primitive v0.3) =====
+     The owner's rendering contract, unmodified: every role-bearing apparatus is filled at
+     100% of its role value, its boundary in the same value, and any text set on it takes
+     the role's ink (--function-*-ink, which three-functions.css binds to the surface
+     treatments' FILL PAINT). No local opacity ramp — the owner carries field-vs-object in
+     geometry and negative space, not in a lighter fill.
        legislative  the source-of-intent role (constitutive) · the execution grant and the
                     enforced path-scoped grant (delegated); the aperture a grant produces is a
                     permission, not apparatus, and takes no role color
@@ -73,19 +77,20 @@
      and every structural frame and edge. Structure, not state: Spectral State is
      deliberately not used. */
   .node-box.fn-leg,
-  .flow-group.fn-leg { stroke: var(--function-legislative); fill: color-mix(in srgb, var(--function-legislative) 30%, transparent); }
-  .node-box.fn-jud   { stroke: var(--function-judicial);    fill: color-mix(in srgb, var(--function-judicial) 30%, transparent); }
-  .node-box.fn-exe   { stroke: var(--function-executive);   fill: color-mix(in srgb, var(--function-executive) 30%, transparent); }
+  .flow-group.fn-leg { stroke: var(--function-legislative); fill: var(--function-legislative); }
+  .node-box.fn-jud   { stroke: var(--function-judicial);    fill: var(--function-judicial); }
+  .node-box.fn-exe   { stroke: var(--function-executive);   fill: var(--function-executive); }
 
   /* The occupying actor's envelope: the neutral structural line, no fill. It is an element
      the figure names, so it takes the full structural line rather than a frame's soft one. */
   .flow-group.actor-envelope { stroke: var(--diagram-line); fill: none; }
 
-  /* A note sitting ON a role-bearing apparatus takes the theme FOREGROUND rather than the
-     de-emphasized muted ramp. A note is not a label under the owner's label row; this is the
-     note's own neutral foreground, never the role hue. (Measured at source-v1: on a 30% role
-     wash in dark, the muted ramp landed at 2.98-4.35 : 1.) */
-  .node-note.on-role { fill: var(--diagram-ink); }
+  /* Text set ON a role-bearing apparatus — its label and its notes — takes the role's ink:
+     never the role hue, and never the theme foreground ramp, which is for the text on the
+     field. Text set beside an apparatus keeps its own neutral foreground. */
+  .fn-leg-ink { fill: var(--function-legislative-ink); }
+  .fn-exe-ink { fill: var(--function-executive-ink); }
+  .fn-jud-ink { fill: var(--function-judicial-ink); }
 
   /* The owner's legend-only divider in the in-SVG key: a dotted rule on the soft structural
      line, separating the three functions from the one neutral exemplar beneath them. It is
@@ -122,8 +127,8 @@
     <div class="spacer"></div>
     <div class="diagram-cue">illustrative</div>
     <div class="stamp">
-      <div><span class="k">D11</span> // <span class="k">source-v2</span> // <span class="k">render-v2</span></div>
-      <div>2026-10-08</div>
+      <div><span class="k">D11</span> // <span class="k">source-v2</span> // <span class="k">render-v3</span></div>
+      <div>2026-11-17</div>
     </div>
   </div>
 
