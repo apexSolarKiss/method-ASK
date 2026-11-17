@@ -1,7 +1,10 @@
 /* method-ASK_bounded-generativity.figure.js — horizontal flow + Three Functions color (source-v5, ASK 2026-09-13)
    render-v8: the Three Functions v0.3 solid fill, a change of paint only — the role binding below is
    unchanged. Each role-bearing part is filled at 100% of its role value, text set on it takes the role's
-   ink, and the neutral marks inside the executive chamber are cut out of its fill (see the mask).
+   ink, and the neutral marks inside the executive chamber are cut out of its fill (see the mask). The
+   paint is the surface treatments' FILL PAINT: each role-bearing part carries its role class and
+   .surface-fill, and each text set on it its role class and .surface-fill-ink; the page binds each role
+   class to the recipe's inputs.
    source-v5: conforms to Three Functions v0.2. The source-of-intent / normative-apex ROLE is the
    CONSTITUTIVE legislative source, so it now carries the role treatment; the grammar / brief box stays
    DELEGATED legislative apparatus. Both take the same role value — their rank is carried by topology
@@ -75,8 +78,8 @@
      The role box sits ON the main axis so the source beam visibly leaves it. It carries the role label
      only, in the role's ink; the two descriptive lines sit below it as neutral captions rather
      than on the role-bearing apparatus. */
-  nodes.append(box(124, YM-20, 172, 40, 'node-box fn-leg'));
-  nodes.append(lbl(140, YM, M.apex.label, 'node-label fn-leg-ink'));
+  nodes.append(box(124, YM-20, 172, 40, 'node-box fn-leg surface-fill'));
+  nodes.append(lbl(140, YM, M.apex.label, 'node-label fn-leg surface-fill-ink'));
   nodes.append(note(140, YM+36, M.apex.sub));
   nodes.append(note(140, YM+54, M.apex.note1));
 
@@ -89,9 +92,9 @@
      Carriage takes no function color: the beam between two legislative elements stays neutral. */
   edges.append(line(`M 296 ${YM} L 372 ${YM}`));
   edges.append(headR(372, YM));
-  nodes.append(box(376, YM-29, 150, 58, 'node-box fn-leg'));   // two-line node, 58px, centred on YM; 36px inset from the frame-left edge; width 150 (tight to the label)
-  nodes.append(lbl(392, YM-6, M.grammar.label, 'node-label fn-leg-ink'));
-  nodes.append(note(392, YM+12, M.grammar.note, 'start', 'node-note fn-leg-ink'));
+  nodes.append(box(376, YM-29, 150, 58, 'node-box fn-leg surface-fill'));   // two-line node, 58px, centred on YM; 36px inset from the frame-left edge; width 150 (tight to the label)
+  nodes.append(lbl(392, YM-6, M.grammar.label, 'node-label fn-leg surface-fill-ink'));
+  nodes.append(note(392, YM+12, M.grammar.note, 'start', 'node-note fn-leg surface-fill-ink'));
 
   /* ===== grammar/brief grants the aperture → beam · NEUTRAL → chamber = EXECUTIVE apparatus ===== */
   const CX = 576, CY = 184, CW = 428, CH = 250;    // chamber; top aligned to artifact-governance (y=184). Right edge 1004 = 36px left of the governance box; the aperture ↕ arrow (CX-14 = 562) sits 36px right of the grammar box.
@@ -133,8 +136,8 @@
   defs.append(mask);
   svg.insertBefore(defs, edges);
 
-  /* chamber = the EXECUTIVE apparatus: the solid executive fill (from the consuming CSS) with the glyphs and the neutral marks punched OUT as holes, + executive stroke */
-  nodes.append(el('rect', { x:CX, y:CY, width:CW, height:CH, rx:8, ry:8, class:'fn-exe-fill', mask:'url(#exe-holes)' }));
+  /* chamber = the EXECUTIVE apparatus: the solid executive fill (the surface treatments' FILL PAINT, .surface-fill) with the glyphs and the neutral marks punched OUT as holes, + executive stroke, drawn as its own element above the masked field (fn-exe-fill sets --surface-fill-edge: none, a local use of the recipe's edge input, so the field draws no outline of its own) */
+  nodes.append(el('rect', { x:CX, y:CY, width:CW, height:CH, rx:8, ry:8, class:'fn-exe fn-exe-fill surface-fill', mask:'url(#exe-holes)' }));
   nodes.append(el('rect', { x:CX, y:CY, width:CW, height:CH, rx:8, ry:8, class:'flow-group fn-exe-chamber' }));
   nodes.append(el('text', { x: CX + CW/2, y: CY + CH + 20, class:'section-tag', 'text-anchor':'middle' }, [M.field.tag]));
 
@@ -154,16 +157,16 @@
   /* ---- variance candidates — NEGATIVE cutouts through the executive fill, neutral outlines
          (executive produces variance; the glyphs are content, NOT executive-function objects) ---- */
   glyphs.forEach(g => nodes.append(glyphEl(g, { class:'node-box fn-cut' })));
-  nodes.append(tag(896, 208, M.field.variance, 'start', 'flow-tag fn-exe-ink'));
+  nodes.append(tag(896, 208, M.field.variance, 'start', 'flow-tag fn-exe surface-fill-ink'));
   edges.append(line(JPATH, 'edge', '1 5'));       // dotted authorized-judgment path · NEUTRAL
-  nodes.append(note(CX + CW/2, 390, M.field.judgment, 'middle', 'node-note fn-exe-ink'));
+  nodes.append(note(CX + CW/2, 390, M.field.judgment, 'middle', 'node-note fn-exe surface-fill-ink'));
 
   /* ===== selection + closure = JUDICIAL — ring + ratified candidate ===== */
   const SC = { x: 1130, y: YM };   // pulled left with the chamber compression (tightens chamber → selection); centred under the governance box
   edges.append(line(`M ${CX+CW} ${YM} L ${SC.x-46} ${YM}`));
   edges.append(headR(SC.x-46, YM));
   edges.append(el('circle', { class:'edge fn-jud-ring', cx:SC.x, cy:SC.y, r:42, fill:'none' }));
-  nodes.append(box(SC.x-26, SC.y-26, 52, 52, 'node-box fn-jud'));
+  nodes.append(box(SC.x-26, SC.y-26, 52, 52, 'node-box fn-jud surface-fill'));
   nodes.append(tag(SC.x, 394, M.select.tag));
   nodes.append(note(SC.x, 412, M.select.note1, 'middle'));
   nodes.append(note(SC.x, 429, M.select.note2, 'middle'));

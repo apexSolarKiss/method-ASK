@@ -13,8 +13,9 @@
 <!-- design-system-ASK foundations — local mirror (Tier 1 + Tier 2), no CDN. See _dsa-tokens/MANIFEST.md -->
 <link rel="stylesheet" href="./_dsa-tokens/colors_and_type.css">
 <link rel="stylesheet" href="diagrams.css">
-<!-- design-system-ASK disclosure grammar for the compact caption and legend triggers.
-     surface-panel.css loads first, as surface-treatments.css requires. -->
+<!-- design-system-ASK surface modules, from the local surface-module mirror: the disclosure grammar for the
+     compact caption and legend triggers, and the FILL PAINT of surface-treatments.css, which paints the Three
+     Functions part below. surface-panel.css loads first, as surface-treatments.css requires. -->
 <link rel="stylesheet" href="./_dsa-surface/surface-panel.css">
 <link rel="stylesheet" href="./_dsa-surface/surface-treatments.css">
 <!-- ASK Three Functions — opt-in semantic function-color primitive, vendored from design-system-ASK. See _dsa-tokens/MANIFEST.md -->
@@ -24,12 +25,14 @@
      The grammar box carries legislative because the doctrine states the grammar grants
      the aperture. Nothing else is coloured: fork-at-load is a conformance condition, not
      a fourth function, and is rendered as broken continuity (.held), never as alarm chrome.
-     v0.3 solid fill: the box is filled at 100% of the role value, its boundary in the same
-     value, and the text set on it takes the role's ink (--function-legislative-ink, which
-     three-functions.css binds to the surface treatments' FILL PAINT). ===== */
-  .node-box.fn-leg { stroke: var(--function-legislative); fill: var(--function-legislative); }
-  .fn-leg-ink { fill: var(--function-legislative-ink); }
-  .legend .box-solid.fn-leg { background: var(--function-legislative); border-color: var(--function-legislative); }
+     v0.3 solid fill, through the surface treatments' FILL PAINT: the box carries
+     .surface-fill and the text set on it .surface-fill-ink, and the role class binds the
+     recipe's inputs, the role value (--surface-fill-color) and the role's ink
+     (--surface-fill-ink, from --function-legislative-ink). The box is filled at 100% of the
+     role value and edged in the same value, and its text takes the role's ink. ===== */
+  .fn-leg { --surface-fill-color: var(--function-legislative); --surface-fill-ink: var(--function-legislative-ink); }
+  /* the key's filled specimen takes the same paint; diagrams.css's neutral swatch rule outranks .surface-fill */
+  .legend .sw .box-solid.surface-fill { background-color: var(--surface-fill-color); border-color: var(--surface-fill-color); }
   /* fork-branch label tone — matches .node-label.held without needing a second class on every text node */
   .flow-tag.node-label-held { fill: var(--diagram-muted); }
   .legend .fn-divider { border: none; border-top: 1px dotted var(--diagram-line); margin: 12px 0 9px; }
@@ -81,7 +84,7 @@
       <div class="legend glass" id="diagramLegend">
         <div class="h"><span>Loading boundary</span><span class="fig">one seam</span></div>
         <div class="row">
-          <div class="sw"><div class="box-solid fn-leg"></div></div>
+          <div class="sw"><div class="box-solid fn-leg surface-fill"></div></div>
           <div><span class="lbl">grammar</span><span class="sub">legislative · grants the aperture</span></div>
         </div>
         <div class="row">

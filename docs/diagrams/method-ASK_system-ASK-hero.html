@@ -13,8 +13,9 @@
 <!-- design-system-ASK foundations — local mirror (Tier 1 + Tier 2), no CDN. See _dsa-tokens/MANIFEST.md -->
 <link rel="stylesheet" href="./_dsa-tokens/colors_and_type.css">
 <link rel="stylesheet" href="diagrams.css">
-<!-- design-system-ASK disclosure grammar for the compact chrome triggers, from the local surface-module
-     mirror. surface-panel.css loads first, as surface-treatments.css requires. -->
+<!-- design-system-ASK surface modules, from the local surface-module mirror: the disclosure grammar for the
+     compact chrome triggers, and the FILL PAINT of surface-treatments.css, which paints the Three Functions
+     parts below. surface-panel.css loads first, as surface-treatments.css requires. -->
 <link rel="stylesheet" href="./_dsa-surface/surface-panel.css">
 <link rel="stylesheet" href="./_dsa-surface/surface-treatments.css">
 <!-- ASK Three Functions — opt-in semantic function-color primitive, vendored from design-system-ASK. See _dsa-tokens/MANIFEST.md -->
@@ -62,10 +63,12 @@
   .node-label { font-weight: var(--d11-label-weight); }
 
   /* ===== Three Functions consumption (source-v2 · primitive v0.3) =====
-     The owner's rendering contract, unmodified: every role-bearing apparatus is filled at
-     100% of its role value, its boundary in the same value, and any text set on it takes
-     the role's ink (--function-*-ink, which three-functions.css binds to the surface
-     treatments' FILL PAINT). No local opacity ramp — the owner carries field-vs-object in
+     The owner's rendering contract, unmodified, painted by the surface treatments' FILL
+     PAINT: every role-bearing apparatus carries .surface-fill and is filled at 100% of its
+     role value, its boundary in the same value, and any text set on it carries
+     .surface-fill-ink and takes the role's ink. Each role class below binds the recipe's
+     inputs, the role value (--surface-fill-color) and the role's ink (--surface-fill-ink,
+     from --function-*-ink). No local opacity ramp — the owner carries field-vs-object in
      geometry and negative space, not in a lighter fill.
        legislative  the source-of-intent role (constitutive) · the execution grant and the
                     enforced path-scoped grant (delegated); the aperture a grant produces is a
@@ -76,21 +79,17 @@
      governance, the governed artifact and its record, project cells, public surfaces,
      and every structural frame and edge. Structure, not state: Spectral State is
      deliberately not used. */
-  .node-box.fn-leg,
-  .flow-group.fn-leg { stroke: var(--function-legislative); fill: var(--function-legislative); }
-  .node-box.fn-jud   { stroke: var(--function-judicial);    fill: var(--function-judicial); }
-  .node-box.fn-exe   { stroke: var(--function-executive);   fill: var(--function-executive); }
+  .fn-leg { --surface-fill-color: var(--function-legislative); --surface-fill-ink: var(--function-legislative-ink); }
+  .fn-exe { --surface-fill-color: var(--function-executive);   --surface-fill-ink: var(--function-executive-ink); }
+  .fn-jud { --surface-fill-color: var(--function-judicial);    --surface-fill-ink: var(--function-judicial-ink); }
+  /* Text set ON a role-bearing apparatus — its label and its notes — carries its role class
+     and .surface-fill-ink, so the recipe paints it in the role's ink: never the role hue, and
+     never the theme foreground ramp, which is for the text on the field. Text set beside an
+     apparatus keeps its own neutral foreground. */
 
   /* The occupying actor's envelope: the neutral structural line, no fill. It is an element
      the figure names, so it takes the full structural line rather than a frame's soft one. */
   .flow-group.actor-envelope { stroke: var(--diagram-line); fill: none; }
-
-  /* Text set ON a role-bearing apparatus — its label and its notes — takes the role's ink:
-     never the role hue, and never the theme foreground ramp, which is for the text on the
-     field. Text set beside an apparatus keeps its own neutral foreground. */
-  .fn-leg-ink { fill: var(--function-legislative-ink); }
-  .fn-exe-ink { fill: var(--function-executive-ink); }
-  .fn-jud-ink { fill: var(--function-judicial-ink); }
 
   /* The owner's legend-only divider in the in-SVG key: a dotted rule on the soft structural
      line, separating the three functions from the one neutral exemplar beneath them. It is

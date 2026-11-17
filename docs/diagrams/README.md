@@ -65,7 +65,12 @@ They exist to prevent four specific collapses, one per figure:
   - **Diagram disclosure.** `surface-panel.css`, then [`surface-treatments.css`](_dsa-surface/surface-treatments.css),
     loaded by every diagram page that adopts the responsive chrome
     (*Responsive chrome*, below). `surface-treatments.css` supplies the
-    controlled disclosure trigger their About and Legend triggers take.
+    controlled disclosure trigger their About and Legend triggers take. On
+    the three figures that consume Three Functions — bounded generativity,
+    the SMGI doctrine figure and system-ASK — it also supplies the FILL PAINT
+    their role-bearing parts take: each part carries `.surface-fill` and the
+    text set on it `.surface-fill-ink`, and each page binds its role classes
+    to the recipe's inputs.
   - **Reading pages.** The site build's pages, the home page at the site root
     and the reading pages under `/read/` (`tools/read/`), also load
     `surface-shell.css`, `surface-shell.js`, `surface-panel.css`,

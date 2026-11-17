@@ -125,9 +125,9 @@
 
   /* ===== conforming branch — NEUTRAL, except the licensed legislative grammar box ===== */
   // 1 · grammar (LEGISLATIVE — doctrine: the grammar grants the aperture)
-  nodes.append(box(COL[0], YM - H2/2, NW, H2, 'node-box fn-leg'));
-  nodes.append(lbl(COL[0] + 20, YM - 6, M.grammar.label, 'node-label fn-leg-ink'));
-  nodes.append(note(COL[0] + 20, YM + 14, M.grammar.note, 'start', 'node-note fn-leg-ink'));
+  nodes.append(box(COL[0], YM - H2/2, NW, H2, 'node-box fn-leg surface-fill'));
+  nodes.append(lbl(COL[0] + 20, YM - 6, M.grammar.label, 'node-label fn-leg surface-fill-ink'));
+  nodes.append(note(COL[0] + 20, YM + 14, M.grammar.note, 'start', 'node-note fn-leg surface-fill-ink'));
 
   // 2 · runtime
   nodes.append(box(COL[1], YM - H2/2, NW, H2));
