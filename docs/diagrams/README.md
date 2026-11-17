@@ -65,7 +65,12 @@ They exist to prevent four specific collapses, one per figure:
   - **Diagram disclosure.** `surface-panel.css`, then [`surface-treatments.css`](_dsa-surface/surface-treatments.css),
     loaded by every diagram page that adopts the responsive chrome
     (*Responsive chrome*, below). `surface-treatments.css` supplies the
-    controlled disclosure trigger their About and Legend triggers take.
+    controlled disclosure trigger their About and Legend triggers take. On
+    the three figures that consume Three Functions — bounded generativity,
+    the SMGI doctrine figure and system-ASK — it also supplies the FILL PAINT
+    their role-bearing parts take: each part carries `.surface-fill` and the
+    text set on it `.surface-fill-ink`, and each page binds its role classes
+    to the recipe's inputs.
   - **Reading pages.** The site build's pages, the home page at the site root
     and the reading pages under `/read/` (`tools/read/`), also load
     `surface-shell.css`, `surface-shell.js`, `surface-panel.css`,
@@ -137,7 +142,7 @@ Every diagram page here adopts the [`design-system-ASK`](https://github.com/apex
 - **Export.** `PNG page` reads the subtitle and stamp wherever they sit, so the page export does not depend on the live layout.
 - **Touch.** Every engine page and figure hands its gestures to the shared pointer controller (`diagrams-pointer.js`): one finger pans the drawing from anywhere on it, two pinch the drawing rather than the page, and the panels keep their own taps and scrolling.
 
-When bounded generativity and the SMGI doctrine figure first adopted it, their live composition changed, so their render stamps advanced while their source did not, to `source-v5 // render-v6` and `source-v1 // render-v3`. They advanced again when their Fit began centering the drawing and capping its compact clearance, which moved their at-rest view on narrow or crowded windows: bounded generativity is `source-v5 // render-v7`, and the SMGI doctrine figure is `source-v1 // render-v4`. The generated public projection took the chrome and the controller from its operator shell, at the operator canonical's `render-v28`. The tree pages share the engine's Fit behavior, so a reader's zoom survives a resize, and the four figures follow the same Fit rules.
+When bounded generativity and the SMGI doctrine figure first adopted it, their live composition changed, so their render stamps advanced while their source did not, to `source-v5 // render-v6` and `source-v1 // render-v3`. They advanced again when their Fit began centering the drawing and capping its compact clearance, which moved their at-rest view on narrow or crowded windows: bounded generativity became `source-v5 // render-v7`, and the SMGI doctrine figure `source-v1 // render-v4`. The generated public projection took the chrome and the controller from its operator shell, at the operator canonical's `render-v28`. The tree pages share the engine's Fit behavior, so a reader's zoom survives a resize, and the four figures follow the same Fit rules.
 
 ### Shared render support
 
@@ -164,7 +169,7 @@ They are a pair with different jobs, and neither substitutes for the other:
 - **doctrine figure** (`…_seed-mediated-generated-interface`) — the **instantiation path** and the loading-boundary seam. Authored seed >> loading boundary >> grammar grants the aperture >> runtime >> generated interaction >> return, or, at the boundary, fork-at-load. Consumes the Three Functions primitive for one licensed node: the grammar box, where the grammar is operative apparatus in the runtime path.
 - **ontology figure** (`…_seed-mediated-generated-interface-ontology`) — the **category boundaries**. Four orthogonal layers (mechanism · application · authored control · conformance) around one membership node, joined by typed relations. **Fully neutral — no function colour**, because it classifies concepts rather than diagramming the functions; it does not load `three-functions.css`.
 
-The SMGI doctrine figure is `source-v1 // render-v4`; the ontology figure is `source-v2 // render-v2`.
+The SMGI doctrine figure is `source-v1 // render-v5`; the ontology figure is `source-v2 // render-v2`.
 
 **Responsive behavior.** `1440×900` is the reference read-all composition (doctrine about `0.75`, ontology about **`0.67` on the default `screen` profile**). The doctrine figure takes the responsive chrome (*Responsive chrome*, above): on a narrow or crowded window its panels close behind triggers, and fit-all gives the drawing the canvas as a navigable **overview**. The ontology now takes the same responsive chrome; on shorter and narrower windows fit-all is still a navigable overview, its macrostructure and membership gate remain identifiable, and zoom/pan exposes the authored detail. Read-all composition at every aspect ratio would require content reduction, which neither figure takes.
 
