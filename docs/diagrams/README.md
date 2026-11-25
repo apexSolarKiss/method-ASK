@@ -85,7 +85,7 @@ They exist to prevent four specific collapses, one per figure:
 
 - `README.md` — this file.
 - [`method-ASK_topology.html`](method-ASK_topology.html) — renders `TREE_D02`.
-  - [`method-ASK_topology.source.js`](method-ASK_topology.source.js) — `TREE_D02` data (`source-v9`).
+  - [`method-ASK_topology.source.js`](method-ASK_topology.source.js) — `TREE_D02` data (`source-v10`).
 - [`method-ASK_intent-artifact-ontology.html`](method-ASK_intent-artifact-ontology.html) — renders `TREE_D10`.
   - [`method-ASK_intent-artifact-ontology.source.js`](method-ASK_intent-artifact-ontology.source.js) — `TREE_D10` data (`source-v2`): source of intent as a locatable ROLE; context / intent / provenance families; the claim-level vs artifact-level discipline.
 - [`method-ASK_activation-lifecycle-comparison.html`](method-ASK_activation-lifecycle-comparison.html) — renders `TREE_D05`.
@@ -187,7 +187,7 @@ The SMGI doctrine figure is `source-v1 // render-v5`; the ontology figure is `so
 
 This diagram originated in the v9 operator-side `ecology-ASK` diagram package and was first absorbed here at `source-v2 // render-v9`.
 
-The current tuple is `source-v9 // render-v23` (2026-10-08). Source advances when the authored topology changes; render advances only when the renderer realization changes.
+The current tuple is `source-v10 // render-v23` (2026-11-25). Source advances when the authored topology changes; render advances only when the renderer realization changes.
 
 The operator-side package and historical render iterations remain in `ecology-ASK-EXTERNAL/scratch/` and are not repo truth.
 
