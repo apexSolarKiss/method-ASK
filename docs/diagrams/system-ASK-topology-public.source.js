@@ -5,11 +5,11 @@
  * and regenerate; edits here are lost.
  *
  * operator canonical            system-ASK-topology.source.js
- * operator canonical version    source-v13
+ * operator canonical version    source-v14
  * operator canonical render     render-v28
- * operator canonical date       2026-10-08
- * operator canonical SHA-256    c92c300ccc42a68be047b552799b4bb787e24da6b51fe52c6a69ab40b72cd8a8
- * input manifest SHA-256        090f0f7432d765313f9fe0120e0fe8c423d9b4599b8140a1da3bf65eef8ace95
+ * operator canonical date       2026-11-25
+ * operator canonical SHA-256    4a5045ed8cae56f949bbbd8b6101d3d3d5e557d4956fe52ed292d4c5afcaa2ca
+ * input manifest SHA-256        e6241448cef7777414a2b49a5cdb7966e89325808b1828ceffe859a0fc934c6e
  *
  * This is a PROJECTION: 8 of 12 top-level branches are carried, and the
  * remaining 4 are not present. The operator canonical is not publicly resolvable and
@@ -290,7 +290,7 @@ window.TREE_D03_PUBLIC = {
     {
       "kind": "section",
       "label": "downstream project repos",
-      "tag": "separately operated · own substantive absorption decisions · standing GREEN protocol / DS maintenance grants",
+      "tag": "separately operated (asset-pipeline-ASK · urban-observatory) · own substantive absorption decisions · standing GREEN protocol / DS maintenance grants",
       "children": [
         {
           "label": "asset-pipeline-ASK",
@@ -337,16 +337,17 @@ window.TREE_D03_PUBLIC = {
           ]
         },
         {
-          "label": "mazeASK",
-          "status": "legacy",
+          "label": "mazes-ASK",
+          "note": "formerly mazeASK · continuing project · operated directly from ecology",
           "children": [
             {
-              "label": "legacy Model A working example",
+              "label": "Model A origin case, as mazeASK",
+              "note": "historical · retired split-execution generation",
               "status": "legacy"
             },
             {
-              "label": "own repo + own grounding note",
-              "status": "legacy"
+              "label": "own repo truth + repo gates",
+              "note": "operator material stays in ecology · no operating surface of its own"
             }
           ]
         }
@@ -425,7 +426,7 @@ window.TREE_D03_PUBLIC = {
           "label": "repo truth belongs to the artifact-owning repo"
         },
         {
-          "label": "downstream projects decide absorption of CANDIDATE material from inside their own active project surface",
+          "label": "separately operated downstream projects decide absorption of CANDIDATE material from inside their own active project surface",
           "note": "but deterministic GREEN protocol / DS conformance may move directly under established jurisdiction — not everything routes as candidate"
         },
         {

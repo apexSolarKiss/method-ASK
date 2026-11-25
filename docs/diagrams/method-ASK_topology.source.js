@@ -2,7 +2,14 @@
    Source data for the method-ASK topology / relative-externality map diagram.
    Renderable by diagrams-static-H-engine.js.
 
-   D02 // method-ASK topology / relative-externality map // source-v9 // 2026-07-29
+   D02 // method-ASK topology / relative-externality map // source-v10 // 2026-11-25
+   v10 (2026-11-25): mazes-ASK currency. The repository formerly named mazeASK was renamed
+   apexSolarKiss/mazes-ASK on 2026-11-21 and continues under the current model, operated
+   directly from ecology, so v7's dormant restatement is spent. The node takes the current
+   name and is no longer legacy as a whole; one legacy child keeps its Model A period as the
+   historical origin case for the retired split-execution generation. The relative-externality absorption rule is also scoped to
+   separately operated downstream projects, consistent with mazes-ASK's direct ecology
+   operation. No other node is touched. Content-only; render held render-v23.
    v9 (2026-07-29): the ecology surface completed its Unit-6B cutover on 2026-07-29, so
    v8's pending-rename fact is spent. The intake node's tag now carries the live path
    `intent-INbox/`, and its note records the completed cutover in place of the
@@ -173,7 +180,9 @@ window.TREE_D02 = {
         { label: 'asset-pipeline-ASK', note: 'mature primary pressure surface · separately operated under a standing GREEN maintenance grant' },
         { label: 'urban-observatory', note: 'newer · source-of-intent recovery pressure · separately operated under a standing GREEN maintenance grant' },
         { label: 'personal-context-system', note: 'public scaffold · the SMGI proof surface (seed-mediated setup prompt >> working system) · direct-core consumer, but applicable-but-carrier-blocked for the shared protocol (no root AGENTS.md) — the proof role and the carrier hold are distinct' },
-        { label: 'mazeASK', note: 'dormant historical origin case · retired split-execution generation', status: 'legacy' },
+        { label: 'mazes-ASK', note: 'formerly mazeASK · continuing project · operated directly from ecology', children: [
+          { label: 'Model A origin case, as mazeASK', note: 'historical · retired split-execution generation', status: 'legacy' },
+        ]},
       ],
     },
     {
@@ -193,7 +202,7 @@ window.TREE_D02 = {
         { label: 'ex-repo ≠ ex-system' },
         { label: 'rule may move downstream · payload may not' },
         { label: 'observation-level holds n=1 material', note: 'promotion awaits n=2 or strong structural argument' },
-        { label: 'downstream absorbs from inside its own active project surface' },
+        { label: 'separately operated downstream projects absorb from inside their own active project surface' },
         { label: 'candidate absorption is recipient-owned', note: 'but deterministic GREEN conformance (protocol / design-system maintenance) may move directly under established jurisdiction — not everything routes as candidate material' },
       ],
     },
