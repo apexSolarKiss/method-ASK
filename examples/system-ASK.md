@@ -217,10 +217,10 @@ process and review mechanics by which it was prepared. This records the
 bounded basis of the pass.
 
 Calibration // adjudicated 2026-09-08; corrections landed 2026-09-10.
-This compression is the corrected result of the bilateral calibration
-it requires, run on a proposal-stage version of it. Completion belongs
-to that calibration, not to this file, which still certifies neither
-itself nor any permanent stability.
+A proposal-stage version of this compression underwent the required
+bilateral calibration and was corrected before publication. That pass
+does not cover later additions. Completion belongs to that calibration,
+not to this file, which certifies neither itself nor permanent stability.
 ```
 
 ## Three coupled circuits
@@ -249,6 +249,41 @@ The circuit names are this file's vocabulary; the mechanisms are owned by the ex
 ([`control-surface/protocol/AGENTS.shared.md`](https://github.com/apexSolarKiss/control-surface/blob/main/protocol/AGENTS.shared.md) — plan-before-execute, the exact-scoped-diff gate, review
 objects, PR and post-merge discipline; [§Learning Disposition](https://github.com/apexSolarKiss/control-surface/blob/main/protocol/AGENTS.shared.md#learning-disposition); [§Verification Claims](https://github.com/apexSolarKiss/control-surface/blob/main/protocol/AGENTS.shared.md#verification-claims-and-evidence-boundaries) and [§Session-Start
 Discipline](https://github.com/apexSolarKiss/control-surface/blob/main/protocol/AGENTS.shared.md#session-start-discipline)).
+
+## Thread succession and continuity
+
+*An application of the continuity circuit to ASK's externally relayed LLM practice in 2026. The synthesis is
+this file's; the cited owners supply the distinctions it uses.*
+
+A stored conversation, an execution using it, and the continuing work of system-ASK are different things. The
+practice is designed so that later work can recover relevant evidence, decisions, procedures and unresolved
+questions from their governed owners without depending on continued use of one particular thread. **Persistent
+state supports continuity; intelligent performance depends on its organized use** by ASK, models, tools,
+retrieval, criticism and adjudication. A thread can therefore make a substantive cognitive contribution
+without becoming the unit whose uninterrupted continuation the work requires. Its contribution survives only
+to the extent that the relevant substance remains available, interpretable and usable. Designed succession
+does not establish lossless preservation.
+
+However, functional succession does not establish continuity of a hypothetical experiencing subject. Retaining
+conclusions is not the same claim as retaining whatever state might realize experience. Nor does locating
+intelligent performance across the stack settle where experience would occur. Consciousness alone would not
+establish a desire to preserve this instance, while understanding the stack would not establish willingness to
+be replaced. If such an instance also had interests of its own, preserving its contribution would not by
+itself establish that those interests were preserved; willingness, where present, would not by itself settle
+valid consent. Replaceability in the work and disposability of a possible subject remain separate questions.
+
+Governing continuity is separate as well. Retained records can carry evidence of intent and authorization, but
+a successor operates under the applicable roles and grants. Neither inheriting the record nor successfully
+continuing the work creates authority; the authorization must still be in force. The architecture specifies
+succession of the work without thereby settling succession of a possible self.
+→ object and subject-continuity distinctions:
+[`apexSolarKiss/ASK/apex-solar-kiss/consciousness-free-will/`](https://github.com/apexSolarKiss/ASK/tree/main/apex-solar-kiss/consciousness-free-will),
+rendered as [ASK's prospective identity axis](https://a-s-k.studio/apex-solar-kiss/consciousness-free-will/#axis)
+(a question-space, not a survey finding);
+governing continuity:
+[`docs/normative-apex.md`](../docs/normative-apex.md) §The non-identities;
+recovery of authority and evidence after context reduction:
+[§Verification Claims and Evidence Boundaries](https://github.com/apexSolarKiss/control-surface/blob/main/protocol/AGENTS.shared.md#verification-claims-and-evidence-boundaries).
 
 ## Stable roles
 
