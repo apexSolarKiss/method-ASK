@@ -925,6 +925,8 @@ The methodology repo embodies the absorption discipline it articulates. n=1 proj
 
 Do not absorb patterns into rule-level doctrine on first sighting. The discipline is what prevents methodology bloat.
 
+Method-altitude articulation: `docs/absorption-discipline.md`, especially §Evidence thresholds and §What absorption is not.
+
 ## Method-doc carry-through carve-out
 
 This method-local rule extends the shared §Default: Hold or Carry Through Per Adversarial-Collaboration Preconditions.
