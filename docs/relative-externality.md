@@ -15,7 +15,7 @@ A file, repo, grounding note, article, prompt, or memory surface can be external
 Three formulations the method uses:
 
 - **Ex-repo is not ex-system.** A grounding note lives outside the repo by surface boundary, but inside the system the repo participates in. The repo can read it; the method depends on it; the system reaches it.
-- **Outside the repo can still be inside the method system.** Articles, operator memory, scratch, and grounding notes are all outside repos and all inside the method system. They are not stray context — they are layered context the method routes through.
+- **Outside the repo can still be inside the method system.** Articles, current task context, scratch, and grounding notes are all outside repos and all inside the method system. They are not stray context — they are layered context the method routes through.
 - **Inside one layer can be outside another.** [`control-surface`](https://github.com/apexSolarKiss/control-surface) is internal to the ASK family meta-architecture but external to each downstream project repo. The same artifact has different externality postures depending on which surface you stand on.
 
 There is no absolute externality. Every claim about externality has to name both surfaces.
@@ -27,7 +27,7 @@ Relative externality has two axes that have to be tracked separately:
 - **Surface boundary** — where the artifact physically or operationally lives. Inside the repo, outside the repo, inside this folder, in operator-side scratch, in a separate repo, in a chat thread, in published external writing.
 - **Normative direction** — where authority flows. Upstream (the surface is authoritative for downstream surfaces; downstream conforms), downstream (the surface receives authority from upstream; the surface conforms), or reflective (the surface comments on adjacent surfaces without being upstream or downstream of them).
 
-The two axes do not align by default. A surface can be outside the repo *and* upstream of it (grounding notes). A surface can be inside the repo *and* downstream of an external source (an inheriting child project's files relative to an upstream design system referenced from outside). A surface can be outside everything *and* upstream of nothing (operator memory, by design).
+The two axes do not align by default. A surface can be outside the repo *and* upstream of it (grounding notes). A surface can be inside the repo *and* downstream of an external source (an inheriting child project's files relative to an upstream design system referenced from outside). A surface can be outside repos and grounding notes *and* upstream of neither (current task context and private agent memory, by design).
 
 Examples illustrating both axes:
 
@@ -35,7 +35,7 @@ Examples illustrating both axes:
 - [`control-surface`](https://github.com/apexSolarKiss/control-surface) is outside downstream project repos by surface boundary, but upstream to them by normative direction (templates, prompts, instantiation workflow flow down).
 - [`method-ASK`](../README.md) is outside `control-surface` by surface boundary, but upstream to it by normative direction (methodology articulates the rules execution-protocol operationalizes).
 - Articles are outside repos by surface boundary; reflective by normative direction (they comment on the method without being authoritative for current repo state, but can become substrate for later doctrine).
-- Operator memory is outside repos and outside grounding notes by surface boundary, and not upstream or downstream of either by normative direction; it is ephemeral session-local — neither repo truth nor source-of-intent.
+- Current task context and private agent memory are outside repos and outside grounding notes by surface boundary, and not upstream of either by normative direction. Current task context is ephemeral working context, not a durable owner; private agent memory is persistent but non-authoritative. Neither is repo truth or source-of-intent.
 - [`design-system-ASK`](https://github.com/apexSolarKiss/design-system-ASK) is outside [`urban-observatory`](https://github.com/apexSolarKiss/urban-observatory) by surface boundary, and upstream to it by normative direction for visual inheritance (Tier 1 + Tier 2 flow down; ASK's own Tier 3 does not — UO resolves its own Tier 3 locally by brand-distance).
 
 ## Relative-externality map
@@ -51,7 +51,8 @@ The current ASK topology, textual:
 - **Canonical inheritable identity layer** — external to repos by surface boundary; upstream to ASK-family surfaces for brand architecture, visual identity, voice/style, the tier model, and naming/structure conventions. Consumed by reference through `personal-ASK/inheritable/`; private context outside that grant is unreachable to a surface actually confined to an enforced path-scoped grant.
 - **Articles** — external to all repos by surface boundary; reflective by normative direction. Move at their own pace. Can be substrate for later doctrine when pressure earns promotion; not authoritative for current repo state.
 - **Scratch / event records** — operator-side; external to all repos by surface boundary; not upstream or downstream of any repo. Fast-aging by design. Carries event chronology and working memory; never the absorption target for slow surfaces.
-- **Operator memory** — external to repos and grounding notes; ephemeral session-local. Not repo truth, not source-of-intent. Operator-only.
+- **Current task context** // external to repos and grounding notes; ephemeral working context, not a durable owner. "Ephemeral" describes the task-state role, not a deletion rule for transcripts or governed records. Not repo truth, not source-of-intent. Operator-side.
+- **Private agent memory** // an executor's own persistent store; external to repos and grounding notes. Non-authoritative operator context: it never owns project truth, workflow protocol, or current task state, and its persistence does not confer authority. Not source-of-intent. [`docs/source-of-truth-and-aging-rate.md`](source-of-truth-and-aging-rate.md#core-split) owns the split between it and current task context. Operator-side.
 
 The map is many-to-many. A single artifact (e.g., a grounding note) has externality postures vis-à-vis every other surface, not just one. Reading the map requires naming both surfaces in the relation.
 
@@ -143,7 +144,7 @@ Method altitude only. Domain detail lives in project repos and project examples.
 - **Ignoring normative direction.** A surface relation is identified by surface boundary alone, without tracking which way authority flows. The downstream surface is then accidentally treated as authoritative for the upstream one, inverting the relation.
 - **Confusing downstream-external hooks with upstream-external grounding notes.** A downstream project's own external scratch is treated as if it were an upstream grounding note for the method. Both are external to the project repo; only one is upstream. The downstream-external surface does not earn upstream authority just because it shares the external-by-surface-boundary characteristic.
 - **Mistaking article reflection for repo state.** Articles are reflective by normative direction; reading them as authoritative for current repo state acts against a frame the repo may have already moved past. The article is upstream of itself; it is not upstream of the repo's current contents.
-- **Mistaking operator memory for repo truth.** Operator memory is ephemeral and external to every authoritative surface. Treating a memory entry as authoritative for repo state or grounding-note substance violates surface assignment.
+- **Mistaking current task context or private agent memory for repo truth.** Treating either as authoritative for repo state or grounding-note substance violates surface assignment: reading authorized material into current task context does not transfer authority from its named owner, and persistence in private agent memory does not confer authority.
 
 These failure modes share a structural cause: collapsing the two-axis model into a single-axis intuition. Either surface boundary is treated as if it determined direction (it does not), or direction is presumed without checking which surface authoritatively owns the claim. The remedy is to name both axes explicitly before acting on the relation.
 
