@@ -11,7 +11,7 @@ The role is structural, not biographical. The project is the worked example; the
 The following method elements emerged through asset-pipeline-ASK work and were articulated against its concrete pressure:
 
 - **Aging-rate principle** — surfaced through the friction of mixing rules, state, and context in a single doc. State ages fast, rules age slowly, context ages slowly, per-conversation tracking is ephemeral. Each surface earns its own aging rate.
-- **Source-of-truth split** — the corollary discipline: repo carries project state; `AGENTS.md` carries workflow rules; grounding note carries source-of-intent; operator-side memory carries per-conversation tracking.
+- **Source-of-truth split** // the corollary discipline: repo carries project state; `AGENTS.md` carries workflow rules; grounding note carries source-of-intent; current task context carries per-conversation tracking.
 - **Voice / surface-boundary discipline** — surfaced when protected-payload content (positioning vocabulary, strategic rationale, translation tables) showed up in repo-readable surfaces and had to be moved out. The repo can name the structural category; it cannot carry the payload.
 - **Architecture-uncertain pattern** — ontology-first work, architecture-attempt-before-prototype, prototype-as-pressure-surface. The architecture is the project; the prototype is the test rig.
 - **Vocabulary deconstruction** — the architecture-vocabulary-pass discipline: pressure-test terms before they harden into structure. Surface where two words are being used as synonyms when they should not be; surface where a single word is hiding distinctions that matter.
@@ -26,7 +26,7 @@ The following method elements emerged through asset-pipeline-ASK work and were a
 - Architecture-uncertain rules overlay at [`templates/overlays/architecture-uncertain-rules.template.md`](https://github.com/apexSolarKiss/control-surface/blob/main/templates/overlays/architecture-uncertain-rules.template.md) — opt-in for projects with architectural uncertainty
 - Workflow templates ([`templates/AGENTS.template.md`](https://github.com/apexSolarKiss/control-surface/blob/main/templates/AGENTS.template.md), `templates/grounding-note.template.md`, [`templates/architecture.template.md`](https://github.com/apexSolarKiss/control-surface/blob/main/templates/architecture.template.md)) carrying the patterns each new ASK project inherits
 - The two-review-windows cadence encoded in `AGENTS.md`
-- The source-of-truth split between repo, `AGENTS.md`, grounding note, and operator-side memory
+- The source-of-truth split between repo, `AGENTS.md`, grounding note, and current task context
 
 [`control-surface/examples/asset-pipeline-ASK/notes.md`](https://github.com/apexSolarKiss/control-surface/blob/main/examples/asset-pipeline-ASK/notes.md) carries the workflow-asset summary for instantiation pattern reuse. That artifact is distinct from this method-altitude explanation.
 
