@@ -141,6 +141,10 @@ Each phase preserves what it produced for the next phase to build on. Do not ret
 
 The method's integrity at scale depends on this — without it, each new architectural claim either has to relitigate prior claims or quietly invalidates them.
 
+The purpose of preservation determines the useful depth of additional tracing. Sources, material challenges, checks, revisions, unresolved qualifications, and adoption decisions may need to remain inspectable for warrant, contribution, reproducibility, learning, correction, or answerability. The appropriate detail depends on those uses, the stakes, and the governing evidence or retention obligations. It does not follow that every intermediate exchange must be recorded. Required artifacts remain required; proportionality does not authorize deleting evidence or rewriting history.
+
+A recorded journey can supply evidence of development and make changes or contributions inspectable. Its completeness alone does not establish understanding, truthful reporting, or adequate warrant. Equally, understanding can be present where the record of its development is incomplete. A transcript records an exchange; an explanatory reconstruction is not automatically an authenticated history of thought. Preserve uncertainty about origins where the record does not resolve it. The [governance record](governance.md#governance-record) carries the related distinction: a trace can support audit and recourse without itself establishing that a decision it records was legitimate, correctly applied, or genuinely reviewed.
+
 ### Aging-rate principle / source-of-truth split
 
 Different surfaces age at different rates. State ages fast (lives in the repo). Rules age slow (live in `AGENTS.md`). Context ages slow (lives in the grounding note). Per-conversation tracking is ephemeral (lives in current task context, never in private agent memory).
@@ -156,6 +160,14 @@ How the project moves between phases without losing what came before.
 A synthesis or architectural-pass should pressure the model against a concrete example, not become a recursive narration of earlier passes.
 
 This discipline applies the architecture-attempt-before-prototype principle to synthesis artifacts: the synthesis is allowed to be partial, exit-criterion-bounded, and self-superseding, but it must engage with concrete material rather than circulating among prior abstractions.
+
+### Distributed cognition and epistemic responsibility
+
+A participant's knowledge or understanding is not disqualified merely because its development involved tools or collaboration. Nor does successful joint performance establish what each participant understands. Understanding, the warrant for a claim, contribution to its discovery or formulation, confidence, social recognition, authorship, and responsibility for use are different questions. Understanding does not establish sole discovery; confidence does not establish warrant; adoption by itself establishes neither understanding nor warrant.
+
+Knowing a result, understanding why it holds, and reproducing its derivation unaided are distinct achievements. Possession, repetition, fluent presentation, or willingness to accept responsibility does not by itself establish understanding. Explanation, application in a changed setting, response to counterexamples, correction, and recognition of limits can provide evidence under stated task and assistance conditions. Where the claim concerns unaided individual competence, assess that boundary. Where it concerns a supported participant or the whole system, assess that declared boundary. Evidence for one should not silently become a claim about another, and no general requirement to reconstruct every contributing operation unaided follows.
+
+The route can affect reliability, learning, dependency, contribution, and the basis for correction. Tool use supplies neither automatic disqualification nor automatic warrant. A participant can acquire understanding without originating the process. Responsibility for consequential reliance remains attributable under the governing arrangement; a declaration of responsibility is not a substitute for adequate evidence. Contribution to content, authorship of the work, and authority to adopt it remain separately assessable, as distinguished in [bounded generativity](bounded-generativity.md#the-operative-surface-of-the-realized-work). What a record of the route can establish is addressed under [evidence-trail integrity](#evidence-trail-integrity).
 
 ### Entailment-laundering guard
 
