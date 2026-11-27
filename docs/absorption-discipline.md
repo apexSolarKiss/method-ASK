@@ -61,6 +61,8 @@ The threshold prevents methodology bloat. Promoting on first sighting produces d
 
 The structural-argument exception applies when recurrence is forced by the architecture rather than waited for: if a pattern's recurrence is structurally guaranteed (every project of a known class will surface the same pressure), the absorption can earn promotion before the second case actually lands. The exception is exception, not loophole. Most patterns wait for evidence. The structural argument has to be strong enough that the recurrence is genuinely architectural, not just plausible.
 
+Clarification can reuse warrant already held by a named owner, within the scope that owner establishes. Show what the owner already supports and identify any added claim, obligation, or extension of scope; that remainder must meet the thresholds above. Calling a change a clarification establishes neither its fidelity to the owner nor its applicability in a new setting.
+
 A second project is the most common threshold trigger because the second instance is what disambiguates project-specific shape from cross-project pattern. The first instance is always entangled with its project's specifics; the second is what isolates the generalizable substrate.
 
 ## Observation-level material
